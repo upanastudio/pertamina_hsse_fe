@@ -1,0 +1,42 @@
+{
+    "iTotalRecords": 10,
+    "iTotalDisplayRecords": 10,
+    "sEcho": 0,
+    "sColumns": "",
+    "aaData": [{
+                 "no": 1,
+                 "nama_pekerja": "Sidik Permana",
+                 "perusahaan": "PT. Upana Studio",
+                 "detail": null,
+                 "kondisi": "Fit"               
+             },
+             {
+                "no": 2,
+                 "nama_pekerja": "Ahmad Rifaldi",
+                 "perusahaan": "PT. ALgraphic D",
+                 "detail": null,
+                 "kondisi": "Unfit" 
+             },
+             {
+                "no": 3,
+                 "nama_pekerja": "Fascal Ivandry",
+                 "perusahaan": "PT. Berkah Sejahtera",
+                 "detail": null,
+                 "kondisi": "Fit" 
+             },
+             {
+                "no": 4,
+                 "nama_pekerja": "Ito Rijal",
+                 "perusahaan": "PT. Mandatory Sejahtera",
+                 "detail": null,
+                 "kondisi": "Unfit"
+             },
+             {
+                "no": 5,
+                 "nama_pekerja": "Darnilia",
+                 "perusahaan": "PT. Global Nusantara",
+                 "detail": null,
+                 "kondisi": "Fit" 
+             }
+]
+}
