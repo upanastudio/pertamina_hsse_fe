@@ -1,0 +1,68 @@
+{
+    "iTotalRecords": 10,
+    "iTotalDisplayRecords": 10,
+    "sEcho": 0,
+    "sColumns": "",
+    "aaData": [{
+                 "no": 1,
+                 "jenis_tes": "Tes 01",
+                 "nilai": "80"
+                
+             },
+             {
+               "no": 2,
+                 "jenis_tes": "Tes 02",
+                 "nilai": "80"
+             },
+             {
+                "no": 3,
+                 "jenis_tes": "Tes 03",
+                 "nilai": "80"
+             },
+             {
+                "no": 4,
+                 "jenis_tes": "Tes 04",
+                 "nilai": "80"
+             },
+             {
+                "no": 5,
+                 "jenis_tes": "Tes 05",
+                 "nilai": "80"
+             },
+             {
+                "no": 6,
+                 "jenis_tes": "Tes 05",
+                 "nilai": "80"
+             },
+             {
+                "no": 7,
+                 "jenis_tes": "Tes 05",
+                 "nilai": "80"
+             },
+             {
+                "no": 8,
+                 "jenis_tes": "Tes 05",
+                 "nilai": "80"
+             },
+             {
+                "no": 9,
+                 "jenis_tes": "Tes 05",
+                 "nilai": "80"
+             },
+             {
+                "no": 10,
+                 "jenis_tes": "Tes 05",
+                 "nilai": "80"
+             },
+             {
+                "no": 11,
+                 "jenis_tes": "Tes 05",
+                 "nilai": "80"
+             },
+             {
+                "no": 12,
+                 "jenis_tes": "Tes 05",
+                 "nilai": "80"
+             }
+]
+}

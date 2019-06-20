@@ -1,0 +1,38 @@
+{
+    "iTotalRecords": 10,
+    "iTotalDisplayRecords": 10,
+    "sEcho": 0,
+    "sColumns": "",
+    "aaData": [{
+                 "no": 1,
+                 "waktu": "01 Februari 2019, 11.00 AM",
+                 "lokasi": "Makassar",
+                 "status":"masuk"
+                
+             },
+             {
+               "no": 2,
+                 "waktu": "01 Februari 2019, 11.00 AM",
+                 "lokasi": "Makassar",
+                 "status":"masuk"
+             },
+             {
+                "no": 3,
+                 "waktu": "01 Februari 2019, 11.00 AM",
+                 "lokasi": "Makassar",
+                 "status":"keluar"
+             },
+             {
+                "no": 4,
+                 "waktu": "01 Februari 2019, 11.00 AM",
+                 "lokasi": "Makassar",
+                 "status":"keluar"
+             },
+             {
+                "no": 5,
+                 "waktu": "01 Februari 2019, 11.00 AM",
+                 "lokasi": "Makassar",
+                 "status":"masuk"
+             }
+]
+}

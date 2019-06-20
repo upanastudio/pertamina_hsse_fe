@@ -1,0 +1,33 @@
+{
+    "iTotalRecords": 10,
+    "iTotalDisplayRecords": 10,
+    "sEcho": 0,
+    "sColumns": "",
+    "aaData": [{
+                 "no": 1,
+                 "tanggal": "20 Januari 2019",
+                 "lokasi_induksi_lapangan": "Makassar"
+                
+             },
+             {
+                "no": 2,
+                 "tanggal": "10 Maret 2019",
+                 "lokasi_induksi_lapangan": "Palopo"
+             },
+             {
+                "no": 3,
+                 "tanggal": "15 Juli 2019",
+                 "lokasi_induksi_lapangan": "Maros"
+             },
+             {
+                "no": 4,
+                 "tanggal": "05 Oktober 2019",
+                 "lokasi_induksi_lapangan": "Pangkep"
+             },
+             {
+                "no": 5,
+                 "tanggal": "20 november 2019",
+                "lokasi_induksi_lapangan": "Barru"
+             }
+]
+}

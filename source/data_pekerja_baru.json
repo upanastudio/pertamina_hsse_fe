@@ -1,0 +1,53 @@
+{
+    "iTotalRecords": 10,
+    "iTotalDisplayRecords": 10,
+    "sEcho": 0,
+    "sColumns": "",
+    "aaData": [{
+                 "no": 1,
+                 "nama_pekerja": "Sidik Permana",
+                 "waktu_masuk" : "08 Agustus 2019, 11.00 AM",
+                 "perusahaan": "PT. Upana Studio",
+                 "status": "Pekerja",
+                 "aktifitas": "masuk",
+                 "aksi" : null
+                
+             },
+             {
+                "no": 2,
+                 "nama_pekerja": "Ahmad Rifaldi",
+                  "waktu_masuk" : "08 Agustus 2019, 11.00 AM",
+                 "perusahaan": "PT. ALgraphic D",
+                 "status": "Visitor",
+                 "aktifitas": "keluar",
+                 "aksi" : null
+             },
+             {
+                "no": 3,
+                 "nama_pekerja": "Fascal Ivandry",
+                  "waktu_masuk" : "08 Agustus 2019, 11.00 AM",
+                 "perusahaan": "PT. Berkah Sejahtera",
+                 "status": "Pekerja",
+                 "aktifitas": "masuk",
+                 "aksi" : null
+             },
+             {
+                "no": 4,
+                 "nama_pekerja": "Ito Rijal",
+                  "waktu_masuk" : "08 Agustus 2019, 11.00 AM",
+                 "perusahaan": "PT. Mandatory Sejahtera",
+                 "status": "Pekerja",
+                 "aktifitas": "keluar",
+                 "aksi" : null
+             },
+             {
+                "no": 5,
+                 "nama_pekerja": "Darnilia",
+                  "waktu_masuk" : "08 Agustus 2019, 11.00 AM",
+                 "perusahaan": "PT. Global Nusantara",
+                 "status": "Visitor",
+                 "aktifitas": "keluar",
+                 "aksi" : null
+             }
+]
+}
