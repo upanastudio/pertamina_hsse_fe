@@ -54,7 +54,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 				orderable: false,
 				render: function(data, type, full, meta) {
 					return `
-					<a href="rincian_data_pekerja_baru.html" class="btn btn-sm btn-primary" style="color:white;">Rincian</a>`;
+					<a href="rincian_data_pekerja_baru.html" class="btn btn-sm btn-primary" style="color:white;border-radius:20px">Rincian</a>`;
 				},
 			},
 			{
@@ -582,7 +582,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 				orderable: false,
 				render: function(data, type, full, meta) {
 					return `
-					<a href="rincian_data_pekerja_baru.html" class="btn btn-sm btn-primary" style="color:white;">Rincian</a>`;
+					<a href="rincian_data_pekerja_baru.html" class="btn btn-sm btn-primary" style="color:white;border-radius:20px">Rincian</a>`;
 				},
 			},
 			{
@@ -664,7 +664,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 
 			lengthMenu: [5, 10, 25, 50],
 
-			pageLength: 10,
+			pageLength: 5,
 
 			language: {
 				'lengthMenu': 'Display _MENU_',
@@ -703,7 +703,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 				orderable: false,
 				render: function(data, type, full, meta) {
 					return `
-					<a href="rincian_data_pekerja_baru.html" class="btn btn-sm btn-primary" style="color:white;">Rincian</a>`;
+					<a href="rincian_data_pekerja_baru.html" class="btn btn-sm btn-primary" style="color:white;border-radius:20px">Rincian</a>`;
 				},
 			},
 			{
