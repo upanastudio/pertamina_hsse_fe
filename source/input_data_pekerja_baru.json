@@ -6,6 +6,8 @@
     "aaData": [{
                  "no": 1,
                  "nama_pekerja": "Sidik Permana",
+                 "no_id": "A09202939",
+                 "kategori": "AMT",
                  "waktu_masuk" : "08 Agustus 2019, 11.00 AM",
                  "perusahaan": "PT. Upana Studio",
                  "status": "Aktif",
@@ -15,22 +17,28 @@
              {
                 "no": 2,
                  "nama_pekerja": "Ahmad Rifaldi",
+                 "no_id": "A09202939",
+                 "kategori": "TKJP",
                   "waktu_masuk" : "08 Agustus 2019, 11.00 AM",
                  "perusahaan": "PT. ALgraphic D",
-                 "status": "Tidak",
+                 "status": "Kadaluarsa",
                  "aksi" : null
              },
              {
                 "no": 3,
                  "nama_pekerja": "Fascal Ivandry",
+                 "no_id": "A09202939",
+                 "kategori": "AMT",
                   "waktu_masuk" : "08 Agustus 2019, 11.00 AM",
                  "perusahaan": "PT. Berkah Sejahtera",
-                 "status": "Aktif",
+                 "status": "Kadaluarsa",
                  "aksi" : null
              },
              {
                 "no": 4,
                  "nama_pekerja": "Ito Rijal",
+                 "no_id": "A09202939",
+                 "kategori": "Kontraktor",
                   "waktu_masuk" : "08 Agustus 2019, 11.00 AM",
                  "perusahaan": "PT. Mandatory Sejahtera",
                  "status": "Aktif",
@@ -39,6 +47,8 @@
              {
                 "no": 5,
                  "nama_pekerja": "Darnilia",
+                 "no_id": "A09202939",
+                 "kategori": "TKJP",
                   "waktu_masuk" : "08 Agustus 2019, 11.00 AM",
                  "perusahaan": "PT. Global Nusantara",
                  "status": "Aktif",
