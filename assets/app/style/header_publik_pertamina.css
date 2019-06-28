@@ -1,0 +1,39 @@
+.publik_header{
+	background-image: url('../../../assets/media/bg/Pertamina.jpg');
+background-position:center;
+background-repeat:no-repeat;
+background-size:cover;
+height:333px;
+}
+.bottom_bg{
+background-image: url('../../../assets/media/bg/bg-2.jpg');
+background-position:center;
+background-repeat:no-repeat;
+background-size:cover;
+
+-webkit-box-shadow: 0px 6px 17px -4px rgba(27,17,42,0.57);
+-moz-box-shadow: 0px 4px 17px -4px rgba(27,17,42,0.57);
+box-shadow: 0px 4px 17px -4px rgba(27,17,42,0.57);
+}
+.kt-header__bottom {
+background-color: #002e5f !important;
+}
+.kt-header-menu .kt-menu__nav > .kt-menu__item.kt-menu__item--here > .kt-menu__link {
+background-color: #85c226;
+/* color: white; */
+}
+.kt-header-menu .kt-menu__nav > .kt-menu__item > .kt-menu__link .kt-menu__link-text {
+color: #ffffff;
+}
+.kt-header-menu .kt-menu__nav > .kt-menu__item.kt-menu__item--here > .kt-menu__link .kt-menu__link-text {
+color: #ffffff;
+}
+.kt-header-menu .kt-menu__nav > .kt-menu__item:hover:not(.kt-menu__item--here):not(.kt-menu__item--active) > .kt-menu__link {
+background-color: #861b82;
+}
+.kt-header-menu .kt-menu__nav > .kt-menu__item:hover:not(.kt-menu__item--here):not(.kt-menu__item--active) > .kt-menu__link .kt-menu__link-text {
+color: #ffffff;
+}
+.kt-header__topbar-welcome,.kt-header__topbar-username {
+	color: white
+}
