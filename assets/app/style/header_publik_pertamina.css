@@ -29,11 +29,17 @@ color: #ffffff;
 color: #ffffff;
 }
 .kt-header-menu .kt-menu__nav > .kt-menu__item:hover:not(.kt-menu__item--here):not(.kt-menu__item--active) > .kt-menu__link {
-background-color: #861b82;
+background-color: #d8251c;
 }
 .kt-header-menu .kt-menu__nav > .kt-menu__item:hover:not(.kt-menu__item--here):not(.kt-menu__item--active) > .kt-menu__link .kt-menu__link-text {
 color: #ffffff;
 }
 .kt-header__topbar-welcome,.kt-header__topbar-username {
 	color: white
+}
+.card_tgl_tes {
+	width: 100%;
+	border:2px solid #9CCC65;
+	padding: 10px;
+	border-radius: 8px;
 }

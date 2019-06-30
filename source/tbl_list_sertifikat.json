@@ -1,0 +1,20 @@
+{
+    "iTotalRecords": 10,
+    "iTotalDisplayRecords": 10,
+    "sEcho": 0,
+    "sColumns": "",
+    "aaData": [{
+                 "no": 1,
+                 "jenis_sertifikat": "Jenis A",
+                 "expired_date_sertifikat": "20 November 2022",
+                 "aksi":null
+                
+             },
+             {
+               "no": 2,
+                 "jenis_sertifikat": "Jenis B",
+                 "expired_date_sertifikat": "10 Juli 2020",
+                 "aksi":null
+             }
+]
+}

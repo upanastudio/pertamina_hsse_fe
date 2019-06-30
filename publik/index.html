@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+	<!DOCTYPE html>
 <html lang="en">
 
 <!-- begin::Head -->
@@ -73,10 +73,35 @@
 	<link rel="shortcut icon" href="../assets/media/logos/favicon.ico" />
 	<link rel="stylesheet" type="text/css" href="../assets/app/style/header_publik_pertamina.css">
 	<style>
-		@media (min-width: 640px){
-			img .logo_pertamina {
-				height: 30px;
-			}
+		.vl {
+			border-left: 2px solid #E0E0E0;
+			height: 100%;
+			position: absolute;
+			left: 50%;
+			margin-left: -3px;
+			top: 0;
+		}
+		.card_sertifikat {
+			margin-bottom: 20px;
+			padding: 15px;
+			border-bottom: 1px solid #E0E0E0;
+		}
+		@media (max-width: 1024px) {
+		  .kt-header-menu-wrapper {
+		  	background-color: #18132a;
+
+		  }
+		  .kt-header-menu-wrapper .kt-header-menu .kt-menu__nav {
+		  	background-color: #18132a; 
+		  }
+
+		  .kt-header__topbar-item--user {
+		  	display: none;
+		  }
+		  .publik_header {
+		  	height: 150px !important;
+		  }
+		  
 		}
 	</style>
 </head>
@@ -96,24 +121,17 @@
 	<div id="kt_header_mobile" class="kt-header-mobile  kt-header-mobile--fixed ">
 		<div class="kt-header-mobile__brand">
 			<a class="kt-header-mobile__logo" href="index.html">
-				<img class="logo_pertamina" alt="Logo" src="../assets/media/logos/logo_3.png" />
+				<img style="height: 35px" class="logo_pertamina" alt="Logo" src="../assets/media/logos/logo_3.png" />
 			</a>
 			<div class="kt-header-mobile__nav">
 				<div class="dropdown">
-					<button type="button" class="btn btn-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon kt-svg-icon--md kt-svg-icon--success">
-							<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-								<rect id="bound" x="0" y="0" width="24" height="24" />
-								<path d="M15.9956071,6 L9,6 C7.34314575,6 6,7.34314575 6,9 L6,15.9956071 C4.70185442,15.9316381 4,15.1706419 4,13.8181818 L4,6.18181818 C4,4.76751186 4.76751186,4 6.18181818,4 L13.8181818,4 C15.1706419,4 15.9316381,4.70185442 15.9956071,6 Z" id="Combined-Shape" fill="#000000" fill-rule="nonzero" opacity="0.3" />
-								<path d="M10.1818182,8 L17.8181818,8 C19.2324881,8 20,8.76751186 20,10.1818182 L20,17.8181818 C20,19.2324881 19.2324881,20 17.8181818,20 L10.1818182,20 C8.76751186,20 8,19.2324881 8,17.8181818 L8,10.1818182 C8,8.76751186 8.76751186,8 10.1818182,8 Z" id="Rectangle-19-Copy-3" fill="#000000" />
-							</g>
-						</svg> </button>
+					
 					</div>
 				</div>
 			</div>
 			<div class="kt-header-mobile__toolbar">
 				<button class="kt-header-mobile__toolbar-toggler" id="kt_header_mobile_toggler"><span></span></button>
-				<button class="kt-header-mobile__toolbar-topbar-toggler" id="kt_header_mobile_topbar_toggler"><i class="flaticon-more-1"></i></button>
+				
 			</div>
 		</div>
 
@@ -298,21 +316,43 @@
 														</div>
 													</div>
 													<div class="form-group row">
+														<label for="example-text-input" class="col-3 col-form-label">Lokasi Depot</label>
+														<div class="col-9">
+															<select class="form-control m-select2" id="kt_select2_1" name="param">
+																<option value="1">Area 1</option>
+																<option value="2">Area 2</option>
+																<option value="3">Area 3</option>
+																<option value="4">Area 4</option>
+																<option value="5">Area 5</option>
+																<option value="6">Area 6</option>
+																<option value="7">Area 7</option>
+																<option value="8">Area 8</option>
+															</select>
+														</div>
+													</div>
+														<div class="form-group row">
+														<label for="example-text-input" class="col-3 col-form-label">Tipe Pekerja</label>
+														<div class="col-9">
+															<input class="form-control" type="text" placeholder="input tipe pekerja" id="tipe_pekerja">
+														</div>
+													</div>
+													<div class="form-group row">
 														<label for="example-text-input" class="col-3 col-form-label">Nama Pekerja</label>
 														<div class="col-9">
-															<input class="form-control" type="text" id="nama_pekerja">
+															<input class="form-control" type="text"  placeholder="input nama pekerja" id="nama_pekerja">
 														</div>
 													</div>
 													<div class="form-group row">
 														<label for="example-text-input" class="col-3 col-form-label">Nama Perusahaan</label>
 														<div class="col-9">
-															<input class="form-control" type="text" id="perusahaan">
+															<input class="form-control" type="text" placeholder="input nama perusahaan" id="perusahaan">
 														</div>
 													</div>
 													<div class="form-group row">
 														<label for="example-text-input" class="col-3 col-form-label">Alamat Perusahaan</label>
 														<div class="col-9">
-															<input class="form-control" type="text" id="alamat_perusahaan">
+															<input class="form-control" type="text"
+															placeholder="input alamat perusahaan" id="alamat_perusahaan">
 														</div>
 													</div>
 													<div class="form-group row">
@@ -324,13 +364,13 @@
 													<div class="form-group row">
 														<label for="example-text-input" class="col-3 col-form-label">No. Handphone</label>
 														<div class="col-9">
-															<input class="form-control" type="text" id="no_handphone">
+															<input class="form-control" placeholder="input nomer handphone" type="number" id="no_handphone">
 														</div>
 													</div>
 													<div class="form-group row">
 														<label for="example-email-input" class="col-3 col-form-label">Email</label>
 														<div class="col-9">
-															<input class="form-control" type="email"  id="email_pekerja">
+															<input class="form-control" type="email" placeholder="input email"  id="email_pekerja">
 														</div>
 													</div>
 													<div class="form-group row">
@@ -351,23 +391,26 @@
 													<div class="form-group row">
 														<label for="example-text-input" class="col-3 col-form-label">Alamat Domisili</label>
 														<div class="col-9">
-															<input class="form-control" type="text" id="alamat_pekerja">
+															<input class="form-control" type="text" placeholder="input alamat domisili" id="alamat_pekerja">
 														</div>
 													</div>
 													<div class="form-group row">
 														<label for="example-text-input" class="col-3 col-form-label">Jabatan</label>
 														<div class="col-9">
-															<input class="form-control" type="text" id="jabatan_pekerja">
+															<input class="form-control" type="text" placeholder="input jabata" id="jabatan_pekerja">
 														</div>
 													</div>
 													<div class="form-group row">
 														<label for="example-text-input" class="col-3 col-form-label">Kontak Darurat</label>
 														<div class="col-9">
-															<input class="form-control" type="text" id="kontak_darurat">
+															<input class="form-control" type="text" placeholder="input kontak darurat" id="kontak_darurat">
 														</div>
 													</div>
 												</div>
-												<div class="col-sm-6">
+												<div class="col-sm-1" align="center">
+													<div class="vl"></div> 
+												</div>
+												<div class=" col-sm-5">
 													<div class="form-group row">
 														<label for="example-text-input" class="col-3 col-form-label">Foto</label>
 														<div class="col-9"> 	
@@ -446,27 +489,65 @@
 									</button>
 								</div>
 								<div class="modal-body">
-									<div class="form-group row">
-										<label for="example-text-input" class="col-3 col-form-label">File Sertifikat</label>
-										<div class="col-9">
-											<div class="custom-file">
-												<input type="file" class="custom-file-input" placeholder="pilih file sertifikat" id="file_scan_ktp">
-												<label class="custom-file-label" for="customFile">Pilih file Sertifikat..</label>
+									<div class="kt-scroll" data-scroll="true" data-height="300">
+										<div align="right">
+											<button class="btn btn-primary">Tambah Sertifikat</button>
+										</div>
+										<div class="card_sertifikat">
+											<div class="form-group row">	
+												<h5 class="col-sm-12" >
+													Sertifikat 01
+												</h5>
+												<label for="example-text-input" class="col-3 col-form-label">File Sertifikat</label>
+												<div class="col-9">
+													<div class="custom-file">
+														<input type="file" class="custom-file-input" placeholder="pilih file sertifikat" id="file_scan_ktp">
+														<label class="custom-file-label" for="customFile">Pilih file Sertifikat..</label>
+													</div>
+												</div>
+											</div>
+											<div class="form-group row">
+												<label for="example-date-input" class="col-3 col-form-label">Jenis Sertifikat</label>
+												<div class="col-9">
+													<input class="form-control" type="text"  id="jenis_sertifikat">
+												</div>
+											</div>
+											<div class="form-group row">
+												<label for="example-date-input" class="col-3 col-form-label">Expired Date</label>
+												<div class="col-9">
+													<input class="form-control" type="date" value="2011-08-19" id="expired_date_ktp">
+												</div>
+											</div>
+										</div>
+										<div class="card_sertifikat">
+											<div class="form-group row">
+												<h5 class="col-sm-12" >
+													Sertifikat 02
+												</h5>
+												<label for="example-text-input" class="col-3 col-form-label">File Sertifikat</label>
+												<div class="col-9">
+													<div class="custom-file">
+														<input type="file" class="custom-file-input" placeholder="pilih file sertifikat" id="file_scan_ktp">
+														<label class="custom-file-label" for="customFile">Pilih file Sertifikat..</label>
+													</div>
+												</div>
+											</div>
+											<div class="form-group row">
+												<label for="example-date-input" class="col-3 col-form-label">Jenis Sertifikat</label>
+												<div class="col-9">
+													<input class="form-control" type="text"  id="jenis_sertifikat">
+												</div>
+											</div>
+											<div class="form-group row">
+												<label for="example-date-input" class="col-3 col-form-label">Expired Date</label>
+												<div class="col-9">
+													<input class="form-control" type="date" value="2011-08-19" id="expired_date_ktp">
+												</div>
 											</div>
 										</div>
 									</div>
-									<div class="form-group row">
-										<label for="example-date-input" class="col-3 col-form-label">Jenis Sertifikat</label>
-										<div class="col-9">
-											<input class="form-control" type="text"  id="jenis_sertifikat">
-										</div>
-									</div>
-									<div class="form-group row">
-										<label for="example-date-input" class="col-3 col-form-label">Expired Date</label>
-										<div class="col-9">
-											<input class="form-control" type="date" value="2011-08-19" id="expired_date_ktp">
-										</div>
-									</div>
+
+
 								</div>
 								<div class="modal-footer">
 									<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -794,11 +875,46 @@
 		        	initDemos();
 		        },
 		    };
-		}();
+			}();
 
 			// Class Initialization
 			jQuery(document).ready(function() {
 				KTSweetAlert2Demo.init();
+			});
+		</script>
+		<script>
+			// Class definition
+			var KTSelect2 = function() {
+			    // Private functions
+			    var demos = function() {
+			        // basic
+			        $('#kt_select2_1, #kt_select2_1_validate').select2({
+			            placeholder: "Select a state"
+			        });
+
+			    }
+
+			    var modalDemos = function() {
+			        $('#kt_select2_modal').on('shown.bs.modal', function () {
+			            // basic
+			            $('#kt_select2_1_modal').select2({
+			                placeholder: "Select a state"
+			            });
+			        });
+			    }
+
+			    // Public functions
+			    return {
+			        init: function() {
+			            demos();
+			            modalDemos();
+			        }
+			    };
+			}();
+
+			// Initialization
+			jQuery(document).ready(function() {
+			    KTSelect2.init();
 			});
 		</script>
 	</body>

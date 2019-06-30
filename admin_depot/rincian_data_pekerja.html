@@ -98,7 +98,7 @@ License: You must have a valid license purchased only from themeforest(the above
 			}
 
 			.btn-preview {
-				width: 50%;
+				width: 100%;
 			}
 
 			#button_preview_ktp,
@@ -114,6 +114,17 @@ License: You must have a valid license purchased only from themeforest(the above
 			#tbl_list_nilai_12_slr_length,
 			#tbl_list_nilai_12_slr_paginate {
 				display: none;
+			}
+			.vl {
+				border-left: 2px solid #E0E0E0;
+				height: 100%;
+				position: absolute;
+				left: 50%;
+				margin-left: -3px;
+				top: 0;
+			}
+			.modal-content {
+				width: 50vw;
 			}
 		</style>
 	</head>
@@ -402,11 +413,23 @@ License: You must have a valid license purchased only from themeforest(the above
 														<img style="width: 150px; height: auto; border-radius: 20px" src="http://www.hexatar.com/gallery/thumb/151204_094136_m35fd66e783.png">
 													</div>
 												</div>
-												<div class="col-sm-5">
+												<div class="col-sm-12">
 													<div class="form-group row">
 														<label for="example-text-input" class="col-3 col-form-label">Perusahaan</label>
 														<div class="col-9">
 															<input disabled="" class="form-control" type="text" id="perusahaan" value="PT. Upana Studio Internasional">
+														</div>
+													</div>
+													<div class="form-group row">
+														<label for="example-text-input" class="col-3 col-form-label">Tipe Pekerja</label>
+														<div class="col-9">
+															<input disabled="" class="form-control" type="text" id="tipe_pekerja" value="AMT">
+														</div>
+													</div>
+													<div class="form-group row">
+														<label for="example-text-input" class="col-3 col-form-label">Lokasi Depot</label>
+														<div class="col-9">
+															<input disabled="" class="form-control" type="text" id="lokasi_depot" value="Pantai Losari">
 														</div>
 													</div>
 													<div class="form-group row">
@@ -464,46 +487,46 @@ License: You must have a valid license purchased only from themeforest(the above
 														</div>
 													</div>
 												</div>
-												<div class="offset-sm-2 col-sm-5">
+												<div class="col-sm-12">
 													<div class="form-group row">
 														<label for="example-text-input" class="col-5 col-form-label">Scan KTP</label>
-														<div class="col-7">
+														<div class="offset-4 col-3" align="left">
 															<a href="#" target="_blank" id="button_preview_ktp" class="btn btn-warning btn-preview">Preview</a>
 														</div>
 													</div>
 													<div class="form-group row">
 														<label for="example-text-input" class="col-5 col-form-label">Scan MCU</label>
-														<div class="col-7">
+														<div class="offset-4 col-3">
 															<a href="#" target="_blank" id="button_preview_mcu" class="btn btn-warning btn-preview">Preview</a>
 														</div>
 													</div>
 													<div class="form-group row">
 														<label for="example-text-input" class="col-5 col-form-label">Foto</label>
-														<div class="col-7">
+														<div class="offset-4 col-3">
 															<a href="#" target="_blank" id="button_preview_foto" class="btn btn-warning btn-preview">Preview</a>
 														</div>
 													</div>
 													<div class="form-group row">
 														<label for="example-text-input" class="col-5 col-form-label">Hasil Tes Narkoba</label>
-														<div class="col-7">
+														<div class="offset-4 col-3">
 															<a href="#" target="_blank" id="button_preview_tes_narkoba" class="btn btn-warning btn-preview">Preview</a>
 														</div>
 													</div>
 													<div class="form-group row">
 														<label for="example-text-input" class="col-5 col-form-label">SIM A/B1/B2</label>
-														<div class="col-7">
+														<div class="offset-4 col-3">
 															<a href="#" target="_blank" id="button_preview_sim" class="btn btn-warning btn-preview">Preview</a>
 														</div>
 													</div>
 													<div class="form-group row">
 														<label for="example-text-input" class="col-5 col-form-label">Sertifikasi</label>
-														<div class="col-7">
-															<a href="#" target="_blank" id="button_preview_sertifikasi" class="btn btn-warning btn-preview">Preview</a>
+														<div class="offset-4 col-3" >
+															<a data-toggle="modal" data-target="#modal_preview_sertifikasi" id="button_preview_sertifikasi" class="btn btn-warning btn-preview">Preview</a>
 														</div>
 													</div>
 													<div class="form-group row">
 														<label for="example-text-input" class="col-5 col-form-label">Pengalaman Kerja</label>
-														<div class="col-7">
+														<div class="offset-4 col-3">
 															<a href="#" target="_blank" id="button_preview_pengalaman_kerja" class="btn btn-warning btn-preview">Preview</a>
 														</div>
 													</div>
@@ -544,7 +567,10 @@ License: You must have a valid license purchased only from themeforest(the above
 														<button data-toggle="modal" data-target="#modal_rincian_nila_slr" class="btn btn-warning">Rincian</button>
 													</div>
 												</div>
-												<div class="col-sm-6">
+												<div class="col-sm-1" align="center">
+													<div class="vl"></div>
+												</div>
+												<div class="col-sm-5">
 													<div class="kt-portlet__head-title" align="center">
 														<h3>Induksi Lapangan</h3>
 													</div>
@@ -624,7 +650,34 @@ License: You must have a valid license purchased only from themeforest(the above
 									</table>
 								</div>
 								<div class="modal-footer">
-									<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+									<button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Preview Sertifikasi -->
+					<div class="modal fade" id="modal_preview_sertifikasi" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="exampleModalLabel">List Sertifikat</h5>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									</button>
+								</div>
+								<div class="modal-body">
+									<table class="table table-striped- table-bordered table-hover table-checkable" id="tbl_list_sertifikat">
+										<thead>
+											<tr>
+												<th>No.</th>
+												<th>Jenis</th>
+												<th>Expired date</th>
+												<th>Aksi</th>
+											</tr>
+										</thead>
+									</table>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
 								</div>
 							</div>
 						</div>

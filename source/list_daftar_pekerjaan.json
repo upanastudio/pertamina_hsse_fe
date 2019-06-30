@@ -9,7 +9,7 @@
                  "pekerjaan": "Pekerjaan 01",
                  "posisi": "Posisi 1",
                  "lokasi": "Makassar",
-                 "status":"running"
+                 "status":"berjalan"
                 
              },
              {
@@ -18,7 +18,7 @@
                  "pekerjaan": "Pekerjaan 01",
                  "posisi": "Posisi 2",
                  "lokasi": "Makassar",
-                 "status":"done"
+                 "status":"berjalan"
              },
              {
                 "no": 3,
@@ -26,7 +26,7 @@
                  "pekerjaan": "Pekerjaan 01",
                  "posisi": "Posisi 3",
                  "lokasi": "Makassar",
-                 "status":"done"
+                 "status":"selesai"
              },
              {
                 "no": 4,
@@ -34,7 +34,7 @@
                  "pekerjaan": "Pekerjaan 01",
                  "posisi": "Posisi 4",
                  "lokasi": "Makassar",
-                 "status":"done"
+                 "status":"selesai"
              },
              {
                 "no": 5,
@@ -42,7 +42,7 @@
                  "pekerjaan": "Pekerjaan 01",
                  "posisi": "Posisi 5",
                  "lokasi": "Makassar",
-                 "status":"done"
+                 "status":"selesai"
              }
 ]
 }
