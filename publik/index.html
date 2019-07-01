@@ -353,12 +353,16 @@
 													<div class="form-group row">
 														<label for="example-text-input" class="col-3 col-form-label">Nama Perusahaan</label>
 														<div class="col-9">
-															<select class="form-control" id="nama_perusahaan" name="param">
+															<select class="form-control m-select2" id="nama_perusahaan" name="param">
 																<option value="0">--Pilih Perusahaan--</option>
 																<option value="1">Pertamina</option>
 																<option value="2">Upana Studio</option>
-																<option value="3">Sehat Sentosa</option>
-																<option value="4">Membangun Negeri</option>
+																<option value="3">Sukses Sejuk</option>
+																<option value="4">Ciputra</option>
+																<option value="5">Mandiri Madani</option>
+																<option value="6">Mitra Kreatif</option>
+																<option value="7">Vini vidi</option>
+																<option value="8">Suara Utama</option>
 															</select>
 														</div>
 													</div>
@@ -938,6 +942,10 @@
 			        $('#lokasi_depot, #lokasi_depot_validate').select2({
 			        	placeholder: "Select a state"
 			        });
+			        // basic
+			        $('#nama_perusahaan, #nama_perusahaan_validate').select2({
+			        	placeholder: "Select a state"
+			        });
 
 			    }
 
@@ -945,6 +953,9 @@
 			    	$('#kt_select2_modal').on('shown.bs.modal', function () {
 			            // basic
 			            $('#lokasi_depot_modal').select2({
+			            	placeholder: "Select a state"
+			            });
+			             $('#nama_perusahaan_modal').select2({
 			            	placeholder: "Select a state"
 			            });
 			        });
