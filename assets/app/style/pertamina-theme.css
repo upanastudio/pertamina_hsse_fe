@@ -35,6 +35,15 @@ color: #ffffff;
 .head_red {
 	background-color: #D8251C;
 }
+.nav-pills .nav-item .nav-link, .nav-tabs .nav-item .nav-link {
+	font-size: 1.2rem;
+}
+tr th {
+	font-size: 1.2rem;
+}
+tr td {
+	font-size: 1.2rem;
+}
 @media (min-width: 1025px){
 .kt-aside--minimize .kt-aside-menu .kt-menu__nav > .kt-menu__item > .kt-menu__link > .kt-menu__link-icon {
     color: #ffffff;
