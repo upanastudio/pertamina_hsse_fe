@@ -1,0 +1,38 @@
+{
+    "iTotalRecords": 5,
+    "iTotalDisplayRecords": 5,
+    "sEcho": 0,
+    "sColumns": "",
+    "aaData": [{
+                 "no": 1,
+                 "nama" : "Ahmad Rifaldi",
+                 "pekerjaan" : "penggalian",
+                 "aksi" : null
+                
+             },
+             {
+                "no": 2,
+                 "nama" : "Ahmad Rifaldi",
+                 "pekerjaan" : "penggalian",
+                 "aksi" : null
+             },
+             {
+                 "no": 3,
+                 "nama" : "Ahmad Rifaldi",
+                 "pekerjaan" : "penggalian",
+                 "aksi" : null
+             },
+             {
+                 "no": 4,
+                 "nama" : "Ahmad Rifaldi",
+                 "pekerjaan" : "penggalian",
+                 "aksi" : null
+             },
+             {
+                 "no": 5,
+                 "nama" : "Ahmad Rifaldi",
+                 "pekerjaan" : "penggalian",
+                 "aksi" : null
+             }
+]
+}

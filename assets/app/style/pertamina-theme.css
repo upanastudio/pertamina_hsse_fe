@@ -26,6 +26,30 @@ color: #ffffff;
 .kt-aside-menu .kt-menu__nav > .kt-menu__item > .kt-menu__link .kt-menu__link-text {
 color: #ffffff;
 }*/
+i {
+	margin-right: 1px;
+}
+.btn-danger {
+	color: white !important;
+}
+.user-name {
+	margin-top: 12px;
+	widows: inherit;
+}
+.user-name p {
+	font-size: 1.16rem;
+	display: inline;
+}
+.user-name span {
+	font-weight: 600;
+}
+#btn_log_out {
+	margin-left: 10px;
+	font-size: .9rem;
+}
+.kt-radio-inline .kt-radio {
+	margin-right:80px;
+}
 .head_blue {
 	background-color: #0191DB;
 }
@@ -36,15 +60,103 @@ color: #ffffff;
 	background-color: #D8251C;
 }
 .nav-pills .nav-item .nav-link, .nav-tabs .nav-item .nav-link {
-	font-size: 1.2rem;
+	font-size: 1.1rem;
+}
+.dataTables_wrapper .dataTable th {
+	background-color: #F5F5F5;
 }
 tr th {
-	font-size: 1.2rem;
+	font-size: 1.1rem;
 }
 tr td {
-	font-size: 1.2rem;
+	font-size: 1.1rem;
 }
+
+/*admin depot*/
+.nav-pills .nav-item .nav-link:active, 
+.nav-pills .nav-item .nav-link.active, 
+.nav-pills .nav-item .nav-link.active:hover {	
+	background-color: #a10c0c;;
+	color: #ffffff;
+}
+
+.btn-preview {
+	width: 100%;
+	color: white !important;
+}
+
+#button_preview_ktp,
+#button_preview_mcu,
+#button_preview_foto,
+#button_preview_tes_narkoba,
+#button_preview_sim,
+#button_preview_sertifikasi,
+#button_preview_pengalaman_kerja {
+	color: black;
+}
+#tbl_list_nilai_12_slr_info,
+#tbl_list_nilai_12_slr_length,
+#tbl_list_nilai_12_slr_paginate {
+	display: none;
+}
+.vl {
+	border-left: 2px solid #E0E0E0;
+	height: 100%;
+	position: absolute;
+	left: 50%;
+	margin-left: -3px;
+	top: 0;
+}
+.modal-content {
+	width: 50vw;
+}
+.nav-tabs .nav-item .nav-link.active, .nav-tabs .nav-item .nav-link:active, .nav-tabs .nav-item .nav-link:hover {
+	color: #484848;
+	font-weight: 500;
+}
+.nav-tabs .nav-item .nav-link {
+	color: #484848;
+}
+/*end: admin depot*/
+
+/*Begin:; Publik*/
+#jumlah {
+	width: 100%;
+	height: 450px;
+}
+#kategori_pekerja {
+	width: 100%;
+	height: 300px;
+}
+#induksi_12_slr {
+	width: 100%;
+	height: 300px;
+}
+polyline,
+{
+	display: none;
+}
+/*End : Publik*/
+
+/*Begin: Ahli Teknik*/
+.nav-tabs .nav-item .nav-link.active, .nav-tabs .nav-item .nav-link:active, .nav-tabs .nav-item .nav-link:hover {
+	color: #333333;
+	font-weight: 600;
+}
+.nav-tabs .nav-item .nav-link {
+	color: #333333;
+}
+.nav-pills .nav-item .nav-link, .nav-tabs .nav-item .nav-link {
+	font-size: 1.25rem;
+}
+.margin-atas {
+	margin-top: 40px !important;
+}
+.kt-badge--inline {
+	margin-bottom: 5px;
+}
+/*End: Ahli Teknik*/
 @media (min-width: 1025px){
-.kt-aside--minimize .kt-aside-menu .kt-menu__nav > .kt-menu__item > .kt-menu__link > .kt-menu__link-icon {
-    color: #ffffff;
-}
+	.kt-aside--minimize .kt-aside-menu .kt-menu__nav > .kt-menu__item > .kt-menu__link > .kt-menu__link-icon {
+		color: #ffffff;
+	}

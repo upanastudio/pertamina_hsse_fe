@@ -54,9 +54,9 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 				orderable: false,
 				render: function(data, type, full, meta) {
 					return `
-					<a href="rincian_data_pekerja.html" class="btn btn-sm btn-primary" style="color:white;border-radius:20px">Rincian</a>` +
-					'<a data-toggle="modal" data-target="#terima" class="btn btn-sm btn-success" style="color:white;border-radius:20px">Terima</a>' +
-					'<a data-toggle="modal" data-target="#tolak" class="btn btn-sm btn-danger" style="color:white;border-radius:20px">Tolak</a>';
+					<a href="rincian_data_pekerja.html" class="btn btn-sm btn-primary" style="color:white;border-radius:20px">Rincian</a> &nbsp;` +
+					'<a data-toggle="modal" data-target="#terima" class="btn btn-sm btn-success" style="color:white;border-radius:20px"> <i class="fa fa-check"></i> Terima</a> &nbsp;' +
+					'<a data-toggle="modal" data-target="#tolak" class="btn btn-sm btn-danger" style="color:white;border-radius:20px"><i class="fa fa-times"></i> Tolak</a>';
 				},
 			},
 			{

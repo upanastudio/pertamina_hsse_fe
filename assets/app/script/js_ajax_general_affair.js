@@ -53,7 +53,8 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 				className: 'text-center',
 				orderable: false,
 				render: function(data, type, full, meta) {
-					return `<a href="" class="btn btn-sm btn-danger btn-pill" style="color:white;">Tolak</a> <a href="" class="btn btn-sm btn-success btn-pill" style="color:white;">Terima</a>`;
+					return `<button type="button" class="btn btn-sm btn-danger btn-pill" style="color:white;"> <i class="fa fa-times"></i> Tolak</button> 
+					<button type="button" class="btn btn-sm btn-success btn-pill" style="color:white;"><i class="fa fa-check"></i> Terima</button>`;
 				},
 			},
 			{
@@ -62,9 +63,8 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 			},
 			{
 				targets: -2,
-				width: 220,
 				render: function(data, type, full, meta) {
-					return `<a href="" class="btn btn-sm btn-info btn-pill" style="color:white;">Details</a>`;
+					return `<a href="" class="btn btn-sm btn-info btn-pill" style="color:white;">Rincian</a>`;
 				},
 			},
 			],
@@ -167,7 +167,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 				orderable: false,
 				render: function(data, type, full, meta) {
 					return `
-					<a href="" class="btn btn-sm btn-danger btn-pill" style="color:white;">Tolak</a> <a href="" class="btn btn-sm btn-success btn-pill" style="color:white;">Terima</a>`;
+					<button type="button" class="btn btn-sm btn-danger btn-pill" style="color:white;"> <i class="fa fa-times"></i> Tolak</button> <button type="button" class="btn btn-sm btn-success btn-pill" style="color:white;"><i class="fa fa-check"></i>Terima</button>`;
 				},
 			},
 			{
@@ -176,9 +176,8 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 			},
 			{
 				targets: -2,
-				width: 220,
 				render: function(data, type, full, meta) {
-					return `<a href="" class="btn btn-sm btn-info btn-pill" style="color:white;">Details</a>`;
+					return `<a href="" class="btn btn-sm btn-info btn-pill" style="color:white;">Rincian</a>`;
 				},
 			},
 			],
@@ -281,7 +280,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 				orderable: false,
 				render: function(data, type, full, meta) {
 					return `
-					<a href="" class="btn btn-sm btn-warning btn-pill" style="color:white;">Unfit</a> <a href="" class="btn btn-sm btn-success btn-pill" style="color:white;">Fit</a>`;
+					<button type="button" class="btn btn-sm btn-warning btn-pill" style="color:white;">Unfit</button> <button type="button" class="btn btn-sm btn-success btn-pill" style="color:white;">Fit</button>`;
 				},
 			},
 			{
@@ -290,9 +289,8 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 			},
 			{
 				targets: -2,
-				width: 220,
 				render: function(data, type, full, meta) {
-					return `<a href="" class="btn btn-sm btn-info btn-pill" style="color:white;">Details</a>`;
+					return `<a href="" class="btn btn-sm btn-info btn-pill" style="color:white;">Rincian</a>`;
 				},
 			},
 			],
@@ -395,8 +393,8 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 				orderable: false,
 				render: function(data, type, full, meta) {
 					var status = {
-						Fit: {'title': 'Fit', 'class': ' btn-label-success'},
-						Unfit: {'title': 'Unfit', 'class': 'btn-label-warning'},
+						fit: {'title': 'Fit', 'class': ' btn-label-success'},
+						unfit: {'title': 'Unfit', 'class': 'btn-label-warning'},
 					};
 					if (typeof status[data] === 'undefined') {
 						return data;
@@ -412,7 +410,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 				targets: -2,
 				width: 220,
 				render: function(data, type, full, meta) {
-					return `<a href="" class="btn btn-sm btn-info btn-pill" style="color:white;">Details</a>`;
+					return `<a href="" class="btn btn-sm btn-info btn-pill" style="color:white;">Rincian</a>`;
 				},
 			},
 			],

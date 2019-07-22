@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- begin::Head -->
+<head>
+	<meta charset="utf-8" />
+	<title>Ahli Teknik | Tambah Pekerjaan ABI</title>
+	<meta name="description" content="Page with empty content">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!--begin::Fonts -->
+	<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+	<script>
+		WebFont.load({
+			google: {
+				"families": ["Poppins:300,400,500,600,700", "Roboto:300,400,500,600,700"]
+			},
+			active: function() {
+				sessionStorage.fonts = true;
+			}
+		});
+	</script>
+	<!--end::Fonts -->
+	<!--begin::Page Vendors Styles(used by this page) -->
+	<link href="//www.amcharts.com/lib/3/plugins/export/export.css" rel="stylesheet" type="text/css" />
+	<!--begin::Page Vendors Styles(used by this page) -->
+	<link href="../assets/vendors/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" />
+	<!--end::Page Vendors Styles -->
+	<!--begin:: Global Mandatory Vendors -->
+	<link href="../assets/vendors/general/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" type="text/css" />
+	<!--end:: Global Mandatory Vendors -->
+	<!--begin:: Global Optional Vendors -->
+	<link href="../assets/vendors/general/tether/dist/css/tether.css" rel="stylesheet" type="text/css" />
+	<link href="../assets/vendors/general/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css" rel="stylesheet" type="text/css" />
+	<link href="../assets/vendors/general/bootstrap-datetime-picker/css/bootstrap-datetimepicker.css" rel="stylesheet" type="text/css" />
+	<link href="../assets/vendors/general/bootstrap-timepicker/css/bootstrap-timepicker.css" rel="stylesheet" type="text/css" />
+	<link href="../assets/vendors/general/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css" />
+	<link href="../assets/vendors/general/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.css" rel="stylesheet" type="text/css" />
+	<link href="../assets/vendors/general/bootstrap-select/dist/css/bootstrap-select.css" rel="stylesheet" type="text/css" />
+	<link href="../assets/vendors/general/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.css" rel="stylesheet" type="text/css" />
+	<link href="../assets/vendors/general/select2/dist/css/select2.css" rel="stylesheet" type="text/css" />
+	<link href="../assets/vendors/general/ion-rangeslider/css/ion.rangeSlider.css" rel="stylesheet" type="text/css" />
+	<link href="../assets/vendors/general/nouislider/distribute/nouislider.css" rel="stylesheet" type="text/css" />
+	<link href="../assets/vendors/general/owl.carousel/dist/assets/owl.carousel.css" rel="stylesheet" type="text/css" />
+	<link href="../assets/vendors/general/owl.carousel/dist/assets/owl.theme.default.css" rel="stylesheet" type="text/css" />
+	<link href="../assets/vendors/general/dropzone/dist/dropzone.css" rel="stylesheet" type="text/css" />
+	<link href="../assets/vendors/general/summernote/dist/summernote.css" rel="stylesheet" type="text/css" />
+	<link href="../assets/vendors/general/bootstrap-markdown/css/bootstrap-markdown.min.css" rel="stylesheet" type="text/css" />
+	<link href="../assets/vendors/general/animate.css/animate.css" rel="stylesheet" type="text/css" />
+	<link href="../assets/vendors/general/toastr/build/toastr.css" rel="stylesheet" type="text/css" />
+	<link href="../assets/vendors/general/morris.js/morris.css" rel="stylesheet" type="text/css" />
+	<link href="../assets/vendors/general/sweetalert2/dist/sweetalert2.css" rel="stylesheet" type="text/css" />
+	<link href="../assets/vendors/general/socicon/css/socicon.css" rel="stylesheet" type="text/css" />
+	<link href="../assets/vendors/custom/vendors/line-awesome/css/line-awesome.css" rel="stylesheet" type="text/css" />
+	<link href="../assets/vendors/custom/vendors/flaticon/flaticon.css" rel="stylesheet" type="text/css" />
+	<link href="../assets/vendors/custom/vendors/flaticon2/flaticon.css" rel="stylesheet" type="text/css" />
+	<link href="../assets/vendors/custom/vendors/fontawesome5/css/all.min.css" rel="stylesheet" type="text/css" />
+	<!--end:: Global Optional Vendors -->
+	<!--begin::Global Theme Styles(used by all pages) -->
+	<link href="../assets/demo/default/base/style.bundle.css" rel="stylesheet" type="text/css" />
+	<!--end::Global Theme Styles -->
+	<!--begin::Layout Skins(used by all pages) -->
+	<link href="../assets/demo/default/skins/header/base/light.css" rel="stylesheet" type="text/css" />
+	<link href="../assets/demo/default/skins/header/menu/light.css" rel="stylesheet" type="text/css" />
+	<link href="../assets/demo/default/skins/brand/dark.css" rel="stylesheet" type="text/css" />
+	<link href="../assets/demo/default/skins/aside/dark.css" rel="stylesheet" type="text/css" />
+	<!--end::Layout Skins -->
+	<link rel="shortcut icon" href="../assets/media/logos/favicon.ico" />
+	<link href="../assets/app/style/pertamina-theme.css" rel="stylesheet" type="text/css" />
+	<link href="../assets/app/style/text_black.css" rel="stylesheet" type="text/css" />
+	<style>
+		.form-group label {
+			font-size: 1.15rem;
+			font-weight: 400;
+		}
+		.form-control {
+			font-size: 1.15rem;
+		}
+		
+	</style>
+</head>
+<!-- end::Head -->
+<!-- begin::Body -->
+<body class="kt-header--fixed kt-header-mobile--fixed kt-subheader--fixed kt-subheader--enabled kt-subheader--solid kt-aside--enabled kt-aside--fixed kt-page--loading">
+	<!-- begin:: Page -->
+	<!-- begin:: Header Mobile -->
+	<div id="kt_header_mobile" class="kt-header-mobile  kt-header-mobile--fixed ">
+		<div class="kt-header-mobile__logo">
+			<a href="index.html">
+				<img style="height: 30px;width: auto" alt="Logo" src="../assets/media/logos/logo_1.png" />
+			</a>
+		</div>
+		<div class="kt-header-mobile__toolbar">
+			<button class="kt-header-mobile__toggler kt-header-mobile__toggler--left" id="kt_aside_mobile_toggler"><span></span></button>
+		</div>
+	</div>
+	<!-- end:: Header Mobile -->
+	<div class="kt-grid kt-grid--hor kt-grid--root">
+		<div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--ver kt-page">
+			<!-- begin:: Aside -->
+			<button class="kt-aside-close " id="kt_aside_close_btn"><i class="la la-close"></i></button>
+			<div class="kt-aside  kt-aside--fixed  kt-grid__item kt-grid kt-grid--desktop kt-grid--hor-desktop" id="kt_aside">
+				<!-- begin:: Aside -->
+				<div class="kt-aside__brand kt-grid__item " id="kt_aside_brand">
+					<div class="kt-aside__brand-logo">
+						<a href="index.html">
+							<img alt="Logo" style="height: auto;width: 170px" src="../assets/media/logos/logo_1.png" />
+						</a>
+					</div>
+				</div>
+				<!-- end:: Aside -->
+				<!-- begin:: Aside Menu -->
+				<div class="kt-aside-menu-wrapper kt-grid__item kt-grid__item--fluid" id="kt_aside_menu_wrapper">
+					<div id="kt_aside_menu" class="kt-aside-menu " data-ktmenu-vertical="1" data-ktmenu-scroll="1" data-ktmenu-dropdown-timeout="500">
+						<ul class="kt-menu__nav ">
+							<li class="kt-menu__item  " aria-haspopup="true"><a href="index.html" class="kt-menu__link "><i class="kt-menu__link-icon flaticon-home"></i><span class="kt-menu__link-text">Dashboard</span></a>
+							</li>
+							<li class="kt-menu__item " aria-haspopup="true"><a href="pekerjaan.html" class="kt-menu__link "><i class="kt-menu__link-icon fa fa-chart-bar"></i><span class="kt-menu__link-text">Permintaan SIKA</span></a>
+							</li>
+							<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--open kt-menu__item--here" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
+								<a href="javascript:;" class="kt-menu__link kt-menu__toggle">
+									<i class="kt-menu__link-icon fa fa-briefcase"></i>
+									<span class="kt-menu__link-text">Pekerjaan</span>
+									<i class="kt-menu__ver-arrow la la-angle-right"></i>
+								</a>
+								<div class="kt-menu__submenu "><span class="kt-menu__arrow"><span class="kt-menu__arrow"></span>
+									<ul class="kt-menu__subnav">
+										<li class="kt-menu__item  kt-menu__item--parent" aria-haspopup="true">
+											<span class="kt-menu__link"><span class="kt-menu__link-text">Pekerjaan</span></span>
+										</li>
+										<li class="kt-menu__item " aria-haspopup="true">
+											<a href="tambah_pekerjaan_abo_perizinan.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Perizinan <span name="swakelola_jsa_progress" style="margin-left: 75px">100%</span></span></a>
+										</li>
+										<li class="kt-menu__item " aria-haspopup="true">
+											<a href="tambah_pekerjaan_abo_csms.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">CSMS <span name="swakelola_jsa_progress" style="margin-left: 97px">100%</span></span></a>
+										</li>
+										<li class="kt-menu__item kt-menu__item--active" aria-haspopup="true">
+											<a href="tambah_pekerjaan_abo_jsa.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">JSA <span name="swakelola_jsa_progress" style="margin-left: 110px">100%</span></span></a>
+										</li>
+										<li class="kt-menu__item " aria-haspopup="true">
+											<a href="tambah_pekerjaan_abo_moc.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">MOC <span name="swakelola_moc_progress" style="margin-left: 102px">50%</span></span></span></a>
+										</li>
+										<li class="kt-menu__item " aria-haspopup="true">
+											<a href="tambah_pekerjaan_abo_simlok.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">SIMLOK <span name="swakelola_simlok_progress" style="margin-left: 90px">80%</span></span></span></a>
+										</li>
+									</ul>
+								</div>
+							</li>a
+						</ul>
+					</div>
+				</div>
+				<!-- end:: Aside Menu -->
+			</div>
+			<!-- end:: Aside -->
+			<div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-wrapper" id="kt_wrapper">
+				<!-- begin:: Header -->
+				<div id="kt_header" class="kt-header kt-grid__item  kt-header--fixed ">
+					<!-- begin:: Header Menu -->
+					<button class="kt-header-menu-wrapper-close" id="kt_header_menu_mobile_close_btn"><i class="la la-close"></i>
+					</button>
+					<div class="kt-header-menu-wrapper" id="kt_header_menu_wrapper">
+						<div id="kt_header_menu" class="kt-header-menu kt-header-menu-mobile  kt-header-menu--layout-default ">
+							<img style="width: auto; height: 20px; margin-top: 20px" src="../assets/media/logos/user_ahli_teknik.png">
+						</div>
+					</div>
+					<!-- end:: Header Menu -->
+					<!-- begin:: Header Topbar -->
+					<div class="kt-header__topbar">
+						<!--begin: User Bar -->
+						<div class="kt-header__topbar-item kt-header__topbar-item--user">
+							<div class="user-name">
+								<p style="display: inline;">Hi, <span name="user_name">Rifal</span></p>
+								<a id="btn_log_out" class="btn btn-secondary"> <i class="fa fa-sign-out-alt"></i> Logut</a>	
+							</div>
+						</div>
+						<!--end: User Bar -->
+					</div>
+					<!-- end:: Header Topbar -->
+				</div>
+				<!-- end:: Header -->
+				<div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor">
+					<!-- begin:: Subheader -->
+					<div class="kt-subheader   kt-grid__item" id="kt_subheader">
+						<div class="kt-subheader__main">
+							<h3 class="kt-subheader__title">
+							Pekerjaan </h3>
+							<span class="kt-subheader__separator kt-hidden"></span>
+							<div class="kt-subheader__breadcrumbs">
+								<a href="#" class="kt-subheader__breadcrumbs-home"><i class="flaticon2-shelter"></i></a>
+								<span class="kt-subheader__breadcrumbs-separator"></span>
+								<a href="tambah_pekerjaan.html" class="kt-subheader__breadcrumbs-link">
+								Tambah Pekerjaan </a>
+								<span class="kt-subheader__breadcrumbs-separator"></span>
+								<a href="" class="kt-subheader__breadcrumbs-link">
+								Anggaran Biaya Operasi </a>
+								<span class="kt-subheader__breadcrumbs-separator"></span>
+								<a href="" class="kt-subheader__breadcrumbs-link">
+								JSA </a>
+								<!-- <span class="kt-subheader__breadcrumbs-link kt-subheader__breadcrumbs-link--active">Active link</span> -->
+							</div>
+						</div>
+						<div class="kt-subheader__toolbar">
+						</div>
+					</div>
+					<!-- end:: Subheader -->
+					<!-- begin:: Content -->
+					<div class="kt-content  kt-grid__item kt-grid__item--fluid" id="kt_content">
+						<div class="row">
+							<div class="col-sm-12">
+								<div class="kt-portlet">
+									<div class="kt-portlet__head">
+										<div class="kt-portlet__head-label">
+											<span class="kt-portlet__head-icon kt-hidden">
+												<i class="la la-gear"></i>
+											</span>
+											<h3 class="kt-portlet__head-title">
+												Tambah Pekerjaan Angaran Biaya Operasi
+											</h3>
+										</div>
+									</div>
+									<form class="kt-form">
+										<div class="kt-portlet__body">
+											<ul class="nav nav-tabs nav-fill" role="tablist">
+												<li class="nav-item">
+													<a class="nav-link" href="tambah_pekerjaan_abo_perizinan.html">Perizinan</a>
+												</li>
+												<li class="nav-item">
+													<a class="nav-link "  href="tambah_pekerjaan_abo_csms.html">CSMS</a>
+												</li>
+												<li class="nav-item">
+													<a class="nav-link active" data-toggle="tab" href="tambah_pekerjaan_abo_jsa.html">JSA</a>
+												</li>
+												<li class="nav-item">
+													<a class="nav-link" href="tambah_pekerjaan_abo_moc.html">MOC</a>
+												</li>
+												<li class="nav-item">
+													<a class="nav-link" href="tambah_pekerjaan_abo_simlok.html">SIMLOK</a>
+												</li>
+											</ul>
+											<div class="tab-content">
+												<div class="tab-pane active" role="tabpanel">
+													<form class="kt-form">
+														<div class="form-group row">
+															<label class="col-sm-12">Hazard Analysis Doc (JSA)</label>
+															<div class="col-sm-5">
+																<input class="form-control" type="text" placeholder="hazard analysis" id="input_hazard_analysis" name="input_hazard_analysis">
+															</div>
+															<div class="custom-file col-sm-5">
+																<input type="file" class="custom-file-input" id="hazard_analytic_doc" name="hazard_analytic_doc">
+																<label class="custom-file-label" for="customFile">Pilih berkas</label>
+															</div>
+															<div align="" class="col-sm-2">
+																<button type="button" class="btn btn-primary kt_sweetalert_unggah_berkas"> <i class="fa fa-file-upload "></i> Unggah Berkas</button>
+															</div>
+														</div>
+														<div class="form-group row margin-atas">
+															<label class="col-sm-12">Rifting Plan</label>
+															<div class="col-sm-5">
+																<input class="form-control" type="text" placeholder="rifting plan" id="input_rifting_plan" name="input_rifting_plan">
+															</div>
+															<div class="custom-file col-sm-5">
+																<input type="file" class="custom-file-input" id="rifting_plan_doc" name="rifting_plan_doc">
+																<label class="custom-file-label" for="customFile">Pilih berkas</label>
+															</div>
+															<div align="" class="col-sm-2">
+																<button type="button" class="btn btn-primary kt_sweetalert_unggah_berkas"> <i class="fa fa-file-upload"></i> Unggah Berkas</button>
+															</div>
+														</div>
+														<div class="form-group row margin-atas">
+															<label class="col-sm-12">SOP Peralatan</label>
+															<div class="col-sm-5">
+																<input class="form-control" type="text" placeholder="sop peralatan" id="input_sop_peralatan" name="input_sop_peralatan">
+															</div>
+															<div class="custom-file col-sm-5">
+																<input type="file" class="custom-file-input" id="sop_peralatan_doc" name="sop_peralatan_doc">
+																<label class="custom-file-label" for="customFile">Pilih berkas</label>
+															</div>
+															<div align="" class="col-sm-2">
+																<button type="button" class="btn btn-primary kt_sweetalert_unggah_berkas"> <i class="fa fa-file-upload"></i> Unggah Berkas</button>
+															</div>
+														</div>
+														<div class="form-group row margin-atas">
+															<label class="col-sm-12">Form Inspection</label>
+															<div class="col-sm-5">
+																<input class="form-control" type="text" placeholder="form inspection" id="input_form_inspection" name="input_form_inspection">
+															</div>
+															<div class="custom-file col-sm-5">
+																<input type="file" class="custom-file-input" id="form_inspection_doc" name="form_inspection_doc">
+																<label class="custom-file-label" for="customFile">Pilih berkas</label>
+															</div>
+															<div align="" class="col-sm-2">
+																<button type="button" class="btn btn-primary kt_sweetalert_unggah_berkas"> <i class="fa fa-file-upload"></i> Unggah Berkas</button>
+															</div>
+														</div>
+														<div class="form-group row margin-atas">
+															<label class="col-sm-12" for="">Hazard Identification</label>
+															<select class="form-control select-2 col-sm-10" id="exampleSelect1">
+																<option value="1">
+																	Flammable / explosive material / bahan mudah terbakar / meledak
+																</option>
+																<option value="2">
+																	Presence of gas (hazardous area,...) / Gas (daerah berbahaya, ....)
+																</option>
+																<option value="3">
+																	Liquid hydrocarbon (oil leakage) / ceceran BBM
+																</option>
+																<option value="4">
+																	Single valve isolation / isolasi keruangan tunggal
+																</option>
+																<option value="5">
+																	Hazardous substance / bahan berbahaya
+																</option>
+															</select>
+															<div align="" class="col-sm-2">
+																<button style="width: 100%" type="button" class="btn btn-primary kt_sweetalert_simpan"> <i class="fa fa-save"></i> Simpan</button>
+															</div>
+														</div>
+														<div class="kt-portlet__foot">
+															<div align="center">
+																<button type="button" class="btn btn-md btn-brand kt_sweetalert_draft"> <i class="fa fa-download"></i> Save as Draft</button>
+																<button type="button" class="btn btn-md btn-success"> <i class="fa fa-check"></i> Publish</button>
+															</div>
+														</div>
+													</form>
+												</div>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- end:: Content -->
+				</div>
+				<!-- begin:: Footer -->
+				<div class="kt-footer kt-grid__item kt-grid kt-grid--desktop kt-grid--ver-desktop">
+					<div class="kt-footer__copyright">
+						2019&nbsp;&copy;&nbsp;<a href="http://keenthemes.com/metronic" target="_blank" class="kt-link">Upana Studio</a>
+					</div>
+				</div>
+				<!-- end:: Footer -->
+			</div>
+		</div>
+	</div>
+	<!-- end:: Page -->
+	<!-- begin::Scrolltop -->
+	<div id="kt_scrolltop" class="kt-scrolltop">
+		<i class="fa fa-arrow-up"></i>
+	</div>
+	<!-- end::Scrolltop -->
+	<!-- begin::Global Config(global config for global JS sciprts) -->
+	<script>
+		var KTAppOptions = {
+			"colors": {
+				"state": {
+					"brand": "#5d78ff",
+					"dark": "#282a3c",
+					"light": "#ffffff",
+					"primary": "#5867dd",
+					"success": "#34bfa3",
+					"info": "#36a3f7",
+					"warning": "#ffb822",
+					"danger": "#fd3995"
+				},
+				"base": {
+					"label": ["#c5cbe3", "#a1a8c3", "#3d4465", "#3e4466"],
+					"shape": ["#f0f3ff", "#d9dffa", "#afb4d4", "#646c9a"]
+				}
+			}
+		};
+	</script>
+	<!-- end::Global Config -->
+	<!--begin:: Global Mandatory Vendors -->
+	<script src="../assets/vendors/general/jquery/dist/jquery.js" type="text/javascript"></script>
+	<script src="../assets/vendors/general/popper.js/dist/umd/popper.js" type="text/javascript"></script>
+	<script src="../assets/vendors/general/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
+	<script src="../assets/vendors/general/js-cookie/src/js.cookie.js" type="text/javascript"></script>
+	<script src="../assets/vendors/general/moment/min/moment.min.js" type="text/javascript"></script>
+	<script src="../assets/vendors/general/tooltip.js/dist/umd/tooltip.min.js" type="text/javascript"></script>
+	<script src="../assets/vendors/general/perfect-scrollbar/dist/perfect-scrollbar.js" type="text/javascript"></script>
+	<script src="../assets/vendors/general/sticky-js/dist/sticky.min.js" type="text/javascript"></script>
+	<script src="../assets/vendors/general/wnumb/wNumb.js" type="text/javascript"></script>
+	<!--end:: Global Mandatory Vendors -->
+	<!--begin:: Global Optional Vendors -->
+	<script src="../assets/vendors/general/select2/dist/js/select2.full.js" type="text/javascript"></script>
+	<!--end:: Global Optional Vendors -->
+	<!--begin::Global Theme Bundle(used by all pages) -->
+	<script src="../assets/demo/default/base/scripts.bundle.js" type="text/javascript"></script>
+	<!--end::Global Theme Bundle -->
+	<!--begin::Page Vendors(used by this page) -->
+	<script src="../assets/vendors/custom/fullcalendar/fullcalendar.bundle.js" type="text/javascript"></script>
+	<!--end::Page Vendors -->
+	<!--begin::Page Scripts(used by this page) -->
+	<script src="../assets/app/custom/general/dashboard.js" type="text/javascript"></script>
+	<!--end::Page Scripts -->
+	<!--begin::Global App Bundle(used by all pages) -->
+	<script src="../assets/app/bundle/app.bundle.js" type="text/javascript"></script>
+	<!--begin::Page Vendors(used by this page) -->
+	<script src="../assets/vendors/general/sweetalert2/dist/sweetalert2.min.js" type="text/javascript"></script>
+	<script src="../assets/vendors/custom/components/vendors/sweetalert2/init.js" type="text/javascript"></script>
+	<!--end::Page Vendors -->
+	<!--begin::Page Scripts(used by this page) -->
+	<script src="../assets/app/custom/general/components/charts/amcharts/charts.js" type="text/javascript"></script>
+	<!--end::Global App Bundle -->
+	<!-- AJAX -->
+	<script src="../assets/vendors/custom/datatables/datatables.bundle.js" type="text/javascript"></script>
+	<script src="../assets/app/script/js_ajax_ahli_teknik.js" type="text/javascript"></script>
+	<!-- SweetAlert2 -->
+	<script>
+		// Class definition
+		var KTSweetAlert2Demo = function() {
+	    // Demos
+	    var initDemos = function() {
+	    	$('.kt_sweetalert_simpan').click(function(e) {
+	    		swal.fire("Tersimpan!", "Data Berhasil Disimpan!", "success");
+	    	});
+	    	$('.kt_sweetalert_unggah_berkas').click(function(e) {
+	    		swal.fire("Berhasil!", "Berkas Berhasil di Unggah!", "success");
+	    	});
+	    	$('.kt_sweetalert_draft').click(function(e) {
+	    		swal.fire("Berhasil!", "Data disimpan kedalam draft!", "success");
+	    	});
+	    };
+	    return {
+	        // Init
+	        init: function() {
+	        	initDemos();
+	        },
+	    };
+	}();
+		// Class Initialization
+		jQuery(document).ready(function() {
+			KTSweetAlert2Demo.init();
+		});
+	</script>
+
+	<!-- Search2 -->
+	<script>
+		// Class definition
+		var KTSelect2 = function() {
+		    // Private functions
+		    var demos = function() {
+		    	$('.select-2, .select_validate').select2({
+		    		placeholder: "Select a state"
+		    	});
+
+		    }
+
+		    var modalDemos = function() {
+		    	$('#kt_select2_modal').on('shown.bs.modal', function () {
+		            // basic
+		            $('.select-2_modal').select2({
+		            	placeholder: "Select a state"
+		            });
+		        });
+		    }
+
+		    // Public functions
+		    return {
+		    	init: function() {
+		    		demos();
+		    		modalDemos();
+		    	}
+		    };
+		}();
+
+		// Initialization
+		jQuery(document).ready(function() {
+			KTSelect2.init();
+		});
+	</script>
+</body>
+<!-- end::Body -->
+</html>
