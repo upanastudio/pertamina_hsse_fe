@@ -1,0 +1,78 @@
+{
+    "iTotalRecords": 10,
+    "iTotalDisplayRecords": 10,
+    "sEcho": 0,
+    "sColumns": "",
+    "aaData": [{
+       "no": 1,
+       "tes": "Save Zone Position",
+       "poin": "80",
+       "pertanyaan" : "Apakah yang dimaksud dengan lorem ipsum ?",
+       "aksi": null
+
+   },
+   {
+       "no": 2,
+       "tes": "Permit to Work",
+       "poin": "80",
+       "pertanyaan" : "Apakah yang dimaksud dengan lorem ipsum ?",
+       "aksi": null
+   },
+   {
+       "no": 3,
+       "tes": "Tools and Equipment",
+       "poin": "80",
+       "pertanyaan" : "Apakah yang dimaksud dengan lorem ipsum ?",
+       "aksi": null
+   },
+   {
+       "no": 4,
+       "tes": "Asset and Integrity",
+       "poin": "80",
+       "pertanyaan" : "Apakah yang dimaksud dengan lorem ipsum ?"
+
+   },
+   {
+       "no": 5,
+       "tes": "Isolation",
+       "poin": "80",
+       "pertanyaan" : "Apakah yang dimaksud dengan lorem ipsum ?"
+
+   },
+   {
+       "no": 6,
+       "tes": "Confined Space",
+       "poin": "80",
+       "pertanyaan" : "Apakah yang dimaksud dengan lorem ipsum ?"
+
+   },
+   {
+       "no": 7,
+       "tes": "Fit to Work",
+       "poin": "80",
+       "pertanyaan" : "Apakah yang dimaksud dengan lorem ipsum ?",
+       "aksi": null
+   },
+   {
+       "no": 8,
+       "tes": "Lifting Operation",
+       "poin": "80",
+       "pertanyaan" : "Apakah yang dimaksud dengan lorem ipsum ?",
+       "aksi": null
+   },
+   {
+       "no": 9,
+       "tes": "Personal Floatation Device",
+       "poin": "80",
+       "pertanyaan" : "Apakah yang dimaksud dengan lorem ipsum ?",
+       "aksi": null
+   },
+   {
+       "no": 10,
+       "tes": "Working at height",
+       "poin": "80",
+       "pertanyaan" : "Apakah yang dimaksud dengan lorem ipsum ?",
+       "aksi": null
+   }
+]
+}

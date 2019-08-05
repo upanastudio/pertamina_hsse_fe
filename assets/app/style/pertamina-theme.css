@@ -26,6 +26,10 @@ color: #ffffff;
 .kt-aside-menu .kt-menu__nav > .kt-menu__item > .kt-menu__link .kt-menu__link-text {
 color: #ffffff;
 }*/
+div.dataTables_wrapper div.dataTables_filter input {
+	width: 255px;
+}
+
 i {
 	margin-right: 1px;
 }
@@ -152,8 +156,11 @@ polyline,
 .margin-atas {
 	margin-top: 40px !important;
 }
-.kt-badge--inline {
-	margin-bottom: 5px;
+.verifikasi_data .bag {
+	margin-bottom: 15px;
+}
+.input-berkas {
+	margin-bottom: 15px;
 }
 /*End: Ahli Teknik*/
 @media (min-width: 1025px){

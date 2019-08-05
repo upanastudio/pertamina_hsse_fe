@@ -4,7 +4,7 @@
     "sEcho": 0,
     "sColumns": "",
     "aaData": [{
-                 "no": 1,
+                 "no": "1",
                  "pekerjaan" : "penggalian",
                  "vendor" : "CV. Upana",
                  "tanggal" : "10 November 2019",
@@ -14,7 +14,7 @@
                 
              },
              {
-                "no": 2,
+                "no": "2",
                  "pekerjaan" : "penggalian",
                  "vendor" : "CV. Upana",
                  "tanggal" : "10 November 2019",
@@ -23,7 +23,7 @@
                  "aksi" : null
              },
              {
-                 "no": 3,
+                 "no": "3",
                  "pekerjaan" : "penggalian",
                  "vendor" : "CV. Upana",
                  "tanggal" : "10 November 2019",
@@ -32,7 +32,7 @@
                  "aksi" : null
              },
              {
-                 "no": 4,
+                 "no": "4",
                  "pekerjaan" : "penggalian",
                  "vendor" : "CV. Upana",
                  "tanggal" : "10 November 2019",
@@ -41,7 +41,7 @@
                  "aksi" : null
              },
              {
-                 "no": 5,
+                 "no": "5",
                  "pekerjaan" : "penggalian",
                  "vendor" : "CV. Upana",
                  "tanggal" : "10 November 2019",
@@ -50,7 +50,7 @@
                  "aksi" : null
              },
              {
-                 "no": 6,
+                 "no": "6",
                  "pekerjaan" : "penggalian",
                  "vendor" : "CV. Upana",
                  "tanggal" : "10 November 2019",
@@ -59,7 +59,7 @@
                  "aksi" : null
              },
              {
-                 "no": 7,
+                 "no": "7",
                  "pekerjaan" : "penggalian",
                  "vendor" : "CV. Upana",
                  "tanggal" : "10 November 2019",
@@ -68,7 +68,7 @@
                  "aksi" : null
              },
               {
-                 "no": 8,
+                 "no": "8",
                  "pekerjaan" : "penggalian",
                  "vendor" : "CV. Upana",
                  "tanggal" : "10 November 2019",

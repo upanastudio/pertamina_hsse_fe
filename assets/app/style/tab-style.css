@@ -1,0 +1,23 @@
+.nav-pills, .nav-tabs {
+margin: 0 0 25px 0;
+padding: 10px 10px;
+padding-bottom: 0px;
+background: #41b796;
+border-radius: 8px 8px 0px 0px;
+}
+.nav-tabs .nav-item .nav-link.active, .nav-tabs .nav-item .nav-link:active, .nav-tabs .nav-item .nav-link:hover {
+color: #333333;
+font-weight: 600;
+border-radius: 8px 8px 0px 0px;
+}
+.nav-tabs .nav-link:hover {
+color: white !important;
+border-color: transparent; 
+background: #34967b;
+}
+.nav-tabs .nav-item .nav-link {
+    color: white;
+}
+.tab-content {
+	padding: 0px 15px;
+}

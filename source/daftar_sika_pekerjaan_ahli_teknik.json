@@ -1,0 +1,72 @@
+{
+    "iTotalRecords": 10,
+    "iTotalDisplayRecords": 10,
+    "sEcho": 0,
+    "sColumns": "",
+    "aaData": [{
+                 "no": 1,
+                 "jenis_sika" : "SIKA Panas",
+                 "no_sika" : "01/23/12345123",
+                 "status" : "aktif",
+                 "rincian" : null,
+                 "aksi" : null
+                
+             },
+             {
+                "no": 2,
+                  "jenis_sika" : "SIKA Panas",
+                 "no_sika" : "01/23/12345123",
+                 "status" : "aktif",
+                 "rincian" : null,
+                 "aksi" : null
+             },
+             {
+                 "no": 3,
+                  "jenis_sika" : "SIKA Panas",
+                 "no_sika" : "01/23/12345123",
+                 "status" : "aktif",
+                 "rincian" : null,
+                 "aksi" : null
+             },
+             {
+                 "no": 4,
+                 "jenis_sika" : "SIKA Panas",
+                 "no_sika" : "01/23/12345123",
+                 "status" : "aktif",
+                 "rincian" : null,
+                 "aksi" : null
+             },
+             {
+                 "no": 5,
+                  "jenis_sika" : "SIKA Panas",
+                 "no_sika" : "01/23/12345123",
+                 "status" : "aktif",
+                 "rincian" : null,
+                 "aksi" : null
+             },
+             {
+                 "no": 6,
+                 "jenis_sika" : "SIKA Panas",
+                 "no_sika" : "01/23/12345123",
+                 "status" : "aktif",
+                 "rincian" : null,
+                 "aksi" : null
+             },
+             {
+                 "no": 7,
+                 "jenis_sika" : "SIKA Panas",
+                 "no_sika" : "01/23/12345123",
+                 "status" : "tidak_aktif",
+                 "rincian" : null,
+                 "aksi" : null
+             },
+              {
+                 "no": 8,
+                  "jenis_sika" : "SIKA Panas",
+                 "no_sika" : "01/23/12345123",
+                 "status" : "tidak_aktif",
+                 "rincian" : null,
+                 "aksi" : null
+             }
+]
+}

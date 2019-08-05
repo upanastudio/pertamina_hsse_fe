@@ -1,0 +1,43 @@
+.kt-portlet__head-title {
+	font-size: 1.5rem !important;
+}
+.card-header {
+	background-color: #3a9c81;
+}
+.card {
+	border: 4px solid #ffffff;
+	border-radius: 1.25rem;
+}
+.accordion.accordion-toggle-arrow .card .card-header .card-title.collapsed,
+.accordion.accordion-toggle-arrow .card .card-header .card-title.collapsed:after,
+.accordion.accordion-toggle-arrow .card .card-header .card-title:after {
+	color: #ffffff;
+}
+.accordion.accordion-toggle-arrow .card .card-header .card-title {
+	color: #ffffff;
+	position: relative;
+	font-size: 1.2rem;
+}
+.fa-download {
+	margin-right: -5px !important;
+}
+.kt-badge.kt-badge--pill {
+	margin-bottom:3px;
+	width: 100%;
+	font-size: 1rem;
+	padding:15px 2px;
+	pointer-events: none;
+	font-weight: 400;
+}
+.kt-badge.kt-badge--brand {
+	color: #ffffff;
+	background: #6c7293;
+}
+.nav-tabs .nav-item .nav-link {
+	padding: 0.75rem 7.6rem;
+}
+.btn.btn-label-dark {
+	width: 100%;
+	margin-bottom: 5px;
+	pointer-events: none;
+}
