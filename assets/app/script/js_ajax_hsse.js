@@ -6,6 +6,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 	});
 	var initTable1 = function() {
 		var table = $('#daftar_permintaan_pekerjaan');
+		var sifat_pekerjaan = '';
 
 		// begin first table
 		table.DataTable({
@@ -37,14 +38,30 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 				data: 'tanggal',
 				title: 'Tanggal',
 			},{
+				data: 'sifat',
+				title: 'Sifat',
+				render: function(data, type, full, meta) {
+					sifat_pekerjaan = data;
+					return sifat_pekerjaan;
+				},
+			},{
 				field: 'aksi',
 				title: 'Aksi',
+				responsivePriority: -1,
 				className: 'text-center',
 				orderable: false,
+				// priority: -1,
 				width: 100,
 				render: function(data, type, full, meta) {
-					return `
-					<a href="rincian_permintaan_pekerjaan.html" class="btn btn-sm btn-primary" style="color:white;border-radius:20px">Rincian</a>`;
+					if (sifat_pekerjaan == "Swakelola") {
+						return `<a href="rincian_permintaan_pekerjaan_swakelola.html" class="btn btn-sm btn-brand" style="color:white;border-radius:20px">Rincian</a> `;
+					} else if (sifat_pekerjaan == "ABI") {
+						return `<a href="rincian_permintaan_pekerjaan_abi.html" class="btn btn-sm btn-brand" style="color:white;border-radius:20px">Rincian</a> `;
+					} else if (sifat_pekerjaan == "ABO") {
+						return `<a href="rincian_permintaan_pekerjaan_abo.html" class="btn btn-sm btn-brand" style="color:white;border-radius:20px">Rincian</a> `;
+					} else {
+						return `<a href="#" class="btn btn-sm btn-brand" style="color:white;border-radius:20px">Rincian</a> `;
+					}
 				},
 			}],
 			columnDefs: [
@@ -88,22 +105,62 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 				data: 'tanggal',
 				title: 'Tanggal',
 			},{
+				data: 'sifat',
+				title: 'Sifat',
+			},{
 				data: 'status',
 				title: 'Status',
 				render: function(data, type, full, meta) {
-					var status = {
-						terverifikasi: {'title': 'terverifikasi', 'class': ' btn-label-success'},
-						ditolak: {'title': 'Ditolak', 'class': 'btn-label-danger'},
-						draft: {'title': 'Draft', 'class': 'btn-label-brand'},
-					};
-					if (typeof status[data] === 'undefined') {
-						return data;
+					var stateSatu = "draft";
+					var stateDua = "belum terverifikasi";
+					var stateTiga = "terverifikasi";
+					var stateEmpat = "ditolak";
+					var stateLima = "berlangsung";
+					var stateEnam = "ditunda";
+					var stateTujuh = "selesai";
+
+					if (data == stateSatu) {
+						return '<span style="width:80%" class="btn btn-bold btn-sm btn-font-sm btn-label-not-so-brand">Draft</span>';
 					}
-					return '<span style="width:80%" class="btn btn-bold btn-sm btn-font-sm ' + status[data].class + '">' + status[data].title + '</span>';
+					else if (data == stateDua) {
+						return '<span style="width:80%" class="btn btn-bold btn-sm btn-font-sm btn-label-warning">Belum Terverifikasi</span>';
+					}
+					else if (data == stateTiga) {
+						return '<span style="width:80%" class="btn btn-bold btn-sm btn-font-sm btn-label-success">Terverifikasi</span>';
+					}
+					else if (data == stateEmpat) {
+						return '<span style="width:80%" class="btn btn-bold btn-sm btn-font-sm btn-label-danger">Ditolak</span>';
+					}
+					else if (data == stateLima) {
+						return '<span style="width:80%" class="btn btn-bold btn-sm btn-font-sm btn-label-brand">Berlangsung</span>';
+					}
+					else if (data == stateEnam) {
+						return '<span style="width:80%" class="btn btn-bold btn-sm btn-font-sm btn-label-not-so-danger">Ditunda</span>';
+					}
+					else if (data == stateTujuh) {
+						return '<span style="width:80%" class="btn btn-bold btn-sm btn-font-sm btn-label-primary">Selesai</span>';
+					}
+					else {
+						return '<span style="width:80%" class="btn btn-bold btn-sm btn-font-sm">' + data + '</span>';
+					}
+
+					// var status = {
+					// 	terverifikasi: {'title': 'Terverifikasi', 'class': ' btn-label-success'},
+					// 	ditolak: {'title': 'Ditolak', 'class': 'btn-label-danger'},
+					// 	draft: {'title': 'Draft', 'class': 'btn-label-brand'},
+					// 	berlangsung: {'title': 'Berlangsung', 'class': 'btn-label-brand'},
+					// 	ditunda: {'title': 'Ditunda', 'class': 'btn-label-warning'},
+					// 	selesai: {'title': 'Selesai', 'class': 'btn-label-dark'},
+					// };
+					// if (typeof status[data] === 'undefined') {
+					// 	return data;
+					// }
+					// return '<span style="width:80%" class="btn btn-bold btn-sm btn-font-sm ' + status[data].class + '">' + status[data].title + '</span>';
 				},
 			},{
 				field: 'aksi',
 				title: 'Aksi',
+				responsivePriority: -1,
 				className: 'text-center',
 				orderable: false,
 				width: 100,
@@ -152,7 +209,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 			},{
 				data: 'status',
 				title: 'Status',
-				width: 70,
+				// width: 70,
 				render: function(data, type, full, meta) {
 					var status = {
 						tidak_aktif: {'title': 'Tidak Aktif', 'class': 'btn-label-danger'},
@@ -166,6 +223,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 			},{
 				field: 'rincian',
 				title: 'Rincian',
+				responsivePriority: -1,
 				className: 'text-center',
 				orderable: false,
 				width: 100,
@@ -217,6 +275,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 			},{
 				field: 'aksi',
 				title: 'Aksi',
+				responsivePriority: -1,
 				className: 'text-center',
 				orderable: false,
 				width: 100,
@@ -228,7 +287,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 					<div style="min-width:9rem;padding:5px;" class="dropdown-menu dropdown-menu-right">
 					<a href="rincian_data_pekerja.html" style="margin-bottom:5px;" class="dropdown-item btn btn-secondary" href="#"> <i class="fa fa-clipboard-list"></i>Rincian</a>
 					<button data-toggle="modal" data-target="#terima" style="margin-bottom:5px;" class="dropdown-item btn btn-secondary" href="#"> <i class="fa fa-check"></i>Terima</button>
-					<button data-toggle="modal" data-target="#tolak"  class="dropdown-item btn btn-secondary"> <i class="fa fa-times"></i>Tolak</button>` 
+					<button data-toggle="modal" data-target="#tolak"  class="dropdown-item btn btn-secondary"> <i class="fa fa-times"></i>Tolak</button>`
 					;
 					/*return `
 					<a href="rincian_data_pekerja.html" class="btn btn-sm btn-primary" style="color:white;border-radius:20px">Rincian</a> &nbsp;` +
@@ -442,6 +501,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 			},{
 				data: 'aksi',
 				title: 'Aksi',
+				responsivePriority: -1,
 				className: 'text-center',
 				orderable: false,
 				width: 100,
@@ -507,6 +567,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 			},{
 				data: 'aksi',
 				title: 'Aksi',
+				responsivePriority: -1,
 				className: 'text-center',
 				orderable: false,
 				width: 100,
@@ -563,6 +624,202 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 			],
 		});
 	};
+	var initTable11 = function() {
+		var table = $('#daftar_sika_pembuatan');
+		var status_sika = '';
+
+		// begin first table
+		table.DataTable({
+
+			responsive: true,
+			searchDelay: 500,
+			processing: true,
+			serverSide: false,
+			ajax: {
+				url: '../source/daftar_sika_pembuatan.json',
+				type: 'POST',
+				data: {
+					pagination: {
+						perpage: 50,
+					},
+				},
+			},
+			columns: [
+			{
+				data: 'no',
+				title: 'No.',
+				orderable: false,
+			},{
+				data: 'nama_pekerjaan',
+				title: 'Nama Pekerjaan',
+			},{
+				data: 'jenis_sika',
+				title: 'Jenis SIKA',
+			},{
+				data: 'no_sika',
+				title: 'No. SIKA',
+			},{
+				data: 'status',
+				title: 'Status',
+				// width: 70,
+				render: function(data, type, full, meta) {
+					var status = {
+						baru: {'title': 'Baru', 'class': 'btn-label-brand'},
+						perpanjang: {'title': 'Perpanjang', 'class': 'btn-label-warning'},
+					};
+					if (typeof status[data] === 'undefined') {
+						return data;
+					}
+					status_sika = data;
+					return '<span style="width:80%" class="btn btn-bold btn-sm btn-font-sm ' + status[data].class + '">' + status[data].title + '</span>';
+					return status_sika;
+				},
+			},{
+				field: 'rincian',
+				title: 'Rincian',
+				responsivePriority: -1,
+				className: 'text-center',
+				orderable: false,
+				width: 100,
+				render: function(data, type, full, meta) {
+					if (status_sika == "baru") {
+						return `
+						<a href="rincian_pembuatan_sika.html" class="btn btn-sm btn-brand" style="color:white;border-radius:20px">Rincian</a> `;
+					} else if (status_sika == "perpanjang") {
+						return `
+						<a href="rincian_perpanjang_sika.html" class="btn btn-sm btn-brand" style="color:white;border-radius:20px">Rincian</a> `;
+					}
+				},
+			}],
+			columnDefs: [
+			{
+				targets: [0,1,2,3,4],
+				className: 'text-center'
+			}
+			],
+		});
+	};
+	var initTable12 = function() {
+		var table = $('#daftar_sika_penyelesaian');
+
+		// begin first table
+		table.DataTable({
+			responsive: true,
+			searchDelay: 500,
+			processing: true,
+			serverSide: false,
+			ajax: {
+				url: '../source/daftar_sika_pekerjaan_ahli_teknik.json',
+				type: 'POST',
+				data: {
+					pagination: {
+						perpage: 50,
+					},
+				},
+			},
+			columns: [
+			{
+				data: 'no',
+				title: 'No.',
+				orderable: false,
+			},{
+				data: 'jenis_sika',
+				title: 'Jenis SIKA',
+			},{
+				data: 'no_sika',
+				title: 'No. SIKA',
+			},{
+				data: 'status',
+				title: 'Status',
+				// width: 70,
+				render: function(data, type, full, meta) {
+					var status = {
+						tidak_aktif: {'title': 'Tidak Aktif', 'class': 'btn-label-danger'},
+						aktif: {'title': 'Aktif', 'class': 'btn-label-success'},
+					};
+					if (typeof status[data] === 'undefined') {
+						return data;
+					}
+					return '<span style="width:80%" class="btn btn-bold btn-sm btn-font-sm ' + status[data].class + '">' + status[data].title + '</span>';
+				},
+			},{
+				field: 'rincian',
+				title: 'Rincian',
+				responsivePriority: -1,
+				className: 'text-center',
+				orderable: false,
+				width: 100,
+				render: function(data, type, full, meta) {
+					return `
+					<a href="rincian_riwayat_sika.html" class="btn btn-sm btn-brand" style="color:white;border-radius:20px">Rincian</a> `;
+				},
+			}],
+			columnDefs: [
+			{
+				targets: [0,1,2,3,4],
+				className: 'text-center'
+			}
+			],
+		});
+	};
+	var initTable13 = function() {
+		var table = $('#daftar_pob');
+
+		// begin first table
+		table.DataTable({
+			responsive: true,
+			searchDelay: 500,
+			processing: true,
+			serverSide: false,
+			ajax: {
+				url: '../source/daftar_pob.json',
+				type: 'POST',
+				data: {
+					pagination: {
+						perpage: 50,
+					},
+				},
+			},
+			columns: [
+			{
+				data: 'no',
+				title: 'No.',
+				orderable: false,
+			},{
+				data: 'nama',
+				title: 'Nama',
+			},{
+				data: 'vendor',
+				title: 'Vendor',
+			},{
+				data: 'pekerjaan',
+				title: 'Pekerjaan',
+			},{
+				data: 'jabatan',
+				title: 'Jabatan',
+			},{
+				data: 'status',
+				title: 'Status',
+				// width: 70,
+				render: function(data, type, full, meta) {
+					var status = {
+						masuk: {'title': 'Masuk', 'class': 'btn-label-success'},
+						keluar: {'title': 'Keluar', 'class': 'btn-label-danger'},
+					};
+					if (typeof status[data] === 'undefined') {
+						return data;
+					}
+					return '<span style="width:80%" class="btn btn-bold btn-sm btn-font-sm ' + status[data].class + '">' + status[data].title + '</span>';
+				},
+			}],
+			columnDefs: [
+			{
+				targets: [0,1,2,3,4,5],
+				className: 'text-center'
+			}
+			],
+		});
+	};
 	return {
 		//main function to initiate the module
 		init: function() {
@@ -576,6 +833,9 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 			initTable8();
 			initTable9();
 			initTable10();
+			initTable11();
+			initTable12();
+			initTable13();
 		},
 
 	};

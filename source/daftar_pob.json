@@ -1,0 +1,71 @@
+{
+    "iTotalRecords": 10,
+    "iTotalDisplayRecords": 10,
+    "sEcho": 0,
+    "sColumns": "",
+    "aaData": [{
+                 "no": 1,
+                 "nama" : "Ahmad",
+                 "vendor" : "CV. Upana Studio",
+                 "pekerjaan" : "Penggalian",
+                 "jabatan" : "Penggalian",
+                 "status" : "masuk"
+             },
+             {
+                 "no": 2,
+                 "nama" : "Ahmad",
+                 "vendor" : "CV. Upana Studio",
+                 "pekerjaan" : "Penggalian",
+                 "jabatan" : "Penggalian",
+                 "status" : "keluar"
+             },
+             {
+                 "no": 3,
+                 "nama" : "Ahmad",
+                 "vendor" : "CV. Upana Studio",
+                 "pekerjaan" : "Penggalian",
+                 "jabatan" : "Penggalian",
+                 "status" : "masuk"
+             },
+             {
+                 "no": 4,
+                 "nama" : "Ahmad",
+                 "vendor" : "CV. Upana Studio",
+                 "pekerjaan" : "Penggalian",
+                 "jabatan" : "Penggalian",
+                 "status" : "keluar"
+             },
+             {
+                 "no": 5,
+                 "nama" : "Ahmad",
+                 "vendor" : "CV. Upana Studio",
+                 "pekerjaan" : "Penggalian",
+                 "jabatan" : "Penggalian",
+                 "status" : "masuk"
+             },
+             {
+                 "no": 6,
+                 "nama" : "Ahmad",
+                 "vendor" : "CV. Upana Studio",
+                 "pekerjaan" : "Penggalian",
+                 "jabatan" : "Penggalian",
+                 "status" : "keluar"
+             },
+             {
+                 "no": 7,
+                 "nama" : "Ahmad",
+                 "vendor" : "CV. Upana Studio",
+                 "pekerjaan" : "Penggalian",
+                 "jabatan" : "Penggalian",
+                 "status" : "masuk"
+             },
+              {
+                 "no": 8,
+                 "nama" : "Ahmad",
+                 "vendor" : "CV. Upana Studio",
+                 "pekerjaan" : "Penggalian",
+                 "jabatan" : "Penggalian",
+                 "status" : "keluar"
+             }
+]
+}

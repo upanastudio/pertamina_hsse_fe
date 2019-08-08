@@ -39,6 +39,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 			},{
 				field: 'aksi',
 				title: 'Aksi',
+				responsivePriority: -1,
 				className: 'text-center',
 				orderable: false,
 				width: 100,
@@ -104,6 +105,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 			},{
 				field: 'aksi',
 				title: 'Aksi',
+				responsivePriority: -1,
 				className: 'text-center',
 				orderable: false,
 				width: 100,
@@ -166,6 +168,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 			},{
 				field: 'rincian',
 				title: 'Rincian',
+				responsivePriority: -1,
 				className: 'text-center',
 				orderable: false,
 				width: 100,

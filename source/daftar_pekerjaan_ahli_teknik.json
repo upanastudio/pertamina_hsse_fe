@@ -10,8 +10,9 @@
                  "tanggal" : "10 November 2019",
                  "tipe" : "hot",
                  "status" : "terverifikasi",
+                 "sifat" : "Swakelola",
                  "aksi" : null
-                
+
              },
              {
                 "no": "2",
@@ -20,6 +21,7 @@
                  "tanggal" : "10 November 2019",
                  "tipe" : "hot",
                  "status" : "terverifikasi",
+                 "sifat" : "Swakelola",
                  "aksi" : null
              },
              {
@@ -29,6 +31,7 @@
                  "tanggal" : "10 November 2019",
                  "tipe" : "cold",
                  "status" : "terverifikasi",
+                 "sifat" : "ABI",
                  "aksi" : null
              },
              {
@@ -38,6 +41,7 @@
                  "tanggal" : "10 November 2019",
                  "tipe" : "cold",
                  "status" : "terverifikasi",
+                 "sifat" : "ABI",
                  "aksi" : null
              },
              {
@@ -47,6 +51,7 @@
                  "tanggal" : "10 November 2019",
                  "tipe" : "hot",
                  "status" : "ditolak",
+                 "sifat" : "ABI",
                  "aksi" : null
              },
              {
@@ -56,6 +61,7 @@
                  "tanggal" : "10 November 2019",
                  "tipe" : "hot",
                  "status" : "ditolak",
+                 "sifat" : "ABO",
                  "aksi" : null
              },
              {
@@ -65,6 +71,7 @@
                  "tanggal" : "10 November 2019",
                  "tipe" : "hot",
                  "status" : "draft",
+                 "sifat" : "ABO",
                  "aksi" : null
              },
               {
@@ -74,6 +81,7 @@
                  "tanggal" : "10 November 2019",
                  "tipe" : "hot",
                  "status" : "draft",
+                 "sifat" : "ABO",
                  "aksi" : null
              }
 ]

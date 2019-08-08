@@ -170,7 +170,7 @@
 												<i class="kt-menu__link-bullet kt-menu__link-bullet--dot">
 													<span></span>
 												</i>
-												<span class="kt-menu__link-text">Riwayat Pekerjaan</span>
+												<span class="kt-menu__link-text">Semua Pekerjaan</span>
 											</a>
 										</li>
 									</ul>
@@ -196,11 +196,11 @@
 											</a>
 										</li>
 										<li class="kt-menu__item " aria-haspopup="true">
-											<a href="permintaan_tutup_sika.html" class="kt-menu__link ">
+											<a href="permintaan_penyelesaian_sika.html" class="kt-menu__link ">
 												<i class="kt-menu__link-bullet kt-menu__link-bullet--dot">
 													<span></span>
 												</i>
-												<span class="kt-menu__link-text">Permintaan Tutup SIKA</span>
+												<span class="kt-menu__link-text">Permintaan Penyelesaian SIKA</span>
 											</a>
 										</li>
 										<li class="kt-menu__item " aria-haspopup="true">
@@ -208,11 +208,13 @@
 												<i class="kt-menu__link-bullet kt-menu__link-bullet--dot">
 													<span></span>
 												</i>
-												<span class="kt-menu__link-text">Riwayat SIKA</span>
+												<span class="kt-menu__link-text">Semua SIKA</span>
 											</a>
 										</li>
 									</ul>
 								</div>
+							</li>
+							<li class="kt-menu__item" aria-haspopup="true"><a href="pob.html" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-infographic"></i><span class="kt-menu__link-text">POB</span></a>
 							</li>
 						</ul>
 					</div>
@@ -238,7 +240,7 @@
 						<div class="kt-header__topbar-item kt-header__topbar-item--user">
 							<div class="user-name">
 								<p style="display: inline;">Hi, <span name="user_name">Rifal</span></p>
-								<a id="btn_log_out" class="btn btn-secondary"> <i class="fa fa-sign-out-alt"></i> Logut</a>	
+								<a id="btn_log_out" class="btn btn-secondary"> <i class="fa fa-sign-out-alt"></i> Logut</a>
 							</div>
 						</div>
 						<!--end: User Bar -->
@@ -324,7 +326,7 @@
 										</ul>
 										<div class="tab-content">
 											<div class="tab-pane active" id="kt_tabs_umum" role="tabpanel">
-												<div>
+												<div style="padding: 0px 20px">
 													<div class="form-group row">
 														<label for="example-text-input" class="col-3 col-form-label">Sifat Pekerjaan</label>
 														<div class="col-9">
@@ -335,6 +337,12 @@
 														<label for="example-text-input" class="col-3 col-form-label">ID Pekerjaan</label>
 														<div class="col-9">
 															<input disabled="" class="form-control" type="text" value="00/000/0000/00" id="id_pekerjaan" name="id_pekerjaan">
+														</div>
+													</div>
+													<div class="form-group row">
+														<label for="example-text-input" class="col-3 col-form-label">Nama Pekerjaan</label>
+														<div class="col-9">
+															<input disabled="" class="form-control" type="text" value="Penggalian" id="id_pekerjaan" name="id_pekerjaan">
 														</div>
 													</div>
 													<div class="form-group row">
@@ -407,9 +415,9 @@
 											</div>
 											<div class="tab-pane" id="kt_tabs_perizinan" role="tabpanel">
 												<div style="margin-bottom:15px" class="col-sm-12">
-													<h5>Dokumen Lingkugan</h5>
+													<h5>Dokumen Lingkungan</h5>
 												</div>
-												<div>
+												<div style="padding: 5px 20px">
 													<div class="form-group row">
 														<label class="col-sm-12">Amdal</label>
 														<div class="col-sm-6">
@@ -630,7 +638,7 @@
 												</div>
 											</div>
 											<div class="tab-pane" id="kt_tabs_csms" role="tabpanel">
-												<div>
+												<div style="padding: 5px 20px">
 													<div class="form-group row">
 														<label class="col-sm-12">PJA</label>
 														<div class="col-sm-6">
@@ -715,7 +723,7 @@
 												</div>
 											</div>
 											<div class="tab-pane" id="kt_tabs_jsa" role="tabpanel">
-												<div>
+												<div style="padding: 5px 20px">
 													<div class="form-group row">
 														<label class="col-sm-12">Hazard Analysis Doc (JSA)</label>
 														<div class="col-sm-6">
@@ -854,7 +862,7 @@
 																Flammable / explosive material / bahan mudah terbakar / meledak
 															</span>
 															<span class="kt-badge  kt-badge--dark kt-badge--inline kt-badge--pill kt-badge--rounded">
-																Presence of gas (hazardous area,...) / Gas (daerah berbahaya, ....) 
+																Presence of gas (hazardous area,...) / Gas (daerah berbahaya, ....)
 															</span>
 															<span class="kt-badge  kt-badge--dark kt-badge--inline kt-badge--pill kt-badge--rounded">
 																Liquid hydrocarbon (oil leakage) / ceceran BBM
@@ -880,24 +888,76 @@
 															</div>
 														</div>
 													</div>
+													<div class="form-group row">
+														<label class="col-sm-12">Komentar</label>
+														<div class="col-sm-12">
+															<textarea class="form-control border-bold" id="exampleTextarea" rows="3" placeholder="Tulis komentar..."></textarea>
+														</div>
+													</div>
 												</div>
 											</div>
 											<div class="tab-pane" id="kt_tabs_moc" role="tabpanel">
-												<div>
+												<div style="padding: 5px 20px">
 													<div class="form-group row">
 														<label class="col-sm-12">Isoalasi Energi / LOTO</label>
 														<div class="col-sm-6">
 															<input disabled="" class="form-control" type="text" value="text isolasi energi/LOTO" id="input_hazard_analysis" name="input_hazard_analysis">
 														</div>
-														<div align="" class="offset-sm-4 col-sm-2">
+														<div align="right" class="offset-sm-4 col-sm-2">
 															<button type="button" class="btn btn-link"> <i class="fa fa-eye "></i>lihat file</button>
 														</div>
-														<div class="col-sm-12">
+														<div class="col-sm-12" style="margin-bottom: 10px">
 															<div class="kt-checkbox-inline">
 																<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
 																	<input name="status_dokumen" type="checkbox"> Tindakan LOTO sudah direalisasikan dilokasi
 																	<span></span>
 																</label>
+															</div>
+														</div>
+														<div class="col-sm-12" style="padding: 0px 10px">
+															<div class="col-sm-12" style="margin-bottom: 12px">
+																<div class="row">
+																	<div class="col-sm-8" style="margin:auto">
+																		<i class="flaticon2-right-arrow" style="margin-right:5px; color:#0abb87"></i>
+																		<label style="margin-bottom: 0rem">Unggah Berkas
+																		</label>
+																	</div>
+																	<div align="right" class="col-sm-4">
+																		<button id="btn_tambah_prosedur" name="btn_tambah_prosedur" type="button" class="btn btn-sm btn-success">
+																			<i class="fa fa-plus"></i> Tambah file
+																		</button>
+																	</div>
+																</div>
+															</div>
+															<div class="col-sm-12 input-berkas">
+																<div class="row">
+																	<div class="col-sm-11">
+																		<div class="custom-file">
+																			<input type="file" class="custom-file-input" id="isolasi_energi_doc" name="isolasi_energi_doc">
+																			<label class="custom-file-label" for="customFile">Pilih berkas</label>
+																		</div>
+																	</div>
+																	<div align="right" class="col-sm-1">
+																		<button type="button" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary">
+																			<span class="fa fa-trash-alt"></span>
+																		</button>
+																	</div>
+																</div>
+															</div>
+															<div class="col-sm-12 input-berkas">
+																<div class="row">
+																	<div class="col-sm-11">
+																		<div class="custom-file">
+																			<input type="file" class="custom-file-input" id="isolasi_energi_doc" name="isolasi_energi_doc">
+																			<label class="custom-file-label" for="customFile">Pilih berkas</label>
+																		</div>
+																	</div>
+																	<div align="right" class="col-sm-1">
+																		<button type="button" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary">
+																			<span class="fa fa-trash-alt"></span>
+																		</button>
+																	</div>
+																</div>
 															</div>
 														</div>
 													</div>
@@ -976,10 +1036,16 @@
 															</div>
 														</div>
 													</div>
+													<div class="form-group row">
+														<label class="col-sm-12">Komentar</label>
+														<div class="col-sm-12">
+															<textarea class="form-control border-bold" id="exampleTextarea" rows="3" placeholder="Tulis komentar..."></textarea>
+														</div>
+													</div>
 												</div>
 											</div>
 											<div class="tab-pane" id="kt_tabs_simlok" role="tabpanel">
-												<div>
+												<div style="padding: 5px 20px">
 													<div class="form-group row kt-hidden">
 														<label for="example-text-input" class="col-3 col-form-label">Nama Pekerjaan</label>
 														<div class="col-7">
@@ -1173,7 +1239,7 @@
 																	</div>
 																</div>
 															</div>
-															<div class="form-group row">
+															<!-- <div class="form-group row">
 																<label class="col-sm-3">SOP</label>
 																<div align="right" class="col-sm-9">
 																	<button type="button" class="btn btn-link"> <i class="fa fa-eye "></i>lihat file</button>
@@ -1254,7 +1320,7 @@
 																		</div>
 																	</div>
 																</div>
-															</div>
+															</div> -->
 														</div>
 													</div>
 												</div>
