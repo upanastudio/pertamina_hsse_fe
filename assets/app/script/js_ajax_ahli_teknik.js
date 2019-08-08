@@ -102,7 +102,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 					if (typeof status[data] === 'undefined') {
 						return data;
 					}
-					return '<span style="width:80%" class="btn btn-bold btn-sm btn-font-sm ' + status[data].class + '">' + status[data].title + '</span>';
+					return '<span style="width:100%" class="btn btn-bold btn-sm btn-font-sm ' + status[data].class + '">' + status[data].title + '</span>';
 				},
 			},{
 				field: 'aksi',
@@ -158,22 +158,47 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 				data: 'tanggal',
 				title: 'Tanggal Mulai',
 			},{
+				data: 'validasi',
+				title: 'Validasi',
+				responsivePriority: -1,
+				render: function(data, type, full, meta) {
+					return `
+					<div class="kt-checkbox-list">
+					<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success validasi_check">
+					<input disabled type="checkbox" id="check_hsse" name="check_hsse"> HSSE
+					<span></span>
+					</label>
+					<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success validasi_check">
+					<input disabled type="checkbox" id="check_gsi" name="check_hsse"> GSI
+					<span></span>
+					</label>
+					</div>`;
+				},
+			},{
 				data: 'status',
 				title: 'Status',
+				responsivePriority: -1,
 				render: function(data, type, full, meta) {
 					var status = {
-						draft: {'title': 'Draft', 'class': ' btn-label-dark'},
+						/*draft: {'title': 'Draft', 'class': ' btn-label-dark'},
 						belum_terverifikasi: {'title': 'Belum Terverifikasi', 'class': 'btn-label-bold'},
-						terverifikasi: {'title': 'Terverifikasi', 'class': 'btn-label-brand'},
+						baru: {'title': 'baru', 'class': 'btn-label-brand'},
 						ditolak: {'title': 'Ditolak', 'class': 'btn-label-danger'},
 						berlangsung: {'title': 'Berlangsung', 'class': 'btn-label-primary'},
 						ditunda: {'title': 'Ditunda', 'class': 'btn-label-warning'},
-						selesai: {'title': 'Selesai', 'class': 'btn-label-success'},
+						selesai: {'title': 'Selesai', 'class': 'btn-label-success'},*/
+						baru: {'title': 'Baru', 'class': 'btn-label-brand'},
+						perpanjang : {'title': 'Perpanjang', 'class': 'btn-label-warning'},
+						resubmit : {'title' : 'Resubmit', 'class' : 'btn-label-bold bold-status'},
+						ditolak : {'title' : 'Ditolak', 'class' : 'btn-label-danger'},
+						berlangsung : {'title' : 'Berlangsung', 'class' : 'btn-label-primary'},
+						ditunda : {'title' : 'Ditunda','class' : 'btn-label-dark'},
+						selesai : {'title' : 'Selesai', 'class' : 'btn-label-success'}
 					};
 					if (typeof status[data] === 'undefined') {
 						return data;
 					}
-					return '<span style="width:70%" class="btn btn-bold btn-sm btn-font-sm ' + status[data].class + '">' + status[data].title + '</span>';
+					return '<span style="width:100%" class="btn btn-bold btn-sm btn-font-sm ' + status[data].class + '">' + status[data].title + '</span>';
 				},
 			},{
 				field: 'aksi',
@@ -183,9 +208,9 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 				orderable: false,
 				render: function(data, type, full, meta) {
 					var status = {
-						draft: {'href': 'edit_pekerjaan.html'},
-						belum_terverifikasi: {'href': 'rincian_pekerjaan_belum_terverifikasi.html'},
-						terverifikasi: {'href': 'rincian_pekerjaan_terverifikasi.html'},
+						perpanjang: {'href': 'rincian_pekerjaan_belum_terverifikasi.html'},
+						resubmit: {'href': 'rincian_pekerjaan_belum_terverifikasi.html'},
+						baru: {'href': 'rincian_pekerjaan_belum_terverifikasi.html'},
 						ditolak: {'href': 'rincian_pekerjaan_ditolak.html'},
 						berlangsung: {'href': 'rincian_pekerjaan_berlangsung.html'},
 						ditunda: {'href': 'rincian_pekerjaan_ditunda.html'},
@@ -197,7 +222,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 			}],
 			columnDefs: [
 			{
-				targets: [0,1,2,3,4,5],
+				targets: [0,1,2,3,4,5,6],
 				className: 'text-center'
 			}
 			],
@@ -232,17 +257,39 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 				data: 'no_sika',
 				title: 'No. SIKA',
 			},{
+				data: 'validasi',
+				title: 'Validasi',
+				responsivePriority: -1,
+				render: function(data, type, full, meta) {
+					return `
+					<div class="kt-checkbox-list">
+					<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success validasi_check">
+					<input disabled type="checkbox" id="check_hsse" name="check_hsse"> HSSE
+					<span></span>
+					</label>
+					<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success validasi_check">
+					<input disabled type="checkbox" id="check_gsi" name="check_hsse"> GSI
+					<span></span>
+					</label>
+					</div>`;
+				},
+			},{
 				data: 'status',
 				title: 'Status',
 				render: function(data, type, full, meta) {
 					var status = {
-						tidak_aktif: {'title': 'Tidak Aktif', 'class': 'btn-label-danger'},
-						aktif: {'title': 'Aktif', 'class': 'btn-label-success'},
+						baru: {'title': 'Baru', 'class': 'btn-label-brand'},
+						perpanjang : {'title': 'Perpanjang', 'class': 'btn-label-warning'},
+						resubmit : {'title' : 'Resubmit', 'class' : 'btn-label-bold bold-status'},
+						ditolak : {'title' : 'Ditolak', 'class' : 'btn-label-danger'},
+						berlangsung : {'title' : 'Berlangsung', 'class' : 'btn-label-primary'},
+						ditunda : {'title' : 'Ditunda','class' : 'btn-label-dark'},
+						selesai : {'title' : 'Selesai', 'class' : 'btn-label-success'}
 					};
 					if (typeof status[data] === 'undefined') {
 						return data;
 					}
-					return '<span style="width:70%" class="btn btn-bold btn-sm btn-font-sm ' + status[data].class + '">' + status[data].title + '</span>';
+					return '<span style="width:100%" class="btn btn-bold btn-sm btn-font-sm ' + status[data].class + '">' + status[data].title + '</span>';
 				},
 			},{
 				field: 'rincian',
@@ -274,7 +321,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 			}],
 			columnDefs: [
 			{
-				targets: [0,1,2,3,4],
+				targets: [0,1,2,3,4,5,6],
 				className: 'text-center'
 			}
 			],
@@ -309,17 +356,39 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 				data: 'no_sika',
 				title: 'No. SIKA',
 			},{
+				data: 'validasi',
+				title: 'Validasi',
+				responsivePriority: -1,
+				render: function(data, type, full, meta) {
+					return `
+					<div class="kt-checkbox-list">
+					<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success validasi_check">
+					<input disabled type="checkbox" id="check_hsse" name="check_hsse"> HSSE
+					<span></span>
+					</label>
+					<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success validasi_check">
+					<input disabled type="checkbox" id="check_gsi" name="check_hsse"> GSI
+					<span></span>
+					</label>
+					</div>`;
+				},
+			},{
 				data: 'status',
 				title: 'Status',
 				render: function(data, type, full, meta) {
 					var status = {
-						tidak_aktif: {'title': 'Tidak Aktif', 'class': 'btn-label-danger'},
-						aktif: {'title': 'Aktif', 'class': 'btn-label-success'},
+						baru: {'title': 'Baru', 'class': 'btn-label-brand'},
+						perpanjang : {'title': 'Perpanjang', 'class': 'btn-label-warning'},
+						resubmit : {'title' : 'Resubmit', 'class' : 'btn-label-bold bold-status'},
+						ditolak : {'title' : 'Ditolak', 'class' : 'btn-label-danger'},
+						berlangsung : {'title' : 'Berlangsung', 'class' : 'btn-label-primary'},
+						ditunda : {'title' : 'Ditunda','class' : 'btn-label-dark'},
+						selesai : {'title' : 'Selesai', 'class' : 'btn-label-success'}
 					};
 					if (typeof status[data] === 'undefined') {
 						return data;
 					}
-					return '<span style="width:70%" class="btn btn-bold btn-sm btn-font-sm ' + status[data].class + '">' + status[data].title + '</span>';
+					return '<span style="width:100%" class="btn btn-bold btn-sm btn-font-sm ' + status[data].class + '">' + status[data].title + '</span>';
 				},
 			},{
 				field: 'rincian',
@@ -350,7 +419,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 			}],
 			columnDefs: [
 			{
-				targets: [0,1,2,3,4],
+				targets: [0,1,2,3,4,5],
 				className: 'text-center'
 			}
 			],

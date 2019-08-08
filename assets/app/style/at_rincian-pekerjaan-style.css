@@ -59,3 +59,8 @@
 	background-color: #b7b7b7 !important;
 	pointer-events: none;
 }
+.bold-status,
+.bold-status:hover {
+	background-color: rgba(15, 181, 230, 0.1);
+	color: rgb(15, 181, 230);
+}

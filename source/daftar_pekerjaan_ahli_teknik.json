@@ -10,7 +10,8 @@
                  "tanggal" : "10 November 2019",
                  "sifat" : "Swakelola",
                  "tipe" : "hot",
-                 "status" : "terverifikasi",
+                 "validasi" : null,
+                 "status" : "baru",
                  "aksi" : null
                 
              },
@@ -21,7 +22,8 @@
                  "tanggal" : "10 November 2019",
                  "sifat" : "ABI",
                  "tipe" : "hot",
-                 "status" : "draft",
+                 "validasi" : null,
+                 "status" : "perpanjang",
                  "aksi" : null
              },
              {
@@ -31,7 +33,8 @@
                  "tanggal" : "10 November 2019",
                  "sifat" : "ABO",
                  "tipe" : "cold",
-                 "status" : "belum_terverifikasi",
+                 "validasi" : null,
+                 "status" : "resubmit",
                  "aksi" : null
              },
              {
@@ -41,6 +44,7 @@
                  "tanggal" : "10 November 2019",
                  "sifat" : "Swakelola",
                  "tipe" : "cold",
+                 "validasi" : null,
                  "status" : "ditolak",
                  "aksi" : null
              },
@@ -51,6 +55,7 @@
                  "tanggal" : "10 November 2019",
                  "sifat" : "ABI",
                  "tipe" : "hot",
+                 "validasi" : null,
                  "status" : "berlangsung",
                  "aksi" : null
              },
@@ -61,6 +66,7 @@
                  "tanggal" : "10 November 2019",
                  "sifat" : "ABO",
                  "tipe" : "hot",
+                 "validasi" : null,
                  "status" : "ditunda",
                  "aksi" : null
              },
@@ -71,6 +77,7 @@
                  "tanggal" : "10 November 2019",
                  "sifat" : "Swakelola",
                  "tipe" : "hot",
+                 "validasi" : null,
                  "status" : "selesai",
                  "aksi" : null
              },
@@ -81,6 +88,7 @@
                  "tanggal" : "10 November 2019",
                  "sifat" : "Swakelola",
                  "tipe" : "hot",
+                 "validasi" : null,
                  "status" : "selesai",
                  "aksi" : null
              }

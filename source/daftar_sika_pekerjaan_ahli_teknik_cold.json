@@ -7,7 +7,7 @@
                  "no": 1,
                  "jenis_sika" : "Izin Penggunaan Listrik dalam Vessel",
                  "no_sika" : "01/23/12345123",
-                 "status" : "aktif",
+                 "status" : "baru",
                  "rincian" : null,
                  "aksi" : null
                 
@@ -16,7 +16,7 @@
                 "no": 2,
                   "jenis_sika" : "Izin Isolasi Proses/Mekanik/Instrumen",
                  "no_sika" : "01/23/12345123",
-                 "status" : "tidak_aktif",
+                  "status" : "perpanjang",
                  "rincian" : null,
                  "aksi" : null
              },
@@ -24,7 +24,7 @@
                  "no": 3,
                   "jenis_sika" : "Izin Pengangkatan",
                  "no_sika" : "01/23/12345123",
-                 "status" : "tidak_aktif",
+                 "status" : "resubmit",
                  "rincian" : null,
                  "aksi" : null
              },
@@ -32,7 +32,7 @@
                  "no": 4,
                  "jenis_sika" : "Izin Kerja Penggalian",
                  "no_sika" : "01/23/12345123",
-                 "status" : "aktif",
+                 "status" : "ditolak",
                  "rincian" : null,
                  "aksi" : null
              },
@@ -40,7 +40,7 @@
                  "no": 5,
                   "jenis_sika" : "Izin Masuk Ruang Tertutup",
                  "no_sika" : "01/23/12345123",
-                 "status" : "aktif",
+                 "status" : "berlangsung",
                  "rincian" : null,
                  "aksi" : null
              },
@@ -48,7 +48,15 @@
                  "no": 6,
                  "jenis_sika" : "Penggunaan Barang Radio Aktif",
                  "no_sika" : "01/23/12345123",
-                 "status" : "aktif",
+                 "status" : "ditunda",
+                 "rincian" : null,
+                 "aksi" : null
+             },
+              {
+                 "no": 7,
+                 "jenis_sika" : "Penggunaan Barang Radio Aktif",
+                 "no_sika" : "01/23/12345123",
+                 "status" : "selesai",
                  "rincian" : null,
                  "aksi" : null
              }

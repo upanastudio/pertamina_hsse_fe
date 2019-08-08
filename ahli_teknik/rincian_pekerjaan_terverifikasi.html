@@ -586,6 +586,12 @@
 																					Presence of gas (hazardous area,...) / Gas (daerah berbahaya, ....)
 																				</span>
 																			</div>
+																			<div class="form-group form-group-last">
+																				<h5>
+																					Komentar
+																				</h5>
+																				<textarea readonly="" class="form-control" style="resize: none" id="komentar" name="komentar" rows="6">Cras ullamcorper tempus neque, et consequat sem faucibus ut. Mauris rutrum lectus sit amet purus pulvinar vulputate. Aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus vestibulum auctor sapien vitae aliquet. Nam eu lobortis elit. Phasellus vestibulum libero mauris, vel ornare diam pretium non. Donec eget ante risus.</textarea>
+																			</div>
 																		</div>
 																	</div>
 																</div>
@@ -652,6 +658,12 @@
 																						</button>
 																					</div>
 																				</div>
+																			</div>
+																			<div class="form-group form-group-last">
+																				<h5>
+																					Komentar
+																				</h5>
+																				<textarea readonly="" class="form-control" style="resize: none" id="komentar" name="komentar" rows="6">Cras ullamcorper tempus neque, et consequat sem faucibus ut. Mauris rutrum lectus sit amet purus pulvinar vulputate. Aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus vestibulum auctor sapien vitae aliquet. Nam eu lobortis elit. Phasellus vestibulum libero mauris, vel ornare diam pretium non. Donec eget ante risus.</textarea>
 																			</div>
 																		</div>
 																	</div>
@@ -1101,14 +1113,14 @@
 							<form>
 								<div class="modal-body">
 									<div class="form-group row">
-										<label for="example-text-input" class="col-2 col-form-label">No. SIKA</label>
-										<div class="col-10">
+										<label for="example-text-input" class="col-4 col-form-label">No. SIKA</label>
+										<div class="col-8">
 											<input disabled="" class="form-control" type="text" value="01/000/1111" id="no_sika" name="no_sika">
 										</div>
 									</div>
 									<div class="form-group row">
-										<label class="col-2 col-form-label">Tanggal</label>
-										<div class="col-10">
+										<label class="col-4 col-form-label">Tanggal</label>
+										<div class="col-8">
 											<input class="form-control" type="date" id="tanggal_wip" name="tanggal_wip">
 										</div>
 									</div>
@@ -1117,8 +1129,8 @@
 											WIP Inspeksi HSE Work Practice
 										</h6>
 										<div class="row">
-											<label for="example-text-input" class="col-2 col-form-label">Nilai</label>
-											<div class="col-sm-10">
+											<label for="example-text-input" class="col-4 col-form-label">Nilai</label>
+											<div class="col-sm-8">
 												<input type="text" class="form-control" id="nilai_wip_work_practice" name="nilai_wip_work_practice" value="80">
 											</div>
 										</div>
@@ -1128,8 +1140,8 @@
 											WIP Inspeksi Program HSE
 										</h6>
 										<div class="row">
-											<label for="example-text-input" class="col-2 col-form-label">Nilai</label>
-											<div class="col-sm-10">
+											<label for="example-text-input" class="col-4 col-form-label">Nilai</label>
+											<div class="col-sm-8">
 												<input type="text" class="form-control" id="nilai_wip_program_hse" name="nilai_wip_program_hse" value="80">
 											</div>
 										</div>
@@ -1139,14 +1151,14 @@
 											HSE Performance (KPI)
 										</h6>
 										<div class="row">
-											<label for="example-text-input" class="col-2 col-form-label">Nilai</label>
-											<div class="col-sm-10">
+											<label for="example-text-input" class="col-4 col-form-label">Nilai</label>
+											<div class="col-sm-8">
 												<input type="text" class="form-control" id="nilai_kpi" name="nilai_kpi" value="80">
 											</div>
 										</div>
 									</div>
-									<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success ">
-										<input id="check-fe" type="checkbox"> WIP ini akan menjadi Final Evaluation
+									<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
+										<input id="check-fe" type="checkbox" onclick="myFunction_simpan()"> WIP ini akan menjadi Final Evaluation
 										<span></span>
 									</label>
 								</div>
@@ -1154,7 +1166,8 @@
 									<button type="button" class="btn btn-secondary" data-dismiss="modal">
 										<i class="fa fa-times"></i> Tutup
 									</button>
-									<button type="button" class="btn btn-primary btn_simpan_wip kt_sweetalert_simpan"> <i class="fa fa-save"></i> Simpan</button>
+									<button type="button" style="margin-right:0px" id="btn_simpan_wip" class="btn btn-primary btn_simpan_wip kt_sweetalert_simpan"><i class="fa fa-save"></i> Simpan</button>
+									<button type="button" id="btn_simpan_wip_fe" style="display: none;margin-right:0px" class="btn btn-primary btn_simpan_wip kt_sweetalert_fe"> <i class="fa fa-save"></i> Simpan</button>
 								</div>
 							</form>
 						</div>
@@ -1175,7 +1188,7 @@
 									</label>
 									<div align="right" class="col-sm-6">
 										<button onclick=" window.open('#','_blank')" class="btn btn-sm btn-link">
-											<i class="fa fa-download"></i> Download/View
+											<i class="fa fa-download"></i> Download
 										</button>
 									</div>
 								</div>
@@ -1185,7 +1198,7 @@
 									</label>
 									<div align="right" class="col-sm-6">
 										<button onclick=" window.open('#','_blank')" class="btn btn-sm btn-link">
-											<i class="fa fa-download"></i> Download/View
+											<i class="fa fa-download"></i> Download
 										</button>
 									</div>
 								</div>
@@ -1385,6 +1398,20 @@
 	<script src="../assets/vendors/custom/datatables/datatables.bundle.js" type="text/javascript"></script>
 	<script src="../assets/app/script/js_ajax_ahli_teknik.js" type="text/javascript"></script>
 	<script>
+		function myFunction_simpan() {
+			var checkBox = document.getElementById("check-fe");
+			var button_simpan_fe = document.getElementById("btn_simpan_wip_fe");
+			var button_simpan = document.getElementById("btn_simpan_wip");
+			if (checkBox.checked == true){
+				button_simpan_fe.style.display = "block";
+				button_simpan.style.display = "none";
+			} else {
+				button_simpan_fe.style.display = "none";
+				button_simpan.style.display = "block"
+			}
+		}
+	</script>
+	<script>
 		var KTSweetAlert2Demo = function() {
 			var initDemos = function() {
 				$('.kt_sweetalert_simpan').click(function(e) {
@@ -1420,7 +1447,7 @@
 						if (result.value) {
 							swal.fire(
 								'Berhasil!',
-								'Final Evaluation telah ditetapka',
+								'Final Evaluation telah ditetapkan',
 								'success'
 								)
 						}
@@ -1437,17 +1464,7 @@
 			KTSweetAlert2Demo.init();
 		});
 	</script>
-	<script>
-		$('#check-fe').change(function(){
-			if($(this).is(":checked")) {
-				$('.btn_simpan_wip').addClass('kt_sweetalert_fe');
-				$('.btn_simpan_wip').removeClass('kt_sweetalert_simpan');
-			} else {
-				$('.btn_simpan_wip').addClass('kt_sweetalert_simpan');
-				$('.btn_simpan_wip').removeClass('kt_sweetalert_fe');
-			}
-		});
-	</script>
+	
 	<script>
 		am4core.ready(function() {
 
@@ -1511,10 +1528,10 @@
 				chart.data[50].date,
 				chart.data[80].date
 				);
-		});*/
+			});*/
 
 		}); // end am4core.ready()
 	</script>
-	</body>
-	<!-- end::Body -->
-	</html>
+</body>
+<!-- end::Body -->
+</html>
