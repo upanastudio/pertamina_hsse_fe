@@ -197,6 +197,10 @@ polyline,
     border-radius: 0.2rem;
 }
 
+.validasi_check {
+	pointer-events: none;
+}
+
 /*End: Ahli Teknik*/
 @media (min-width: 1025px){
 	.kt-aside--minimize .kt-aside-menu .kt-menu__nav > .kt-menu__item > .kt-menu__link > .kt-menu__link-icon {

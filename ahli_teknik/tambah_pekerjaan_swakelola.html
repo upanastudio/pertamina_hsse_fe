@@ -582,7 +582,7 @@
 																		</div>
 																	</div>
 																	<div class="col-sm-1">
-																		<button type="button" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary">
+																		<button disabled="" type="button" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary">
 																			<span class="fa fa-trash-alt"></span>
 																		</button>
 																	</div>
@@ -614,7 +614,7 @@
 																		</div>
 																	</div>
 																	<div class="col-sm-1">
-																		<button type="button" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary">
+																		<button disabled="" type="button" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary">
 																			<span class="fa fa-trash-alt"></span>
 																		</button>
 																	</div>
@@ -646,7 +646,7 @@
 																		</div>
 																	</div>
 																	<div class="col-sm-1">
-																		<button type="button" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary">
+																		<button disabled="" type="button" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary">
 																			<span class="fa fa-trash-alt"></span>
 																		</button>
 																	</div>
@@ -678,7 +678,7 @@
 																		</div>
 																	</div>
 																	<div class="col-sm-1">
-																		<button type="button" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary">
+																		<button disabled="" type="button" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary">
 																			<span class="fa fa-trash-alt"></span>
 																		</button>
 																	</div>
@@ -710,7 +710,7 @@
 																		</div>
 																	</div>
 																	<div class="col-sm-1">
-																		<button type="button" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary">
+																		<button disabled="" type="button" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary">
 																			<span class="fa fa-trash-alt"></span>
 																		</button>
 																	</div>
@@ -1031,6 +1031,24 @@
 			});
 		});
 	</script>
+	<script>
+		window.onload = function () {
+			document.forms[0].onsubmit = function () {
+				var countryValue = this.elements[0].value;
+				if (countryValue == "") {
+					alert("Please enter a country");
+					return false;
+				}
+				var stateIdx = this.elements[1].selectedIndex;
+				if (stateIdx < 1) {
+					alert("Please select a state");
+					return false;
+				}
+				return true;
+			}
+		}    
+	</script>
+
 	<!-- JSA -->
 	<script>
 		$(document).ready(function() {
