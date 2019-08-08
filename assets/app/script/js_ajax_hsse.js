@@ -15,7 +15,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 			processing: true,
 			serverSide: false,
 			ajax: {
-				url: '../source/daftar_pekerjaan_ahli_teknik.json',
+				url: '../source/daftar_pekerjaan_hsse.json',
 				type: 'POST',
 				data: {
 					pagination: {

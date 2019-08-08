@@ -1,0 +1,88 @@
+{
+    "iTotalRecords": 10,
+    "iTotalDisplayRecords": 10,
+    "sEcho": 0,
+    "sColumns": "",
+    "aaData": [{
+                 "no": "1",
+                 "pekerjaan" : "penggalian",
+                 "vendor" : "CV. Upana",
+                 "tanggal" : "10 November 2019",
+                 "tipe" : "hot",
+                 "status" : "terverifikasi",
+                 "sifat" : "Swakelola",
+                 "aksi" : null
+
+             },
+             {
+                "no": "2",
+                 "pekerjaan" : "penggalian",
+                 "vendor" : "CV. Upana",
+                 "tanggal" : "10 November 2019",
+                 "tipe" : "hot",
+                 "status" : "terverifikasi",
+                 "sifat" : "Swakelola",
+                 "aksi" : null
+             },
+             {
+                 "no": "3",
+                 "pekerjaan" : "penggalian",
+                 "vendor" : "CV. Upana",
+                 "tanggal" : "10 November 2019",
+                 "tipe" : "cold",
+                 "status" : "terverifikasi",
+                 "sifat" : "ABI",
+                 "aksi" : null
+             },
+             {
+                 "no": "4",
+                 "pekerjaan" : "penggalian",
+                 "vendor" : "CV. Upana",
+                 "tanggal" : "10 November 2019",
+                 "tipe" : "cold",
+                 "status" : "terverifikasi",
+                 "sifat" : "ABI",
+                 "aksi" : null
+             },
+             {
+                 "no": "5",
+                 "pekerjaan" : "penggalian",
+                 "vendor" : "CV. Upana",
+                 "tanggal" : "10 November 2019",
+                 "tipe" : "hot",
+                 "status" : "ditolak",
+                 "sifat" : "ABI",
+                 "aksi" : null
+             },
+             {
+                 "no": "6",
+                 "pekerjaan" : "penggalian",
+                 "vendor" : "CV. Upana",
+                 "tanggal" : "10 November 2019",
+                 "tipe" : "hot",
+                 "status" : "ditolak",
+                 "sifat" : "ABO",
+                 "aksi" : null
+             },
+             {
+                 "no": "7",
+                 "pekerjaan" : "penggalian",
+                 "vendor" : "CV. Upana",
+                 "tanggal" : "10 November 2019",
+                 "tipe" : "hot",
+                 "status" : "draft",
+                 "sifat" : "ABO",
+                 "aksi" : null
+             },
+              {
+                 "no": "8",
+                 "pekerjaan" : "penggalian",
+                 "vendor" : "CV. Upana",
+                 "tanggal" : "10 November 2019",
+                 "tipe" : "hot",
+                 "status" : "draft",
+                 "sifat" : "ABO",
+                 "aksi" : null
+             }
+]
+}
