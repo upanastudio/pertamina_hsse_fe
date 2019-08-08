@@ -1,0 +1,56 @@
+{
+    "iTotalRecords": 10,
+    "iTotalDisplayRecords": 10,
+    "sEcho": 0,
+    "sColumns": "",
+    "aaData": [{
+                 "no": 1,
+                 "jenis_sika" : "Izin Penggunaan Listrik dalam Vessel",
+                 "no_sika" : "01/23/12345123",
+                 "status" : "aktif",
+                 "rincian" : null,
+                 "aksi" : null
+                
+             },
+             {
+                "no": 2,
+                  "jenis_sika" : "Izin Isolasi Proses/Mekanik/Instrumen",
+                 "no_sika" : "01/23/12345123",
+                 "status" : "tidak_aktif",
+                 "rincian" : null,
+                 "aksi" : null
+             },
+             {
+                 "no": 3,
+                  "jenis_sika" : "Izin Pengangkatan",
+                 "no_sika" : "01/23/12345123",
+                 "status" : "tidak_aktif",
+                 "rincian" : null,
+                 "aksi" : null
+             },
+             {
+                 "no": 4,
+                 "jenis_sika" : "Izin Kerja Penggalian",
+                 "no_sika" : "01/23/12345123",
+                 "status" : "aktif",
+                 "rincian" : null,
+                 "aksi" : null
+             },
+             {
+                 "no": 5,
+                  "jenis_sika" : "Izin Masuk Ruang Tertutup",
+                 "no_sika" : "01/23/12345123",
+                 "status" : "aktif",
+                 "rincian" : null,
+                 "aksi" : null
+             },
+             {
+                 "no": 6,
+                 "jenis_sika" : "Penggunaan Barang Radio Aktif",
+                 "no_sika" : "01/23/12345123",
+                 "status" : "aktif",
+                 "rincian" : null,
+                 "aksi" : null
+             }
+]
+}
