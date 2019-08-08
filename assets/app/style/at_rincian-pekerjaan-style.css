@@ -41,3 +41,21 @@
 	margin-bottom: 5px;
 	pointer-events: none;
 }
+.btn.btn-label-brand {
+	width: 100% !important;
+	margin-bottom: 5px;
+}
+
+.btn-out-hijau {
+	border : 2px solid #1DE9B6 !important;
+	color: #00BFA5;
+}
+.btn-out-hijau:hover {
+	background-color: #00BFA5 !important;
+	border : 2px solid #00BFA5 !important;
+	color: white; 
+}
+.disable-card {
+	background-color: #b7b7b7 !important;
+	pointer-events: none;
+}

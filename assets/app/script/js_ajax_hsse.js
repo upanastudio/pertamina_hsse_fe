@@ -225,6 +225,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 				title: 'Rincian',
 				responsivePriority: -1,
 				className: 'text-center',
+				responsivePriority: -1,
 				orderable: false,
 				width: 100,
 				render: function(data, type, full, meta) {

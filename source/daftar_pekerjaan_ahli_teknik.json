@@ -8,6 +8,7 @@
                  "pekerjaan" : "penggalian",
                  "vendor" : "CV. Upana",
                  "tanggal" : "10 November 2019",
+                 "sifat" : "Swakelola",
                  "tipe" : "hot",
                  "status" : "terverifikasi",
                  "sifat" : "Swakelola",
@@ -19,9 +20,14 @@
                  "pekerjaan" : "penggalian",
                  "vendor" : "CV. Upana",
                  "tanggal" : "10 November 2019",
+                 "sifat" : "ABI",
                  "tipe" : "hot",
+<<<<<<< HEAD
                  "status" : "terverifikasi",
                  "sifat" : "Swakelola",
+=======
+                 "status" : "draft",
+>>>>>>> 494b98228318f834d3adf2359a1034c61e722a25
                  "aksi" : null
              },
              {
@@ -29,9 +35,14 @@
                  "pekerjaan" : "penggalian",
                  "vendor" : "CV. Upana",
                  "tanggal" : "10 November 2019",
+                 "sifat" : "ABO",
                  "tipe" : "cold",
+<<<<<<< HEAD
                  "status" : "terverifikasi",
                  "sifat" : "ABI",
+=======
+                 "status" : "belum_terverifikasi",
+>>>>>>> 494b98228318f834d3adf2359a1034c61e722a25
                  "aksi" : null
              },
              {
@@ -39,9 +50,14 @@
                  "pekerjaan" : "penggalian",
                  "vendor" : "CV. Upana",
                  "tanggal" : "10 November 2019",
+                 "sifat" : "Swakelola",
                  "tipe" : "cold",
+<<<<<<< HEAD
                  "status" : "terverifikasi",
                  "sifat" : "ABI",
+=======
+                 "status" : "ditolak",
+>>>>>>> 494b98228318f834d3adf2359a1034c61e722a25
                  "aksi" : null
              },
              {
@@ -49,9 +65,14 @@
                  "pekerjaan" : "penggalian",
                  "vendor" : "CV. Upana",
                  "tanggal" : "10 November 2019",
+                 "sifat" : "ABI",
                  "tipe" : "hot",
+<<<<<<< HEAD
                  "status" : "ditolak",
                  "sifat" : "ABI",
+=======
+                 "status" : "berlangsung",
+>>>>>>> 494b98228318f834d3adf2359a1034c61e722a25
                  "aksi" : null
              },
              {
@@ -59,9 +80,14 @@
                  "pekerjaan" : "penggalian",
                  "vendor" : "CV. Upana",
                  "tanggal" : "10 November 2019",
+                 "sifat" : "ABO",
                  "tipe" : "hot",
+<<<<<<< HEAD
                  "status" : "ditolak",
                  "sifat" : "ABO",
+=======
+                 "status" : "ditunda",
+>>>>>>> 494b98228318f834d3adf2359a1034c61e722a25
                  "aksi" : null
              },
              {
@@ -69,9 +95,14 @@
                  "pekerjaan" : "penggalian",
                  "vendor" : "CV. Upana",
                  "tanggal" : "10 November 2019",
+                 "sifat" : "Swakelola",
                  "tipe" : "hot",
+<<<<<<< HEAD
                  "status" : "draft",
                  "sifat" : "ABO",
+=======
+                 "status" : "selesai",
+>>>>>>> 494b98228318f834d3adf2359a1034c61e722a25
                  "aksi" : null
              },
               {
@@ -79,9 +110,14 @@
                  "pekerjaan" : "penggalian",
                  "vendor" : "CV. Upana",
                  "tanggal" : "10 November 2019",
+                 "sifat" : "Swakelola",
                  "tipe" : "hot",
+<<<<<<< HEAD
                  "status" : "draft",
                  "sifat" : "ABO",
+=======
+                 "status" : "selesai",
+>>>>>>> 494b98228318f834d3adf2359a1034c61e722a25
                  "aksi" : null
              }
 ]

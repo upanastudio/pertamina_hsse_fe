@@ -178,20 +178,32 @@
 							</div>
 						</div>
 						<div class="kt-subheader__toolbar">
-							<a href="edit_pekerjaan.html" class="btn btn-secondary btn-out-hijau">
+							<button class="btn btn-secondary btn-out-hijau kt-hidden">
 								Edit Pekerjaan
-							</a>
-							<button data-toggle="modal" data-target="#kt_modal_riwayat" class="btn btn-secondary">
+							</button>
+							<button data-toggle="modal" data-target="#kt_modal_riwayat " class="btn btn-secondary">
 								<i class="fa fa-history"></i> Riwayat
 							</button>
-							<a href="edit_pekerjaan.html" class="btn btn-brand">
+							<button class="btn btn-brand ">
 								<i class="fa fa-angle-double-up"></i> Resubmit
-							</a>
+							</button>
 						</div>
 					</div>
 					<!-- end:: Subheader -->
 					<!-- begin:: Content -->
 					<div class="kt-content  kt-grid__item kt-grid__item--fluid" id="kt_content">
+						<div class="alert alert-danger fade show" role="alert">
+							<div class="alert-icon"><i class="flaticon-warning"></i></div>
+							<div class="alert-text">
+								<b><span>Alasan Penolkan : </span></b>
+								<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse aliquet rhoncus ligula quis venenatis. Donec tristique lacus arcu, non consequat magna cursus at. Fusce mollis accumsan egestas. Sed blandit, dui eu scelerisque condimentum, ligula purus consequat lorem, non pharetra tellus lectus eget lorem. </span>
+							</div>
+							<div class="alert-close">
+								<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+									<span aria-hidden="true"><i class="la la-close"></i></span>
+								</button>
+							</div>
+						</div>
 						<div class="row">
 							<div class="kt-portlet">
 								<div class="kt-portlet__head">
@@ -801,7 +813,7 @@
 														<div class="col-sm-6">
 															<div class="accordion  accordion-toggle-arrow">
 																<div class="card">
-																	<div class="card-header" id="headingOne4">
+																	<div class="card-header disable-card" id="headingOne4">
 																		<div style="margin-left:20px" class="card-title collapsed" data-toggle="collapse" data-target="#collapse_wip" aria-expanded="false" aria-controls="collapse_wip">
 																			WIP
 																		</div>
@@ -890,7 +902,7 @@
 																	</div>
 																</div>
 																<div class="card">
-																	<div class="card-header" id="headingTwo4">
+																	<div class="card-header disable-card" id="headingTwo4">
 																		<div style="margin-left:20px" class="card-title collapsed" data-toggle="collapse" data-target="#collapse_fe" aria-expanded="false" aria-controls="collapse_fe">
 																			FE
 																		</div>
@@ -949,7 +961,7 @@
 																	</div>
 																</div>
 																<div class="card">
-																	<div class="card-header" id="headingTwo4">
+																	<div class="card-header disable-card" id="headingTwo4">
 																		<div style="margin-left:20px" class="card-title collapsed" data-toggle="collapse" data-target="#collapse_kpi" aria-expanded="false" aria-controls="collapse_kpi">
 																			POB
 																		</div>
@@ -1511,7 +1523,7 @@
 				chart.data[50].date,
 				chart.data[80].date
 				);
-		});*/
+			});*/
 
 		}); // end am4core.ready()
 	</script>
