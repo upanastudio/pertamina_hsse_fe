@@ -89,6 +89,28 @@
                  "sifat" : "Swakelola",
                  "tipe" : "hot",
                  "validasi" : null,
+                 "status" : "draft",
+                 "aksi" : null
+             },
+             {
+                 "no": "9",
+                 "pekerjaan" : "penggalian",
+                 "vendor" : "CV. Upana",
+                 "tanggal" : "10 November 2019",
+                 "sifat" : "Swakelola",
+                 "tipe" : "hot",
+                 "validasi" : null,
+                 "status" : "kadaluarsa",
+                 "aksi" : null
+             },
+             {
+                 "no": "10",
+                 "pekerjaan" : "penggalian",
+                 "vendor" : "CV. Upana",
+                 "tanggal" : "10 November 2019",
+                 "sifat" : "Swakelola",
+                 "tipe" : "hot",
+                 "validasi" : null,
                  "status" : "selesai",
                  "aksi" : null
              }

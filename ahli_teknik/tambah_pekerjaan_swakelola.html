@@ -130,13 +130,13 @@
 											<span class="kt-menu__link"><span class="kt-menu__link-text">Pekerjaan</span></span>
 										</li>
 										<li class="kt-menu__item kt-menu__item--active" aria-haspopup="true">
-											<a href="tambah_pekerjaan_swakelola_jsa.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">JSA <span name="swakelola_jsa_progress" style="margin-left: 110px">100%</span></span></a>
+											<a href="tambah_pekerjaan_abi_jsa.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">JSA <span name="swakelola_jsa_progress" style="margin-left: 110px">100%</span></span></a>
 										</li>
 										<li class="kt-menu__item " aria-haspopup="true">
-											<a href="tambah_pekerjaan_swakelola_moc.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">MOC <span name="swakelola_moc_progress" style="margin-left: 102px">50%</span></span></span></a>
+											<a href="tambah_pekerjaan_abi_moc.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">MOC <span name="swakelola_moc_progress" style="margin-left: 102px">50%</span></span></span></a>
 										</li>
 										<li class="kt-menu__item " aria-haspopup="true">
-											<a href="tambah_pekerjaan_swakelola_simlok.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">SIMLOK <span name="swakelola_simlok_progress" style="margin-left: 90px">80%</span></span></span></a>
+											<a href="tambah_pekerjaan_abi_simlok.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">SIMLOK <span name="swakelola_simlok_progress" style="margin-left: 90px">80%</span></span></span></a>
 										</li>
 									</ul>
 								</div>
@@ -216,7 +216,9 @@
 										<div class="kt-portlet__body">
 											<ul class="nav nav-tabs nav-fill" role="tablist">
 												<li class="nav-item">
-													<a class="nav-link active" data-toggle="tab" href="#" data-target="#kt_tabs_jsa">JSA</a>
+													<a class="nav-link active" data-toggle="tab" href="#" data-target="#kt_tabs_jsa">
+														JSA
+													</a>
 												</li>
 												<li class="nav-item">
 													<a class="nav-link" data-toggle="tab" href="#" data-target="#kt_tabs_moc">
@@ -244,20 +246,20 @@
 																</div>
 															</div>
 														</div>
-														<div id="container" class="row col-sm-12">
-															<div class="col-sm-12 input-berkas">
+														<div style="width: 99%" id="container" >
+															<div class="input-berkas">
 																<div class="row">
-																	<div  class="col-sm-6">
+																	<div  class="col-sm-5">
 																		<input class="form-control" type="text" placeholder="input text" id="input" name="input" required="">
 																	</div>
-																	<div class="col-sm-5">
+																	<div class="col-sm-6">
 																		<div class="custom-file">
 																			<input type="file" class="custom-file-input" id="doc" name="doc" required="">
 																			<label class="custom-file-label" for="customFile">Pilih berkas</label>
 																		</div>
 																	</div>
 																	<div class="col-sm-1">
-																		<button disabled="" type="button" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary">
+																		<button disabled="" type="button" id="btn_hapus_input_hazard" name="btn_hapus_input_hazard" class="btn btn-secondary btn_hapus">
 																			<span class="fa fa-trash-alt"></span>
 																		</button>
 																	</div>
@@ -279,10 +281,10 @@
 																</div>
 															</div>
 														</div>
-														<div id="container_heavy_equipment" class="row col-sm-12">
-															<div class="col-sm-12 input-berkas">
+														<div style="width: 99%" id="container_heavy_equipment">
+															<div class="input-berkas">
 																<div class="row">
-																	<div  class="col-sm-5">
+																	<div class="col-sm-5">
 																		<input class="form-control" type="text" placeholder="heavy equipment" id="input_heavy_equipment" name="input_heavy_equipment">
 																	</div>
 																	<div class="col-sm-3">
@@ -298,7 +300,7 @@
 																		</div>
 																	</div>
 																	<div class="col-sm-1">
-																		<button disabled="" type="button" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary">
+																		<button disabled="" type="button" id="btn_hapus_input_heavy" name="btn_hapus_input_heavy" class="btn btn-secondary btn_hapus">
 																			<span class="fa fa-trash-alt"></span>
 																		</button>
 																	</div>
@@ -320,20 +322,20 @@
 																</div>
 															</div>
 														</div>
-														<div id="container_lifting_plan" class="row col-sm-12">
-															<div class="col-sm-12 input-berkas">
+														<div style="width: 99%" id="container_lifting_plan">
+															<div class="input-berkas">
 																<div class="row">
-																	<div  class="col-sm-6">
+																	<div  class="col-sm-5">
 																		<input class="form-control" type="text" placeholder="input text" id="input" name="input">
 																	</div>
-																	<div class="col-sm-5">
+																	<div class="col-sm-6">
 																		<div class="custom-file">
 																			<input type="file" class="custom-file-input" id="doc" name="doc">
 																			<label class="custom-file-label" for="customFile">Pilih berkas</label>
 																		</div>
 																	</div>
 																	<div class="col-sm-1">
-																		<button disabled="" type="button" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary">
+																		<button disabled="" type="button" id="btn_hapus_input " name="btn_hapus_input" class="btn btn-secondary btn_hapus">
 																			<span class="fa fa-trash-alt"></span>
 																		</button>
 																	</div>
@@ -355,8 +357,8 @@
 																</div>
 															</div>
 														</div>
-														<div id="container_prosedur_kerja" class="row col-sm-12">
-															<div class="col-sm-12 input-berkas">
+														<div style="width: 99%" id="container_prosedur_kerja">
+															<div class="input-berkas">
 																<div class="row">
 																	<div  class="col-sm-6">
 																		<input class="form-control" type="text" placeholder="input text" id="input" name="input">
@@ -368,7 +370,7 @@
 																		</div>
 																	</div>
 																	<div class="col-sm-1">
-																		<button disabled="" type="button" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary">
+																		<button disabled="" type="button" id="btn_hapus_input " name="btn_hapus_input" class="btn btn-secondary btn_hapus">
 																			<span class="fa fa-trash-alt"></span>
 																		</button>
 																	</div>
@@ -431,8 +433,8 @@
 																</div>
 															</div>
 														</div>
-														<div id="container_isolasi_energi" class="row col-sm-12">
-															<div class="col-sm-12 input-berkas">
+														<div style="width: 99%" id="container_isolasi_energi">
+															<div class="input-berkas">
 																<div class="row">
 																	<div  class="col-sm-6">
 																		<input class="form-control" type="text" placeholder="input text" id="input" name="input" required="">
@@ -444,7 +446,7 @@
 																		</div>
 																	</div>
 																	<div class="col-sm-1">
-																		<button disabled="" type="button" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary">
+																		<button disabled="" type="button" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary btn_hapus">
 																			<span class="fa fa-trash-alt"></span>
 																		</button>
 																	</div>
@@ -466,8 +468,8 @@
 																</div>
 															</div>
 														</div>
-														<div id="container_prosedur" class="row col-sm-12">
-															<div class="col-sm-12 input-berkas">
+														<div style="width: 99%" id="container_prosedur">
+															<div class="input-berkas">
 																<div class="row">
 																	<div  class="col-sm-6">
 																		<input class="form-control" type="text" placeholder="input text" id="input" name="input">
@@ -479,7 +481,7 @@
 																		</div>
 																	</div>
 																	<div class="col-sm-1">
-																		<button disabled="" type="button" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary">
+																		<button disabled="" type="button" id="btn_hapus_input " name="btn_hapus_input" class="btn btn-secondary btn_hapus">
 																			<span class="fa fa-trash-alt"></span>
 																		</button>
 																	</div>
@@ -501,8 +503,8 @@
 																</div>
 															</div>
 														</div>
-														<div id="container_engineer_pid" class="row col-sm-12">
-															<div class="col-sm-12 input-berkas">
+														<div style="width: 99%" id="container_engineer_pid">
+															<div class="input-berkas">
 																<div class="row">
 																	<div  class="col-sm-6">
 																		<input class="form-control" type="text" placeholder="input text" id="input" name="input">
@@ -514,7 +516,7 @@
 																		</div>
 																	</div>
 																	<div class="col-sm-1">
-																		<button disabled="" type="button" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary">
+																		<button disabled="" type="button" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary btn_hapus">
 																			<span class="fa fa-trash-alt"></span>
 																		</button>
 																	</div>
@@ -536,8 +538,8 @@
 																</div>
 															</div>
 														</div>
-														<div id="container_training" class="row col-sm-12">
-															<div class="col-sm-12 input-berkas">
+														<div style="width: 99%" id="container_training">
+															<div class="input-berkas">
 																<div class="row">
 																	<div  class="col-sm-6">
 																		<input class="form-control" type="text" placeholder="input text" id="input" name="input">
@@ -549,7 +551,7 @@
 																		</div>
 																	</div>
 																	<div class="col-sm-1">
-																		<button disabled="" type="button" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary">
+																		<button disabled="" type="button" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary btn_hapus">
 																			<span class="fa fa-trash-alt"></span>
 																		</button>
 																	</div>
@@ -572,8 +574,8 @@
 																</div>
 															</div>
 														</div>
-														<div id="container_dasar_pekerjaan" class="row col-sm-12">
-															<div class="col-sm-12 input-berkas">
+														<div style="width: 99%" id="container_dasar_pekerjaan">
+															<div class="input-berkas">
 																<div class="row">
 																	<div class="col-sm-11">
 																		<div class="custom-file">
@@ -582,7 +584,7 @@
 																		</div>
 																	</div>
 																	<div class="col-sm-1">
-																		<button disabled="" type="button" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary">
+																		<button disabled="" type="button" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary btn_hapus">
 																			<span class="fa fa-trash-alt"></span>
 																		</button>
 																	</div>
@@ -604,8 +606,8 @@
 																</div>
 															</div>
 														</div>
-														<div id="container_dasar_kontrak_spmp" class="row col-sm-12">
-															<div class="col-sm-12 input-berkas">
+														<div style="width: 99%" id="container_dasar_kontrak_spmp">
+															<div class="input-berkas">
 																<div class="row">
 																	<div class="col-sm-11">
 																		<div class="custom-file">
@@ -614,7 +616,7 @@
 																		</div>
 																	</div>
 																	<div class="col-sm-1">
-																		<button disabled="" type="button" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary">
+																		<button disabled="" type="button" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary btn_hapus">
 																			<span class="fa fa-trash-alt"></span>
 																		</button>
 																	</div>
@@ -636,8 +638,8 @@
 																</div>
 															</div>
 														</div>
-														<div id="container_nama_pekerjaan" class="row col-sm-12">
-															<div class="col-sm-12 input-berkas">
+														<div style="width: 99%" id="container_nama_pekerjaan">
+															<div class="input-berkas">
 																<div class="row">
 																	<div class="col-sm-11">
 																		<div class="custom-file">
@@ -646,7 +648,7 @@
 																		</div>
 																	</div>
 																	<div class="col-sm-1">
-																		<button disabled="" type="button" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary">
+																		<button disabled="" type="button" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary btn_hapus">
 																			<span class="fa fa-trash-alt"></span>
 																		</button>
 																	</div>
@@ -668,8 +670,8 @@
 																</div>
 															</div>
 														</div>
-														<div id="container_surat_permohonan_pekerja" class="row col-sm-12">
-															<div class="col-sm-12 input-berkas">
+														<div style="width: 99%" id="container_surat_permohonan_pekerja" >
+															<div class="input-berkas">
 																<div class="row">
 																	<div class="col-sm-11">
 																		<div class="custom-file">
@@ -678,7 +680,7 @@
 																		</div>
 																	</div>
 																	<div class="col-sm-1">
-																		<button disabled="" type="button" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary">
+																		<button disabled="" type="button" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary btn_hapus">
 																			<span class="fa fa-trash-alt"></span>
 																		</button>
 																	</div>
@@ -700,8 +702,8 @@
 																</div>
 															</div>
 														</div>
-														<div id="container_gambar_kerja" class="row col-sm-12">
-															<div class="col-sm-12 input-berkas">
+														<div style="width: 99%" id="container_gambar_kerja">
+															<div class="input-berkas">
 																<div class="row">
 																	<div class="col-sm-11">
 																		<div class="custom-file">
@@ -710,7 +712,7 @@
 																		</div>
 																	</div>
 																	<div class="col-sm-1">
-																		<button disabled="" type="button" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary">
+																		<button disabled="" type="button" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary btn_hapus">
 																			<span class="fa fa-trash-alt"></span>
 																		</button>
 																	</div>
@@ -732,7 +734,7 @@
 															</select>
 														</div>
 														<div class="col-sm-2">
-															<button style="width: 100%" type="button" class="btn btn-primary"> <i class="fa fa-plus"></i> Tambahkan</button>
+															<button style="width: 100%" type="button" class="btn btn-success"> <i class="fa fa-plus"></i> Tambahkan</button>
 														</div>
 														<div class="col-sm-12">
 															<div style="margin-top:20px">
@@ -751,27 +753,24 @@
 															<div class="form-group row">
 																<label class="col-sm-12">Nama Peralatan</label>
 																<div class="col-sm-12">
-																	<div style="padding: 0px" class="custom-file ">
-																		<input  class="form-control" type="text" placeholder="nama peralatan" id="input_nama_peralatan" name="input_nama_peralatan">
-																	</div>
-																</div>
-																<div class="col-sm-6">
-																	<span class="kt-badge kt-badge--dark kt-badge--inline kt-badge--pill kt-badge--rounded kt-badge kt-peralatan">
-																		Palu
-																		<i id="alat_0" class="fa fa-times"></i>
-																	</span>
-																	<span class="kt-badge kt-badge--dark kt-badge--inline kt-badge--pill kt-badge--rounded kt-peralatan">
-																		Selang
-																		<i id="alat_1" class="fa fa-times"></i>
-																	</span>
-																	<span class="kt-badge kt-badge--dark kt-badge--inline kt-badge--pill kt-badge--rounded kt-peralatan">
-																		Kunci Inggris
-																		<i id="alat_2" class="fa fa-times"></i>
-																	</span>
-																	<span class="kt-badge kt-badge--dark kt-badge--inline kt-badge--pill kt-badge--rounded kt-peralatan">
-																		Google
-																		<i id="alat_3" class="fa fa-times"></i>
-																	</span>
+																	<select class="form-control m-select2 nama_peralatan" id="nama_peralatan" multiple name="param">
+																		<option></option>
+																		<option value="AK">Alaska</option>
+																		<option value="HI">Hawaii</option>
+																		<option value="CA">California</option>
+																		<option value="NV">Nevada</option>
+																		<option value="OR">Oregon</option>
+																		<option value="WA">Washington</option>
+																		<option value="AZ">Arizona</option>
+																		<option value="CO">Colorado</option>
+																		<option value="ID">Idaho</option>
+																		<option value="MT">Montana</option>
+																		<option value="NE">Nebraska</option>
+																		<option value="NM">New Mexico</option>
+																		<option value="ND">North Dakota</option>
+																		<option value="UT">Utah</option>
+																		<option value="WY">Wyoming</option>
+																	</select>
 																</div>
 															</div>
 															<div class="kt-separator kt-separator--border-dashed kt-separator--space-md"></div>
@@ -788,8 +787,8 @@
 																		</div>
 																	</div>
 																</div>
-																<div id="container_dokumen_peralatan" class="row col-sm-12">
-																	<div class="col-sm-12 input-berkas">
+																<div style="width: 99%" id="container_dokumen_peralatan">
+																	<div class="input-berkas">
 																		<div class="row">
 																			<div  class="col-sm-6">
 																				<input class="form-control" type="text" placeholder="input text" id="input" name="input">
@@ -801,7 +800,7 @@
 																				</div>
 																			</div>
 																			<div class="col-sm-1">
-																				<button disabled="" type="button" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary">
+																				<button disabled="" type="button" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary btn_hapus">
 																					<span class="fa fa-trash-alt"></span>
 																				</button>
 																			</div>
@@ -823,8 +822,8 @@
 																		</div>
 																	</div>
 																</div>
-																<div id="container_form_inspeksi" class="row col-sm-12">
-																	<div class="col-sm-12 input-berkas">
+																<div style="width: 99%" id="container_form_inspeksi">
+																	<div class="input-berkas">
 																		<div class="row">
 																			<div  class="col-sm-6">
 																				<input class="form-control" type="text" placeholder="input text" id="input" name="input">
@@ -836,7 +835,7 @@
 																				</div>
 																			</div>
 																			<div class="col-sm-1">
-																				<button disabled="" type="button" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary">
+																				<button disabled="" type="button" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary btn_hapus">
 																					<span class="fa fa-trash-alt"></span>
 																				</button>
 																			</div>
@@ -912,7 +911,7 @@
 	<script src="../assets/vendors/general/wnumb/wNumb.js" type="text/javascript"></script>
 	<!--end:: Global Mandatory Vendors -->
 	<!--begin:: Global Optional Vendors -->
-
+	<script src="../assets/vendors/general/select2/dist/js/select2.full.js" type="text/javascript"></script>
 	<!--end:: Global Optional Vendors -->
 	<!--begin::Global Theme Bundle(used by all pages) -->
 	<script src="../assets/demo/default/base/scripts.bundle.js" type="text/javascript"></script>
@@ -920,17 +919,12 @@
 	<!--begin::Page Vendors(used by this page) -->
 	<script src="../assets/vendors/custom/fullcalendar/fullcalendar.bundle.js" type="text/javascript"></script>
 	<!--end::Page Vendors -->
-	<!--begin::Page Scripts(used by this page) -->
-	<!--end::Page Scripts -->
 	<!--begin::Global App Bundle(used by all pages) -->
 	<script src="../assets/app/bundle/app.bundle.js" type="text/javascript"></script>
 	<!--begin::Page Vendors(used by this page) -->
-	<script src="../assets/vendors/general/select2/dist/js/select2.full.js" type="text/javascript"></script>
 	<script src="../assets/vendors/general/sweetalert2/dist/sweetalert2.min.js" type="text/javascript"></script>
 	<script src="../assets/vendors/custom/components/vendors/sweetalert2/init.js" type="text/javascript"></script>
 	<!--end::Page Vendors -->
-	<!--begin::Page Scripts(used by this page) -->
-	<!--end::Global App Bundle -->
 	<!-- AJAX -->
 	<script src="../assets/vendors/custom/datatables/datatables.bundle.js" type="text/javascript"></script>
 	<script src="../assets/app/script/js_ajax_ahli_teknik.js" type="text/javascript"></script>
@@ -983,15 +977,33 @@
 		        $('.select-2, .select-2_validate').select2({
 		        	placeholder: "Select a state"
 		        });
-		    }
-		    var modalDemos = function() {
-		    	$('#kt_select2_modal').on('shown.bs.modal', function () {
+		         // tagging support
+		         $('.nama_peralatan').select2({
+		         	placeholder: "Add a tag",
+		         	tags: true,
+		         	/*minimumInputLength: 3,*/
+		         	/*ajax: {
+		         		url: '../source/data-select2.json',
+		         		data: function (params) {
+		         			var query = {
+		         				search: params.term,
+		         				page: params.page || 1
+		         			}
+
+
+		         			return query;
+		         		}
+		         	}*/
+		         });
+		     }
+		     var modalDemos = function() {
+		     	$('#kt_select2_modal').on('shown.bs.modal', function () {
 		            // basic
 		            $('.select-2_modal').select2({
 		            	placeholder: "Select a state"
 		            });
 		        });
-		    }
+		     }
 		    // Public functions
 		    return {
 		    	init: function() {
@@ -1031,31 +1043,14 @@
 			});
 		});
 	</script>
-	<script>
-		window.onload = function () {
-			document.forms[0].onsubmit = function () {
-				var countryValue = this.elements[0].value;
-				if (countryValue == "") {
-					alert("Please enter a country");
-					return false;
-				}
-				var stateIdx = this.elements[1].selectedIndex;
-				if (stateIdx < 1) {
-					alert("Please select a state");
-					return false;
-				}
-				return true;
-			}
-		}    
-	</script>
 
-	<!-- JSA -->
+	<!-- Perizinan -->
 	<script>
 		$(document).ready(function() {
 			var i = 1;
-			$("#btn_tambah_hazard").click(function () {
+			$("#btn_tambah_amdal").click(function () {
 				console.log(i);
-				$("#container").append('<div data-id="'+i+'" class="col-sm-12 input-berkas">'+
+				$("#container_amdal").append('<div data-id="'+i+'" class="input-berkas">'+
 					'<div  class="row inputan">'+
 					'<div  class="col-sm-6">'+
 					'<input class="form-control" type="text" placeholder="input text" id="input" name="input" required>'+
@@ -1067,7 +1062,7 @@
 					'</div>'+
 					'</div>'+
 					'<div class="col-sm-1">' +
-					'<button type="button" data-id="'+i+'" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary">'+
+					'<button type="button" data-id="'+i+'" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary btn_hapus">'+
 					'<span class="fa fa-trash-alt"></span>'+
 					'</button>' +
 					'</div>' +
@@ -1076,10 +1071,377 @@
 
 			});
 
-			$('#container').on('click','#btn_hapus_input', function (e) {
+			$('#container_amdal').on('click','#btn_hapus_input', function (e) {
 				let id = $(this).data('id');
 				console.log(id);
 				$('.input-berkas[data-id="' + id + '"]').remove();
+			});
+		})
+	</script>
+	<script>
+		$(document).ready(function() {
+			var i = 1;
+			$("#btn_tambah_ukl_upl").click(function () {
+				console.log(i);
+				$("#container_ukl_upl").append('<div data-id="'+i+'" class="input-berkas">'+
+					'<div  class="row inputan">'+
+					'<div  class="col-sm-6">'+
+					'<input class="form-control" type="text" placeholder="input text" id="input" name="input">'+
+					'</div>'+
+					'<div class="col-sm-5">'+
+					'<div class="custom-file">'+
+					'<input type="file" class="custom-file-input" id="document" name="document">'+
+					'<label class="custom-file-label" for="customFile">Pilih berkas</label>'+
+					'</div>'+
+					'</div>'+
+					'<div class="col-sm-1">' +
+					'<button type="button" data-id="'+i+'" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary btn_hapus">'+
+					'<span class="fa fa-trash-alt"></span>'+
+					'</button>' +
+					'</div>' +
+					'</div></div>');
+				i++; 
+
+			});
+
+			$('#container_ukl_upl').on('click','#btn_hapus_input', function (e) {
+				let id = $(this).data('id');
+				console.log(id);
+				$('.input-berkas[data-id="' + id + '"]').remove();
+			});
+		})
+	</script>
+	<script>
+		$(document).ready(function() {
+			var i = 1;
+			$("#btn_tambah_dplh").click(function () {
+				console.log(i);
+				$("#container_dplh").append('<div data-id="'+i+'" class="input-berkas">'+
+					'<div  class="row inputan">'+
+					'<div  class="col-sm-6">'+
+					'<input class="form-control" type="text" placeholder="input text" id="input" name="input">'+
+					'</div>'+
+					'<div class="col-sm-5">'+
+					'<div class="custom-file">'+
+					'<input type="file" class="custom-file-input" id="document" name="document">'+
+					'<label class="custom-file-label" for="customFile">Pilih berkas</label>'+
+					'</div>'+
+					'</div>'+
+					'<div class="col-sm-1">' +
+					'<button type="button" data-id="'+i+'" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary btn_hapus">'+
+					'<span class="fa fa-trash-alt"></span>'+
+					'</button>' +
+					'</div>' +
+					'</div></div>');
+				i++; 
+
+			});
+
+			$('#container_dplh').on('click','#btn_hapus_input', function (e) {
+				let id = $(this).data('id');
+				console.log(id);
+				$('.input-berkas[data-id="' + id + '"]').remove();
+			});
+		})
+	</script>
+	<script>
+		$(document).ready(function() {
+			var i = 1;
+			$("#btn_tambah_imb").click(function () {
+				console.log(i);
+				$("#container_imb").append('<div data-id="'+i+'" class="input-berkas">'+
+					'<div  class="row inputan">'+
+					'<div  class="col-sm-6">'+
+					'<input class="form-control" type="text" placeholder="input text" id="input" name="input">'+
+					'</div>'+
+					'<div class="col-sm-5">'+
+					'<div class="custom-file">'+
+					'<input type="file" class="custom-file-input" id="document" name="document">'+
+					'<label class="custom-file-label" for="customFile">Pilih berkas</label>'+
+					'</div>'+
+					'</div>'+
+					'<div class="col-sm-1">' +
+					'<button type="button" data-id="'+i+'" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary btn_hapus">'+
+					'<span class="fa fa-trash-alt"></span>'+
+					'</button>' +
+					'</div>' +
+					'</div></div>');
+				i++; 
+
+			});
+
+			$('#container_imb').on('click','#btn_hapus_input', function (e) {
+				let id = $(this).data('id');
+				console.log(id);
+				$('.input-berkas[data-id="' + id + '"]').remove();
+			});
+		})
+	</script>
+	<script>
+		$(document).ready(function() {
+			var i = 1;
+			$("#btn_tambah_persetujuan_layanan").click(function () {
+				console.log(i);
+				$("#container_persetujuan_layanan").append('<div data-id="'+i+'" class="input-berkas">'+
+					'<div  class="row inputan">'+
+					'<div  class="col-sm-6">'+
+					'<input class="form-control" type="text" placeholder="input text" id="input" name="input">'+
+					'</div>'+
+					'<div class="col-sm-5">'+
+					'<div class="custom-file">'+
+					'<input type="file" class="custom-file-input" id="document" name="document">'+
+					'<label class="custom-file-label" for="customFile">Pilih berkas</label>'+
+					'</div>'+
+					'</div>'+
+					'<div class="col-sm-1">' +
+					'<button type="button" data-id="'+i+'" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary btn_hapus">'+
+					'<span class="fa fa-trash-alt"></span>'+
+					'</button>' +
+					'</div>' +
+					'</div></div>');
+				i++; 
+
+			});
+
+			$('#container_persetujuan_layanan').on('click','#btn_hapus_input', function (e) {
+				let id = $(this).data('id');
+				console.log(id);
+				$('.input-berkas[data-id="' + id + '"]').remove();
+			});
+		})
+	</script>
+	<script>
+		$(document).ready(function() {
+			var i = 1;
+			$("#btn_tambah_serah_terima_lahan").click(function () {
+				console.log(i);
+				$("#container_serah_terima_lahan").append('<div data-id="'+i+'" class="input-berkas">'+
+					'<div  class="row inputan">'+
+					'<div  class="col-sm-6">'+
+					'<input class="form-control" type="text" placeholder="input text" id="input" name="input">'+
+					'</div>'+
+					'<div class="col-sm-5">'+
+					'<div class="custom-file">'+
+					'<input type="file" class="custom-file-input" id="document" name="document">'+
+					'<label class="custom-file-label" for="customFile">Pilih berkas</label>'+
+					'</div>'+
+					'</div>'+
+					'<div class="col-sm-1">' +
+					'<button type="button" data-id="'+i+'" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary btn_hapus">'+
+					'<span class="fa fa-trash-alt"></span>'+
+					'</button>' +
+					'</div>' +
+					'</div></div>');
+				i++; 
+
+			});
+
+			$('#container_serah_terima_lahan').on('click','#btn_hapus_input', function (e) {
+				let id = $(this).data('id');
+				console.log(id);
+				$('.input-berkas[data-id="' + id + '"]').remove();
+			});
+		})
+	</script>
+	<script>
+		$(document).ready(function() {
+			var i = 1;
+			$("#btn_tambah_izin_terminal").click(function () {
+				console.log(i);
+				$("#container_izin_terminal").append('<div data-id="'+i+'" class="input-berkas">'+
+					'<div  class="row inputan">'+
+					'<div  class="col-sm-6">'+
+					'<input class="form-control" type="text" placeholder="input text" id="input" name="input">'+
+					'</div>'+
+					'<div class="col-sm-5">'+
+					'<div class="custom-file">'+
+					'<input type="file" class="custom-file-input" id="document" name="document">'+
+					'<label class="custom-file-label" for="customFile">Pilih berkas</label>'+
+					'</div>'+
+					'</div>'+
+					'<div class="col-sm-1">' +
+					'<button type="button" data-id="'+i+'" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary btn_hapus">'+
+					'<span class="fa fa-trash-alt"></span>'+
+					'</button>' +
+					'</div>' +
+					'</div></div>');
+				i++; 
+
+			});
+
+			$('#container_izin_terminal').on('click','#btn_hapus_input', function (e) {
+				let id = $(this).data('id');
+				console.log(id);
+				$('.input-berkas[data-id="' + id + '"]').remove();
+			});
+		})
+	</script>
+	<script>
+		$(document).ready(function() {
+			var i = 1;
+			$("#btn_tambah_perundangan_lainnya").click(function () {
+				console.log(i);
+				$("#container_perundangan_lainnya").append('<div data-id="'+i+'" class="input-berkas">'+
+					'<div  class="row inputan">'+
+					'<div  class="col-sm-6">'+
+					'<input class="form-control" type="text" placeholder="input text" id="input" name="input">'+
+					'</div>'+
+					'<div class="col-sm-5">'+
+					'<div class="custom-file">'+
+					'<input type="file" class="custom-file-input" id="document" name="document">'+
+					'<label class="custom-file-label" for="customFile">Pilih berkas</label>'+
+					'</div>'+
+					'</div>'+
+					'<div class="col-sm-1">' +
+					'<button type="button" data-id="'+i+'" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary btn_hapus">'+
+					'<span class="fa fa-trash-alt"></span>'+
+					'</button>' +
+					'</div>' +
+					'</div></div>');
+				i++; 
+
+			});
+
+			$('#container_perundangan_lainnya').on('click','#btn_hapus_input', function (e) {
+				let id = $(this).data('id');
+				console.log(id);
+				$('.input-berkas[data-id="' + id + '"]').remove();
+			});
+		})
+	</script>
+	<!-- End: Perizinan -->
+	<!-- CSMS -->
+	<script>
+		$(document).ready(function() {
+			var i = 1;
+			$("#btn_tambah_pja").click(function () {
+				console.log(i);
+				$("#container_pja").append('<div data-id="'+i+'" class="input-berkas">'+
+					'<div  class="row inputan">'+
+					'<div  class="col-sm-6">'+
+					'<input class="form-control" type="text" placeholder="input text" id="input" name="input" required>'+
+					'</div>'+
+					'<div class="col-sm-5">'+
+					'<div class="custom-file">'+
+					'<input type="file" class="custom-file-input" id="document" name="document" required>'+
+					'<label class="custom-file-label" for="customFile">Pilih berkas</label>'+
+					'</div>'+
+					'</div>'+
+					'<div class="col-sm-1">' +
+					'<button type="button" data-id="'+i+'" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary btn_hapus">'+
+					'<span class="fa fa-trash-alt"></span>'+
+					'</button>' +
+					'</div>' +
+					'</div></div>');
+				i++; 
+
+			});
+
+			$('#container_pja').on('click','#btn_hapus_input', function (e) {
+				let id = $(this).data('id');
+				console.log(id);
+				$('.input-berkas[data-id="' + id + '"]').remove();
+			});
+		})
+	</script>
+	<script>
+		$(document).ready(function() {
+			var i = 1;
+			$("#btn_tambah_hse_plan").click(function () {
+				console.log(i);
+				$("#container_hse_plan").append('<div data-id="'+i+'" class="input-berkas">'+
+					'<div  class="row inputan">'+
+					'<div  class="col-sm-6">'+
+					'<input class="form-control" type="text" placeholder="input text" id="input" name="input">'+
+					'</div>'+
+					'<div class="col-sm-5">'+
+					'<div class="custom-file">'+
+					'<input type="file" class="custom-file-input" id="document" name="document">'+
+					'<label class="custom-file-label" for="customFile">Pilih berkas</label>'+
+					'</div>'+
+					'</div>'+
+					'<div class="col-sm-1">' +
+					'<button type="button" data-id="'+i+'" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary btn_hapus">'+
+					'<span class="fa fa-trash-alt"></span>'+
+					'</button>' +
+					'</div>' +
+					'</div></div>');
+				i++; 
+
+			});
+
+			$('#container_hse_plan').on('click','#btn_hapus_input', function (e) {
+				let id = $(this).data('id');
+				console.log(id);
+				$('.input-berkas[data-id="' + id + '"]').remove();
+			});
+		})
+	</script>
+	<script>
+		$(document).ready(function() {
+			var i = 1;
+			$("#btn_tambah_kpi_project").click(function () {
+				console.log(i);
+				$("#container_kpi_project").append('<div data-id="'+i+'" class="input-berkas">'+
+					'<div  class="row inputan">'+
+					'<div  class="col-sm-6">'+
+					'<input class="form-control" type="text" placeholder="input text" id="input" name="input">'+
+					'</div>'+
+					'<div class="col-sm-5">'+
+					'<div class="custom-file">'+
+					'<input type="file" class="custom-file-input" id="document" name="document">'+
+					'<label class="custom-file-label" for="customFile">Pilih berkas</label>'+
+					'</div>'+
+					'</div>'+
+					'<div class="col-sm-1">' +
+					'<button type="button" data-id="'+i+'" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary btn_hapus">'+
+					'<span class="fa fa-trash-alt"></span>'+
+					'</button>' +
+					'</div>' +
+					'</div></div>');
+				i++; 
+
+			});
+
+			$('#container_kpi_project').on('click','#btn_hapus_input', function (e) {
+				let id = $(this).data('id');
+				console.log(id);
+				$('.input-berkas[data-id="' + id + '"]').remove();
+			});
+		})
+	</script>
+	<!-- End: CSMS -->
+	<!-- JSA -->
+	<script>
+		$(document).ready(function() {
+			var i = 1;
+			$("#btn_tambah_hazard").click(function () {
+				console.log(i);
+				$("#container").append('<div data-id="'+i+'" class="input-berkas berkas_hazard">'+
+					'<div  class="row inputan">'+
+					'<div  class="col-sm-5">'+
+					'<input class="form-control" type="text" placeholder="input text" id="input" name="input" required>'+
+					'</div>'+
+					'<div class="col-sm-6">'+
+					'<div class="custom-file">'+
+					'<input type="file" class="custom-file-input" id="document" name="document" required>'+
+					'<label class="custom-file-label" for="customFile">Pilih berkas</label>'+
+					'</div>'+
+					'</div>'+
+					'<div class="col-sm-1">' +
+					'<button type="button" data-id="'+i+'" id="btn_hapus_input_hazard" name="btn_hapus_input_hazard" class="btn btn-secondary btn_hapus">'+
+					'<span class="fa fa-trash-alt"></span>'+
+					'</button>' +
+					'</div>' +
+					'</div></div>');
+				i++; 
+
+			});
+
+			$('#container').on('click','#btn_hapus_input_hazard', function (e) {
+				let id = $(this).data('id');
+				console.log(id);
+				$('.berkas_hazard[data-id="' + id + '"]').remove();
 			});
 		})
 		/*JSA*/
@@ -1089,7 +1451,7 @@
 			var i = 1;
 			$("#btn_tambah_heavy_equipment").click(function () {
 				console.log(i);
-				$("#container_heavy_equipment").append('<div data-id="'+i+'" class="col-sm-12 input-berkas">'+
+				$("#container_heavy_equipment").append('<div data-id="'+i+'" class=" input-berkas berkas_heavy">'+
 					'<div  class="row inputan">'+
 					'<div  class="col-sm-5">'+
 					'<input class="form-control" type="text" placeholder="heavy equipment" id="input_heavy_equipment" name="input_heavy_equipment">'+
@@ -1107,7 +1469,7 @@
 					'</div>'+
 					'</div>'+
 					'<div class="col-sm-1">' +
-					'<button type="button" data-id="'+i+'" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary">'+
+					'<button type="button" data-id="'+i+'" id="btn_hapus_input_heavy" name="btn_hapus_input_heavy" class="btn btn-secondary btn_hapus">'+
 					'<span class="fa fa-trash-alt"></span>'+
 					'</button>' +
 					'</div>' +
@@ -1116,10 +1478,10 @@
 
 			});
 
-			$('#container_heavy_equipment').on('click','#btn_hapus_input', function (e) {
+			$('#container_heavy_equipment').on('click','#btn_hapus_input_heavy', function (e) {
 				let id = $(this).data('id');
 				console.log(id);
-				$('.input-berkas[data-id="' + id + '"]').remove();
+				$('.berkas_heavy[data-id="' + id + '"]').remove();
 			});
 		})
 	</script>
@@ -1128,19 +1490,19 @@
 			var i = 1;
 			$("#btn_tambah_lifting_plan").click(function () {
 				console.log(i);
-				$("#container_lifting_plan").append('<div data-id="'+i+'" class="col-sm-12 input-berkas">'+
+				$("#container_lifting_plan").append('<div data-id="'+i+'" class=" input-berkas berkas_lifting_plan">'+
 					'<div  class="row inputan">'+
-					'<div  class="col-sm-6">'+
-					'<input class="form-control" type="text" placeholder="input text" id="input" name="input" required>'+
+					'<div  class="col-sm-5">'+
+					'<input class="form-control" type="text" placeholder="input text" id="input" name="input">'+
 					'</div>'+
-					'<div class="col-sm-5">'+
+					'<div class="col-sm-6">'+
 					'<div class="custom-file">'+
 					'<input type="file" class="custom-file-input" id="document" name="document">'+
 					'<label class="custom-file-label" for="customFile">Pilih berkas</label>'+
 					'</div>'+
 					'</div>'+
 					'<div class="col-sm-1">' +
-					'<button type="button" data-id="'+i+'" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary">'+
+					'<button type="button" data-id="'+i+'" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary btn_hapus">'+
 					'<span class="fa fa-trash-alt"></span>'+
 					'</button>' +
 					'</div>' +
@@ -1152,7 +1514,7 @@
 			$('#container_lifting_plan').on('click','#btn_hapus_input', function (e) {
 				let id = $(this).data('id');
 				console.log(id);
-				$('.input-berkas[data-id="' + id + '"]').remove();
+				$('.berkas_lifting_plan[data-id="' + id + '"]').remove();
 			});
 		})
 	</script>
@@ -1161,10 +1523,10 @@
 			var i = 1;
 			$("#btn_tambah_prosedur_kerja").click(function () {
 				console.log(i);
-				$("#container_prosedur_kerja").append('<div data-id="'+i+'" class="col-sm-12 input-berkas">'+
+				$("#container_prosedur_kerja").append('<div data-id="'+i+'" class="input-berkas berkas_prosedur_kerja">'+
 					'<div  class="row inputan">'+
 					'<div  class="col-sm-6">'+
-					'<input class="form-control" type="text" placeholder="input text" id="input" name="input" required>'+
+					'<input class="form-control" type="text" placeholder="input text" id="input" name="input">'+
 					'</div>'+
 					'<div class="col-sm-5">'+
 					'<div class="custom-file">'+
@@ -1173,7 +1535,7 @@
 					'</div>'+
 					'</div>'+
 					'<div class="col-sm-1">' +
-					'<button type="button" data-id="'+i+'" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary">'+
+					'<button type="button" data-id="'+i+'" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary btn_hapus">'+
 					'<span class="fa fa-trash-alt"></span>'+
 					'</button>' +
 					'</div>' +
@@ -1185,7 +1547,7 @@
 			$('#container_prosedur_kerja').on('click','#btn_hapus_input', function (e) {
 				let id = $(this).data('id');
 				console.log(id);
-				$('.input-berkas[data-id="' + id + '"]').remove();
+				$('.berkas_prosedur_kerja[data-id="' + id + '"]').remove();
 			});
 		})
 	</script>
@@ -1196,19 +1558,19 @@
 			var i = 1;
 			$("#btn_tambah_isolasi_energi").click(function () {
 				console.log(i);
-				$("#container_isolasi_energi").append('<div data-id="'+i+'" class="col-sm-12 input-berkas">'+
+				$("#container_isolasi_energi").append('<div data-id="'+i+'" class="input-berkas berkas_isolasi_energi">'+
 					'<div  class="row inputan">'+
 					'<div  class="col-sm-6">'+
 					'<input class="form-control" type="text" placeholder="input text" id="input" name="input" required>'+
 					'</div>'+
 					'<div class="col-sm-5">'+
 					'<div class="custom-file">'+
-					'<input type="file" class="custom-file-input" id="document" name="document">'+
+					'<input type="file" class="custom-file-input" id="document" name="document" required>'+
 					'<label class="custom-file-label" for="customFile">Pilih berkas</label>'+
 					'</div>'+
 					'</div>'+
 					'<div class="col-sm-1">' +
-					'<button type="button" data-id="'+i+'" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary">'+
+					'<button type="button" data-id="'+i+'" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary btn_hapus">'+
 					'<span class="fa fa-trash-alt"></span>'+
 					'</button>' +
 					'</div>' +
@@ -1220,7 +1582,7 @@
 			$('#container_isolasi_energi').on('click','#btn_hapus_input', function (e) {
 				let id = $(this).data('id');
 				console.log(id);
-				$('.input-berkas[data-id="' + id + '"]').remove();
+				$('.berkas_isolasi_energi[data-id="' + id + '"]').remove();
 			});
 		})
 	</script>
@@ -1229,10 +1591,10 @@
 			var i = 1;
 			$("#btn_tambah_prosedur").click(function () {
 				console.log(i);
-				$("#container_prosedur").append('<div data-id="'+i+'" class="col-sm-12 input-berkas">'+
+				$("#container_prosedur").append('<div data-id="'+i+'" class="input-berkas berkas_prosedur">'+
 					'<div  class="row inputan">'+
 					'<div  class="col-sm-6">'+
-					'<input class="form-control" type="text" placeholder="input text" id="input" name="input" required>'+
+					'<input class="form-control" type="text" placeholder="input text" id="input" name="input">'+
 					'</div>'+
 					'<div class="col-sm-5">'+
 					'<div class="custom-file">'+
@@ -1241,7 +1603,7 @@
 					'</div>'+
 					'</div>'+
 					'<div class="col-sm-1">' +
-					'<button type="button" data-id="'+i+'" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary">'+
+					'<button type="button" data-id="'+i+'" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary btn_hapus">'+
 					'<span class="fa fa-trash-alt"></span>'+
 					'</button>' +
 					'</div>' +
@@ -1253,7 +1615,7 @@
 			$('#container_prosedur').on('click','#btn_hapus_input', function (e) {
 				let id = $(this).data('id');
 				console.log(id);
-				$('.input-berkas[data-id="' + id + '"]').remove();
+				$('.berkas_prosedur[data-id="' + id + '"]').remove();
 			});
 		})
 	</script>
@@ -1262,10 +1624,10 @@
 			var i = 1;
 			$("#btn_tambah_engineer_pid").click(function () {
 				console.log(i);
-				$("#container_engineer_pid").append('<div data-id="'+i+'" class="col-sm-12 input-berkas">'+
+				$("#container_engineer_pid").append('<div data-id="'+i+'" class=" input-berkas berkas_pid">'+
 					'<div  class="row inputan">'+
 					'<div  class="col-sm-6">'+
-					'<input class="form-control" type="text" placeholder="input text" id="input" name="input" required>'+
+					'<input class="form-control" type="text" placeholder="input text" id="input" name="input">'+
 					'</div>'+
 					'<div class="col-sm-5">'+
 					'<div class="custom-file">'+
@@ -1274,7 +1636,7 @@
 					'</div>'+
 					'</div>'+
 					'<div class="col-sm-1">' +
-					'<button type="button" data-id="'+i+'" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary">'+
+					'<button type="button" data-id="'+i+'" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary btn_hapus">'+
 					'<span class="fa fa-trash-alt"></span>'+
 					'</button>' +
 					'</div>' +
@@ -1286,7 +1648,7 @@
 			$('#container_engineer_pid').on('click','#btn_hapus_input', function (e) {
 				let id = $(this).data('id');
 				console.log(id);
-				$('.input-berkas[data-id="' + id + '"]').remove();
+				$('.berkas_pid[data-id="' + id + '"]').remove();
 			});
 		})
 	</script>
@@ -1295,10 +1657,10 @@
 			var i = 1;
 			$("#btn_tambah_training").click(function () {
 				console.log(i);
-				$("#container_training").append('<div data-id="'+i+'" class="col-sm-12 input-berkas">'+
+				$("#container_training").append('<div data-id="'+i+'" class=" input-berkas berkas_training">'+
 					'<div  class="row inputan">'+
 					'<div  class="col-sm-6">'+
-					'<input class="form-control" type="text" placeholder="input text" id="input" name="input" required>'+
+					'<input class="form-control" type="text" placeholder="input text" id="input" name="input">'+
 					'</div>'+
 					'<div class="col-sm-5">'+
 					'<div class="custom-file">'+
@@ -1307,7 +1669,7 @@
 					'</div>'+
 					'</div>'+
 					'<div class="col-sm-1">' +
-					'<button type="button" data-id="'+i+'" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary">'+
+					'<button type="button" data-id="'+i+'" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary btn_hapus">'+
 					'<span class="fa fa-trash-alt"></span>'+
 					'</button>' +
 					'</div>' +
@@ -1319,7 +1681,7 @@
 			$('#container_training').on('click','#btn_hapus_input', function (e) {
 				let id = $(this).data('id');
 				console.log(id);
-				$('.input-berkas[data-id="' + id + '"]').remove();
+				$('.berkas_training[data-id="' + id + '"]').remove();
 			});
 		})
 	</script>
@@ -1330,16 +1692,16 @@
 			var i = 1;
 			$("#btn_tambah_dasar_pekerjaan").click(function () {
 				console.log(i);
-				$("#container_dasar_pekerjaan").append('<div data-id="'+i+'" class="col-sm-12 input-berkas">'+
+				$("#container_dasar_pekerjaan").append('<div data-id="'+i+'" class="input-berkas berkas_dasar_pekerjaan">'+
 					'<div  class="row inputan">'+
 					'<div class="col-sm-11">'+
 					'<div class="custom-file">'+
-					'<input type="file" class="custom-file-input" id="document" name="document">'+
+					'<input type="file" class="custom-file-input" id="document" name="document" required	>'+
 					'<label class="custom-file-label" for="customFile">Pilih berkas</label>'+
 					'</div>'+
 					'</div>'+
 					'<div class="col-sm-1">' +
-					'<button type="button" data-id="'+i+'" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary">'+
+					'<button type="button" data-id="'+i+'" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary btn_hapus">'+
 					'<span class="fa fa-trash-alt"></span>'+
 					'</button>' +
 					'</div>' +
@@ -1351,7 +1713,7 @@
 			$('#container_dasar_pekerjaan').on('click','#btn_hapus_input', function (e) {
 				let id = $(this).data('id');
 				console.log(id);
-				$('.input-berkas[data-id="' + id + '"]').remove();
+				$('.berkas_dasar_pekerjaan[data-id="' + id + '"]').remove();
 			});
 		})
 	</script>
@@ -1360,7 +1722,7 @@
 			var i = 1;
 			$("#btn_tambah_dasar_kontrak_spmp").click(function () {
 				console.log(i);
-				$("#container_dasar_kontrak_spmp").append('<div data-id="'+i+'" class="col-sm-12 input-berkas">'+
+				$("#container_dasar_kontrak_spmp").append('<div data-id="'+i+'" class="input-berkas berkas_dasar_spmp">'+
 					'<div  class="row inputan">'+
 					'<div class="col-sm-11">'+
 					'<div class="custom-file">'+
@@ -1369,7 +1731,7 @@
 					'</div>'+
 					'</div>'+
 					'<div class="col-sm-1">' +
-					'<button type="button" data-id="'+i+'" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary">'+
+					'<button type="button" data-id="'+i+'" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary btn_hapus">'+
 					'<span class="fa fa-trash-alt"></span>'+
 					'</button>' +
 					'</div>' +
@@ -1381,7 +1743,7 @@
 			$('#container_dasar_kontrak_spmp').on('click','#btn_hapus_input', function (e) {
 				let id = $(this).data('id');
 				console.log(id);
-				$('.input-berkas[data-id="' + id + '"]').remove();
+				$('.berkas_dasar_spmp[data-id="' + id + '"]').remove();
 			});
 		})
 	</script>
@@ -1390,7 +1752,7 @@
 			var i = 1;
 			$("#btn_tambah_nama_pekerjaan").click(function () {
 				console.log(i);
-				$("#container_nama_pekerjaan").append('<div data-id="'+i+'" class="col-sm-12 input-berkas">'+
+				$("#container_nama_pekerjaan").append('<div data-id="'+i+'" class="input-berkas berkas_nama_pekerjaan">'+
 					'<div  class="row inputan">'+
 					'<div class="col-sm-11">'+
 					'<div class="custom-file">'+
@@ -1399,7 +1761,7 @@
 					'</div>'+
 					'</div>'+
 					'<div class="col-sm-1">' +
-					'<button type="button" data-id="'+i+'" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary">'+
+					'<button type="button" data-id="'+i+'" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary btn_hapus">'+
 					'<span class="fa fa-trash-alt"></span>'+
 					'</button>' +
 					'</div>' +
@@ -1411,7 +1773,7 @@
 			$('#container_nama_pekerjaan').on('click','#btn_hapus_input', function (e) {
 				let id = $(this).data('id');
 				console.log(id);
-				$('.input-berkas[data-id="' + id + '"]').remove();
+				$('.berkas_nama_pekerjaan[data-id="' + id + '"]').remove();
 			});
 		})
 	</script>
@@ -1420,7 +1782,7 @@
 			var i = 1;
 			$("#btn_tambah_surat_permohonan_pekerja").click(function () {
 				console.log(i);
-				$("#container_surat_permohonan_pekerja").append('<div data-id="'+i+'" class="col-sm-12 input-berkas">'+
+				$("#container_surat_permohonan_pekerja").append('<div data-id="'+i+'" class=" input-berkas berkas_surat_permohonan">'+
 					'<div  class="row inputan">'+
 					'<div class="col-sm-11">'+
 					'<div class="custom-file">'+
@@ -1429,7 +1791,7 @@
 					'</div>'+
 					'</div>'+
 					'<div class="col-sm-1">' +
-					'<button type="button" data-id="'+i+'" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary">'+
+					'<button type="button" data-id="'+i+'" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary btn_hapus">'+
 					'<span class="fa fa-trash-alt"></span>'+
 					'</button>' +
 					'</div>' +
@@ -1441,7 +1803,7 @@
 			$('#container_surat_permohonan_pekerja').on('click','#btn_hapus_input', function (e) {
 				let id = $(this).data('id');
 				console.log(id);
-				$('.input-berkas[data-id="' + id + '"]').remove();
+				$('.berkas_surat_permohonan[data-id="' + id + '"]').remove();
 			});
 		})
 	</script>
@@ -1450,7 +1812,7 @@
 			var i = 1;
 			$("#btn_tambah_gambar_kerja").click(function () {
 				console.log(i);
-				$("#container_gambar_kerja").append('<div data-id="'+i+'" class="col-sm-12 input-berkas">'+
+				$("#container_gambar_kerja").append('<div data-id="'+i+'" class="input-berkas berkas_gambar_kerja">'+
 					'<div  class="row inputan">'+
 					'<div class="col-sm-11">'+
 					'<div class="custom-file">'+
@@ -1459,7 +1821,7 @@
 					'</div>'+
 					'</div>'+
 					'<div class="col-sm-1">' +
-					'<button type="button" data-id="'+i+'" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary">'+
+					'<button type="button" data-id="'+i+'" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary btn_hapus">'+
 					'<span class="fa fa-trash-alt"></span>'+
 					'</button>' +
 					'</div>' +
@@ -1471,7 +1833,7 @@
 			$('#container_gambar_kerja').on('click','#btn_hapus_input', function (e) {
 				let id = $(this).data('id');
 				console.log(id);
-				$('.input-berkas[data-id="' + id + '"]').remove();
+				$('.berkas_gambar_kerja[data-id="' + id + '"]').remove();
 			});
 		})
 	</script>
@@ -1480,10 +1842,10 @@
 			var i = 1;
 			$("#btn_tambah_dokumen_peralatan").click(function () {
 				console.log(i);
-				$("#container_dokumen_peralatan").append('<div data-id="'+i+'" class="col-sm-12 input-berkas">'+
+				$("#container_dokumen_peralatan").append('<div data-id="'+i+'" class="input-berkas berkas_peralatan">'+
 					'<div  class="row inputan">'+
 					'<div  class="col-sm-6">'+
-					'<input class="form-control" type="text" placeholder="input text" id="input" name="input" required>'+
+					'<input class="form-control" type="text" placeholder="input text" id="input" name="input">'+
 					'</div>'+
 					'<div class="col-sm-5">'+
 					'<div class="custom-file">'+
@@ -1492,7 +1854,7 @@
 					'</div>'+
 					'</div>'+
 					'<div class="col-sm-1">' +
-					'<button type="button" data-id="'+i+'" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary">'+
+					'<button type="button" data-id="'+i+'" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary btn_hapus">'+
 					'<span class="fa fa-trash-alt"></span>'+
 					'</button>' +
 					'</div>' +
@@ -1504,7 +1866,7 @@
 			$('#container_dokumen_peralatan').on('click','#btn_hapus_input', function (e) {
 				let id = $(this).data('id');
 				console.log(id);
-				$('.input-berkas[data-id="' + id + '"]').remove();
+				$('.berkas_peralatan[data-id="' + id + '"]').remove();
 			});
 		})
 	</script>
@@ -1513,10 +1875,10 @@
 			var i = 1;
 			$("#btn_tambah_form_inspeksi").click(function () {
 				console.log(i);
-				$("#container_form_inspeksi").append('<div data-id="'+i+'" class="col-sm-12 input-berkas">'+
+				$("#container_form_inspeksi").append('<div data-id="'+i+'" class="input-berkas berkas_inspeksi">'+
 					'<div  class="row inputan">'+
 					'<div  class="col-sm-6">'+
-					'<input class="form-control" type="text" placeholder="input text" id="input" name="input" required>'+
+					'<input class="form-control" type="text" placeholder="input text" id="input" name="input">'+
 					'</div>'+
 					'<div class="col-sm-5">'+
 					'<div class="custom-file">'+
@@ -1525,7 +1887,7 @@
 					'</div>'+
 					'</div>'+
 					'<div class="col-sm-1">' +
-					'<button type="button" data-id="'+i+'" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary">'+
+					'<button type="button" data-id="'+i+'" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary btn_hapus">'+
 					'<span class="fa fa-trash-alt"></span>'+
 					'</button>' +
 					'</div>' +
@@ -1537,7 +1899,7 @@
 			$('#container_form_inspeksi').on('click','#btn_hapus_input', function (e) {
 				let id = $(this).data('id');
 				console.log(id);
-				$('.input-berkas[data-id="' + id + '"]').remove();
+				$('.berkas_inspeksi[data-id="' + id + '"]').remove();
 			});
 		})
 	</script>

@@ -69,7 +69,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 			processing: true,
 			serverSide: false,
 			ajax: {
-				url: '../source/daftar_sika_ahli_teknik.json',
+				url: '../source/daftar_pekerjaan_ahli_teknik.json',
 				type: 'POST',
 				data: {
 					pagination: {
@@ -82,22 +82,56 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 				data: 'no',
 				title: 'No.',
 			},{
-				data: 'no_sika',
-				title: 'No. SIKA',
+				data: 'pekerjaan',
+				title: 'Pekerjaan',
 			},{
-				data: 'nama_pekerjaan',
-				title: 'Nama Pekerjaan',
+				data: 'vendor',
+				title: 'Vendor',
 			},{
-				data: 'jenis_sika',
-				title: 'Jenis SIKA',
+				data: 'sifat',
+				title: 'Sifat',
+			},{
+				data: 'tanggal',
+				title: 'Tanggal Mulai',
+			},{
+				data: 'validasi',
+				title: 'Validasi',
+				responsivePriority: -1,
+				render: function(data, type, full, meta) {
+					return `
+					<div class="kt-checkbox-list">
+					<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success validasi_check">
+					<input disabled checked="" type="checkbox" id="check_hsse" name="check_hsse"> HSSE
+					<span></span>
+					</label>
+					<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success validasi_check">
+					<input disabled checked="" type="checkbox" id="check_gsi" name="check_hsse"> GSI
+					<span></span>
+					</label>
+					</div>`;
+				},
 			},{
 				data: 'status',
 				title: 'Status',
+				responsivePriority: -1,
 				render: function(data, type, full, meta) {
 					var status = {
-						terverifikasi: {'title': 'terverifikasi', 'class': ' btn-label-success'},
-						ditutup: {'title': 'Ditutup', 'class': 'btn-label-danger'},
-						aktif: {'title': 'Aktif', 'class': 'btn-label-success'},
+						/*draft: {'title': 'Draft', 'class': ' btn-label-dark'},
+						belum_terverifikasi: {'title': 'Belum Terverifikasi', 'class': 'btn-label-bold'},
+						baru: {'title': 'baru', 'class': 'btn-label-brand'},
+						ditolak: {'title': 'Ditolak', 'class': 'btn-label-danger'},
+						berlangsung: {'title': 'Berlangsung', 'class': 'btn-label-primary'},
+						ditunda: {'title': 'Ditunda', 'class': 'btn-label-warning'},
+						selesai: {'title': 'Selesai', 'class': 'btn-label-success'},*/
+						kadaluarsa: {'title': 'Kadaluarsa', 'class': 'btn-label-dark'},
+						draft: {'title': 'Draft', 'class': 'btn-label-dark dark-blue'},
+						baru: {'title': 'Baru', 'class': 'btn-label-brand'},
+						perpanjang : {'title': 'Perpanjang', 'class': 'btn-label-warning'},
+						resubmit : {'title' : 'Resubmit', 'class' : 'btn-label-bold bold-status'},
+						ditolak : {'title' : 'Ditolak', 'class' : 'btn-label-danger'},
+						berlangsung : {'title' : 'Berlangsung', 'class' : 'btn-label-primary'},
+						ditunda : {'title' : 'Ditunda','class' : 'btn-label-dark dark-status'},
+						selesai : {'title' : 'Selesai', 'class' : 'btn-label-success'}
 					};
 					if (typeof status[data] === 'undefined') {
 						return data;
@@ -111,13 +145,24 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 				className: 'text-center',
 				orderable: false,
 				render: function(data, type, full, meta) {
+					var status = {
+						kadaluarsa: {'href': 'draft_pekerjaan.html'},
+						draft: {'href': 'edit_pekerjaan.html'},
+						perpanjang: {'href': 'rincian_pekerjaan_belum_terverifikasi.html'},
+						resubmit: {'href': 'rincian_pekerjaan_belum_terverifikasi.html'},
+						baru: {'href': 'rincian_pekerjaan_belum_terverifikasi.html'},
+						ditolak: {'href': 'rincian_pekerjaan_ditolak.html'},
+						berlangsung: {'href': 'rincian_pekerjaan_berlangsung.html'},
+						ditunda: {'href': 'rincian_pekerjaan_ditunda.html'},
+						selesai: {'href': 'rincian_pekerjaan_selesai.html'},
+					};
 					return `
-					<a href="rincian_sika.html" class="btn btn-sm btn-primary" style="color:white;border-radius:20px">Rincian</a>`;
+					<a href="${status[full.status].href}" class="btn btn-sm btn-primary" style="color:white;border-radius:20px">Rincian</a>`;
 				},
 			}],
 			columnDefs: [
 			{
-				targets: [0,1,2,3,4,5],
+				targets: [0,1,2,3,4,5,6],
 				className: 'text-center'
 			}
 			],
@@ -165,11 +210,11 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 					return `
 					<div class="kt-checkbox-list">
 					<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success validasi_check">
-					<input disabled type="checkbox" id="check_hsse" name="check_hsse"> HSSE
+					<input disabled checked="" type="checkbox" id="check_hsse" name="check_hsse"> HSSE
 					<span></span>
 					</label>
 					<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success validasi_check">
-					<input disabled type="checkbox" id="check_gsi" name="check_hsse"> GSI
+					<input disabled checked="" type="checkbox" id="check_gsi" name="check_hsse"> GSI
 					<span></span>
 					</label>
 					</div>`;
@@ -187,12 +232,14 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 						berlangsung: {'title': 'Berlangsung', 'class': 'btn-label-primary'},
 						ditunda: {'title': 'Ditunda', 'class': 'btn-label-warning'},
 						selesai: {'title': 'Selesai', 'class': 'btn-label-success'},*/
+						kadaluarsa: {'title': 'Kadaluarsa', 'class': 'btn-label-dark'},
+						draft: {'title': 'Draft', 'class': 'btn-label-dark dark-blue'},
 						baru: {'title': 'Baru', 'class': 'btn-label-brand'},
 						perpanjang : {'title': 'Perpanjang', 'class': 'btn-label-warning'},
 						resubmit : {'title' : 'Resubmit', 'class' : 'btn-label-bold bold-status'},
 						ditolak : {'title' : 'Ditolak', 'class' : 'btn-label-danger'},
 						berlangsung : {'title' : 'Berlangsung', 'class' : 'btn-label-primary'},
-						ditunda : {'title' : 'Ditunda','class' : 'btn-label-dark'},
+						ditunda : {'title' : 'Ditunda','class' : 'btn-label-dark dark-status'},
 						selesai : {'title' : 'Selesai', 'class' : 'btn-label-success'}
 					};
 					if (typeof status[data] === 'undefined') {
@@ -208,6 +255,8 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 				orderable: false,
 				render: function(data, type, full, meta) {
 					var status = {
+						kadaluarsa: {'href': 'draft_pekerjaan.html'},
+						draft: {'href': 'edit_pekerjaan.html'},
 						perpanjang: {'href': 'rincian_pekerjaan_belum_terverifikasi.html'},
 						resubmit: {'href': 'rincian_pekerjaan_belum_terverifikasi.html'},
 						baru: {'href': 'rincian_pekerjaan_belum_terverifikasi.html'},
@@ -264,11 +313,11 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 					return `
 					<div class="kt-checkbox-list">
 					<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success validasi_check">
-					<input disabled type="checkbox" id="check_hsse" name="check_hsse"> HSSE
+					<input disabled checked="" type="checkbox" id="check_hsse" name="check_hsse"> HSSE
 					<span></span>
 					</label>
 					<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success validasi_check">
-					<input disabled type="checkbox" id="check_gsi" name="check_hsse"> GSI
+					<input disabled checked="" type="checkbox" id="check_gsi" name="check_hsse"> GSI
 					<span></span>
 					</label>
 					</div>`;
@@ -278,12 +327,14 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 				title: 'Status',
 				render: function(data, type, full, meta) {
 					var status = {
+						kadaluarsa: {'title': 'Kadaluarsa', 'class': 'btn-label-dark'},
+						draft: {'title': 'Draft', 'class': 'btn-label-dark dark-blue'},
 						baru: {'title': 'Baru', 'class': 'btn-label-brand'},
 						perpanjang : {'title': 'Perpanjang', 'class': 'btn-label-warning'},
 						resubmit : {'title' : 'Resubmit', 'class' : 'btn-label-bold bold-status'},
 						ditolak : {'title' : 'Ditolak', 'class' : 'btn-label-danger'},
 						berlangsung : {'title' : 'Berlangsung', 'class' : 'btn-label-primary'},
-						ditunda : {'title' : 'Ditunda','class' : 'btn-label-dark'},
+						ditunda : {'title' : 'Ditunda','class' : 'btn-label-dark dark-status'},
 						selesai : {'title' : 'Selesai', 'class' : 'btn-label-success'}
 					};
 					if (typeof status[data] === 'undefined') {
@@ -363,11 +414,11 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 					return `
 					<div class="kt-checkbox-list">
 					<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success validasi_check">
-					<input disabled type="checkbox" id="check_hsse" name="check_hsse"> HSSE
+					<input disabled checked="" type="checkbox" id="check_hsse" name="check_hsse"> HSSE
 					<span></span>
 					</label>
 					<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success validasi_check">
-					<input disabled type="checkbox" id="check_gsi" name="check_hsse"> GSI
+					<input disabled checked="" type="checkbox" id="check_gsi" name="check_hsse"> GSI
 					<span></span>
 					</label>
 					</div>`;
@@ -377,12 +428,14 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 				title: 'Status',
 				render: function(data, type, full, meta) {
 					var status = {
+						kadaluarsa: {'title': 'Kadaluarsa', 'class': 'btn-label-dark'},
+						draft: {'title': 'Draft', 'class': 'btn-label-dark dark-blue'},
 						baru: {'title': 'Baru', 'class': 'btn-label-brand'},
 						perpanjang : {'title': 'Perpanjang', 'class': 'btn-label-warning'},
 						resubmit : {'title' : 'Resubmit', 'class' : 'btn-label-bold bold-status'},
 						ditolak : {'title' : 'Ditolak', 'class' : 'btn-label-danger'},
 						berlangsung : {'title' : 'Berlangsung', 'class' : 'btn-label-primary'},
-						ditunda : {'title' : 'Ditunda','class' : 'btn-label-dark'},
+						ditunda : {'title' : 'Ditunda','class' : 'btn-label-dark dark-status'},
 						selesai : {'title' : 'Selesai', 'class' : 'btn-label-success'}
 					};
 					if (typeof status[data] === 'undefined') {

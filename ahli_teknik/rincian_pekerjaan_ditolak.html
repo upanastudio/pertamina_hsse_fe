@@ -68,6 +68,7 @@
 	<link href="../assets/app/style/text_black.css" rel="stylesheet" type="text/css" />
 	<link href="../assets/app/style/at_rincian-pekerjaan-style.css" rel="stylesheet" type="text/css" />
 	<link href="../assets/app/style/tab-style.css" rel="stylesheet" type="text/css" />
+	<link href="../assets/app/style/rincian_ditolak_style.css" rel="stylesheet" type="text/css" />
 	<style>
 		div.dataTables_wrapper div.dataTables_filter input {
 			width: 255px;
@@ -83,7 +84,7 @@
 		}
 	</style>
 	<style>
-		#chartdiv {
+		#statistik_wip {
 			width: 100%;
 			height: 400px;
 		}
@@ -1075,7 +1076,7 @@
 								</button>
 							</div>
 							<div class="modal-body">
-								<div id="chartdiv"></div>
+								<div id="statistik_wip"></div>
 							</div>
 							<div class="modal-footer">
 								<button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
@@ -1277,7 +1278,8 @@
 											</div>
 											<label class="col-2 col-form-label">Alasan</label>
 											<div class="col-10">
-												<textarea disabled="" style="resize: none" class="form-control" id="exampleTextarea" rows="3"></textarea>
+												<textarea disabled="" style="resize: none" class="form-control" id="alasan_penolakan" name="alasan_penolakan" rows="3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse aliquet rhoncus ligula quis venenatis. Donec tristique lacus arcu, non consequat magna cursus at. Fusce mollis accumsan egestas. Sed blandit, dui eu scelerisque condimentum, ligula purus consequat lorem, non pharetra tellus lectus eget lorem. 
+												</textarea>
 											</div>
 										</div>
 										<div class="kt-separator kt-separator--border-dashed kt-separator--space-sm"></div>
@@ -1291,7 +1293,7 @@
 											</div>
 											<label class="col-2 col-form-label">Alasan</label>
 											<div class="col-10">
-												<textarea disabled="" style="resize: none" class="form-control" id="exampleTextarea" rows="3"></textarea>
+												<textarea disabled="" style="resize: none" class="form-control" id="alasan_ditolak" name="alasan_ditolak" rows="3"></textarea>
 											</div>
 										</div>
 										<div class="kt-separator kt-separator--border-dashed kt-separator--space-sm"></div>
@@ -1305,7 +1307,7 @@
 											</div>
 											<label class="col-2 col-form-label">Alasan</label>
 											<div class="col-10">
-												<textarea disabled="" style="resize: none" class="form-control" id="exampleTextarea" rows="3"></textarea>
+												<textarea disabled="" style="resize: none" class="form-control" id="alasan_ditolak" name="alasan_ditolak" rows="3"></textarea>
 											</div>
 										</div>
 										<div class="kt-separator kt-separator--border-dashed kt-separator--space-sm"></div>
@@ -1319,7 +1321,7 @@
 											</div>
 											<label class="col-2 col-form-label">Alasan</label>
 											<div class="col-10">
-												<textarea disabled="" style="resize: none" class="form-control" id="exampleTextarea" rows="3"></textarea>
+												<textarea disabled="" style="resize: none" class="form-control" id="alasan_ditolak" name="alasan_ditolak" rows="3"></textarea>
 											</div>
 										</div>
 										<div class="kt-separator kt-separator--border-dashed kt-separator--space-sm"></div>
@@ -1483,7 +1485,7 @@
 		am4core.useTheme(am4themes_animated);
 		// Themes end
 
-		var chart = am4core.create("chartdiv", am4charts.XYChart);
+		var chart = am4core.create("statistik_wip", am4charts.XYChart);
 		chart.paddingRight = 20;
 
 		var data = [];

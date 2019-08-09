@@ -67,6 +67,22 @@
                  "status" : "selesai",
                  "rincian" : null,
                  "aksi" : null
+             },
+              {
+                 "no": 8,
+                  "jenis_sika" : "SIKA Panas",
+                 "no_sika" : "01/23/12345123",
+                 "status" : "draft",
+                 "rincian" : null,
+                 "aksi" : null
+             },
+              {
+                 "no": 9,
+                  "jenis_sika" : "SIKA Panas",
+                 "no_sika" : "01/23/12345123",
+                 "status" : "kadaluarsa",
+                 "rincian" : null,
+                 "aksi" : null
              }
 ]
 }
