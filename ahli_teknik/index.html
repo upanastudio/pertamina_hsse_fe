@@ -176,23 +176,6 @@
 												<i class="la la-gear"></i>
 											</span>
 											<h3 class="kt-portlet__head-title">
-												Pekerjaan
-											</h3>
-										</div>
-									</div>
-									<div class="kt-portlet__body">
-										<div id="chartdiv"></div>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-12">
-								<div class="kt-portlet">
-									<div class="kt-portlet__head">
-										<div class="kt-portlet__head-label">
-											<span class="kt-portlet__head-icon kt-hidden">
-												<i class="la la-gear"></i>
-											</span>
-											<h3 class="kt-portlet__head-title">
 												Jumlah Pekerjaan Keluar
 											</h3>
 										</div>
@@ -205,7 +188,7 @@
 														<h4 class="judul_pekerjaan">Bulan Ini</h4>
 													</div>
 													<div class="isinya">
-														<h4 class="isi_informasi">5</h4>
+														<h4 class="isi_informasi" name="pekerjaan_bulan_ini">5</h4>
 													</div>
 												</div>
 											</div>
@@ -215,14 +198,14 @@
 														<h4 class="judul_pekerjaan">Tahun ini</h4>
 													</div>
 													<div class="isinya">
-														<h4 class="isi_informasi">63</h4>
+														<h4 class="isi_informasi" name="pekerjaan_tahun_ini">63</h4>
 													</div>
 												</div>
 											</div>
 											<div  align="center" class="col-sm-4">
 												<div style="padding: 15px" class="card_informasi card-green">
 													<div style="margin-bottom: 20px" class="headnya">
-														<h4 class="judul_pekerjaan">Total</h4>
+														<h4 class="judul_pekerjaan" name="pekerjaan_total">Total</h4>
 													</div>
 													<div class="isinya">
 														<h4 class="isi_informasi">125</h4>
@@ -233,6 +216,24 @@
 									</div>
 								</div>
 							</div>
+							<div class="col-sm-12">
+								<div class="kt-portlet">
+									<div class="kt-portlet__head">
+										<div class="kt-portlet__head-label">
+											<span class="kt-portlet__head-icon kt-hidden">
+												<i class="la la-gear"></i>
+											</span>
+											<h3 class="kt-portlet__head-title">
+												Pekerjaan
+											</h3>
+										</div>
+									</div>
+									<div class="kt-portlet__body">
+										<div id="chartdiv"></div>
+									</div>
+								</div>
+							</div>
+							
 						</div>
 					</div>
 					<!-- end:: Content -->
@@ -325,6 +326,9 @@
 			}, {
 				"status": "Resubmit",
 				"jumlah": 1809
+			},{
+				"status": "Tutup",
+				"jumlah": 1500
 			}, {
 				"status": "Ditolak",
 				"jumlah": 1322
