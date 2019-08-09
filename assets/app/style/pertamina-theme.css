@@ -165,6 +165,35 @@ polyline,
 .validasi_check {
 	pointer-events: none;
 }
+.select2-container--default .select2-selection--multiple .select2-selection__rendered .select2-selection__choice {
+	color: #ffffff;
+	background: #5275bb;
+	border: 1px solid #ffffff;
+	padding: 5px 10px;
+}
+.select2-container--default .select2-selection--multiple .select2-selection__rendered .select2-selection__choice .select2-selection__choice__remove {
+	color: white !important;
+}
+.bold-status,
+.bold-status:hover {
+	background-color: rgba(15, 181, 230, 0.1) !important;
+	color: rgb(15, 181, 230) !important;
+}
+
+.dark-status,
+.dark-status:hover {
+	background-color: rgba(226, 228, 64, 0.55) !important;
+	color: #979828 !important;
+}
+
+.dark-blue,
+.dark-blue:hover {
+	background-color: rgba(58, 43, 183, 0.28) !important;
+	color: #0f1a7b !important;
+}
+.btn_hapus {
+	width: 100%;
+}
 /*End: Ahli Teknik*/
 @media (min-width: 1025px){
 	.kt-aside--minimize .kt-aside-menu .kt-menu__nav > .kt-menu__item > .kt-menu__link > .kt-menu__link-icon {

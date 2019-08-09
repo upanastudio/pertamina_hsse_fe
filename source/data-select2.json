@@ -1,0 +1,31 @@
+{
+  "results": [
+    {
+      "id": 1,
+      "text": "Palu-Palu"
+    },
+    {
+      "id": 2,
+      "text": "Papan"
+    },
+    {
+      "id": 3,
+      "text": "Mistar"
+    },
+    {
+      "id": 4,
+      "text": "Penggaris"
+    },
+    {
+      "id": 5,
+      "text": "Senter"
+    },
+    {
+      "id": 6,
+      "text": "Perkakas"
+    }
+  ],
+  "pagination": {
+    "more": false
+  }
+}
