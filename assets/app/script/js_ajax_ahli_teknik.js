@@ -116,13 +116,6 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 				responsivePriority: -1,
 				render: function(data, type, full, meta) {
 					var status = {
-						/*draft: {'title': 'Draft', 'class': ' btn-label-dark'},
-						belum_terverifikasi: {'title': 'Belum Terverifikasi', 'class': 'btn-label-bold'},
-						baru: {'title': 'baru', 'class': 'btn-label-brand'},
-						ditolak: {'title': 'Ditolak', 'class': 'btn-label-danger'},
-						berlangsung: {'title': 'Berlangsung', 'class': 'btn-label-primary'},
-						ditunda: {'title': 'Ditunda', 'class': 'btn-label-warning'},
-						selesai: {'title': 'Selesai', 'class': 'btn-label-success'},*/
 						kadaluarsa: {'title': 'Kadaluarsa', 'class': 'btn-label-dark'},
 						draft: {'title': 'Draft', 'class': 'btn-label-dark dark-blue'},
 						baru: {'title': 'Baru', 'class': 'btn-label-brand'},
@@ -147,8 +140,8 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 				orderable: false,
 				render: function(data, type, full, meta) {
 					var status = {
-						kadaluarsa: {'href': 'draft_pekerjaan.html'},
-						draft: {'href': 'edit_pekerjaan.html'},
+						kadaluarsa: {'href': 'rincian_pekerjaan_belum_terverifikasi.html'},
+						draft: {'href': 'edit_pekerjaan_abi.html'},
 						perpanjang: {'href': 'rincian_pekerjaan_belum_terverifikasi.html'},
 						resubmit: {'href': 'rincian_pekerjaan_belum_terverifikasi.html'},
 						baru: {'href': 'rincian_pekerjaan_belum_terverifikasi.html'},
