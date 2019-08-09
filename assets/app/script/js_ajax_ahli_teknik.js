@@ -60,115 +60,6 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 		});
 	};
 	var initTable2 = function() {
-		var table = $('#daftar_sika');
-
-		// begin first table
-		table.DataTable({
-			responsive: true,
-			searchDelay: 500,
-			processing: true,
-			serverSide: false,
-			ajax: {
-				url: '../source/daftar_pekerjaan_ahli_teknik.json',
-				type: 'POST',
-				data: {
-					pagination: {
-						perpage: 50,
-					},
-				},
-			},
-			columns: [
-			{
-				data: 'no',
-				title: 'No.',
-			},{
-				data: 'pekerjaan',
-				title: 'Pekerjaan',
-			},{
-				data: 'vendor',
-				title: 'Vendor',
-			},{
-				data: 'sifat',
-				title: 'Sifat',
-			},{
-				data: 'tanggal',
-				title: 'Tanggal Mulai',
-			},{
-				data: 'validasi',
-				title: 'Validasi',
-				responsivePriority: -1,
-				render: function(data, type, full, meta) {
-					return `
-					<div class="kt-checkbox-list">
-					<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success validasi_check">
-					<input disabled checked="" type="checkbox" id="check_hsse" name="check_hsse"> HSSE
-					<span></span>
-					</label>
-					<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success validasi_check">
-					<input disabled checked="" type="checkbox" id="check_gsi" name="check_hsse"> GSI
-					<span></span>
-					</label>
-					</div>`;
-				},
-			},{
-				data: 'status',
-				title: 'Status',
-				responsivePriority: -1,
-				render: function(data, type, full, meta) {
-					var status = {
-						/*draft: {'title': 'Draft', 'class': ' btn-label-dark'},
-						belum_terverifikasi: {'title': 'Belum Terverifikasi', 'class': 'btn-label-bold'},
-						baru: {'title': 'baru', 'class': 'btn-label-brand'},
-						ditolak: {'title': 'Ditolak', 'class': 'btn-label-danger'},
-						berlangsung: {'title': 'Berlangsung', 'class': 'btn-label-primary'},
-						ditunda: {'title': 'Ditunda', 'class': 'btn-label-warning'},
-						selesai: {'title': 'Selesai', 'class': 'btn-label-success'},*/
-						kadaluarsa: {'title': 'Kadaluarsa', 'class': 'btn-label-dark'},
-						draft: {'title': 'Draft', 'class': 'btn-label-dark dark-blue'},
-						baru: {'title': 'Baru', 'class': 'btn-label-brand'},
-						perpanjang : {'title': 'Perpanjang', 'class': 'btn-label-warning'},
-						resubmit : {'title' : 'Resubmit', 'class' : 'btn-label-bold bold-status'},
-						ditolak : {'title' : 'Ditolak', 'class' : 'btn-label-danger'},
-						berlangsung : {'title' : 'Berlangsung', 'class' : 'btn-label-primary'},
-						ditunda : {'title' : 'Ditunda','class' : 'btn-label-dark dark-status'},
-						selesai : {'title' : 'Selesai', 'class' : 'btn-label-success'}
-					};
-					if (typeof status[data] === 'undefined') {
-						return data;
-					}
-					return '<span style="width:100%" class="btn btn-bold btn-sm btn-font-sm ' + status[data].class + '">' + status[data].title + '</span>';
-				},
-			},{
-				field: 'aksi',
-				title: 'Aksi',
-				responsivePriority: -1,
-				className: 'text-center',
-				orderable: false,
-				render: function(data, type, full, meta) {
-					var status = {
-						kadaluarsa: {'href': 'draft_pekerjaan.html'},
-						draft: {'href': 'edit_pekerjaan.html'},
-						perpanjang: {'href': 'rincian_pekerjaan_belum_terverifikasi.html'},
-						resubmit: {'href': 'rincian_pekerjaan_belum_terverifikasi.html'},
-						baru: {'href': 'rincian_pekerjaan_belum_terverifikasi.html'},
-						ditolak: {'href': 'rincian_pekerjaan_ditolak.html'},
-						berlangsung: {'href': 'rincian_pekerjaan_berlangsung.html'},
-						ditunda: {'href': 'rincian_pekerjaan_ditunda.html'},
-						selesai: {'href': 'rincian_pekerjaan_selesai.html'},
-					};
-					return `
-					<a href="${status[full.status].href}" class="btn btn-sm btn-primary" style="color:white;border-radius:20px">Rincian</a>`;
-				},
-			}],
-			columnDefs: [
-			{
-				targets: [0,1,2,3,4,5,6],
-				className: 'text-center'
-			}
-			],
-		});
-	};
-	var initTable3 = function() {
 		var table = $('#daftar_pekerjaan_alpha');
 
 		// begin first table
@@ -240,7 +131,8 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 						ditolak : {'title' : 'Ditolak', 'class' : 'btn-label-danger'},
 						berlangsung : {'title' : 'Berlangsung', 'class' : 'btn-label-primary'},
 						ditunda : {'title' : 'Ditunda','class' : 'btn-label-dark dark-status'},
-						selesai : {'title' : 'Selesai', 'class' : 'btn-label-success'}
+						selesai : {'title' : 'Selesai', 'class' : 'btn-label-success done-status'},
+						tutup : {'title' : 'Tutup', 'class' : 'btn-label-success'},
 					};
 					if (typeof status[data] === 'undefined') {
 						return data;
@@ -264,9 +156,111 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 						berlangsung: {'href': 'rincian_pekerjaan_berlangsung.html'},
 						ditunda: {'href': 'rincian_pekerjaan_ditunda.html'},
 						selesai: {'href': 'rincian_pekerjaan_selesai.html'},
+						tutup: {'href': 'rincian_pekerjaan_belum_terverifikasi.html'},
 					};
 					return `
 					<a href="${status[full.status].href}" class="btn btn-sm btn-primary" style="color:white;border-radius:20px">Rincian</a>`;
+				},
+			}],
+			columnDefs: [
+			{
+				targets: [0,1,2,3,4,5,6],
+				className: 'text-center'
+			}
+			],
+		});
+	};
+	var initTable3 = function() {
+		var table = $('#daftar_sika');
+
+		// begin first table
+		table.DataTable({
+			responsive: true,
+			searchDelay: 500,
+			processing: true,
+			serverSide: false,
+			ajax: {
+				url: '../source/daftar_sika_pekerjaan_ahli_teknik.json',
+				type: 'POST',
+				data: {
+					pagination: {
+						perpage: 50,
+					},
+				},
+			},
+			columns: [
+			{
+				data: 'no',
+				title: 'No.',
+			},{
+				data: 'jenis_sika',
+				title: 'Jenis SIKA',
+			},{
+				data: 'no_sika',
+				title: 'No. SIKA',
+			},{
+				data: 'validasi',
+				title: 'Validasi',
+				responsivePriority: -1,
+				render: function(data, type, full, meta) {
+					return `
+					<div class="kt-checkbox-list">
+					<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success validasi_check">
+					<input disabled checked="" type="checkbox" id="check_hsse" name="check_hsse"> HSSE
+					<span></span>
+					</label>
+					<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success validasi_check">
+					<input disabled checked="" type="checkbox" id="check_gsi" name="check_hsse"> GSI
+					<span></span>
+					</label>
+					</div>`;
+				},
+			},{
+				data: 'status',
+				title: 'Status',
+				render: function(data, type, full, meta) {
+					var status = {
+						kadaluarsa: {'title': 'Kadaluarsa', 'class': 'btn-label-dark'},
+						draft: {'title': 'Draft', 'class': 'btn-label-dark dark-blue'},
+						baru: {'title': 'Baru', 'class': 'btn-label-brand'},
+						perpanjang : {'title': 'Perpanjang', 'class': 'btn-label-warning'},
+						resubmit : {'title' : 'Resubmit', 'class' : 'btn-label-bold bold-status'},
+						ditolak : {'title' : 'Ditolak', 'class' : 'btn-label-danger'},
+						berlangsung : {'title' : 'Berlangsung', 'class' : 'btn-label-primary'},
+						ditunda : {'title' : 'Ditunda','class' : 'btn-label-dark dark-status'},
+						tutup : {'title' : 'Tutup', 'class' : 'btn-label-success'}
+					};
+					if (typeof status[data] === 'undefined') {
+						return data;
+					}
+					return '<span style="width:100%" class="btn btn-bold btn-sm btn-font-sm ' + status[data].class + '">' + status[data].title + '</span>';
+				},
+			},{
+				field: 'rincian',
+				title: 'Rincian',
+				className: 'text-center',
+				orderable: false,
+				render: function(data, type, full, meta) {
+					return `
+					<a href="rincian_sika.html" class="btn btn-sm btn-primary" style="color:white;border-radius:20px">Rincian</a>`;
+				},
+			},{
+				field: 'aksi',
+				title: 'Aksi',
+				responsivePriority: -1,
+				width: 100,
+				className: 'text-center',
+				orderable: false,
+				render: function(data, type, full, meta) {
+					return `
+					<button type="button" class="btn btn-hover-brand btn-elevate-hover btn-icon btn-sm btn-icon-md btn-circle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<i class="flaticon-more-1"></i>
+					</button>
+					<div style="min-width:9rem;padding:5px;" class="dropdown-menu dropdown-menu-right">
+					<a href="perpanjang_sika.html" style="margin-bottom:5px;" class="dropdown-item btn btn-secondary"> <i class="fa fa-angle-double-up"></i> Perpanjang</a>
+					<a href="tutup_sika.html"  class="dropdown-item btn btn-secondary"> <i class="fa fa-check"></i> Selesai</a>` 
+					;
+					
 				},
 			}],
 			columnDefs: [

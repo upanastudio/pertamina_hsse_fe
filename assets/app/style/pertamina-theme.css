@@ -76,6 +76,27 @@ tr td {
 	font-size: 1.1rem;
 }
 
+.card_informasi {
+	background: #0191db;
+	border-radius: 20px;
+	color: white;
+}
+
+.card-red {
+	background: #d8251c;
+}
+
+.card-green {
+	background: #85c226;
+}
+
+.judul_pekerjaan {
+	font-size:2.3rem;
+}
+
+.isi_informasi {
+	font-size:3rem;
+}
 /*admin depot*/
 .nav-pills .nav-item .nav-link:active, 
 .nav-pills .nav-item .nav-link.active, 
@@ -190,6 +211,12 @@ polyline,
 .dark-blue:hover {
 	background-color: rgba(58, 43, 183, 0.28) !important;
 	color: #0f1a7b !important;
+}
+
+.done-status,
+.done-status:hover {
+	background-color: rgba(10, 187, 135, 0.38) !important;
+	color: #31a583 !important;
 }
 .btn_hapus {
 	width: 100%;
