@@ -200,9 +200,6 @@ polyline,
 .validasi_check {
 	pointer-events: none;
 }
-<<<<<<< HEAD
-
-=======
 .select2-container--default .select2-selection--multiple .select2-selection__rendered .select2-selection__choice {
 	color: #ffffff;
 	background: #5275bb;
@@ -232,7 +229,20 @@ polyline,
 .btn_hapus {
 	width: 100%;
 }
->>>>>>> 1f67e21ec8c771bc4264d9f7b61791b120d77c7e
+
+.custom-label {
+	margin:2px 0px;
+	display:flex;
+	justify-content:space-between;
+}
+
+.overflow-text {
+	overflow:hidden;
+	display:inline-block;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
 /*End: Ahli Teknik*/
 @media (min-width: 1025px){
 	.kt-aside--minimize .kt-aside-menu .kt-menu__nav > .kt-menu__item > .kt-menu__link > .kt-menu__link-icon {

@@ -171,15 +171,7 @@
 												<i class="kt-menu__link-bullet kt-menu__link-bullet--dot">
 													<span></span>
 												</i>
-												<span class="kt-menu__link-text">Permintaan Pembuatan SIKA</span>
-											</a>
-										</li>
-										<li class="kt-menu__item " aria-haspopup="true">
-											<a href="permintaan_penyelesaian_sika.html" class="kt-menu__link ">
-												<i class="kt-menu__link-bullet kt-menu__link-bullet--dot">
-													<span></span>
-												</i>
-												<span class="kt-menu__link-text">Permintaan Penyelesaian SIKA</span>
+												<span class="kt-menu__link-text">Permintaan SIKA</span>
 											</a>
 										</li>
 										<li class="kt-menu__item " aria-haspopup="true">
@@ -193,7 +185,7 @@
 									</ul>
 								</div>
 							</li>
-							<li class="kt-menu__item" aria-haspopup="true"><a href="pob.html" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-infographic"></i><span class="kt-menu__link-text">POB</span></a>
+							<li class="kt-menu__item" aria-haspopup="true"><a href="pob.html" class="kt-menu__link "><i class="kt-menu__link-icon flaticon-users"></i><span class="kt-menu__link-text">POB</span></a>
 							</li>
 						</ul>
 					</div>
@@ -256,11 +248,17 @@
 											<i class="la la-gear"></i>
 										</span>
 										<h3 class="kt-portlet__head-title">
-											Semua Pekerjaan / <span name="nama_pekerjaan">Penggalian</span>
+											<i class="fa fa-circle-notch"></i> <span name="nama_pekerjaan">Penggalian</span>
 										</h3>
 									</div>
 								</div>
 								<div class="kt-portlet__body">
+									<div>
+										<h4>Daftar SIKA COLD</h4>
+										<table class="table table-striped- table-bordered table-hover table-checkable" id="daftar_sika_cold_pekerjaan">
+										</table>
+									</div>
+									<div class="kt-separator kt-separator--border-dashed kt-separator--space-md"></div>
 									<ul class="nav nav-tabs" role="tablist">
 										<li class="nav-item">
 											<a class="nav-link active" data-toggle="tab" href="#" data-target="#kt_tabs_pekerjaan">Pekerjaan</a>
@@ -271,682 +269,809 @@
 									</ul>
 									<div class="tab-content">
 										<div class="tab-pane active" id="kt_tabs_pekerjaan" role="tabpanel">
-											<div class="form-group row">
-												<label for="example-text-input" class="col-sm-3 col-form-label">
-													Download semua file/berkas :
-												</label>
-												<div class="col-sm-9">
-													<button class="btn btn-sm	 btn-brand">
-														Download
-													</button>
-												</div>
-											</div>
-											<div class="row" id="accordion_menu">
-												<div class="col-sm-6">
-													<div class="accordion  accordion-toggle-arrow" >
-														<div class="card">
-															<div class="card-header" id="headingOne4">
-																<div style="margin-left:20px" class="card-title collapsed" data-toggle="collapse" data-target="#collapse_umum" aria-expanded="false" aria-controls="collapse_umum">
-																	Umum
-																</div>
-															</div>
-															<div id="collapse_umum" class="collapse" aria-labelledby="headingOne" data-parent="#accordion_menu" style="">
-																<div class="card-body">
-																	<div style="">
-																		<div class="form-group row">
-																			<label for="example-text-input" class="col-3 col-form-label">Sifat Pekerjaan</label>
-																			<div class="col-9">
-																				<input disabled="" class="form-control" type="text" value="Swakelola" id="sifat_pekerjaan" name="sifat_pekerjaan">
-																			</div>
-																		</div>
-																		<div class="form-group row">
-																			<label for="example-text-input" class="col-3 col-form-label">ID Pekerjaan</label>
-																			<div class="col-9">
-																				<input disabled="" class="form-control" type="text" value="00/000/0000/00" id="id_pekerjaan" name="id_pekerjaan">
-																			</div>
-																		</div>
-																		<div class="form-group row">
-																			<label for="example-text-input" class="col-3 col-form-label">Lapangan / Site</label>
-																			<div class="col-9">
-																				<input disabled="" class="form-control" type="text" value="Area 01" id="lokasi_lapangan" name="lokasi_lapangan">
-																			</div>
-																		</div>
-																		<div class="form-group row">
-																			<label for="example-text-input" class="col-3 col-form-label">Instalasi</label>
-																			<div class="col-9">
-																				<input disabled="" class="form-control" type="text" value="lorem ipsum dolor sit amet" id="instalasi" name="instalasi">
-																			</div>
-																		</div>
-																		<div class="form-group row">
-																			<label for="example-text-input" class="col-3 col-form-label">Peralatan</label>
-																			<div class="col-9">
-																				<input disabled="" class="form-control" type="text" value="lorem ipsum dolor sit amet" id="peralatan" name="peralatan">
-																			</div>
-																		</div>
-																		<div class="form-group row">
-																			<label for="example-text-input" class="col-3 col-form-label">Nomor Identitas</label>
-																			<div class="col-9">
-																				<input disabled="" class="form-control" type="text" value="000 000 000" id="no_identitas" name="no_identitas">
-																			</div>
-																		</div>
-																		<div class="form-group row">
-																			<label for="example-text-input" class="col-3 col-form-label">Kontraktor / Vendor</label>
-																			<div class="col-9">
-																				<input disabled="" class="form-control" type="text" value="CV Upana" id="kontrak_vendro" name="kontrak_vendro">
-																			</div>
-																		</div>
-																		<div class="form-group row">
-																			<label for="example-text-input" class="col-3 col-form-label">Durasi</label>
-																			<div class="col-9">
-																				<input disabled="" class="form-control" type="text" value="00 Upana" id="durasi" name="durasi">
-																			</div>
-																		</div>
-																		<div class="form-group row">
-																			<label for="example-text-input" class="col-3 col-form-label">Jumlah Pekerja</label>
-																			<div class="col-9">
-																				<input disabled="" class="form-control" type="text" value="250 Orang" id="jumlah_pekerja" name="jumlah_pekerja">
-																			</div>
-																		</div>
-																		<div class="form-group row">
-																			<label for="example-text-input" class="col-3 col-form-label">Tanggal Mulai</label>
-																			<div class="col-9">
-																				<input disabled="" class="form-control" type="date" value="" id="tanggal_mulai" name="tanggal_mulai">
-																			</div>
-																		</div>
-																		<div class="form-group row">
-																			<label for="example-text-input" class="col-3 col-form-label">Tanggal Selesai</label>
-																			<div class="col-9">
-																				<input disabled="" class="form-control" type="date" value="" id="tanggal_selesai" name="tanggal_selesai">
-																			</div>
-																		</div>
-																		<div class="form-group row">
-																			<label for="example-text-input" class="col-3 col-form-label">Nama Mandor</label>
-																			<div class="col-9">
-																				<input disabled="" class="form-control" type="text" value="Fulan bin fulan" id="nama_mandor" name="nama_mandor">
-																			</div>
-																		</div>
-																		<div class="form-group row">
-																			<label for="example-text-input" class="col-3 col-form-label">Lokasi</label>
-																			<div class="col-9">
-																				<input disabled="" class="form-control" type="text" value="Lokasi pekerjaan 1" id="lokasi" name="lokasi">
-																			</div>
-																		</div>
-																	</div>
-																</div>
-															</div>
+											<div id="accordion_menu">
+												<div class="kt-portlet">
+													<div class="kt-portlet__head">
+														<div class="kt-portlet__head-label">
+															<h4 class="kt-portlet__head-title kt-font-dark">
+																Download Semua File
+															</h4>
 														</div>
-														<div class="card">
-															<div class="card-header" id="headingOne4">
-																<div style="margin-left:20px" class="card-title collapsed" data-toggle="collapse" data-target="#collapse_jsa" aria-expanded="false" aria-controls="collapse_jsa">
-																	JSA
-																</div>
-															</div>
-															<div id="collapse_jsa" class="collapse" aria-labelledby="headingOne" data-parent="#accordion_menu" style="">
-																<div class="card-body">
-																	<div class="form-group">
-																		<label>
-																			Hazard Analysis Doc
-																		</label>
-																		<div class="row">
-																			<div class="col-sm-10">
-																				<input disabled="" type="text" class="form-control" id="file_hazard_analysis_doc" name="file_hazard_analysis_doc" value="hazard analysis doc">
-																			</div>
-																			<div class="col-sm-2">
-																				<button style="width: 100%" class="btn btn-primary">
-																					<i class="fa fa-download"></i>
-																				</button>
-																			</div>
-																			<div style="margin-top: 10px" class="col-sm-12">
-																				<div class="kt-checkbox-inline">
-																					<div class="row">
-																						<div class="col-sm-5">
-																							<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
-																								<input disabled="" checked="" name="status_dokumen" type="checkbox"> Dokumen telah ditinjau
-																								<span></span>
-																							</label>
-																						</div>
-																						<div class="col-sm-5">
-																							<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
-																								<input disabled="" checked="" name="status_dokumen" type="checkbox"> Telah disosialisasikan
-																								<span></span>
-																							</label>
-																						</div>
-																					</div>
-																				</div>
-																			</div>
-																		</div>
-																	</div>
-																	<div class="form-group">
-																		<label>
-																			Rifting Plan
-																		</label>
-																		<div class="row">
-																			<div class="col-sm-10">
-																				<input disabled="" type="text" class="form-control" id="file_rifting_plan" name="file_rifting_plan" value="rifting plan">
-																			</div>
-																			<div class="col-sm-2">
-																				<button style="width: 100%" class="btn btn-primary">
-																					<i class="fa fa-download"></i>
-																				</button>
-																			</div>
-																		</div>
-																	</div>
-																	<div class="form-group">
-																		<label>
-																			SOP Peralatan
-																		</label>
-																		<div class="row">
-																			<div class="col-sm-10">
-																				<input disabled="" type="text" class="form-control" id="file_sop_peralatan" name="file_sop_peralatan" value="Sop Peralatan">
-																			</div>
-																			<div class="col-sm-2">
-																				<button style="width: 100%" class="btn btn-primary">
-																					<i class="fa fa-download"></i>
-																				</button>
-																			</div>
-																		</div>
-																	</div>
-																	<div class="form-group">
-																		<label>
-																			Form Inspection
-																		</label>
-																		<div class="row">
-																			<div class="col-sm-10">
-																				<input disabled="" type="text" class="form-control" id="file_form_inspection" name="file_form_inspection" value="Form Inspection">
-																			</div>
-																			<div class="col-sm-2">
-																				<button style="width: 100%" class="btn btn-primary">
-																					<i class="fa fa-download"></i>
-																				</button>
-																			</div>
-																		</div>
-																	</div>
-																	<div class="form-group">
-																		<label>
-																			Hazard Identification
-																		</label>
-																		<span  class="kt-badge kt-badge--brand kt-badge--inline kt-badge--pill kt-badge--rounded">
-																			Flammable / explosive material / bahan mudah terbakar / meledak
-																		</span>
-																		<span class="kt-badge kt-badge--brand kt-badge--inline kt-badge--pill kt-badge--rounded">
-																			Presence of gas (hazardous area,...) / Gas (daerah berbahaya, ....)
-																		</span>
-																	</div>
-																</div>
-															</div>
-														</div>
-														<div class="card">
-															<div class="card-header" id="headingTwo4">
-																<div style="margin-left:20px" class="card-title collapsed" data-toggle="collapse" data-target="#collapse_moc" aria-expanded="false" aria-controls="collapse_moc">
-																	MOC
-																</div>
-															</div>
-															<div id="collapse_moc" class="collapse" aria-labelledby="headingTwo1" data-parent="#accordion_menu">
-																<div class="card-body">
-																	<div class="form-group">
-																		<label>
-																			Isolasi Energi / Loto
-																		</label>
-																		<div class="row">
-																			<div class="col-sm-10">
-																				<input disabled="" type="text" class="form-control" id="file_isolasi_energi_loto" name="file_isolasi_energi_loto" value="isolasi energi / loto">
-																			</div>
-																			<div class="col-sm-2">
-																				<button style="width: 100%" class="btn btn-primary">
-																					<i class="fa fa-download"></i>
-																				</button>
-																			</div>
-																			<div style="margin-top: 10px" class="col-sm-12">
-																				<div class="kt-checkbox-inline">
-																					<div class="row">
-																						<div class="col-sm-10">
-																							<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
-																								<input disabled="" checked="" name="status_dokumen" type="checkbox">Tindakan LOTO sudah direalisasikan dilokasi
-																								<span></span>
-																							</label>
-																						</div>
-																					</div>
-																				</div>
-																			</div>
-																		</div>
-																	</div>
-																	<div class="form-group">
-																		<label>
-																			Prosedur
-																		</label>
-																		<div class="row">
-																			<div class="col-sm-10">
-																				<input disabled="" type="text" class="form-control" id="file_prosedur" name="file_prosedur" value="Prosedur">
-																			</div>
-																			<div class="col-sm-2">
-																				<button style="width: 100%" class="btn btn-primary">
-																					<i class="fa fa-download"></i>
-																				</button>
-																			</div>
-																		</div>
-																	</div>
-																	<div class="form-group">
-																		<label>
-																			Engineer PID / Layout
-																		</label>
-																		<div class="row">
-																			<div class="col-sm-10">
-																				<input disabled="" type="text" class="form-control" id="file_engineer_pid" name="file_engineer_pid" value="Engineer PID / Layout">
-																			</div>
-																			<div class="col-sm-2">
-																				<button style="width: 100%" class="btn btn-primary">
-																					<i class="fa fa-download"></i>
-																				</button>
-																			</div>
-																		</div>
-																	</div>
-																	<div class="form-group">
-																		<label>
-																			Training
-																		</label>
-																		<div class="row">
-																			<div class="col-sm-10">
-																				<input disabled="" type="text" class="form-control" id="file_training" name="file_training" value="Training">
-																			</div>
-																			<div class="col-sm-2">
-																				<button style="width: 100%" class="btn btn-primary">
-																					<i class="fa fa-download"></i>
-																				</button>
-																			</div>
-																		</div>
-																	</div>
-																</div>
-															</div>
-														</div>
-														<div class="card">
-															<div class="card-header" id="headingThree4">
-																<div style="margin-left:20px" class="card-title collapsed" data-toggle="collapse" data-target="#collapse_simlok" aria-expanded="false" aria-controls="collapse_simlok">
-																	SIMLOK
-																</div>
-															</div>
-															<div id="collapse_simlok" class="collapse" aria-labelledby="headingThree1" data-parent="#accordion_menu">
-																<div class="card-body">
-																	<div class="form-group">
-																		<div class="row">
-																			<div class="col-sm-10">
-																				<label>
-																					<h6>Dasar Kontak / SPMD</h6>
-																				</label>
-																			</div>
-																			<div class="col-sm-2">
-																				<button style="width: 100%" class="btn btn-primary">
-																					<i class="fa fa-download simlok"></i>
-																				</button>
-																			</div>
-																		</div>
-																	</div>
-																	<div class="form-group">
-																		<div class="row">
-																			<div class="col-sm-4">
-																				<label>
-																					<h6>Nama Pekerjaan :</h6>
-																				</label>
-																			</div>
-																			<div class="col-sm-8">
-																				<label>
-																					<span name="nama_pekerjaan"> Penggalian</span>
-																				</label>
-																			</div>
-																		</div>
-																	</div>
-																	<div class="form-group">
-																		<div class="row">
-																			<div class="col-sm-10">
-																				<label>
-																					<h6>Surat Permohonan Daftar Pekerja</h6>
-																				</label>
-																			</div>
-																			<div class="col-sm-2">
-																				<button style="width: 100%" class="btn btn-primary">
-																					<i class="fa fa-download simlok"></i>
-																				</button>
-																			</div>
-																		</div>
-																	</div>
-																	<div class="form-group">
-																		<div class="row">
-																			<div class="col-sm-10">
-																				<label>
-																					<h6>Gambar Kerja</h6>
-																				</label>
-																			</div>
-																			<div class="col-sm-2">
-																				<button style="width: 100%" class="btn btn-primary">
-																					<i class="fa fa-download simlok"></i>
-																				</button>
-																			</div>
-																		</div>
-																	</div>
-																	<div class="form-group">
-																		<div class="row">
-																			<div class="col-sm-12">
-																				<label>
-																					<h6>Daftar Nama pekerja</h6>
-																				</label>
-																			</div>
-																			<div class="col-sm-6">
-																				<span  class="kt-badge kt-badge--brand kt-badge--inline kt-badge--pill kt-badge--rounded">
-																					Ahmad Rifaldi
-																				</span>
-																				<span  class="kt-badge kt-badge--brand kt-badge--inline kt-badge--pill kt-badge--rounded">
-																					Ahmad Rifaldi
-																				</span>
-																				<span  class="kt-badge kt-badge--brand kt-badge--inline kt-badge--pill kt-badge--rounded">
-																					Ahmad Rifaldi
-																				</span>
-																				<span  class="kt-badge kt-badge--brand kt-badge--inline kt-badge--pill kt-badge--rounded">
-																					Ahmad Rifaldi
-																				</span>
-																				<span  class="kt-badge kt-badge--brand kt-badge--inline kt-badge--pill kt-badge--rounded">
-																					Ahmad Rifaldi
-																				</span>
-																				<span  class="kt-badge kt-badge--brand kt-badge--inline kt-badge--pill kt-badge--rounded">
-																					Ahmad Rifaldi
-																				</span>
-																			</div>
-																			<div class="col-sm-6">
-																				<span  class="kt-badge kt-badge--brand kt-badge--inline kt-badge--pill kt-badge--rounded">
-																					Ahmad Rifaldi
-																				</span>
-																				<span  class="kt-badge kt-badge--brand kt-badge--inline kt-badge--pill kt-badge--rounded">
-																					Ahmad Rifaldi
-																				</span>
-																				<span  class="kt-badge kt-badge--brand kt-badge--inline kt-badge--pill kt-badge--rounded">
-																					Ahmad Rifaldi
-																				</span>
-																				<span  class="kt-badge kt-badge--brand kt-badge--inline kt-badge--pill kt-badge--rounded">
-																					Ahmad Rifaldi
-																				</span>
-																			</div>
-																		</div>
-																	</div>
-																	<div class="form-group">
-																		<div class="row">
-																			<div class="col-sm-10">
-																				<label>
-																					<h6>Peralatan Kerja</h6>
-																				</label>
-																			</div>
-																			<div class="col-sm-2">
-																				<button style="width: 100%" class="btn btn-primary">
-																					<i class="fa fa-download simlok"></i>
-																				</button>
-																			</div>
-																		</div>
-																	</div>
-																	<div class="form-group">
-																		<div class="row">
-																			<div class="col-sm-10">
-																				<label>
-																					<h6>SOP</h6>
-																				</label>
-																			</div>
-																			<div class="col-sm-2">
-																				<button style="width: 100%" class="btn btn-primary">
-																					<i class="fa fa-download simlok"></i>
-																				</button>
-																			</div>
-																		</div>
-																	</div>
-																	<div class="form-group">
-																		<label>
-																			Izin
-																		</label>
-																		<div class="row">
-																			<div class="col-sm-10">
-																				<input disabled="" type="date" class="form-control" id="tanggal_izin" name="tanggal_izin" value="2019-10-20">
-																			</div>
-																			<div class="col-sm-2">
-																				<button style="width: 100%" class="btn btn-primary">
-																					<i class="fa fa-download"></i>
-																				</button>
-																			</div>
-																		</div>
-																	</div>
-																	<div class="form-group">
-																		<div class="row">
-																			<div class="col-sm-10">
-																				<label>
-																					<h6>Form Inspeksi</h6>
-																				</label>
-																			</div>
-																			<div class="col-sm-2">
-																				<button style="width: 100%" class="btn btn-primary">
-																					<i class="fa fa-download simlok"></i>
-																				</button>
-																			</div>
-																		</div>
-																	</div>
-																</div>
+														<div class="kt-portlet__head-toolbar">
+															<div class="kt-portlet__head-actions">
+																<button class="btn btn-success">
+																	<i class="fa fa-download"></i> Download
+																</button>
 															</div>
 														</div>
 													</div>
-												</div>
-												<div class="col-sm-6">
-													<div class="accordion  accordion-toggle-arrow">
-														<div class="card">
-															<div class="card-header" id="headingOne4">
-																<div style="margin-left:20px" class="card-title collapsed" data-toggle="collapse" data-target="#collapse_wip" aria-expanded="false" aria-controls="collapse_wip">
-																	WIP
+													<div style="margin-top:30px" class="row">
+														<div class="col-sm-6">
+															<div class="accordion  accordion-toggle-arrow" >
+																<div class="card">
+																	<div class="card-header" id="headingOne4">
+																		<div style="margin-left:20px" class="card-title collapsed" data-toggle="collapse" data-target="#collapse_umum" aria-expanded="false" aria-controls="collapse_umum">
+																			Umum
+																		</div>
+																	</div>
+																	<div id="collapse_umum" class="collapse" aria-labelledby="headingOne" data-parent="#accordion_menu" style="">
+																		<div class="card-body">
+																			<div class="form-group row">
+																				<label for="example-text-input" class="col-3 col-form-label">Sifat Pekerjaan</label>
+																				<div class="col-9">
+																					<input disabled="" class="form-control" type="text" value="Swakelola" id="sifat_pekerjaan" name="sifat_pekerjaan">
+																				</div>
+																			</div>
+																			<div class="form-group row">
+																				<label for="example-text-input" class="col-3 col-form-label">ID Pekerjaan</label>
+																				<div class="col-9">
+																					<input disabled="" class="form-control" type="text" value="00/000/0000/00" id="id_pekerjaan" name="id_pekerjaan">
+																				</div>
+																			</div>
+																			<div class="form-group row">
+																				<label for="example-text-input" class="col-3 col-form-label">Nama Pekerjaan</label>
+																				<div class="col-9">
+																					<input disabled="" class="form-control" type="text" value="Penggali" id="nama_pekerjaan" name="nama_pekerjaan">
+																				</div>
+																			</div>
+																			<div class="form-group row">
+																				<label for="example-text-input" class="col-3 col-form-label">Lapangan / Site</label>
+																				<div class="col-9">
+																					<input disabled="" class="form-control" type="text" value="Area 01" id="lokasi_lapangan" name="lokasi_lapangan">
+																				</div>
+																			</div>
+																			<div class="form-group row">
+																				<label for="example-text-input" class="col-3 col-form-label">Instalasi</label>
+																				<div class="col-9">
+																					<input disabled="" class="form-control" type="text" value="lorem ipsum dolor sit amet" id="instalasi" name="instalasi">
+																				</div>
+																			</div>
+																			<div class="form-group row">
+																				<label for="example-text-input" class="col-3 col-form-label">Peralatan</label>
+																				<div class="col-9">
+																					<input disabled="" class="form-control" type="text" value="lorem ipsum dolor sit amet" id="peralatan" name="peralatan">
+																				</div>
+																			</div>
+																			<div class="form-group row">
+																				<label for="example-text-input" class="col-3 col-form-label">Nomor Identitas</label>
+																				<div class="col-9">
+																					<input disabled="" class="form-control" type="text" value="000 000 000" id="no_identitas" name="no_identitas">
+																				</div>
+																			</div>
+																			<div class="form-group row">
+																				<label for="example-text-input" class="col-3 col-form-label">Kontraktor / Vendor</label>
+																				<div class="col-9">
+																					<input disabled="" class="form-control" type="text" value="CV Upana" id="kontrak_vendro" name="kontrak_vendro">
+																				</div>
+																			</div>
+																			<div class="form-group row">
+																				<label for="example-text-input" class="col-3 col-form-label">Durasi</label>
+																				<div class="col-9">
+																					<input disabled="" class="form-control" type="text" value="00 Upana" id="durasi" name="durasi">
+																				</div>
+																			</div>
+																			<div class="form-group row">
+																				<label for="example-text-input" class="col-3 col-form-label">Jumlah Pekerja</label>
+																				<div class="col-9">
+																					<input disabled="" class="form-control" type="text" value="250 Orang" id="jumlah_pekerja" name="jumlah_pekerja">
+																				</div>
+																			</div>
+																			<div class="form-group row">
+																				<label for="example-text-input" class="col-3 col-form-label">Tanggal Mulai</label>
+																				<div class="col-9">
+																					<input disabled="" class="form-control" type="date" value="" id="tanggal_mulai" name="tanggal_mulai">
+																				</div>
+																			</div>
+																			<div class="form-group row">
+																				<label for="example-text-input" class="col-3 col-form-label">Tanggal Selesai</label>
+																				<div class="col-9">
+																					<input disabled="" class="form-control" type="date" value="" id="tanggal_selesai" name="tanggal_selesai">
+																				</div>
+																			</div>
+																			<div class="form-group row">
+																				<label for="example-text-input" class="col-3 col-form-label">Nama Mandor</label>
+																				<div class="col-9">
+																					<input disabled="" class="form-control" type="text" value="Fulan bin fulan" id="nama_mandor" name="nama_mandor">
+																				</div>
+																			</div>
+																			<div class="form-group row">
+																				<label for="example-text-input" class="col-3 col-form-label">Lokasi</label>
+																				<div class="col-9">
+																					<input disabled="" class="form-control" type="text" value="Lokasi pekerjaan 1" id="lokasi" name="lokasi">
+																				</div>
+																			</div>
+																		</div>
+																	</div>
 																</div>
-															</div>
-															<div id="collapse_wip" class="collapse" aria-labelledby="headingOne" data-parent="#accordion_menu" style="">
-																<div class="card-body">
-																	<div class="form-group">
-																		<label>
-																			Hazard Analysis Doc
-																		</label>
-																		<div class="row">
-																			<div class="col-sm-10">
-																				<input disabled="" type="text" class="form-control" id="file_hazard_analysis_doc" name="file_hazard_analysis_doc" value="hazard analysis doc">
+																<div class="card">
+																	<div class="card-header" id="headingOne4">
+																		<div style="margin-left:20px" class="card-title collapsed" data-toggle="collapse" data-target="#collapse_perizinan" aria-expanded="false" aria-controls="collapse_perizinan">
+																			Perizinan
+																		</div>
+																	</div>
+																	<div id="collapse_perizinan" class="collapse" aria-labelledby="headingOne" data-parent="#accordion_menu" style="">
+																		<div class="card-body">
+																			<div class="form-group">
+																				<div class="row">
+																					<div class="col-sm-9">
+																						<h5>
+																							Amdal
+																						</h5>
+																					</div>
+																					<div class="col-sm-3">
+																						<button id="btn_rincian_amdal" name="btn_rincian_amdal" style="width: 100%" class="btn btn-sm btn-brand" data-toggle="modal" data-target="#kt_modal_rincian">
+																							Rincian
+																						</button>
+																					</div>
+																				</div>
 																			</div>
-																			<div class="col-sm-2">
-																				<button style="width: 100%" class="btn btn-primary">
-																					<i class="fa fa-download"></i>
-																				</button>
+																			<div class="form-group">
+																				<div class="row">
+																					<div class="col-sm-9">
+																						<h5>
+																							UKP/UPL
+																						</h5>
+																					</div>
+																					<div class="col-sm-3">
+																						<button id="btn_rincian_ukp_upl" name="btn_rincian_ukp_upl" style="width: 100%" class="btn btn-sm btn-brand" data-toggle="modal" data-target="#kt_modal_rincian">
+																							Rincian
+																						</button>
+																					</div>
+																				</div>
+																			</div>
+																			<div class="form-group">
+																				<div class="row">
+																					<div class="col-sm-9">
+																						<h5>
+																							DPLH
+																						</h5>
+																					</div>
+																					<div class="col-sm-3">
+																						<button id="btn_rincian_dplh" name="btn_rincian_dplh" style="width: 100%" class="btn btn-sm btn-brand" data-toggle="modal" data-target="#kt_modal_rincian">
+																							Rincian
+																						</button>
+																					</div>
+																				</div>
+																			</div>
+																			<div class="form-group">
+																				<div class="row">
+																					<div class="col-sm-9">
+																						<h5>
+																							IMB
+																						</h5>
+																					</div>
+																					<div class="col-sm-3">
+																						<button id="btn_rincian_imb" name="btn_rincian_imb" style="width: 100%" class="btn btn-sm btn-brand" data-toggle="modal" data-target="#kt_modal_rincian">
+																							Rincian
+																						</button>
+																					</div>
+																				</div>
+																			</div>
+																			<div class="form-group">
+																				<div class="row">
+																					<div class="col-sm-9">
+																						<h5>
+																							Persetujuan Layanan Operasi
+																						</h5>
+																					</div>
+																					<div class="col-sm-3">
+																						<button id="btn_rincian_persetuajuan_layanan" name="btn_rincian_persetuajuan_layanan" style="width: 100%" class="btn btn-sm btn-brand" data-toggle="modal" data-target="#kt_modal_rincian">
+																							Rincian
+																						</button>
+																					</div>
+																				</div>
+																			</div>
+																			<div class="form-group">
+																				<div class="row">
+																					<div class="col-sm-9">
+																						<h5>
+																							Izin Terminal
+																						</h5>
+																					</div>
+																					<div class="col-sm-3">
+																						<button id="btn_rincian_izin_terminal" name="btn_rincian_izin_terminal" style="width: 100%" class="btn btn-sm btn-brand" data-toggle="modal" data-target="#kt_modal_rincian">
+																							Rincian
+																						</button>
+																					</div>
+																				</div>
+																			</div>
+																			<div class="form-group">
+																				<div class="row">
+																					<div class="col-sm-9">
+																						<h5>
+																							Serah Terima Lahan
+																						</h5>
+																					</div>
+																					<div class="col-sm-3">
+																						<button id="btn_rincian_serah_terima_lahan" name="btn_rincian_serah_terima_lahan" style="width: 100%" class="btn btn-sm btn-brand" data-toggle="modal" data-target="#kt_modal_rincian">
+																							Rincian
+																						</button>
+																					</div>
+																				</div>
+																			</div>
+																			<div class="form-group">
+																				<div class="row">
+																					<div class="col-sm-9">
+																						<h5>
+																							Perundangan Lainnya
+																						</h5>
+																					</div>
+																					<div class="col-sm-3">
+																						<button id="btn_rincian_perundangan_lainnya" name="btn_rincian_perundangan_lainnya" style="width: 100%" class="btn btn-sm btn-brand" data-toggle="modal" data-target="#kt_modal_rincian">
+																							Rincian
+																						</button>
+																					</div>
+																				</div>
 																			</div>
 																		</div>
 																	</div>
-																	<div class="form-group">
-																		<label>
-																			Rifting Plan
-																		</label>
-																		<div class="row">
-																			<div class="col-sm-10">
-																				<input disabled="" type="text" class="form-control" id="file_rifting_plan" name="file_rifting_plan" value="rifting plan">
+																</div>
+																<div class="card">
+																	<div class="card-header" id="headingOne4">
+																		<div style="margin-left:20px" class="card-title collapsed" data-toggle="collapse" data-target="#collapse_csms" aria-expanded="false" aria-controls="collapse_csms">
+																			CSMS
+																		</div>
+																	</div>
+																	<div id="collapse_csms" class="collapse" aria-labelledby="headingOne" data-parent="#accordion_menu" style="">
+																		<div class="card-body">
+																			<div class="form-group">
+																				<div class="row">
+																					<div class="col-sm-9">
+																						<h5>
+																							PJA
+																						</h5>
+																					</div>
+																					<div class="col-sm-3">
+																						<button id="btn_rincian_pja" name="btn_rincian_pja" style="width: 100%" class="btn btn-sm btn-brand" data-toggle="modal" data-target="#kt_modal_rincian">
+																							Rincian
+																						</button>
+																					</div>
+																				</div>
 																			</div>
-																			<div class="col-sm-2">
-																				<button style="width: 100%" class="btn btn-primary">
-																					<i class="fa fa-download"></i>
-																				</button>
+																			<div class="form-group">
+																				<div class="row">
+																					<div class="col-sm-9">
+																						<h5>
+																							HSE Plan
+																						</h5>
+																					</div>
+																					<div class="col-sm-3">
+																						<button id="btn_rincian_hse_plan" name="btn_rincian_hse_plan" style="width: 100%" class="btn btn-sm btn-brand" data-toggle="modal" data-target="#kt_modal_rincian">
+																							Rincian
+																						</button>
+																					</div>
+																				</div>
+																			</div>
+																			<div class="form-group">
+																				<div class="row">
+																					<div class="col-sm-9">
+																						<h5>
+																							KPI Project
+																						</h5>
+																					</div>
+																					<div class="col-sm-3">
+																						<button id="btn_rincian_kpi_project" name="btn_rincian_kpi_project" style="width: 100%" class="btn btn-sm btn-brand" data-toggle="modal" data-target="#kt_modal_rincian">
+																							Rincian
+																						</button>
+																					</div>
+																				</div>
 																			</div>
 																		</div>
 																	</div>
-																	<div class="form-group">
-																		<label>
-																			SOP Peralatan
-																		</label>
-																		<div class="row">
-																			<div class="col-sm-10">
-																				<input disabled="" type="text" class="form-control" id="file_sop_peralatan" name="file_sop_peralatan" value="Sop Peralatan">
+																</div>
+																<div class="card">
+																	<div class="card-header" id="headingOne4">
+																		<div style="margin-left:20px" class="card-title collapsed" data-toggle="collapse" data-target="#collapse_jsa" aria-expanded="false" aria-controls="collapse_jsa">
+																			JSA
+																		</div>
+																	</div>
+																	<div id="collapse_jsa" class="collapse" aria-labelledby="headingOne" data-parent="#accordion_menu" style="">
+																		<div class="card-body">
+																			<div class="form-group">
+																				<div class="row">
+																					<div class="col-sm-9">
+																						<h5>
+																							Hazard Analysis Doc
+																						</h5>
+																					</div>
+																					<div class="col-sm-3">
+																						<button id="btn_rincian_hazard_analysis" name="btn_rincian_hazard_analysis" style="width: 100%" class="btn btn-sm btn-brand" data-toggle="modal" data-target="#kt_modal_rincian">
+																							Rincian
+																						</button>
+																					</div>
+																				</div>
 																			</div>
-																			<div class="col-sm-2">
-																				<button style="width: 100%" class="btn btn-primary">
-																					<i class="fa fa-download"></i>
-																				</button>
+																			<div class="form-group">
+																				<div class="row">
+																					<div class="col-sm-9">
+																						<h5>
+																							Heavy Equipment/Mobile Equipment
+																						</h5>
+																					</div>
+																					<div class="col-sm-3">
+																						<button id="btn_rincian_heavy_equipment" name="btn_rincian_heavy_equipment" style="width: 100%" class="btn btn-sm btn-brand" data-toggle="modal" data-target="#kt_modal_rincian">
+																							Rincian
+																						</button>
+																					</div>
+																				</div>
+																			</div>
+																			<div class="form-group">
+																				<div class="row">
+																					<div class="col-sm-9">
+																						<h5>
+																							Lifting Plan
+																						</h5>
+																					</div>
+																					<div class="col-sm-3">
+																						<button id="btn_rincian_lifting_plan" name="btn_rincian_lifting_plan" style="width: 100%" class="btn btn-sm btn-brand" data-toggle="modal" data-target="#kt_modal_rincian">
+																							Rincian
+																						</button>
+																					</div>
+																				</div>
+																			</div>
+																			<div class="form-group">
+																				<div class="row">
+																					<div class="col-sm-9">
+																						<h5>
+																							Prosedur kerja
+																						</h5>
+																					</div>
+																					<div class="col-sm-3">
+																						<button id="btn_rincian_prosedur_kerja" name="btn_rincian_prosedur_kerja" style="width: 100%" class="btn btn-sm btn-brand" data-toggle="modal" data-target="#kt_modal_rincian">
+																							Rincian
+																						</button>
+																					</div>
+																				</div>
+																			</div>
+																			<div class="form-group">
+																				<h5>
+																					Hazard Identification
+																				</h5>
+																				<span  class="btn btn-bold btn-sm btn-font-sm btn-label-dark">
+																					Flammable / explosive material / bahan mudah terbakar / meledak
+																				</span>
+																				<span class="btn btn-bold btn-sm btn-font-sm btn-label-dark">
+																					Presence of gas (hazardous area,...) / Gas (daerah berbahaya, ....)
+																				</span>
+																			</div>
+																			<div class="form-group form-group-last">
+																				<h5>
+																					Komentar
+																				</h5>
+																				<textarea readonly="" class="form-control" style="resize: none" id="komentar" name="komentar" rows="6">Cras ullamcorper tempus neque, et consequat sem faucibus ut. Mauris rutrum lectus sit amet purus pulvinar vulputate. Aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus vestibulum auctor sapien vitae aliquet. Nam eu lobortis elit. Phasellus vestibulum libero mauris, vel ornare diam pretium non. Donec eget ante risus.</textarea>
 																			</div>
 																		</div>
 																	</div>
-																	<div class="form-group">
-																		<label>
-																			Form Inspection
-																		</label>
-																		<div class="row">
-																			<div class="col-sm-10">
-																				<input disabled="" type="text" class="form-control" id="file_form_inspection" name="file_form_inspection" value="Form Inspection">
+																</div>
+																<div class="card">
+																	<div class="card-header" id="headingTwo4">
+																		<div style="margin-left:20px" class="card-title collapsed" data-toggle="collapse" data-target="#collapse_moc" aria-expanded="false" aria-controls="collapse_moc">
+																			MOC
+																		</div>
+																	</div>
+																	<div id="collapse_moc" class="collapse" aria-labelledby="headingTwo1" data-parent="#accordion_menu">
+																		<div class="card-body">
+																			<div class="form-group">
+																				<div class="row">
+																					<div class="col-sm-9">
+																						<h5>
+																							Isolasi Energi / LOTO
+																						</h5>
+																					</div>
+																					<div class="col-sm-3">
+																						<button id="btn_rincian_isolasi_energi" name="btn_rincian_isolasi_energi" style="width: 100%" class="btn btn-sm btn-brand" data-toggle="modal" data-target="#kt_modal_rincian">
+																							Rincian
+																						</button>
+																					</div>
+																				</div>
 																			</div>
-																			<div class="col-sm-2">
-																				<button style="width: 100%" class="btn btn-primary">
-																					<i class="fa fa-download"></i>
-																				</button>
+																			<div class="form-group">
+																				<div class="row">
+																					<div class="col-sm-9">
+																						<h5>
+																							Prosedur
+																						</h5>
+																					</div>
+																					<div class="col-sm-3">
+																						<button id="btn_rincian_prosedur" name="btn_rincian_prosedur" style="width: 100%" class="btn btn-sm btn-brand" data-toggle="modal" data-target="#kt_modal_rincian">
+																							Rincian
+																						</button>
+																					</div>
+																				</div>
+																			</div>
+																			<div class="form-group">
+																				<div class="row">
+																					<div class="col-sm-9">
+																						<h5>
+																							Engineer PID/Layout
+																						</h5>
+																					</div>
+																					<div class="col-sm-3">
+																						<button id="btn_rincian_engineer_pid" name="btn_rincian_engineer_pid" style="width: 100%" class="btn btn-sm btn-brand" data-toggle="modal" data-target="#kt_modal_rincian">
+																							Rincian
+																						</button>
+																					</div>
+																				</div>
+																			</div>
+																			<div class="form-group">
+																				<div class="row">
+																					<div class="col-sm-9">
+																						<h5>
+																							Training
+																						</h5>
+																					</div>
+																					<div class="col-sm-3">
+																						<button id="btn_rincian_training" name="btn_rincian_training" style="width: 100%" class="btn btn-sm btn-brand" data-toggle="modal" data-target="#kt_modal_rincian">
+																							Rincian
+																						</button>
+																					</div>
+																				</div>
+																			</div>
+																			<div class="form-group form-group-last">
+																				<h5>
+																					Komentar
+																				</h5>
+																				<textarea readonly="" class="form-control" style="resize: none" id="komentar" name="komentar" rows="6">Cras ullamcorper tempus neque, et consequat sem faucibus ut. Mauris rutrum lectus sit amet purus pulvinar vulputate. Aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus vestibulum auctor sapien vitae aliquet. Nam eu lobortis elit. Phasellus vestibulum libero mauris, vel ornare diam pretium non. Donec eget ante risus.</textarea>
 																			</div>
 																		</div>
 																	</div>
-																	<div class="form-group">
-																		<label>
-																			Hazard Identification
-																		</label>
-																		<span  class="kt-badge kt-badge--brand kt-badge--inline kt-badge--pill kt-badge--rounded">
-																			Flammable / explosive material / bahan mudah terbakar / meledak
-																		</span>
-																		<span class="kt-badge kt-badge--brand kt-badge--inline kt-badge--pill kt-badge--rounded">
-																			Presence of gas (hazardous area,...) / Gas (daerah berbahaya, ....)
-																		</span>
+																</div>
+																<div class="card">
+																	<div class="card-header" id="headingThree4">
+																		<div style="margin-left:20px" class="card-title collapsed" data-toggle="collapse" data-target="#collapse_simlok" aria-expanded="false" aria-controls="collapse_simlok">
+																			SIMLOK
+																		</div>
+																	</div>
+																	<div id="collapse_simlok" class="collapse" aria-labelledby="headingThree1" data-parent="#accordion_menu">
+																		<div class="card-body">
+																			<div class="form-group">
+																				<div class="row">
+																					<div class="col-sm-9">
+																						<h5>
+																							Dasar Pekerjaan
+																						</h5>
+																					</div>
+																					<div class="col-sm-3">
+																						<button id="btn_rincian_dasar_pekerjaan" name="btn_rincian_dasar_pekerjaan" style="width: 100%" class="btn btn-sm btn-brand" data-toggle="modal" data-target="#kt_modal_rincian">
+																							Rincian
+																						</button>
+																					</div>
+																				</div>
+																			</div>
+																			<div class="form-group">
+																				<div class="row">
+																					<div class="col-sm-9">
+																						<h5>
+																							Dasar Kontak SPMD
+																						</h5>
+																					</div>
+																					<div class="col-sm-3">
+																						<button id="btn_rincian_kontak_spmd" name="btn_rincian_kontak_spmd" style="width: 100%" class="btn btn-sm btn-brand" data-toggle="modal" data-target="#kt_modal_rincian">
+																							Rincian
+																						</button>
+																					</div>
+																				</div>
+																			</div>
+																			<div class="form-group">
+																				<div class="row">
+																					<div class="col-sm-9">
+																						<h5>
+																							Permohonan Daftar Kerja
+																						</h5>
+																					</div>
+																					<div class="col-sm-3">
+																						<button id="btn_rincian_daftar_kerja" name="btn_rincian_daftar_kerja" style="width: 100%" class="btn btn-sm btn-brand" data-toggle="modal" data-target="#kt_modal_rincian">
+																							Rincian
+																						</button>
+																					</div>
+																				</div>
+																			</div>
+																			<div class="form-group">
+																				<div class="row">
+																					<div class="col-sm-9">
+																						<h5>
+																							Gambar Kerja
+																						</h5>
+																					</div>
+																					<div class="col-sm-3">
+																						<button id="btn_rincian_gambar_kerja" name="btn_rincian_gambar_kerja" style="width: 100%" class="btn btn-sm btn-brand" data-toggle="modal" data-target="#kt_modal_rincian">
+																							Rincian
+																						</button>
+																					</div>
+																				</div>
+																			</div>
+																			<div class="form-group">
+																				<div class="row">
+																					<div class="col-sm-12">
+																						<label>
+																							<h5>Daftar Nama pekerja</h5>
+																						</label>
+																					</div>
+																					<div class="col-sm-12">
+																						<a href="#" target="_blank"  class="btn btn-bold btn-sm btn-font-sm btn-label-brand">
+																							<b><span id="nama_pekerja" name="nama_pekerja">Fascal Ivandry</span></b>
+																							<span> : </span>
+																							<span id="pekerjaan" name="pekerjaan">Teknisi</span>
+																						</a>
+																						<a href="#" target="_blank"  class="btn btn-bold btn-sm btn-font-sm btn-label-brand">
+																							<b><span id="nama_pekerja" name="nama_pekerja">Ahmad Rifaldi</span></b>
+																							<span> : </span>
+																							<span id="pekerjaan" name="pekerjaan">Teknisi</span>
+																						</a>
+																						<a href="#" target="_blank"  class="btn btn-bold btn-sm btn-font-sm btn-label-brand">
+																							<b><span id="nama_pekerja" name="nama_pekerja">Ewit Pratiwi</span></b>
+																							<span> : </span>
+																							<span id="pekerjaan" name="pekerjaan">Operator</span>
+																						</a>
+																						<a href="#" target="_blank"  class="btn btn-bold btn-sm btn-font-sm btn-label-brand">
+																							<b><span id="nama_pekerja" name="nama_pekerja">Aigi Walie</span></b>
+																							<span> : </span>
+																							<span id="pekerjaan" name="pekerjaan">Teknisi</span>
+																						</a>
+																					</div>
+																				</div>
+																			</div>
+																			<div class="form-group">
+																				<div class="row">
+																					<div class="col-sm-9">
+																						<h5>
+																							Peralatan Kerja
+																						</h5>
+																					</div>
+																					<div class="col-sm-3">
+																						<button id="btn_rincian_kontak_spmd" name="btn_rincian_kontak_spmd" style="width: 100%" class="btn btn-sm btn-brand" data-toggle="modal" data-target="#kt_modal_peralatan_kerja">
+																							Rincian
+																						</button>
+																					</div>
+																				</div>
+																			</div>
+																			<div class="form-group">
+																				<div class="row">
+																					<div class="col-sm-9">
+																						<h5>
+																							Dokumen Peralatan
+																						</h5>
+																					</div>
+																					<div class="col-sm-3">
+																						<button id="btn_rincian_dokumen_peralatan" name="btn_rincian_dokumen_peralatan" style="width: 100%" class="btn btn-sm btn-brand" data-toggle="modal" data-target="#kt_modal_rincian">
+																							Rincian
+																						</button>
+																					</div>
+																				</div>
+																			</div>
+																			<div class="form-group">
+																				<div class="row">
+																					<div class="col-sm-9">
+																						<h5>
+																							Form inspeksi
+																						</h5>
+																					</div>
+																					<div class="col-sm-3">
+																						<button id="btn_rincian_form_inspeksi" name="btn_rincian_form_inspeksi" style="width: 100%" class="btn btn-sm btn-brand" data-toggle="modal" data-target="#kt_modal_rincian">
+																							Rincian
+																						</button>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
 																	</div>
 																</div>
 															</div>
 														</div>
-														<div class="card">
-															<div class="card-header" id="headingTwo4">
-																<div style="margin-left:20px" class="card-title collapsed" data-toggle="collapse" data-target="#collapse_fe" aria-expanded="false" aria-controls="collapse_fe">
-																	FE
+														<div class="col-sm-6">
+															<div class="accordion  accordion-toggle-arrow">
+																<div class="card">
+																	<div class="card-header" id="headingOne4">
+																		<div style="margin-left:20px" class="card-title collapsed" data-toggle="collapse" data-target="#collapse_wip" aria-expanded="false" aria-controls="collapse_wip">
+																			WIP
+																		</div>
+																	</div>
+																	<div id="collapse_wip" class="collapse" aria-labelledby="headingOne" data-parent="#accordion_menu" style="">
+																		<div class="card-body">
+																			<div class="row">
+																				<div align="right" class="col-sm-12">
+																					<button data-toggle="modal" data-target="#kt_modal_statistik_wip" class="btn btn-sm btn-secondary"> <i class="fa fa-chart-line"></i> Statistik
+																					</button>
+																					<button data-toggle="modal" data-target="#kt_modal_reset" class="btn btn-sm btn-warning"> <i class="fa fa-undo-alt"></i> Reset
+																					</button>
+																					<button data-toggle="modal" data-target="#kt_modal_tambah_wip" type="button" class="btn btn-sm btn-success">
+																						<i class="fa fa-plus"></i> Tambah
+																					</button>
+																				</div>
+																			</div>
+																			<div style="margin-bottom: 20px"></div>
+																			<div class="form-group row">
+																				<label for="example-text-input" class="col-4 col-form-label">No. SIKA</label>
+																				<div class="col-8">
+																					<input disabled="" type="text" class="form-control" value="00/000/0000" id="no_sika" name="no_sika">
+																				</div>
+																			</div>
+																			<div class="form-group row">
+																				<label for="example-text-input" class="col-4 col-form-label">Tanggal</label>
+																				<div class="col-8">
+																					<select class="form-control" id="tanggal_wip" name="tanggal_wip">
+																						<option value="0">--Pilih Tanggal WIP--</option>
+																						<option value="1">1 Januari 2019</option>
+																						<option value="2">2 Februari 2019</option>
+																						<option value="3">3 Maret 2019</option>
+																						<option value="4">4 April 2019</option>
+																					</select>
+																				</div>
+																			</div>
+																			<div class="form-group">
+																				<h6>
+																					WIP Inspeksi HSE Work Practice
+																				</h6>
+																				<div class="row">
+																					<label for="example-text-input" class="col-4 col-form-label">Nilai</label>
+																					<div class="col-sm-6">
+																						<input disabled="" type="text" class="form-control" id="file_hazard_analysis_doc" name="file_hazard_analysis_doc" value="80">
+																					</div>
+																					<div class="col-sm-2">
+																						<button style="width: 100%" class="btn btn-primary">
+																							<i class="fa fa-download"></i>
+																						</button>
+																					</div>
+																				</div>
+																			</div>
+																			<div class="form-group">
+																				<h6>
+																					WIP Inspeksi Program HSE
+																				</h6>
+																				<div class="row">
+																					<label for="example-text-input" class="col-4 col-form-label">Nilai</label>
+																					<div class="col-sm-6">
+																						<input disabled="" type="text" class="form-control" id="file_hazard_analysis_doc" name="file_hazard_analysis_doc" value="80">
+																					</div>
+																					<div class="col-sm-2">
+																						<button style="width: 100%" class="btn btn-primary">
+																							<i class="fa fa-download"></i>
+																						</button>
+																					</div>
+																				</div>
+																			</div>
+																			<div class="form-group">
+																				<h6>
+																					HSE Performance (KPI)
+																				</h6>
+																				<div class="row">
+																					<label for="example-text-input" class="col-4 col-form-label">Nilai</label>
+																					<div class="col-sm-6">
+																						<input disabled="" type="text" class="form-control" id="file_hazard_analysis_doc" name="file_hazard_analysis_doc" value="80">
+																					</div>
+																					<div class="col-sm-2">
+																						<button style="width: 100%" class="btn btn-primary">
+																							<i class="fa fa-download"></i>
+																						</button>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
 																</div>
-															</div>
-															<div id="collapse_fe" class="collapse" aria-labelledby="headingTwo1" data-parent="#accordion_menu">
-																<div class="card-body">
-																	<div class="form-group">
-																		<label>
-																			Isolasi Energi / Loto
-																		</label>
-																		<div class="row">
-																			<div class="col-sm-10">
-																				<input disabled="" type="text" class="form-control" id="file_isolasi_energi_loto" name="file_isolasi_energi_loto" value="isolasi energi / loto">
-																			</div>
-																			<div class="col-sm-2">
-																				<button style="width: 100%" class="btn btn-primary">
-																					<i class="fa fa-download"></i>
-																				</button>
-																			</div>
+																<div class="card">
+																	<div class="card-header" id="headingTwo4">
+																		<div style="margin-left:20px" class="card-title collapsed" data-toggle="collapse" data-target="#collapse_fe" aria-expanded="false" aria-controls="collapse_fe">
+																			FE
 																		</div>
 																	</div>
-																	<div class="form-group">
-																		<label>
-																			Prosedur
-																		</label>
-																		<div class="row">
-																			<div class="col-sm-10">
-																				<input disabled="" type="text" class="form-control" id="file_prosedur" name="file_prosedur" value="Prosedur">
+																	<div id="collapse_fe" class="collapse" aria-labelledby="headingTwo1" data-parent="#accordion_menu">
+																		<div class="card-body">
+																			<div class="form-group">
+																				<h6>
+																					WIP Inspeksi HSE Work Practice
+																				</h6>
+																				<div class="row">
+																					<label for="example-text-input" class="col-4 col-form-label">Nilai</label>
+																					<div class="col-sm-6">
+																						<input disabled="" type="text" class="form-control" id="file_hazard_analysis_doc" name="file_hazard_analysis_doc" value="80">
+																					</div>
+																					<div class="col-sm-2">
+																						<button style="width: 100%" class="btn btn-primary">
+																							<i class="fa fa-download"></i>
+																						</button>
+																					</div>
+																				</div>
 																			</div>
-																			<div class="col-sm-2">
-																				<button style="width: 100%" class="btn btn-primary">
-																					<i class="fa fa-download"></i>
-																				</button>
+																			<div class="form-group">
+																				<h6>
+																					WIP Inspeksi Program HSE
+																				</h6>
+																				<div class="row">
+																					<label for="example-text-input" class="col-4 col-form-label">Nilai</label>
+																					<div class="col-sm-6">
+																						<input disabled="" type="text" class="form-control" id="file_hazard_analysis_doc" name="file_hazard_analysis_doc" value="80">
+																					</div>
+																					<div class="col-sm-2">
+																						<button style="width: 100%" class="btn btn-primary">
+																							<i class="fa fa-download"></i>
+																						</button>
+																					</div>
+																				</div>
 																			</div>
-																		</div>
-																	</div>
-																	<div class="form-group">
-																		<label>
-																			Engineer PID / Layout
-																		</label>
-																		<div class="row">
-																			<div class="col-sm-10">
-																				<input disabled="" type="text" class="form-control" id="file_engineer_pid" name="file_engineer_pid" value="Engineer PID / Layout">
-																			</div>
-																			<div class="col-sm-2">
-																				<button style="width: 100%" class="btn btn-primary">
-																					<i class="fa fa-download"></i>
-																				</button>
-																			</div>
-																		</div>
-																	</div>
-																	<div class="form-group">
-																		<label>
-																			Training
-																		</label>
-																		<div class="row">
-																			<div class="col-sm-10">
-																				<input disabled="" type="text" class="form-control" id="file_training" name="file_training" value="Training">
-																			</div>
-																			<div class="col-sm-2">
-																				<button style="width: 100%" class="btn btn-primary">
-																					<i class="fa fa-download"></i>
-																				</button>
+																			<div class="form-group">
+																				<h6>
+																					HSE Performance (KPI)
+																				</h6>
+																				<div class="row">
+																					<label for="example-text-input" class="col-4 col-form-label">Nilai</label>
+																					<div class="col-sm-6">
+																						<input disabled="" type="text" class="form-control" id="file_hazard_analysis_doc" name="file_hazard_analysis_doc" value="80">
+																					</div>
+																					<div class="col-sm-2">
+																						<button style="width: 100%" class="btn btn-primary">
+																							<i class="fa fa-download"></i>
+																						</button>
+																					</div>
+																				</div>
 																			</div>
 																		</div>
 																	</div>
 																</div>
-															</div>
-														</div>
-														<div class="card">
-															<div class="card-header" id="headingTwo4">
-																<div style="margin-left:20px" class="card-title collapsed" data-toggle="collapse" data-target="#collapse_kpi" aria-expanded="false" aria-controls="collapse_kpi">
-																	KPI
-																</div>
-															</div>
-															<div id="collapse_kpi" class="collapse" aria-labelledby="headingTwo1" data-parent="#accordion_menu">
-																<div class="card-body">
-																	<div class="form-group">
-																		<label>
-																			Isolasi Energi / Loto
-																		</label>
-																		<div class="row">
-																			<div class="col-sm-10">
-																				<input disabled="" type="text" class="form-control" id="file_isolasi_energi_loto" name="file_isolasi_energi_loto" value="isolasi energi / loto">
-																			</div>
-																			<div class="col-sm-2">
-																				<button style="width: 100%" class="btn btn-primary">
-																					<i class="fa fa-download"></i>
-																				</button>
-																			</div>
+																<div class="card">
+																	<div class="card-header" id="headingTwo4">
+																		<div style="margin-left:20px" class="card-title collapsed" data-toggle="collapse" data-target="#collapse_kpi" aria-expanded="false" aria-controls="collapse_kpi">
+																			POB
 																		</div>
 																	</div>
-																	<div class="form-group">
-																		<label>
-																			Prosedur
-																		</label>
-																		<div class="row">
-																			<div class="col-sm-10">
-																				<input disabled="" type="text" class="form-control" id="file_prosedur" name="file_prosedur" value="Prosedur">
+																	<div id="collapse_kpi" class="collapse" aria-labelledby="headingTwo1" data-parent="#accordion_menu">
+																		<div class="card-body">
+																			<div class="row">
+																				<div class="col-sm-6">
+																					<h5>Info Personal On Board</h5>
+																				</div>
+																				<div align="right" class="col-sm-6">
+
+																				</div>
 																			</div>
-																			<div class="col-sm-2">
-																				<button style="width: 100%" class="btn btn-primary">
-																					<i class="fa fa-download"></i>
-																				</button>
+																			<div style="margin-bottom: 25px"></div>
+																			<div class="form-group row">
+																				<label for="example-text-input" class="col-4 col-form-label">Tanggal</label>
+																				<div class="col-8">
+																					<input disabled="" type="date" class="form-control" id="tanggal" name="tanggal">
+																				</div>
 																			</div>
-																		</div>
-																	</div>
-																	<div class="form-group">
-																		<label>
-																			Engineer PID / Layout
-																		</label>
-																		<div class="row">
-																			<div class="col-sm-10">
-																				<input disabled="" type="text" class="form-control" id="file_engineer_pid" name="file_engineer_pid" value="Engineer PID / Layout">
+																			<div class="form-group row">
+																				<label for="example-text-input" class="col-4 col-form-label">Total Karyawan</label>
+																				<div class="col-5">
+																					<div class="input-group">
+																						<input disabled="" type="text" class="form-control" value="15" id="total_karyawan" name="total_karyawan">
+																						<div class="input-group-append"><span class="input-group-text" id="basic-addon2">Orang</span></div>
+																					</div>
+																				</div>
+																				<div class="col-3">
+																					<button class="btn btn-secondary">
+																						<i class="fa fa-eye"></i> Lihat
+																					</button>
+																				</div>
 																			</div>
-																			<div class="col-sm-2">
-																				<button style="width: 100%" class="btn btn-primary">
-																					<i class="fa fa-download"></i>
-																				</button>
+																			<div class="form-group row">
+																				<label for="example-text-input" class="col-4 col-form-label">Onsite Resricted Area</label>
+																				<div class="col-5">
+																					<div class="input-group">
+																						<input disabled="" type="text" class="form-control" value="7" id="onsite_karyawan" name="onsite_karyawan">
+																						<div class="input-group-append"><span class="input-group-text" id="basic-addon2">Orang</span></div>
+																					</div>
+																				</div>
+																				<div class="col-3">
+																					<button class="btn btn-secondary">
+																						<i class="fa fa-eye"></i> Lihat
+																					</button>
+																				</div>
 																			</div>
-																		</div>
-																	</div>
-																	<div class="form-group">
-																		<label>
-																			Training
-																		</label>
-																		<div class="row">
-																			<div class="col-sm-10">
-																				<input disabled="" type="text" class="form-control" id="file_training" name="file_training" value="Training">
-																			</div>
-																			<div class="col-sm-2">
-																				<button style="width: 100%" class="btn btn-primary">
-																					<i class="fa fa-download"></i>
-																				</button>
+																			<div class="form-group row">
+																				<label for="example-text-input" class="col-4 col-form-label">Outsite Resricted Area</label>
+																				<div class="col-5">
+																					<div class="input-group">
+																						<input disabled="" type="text" class="form-control" value="8" id="outsite_karyawan" name="outsite_karyawan">
+																						<div class="input-group-append"><span class="input-group-text" id="basic-addon2">Orang</span></div>
+																					</div>
+																				</div>
+																				<div class="col-3">
+																					<button class="btn btn-secondary">
+																						<i class="fa fa-eye"></i> Lihat
+																					</button>
+																				</div>
 																			</div>
 																		</div>
 																	</div>
@@ -958,24 +1083,12 @@
 											</div>
 										</div>
 										<div class="tab-pane" id="kt_tabs_sika" role="tabpanel">
-											<div style="margin-bottom: 25px" class="row">
+											<div class="row ">
 												<div class="col-sm-6">
-													<h4>Daftar SIKA</h4>
+													<h4>Daftar SIKA Hot dan Lainnya</h4>
 												</div>
-												<!-- <div align="right" class="col-sm-6">
-													<a href="tambah_sika.html" class="btn btn-success"> <i class="fa fa-plus"></i> Tambah SIKA</a>
-												</div> -->
 											</div>
 											<table class="table table-striped- table-bordered table-hover table-checkable" id="daftar_sika_pekerjaan">
-												<thead>
-													<tr>
-														<th>No.</th>
-														<th>Jenis Sika</th>
-														<th>Nomer SIKA</th>
-														<th>Status</th>
-														<th>Rincian</th>
-													</tr>
-												</thead>
 											</table>
 										</div>
 									</div>
