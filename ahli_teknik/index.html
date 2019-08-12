@@ -69,6 +69,13 @@
 	<!-- <link href="../assets/app/style/blue-theme.css" rel="stylesheet" type="text/css" /> -->
 	<!-- <link href="../assets/app/style/red-theme.css" rel="stylesheet" type="text/css" /> -->
 	<!-- <link href="../assets/app/style/redblack-theme.css" rel="stylesheet" type="text/css" /> -->
+	<style>
+		#chartdiv {
+			width: 100%;
+			height: 500px;
+		}
+
+	</style>
 </head>
 <!-- end::Head -->
 <!-- begin::Body -->
@@ -160,7 +167,7 @@
 					<!-- end:: Subheader -->
 					<!-- begin:: Content -->
 					<div class="kt-content  kt-grid__item kt-grid__item--fluid" id="kt_content">
-						<!-- <div class="row">
+						<div class="row">
 							<div class="col-sm-12">
 								<div class="kt-portlet">
 									<div class="kt-portlet__head">
@@ -169,16 +176,47 @@
 												<i class="la la-gear"></i>
 											</span>
 											<h3 class="kt-portlet__head-title">
-												Status Digital Passport
+												Jumlah Pekerjaan Keluar
 											</h3>
 										</div>
 									</div>
 									<div class="kt-portlet__body">
-										<div id="jumlah"></div>
+										<div class="row">
+											<div  align="center" class="col-sm-4">
+												<div style="padding: 15px" class="card_informasi card-red">
+													<div style="margin-bottom: 20px" class="headnya">
+														<h4 class="judul_pekerjaan">Bulan Ini</h4>
+													</div>
+													<div class="isinya">
+														<h4 class="isi_informasi" name="pekerjaan_bulan_ini">5</h4>
+													</div>
+												</div>
+											</div>
+											<div  align="center" class="col-sm-4">
+												<div style="padding: 15px" class="card_informasi">
+													<div style="margin-bottom: 20px" class="headnya">
+														<h4 class="judul_pekerjaan">Tahun ini</h4>
+													</div>
+													<div class="isinya">
+														<h4 class="isi_informasi" name="pekerjaan_tahun_ini">63</h4>
+													</div>
+												</div>
+											</div>
+											<div  align="center" class="col-sm-4">
+												<div style="padding: 15px" class="card_informasi card-green">
+													<div style="margin-bottom: 20px" class="headnya">
+														<h4 class="judul_pekerjaan" name="pekerjaan_total">Total</h4>
+													</div>
+													<div class="isinya">
+														<h4 class="isi_informasi">125</h4>
+													</div>
+												</div>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
-							<div class="col-sm-6">
+							<div class="col-sm-12">
 								<div class="kt-portlet">
 									<div class="kt-portlet__head">
 										<div class="kt-portlet__head-label">
@@ -186,34 +224,17 @@
 												<i class="la la-gear"></i>
 											</span>
 											<h3 class="kt-portlet__head-title">
-												Kategori Pekerja
+												Pekerjaan
 											</h3>
 										</div>
 									</div>
 									<div class="kt-portlet__body">
-										<div id="kategori_pekerja"></div>
+										<div id="chartdiv"></div>
 									</div>
 								</div>
 							</div>
-							<div class="col-sm-6">
-								<div class="kt-portlet">
-									<div class="kt-portlet__head">
-										<div class="kt-portlet__head-label">
-											<span class="kt-portlet__head-icon kt-hidden">
-												<i class="la la-gear"></i>
-											</span>
-											<h3 class="kt-portlet__head-title">
-												Tes Induksi 12 LSR
-											</h3>
-										</div>
-									</div>
-									<div class="kt-portlet__body">
-										<div id="induksi_12_slr"></div>
-									</div>
-								</div>
-							</div>
-						</div> -->
-
+							
+						</div>
 					</div>
 					<!-- end:: Content -->
 				</div>
@@ -267,214 +288,108 @@
 	<script src="../assets/vendors/general/wnumb/wNumb.js" type="text/javascript"></script>
 	<!--end:: Global Mandatory Vendors -->
 	<!--begin:: Global Optional Vendors -->
-		<script src="../assets/vendors/general/jquery-form/dist/jquery.form.min.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/block-ui/jquery.blockUI.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js" type="text/javascript"></script>
-		<script src="../assets/vendors/custom/components/vendors/bootstrap-datepicker/init.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/bootstrap-datetime-picker/js/bootstrap-datetimepicker.min.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/bootstrap-timepicker/js/bootstrap-timepicker.min.js" type="text/javascript"></script>
-		<script src="../assets/vendors/custom/components/vendors/bootstrap-timepicker/init.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/bootstrap-daterangepicker/daterangepicker.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/bootstrap-maxlength/src/bootstrap-maxlength.js" type="text/javascript"></script>
-		<script src="../assets/vendors/custom/vendors/bootstrap-multiselectsplitter/bootstrap-multiselectsplitter.min.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/bootstrap-select/dist/js/bootstrap-select.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/bootstrap-switch/dist/js/bootstrap-switch.js" type="text/javascript"></script>
-		<script src="../assets/vendors/custom/components/vendors/bootstrap-switch/init.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/select2/dist/js/select2.full.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/ion-rangeslider/js/ion.rangeSlider.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/typeahead.js/dist/typeahead.bundle.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/handlebars/dist/handlebars.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/inputmask/dist/jquery.inputmask.bundle.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/inputmask/dist/inputmask/inputmask.date.extensions.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/inputmask/dist/inputmask/inputmask.numeric.extensions.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/nouislider/distribute/nouislider.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/owl.carousel/dist/owl.carousel.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/autosize/dist/autosize.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/clipboard/dist/clipboard.min.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/dropzone/dist/dropzone.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/summernote/dist/summernote.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/markdown/lib/markdown.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/bootstrap-markdown/js/bootstrap-markdown.js" type="text/javascript"></script>
-		<script src="../assets/vendors/custom/components/vendors/bootstrap-markdown/init.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/bootstrap-notify/bootstrap-notify.min.js" type="text/javascript"></script>
-		<script src="../assets/vendors/custom/components/vendors/bootstrap-notify/init.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/jquery-validation/dist/jquery.validate.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/jquery-validation/dist/additional-methods.js" type="text/javascript"></script>
-		<script src="../assets/vendors/custom/components/vendors/jquery-validation/init.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/toastr/build/toastr.min.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/raphael/raphael.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/morris.js/morris.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/chart.js/dist/Chart.bundle.js" type="text/javascript"></script>
-		<script src="../assets/vendors/custom/vendors/bootstrap-session-timeout/dist/bootstrap-session-timeout.min.js" type="text/javascript"></script>
-		<script src="../assets/vendors/custom/vendors/jquery-idletimer/idle-timer.min.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/waypoints/lib/jquery.waypoints.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/counterup/jquery.counterup.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/es6-promise-polyfill/promise.min.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/sweetalert2/dist/sweetalert2.min.js" type="text/javascript"></script>
-		<script src="../assets/vendors/custom/components/vendors/sweetalert2/init.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/jquery.repeater/src/lib.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/jquery.repeater/src/jquery.input.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/jquery.repeater/src/repeater.js" type="text/javascript"></script>
-		<script src="../assets/vendors/general/dompurify/dist/purify.js" type="text/javascript"></script>
-		<!--end:: Global Optional Vendors -->
-		<!--begin::Global Theme Bundle(used by all pages) -->
-		<script src="../assets/demo/default/base/scripts.bundle.js" type="text/javascript"></script>
-		<!--end::Global Theme Bundle -->
-		<!--begin::Page Vendors(used by this page) -->
-		<script src="../assets/vendors/custom/fullcalendar/fullcalendar.bundle.js" type="text/javascript"></script>
-		<script src="//maps.google.com/maps/api/js?key=AIzaSyBTGnKT7dt597vo9QgeQ7BFhvSRP4eiMSM" type="text/javascript"></script>
-		<script src="../assets/vendors/custom/gmaps/gmaps.js" type="text/javascript"></script>
-		<!--end::Page Vendors -->
-		<!--begin::Page Scripts(used by this page) -->
-		<script src="../assets/app/custom/general/dashboard.js" type="text/javascript"></script>
-		<!--end::Page Scripts -->
-		<!--begin::Global App Bundle(used by all pages) -->
-		<script src="../assets/app/bundle/app.bundle.js" type="text/javascript"></script>
-		<!--begin::Page Vendors(used by this page) -->
-		<script src="//www.amcharts.com/lib/3/amcharts.js" type="text/javascript"></script>
-		<script src="//www.amcharts.com/lib/3/serial.js" type="text/javascript"></script>
-		<script src="//www.amcharts.com/lib/3/radar.js" type="text/javascript"></script>
-		<script src="//www.amcharts.com/lib/3/pie.js" type="text/javascript"></script>
-		<script src="//www.amcharts.com/lib/3/plugins/tools/polarScatter/polarScatter.min.js" type="text/javascript"></script>
-		<script src="//www.amcharts.com/lib/3/plugins/animate/animate.min.js" type="text/javascript"></script>
-		<script src="//www.amcharts.com/lib/3/plugins/export/export.min.js" type="text/javascript"></script>
-		<script src="//www.amcharts.com/lib/3/themes/light.js" type="text/javascript"></script>
-		<!--end::Page Vendors -->
-		<!--begin::Page Scripts(used by this page) -->
-		<script src="../assets/app/custom/general/components/charts/amcharts/charts.js" type="text/javascript"></script>
-		<!--end::Global App Bundle -->
-		<script src="//www.amcharts.com/lib/3/amcharts.js" type="text/javascript"></script>
-		<script src="//www.amcharts.com/lib/3/serial.js" type="text/javascript"></script>
-		<script src="//www.amcharts.com/lib/3/radar.js" type="text/javascript"></script>
-		<script src="//www.amcharts.com/lib/3/plugins/tools/polarScatter/polarScatter.min.js" type="text/javascript"></script>
-		<script src="//www.amcharts.com/lib/3/plugins/animate/animate.min.js" type="text/javascript"></script>
-		<script src="//www.amcharts.com/lib/3/themes/light.js" type="text/javascript"></script>
-		<script src="https://www.amcharts.com/lib/4/core.js"></script>
-		<script src="https://www.amcharts.com/lib/4/charts.js"></script>
-		<script src="https://www.amcharts.com/lib/4/themes/material.js"></script>
-		<script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
-		<!-- AJAX -->
-		<script src="../assets/vendors/custom/datatables/datatables.bundle.js" type="text/javascript"></script>
-		<script src="../assets/app/script/js_ajax_pertamina.js" type="text/javascript"></script>
-		<script>
-			am4core.ready(function() {
-			// Themes begin
+	<!--end:: Global Optional Vendors -->
+	<!--begin::Global Theme Bundle(used by all pages) -->
+	<script src="../assets/demo/default/base/scripts.bundle.js" type="text/javascript"></script>
+	<!--end::Global Theme Bundle -->
+	<!--begin::Page Vendors(used by this page) -->
+	<script src="../assets/vendors/custom/fullcalendar/fullcalendar.bundle.js" type="text/javascript"></script>
+	<script src="//maps.google.com/maps/api/js?key=AIzaSyBTGnKT7dt597vo9QgeQ7BFhvSRP4eiMSM" type="text/javascript"></script>
+	<script src="../assets/vendors/custom/gmaps/gmaps.js" type="text/javascript"></script>
+	<!--end::Page Vendors -->
+	<!--begin::Global App Bundle(used by all pages) -->
+	<script src="../assets/app/bundle/app.bundle.js" type="text/javascript"></script>
+	<!--begin::Page Vendors(used by this page) -->
+	<script src="https://www.amcharts.com/lib/4/core.js"></script>
+	<script src="https://www.amcharts.com/lib/4/charts.js"></script>
+	<script src="https://www.amcharts.com/lib/4/themes/material.js"></script>
+	<script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+	<!--begin::Page Scripts(used by this page) -->
+	<script src="../assets/app/custom/general/components/charts/amcharts/charts.js" type="text/javascript"></script>
+	<script>
+		am4core.ready(function() {
+
+
+			am4core.useTheme(am4themes_material);
 			am4core.useTheme(am4themes_animated);
-			// Themes end
-			// Create chart instance
-			var chart = am4core.create("jumlah", am4charts.XYChart);
-			
-			// Add data
+
+			var chart = am4core.create("chartdiv", am4charts.XYChart);
+			/*chart.scrollbarX = new am4core.Scrollbar();*/
+
+
 			chart.data = [{
-				"status": "Aktif",
-				"jumlah": 70
+				"status": "Baru",
+				"jumlah": 3025
 			}, {
-				"status": "Belum Terverifikasi",
-				"jumlah": 50
+				"status": "Perpanjang",
+				"jumlah": 1882
 			}, {
-				"status": "Terverifikasi",
-				"jumlah": 30
+				"status": "Resubmit",
+				"jumlah": 1809
+			},{
+				"status": "Tutup",
+				"jumlah": 1500
 			}, {
-				"status": "Kadaluarsa",
-				"jumlah": 35
+				"status": "Ditolak",
+				"jumlah": 1322
+			}, {
+				"status": "Berlangsung",
+				"jumlah": 1122
+			}, {
+				"status": "Ditunda",
+				"jumlah": 1114
+			}, {
+				"status": "Draft",
+				"jumlah": 984
+			}, {
+				"status": "Selesai",
+				"jumlah": 711
 			}];
-			// Create axes
+
+
 			var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
 			categoryAxis.dataFields.category = "status";
 			categoryAxis.renderer.grid.template.location = 0;
 			categoryAxis.renderer.minGridDistance = 30;
-			categoryAxis.renderer.labels.template.horizontalCenter = "middle";
+			categoryAxis.renderer.labels.template.horizontalCenter = "right";
 			categoryAxis.renderer.labels.template.verticalCenter = "middle";
-			categoryAxis.renderer.labels.template.rotation = 0;
+			categoryAxis.renderer.labels.template.rotation = 270;
 			categoryAxis.tooltip.disabled = true;
-			categoryAxis.renderer.minHeight = 130;
+			categoryAxis.renderer.minHeight = 110;
+
 			var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
 			valueAxis.renderer.minWidth = 50;
-			// Create series
+
+
 			var series = chart.series.push(new am4charts.ColumnSeries());
 			series.sequencedInterpolation = true;
 			series.dataFields.valueY = "jumlah";
 			series.dataFields.categoryX = "status";
 			series.tooltipText = "[{categoryX}: bold]{valueY}[/]";
 			series.columns.template.strokeWidth = 0;
+
 			series.tooltip.pointerOrientation = "vertical";
+
 			series.columns.template.column.cornerRadiusTopLeft = 10;
 			series.columns.template.column.cornerRadiusTopRight = 10;
 			series.columns.template.column.fillOpacity = 0.8;
-			// on hover, make corner radiuses bigger
+
+
 			var hoverState = series.columns.template.column.states.create("hover");
 			hoverState.properties.cornerRadiusTopLeft = 0;
 			hoverState.properties.cornerRadiusTopRight = 0;
 			hoverState.properties.fillOpacity = 1;
+
 			series.columns.template.adapter.add("fill", function(fill, target) {
 				return chart.colors.getIndex(target.dataItem.index);
 			});
-			// Cursor
+
+
 			chart.cursor = new am4charts.XYCursor();
-			}); // end am4
-		</script>
-		<script>
-			am4core.ready(function() {
-			// Themes begin
-			// am4core.useTheme(am4themes_material);
-			am4core.useTheme(am4themes_animated);
-			// Themes end
-			// Create chart
-			var chart = am4core.create("kategori_pekerja", am4charts.PieChart);
-			chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
-			chart.data = [
-			{
-				status: "Pekerja",
-				value: 4260
-			},
-			{
-				status: "TKJP",
-				value: 3970
-			},
-			{
-				status: "AMT",
-				value: 3454
-			},
-			{
-				status: "Kontraktor",
-				value: 2390
-			}
-			];
-			var series = chart.series.push(new am4charts.PieSeries());
-			series.dataFields.value = "value";
-			series.dataFields.radiusValue = "value";
-			series.dataFields.category = "status";
-			series.slices.template.cornerRadius = 6;
-			series.colors.step = 3;
-			series.hiddenState.properties.endAngle = -90;
-			chart.legend = new am4charts.Legend();
-			}); // end am4core.ready()
-		</script>
-		<script>
-			am4core.ready(function() {
-			// Themes begin
-			am4core.useTheme(am4themes_animated);
-			// Themes end
-			var chart = am4core.create("induksi_12_slr", am4charts.PieChart3D);
-			chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
-			chart.legend = new am4charts.Legend();
-			chart.data = [
-			{
-				hasil: "Lulus",
-				jumlah: 50
-			},
-			{
-				hasil: "Belum Lulus",
-				jumlah: 23
-			}
-			];
-			chart.innerRadius = 50;
-			var series = chart.series.push(new am4charts.PieSeries3D());
-			series.dataFields.value = "jumlah";
-			series.dataFields.category = "hasil";
-			}); // end am4core.ready()
-		</script>
-	</body>
-	<!-- end::Body -->
-	</html>
+
+		});
+	</script>
+
+</body>
+<!-- end::Body -->
+</html>
