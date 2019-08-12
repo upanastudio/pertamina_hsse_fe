@@ -259,7 +259,7 @@
 							</div>
 						</div>
 						<div class="kt-subheader__toolbar">
-							<button class="btn btn-secondary">
+							<button class="btn btn-secondary" data-toggle="modal" data-target="#kt_modal_tolak">
 								<i class="fa fa-times"></i> Tolak
 							</button>
 							<button class="btn btn-primary" data-toggle="modal" data-target="#kt_modal_persetujuan">
@@ -1243,6 +1243,30 @@
 					</div>
 				</div>
 
+				<div class="modal fade" id="kt_modal_tolak" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog modal-lg" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="exampleModalLabel">Tolak</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								</button>
+							</div>
+							<div class="modal-body">
+								<form>
+									<div class="form-group">
+										<label for="message-text" class="form-control-label">Alasan Penolakan:</label>
+										<textarea class="form-control" id="alasan_penolakan" name="alasan_penolakan" rows="3"></textarea>
+									</div>
+								</form>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Tidak</button>
+								<button type="button" class="btn btn-danger kt_sweetalert_tolak" data-dismiss="modal">Tolak</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
 				<!--end::Modal-->
 				<!-- begin:: Footer -->
 				<div class="kt-footer kt-grid__item kt-grid kt-grid--desktop kt-grid--ver-desktop">
@@ -1321,7 +1345,14 @@
 	    // Demos
 	    var initDemos = function() {
 	    	$('.kt_sweetalert_approve').click(function(e) {
-	    		swal.fire("Approve!", "Pekerjaan di telah di approve!", "success");
+	    		swal.fire("Approve!", "Pekerjaan telah di approve!", "success");
+	    	});
+
+
+	    };
+		var initDemosTolak = function() {
+	    	$('.kt_sweetalert_tolak').click(function(e) {
+	    		swal.fire("Ditolak!", "Pekerjaan berhasil ditolak!", "error");
 	    	});
 
 
@@ -1331,6 +1362,7 @@
 	        // Init
 	        init: function() {
 	        	initDemos();
+				initDemosTolak();
 	        },
 	    };
 	}();

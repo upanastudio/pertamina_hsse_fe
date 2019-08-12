@@ -11,7 +11,7 @@
                  "tipe" : "hot",
                  "status" : "resubmit",
                  "sifat" : "Swakelola",
-                 "validasi": "hsse",
+                 "validasi": null,
                  "aksi" : null
 
              },
@@ -34,7 +34,7 @@
                  "tipe" : "cold",
                  "status" : "baru",
                  "sifat" : "ABI",
-                 "validasi": "hsse",
+                 "validasi": null,
                  "aksi" : null
              },
              {
@@ -45,7 +45,7 @@
                  "tipe" : "cold",
                  "status" : "tutup",
                  "sifat" : "ABI",
-                 "validasi": "gsi",
+                 "validasi": null,
                  "aksi" : null
              },
              {
@@ -67,7 +67,7 @@
                  "tipe" : "hot",
                  "status" : "tutup",
                  "sifat" : "ABO",
-                 "validasi": "gsi",
+                 "validasi": null,
                  "aksi" : null
              },
              {
@@ -78,7 +78,7 @@
                  "tipe" : "hot",
                  "status" : "perpanjang",
                  "sifat" : "ABO",
-                 "validasi": "hsse",
+                 "validasi": null,
                  "aksi" : null
              },
               {
@@ -89,7 +89,7 @@
                  "tipe" : "hot",
                  "status" : "resubmit",
                  "sifat" : "ABO",
-                 "validasi": "gsi",
+                 "validasi": null,
                  "aksi" : null
              }
 ]

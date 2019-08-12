@@ -9,7 +9,7 @@
                  "nama_pekerjaan" : "Penggalian",
                  "jenis_sika" : "SIKA Panas",
                  "status" : "baru",
-                 "validasi": "hsse",
+                 "validasi": null,
                  "aksi" : null
 
              },
@@ -28,7 +28,7 @@
                  "nama_pekerjaan" : "Penggalian",
                  "jenis_sika" : "Izin Kerja Pengangkatan",
                  "status" : "perpanjang",
-                 "validasi": "gsi",
+                 "validasi": null,
                  "aksi" : null
              },
              {
@@ -37,7 +37,7 @@
                  "nama_pekerjaan" : "Penggalian",
                  "jenis_sika" : "Izin Kerja Pengangkatan",
                  "status" : "tutup",
-                 "validasi": "hsse",
+                 "validasi": null,
                  "aksi" : null
              },
              {
@@ -46,7 +46,7 @@
                  "nama_pekerjaan" : "Penggalian",
                  "jenis_sika" : "Izin Kerja Bahan Radiobaru",
                  "status" : "baru",
-                 "validasi": "hsse",
+                 "validasi": null,
                  "aksi" : null
              },
              {
@@ -64,7 +64,7 @@
                  "nama_pekerjaan" : "Penggalian",
                  "jenis_sika" : "Izin Kerja Bahan Radiobaru",
                  "status" : "resubmit",
-                 "validasi": "hsse",
+                 "validasi": null,
                  "aksi" : null
              },
               {
@@ -73,7 +73,7 @@
                  "nama_pekerjaan" : "Penggalian",
                  "jenis_sika" : "SIKA Panas",
                  "status" : "perpanjang",
-                 "validasi": "gsi",
+                 "validasi": null,
                  "aksi" : null
              }
 ]
