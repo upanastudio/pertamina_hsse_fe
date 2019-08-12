@@ -10,9 +10,8 @@
                  "tanggal" : "10 November 2019",
                  "tipe" : "hot",
                  "status" : "terverifikasi",
-                 "sifat" : "Swakelola",
                  "aksi" : null
-
+                
              },
              {
                 "no": "2",
@@ -20,8 +19,7 @@
                  "vendor" : "CV. Upana",
                  "tanggal" : "10 November 2019",
                  "tipe" : "hot",
-                 "status" : "belum terverifikasi",
-                 "sifat" : "Swakelola",
+                 "status" : "terverifikasi",
                  "aksi" : null
              },
              {
@@ -31,7 +29,6 @@
                  "tanggal" : "10 November 2019",
                  "tipe" : "cold",
                  "status" : "terverifikasi",
-                 "sifat" : "ABO",
                  "aksi" : null
              },
              {
@@ -40,8 +37,7 @@
                  "vendor" : "CV. Upana",
                  "tanggal" : "10 November 2019",
                  "tipe" : "cold",
-                 "status" : "berlangsung",
-                 "sifat" : "ABO",
+                 "status" : "terverifikasi",
                  "aksi" : null
              },
              {
@@ -50,8 +46,7 @@
                  "vendor" : "CV. Upana",
                  "tanggal" : "10 November 2019",
                  "tipe" : "hot",
-                 "status" : "draft",
-                 "sifat" : "ABO",
+                 "status" : "ditolak",
                  "aksi" : null
              },
              {
@@ -61,7 +56,6 @@
                  "tanggal" : "10 November 2019",
                  "tipe" : "hot",
                  "status" : "ditolak",
-                 "sifat" : "ABI",
                  "aksi" : null
              },
              {
@@ -70,8 +64,7 @@
                  "vendor" : "CV. Upana",
                  "tanggal" : "10 November 2019",
                  "tipe" : "hot",
-                 "status" : "ditunda",
-                 "sifat" : "ABI",
+                 "status" : "ditolak",
                  "aksi" : null
              },
               {
@@ -80,8 +73,7 @@
                  "vendor" : "CV. Upana",
                  "tanggal" : "10 November 2019",
                  "tipe" : "hot",
-                 "status" : "selesai",
-                 "sifat" : "ABI",
+                 "status" : "ditolak",
                  "aksi" : null
              }
 ]
