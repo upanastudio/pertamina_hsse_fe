@@ -237,11 +237,6 @@
 								Pemberhentian Sementara </a>
 							</div>
 						</div>
-                        <div class="kt-subheader__toolbar">
-                            <a href="riwayat_pekerjaan.html" class="btn btn-secondary">
-                                <i class="fa fa-arrow-left"></i> Kembali
-                            </a>
-                        </div>
 					</div>
 					<!-- end:: Subheader -->
 					<!-- begin:: Content -->
@@ -333,14 +328,14 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="kt-portlet__foot">
-                                        <div align="center">
-                                            <button style="padding:5px 25px" type="button" class="btn btn-md btn-secondary"><i class="fa fa-times"></i>Batal</button>&nbsp;
-                                            <button style="padding:5px 25px" type="button" class="btn btn-md btn-danger kt_sweetalert_draft"><i class="fa fa-check"></i>Proses</button>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
+							<div class="col-sm-12">
+                                <div align="center">
+									<button onclick="window.location.href='riwayat_pekerjaan.html'" style="padding:5px 25px" type="button" class="btn btn-md btn-outline-secondary"><i class="fa fa-arrow-left"></i> Kembali</button>&nbsp;
+									<button style="padding:5px 25px" type="button" class="btn btn-md btn-danger kt_sweetalert_tunda"><i class="fa fa-check"></i>Proses</button>
+                                </div>
+							</div>
 						</div>
 					</div>
 					<!-- end:: Content -->
@@ -429,10 +424,39 @@
 	<!--begin::Global App Bundle(used by all pages) -->
 	<script src="../assets/app/bundle/app.bundle.js" type="text/javascript"></script>
 	<!--begin::Page Scripts(used by this page) -->
+	<script src="../assets/vendors/general/sweetalert2/dist/sweetalert2.min.js" type="text/javascript"></script>
+	<script src="../assets/vendors/custom/components/vendors/sweetalert2/init.js" type="text/javascript"></script>
 	<!--end::Global App Bundle -->
 	<!-- AJAX -->
 	<script src="../assets/vendors/custom/datatables/datatables.bundle.js" type="text/javascript"></script>
 	<script src="../assets/app/script/js_ajax_hsse.js" type="text/javascript"></script>
+	<!-- Sweetalert2 -->
+	<script>
+		// Class definition
+		var KTSweetAlert2Demo = function() {
+
+	    // Demos
+		var initDemosTunda = function() {
+	    	$('.kt_sweetalert_tunda').click(function(e) {
+	    		swal.fire("Ditunda!", "Pekerjaan berhasil ditunda!", "success");
+	    	});
+
+
+	    };
+
+	    return {
+	        // Init
+	        init: function() {
+	        	initDemosTunda();
+	        },
+	    };
+	}();
+
+		// Class Initialization
+		jQuery(document).ready(function() {
+			KTSweetAlert2Demo.init();
+		});
+	</script>
 </body>
 <!-- end::Body -->
 </html>

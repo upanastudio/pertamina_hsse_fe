@@ -906,7 +906,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 						<a href="rincian_permintaan_sika_perpanjang.html" class="btn btn-sm btn-brand" style="color:white;border-radius:20px">Rincian</a> `;
 					} else if (status_sika == "tutup"){
 						return `
-						<a href="rincian_permintaan_sika_pembuatan.html" class="btn btn-sm btn-brand" style="color:white;border-radius:20px">Rincian</a> `;
+						<a href="rincian_permintaan_sika_tutup.html" class="btn btn-sm btn-brand" style="color:white;border-radius:20px">Rincian</a> `;
 					} else {
 						return `
 						<a href="rincian_permintaan_sika_pembuatan.html" class="btn btn-sm btn-brand" style="color:white;border-radius:20px">Rincian</a> `;
