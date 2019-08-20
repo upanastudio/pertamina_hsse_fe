@@ -465,6 +465,330 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 			],
 		});
 	};
+	/*var initTable6 = function() {
+		function format ( d ) {
+			console.log(d.no_child);
+			var trs='';
+			$.each($(d.no_child),function(key,value){
+				trs+='<tr><td>'+value+
+				'</td><td>'+d.pekerjaan_child[key]+
+				'</td><td>'+d.vendor_child[key]+
+				'</td><td>'+d.sifat_child[key]+
+				'</td><td>'+d.tipe_child[key]+
+				'</td><td>'+d.tanggal_child[key]+
+				'</td><td>'+d.validasi_child[key]+
+				'</td><td>'+d.status_child[key]+
+				'</td><td>'+d.aksi_child[key]+
+				'</td></tr>';
+
+			})
+			return '<table  class="table table-border table-hover">'+
+			'<thead>'+
+			'<th>No.</th>'+
+			'<th>Pekerjaan</th>'+
+			'<th>Vendor</th>'+
+			'<th>Sifat</th>'+
+			'<th>Tipe</th>'+
+			'<th>Tanggal Mulai</th>'+
+			'<th>Validasi</th>'+
+			'<th>Status</th>'+
+			'<th>Aksi</th>'+
+			'</thead><tbody>' +
+
+			trs+
+			'</tbody></table>';
+		}
+		var table = $('#childrow_contoh').DataTable({
+			"ajax": '../source/childrow_data.json',
+			columns: [
+			{
+				class:          'details-control',
+				orderable:      false,
+				data:           '#',
+				title : '#',
+				defaultContent: ''
+			},
+			{
+				data: 'no',
+				orderable:      false,
+				title: 'No.',
+			},{
+				data: 'pekerjaan',
+				title: 'Pekerjaan',
+			},{
+				data: 'vendor',
+				title: 'Vendor',
+			},{
+				data: 'sifat',
+				title: 'Sifat',
+			},{
+				data: 'tipe',
+				title: 'Tipe',
+			},{
+				data: 'tanggal',
+				title: 'Tanggal Mulai',
+			},{
+				data: 'validasi',
+				title: 'Validasi',
+				responsivePriority: -1,
+				render: function(data, type, full, meta) {
+					return `
+					<div class="kt-checkbox-list">
+					<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success validasi_check">
+					<input disabled checked="" type="checkbox" id="check_hsse" name="check_hsse"> HSSE
+					<span></span>
+					</label>
+					<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success validasi_check">
+					<input disabled checked="" type="checkbox" id="check_gsi" name="check_hsse"> GSI
+					<span></span>
+					</label>
+					</div>`;
+				},
+			},{
+				data: 'status',
+				title: 'Status',
+				responsivePriority: -1,
+				render: function(data, type, full, meta) {
+					var status = {
+						kadaluarsa: {'title': 'Kadaluarsa', 'class': 'btn-label-dark'},
+						draft: {'title': 'Draft', 'class': 'btn-label-dark dark-blue'},
+						baru: {'title': 'Baru', 'class': 'btn-label-brand'},
+						perpanjang : {'title': 'Perpanjang', 'class': 'btn-label-warning'},
+						resubmit : {'title' : 'Resubmit', 'class' : 'btn-label-bold bold-status'},
+						ditolak : {'title' : 'Ditolak', 'class' : 'btn-label-danger'},
+						berlangsung : {'title' : 'Berlangsung', 'class' : 'btn-label-primary'},
+						ditunda : {'title' : 'Ditunda','class' : 'btn-label-dark dark-status'},
+						selesai : {'title' : 'Selesai', 'class' : 'btn-label-success done-status'},
+						tutup : {'title' : 'Tutup', 'class' : 'btn-label-success'},
+					};
+					if (typeof status[data] === 'undefined') {
+						return data;
+					}
+					return '<span style="width:100%" class="btn btn-bold btn-sm btn-font-sm ' + status[data].class + '">' + status[data].title + '</span>';
+				},
+			},{
+				field: 'aksi',
+				title: 'Aksi',
+				responsivePriority: -1,
+				className: 'text-center',
+				orderable: false,
+				render: function(data, type, full, meta) {
+					var status = {
+						kadaluarsa: {'href': 'rincian_pekerjaan_belum_terverifikasi.html'},
+						draft: {'href': 'edit_pekerjaan_abi.html'},
+						perpanjang: {'href': 'rincian_pekerjaan_belum_terverifikasi.html'},
+						resubmit: {'href': 'rincian_pekerjaan_belum_terverifikasi.html'},
+						baru: {'href': 'rincian_pekerjaan_belum_terverifikasi.html'},
+						ditolak: {'href': 'rincian_pekerjaan_ditolak.html'},
+						berlangsung: {'href': 'rincian_pekerjaan_berlangsung.html'},
+						ditunda: {'href': 'rincian_pekerjaan_ditunda.html'},
+						selesai: {'href': 'rincian_pekerjaan_selesai.html'},
+						tutup: {'href': 'rincian_pekerjaan_belum_terverifikasi.html'},
+					};
+					return `
+					<a href="${status[full.status].href}" class="btn btn-sm btn-primary" style="color:white;border-radius:20px">Rincian</a>`;
+				},
+			}],
+			columnDefs: [
+			{
+				targets: [0,1,2,3,4,5,6,7],
+				className: 'text-center'
+			}
+			]
+		});
+
+		$('#childrow_contoh tbody').on('click', 'td.details-control', function () {
+			var tr = $(this).closest('tr');
+			var row = table.row( tr );
+
+			if ( row.child.isShown() ) {
+				row.child.hide();
+				tr.removeClass('shown');
+			}
+			else {
+				row.child( format(row.data()) ).show();
+				tr.addClass('shown');
+			}
+		});
+	};*/
+	var initTable6 = function() {
+		function format ( d, tds ) {
+			var trs='';
+			$.each($(d.no_child),function(key,value){
+				var validasi = `
+					<div class="kt-checkbox-list">
+					<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success validasi_check">
+					<input disabled checked="" type="checkbox" id="check_hsse" name="check_hsse"> HSSE
+					<span></span>
+					</label>
+					<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success validasi_check">
+					<input disabled checked="" type="checkbox" id="check_gsi" name="check_hsse"> GSI
+					<span></span>
+					</label>
+					</div>`;
+
+				var status = {
+						kadaluarsa: {'title': 'Kadaluarsa', 'class': 'btn-label-dark', 'href': 'rincian_pekerjaan_belum_terverifikasi.html'},
+						draft: {'title': 'Draft', 'class': 'btn-label-dark dark-blue', 'href': 'edit_pekerjaan_abi.html'},
+						baru: {'title': 'Baru', 'class': 'btn-label-brand','href': 'rincian_pekerjaan_belum_terverifikasi.html'},
+						perpanjang : {'title': 'Perpanjang', 'class': 'btn-label-warning','href': 'rincian_pekerjaan_belum_terverifikasi.html'},
+						resubmit : {'title' : 'Resubmit', 'class' : 'btn-label-bold bold-status','href': 'rincian_pekerjaan_belum_terverifikasi.html'},
+						ditolak : {'title' : 'Ditolak', 'class' : 'btn-label-danger','href': 'rincian_pekerjaan_ditolak.html'},
+						berlangsung : {'title' : 'Berlangsung', 'class' : 'btn-label-primary','href': 'rincian_pekerjaan_berlangsung.html'},
+						ditunda : {'title' : 'Ditunda','class' : 'btn-label-dark dark-status','href': 'rincian_pekerjaan_ditunda.html'},
+						selesai : {'title' : 'Selesai', 'class' : 'btn-label-success done-status','href': 'rincian_pekerjaan_selesai.html'},
+						tutup : {'title' : 'Tutup', 'class' : 'btn-label-success','href': 'rincian_pekerjaan_belum_terverifikasi.html'},
+					};
+				var return_status = '<span class="btn btn-bold btn-sm btn-font-sm ' + status[d.status_child[key]].class + '">' + status[d.status_child[key]].title + '</span>';
+				
+				var aksi = '<a href="'+status[d.status_child[key]].href+'" class="btn btn-sm btn-primary" style="color:white;border-radius:20px">Rincian</a>';
+				trs+='<tr><td style="width:30px"></td><td>'+value+
+				'</td><td>'+d.pekerjaan_child[key]+
+				'</td><td>'+d.vendor_child[key]+
+				'</td><td>'+d.sifat_child[key]+
+				'</td><td>'+d.tipe_child[key]+
+				'</td><td>'+d.tanggal_child[key]+
+				'</td><td>'+validasi+
+				'</td><td>'+return_status+
+				'</td><td>'+aksi+
+				'</td></tr>';
+
+			})
+			return '<table  class="table text-center">'+
+			'<thead><tr>'+
+			'<td></td>'+
+			'<td>No.</td>'+
+			'<td>Pekerjaan</td>'+
+			'<td>Vendor</td>'+
+			'<td>Sifat</td>'+
+			'<td>Tipe</td>'+
+			'<td>Tanggal Mulai</td>'+
+			'<td>Validasi</td>'+
+			'<td>Status</td>'+
+			'<td>Aksi</td></tr>'+
+			'</thead><tbody>' +trs+
+
+			'</tbody></table>';
+		}
+
+		var table = $('#childrow_contoh').DataTable({
+			"ajax": '../source/childrow_data.json',
+			columns: [
+			{
+				class:          'details-control',
+				orderable:      false,
+				data:           '#',
+				title : '#',
+				defaultContent: '',
+				width: 20
+			},
+			{
+				data: 'no',
+				orderable:      false,
+				title: 'No.',
+			},{
+				data: 'pekerjaan',
+				title: 'Pekerjaan',
+			},{
+				data: 'vendor',
+				title: 'Vendor',
+			},{
+				data: 'sifat',
+				title: 'Sifat',
+			},{
+				data: 'tipe',
+				title: 'Tipe',
+			},{
+				data: 'tanggal',
+				title: 'Tanggal Mulai',
+			},{
+				data: 'validasi',
+				title: 'Validasi',
+				responsivePriority: -1,
+				render: function(data, type, full, meta) {
+					return `
+					<div class="kt-checkbox-list">
+					<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success validasi_check">
+					<input disabled checked="" type="checkbox" id="check_hsse" name="check_hsse"> HSSE
+					<span></span>
+					</label>
+					<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success validasi_check">
+					<input disabled checked="" type="checkbox" id="check_gsi" name="check_hsse"> GSI
+					<span></span>
+					</label>
+					</div>`;
+				},
+			},{
+				data: 'status',
+				title: 'Status',
+				responsivePriority: -1,
+				render: function(data, type, full, meta) {
+					var status = {
+						kadaluarsa: {'title': 'Kadaluarsa', 'class': 'btn-label-dark'},
+						draft: {'title': 'Draft', 'class': 'btn-label-dark dark-blue'},
+						baru: {'title': 'Baru', 'class': 'btn-label-brand'},
+						perpanjang : {'title': 'Perpanjang', 'class': 'btn-label-warning'},
+						resubmit : {'title' : 'Resubmit', 'class' : 'btn-label-bold bold-status'},
+						ditolak : {'title' : 'Ditolak', 'class' : 'btn-label-danger'},
+						berlangsung : {'title' : 'Berlangsung', 'class' : 'btn-label-primary'},
+						ditunda : {'title' : 'Ditunda','class' : 'btn-label-dark dark-status'},
+						selesai : {'title' : 'Selesai', 'class' : 'btn-label-success done-status'},
+						tutup : {'title' : 'Tutup', 'class' : 'btn-label-success'},
+					};
+					if (typeof status[data] === 'undefined') {
+						return data;
+					}
+					return '<span style="width:100%" class="btn btn-bold btn-sm btn-font-sm ' + status[data].class + '">' + status[data].title + '</span>';
+				},
+			},{
+				field: 'aksi',
+				title: 'Aksi',
+				responsivePriority: -1,
+				className: 'text-center',
+				orderable: false,
+				render: function(data, type, full, meta) {
+					var status = {
+						kadaluarsa: {'href': 'rincian_pekerjaan_belum_terverifikasi.html'},
+						draft: {'href': 'edit_pekerjaan_abi.html'},
+						perpanjang: {'href': 'rincian_pekerjaan_belum_terverifikasi.html'},
+						resubmit: {'href': 'rincian_pekerjaan_belum_terverifikasi.html'},
+						baru: {'href': 'rincian_pekerjaan_belum_terverifikasi.html'},
+						ditolak: {'href': 'rincian_pekerjaan_ditolak.html'},
+						berlangsung: {'href': 'rincian_pekerjaan_berlangsung.html'},
+						ditunda: {'href': 'rincian_pekerjaan_ditunda.html'},
+						selesai: {'href': 'rincian_pekerjaan_selesai.html'},
+						tutup: {'href': 'rincian_pekerjaan_belum_terverifikasi.html'},
+					};
+					return `
+					<a href="${status[full.status].href}" class="btn btn-sm btn-primary" style="color:white;border-radius:20px">Rincian</a>`;
+				},
+			}],
+			columnDefs: [
+			{
+				targets: [0,1,2,3,4,5,6,7],
+				className: 'text-center'
+			}
+			]
+		});
+
+
+
+		$('#childrow_contoh tbody').on('click', 'td.details-control', function () {
+			var tr = $(this).closest('tr');
+			var row = table.row( tr );
+
+			if ( row.child.isShown() ) {
+				row.child.hide();
+				tr.removeClass('shown');
+			}
+			else {
+				row.child( format(row.data(), tr.children('td')) ).show();
+				tr.addClass('shown');
+				/*tr.next('tr').children('td').css('padding', '0px');*/
+			}
+			
+		});
+	};
 	return {
 		//main function to initiate the module
 		init: function() {
@@ -473,6 +797,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 			initTable3();
 			initTable4();
 			initTable5();
+			initTable6();
 		},
 
 	};

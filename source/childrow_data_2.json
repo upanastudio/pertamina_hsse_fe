@@ -1,0 +1,33 @@
+{
+	"data": [{
+		"no_child": [
+			"1.a", "1.b"
+		],
+		"pekerjaan_child": [
+			"Penggalian", "Penggalian"
+		],
+		"vendor_child": [
+			"CV. Upana", "CV.Upana"
+		],
+		"tanggal_child": [
+			"12 November 2019", "20 November 2019"
+		],
+		"sifat_child": [
+			"Swakelola", "Swakelola"
+		],
+		"tipe_child": [
+			"Hot", "Hot"
+		],
+		"validasi_child": [
+			null, null
+		],
+		"status_child": [
+			"baru", "baru"
+		],
+		"aksi_child": [
+			null, null
+		]
+
+
+	}]
+}
