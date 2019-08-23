@@ -8,7 +8,7 @@
                  "no_sika" : "01/23/12345123",
                  "nama_pekerjaan" : "Penggalian",
                  "jenis_sika" : "SIKA Panas",
-                 "status" : "baru",
+                 "status" : "pengajuan awal",
                  "validasi": null,
                  "aksi" : null
 
@@ -18,7 +18,7 @@
                  "no_sika" : "01/23/12345123",
                  "nama_pekerjaan" : "Penggalian",
                  "jenis_sika" : "Izin Kerja Bahan Radiobaru",
-                 "status" : "resubmit",
+                 "status" : "pengajuan ulang",
                  "validasi": null,
                  "aksi" : null
              },
@@ -45,7 +45,7 @@
                  "no_sika" : "01/23/12345123",
                  "nama_pekerjaan" : "Penggalian",
                  "jenis_sika" : "Izin Kerja Bahan Radiobaru",
-                 "status" : "baru",
+                 "status" : "pengajuan awal",
                  "validasi": null,
                  "aksi" : null
              },
@@ -63,7 +63,7 @@
                  "no_sika" : "01/23/12345123",
                  "nama_pekerjaan" : "Penggalian",
                  "jenis_sika" : "Izin Kerja Bahan Radiobaru",
-                 "status" : "resubmit",
+                 "status" : "pengajuan ulang",
                  "validasi": null,
                  "aksi" : null
              },

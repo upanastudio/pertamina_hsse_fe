@@ -5,67 +5,75 @@
     "sColumns": "",
     "aaData": [{
                  "no": 1,
+                 "kategori" : "Pekerja",
                  "nama" : "Ahmad",
-                 "vendor" : "CV. Upana Studio",
-                 "pekerjaan" : "Penggalian",
                  "jabatan" : "Penggalian",
+                 "vendor" : "CV. Upana Studio",
+                 "waktu" : "28 Agustus 2018",
                  "status" : "masuk"
              },
              {
                  "no": 2,
+                 "kategori" : "AMT",
                  "nama" : "Ahmad",
-                 "vendor" : "CV. Upana Studio",
-                 "pekerjaan" : "Penggalian",
                  "jabatan" : "Penggalian",
+                 "vendor" : "CV. Upana Studio",
+                 "waktu" : "28 Agustus 2018",
                  "status" : "keluar"
              },
              {
                  "no": 3,
+                 "kategori" : "TKJP",
                  "nama" : "Ahmad",
-                 "vendor" : "CV. Upana Studio",
-                 "pekerjaan" : "Penggalian",
                  "jabatan" : "Penggalian",
+                 "vendor" : "CV. Upana Studio",
+                 "waktu" : "28 Agustus 2019",
                  "status" : "masuk"
              },
              {
                  "no": 4,
-                 "nama" : "Ahmad",
-                 "vendor" : "CV. Upana Studio",
-                 "pekerjaan" : "Penggalian",
-                 "jabatan" : "Penggalian",
-                 "status" : "keluar"
+                "kategori" : "Kontraktor",
+                "nama" : "Ahmad",
+                "jabatan" : "Penggalian",
+                "vendor" : "CV. Upana Studio",
+                "waktu" : "28 Agustus 2018",
+                "status" : "masuk"
              },
              {
                  "no": 5,
+                 "kategori" : "TKJP",
                  "nama" : "Ahmad",
-                 "vendor" : "CV. Upana Studio",
-                 "pekerjaan" : "Penggalian",
                  "jabatan" : "Penggalian",
-                 "status" : "masuk"
+                 "vendor" : "CV. Upana Studio",
+                 "waktu" : "28 Agustus 2018",
+                 "status" : "keluar"
              },
              {
                  "no": 6,
+                 "kategori" : "AMT",
                  "nama" : "Ahmad",
-                 "vendor" : "CV. Upana Studio",
-                 "pekerjaan" : "Penggalian",
                  "jabatan" : "Penggalian",
-                 "status" : "keluar"
+                 "vendor" : "CV. Upana Studio",
+                 "waktu" : "28 Agustus 2018",
+                 "status" : "masuk"
              },
              {
                  "no": 7,
+                 "kategori" : "Kontraktor",
                  "nama" : "Ahmad",
-                 "vendor" : "CV. Upana Studio",
-                 "pekerjaan" : "Penggalian",
                  "jabatan" : "Penggalian",
-                 "status" : "masuk"
+                 "vendor" : "CV. Upana Studio",
+                 "waktu" : "28 Agustus 2018",
+                 "status" : "keluar"
              },
               {
                  "no": 8,
+                 "kategori" : "Pekerja",
                  "nama" : "Ahmad",
-                 "vendor" : "CV. Upana Studio",
-                 "pekerjaan" : "Penggalian",
                  "jabatan" : "Penggalian",
-                 "status" : "keluar"
+                 "vendor" : "CV. Upana Studio",
+                 "waktu" : "28 Agustus 2018",
+                 "status" : "masuk"
              }
 ]
 }

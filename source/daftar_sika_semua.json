@@ -7,8 +7,8 @@
                  "no": 1,
                  "jenis_sika" : "SIKA Panas",
                  "no_sika" : "01/23/12345123",
-                 "status" : "baru",
-                 "validasi" : null,
+                 "status" : "pengajuan awal",
+                 "validasi" : "hsse",
                  "rincian" : null,
                  "aksi" : null
 
@@ -17,8 +17,8 @@
                 "no": 2,
                   "jenis_sika" : "SIKA Panas",
                  "no_sika" : "01/23/12345123",
-                 "status" : "berlangsung",
-                 "validasi" : null,
+                 "status" : "pengajuan ulang",
+                 "validasi" : "hsse",
                  "rincian" : null,
                  "aksi" : null
              },
@@ -26,8 +26,8 @@
                  "no": 3,
                   "jenis_sika" : "SIKA Panas",
                  "no_sika" : "01/23/12345123",
-                 "status" : "ditunda",
-                 "validasi" : null,
+                 "status" : "perpanjang",
+                 "validasi" : "hsse",
                  "rincian" : null,
                  "aksi" : null
              },
@@ -35,8 +35,8 @@
                  "no": 4,
                  "jenis_sika" : "SIKA Panas",
                  "no_sika" : "01/23/12345123",
-                 "status" : "tutup",
-                 "validasi" : null,
+                 "status" : "ditolak",
+                 "validasi" : "hsse",
                  "rincian" : null,
                  "aksi" : null
              },
@@ -44,8 +44,8 @@
                  "no": 5,
                   "jenis_sika" : "SIKA Panas",
                  "no_sika" : "01/23/12345123",
-                 "status" : "ditolak",
-                 "validasi" : null,
+                 "status" : "tutup",
+                 "validasi" : "hsse",
                  "rincian" : null,
                  "aksi" : null
              },
@@ -54,7 +54,7 @@
                  "jenis_sika" : "SIKA Panas",
                  "no_sika" : "01/23/12345123",
                  "status" : "kadaluarsa",
-                 "validasi" : null,
+                 "validasi" : "hsse",
                  "rincian" : null,
                  "aksi" : null
              },
@@ -62,9 +62,8 @@
                  "no": 7,
                  "jenis_sika" : "SIKA Panas",
                  "no_sika" : "01/23/12345123",
-                 "status" : "perpanjang",
-                 "validasi" : null,
-                 "rincian" : null,
+                 "status" : "ditunda",
+                 "validasi" : "hsse",
                  "rincian" : null,
                  "aksi" : null
              },
@@ -72,8 +71,26 @@
                  "no": 8,
                   "jenis_sika" : "SIKA Panas",
                  "no_sika" : "01/23/12345123",
-                 "status" : "baru",
-                 "validasi" : null,
+                 "status" : "progress",
+                 "validasi" : "hsse",
+                 "rincian" : null,
+                 "aksi" : null
+             },
+             {
+                 "no": 9,
+                  "jenis_sika" : "SIKA Panas",
+                 "no_sika" : "01/23/12345123",
+                 "status" : "tutup",
+                 "validasi" : "hsse",
+                 "rincian" : null,
+                 "aksi" : null
+             },
+              {
+                 "no": 10,
+                  "jenis_sika" : "SIKA Panas",
+                 "no_sika" : "01/23/12345123",
+                 "status" : "kadaluarsa",
+                 "validasi" : "hsse",
                  "rincian" : null,
                  "aksi" : null
              }

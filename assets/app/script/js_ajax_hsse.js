@@ -15,7 +15,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 			processing: true,
 			serverSide: false,
 			ajax: {
-				url: '../source/daftar_pekerjaan_hsse.json',
+				url: '../source/daftar_permintaan_pekerjaan.json',
 				type: 'POST',
 				data: {
 					pagination: {
@@ -42,7 +42,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 				title: 'Sifat',
 				render: function(data, type, full, meta) {
 					sifat_pekerjaan = data;
-					return sifat_pekerjaan;
+					return data;
 				},
 			},{
 				data: 'validasi',
@@ -92,10 +92,10 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 				title: 'Status',
 				render: function(data, type, full, meta) {
 					var status = {
-						baru: {'title': 'Baru', 'class': 'btn-label-brand'},
-						perpanjang: {'title': 'Perpanjang', 'class': 'btn-label-warning'},
-						tutup: {'title': 'Tutup', 'class': 'btn-label-success'},
-						resubmit:{'title': 'Resubmit', 'class': 'btn-label-bold bold-status'},
+						'pengajuan awal': {'title': 'Pengajuan Awal', 'class': 'btn-label-danger'},
+						'pengajuan ulang': {'title': 'Pengajuan Ulang', 'class': 'btn-label-danger'},
+						perpanjang: {'title': 'Perpanjang', 'class': 'btn-label-danger'},
+						tutup:{'title': 'Tutup', 'class': 'btn-label-danger'},
 					};
 					if (typeof status[data] === 'undefined') {
 						return data;
@@ -132,6 +132,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 	};
 	var initTable2 = function() {
 		var table = $('#daftar_riwayat_pekerjaan');
+		var status_validasi = "";
 
 		// begin first table
 		table.DataTable({
@@ -171,17 +172,23 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 				responsivePriority: -1,
 				render: function(data, type, full, meta) {
 					if (data == "hsse") {
-						return `
-						<div class="kt-checkbox-list">
-							<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
-								<input disabled checked id="hsse_validation" name="hsse_validation" type="checkbox">HSSE
-								<span></span>
-							</label>
-							<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
-								<input disabled id="gsi_validation" name="gsi_validation" type="checkbox">GSI
-								<span></span>
-							</label>
-						</div>`;
+						if (status_validasi == "progress" || status_validasi == "selesai") {
+							return `
+							`;
+						}
+						else {
+							return `
+							<div class="kt-checkbox-list">
+								<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
+									<input disabled checked id="hsse_validation" name="hsse_validation" type="checkbox">HSSE
+									<span></span>
+								</label>
+								<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
+									<input disabled id="gsi_validation" name="gsi_validation" type="checkbox">GSI
+									<span></span>
+								</label>
+							</div>`;
+						}
 					} else if (data == "gsi") {
 						return `
 						<div class="kt-checkbox-list">
@@ -212,55 +219,22 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 				data: 'status',
 				title: 'Status',
 				render: function(data, type, full, meta) {
-					var stateSatu = "baru";
-					var stateDua = "berlangsung";
-					var stateTiga = "ditunda";
-					var stateEmpat = "perpanjang";
-					var stateLima = "tutup";
-					var stateEnam = "selesai";
-					var stateTujuh = "ditolak";
-					var stateDelapan = "kadaluarsa"
-
-					if (data == stateSatu) {
-						return '<span style="width:100%" class="btn btn-bold btn-sm btn-font-sm btn-label-brand"">Baru</span>';
+					var status = {
+						kadaluarsa: {'title': 'Kadaluarsa', 'class': 'btn-label-dark'},
+						'pengajuan awal': {'title': 'Pengajuan Awal', 'class': 'btn-label-danger'},
+						perpanjang : {'title': 'Perpanjang', 'class': 'btn-label-danger'},
+						'pengajuan ulang' : {'title' : 'Pengajuan Ulang', 'class' : 'btn-label-danger'},
+						ditolak : {'title' : 'Ditolak', 'class' : 'btn-label-danger'},
+						progress : {'title' : 'Progress', 'class' : 'btn-label-warning'},
+						ditunda : {'title' : 'Ditunda','class' : 'btn-label-danger'},
+						tutup : {'title' : 'Tutup', 'class' : 'btn-label-danger'},
+						selesai : {'title' : 'Selesai', 'class' : 'btn-label-success'}
+					};
+					if (typeof status[data] === 'undefined') {
+						return data;
 					}
-					else if (data == stateDua) {
-						return '<span style="width:100%" class="btn btn-bold btn-sm btn-font-sm btn-label-primary">Berlangsung</span>';
-					}
-					else if (data == stateTiga) {
-						return '<span style="width:100%" class="btn btn-bold btn-sm btn-font-sm btn-label-dark dark-status">Ditunda</span>';
-					}
-					else if (data == stateEmpat) {
-						return '<span style="width:100%" class="btn btn-bold btn-sm btn-font-sm btn-label-warning">Perpanjang</span>';
-					}
-					else if (data == stateLima) {
-						return '<span style="width:100%" class="btn btn-bold btn-sm btn-font-sm btn-label-success">Tutup</span>';
-					}
-					else if (data == stateEnam) {
-						return '<span style="width:100%" class="btn btn-bold btn-sm btn-font-sm btn-label-success done-status">Selesai</span>';
-					}
-					else if (data == stateTujuh) {
-						return '<span style="width:100%" class="btn btn-bold btn-sm btn-font-sm btn-label-danger">Ditolak</span>';
-					}
-					else if (data == stateDelapan) {
-						return '<span style="width:100%" class="btn btn-bold btn-sm btn-font-sm btn-label-dark">Kadaluarsa</span>';
-					}
-					else {
-						return '<span style="width:100%" class="btn btn-bold btn-sm btn-font-sm">' + data + '</span>';
-					}
-
-					// var status = {
-					// 	terverifikasi: {'title': 'Terverifikasi', 'class': ' btn-label-success'},
-					// 	ditolak: {'title': 'Ditolak', 'class': 'btn-label-danger'},
-					// 	draft: {'title': 'Draft', 'class': 'btn-label-brand'},
-					// 	berlangsung: {'title': 'Berlangsung', 'class': 'btn-label-brand'},
-					// 	ditunda: {'title': 'Ditunda', 'class': 'btn-label-warning'},
-					// 	selesai: {'title': 'Selesai', 'class': 'btn-label-dark'},
-					// };
-					// if (typeof status[data] === 'undefined') {
-					// 	return data;
-					// }
-					// return '<span style="width:100%" class="btn btn-bold btn-sm btn-font-sm ' + status[data].class + '">' + status[data].title + '</span>';
+					status_validasi = data;
+					return '<span style="width:100%" class="btn btn-bold btn-sm btn-font-sm ' + status[data].class + '">' + status[data].title + '</span>';
 				},
 			},{
 				field: 'aksi',
@@ -360,14 +334,14 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 				render: function(data, type, full, meta) {
 					var status = {
 						kadaluarsa: {'title': 'Kadaluarsa', 'class': 'btn-label-dark'},
-						draft: {'title': 'Draft', 'class': 'btn-label-dark dark-blue'},
-						baru: {'title': 'Baru', 'class': 'btn-label-brand'},
-						perpanjang : {'title': 'Perpanjang', 'class': 'btn-label-warning'},
-						resubmit : {'title' : 'Resubmit', 'class' : 'btn-label-bold bold-status'},
+						'pengajuan awal': {'title': 'Pengajuan Awal', 'class': 'btn-label-danger'},
+						perpanjang : {'title': 'Perpanjang', 'class': 'btn-label-danger'},
+						'pengajuan ulang' : {'title' : 'Pengajuan Ulang', 'class' : 'btn-label-danger'},
 						ditolak : {'title' : 'Ditolak', 'class' : 'btn-label-danger'},
-						berlangsung : {'title' : 'Berlangsung', 'class' : 'btn-label-primary'},
-						ditunda : {'title' : 'Ditunda','class' : 'btn-label-dark dark-status'},
-						tutup : {'title' : 'Tutup', 'class' : 'btn-label-success'}
+						progress : {'title' : 'Progress', 'class' : 'btn-label-warning'},
+						ditunda : {'title' : 'Ditunda','class' : 'btn-label-danger'},
+						tutup : {'title' : 'Tutup', 'class' : 'btn-label-danger'},
+						selesai : {'title' : 'Selesai', 'class' : 'btn-label-success'}
 					};
 					if (typeof status[data] === 'undefined') {
 						return data;
@@ -878,10 +852,10 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 				// width: 70,
 				render: function(data, type, full, meta) {
 					var status = {
-						baru: {'title': 'Baru', 'class': 'btn-label-brand'},
-						perpanjang: {'title': 'Perpanjang', 'class': 'btn-label-warning'},
-						tutup: {'title': 'Tutup', 'class': 'btn-label-success'},
-						resubmit: {'title': 'Resubmit', 'class': 'btn-label-bold bold-status'},
+						'pengajuan awal': {'title': 'Pengajuan Awal', 'class': 'btn-label-danger'},
+						'pengajuan ulang': {'title': 'Pengajuan Ulang', 'class': 'btn-label-danger'},
+						'perpanjang': {'title': 'Perpanjang', 'class': 'btn-label-danger'},
+						'tutup': {'title': 'Tutup', 'class': 'btn-label-danger'},
 					};
 					if (typeof status[data] === 'undefined') {
 						return data;
@@ -898,12 +872,15 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 				orderable: false,
 				width: 100,
 				render: function(data, type, full, meta) {
-					if (status_sika == "baru") {
+					if (status_sika == "pengajuan awal") {
 						return `
 						<a href="rincian_permintaan_sika_pembuatan.html" class="btn btn-sm btn-brand" style="color:white;border-radius:20px">Rincian</a> `;
 					} else if (status_sika == "perpanjang") {
 						return `
 						<a href="rincian_permintaan_sika_perpanjang.html" class="btn btn-sm btn-brand" style="color:white;border-radius:20px">Rincian</a> `;
+					} else if (status_sika == "pengajuan ulang"){
+						return `
+						<a href="rincian_permintaan_sika_resubmit.html" class="btn btn-sm btn-brand" style="color:white;border-radius:20px">Rincian</a> `;
 					} else if (status_sika == "tutup"){
 						return `
 						<a href="rincian_permintaan_sika_tutup.html" class="btn btn-sm btn-brand" style="color:white;border-radius:20px">Rincian</a> `;
@@ -996,50 +973,16 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 			},{
 				data: 'status',
 				title: 'Status',
-				// render: function(data, type, full, meta) {
-				// 	var stateSatu = "baru";
-				// 	var stateDua = "berjalan";
-				// 	var stateTiga = "ditunda";
-				// 	var stateEmpat = "perpanjang";
-				// 	var stateLima = "tutup";
-				// 	var stateEnam = "ditolak";
-				// 	var stateTujuh = "kadaluarsa";
-				//
-				// 	if (data == stateSatu) {
-				// 		return '<span style="width:100%" class="btn btn-bold btn-sm btn-font-sm btn-label-not-so-brand">Baru</span>';
-				// 	}
-				// 	else if (data == stateDua) {
-				// 		return '<span style="width:100%" class="btn btn-bold btn-sm btn-font-sm btn-label-brand">Berjalan</span>';
-				// 	}
-				// 	else if (data == stateTiga) {
-				// 		return '<span style="width:100%" class="btn btn-bold btn-sm btn-font-sm btn-label-warning">Ditunda</span>';
-				// 	}
-				// 	else if (data == stateEmpat) {
-				// 		return '<span style="width:100%" class="btn btn-bold btn-sm btn-font-sm btn-label-not-so-danger">Perpanjang</span>';
-				// 	}
-				// 	else if (data == stateLima) {
-				// 		return '<span style="width:100%" class="btn btn-bold btn-sm btn-font-sm btn-label-primary">Tutup</span>';
-				// 	}
-				// 	else if (data == stateEnam) {
-				// 		return '<span style="width:100%" class="btn btn-bold btn-sm btn-font-sm btn-label-danger">Ditolak</span>';
-				// 	}
-				// 	else if (data == stateTujuh) {
-				// 		return '<span style="width:100%" class="btn btn-bold btn-sm btn-font-sm btn-label-dark">Kadaluarsa</span>';
-				// 	}
-				// 	else {
-				// 		return '<span style="width:100%" class="btn btn-bold btn-sm btn-font-sm">' + data + '</span>';
-				// 	}
-				// },
 				render: function(data, type, full, meta) {
 					var status = {
 						kadaluarsa: {'title': 'Kadaluarsa', 'class': 'btn-label-dark'},
-						baru: {'title': 'Baru', 'class': 'btn-label-brand'},
-						perpanjang : {'title': 'Perpanjang', 'class': 'btn-label-warning'},
-						resubmit : {'title' : 'Resubmit', 'class' : 'btn-label-bold bold-status'},
+						'pengajuan awal': {'title': 'Pengajuan Awal', 'class': 'btn-label-danger'},
+						perpanjang : {'title': 'Perpanjang', 'class': 'btn-label-danger'},
+						'pengajuan ulang' : {'title' : 'Pengajuan Ulang', 'class' : 'btn-label-danger'},
 						ditolak : {'title' : 'Ditolak', 'class' : 'btn-label-danger'},
-						berlangsung : {'title' : 'Berlangsung', 'class' : 'btn-label-primary'},
-						ditunda : {'title' : 'Ditunda','class' : 'btn-label-dark dark-status'},
-						tutup : {'title' : 'Tutup', 'class' : 'btn-label-success'}
+						progress : {'title' : 'Progress', 'class' : 'btn-label-warning'},
+						ditunda : {'title' : 'Ditunda','class' : 'btn-label-danger'},
+						tutup : {'title' : 'Tutup', 'class' : 'btn-label-danger'}
 					};
 					if (typeof status[data] === 'undefined') {
 						return data;
@@ -1067,64 +1010,6 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 		});
 	};
 	var initTable13 = function() {
-		var table = $('#daftar_pob');
-
-		// begin first table
-		table.DataTable({
-			responsive: true,
-			searchDelay: 500,
-			processing: true,
-			serverSide: false,
-			ajax: {
-				url: '../source/daftar_pob.json',
-				type: 'POST',
-				data: {
-					pagination: {
-						perpage: 50,
-					},
-				},
-			},
-			columns: [
-			{
-				data: 'no',
-				title: 'No.',
-				orderable: false,
-			},{
-				data: 'nama',
-				title: 'Nama',
-			},{
-				data: 'vendor',
-				title: 'Vendor',
-			},{
-				data: 'pekerjaan',
-				title: 'Pekerjaan',
-			},{
-				data: 'jabatan',
-				title: 'Jabatan',
-			},{
-				data: 'status',
-				title: 'Status',
-				// width: 70,
-				render: function(data, type, full, meta) {
-					var status = {
-						masuk: {'title': 'Masuk', 'class': 'btn-label-success'},
-						keluar: {'title': 'Keluar', 'class': 'btn-label-danger'},
-					};
-					if (typeof status[data] === 'undefined') {
-						return data;
-					}
-					return '<span style="width:100%" class="btn btn-bold btn-sm btn-font-sm ' + status[data].class + '">' + status[data].title + '</span>';
-				},
-			}],
-			columnDefs: [
-			{
-				targets: [0,1,2,3,4,5],
-				className: 'text-center'
-			}
-			],
-		});
-	};
-	var initTable14 = function() {
 		var table = $('#daftar_sika_cold_pekerjaan');
 		var tunda = "";
 
@@ -1202,14 +1087,14 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 				render: function(data, type, full, meta) {
 					var status = {
 						kadaluarsa: {'title': 'Kadaluarsa', 'class': 'btn-label-dark'},
-						draft: {'title': 'Draft', 'class': 'btn-label-dark dark-blue'},
-						baru: {'title': 'Baru', 'class': 'btn-label-brand'},
-						perpanjang : {'title': 'Perpanjang', 'class': 'btn-label-warning'},
-						resubmit : {'title' : 'Resubmit', 'class' : 'btn-label-bold bold-status'},
+						'pengajuan awal': {'title': 'Pengajuan Awal', 'class': 'btn-label-danger'},
+						perpanjang : {'title': 'Perpanjang', 'class': 'btn-label-danger'},
+						'pengajuan ulang' : {'title' : 'Pengajuan Ulang', 'class' : 'btn-label-danger'},
 						ditolak : {'title' : 'Ditolak', 'class' : 'btn-label-danger'},
-						berlangsung : {'title' : 'Berlangsung', 'class' : 'btn-label-primary'},
-						ditunda : {'title' : 'Ditunda','class' : 'btn-label-dark dark-status'},
-						tutup : {'title' : 'Tutup', 'class' : 'btn-label-success'}
+						progress : {'title' : 'Progress', 'class' : 'btn-label-warning'},
+						ditunda : {'title' : 'Ditunda','class' : 'btn-label-danger'},
+						tutup : {'title' : 'Tutup', 'class' : 'btn-label-danger'},
+						selesai : {'title' : 'Selesai', 'class' : 'btn-label-success'}
 					};
 					if (typeof status[data] === 'undefined') {
 						return data;
@@ -1247,113 +1132,188 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 			}],
 			columnDefs: [
 			{
-				targets: [0,1,2,3,4,5],
+				targets: [0,1,2,3,4,5,6],
 				className: 'text-center'
 			}
 			],
 		});
 	};
-	// var initTable15 = function() {
-	// 	var table = $('#daftar_sika_pekerjaan');
-	//
-	// 	// begin first table
-	// 	table.DataTable({
-	// 		responsive: true,
-	// 		searchDelay: 500,
-	// 		processing: true,
-	// 		serverSide: false,
-	// 		ajax: {
-	// 			url: '../source/daftar_sika_pekerjaan_ahli_teknik.json',
-	// 			type: 'POST',
-	// 			data: {
-	// 				pagination: {
-	// 					perpage: 50,
-	// 				},
-	// 			},
-	// 		},
-	// 		columns: [
-	// 		{
-	// 			data: 'no',
-	// 			title: 'No.',
-	// 		},{
-	// 			data: 'jenis_sika',
-	// 			title: 'Jenis SIKA',
-	// 		},{
-	// 			data: 'no_sika',
-	// 			title: 'No. SIKA',
-	// 		},{
-	// 			data: 'validasi',
-	// 			title: 'Validasi',
-	// 			responsivePriority: -1,
-	// 			render: function(data, type, full, meta) {
-	// 				return `
-	// 				<div class="kt-checkbox-list">
-	// 				<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success validasi_check">
-	// 				<input disabled checked="" type="checkbox" id="check_hsse" name="check_hsse"> HSSE
-	// 				<span></span>
-	// 				</label>
-	// 				<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success validasi_check">
-	// 				<input disabled checked="" type="checkbox" id="check_gsi" name="check_hsse"> GSI
-	// 				<span></span>
-	// 				</label>
-	// 				</div>`;
-	// 			},
-	// 		},{
-	// 			data: 'status',
-	// 			title: 'Status',
-	// 			render: function(data, type, full, meta) {
-	// 				var status = {
-	// 					kadaluarsa: {'title': 'Kadaluarsa', 'class': 'btn-label-dark'},
-	// 					draft: {'title': 'Draft', 'class': 'btn-label-dark dark-blue'},
-	// 					baru: {'title': 'Baru', 'class': 'btn-label-brand'},
-	// 					perpanjang : {'title': 'Perpanjang', 'class': 'btn-label-warning'},
-	// 					resubmit : {'title' : 'Resubmit', 'class' : 'btn-label-bold bold-status'},
-	// 					ditolak : {'title' : 'Ditolak', 'class' : 'btn-label-danger'},
-	// 					berlangsung : {'title' : 'Berlangsung', 'class' : 'btn-label-primary'},
-	// 					ditunda : {'title' : 'Ditunda','class' : 'btn-label-dark dark-status'},
-	// 					selesai : {'title' : 'Selesai', 'class' : 'btn-label-success'}
-	// 				};
-	// 				if (typeof status[data] === 'undefined') {
-	// 					return data;
-	// 				}
-	// 				return '<span style="width:100%" class="btn btn-bold btn-sm btn-font-sm ' + status[data].class + '">' + status[data].title + '</span>';
-	// 			},
-	// 		},{
-	// 			field: 'rincian',
-	// 			title: 'Rincian',
-	// 			className: 'text-center',
-	// 			orderable: false,
-	// 			render: function(data, type, full, meta) {
-	// 				return `
-	// 				<a href="rincian_sika.html" class="btn btn-sm btn-primary" style="color:white;border-radius:20px">Rincian</a>`;
-	// 			},
-	// 		},{
-	// 			field: 'aksi',
-	// 			title: 'Aksi',
-	// 			responsivePriority: -1,
-	// 			width: 100,
-	// 			className: 'text-center',
-	// 			orderable: false,
-	// 			render: function(data, type, full, meta) {
-	// 				return `
-	// 				<button type="button" class="btn btn-hover-brand btn-elevate-hover btn-icon btn-sm btn-icon-md btn-circle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	// 				<i class="flaticon-more-1"></i>
-	// 				</button>
-	// 				<div style="min-width:9rem;padding:5px;" class="dropdown-menu dropdown-menu-right">
-	// 				<a href="perpanjang_sika.html" style="margin-bottom:5px;" class="dropdown-item btn btn-secondary"> <i class="fa fa-angle-double-up"></i> Perpanjang</a>
-	// 				<a href="tutup_sika.html"  class="dropdown-item btn btn-secondary"> <i class="fa fa-check"></i> Selesai</a>`
-	// 				;
-	//
-	// 			},
-	// 		}],
-	// 		columnDefs: [
-	// 		{
-	// 			targets: [0,1,2,3,4,5,6],
-	// 			className: 'text-center'
-	// 		}
-	// 		],
-	// 	});
-	// };
+	var initTable14 = function() {
+		// begin first table
+		var table = $('#daftar_pob').DataTable({
+			responsive: true,
+			// Pagination settings
+			dom: `<'row'<'col-sm-12'tr>>
+			<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7 dataTables_pager'lp>>`,
+			// read more: https://datatables.net/examples/basic_init/dom.html
+
+			lengthMenu: [5, 10, 25, 50],
+
+			pageLength: 10,
+
+			language: {
+				'lengthMenu': 'Display _MENU_',
+			},
+
+			searchDelay: 500,
+			processing: true,
+			serverSide: false,
+			ajax: {
+				url: '../source/daftar_pob.json',
+				type: 'POST',
+				data: {
+					// parameters for custom backend script demo
+					columnsDef: [
+					'no', 'depot', 'vendor', 'pekerjaan', 'sifat',
+					'tanggal', 'status', 'aksi',],
+				},
+			},
+			columns: [
+			{
+				data: 'no',
+				title: 'No.',
+				orderable: false,
+			},{
+				data: 'kategori',
+				title: 'Kategori',
+			},{
+				data: 'nama',
+				title: 'Nama',
+			},{
+				data: 'jabatan',
+				title: 'Jabatan',
+			},{
+				data: 'vendor',
+				title: 'Vendor',
+			},{
+				data: 'waktu',
+				title: 'Waktu',
+			},{
+				data: 'status',
+				title: 'Status',
+				// width: 70,
+				render: function(data, type, full, meta) {
+					var status = {
+						masuk: {'title': 'Masuk', 'class': 'btn-label-success'},
+						keluar: {'title': 'Keluar', 'class': 'btn-label-danger'},
+					};
+					if (typeof status[data] === 'undefined') {
+						return data;
+					}
+					return '<span style="width:100%" class="btn btn-bold btn-sm btn-font-sm ' + status[data].class + '">' + status[data].title + '</span>';
+				},
+			}],
+
+			initComplete: function() {
+				this.api().columns().every(function() {
+					var column = this;
+
+					switch (column.title()) {
+						case 'Kategori':
+						column.data().unique().sort().each(function(d, j) {
+							$('.kt-input[data-col-index="1"]').append('<option value="' + d + '">' + d + '</option>');
+						});
+						break;
+						// case 'Waktu':
+						// column.data().unique().sort().each(function(d, j) {
+						// 	$('.kt-input[data-col-index="5"]').append('<option value="' + d + '">' + d + '</option>');
+						// });
+						// break;
+					}
+				});
+			},
+
+			columnDefs: [
+			{
+				targets: [0,1,2,3,4,5,6],
+				className: 'text-center'
+			}
+			],
+		});
+
+		var filter = function() {
+			var val = $.fn.dataTable.util.escapeRegex($(this).val());
+			table.column($(this).data('col-index')).search(val ? val : '', false, false).draw();
+		};
+
+		var asdasd = function(value, index) {
+			var val = $.fn.dataTable.util.escapeRegex(value);
+			table.column(index).search(val ? val : '', false, true);
+		};
+
+		$('#kt_search_kategori').on('change', function(e) {
+			e.preventDefault();
+			var params = {};
+			$('.kt-input').each(function() {
+				var i = $(this).data('col-index');
+				if (params[i]) {
+					params[i] += '|' + $(this).val();
+				}
+				else {
+					params[i] = $(this).val();
+				}
+			});
+			$.each(params, function(i, val) {
+				// apply search params to datatable
+				table.column(i).search(val ? val : '', false, false);
+			});
+			table.table().draw();
+		});
+
+		$('#kt_search_waktu').on('change', function(e) {
+			e.preventDefault();
+			var params = {};
+			$('.kt-input').each(function() {
+				var i = $(this).data('col-index');
+				if (params[i]) {
+					params[i] += '|' + $(this).val();
+				}
+				else {
+					params[i] = $(this).val();
+				}
+			});
+			$.each(params, function(i, val) {
+				// apply search params to datatable
+				table.column(i).search(val ? val : '', false, false);
+			});
+			table.table().draw();
+		});
+
+		$('#kt_search_pekerja').on('input', function(e) {
+			e.preventDefault();
+			var params = {};
+			$('.kt-input').each(function() {
+				var i = $(this).data('col-index');
+				if (params[i]) {
+					params[i] += '|' + $(this).val();
+				}
+				else {
+					params[i] = $(this).val();
+				}
+			});
+			$.each(params, function(i, val) {
+				// apply search params to datatable
+				table.column(i).search(val ? val : '', false, false);
+			});
+			table.table().draw();
+		});
+
+		$('#kt_reset').on('click', function(e) {
+			e.preventDefault();
+			$('.kt-input').each(function() {
+				$(this).val('');
+				table.column($(this).data('col-index')).search('', false, false);
+			});
+			table.table().draw();
+		});
+		$('#kt_datepicker').datepicker({
+            todayHighlight: true,
+            templates: {
+                leftArrow: '<i class="la la-angle-left"></i>',
+                rightArrow: '<i class="la la-angle-right"></i>',
+            },
+        });
+	};
 	return {
 		//main function to initiate the module
 		init: function() {

@@ -11,7 +11,7 @@
                  "tipe" : "hot",
                  "status" : "kadaluarsa",
                  "sifat" : "Swakelola",
-                 "validasi": null,
+                 "validasi": "hsse",
                  "aksi" : null
 
              },
@@ -21,9 +21,9 @@
                  "vendor" : "CV. Upana",
                  "tanggal" : "10 November 2019",
                  "tipe" : "hot",
-                 "status" : "kadaluarsa",
+                 "status" : "pengajuan awal",
                  "sifat" : "Swakelola",
-                 "validasi": null,
+                 "validasi": "hsse",
                  "aksi" : null
              },
              {
@@ -32,9 +32,9 @@
                  "vendor" : "CV. Upana",
                  "tanggal" : "10 November 2019",
                  "tipe" : "cold",
-                 "status" : "berlangsung",
+                 "status" : "pengajuan ulang",
                  "sifat" : "ABO",
-                 "validasi": null,
+                 "validasi": "hsse",
                  "aksi" : null
              },
              {
@@ -43,9 +43,9 @@
                  "vendor" : "CV. Upana",
                  "tanggal" : "10 November 2019",
                  "tipe" : "cold",
-                 "status" : "berlangsung",
+                 "status" : "progress",
                  "sifat" : "ABO",
-                 "validasi": null,
+                 "validasi": "hsse",
                  "aksi" : null
              },
              {
@@ -56,7 +56,7 @@
                  "tipe" : "hot",
                  "status" : "ditolak",
                  "sifat" : "ABO",
-                 "validasi": null,
+                 "validasi": "hsse",
                  "aksi" : null
              },
              {
@@ -65,9 +65,9 @@
                  "vendor" : "CV. Upana",
                  "tanggal" : "10 November 2019",
                  "tipe" : "hot",
-                 "status" : "ditolak",
+                 "status" : "perpanjang",
                  "sifat" : "ABI",
-                 "validasi": null,
+                 "validasi": "hsse",
                  "aksi" : null
              },
              {
@@ -78,10 +78,10 @@
                  "tipe" : "hot",
                  "status" : "ditunda",
                  "sifat" : "ABI",
-                 "validasi": null,
+                 "validasi": "hsse",
                  "aksi" : null
              },
-              {
+             {
                  "no": "8",
                  "pekerjaan" : "penggalian",
                  "vendor" : "CV. Upana",
@@ -89,7 +89,18 @@
                  "tipe" : "hot",
                  "status" : "selesai",
                  "sifat" : "ABI",
-                 "validasi": null,
+                 "validasi": "hsse",
+                 "aksi" : null
+             },
+             {
+                 "no": "9",
+                 "pekerjaan" : "penggalian",
+                 "vendor" : "CV. Upana",
+                 "tanggal" : "10 November 2019",
+                 "tipe" : "hot",
+                 "status" : "tutup",
+                 "sifat" : "ABI",
+                 "validasi": "hsse",
                  "aksi" : null
              }
 ]
