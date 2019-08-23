@@ -357,7 +357,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 				orderable: false,
 				render: function(data, type, full, meta) {
 					return `
-					<a href="rincian_sika.html" class="btn btn-sm btn-primary" style="color:white;border-radius:20px">Rincian</a>`;
+					<a href="rincian_riwayat_sika.html" class="btn btn-sm btn-primary" style="color:white;border-radius:20px">Rincian</a>`;
 				},
 			},{
 				field: 'aksi',
@@ -1110,7 +1110,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 				orderable: false,
 				render: function(data, type, full, meta) {
 					return `
-					<a href="rincian_sika.html" class="btn btn-sm btn-primary" style="color:white;border-radius:20px">Rincian</a>`;
+					<a href="rincian_riwayat_sika.html" class="btn btn-sm btn-primary" style="color:white;border-radius:20px">Rincian</a>`;
 				},
 			},{
 				field: 'aksi',
@@ -1185,6 +1185,9 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 			},{
 				data: 'vendor',
 				title: 'Vendor',
+			},{
+				data: 'tanggal',
+				title: 'Tanggal',
 			},{
 				data: 'waktu',
 				title: 'Waktu',
@@ -1279,24 +1282,9 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 			table.table().draw();
 		});
 
-		$('#kt_search_pekerja').on('input', function(e) {
-			e.preventDefault();
-			var params = {};
-			$('.kt-input').each(function() {
-				var i = $(this).data('col-index');
-				if (params[i]) {
-					params[i] += '|' + $(this).val();
-				}
-				else {
-					params[i] = $(this).val();
-				}
-			});
-			$.each(params, function(i, val) {
-				// apply search params to datatable
-				table.column(i).search(val ? val : '', false, false);
-			});
-			table.table().draw();
-		});
+		$('#kt_search_all').on( 'keyup', function () {
+		    table.search( this.value ).draw();
+		} );
 
 		$('#kt_reset').on('click', function(e) {
 			e.preventDefault();

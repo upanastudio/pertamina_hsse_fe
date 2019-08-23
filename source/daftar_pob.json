@@ -9,7 +9,8 @@
                  "nama" : "Ahmad",
                  "jabatan" : "Penggalian",
                  "vendor" : "CV. Upana Studio",
-                 "waktu" : "28 Agustus 2018",
+                 "tanggal" : "08/29/2019",
+                 "waktu" : "15.00",
                  "status" : "masuk"
              },
              {
@@ -18,7 +19,8 @@
                  "nama" : "Ahmad",
                  "jabatan" : "Penggalian",
                  "vendor" : "CV. Upana Studio",
-                 "waktu" : "28 Agustus 2018",
+                 "tanggal" : "08/29/2019",
+                 "waktu" : "15.00",
                  "status" : "keluar"
              },
              {
@@ -27,7 +29,8 @@
                  "nama" : "Ahmad",
                  "jabatan" : "Penggalian",
                  "vendor" : "CV. Upana Studio",
-                 "waktu" : "28 Agustus 2019",
+                 "tanggal" : "08/28/2019",
+                 "waktu" : "15.00",
                  "status" : "masuk"
              },
              {
@@ -36,7 +39,8 @@
                 "nama" : "Ahmad",
                 "jabatan" : "Penggalian",
                 "vendor" : "CV. Upana Studio",
-                "waktu" : "28 Agustus 2018",
+                "tanggal" : "08/28/2019",
+                "waktu" : "15.00",
                 "status" : "masuk"
              },
              {
@@ -45,7 +49,8 @@
                  "nama" : "Ahmad",
                  "jabatan" : "Penggalian",
                  "vendor" : "CV. Upana Studio",
-                 "waktu" : "28 Agustus 2018",
+                 "tanggal" : "08/28/2019",
+                 "waktu" : "15.00",
                  "status" : "keluar"
              },
              {
@@ -54,7 +59,8 @@
                  "nama" : "Ahmad",
                  "jabatan" : "Penggalian",
                  "vendor" : "CV. Upana Studio",
-                 "waktu" : "28 Agustus 2018",
+                 "tanggal" : "08/29/2019",
+                 "waktu" : "15.00",
                  "status" : "masuk"
              },
              {
@@ -63,7 +69,8 @@
                  "nama" : "Ahmad",
                  "jabatan" : "Penggalian",
                  "vendor" : "CV. Upana Studio",
-                 "waktu" : "28 Agustus 2018",
+                 "tanggal" : "08/28/2019",
+                 "waktu" : "15.00",
                  "status" : "keluar"
              },
               {
@@ -72,7 +79,8 @@
                  "nama" : "Ahmad",
                  "jabatan" : "Penggalian",
                  "vendor" : "CV. Upana Studio",
-                 "waktu" : "28 Agustus 2018",
+                 "tanggal" : "08/28/2019",
+                 "waktu" : "15.00",
                  "status" : "masuk"
              }
 ]
