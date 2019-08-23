@@ -1,0 +1,128 @@
+{
+    "iTotalRecords": 10,
+    "iTotalDisplayRecords": 10,
+    "sEcho": 0,
+    "sColumns": "",
+    "aaData": [{
+                 "no": "1",
+                 "depot": "depot satu",
+                 "pekerjaan" : "penggalian",
+                 "vendor" : "CV. Upana",
+                 "tanggal" : "10 November 2019",
+                 "sifat" : "Swakelola",
+                 "tipe" : "hot",
+                 "validasi" : null,
+                 "status" : "selesai",
+                 "aksi" : null
+                
+             },
+             {
+                "no": "2",
+                "depot":"depot dua",
+                 "pekerjaan" : "penggalian",
+                 "vendor" : "CV. Upana",
+                 "tanggal" : "10 November 2019",
+                 "sifat" : "ABI",
+                 "tipe" : "hot",
+                 "validasi" : null,
+                 "status" : "pengajuan_awal",
+                 "aksi" : null
+             },
+             {
+                 "no": "3",
+                 "depot":"depot tiga",
+                 "pekerjaan" : "penggalian",
+                 "vendor" : "CV. Upana",
+                 "tanggal" : "10 November 2019",
+                 "sifat" : "ABO",
+                 "tipe" : "cold",
+                 "validasi" : null,
+                 "status" : "pengajuan_ulang",
+                 "aksi" : null
+             },
+             {
+                 "no": "4",
+                 "depot":"depot empat",
+                 "pekerjaan" : "penggalian",
+                 "vendor" : "CV. Upana",
+                 "tanggal" : "10 November 2019",
+                 "sifat" : "Swakelola",
+                 "tipe" : "cold",
+                 "validasi" : null,
+                 "status" : "perpanjang",
+                 "aksi" : null
+             },
+             {
+                 "no": "5",
+                 "depot":"depot lima",
+                 "pekerjaan" : "penggalian",
+                 "vendor" : "CV. Upana",
+                 "tanggal" : "10 November 2019",
+                 "sifat" : "ABI",
+                 "tipe" : "hot",
+                 "validasi" : null,
+                 "status" : "ditolak",
+                 "aksi" : null
+             },
+             {
+                 "no": "6",
+                 "depot":"depot enam",
+                 "pekerjaan" : "penggalian",
+                 "vendor" : "CV. Upana",
+                 "tanggal" : "10 November 2019",
+                 "sifat" : "ABO",
+                 "tipe" : "hot",
+                 "validasi" : null,
+                 "status" : "tutup",
+                 "aksi" : null
+             },
+             {
+                 "no": "7",
+                 "depot":"depot tujuh",
+                 "pekerjaan" : "penggalian",
+                 "vendor" : "CV. Upana",
+                 "tanggal" : "10 November 2019",
+                 "sifat" : "Swakelola",
+                 "tipe" : "hot",
+                 "validasi" : null,
+                 "status" : "ditunda",
+                 "aksi" : null
+             },
+              {
+                 "no": "8",
+                 "depot":"depot delapan",
+                 "pekerjaan" : "penggalian",
+                 "vendor" : "CV. Upana",
+                 "tanggal" : "10 November 2019",
+                 "sifat" : "Swakelola",
+                 "tipe" : "hot",
+                 "validasi" : null,
+                 "status" : "progress",
+                 "aksi" : null
+             },
+             {
+                 "no": "9",
+                 "depot":"depot sembilan",
+                 "pekerjaan" : "penggalian",
+                 "vendor" : "CV. Upana",
+                 "tanggal" : "10 November 2019",
+                 "sifat" : "Swakelola",
+                 "tipe" : "hot",
+                 "validasi" : null,
+                 "status" : "selesai",
+                 "aksi" : null
+             },
+             {
+                 "no": "10",
+                 "depot":"depot sepuluh",
+                 "pekerjaan" : "penggalian",
+                 "vendor" : "CV. Upana",
+                 "tanggal" : "10 November 2019",
+                 "sifat" : "Swakelola",
+                 "tipe" : "hot",
+                 "validasi" : null,
+                 "status" : "kadaluarsa",
+                 "aksi" : null
+             }
+]
+}

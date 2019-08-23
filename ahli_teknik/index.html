@@ -3,7 +3,7 @@
 <!-- begin::Head -->
 <head>
 	<meta charset="utf-8" />
-	<title>Depot | Dashboard</title>
+	<title>Ahli Teknik | Dashboard</title>
 	<meta name="description" content="Page with empty content">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<!--begin::Fonts -->
@@ -65,24 +65,16 @@
 	<link href="../assets/demo/default/skins/aside/dark.css" rel="stylesheet" type="text/css" />
 	<!--end::Layout Skins -->
 	<link rel="shortcut icon" href="../assets/media/logos/favicon.ico" />
+	<link href="../assets/app/style/text_black.css" rel="stylesheet" type="text/css" />
 	<link href="../assets/app/style/pertamina-theme.css" rel="stylesheet" type="text/css" />
 	<!-- <link href="../assets/app/style/green-theme.css" rel="stylesheet" type="text/css" /> -->
 	<!-- <link href="../assets/app/style/blue-theme.css" rel="stylesheet" type="text/css" /> -->
 	<!-- <link href="../assets/app/style/red-theme.css" rel="stylesheet" type="text/css" /> -->
 	<!-- <link href="../assets/app/style/redblack-theme.css" rel="stylesheet" type="text/css" /> -->
 	<style>
-		#chartdiv {
+		#chart {
+			margin: 30px auto;
 			width: 100%;
-			height: 500px;
-		}
-	</style>
-	<style>
-		td.details-control {
-			background: url('https://raw.githubusercontent.com/DataTables/DataTables/1.10.7/examples/resources/details_open.png') no-repeat center center;
-			cursor: pointer;
-		}
-		tr.shown td.details-control {
-			background: url('https://raw.githubusercontent.com/DataTables/DataTables/1.10.7/examples/resources/details_close.png') no-repeat center center;
 		}
 	</style>
 </head>
@@ -176,15 +168,15 @@
 					<!-- end:: Subheader -->
 					<!-- begin:: Content -->
 					<div class="kt-content  kt-grid__item kt-grid__item--fluid" id="kt_content">
-						<div class="kt-portlet">
+						<!-- <div class="kt-portlet">
 							<div class="kt-portlet__body">
 								<div class="kt-portlet__body">
 									<table class="table table-bordered table-hover table-checkable" id="childrow_contoh"></table>
-								</div>
+								</div> 	
 							</div>
-						</div>
+						</div> -->
 						<div class="row">
-							<div class="col-sm-12">
+							<div class="col-sm-4">
 								<div class="kt-portlet">
 									<div class="kt-portlet__head">
 										<div class="kt-portlet__head-label">
@@ -197,35 +189,40 @@
 										</div>
 									</div>
 									<div class="kt-portlet__body">
-
 										<div class="row">
-											<div  align="center" class="col-sm-4">
-												<div style="padding: 15px" class="card_informasi card-red">
-													<div style="margin-bottom: 20px" class="headnya">
-														<h4 class="judul_pekerjaan">Bulan Ini</h4>
-													</div>
+											<div align="center" class="col-sm-12">
+												<div style="padding: 15px" class="">
 													<div class="isinya">
 														<h4 class="isi_informasi" name="pekerjaan_bulan_ini">5</h4>
 													</div>
+													<div class="headnya">
+														<h4 class="judul_pekerjaan">Bulan Ini</h4>
+													</div>
 												</div>
 											</div>
-											<div  align="center" class="col-sm-4">
-												<div style="padding: 15px" class="card_informasi">
-													<div style="margin-bottom: 20px" class="headnya">
-														<h4 class="judul_pekerjaan">Tahun ini</h4>
-													</div>
+										</div>
+										<div class="kt-separator kt-separator--border-dashed kt-separator--space-sm"></div>
+										<div class="row">
+											<div align="center" class="col-sm-12">
+												<div style="padding: 15px" class="">
 													<div class="isinya">
 														<h4 class="isi_informasi" name="pekerjaan_tahun_ini">63</h4>
 													</div>
+													<div class="headnya">
+														<h4 class="judul_pekerjaan">Tahun ini</h4>
+													</div>
 												</div>
 											</div>
-											<div  align="center" class="col-sm-4">
-												<div style="padding: 15px" class="card_informasi card-green">
-													<div style="margin-bottom: 20px" class="headnya">
-														<h4 class="judul_pekerjaan" name="pekerjaan_total">Total</h4>
-													</div>
+										</div>
+										<div class="kt-separator kt-separator--border-dashed kt-separator--space-sm"></div>
+										<div class="row">
+											<div  align="center" class="col-sm-12">
+												<div style="padding: 15px" class="">
 													<div class="isinya">
 														<h4 class="isi_informasi">125</h4>
+													</div>
+													<div style="margin-bottom: 20px" class="headnya">
+														<h4 class="judul_pekerjaan" name="pekerjaan_total">Total</h4>
 													</div>
 												</div>
 											</div>
@@ -233,7 +230,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-sm-12">
+							<div class="col-sm-8">
 								<div class="kt-portlet">
 									<div class="kt-portlet__head">
 										<div class="kt-portlet__head-label">
@@ -241,12 +238,12 @@
 												<i class="la la-gear"></i>
 											</span>
 											<h3 class="kt-portlet__head-title">
-												Pekerjaan
+												Pekerjaan Berjalan
 											</h3>
 										</div>
 									</div>
 									<div class="kt-portlet__body">
-										<div id="chartdiv"></div>
+										<div id="chart"></div>
 									</div>
 								</div>
 							</div>
@@ -258,7 +255,7 @@
 				<!-- begin:: Footer -->
 				<div class="kt-footer kt-grid__item kt-grid kt-grid--desktop kt-grid--ver-desktop">
 					<div class="kt-footer__copyright">
-						2019&nbsp;&copy;&nbsp;<a href="http://keenthemes.com/metronic" target="_blank" class="kt-link">Upana Studio</a>
+						2019&nbsp;&copy;&nbsp;<a href="https://upanastudio.com" target="_blank" class="kt-link">Upana Studio</a>
 					</div>
 				</div>
 				<!-- end:: Footer -->
@@ -317,94 +314,73 @@
 	<!--begin::Global App Bundle(used by all pages) -->
 	<script src="../assets/app/bundle/app.bundle.js" type="text/javascript"></script>
 	<!--begin::Page Vendors(used by this page) -->
-	<script src="https://www.amcharts.com/lib/4/core.js"></script>
-	<script src="https://www.amcharts.com/lib/4/charts.js"></script>
-	<script src="https://www.amcharts.com/lib/4/themes/material.js"></script>
-	<script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 	<script src="../assets/vendors/custom/datatables/datatables.bundle.js" type="text/javascript"></script>
 	<script src="../assets/app/script/js_ajax_ahli_teknik.js" type="text/javascript"></script>
 	<script>
-		am4core.ready(function() {
+		var options = {
+			colors: ['#2196F3', '#E53935'],
+			chart: {
+				height: 328,
+				type: 'bar',
+				stacked: true,
+				toolbar: {
+					show: true
+				},
+				zoom: {
+					enabled: true
+				}
+			},
+			responsive: [{
+				breakpoint: 480,
+				options: {
+					legend: {
+						position: 'bottom',
+						offsetX: -10,
+						offsetY: 0
+					}
+				}
+			}],
+			plotOptions: {
+				bar: {
+					horizontal: false,
+				},
+			},
+			dataLabels: {
+				/*formatter: function (val) {
+					return val + "%";
+				},*/
+				style: {
+					fontSize: '18px'
+				}
+			},
+			series: [{
+				name: 'Medium Risk',
+				data: [32, 21, 15]
+			},{ 
+				name: 'High Risk',
+				data: [13, 23, 20]
+			}],
+			xaxis: {
+				type: 'text',
+				categories: ['ABI','ABO','Swakelola'],
+			},
+			legend: {
+				position: 'right',
+				offsetY: 40,
+			},
+			fill: {
+				opacity: 1,
 
+			},
 
-			am4core.useTheme(am4themes_material);
-			am4core.useTheme(am4themes_animated);
+		}
+		var chart = new ApexCharts(
+			document.querySelector("#chart"),
+			options
+			);
 
-			var chart = am4core.create("chartdiv", am4charts.XYChart);
-			/*chart.scrollbarX = new am4core.Scrollbar();*/
-
-
-			chart.data = [{
-				"status": "Baru",
-				"jumlah": 3025
-			}, {
-				"status": "Perpanjang",
-				"jumlah": 1882
-			}, {
-				"status": "Resubmit",
-				"jumlah": 1809
-			},{
-				"status": "Tutup",
-				"jumlah": 1500
-			}, {
-				"status": "Ditolak",
-				"jumlah": 1322
-			}, {
-				"status": "Berlangsung",
-				"jumlah": 1122
-			}, {
-				"status": "Ditunda",
-				"jumlah": 1114
-			}, {
-				"status": "Draft",
-				"jumlah": 984
-			}, {
-				"status": "Selesai",
-				"jumlah": 711
-			}];
-
-
-			var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
-			categoryAxis.dataFields.category = "status";
-			categoryAxis.renderer.grid.template.location = 0;
-			categoryAxis.renderer.minGridDistance = 30;
-			categoryAxis.renderer.labels.template.horizontalCenter = "right";
-			categoryAxis.renderer.labels.template.verticalCenter = "middle";
-			categoryAxis.renderer.labels.template.rotation = 270;
-			categoryAxis.tooltip.disabled = true;
-			categoryAxis.renderer.minHeight = 110;
-
-			var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
-			valueAxis.renderer.minWidth = 50;
-
-
-			var series = chart.series.push(new am4charts.ColumnSeries());
-			series.sequencedInterpolation = true;
-			series.dataFields.valueY = "jumlah";
-			series.dataFields.categoryX = "status";
-			series.tooltipText = "[{categoryX}: bold]{valueY}[/]";
-			series.columns.template.strokeWidth = 0;
-
-			series.tooltip.pointerOrientation = "vertical";
-
-			series.columns.template.column.cornerRadiusTopLeft = 10;
-			series.columns.template.column.cornerRadiusTopRight = 10;
-			series.columns.template.column.fillOpacity = 0.8;
-
-
-			var hoverState = series.columns.template.column.states.create("hover");
-			hoverState.properties.cornerRadiusTopLeft = 0;
-			hoverState.properties.cornerRadiusTopRight = 0;
-			hoverState.properties.fillOpacity = 1;
-
-			series.columns.template.adapter.add("fill", function(fill, target) {
-				return chart.colors.getIndex(target.dataItem.index);
-			});
-
-
-			chart.cursor = new am4charts.XYCursor();
-
-		});
+		chart.render();
 	</script>
 
 </body>

@@ -1,0 +1,58 @@
+{
+    "iTotalRecords": 10,
+    "iTotalDisplayRecords": 10,
+    "sEcho": 0,
+    "sColumns": "",
+    "aaData": [{
+                 "no": 1,
+                 "nama_depot": "Depot Satu",
+                 "aksi" : null
+                
+             },
+             {
+                "no": 2,
+                 "nama_depot": "Depot Dua",
+                 "aksi" : null
+             },
+             {
+                "no": 3,
+                 "nama_depot": "Depot Tiga",
+                 "aksi" : null
+             },
+             {
+                "no": 4,
+                "nama_depot": "Depot Empat",
+                 "aksi" : null
+             },
+             {
+                "no": 5,
+                 "nama_depot": "Depot Lima",
+                 "aksi" : null
+             },
+              {
+                "no": 6,
+                 "nama_depot": "Depot Enam",
+                 "aksi" : null
+             },
+              {
+                "no": 7,
+                 "nama_depot": "Depot Tujuh",
+                 "aksi" : null
+             },
+              {
+                "no": 8,
+                 "nama_depot": "Depot Delapan",
+                 "aksi" : null
+             },
+              {
+                "no": 9,
+                 "nama_depot": "Depot Sembilan",
+                 "aksi" : null
+             },
+              {
+                "no": 10,
+                 "nama_depot": "Depot Sepuluh",
+                 "aksi" : null
+             }
+]
+}

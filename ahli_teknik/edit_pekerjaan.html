@@ -326,13 +326,14 @@
 														</div>
 													</div>
 													<div class="form-group row">
-														<label for="example-text-input" class="col-3 col-form-label">Tanggal Mulai</label>
-														<div class="col-3">
-															<input class="form-control" type="date" id="tanggal_mulai" name="tanggal_mulai">
-														</div>
-														<label for="example-text-input" class="col-3 col-form-label">Tanggal Selesai</label>
-														<div class="col-3">
-															<input class="form-control" type="date"  id="tanggal_selesai" name="tanggal_selesai">
+														<label for="example-text-input" class="col-3 col-form-label">Tanggal Mulai/Selesai</label>
+														<div class="col-9">
+															<div class="input-group" id="kt_daterangepicker_2">
+																<input type="text" class="form-control" readonly="" placeholder="Select date range">
+																<div class="input-group-append">
+																	<span class="input-group-text"><i class="la la-calendar-check-o"></i></span>
+																</div>
+															</div>
 														</div>
 													</div>
 													<div class="form-group row">
@@ -654,7 +655,7 @@
 														<div style="margin-bottom: 15px" class="col-sm-12">
 															<div class="row">
 																<div class="col-sm">
-																	<label>PJA <small>required</small> </label>
+																	<label>PJA <span style="color: red;font-size: 1.4rem">*</span> </label>
 																</div>
 																<div align="right" class="col-sm">
 																	<button id="btn_tambah_pja" name="btn_tambah_pja" type="button" class="btn btn-sm btn-success">
@@ -760,7 +761,7 @@
 														<div style="margin-bottom: 15px" class="col-sm-12">
 															<div class="row">
 																<div class="col-sm">
-																	<label>Hazard Analysis Doc (JSA) <small>required</small> </label>
+																	<label>Hazard Analysis Doc (JSA) <span style="color: red;font-size: 1.4rem">*</span> </label>
 																</div>
 																<div align="right" class="col-sm">
 																	<button id="btn_tambah_hazard" name="btn_tambah_hazard" type="button" class="btn btn-sm btn-success">
@@ -947,7 +948,7 @@
 														<div style="margin-bottom: 15px" class="col-sm-12">
 															<div class="row">
 																<div class="col-sm">
-																	<label>Isolasi Energi / LOTO <small>required</small> </label>
+																	<label>Isolasi Energi / LOTO <span style="color: red;font-size: 1.4rem">*</span> </label>
 																</div>
 																<div align="right" class="col-sm">
 																	<button id="btn_tambah_isolasi_energi" name="btn_tambah_isolasi_energi" type="button" class="btn btn-sm btn-success">
@@ -1088,7 +1089,7 @@
 														<div style="margin-bottom: 15px" class="col-sm-12">
 															<div class="row">
 																<div class="col-sm">
-																	<label>Dasar Pekerjaan <small>required</small> </label>
+																	<label>Dasar Pekerjaan <span style="color: red;font-size: 1.4rem">*</span> </label>
 																</div>
 																<div align="right" class="col-sm">
 																	<button id="btn_tambah_dasar_pekerjaan" name="btn_tambah_dasar_pekerjaan" type="button" class="btn btn-sm btn-success">
@@ -1120,7 +1121,7 @@
 														<div style="margin-bottom: 15px" class="col-sm-12">
 															<div class="row">
 																<div class="col-sm">
-																	<label>Dasar Kontrak / SPMP <small>required</small> </label>
+																	<label>Dasar Kontrak / SPMP <span style="color: red;font-size: 1.4rem">*</span> </label>
 																</div>
 																<div align="right" class="col-sm">
 																	<button id="btn_tambah_dasar_kontrak_spmp" name="btn_tambah_dasar_kontrak_spmp" type="button" class="btn btn-sm btn-success">
@@ -1278,21 +1279,21 @@
 																<div class="col-sm-12">
 																	<select class="form-control m-select2 nama_peralatan" id="nama_peralatan" multiple name="param">
 																		<option></option>
-																			<option value="AK">Alaska</option>
-																			<option value="HI">Hawaii</option>
-																			<option value="CA">California</option>
-																			<option value="NV">Nevada</option>
-																			<option value="OR">Oregon</option>
-																			<option value="WA">Washington</option>
-																			<option value="AZ">Arizona</option>
-																			<option value="CO">Colorado</option>
-																			<option value="ID">Idaho</option>
-																			<option value="MT">Montana</option>
-																			<option value="NE">Nebraska</option>
-																			<option value="NM">New Mexico</option>
-																			<option value="ND">North Dakota</option>
-																			<option value="UT">Utah</option>
-																			<option value="WY">Wyoming</option>
+																		<option value="AK">Alaska</option>
+																		<option value="HI">Hawaii</option>
+																		<option value="CA">California</option>
+																		<option value="NV">Nevada</option>
+																		<option value="OR">Oregon</option>
+																		<option value="WA">Washington</option>
+																		<option value="AZ">Arizona</option>
+																		<option value="CO">Colorado</option>
+																		<option value="ID">Idaho</option>
+																		<option value="MT">Montana</option>
+																		<option value="NE">Nebraska</option>
+																		<option value="NM">New Mexico</option>
+																		<option value="ND">North Dakota</option>
+																		<option value="UT">Utah</option>
+																		<option value="WY">Wyoming</option>
 																	</select>
 																</div>
 															</div>
@@ -1442,18 +1443,12 @@
 	<!--begin::Page Vendors(used by this page) -->
 	<script src="../assets/vendors/custom/fullcalendar/fullcalendar.bundle.js" type="text/javascript"></script>
 	<!--end::Page Vendors -->
-	<!--begin::Page Scripts(used by this page) -->
-	<script src="../assets/app/custom/general/dashboard.js" type="text/javascript"></script>
-	<!--end::Page Scripts -->
 	<!--begin::Global App Bundle(used by all pages) -->
 	<script src="../assets/app/bundle/app.bundle.js" type="text/javascript"></script>
 	<!--begin::Page Vendors(used by this page) -->
 	<script src="../assets/vendors/general/sweetalert2/dist/sweetalert2.min.js" type="text/javascript"></script>
 	<script src="../assets/vendors/custom/components/vendors/sweetalert2/init.js" type="text/javascript"></script>
 	<!--end::Page Vendors -->
-	<!--begin::Page Scripts(used by this page) -->
-	<script src="../assets/app/custom/general/components/charts/amcharts/charts.js" type="text/javascript"></script>
-	<!--end::Global App Bundle -->
 	<!-- AJAX -->
 	<script src="../assets/vendors/custom/datatables/datatables.bundle.js" type="text/javascript"></script>
 	<script src="../assets/app/script/js_ajax_ahli_teknik.js" type="text/javascript"></script>
@@ -1476,10 +1471,10 @@
 	    		swal.fire("Berhasil!", "Pekerja telah ditambahkan!", "success");
 	    	});
 	    	// tagging support
-		        $('.nama_peralatan').select2({
-		        	placeholder: "Add a tag",
-		        	tags: true,
-		        	minimumInputLength: 3,
+	    	$('.nama_peralatan').select2({
+	    		placeholder: "Add a tag",
+	    		tags: true,
+	    		minimumInputLength: 3,
 		        	/*ajax: {
 		        		url: '../source/data-select2.json',
 		        		dataType: 'json'

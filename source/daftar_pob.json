@@ -5,6 +5,7 @@
     "sColumns": "",
     "aaData": [{
                  "no": 1,
+                 "kategori" : "Pekerja",
                  "nama" : "Ahmad",
                  "vendor" : "CV. Upana Studio",
                  "pekerjaan" : "Penggalian",
@@ -13,6 +14,7 @@
              },
              {
                  "no": 2,
+                 "kategori" : "AMT",
                  "nama" : "Ahmad",
                  "vendor" : "CV. Upana Studio",
                  "pekerjaan" : "Penggalian",
@@ -21,6 +23,7 @@
              },
              {
                  "no": 3,
+                 "kategori" : "TKJP",
                  "nama" : "Ahmad",
                  "vendor" : "CV. Upana Studio",
                  "pekerjaan" : "Penggalian",
@@ -29,7 +32,8 @@
              },
              {
                  "no": 4,
-                 "nama" : "Ahmad",
+                "kategori" : "Kontraktor",
+                "nama" : "Ahmad",
                  "vendor" : "CV. Upana Studio",
                  "pekerjaan" : "Penggalian",
                  "jabatan" : "Penggalian",
@@ -37,6 +41,7 @@
              },
              {
                  "no": 5,
+                 "kategori" : "TKJP",
                  "nama" : "Ahmad",
                  "vendor" : "CV. Upana Studio",
                  "pekerjaan" : "Penggalian",
@@ -45,6 +50,7 @@
              },
              {
                  "no": 6,
+                 "kategori" : "AMT",
                  "nama" : "Ahmad",
                  "vendor" : "CV. Upana Studio",
                  "pekerjaan" : "Penggalian",
@@ -53,6 +59,7 @@
              },
              {
                  "no": 7,
+                 "kategori" : "Kontraktor",
                  "nama" : "Ahmad",
                  "vendor" : "CV. Upana Studio",
                  "pekerjaan" : "Penggalian",
@@ -61,6 +68,7 @@
              },
               {
                  "no": 8,
+                 "kategori" : "Pekerja",
                  "nama" : "Ahmad",
                  "vendor" : "CV. Upana Studio",
                  "pekerjaan" : "Penggalian",

@@ -7,7 +7,7 @@
                  "no": 1,
                  "jenis_sika" : "SIKA Cold",
                  "no_sika" : "01/23/12345123",
-                 "status" : "baru",
+                 "status" : "pengajuan_awal",
                  "rincian" : null,
                  "aksi" : null
                 
@@ -16,7 +16,7 @@
                 "no": 2,
                   "jenis_sika" : "SIKA Cold",
                  "no_sika" : "01/23/12345123",
-                  "status" : "perpanjang",
+                  "status" : "pengajuan_ulang",
                  "rincian" : null,
                  "aksi" : null
              },
@@ -24,7 +24,7 @@
                  "no": 3,
                   "jenis_sika" : "SIKA Cold",
                  "no_sika" : "01/23/12345123",
-                 "status" : "resubmit",
+                 "status" : "perpanjang",
                  "rincian" : null,
                  "aksi" : null
              },
@@ -40,7 +40,7 @@
                  "no": 5,
                   "jenis_sika" : "SIKA Cold",
                  "no_sika" : "01/23/12345123",
-                 "status" : "berlangsung",
+                 "status" : "tutup",
                  "rincian" : null,
                  "aksi" : null
              },
@@ -56,20 +56,12 @@
                  "no": 7,
                  "jenis_sika" : "SIKA Cold",
                  "no_sika" : "01/23/12345123",
-                 "status" : "selesai",
+                 "status" : "progress",
                  "rincian" : null,
                  "aksi" : null
              },
              {
                  "no": 8,
-                  "jenis_sika" : "SIKA Cold",
-                 "no_sika" : "01/23/12345123",
-                 "status" : "draft",
-                 "rincian" : null,
-                 "aksi" : null
-             },
-              {
-                 "no": 9,
                   "jenis_sika" : "SIKA Cold",
                  "no_sika" : "01/23/12345123",
                  "status" : "kadaluarsa",

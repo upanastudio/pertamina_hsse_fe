@@ -5,31 +5,39 @@
     "sColumns": "",
     "aaData": [{
                  "no": 1,
+                 "depot" : "Depot Satu",
+                 "pekerjaan" : "Penggalian",
                  "jenis_sika" : "Izin Penggunaan Listrik dalam Vessel",
                  "no_sika" : "01/23/12345123",
-                 "status" : "baru",
+                 "status" : "pengajuan_awal",
                  "rincian" : null,
                  "aksi" : null
                 
              },
              {
                 "no": 2,
+                "depot" : "Depot dua",
+                 "pekerjaan" : "Penggalian",
                   "jenis_sika" : "Izin Isolasi Proses/Mekanik/Instrumen",
+                 "no_sika" : "01/23/12345123",
+                 "status" : "pengajuan_ulang",
+                 "rincian" : null,
+                 "aksi" : null
+             },
+             {
+                 "no": 3,
+                 "depot" : "Depot tiga",
+                 "pekerjaan" : "Penggalian",
+                  "jenis_sika" : "Izin Pengangkatan",
                  "no_sika" : "01/23/12345123",
                  "status" : "perpanjang",
                  "rincian" : null,
                  "aksi" : null
              },
              {
-                 "no": 3,
-                  "jenis_sika" : "Izin Pengangkatan",
-                 "no_sika" : "01/23/12345123",
-                 "status" : "resubmit",
-                 "rincian" : null,
-                 "aksi" : null
-             },
-             {
                  "no": 4,
+                 "depot" : "Depot empat",
+                 "pekerjaan" : "Penggalian",
                  "jenis_sika" : "Izin Kerja Penggalian",
                  "no_sika" : "01/23/12345123",
                  "status" : "ditolak",
@@ -38,17 +46,41 @@
              },
              {
                  "no": 5,
+                 "depot" : "Depot lima",
+                 "pekerjaan" : "Penggalian",
                   "jenis_sika" : "Izin Masuk Ruang Tertutup",
                  "no_sika" : "01/23/12345123",
-                 "status" : "berlangsung",
+                 "status" : "tutup",
                  "rincian" : null,
                  "aksi" : null
              },
              {
                  "no": 6,
+                 "depot" : "Depot enam",
+                 "pekerjaan" : "Penggalian",
                  "jenis_sika" : "Penggunaan Barang Radio Aktif",
                  "no_sika" : "01/23/12345123",
                  "status" : "ditunda",
+                 "rincian" : null,
+                 "aksi" : null
+             },
+              {
+                 "no": 7,
+                 "depot" : "Depot tujuh",
+                 "pekerjaan" : "Penggalian",
+                 "jenis_sika" : "Penggunaan Barang Radio Aktif",
+                 "no_sika" : "01/23/12345123",
+                 "status" : "progress",
+                 "rincian" : null,
+                 "aksi" : null
+             },
+              {
+                 "no": 8,
+                 "depot" : "Depot delapan",
+                 "pekerjaan" : "Penggalian",
+                 "jenis_sika" : "Penggunaan Barang Radio Aktif",
+                 "no_sika" : "01/23/12345123",
+                 "status" : "kadaluarsa",
                  "rincian" : null,
                  "aksi" : null
              }

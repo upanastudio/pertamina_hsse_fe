@@ -211,13 +211,13 @@
 												<div class="col-sm-5">
 													<div class="form-group">
 														<label>Tanggal Clearance</label>
-														<input type="date" class="form-control" id="tanggal_clearance" name="tanggal_clearance">
+														<input  type="text" class="form-control" id="tanggal_clearance" name="tanggal_clearance" readonly placeholder="20/11/2019" />
 													</div>
 												</div>
 												<div class="offset-sm-2 col-sm-5">
 													<div class="form-group">
 														<label>Tanggal Committing</label>
-														<input type="date" class="form-control" id="tanggal_committing" name="tanggal_committing">
+														<input  type="text" class="form-control" id="tanggal_committing" name="tanggal_committing" readonly placeholder="20/11/2019" />
 													</div>
 												</div>
 											</div>
@@ -297,6 +297,8 @@
 	<!--begin:: Global Optional Vendors -->
 	<script src="../assets/vendors/general/sweetalert2/dist/sweetalert2.min.js" type="text/javascript"></script>
 	<script src="../assets/vendors/custom/components/vendors/sweetalert2/init.js" type="text/javascript"></script>
+	<script src="../assets/vendors/general/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js" type="text/javascript"></script>
+	<script src="../assets/vendors/custom/components/vendors/bootstrap-datepicker/init.js" type="text/javascript"></script>
 	<!--end:: Global Optional Vendors -->
 	<!--begin::Global Theme Bundle(used by all pages) -->
 	<script src="../assets/demo/default/base/scripts.bundle.js" type="text/javascript"></script>
@@ -352,6 +354,54 @@
 		// Class Initialization
 		jQuery(document).ready(function() {
 			KTSweetAlert2Demo.init();
+		});
+	</script>
+	<script>
+		var KTBootstrapDatepicker = function () {
+
+			var arrows;
+			if (KTUtil.isRTL()) {
+				arrows = {
+					leftArrow: '<i class="la la-angle-right"></i>',
+					rightArrow: '<i class="la la-angle-left"></i>'
+				}
+			} else {
+				arrows = {
+					leftArrow: '<i class="la la-angle-left"></i>',
+					rightArrow: '<i class="la la-angle-right"></i>'
+				}
+			}
+			var demos = function () {
+				$('#kt_datepicker_1, #kt_datepicker_1_validate').datepicker({
+					rtl: KTUtil.isRTL(),
+					todayHighlight: true,
+					orientation: "bottom left",
+					templates: arrows
+				});
+
+				$('#tanggal_clearance').datepicker({
+					rtl: KTUtil.isRTL(),
+					todayHighlight: true,
+					orientation: "bottom left",
+					templates: arrows
+				});
+				$('#tanggal_committing').datepicker({
+					rtl: KTUtil.isRTL(),
+					todayHighlight: true,
+					orientation: "bottom left",
+					templates: arrows
+				});
+			}
+
+			return {
+				init: function() {
+					demos(); 
+				}
+			};
+		}();
+
+		jQuery(document).ready(function() {    
+			KTBootstrapDatepicker.init();
 		});
 	</script>
 </body>

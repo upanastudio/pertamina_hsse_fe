@@ -1,0 +1,33 @@
+{
+    "iTotalRecords": 10,
+    "iTotalDisplayRecords": 10,
+    "sEcho": 0,
+    "sColumns": "",
+    "aaData": [{
+                 "no": 1,
+                 "nama_vendor": "Upana Studio",
+                 "alamat" : "Jl Wolter Mongonsidi 63-B One Wolter Place Lt 2,Melawai,Kebayoran Baru"
+                
+             },
+             {
+                "no": 2,
+                 "nama_vendor": "ALgraphic D",
+                  "alamat" : "Ruko Griya Cinere II Blok 49/12, Jl. Cinere Raya, Jawa Barat"
+             },
+             {
+                "no": 3,
+                 "nama_vendor": "Agung Foundation",
+                  "alamat" : "Pertokoan Semer jaya no,11,Denpasar-bali-indonesia"
+             },
+             {
+                "no": 4,
+                 "nama_vendor": "Mandatory inc",
+                  "alamat" : "Jl Kwitang Raya 36 RT 001/07,Kwitang,Senen,Jakarta"
+             },
+             {
+                "no": 5,
+                 "nama_vendor": "Bangun Negeri",
+                  "alamat" : "Jl. Margasatwa Raya No.63 Pondok Labu, Cilandak, Jakarta Selatan"
+             }
+]
+}

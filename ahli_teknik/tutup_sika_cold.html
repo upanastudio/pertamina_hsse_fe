@@ -193,7 +193,7 @@
 											<div class="row">
 												<div class="col-sm">
 													<div class="form-group">
-														<label>Upload SIKA <small>required</small></label>
+														<label>Upload SIKA <span style="color: red;font-size: 1.4rem">*</span></label>
 														<div></div>
 														<div class="custom-file">
 															<input type="file" class="custom-file-input" id="upload_file_sika" name="upload_file_sika" required="">
@@ -203,7 +203,7 @@
 												</div>
 												<div class="col-sm">
 													<div class="form-group">
-														<label>Berita Acara <small>required</small></label>
+														<label>Berita Acara <span style="color: red;font-size: 1.4rem">*</span></label>
 														<div></div>
 														<div class="custom-file">
 															<input type="file" class="custom-file-input" id="upload_berita_acara" name="upload_berita_acara">
@@ -230,13 +230,13 @@
 												<div class="col-sm-5">
 													<div class="form-group">
 														<label>Tanggal Clearance</label>
-														<input type="date" class="form-control" id="tanggal_clearance" name="tanggal_clearance">
+														<input  type="text" class="form-control" id="tanggal_clearance" name="tanggal_clearance" readonly placeholder="20/11/2019" />
 													</div>
 												</div>
 												<div class="offset-sm-2 col-sm-5">
 													<div class="form-group">
 														<label>Tanggal Committing</label>
-														<input type="date" class="form-control" id="tanggal_committing" name="tanggal_committing">
+														<input  type="text" class="form-control" id="tanggal_committing" name="tanggal_committing" readonly placeholder="20/11/2019" />
 													</div>
 												</div>
 											</div>
@@ -244,24 +244,31 @@
 												<label>Penyelesaian Izin Kerja</label>
 												<div class="kt-checkbox-list">
 													<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
-														<input type="checkbox" id="seleseai_diperiksa" name="seleseai_diperiksa"> Selesai dan diperiksa, tindakan pencegahan khusus <b><span id="pencegahan_khusus" name="pencegahan_khusus">Isolasi</span></b> telah diambil kembali, lokasi kerja ditinggalkan dalam keadaan aman dan bahwa instalasi dapat beroprasi kembali secara normal
+														<input onclick="fungsi_komentar()" type="checkbox" id="selesai_diperiksa" name="selesai_diperiksa"> Selesai dan dilakukan pemeriksaan, tindakan pencegahan khusus (isolasi) telah diambil kembali, lokasi kerja ditinggalkan dalam keadaan aman.
+														<span></span>
+														<div id="container-komentar-selesai" style="margin-top: 15px;display: none;" class="form-group">
+															<textarea class="form-control" id="komentar_selesai_diperiksa" name="komentar_selesai_diperiksa" rows="3" placeholder="tulis komentar disini"></textarea>
+														</div>
+													</label>
+													<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
+														<input  type="checkbox" id="belum_selesai" name="belum_selesai"> Belum selesai dan akan dilanjutkan dengan izin kerja no. <b><span id="no_izin_kerja_baru" name="no_izin_kerja_baru">
+															00/000/00000
+														</span></b>
 														<span></span>
 													</label>
 													<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
-														<input type="checkbox" id="seleseai_diperiksa" name="seleseai_diperiksa"> Belum selesai dan akan dilanjutkan dengan izin kerja no. <b><span id="no_izin_kerja_baru" name="no_izin_kerja_baru">
-																00/000/00000
-															</span></b>
+														<input onclick="fungsi_komentar()" type="checkbox" id="tidak_selesai" name="tidak_selesai"> Tidak selesai dan secara tegas dihentikan
 														<span></span>
+														<div id="container-komentar-tidak-selesai" style="margin-top: 15px;display: none;" class="form-group">
+															<textarea class="form-control" id="komentar_tidak_selesai" name="komentar_tidak_selesai" rows="3" placeholder="tulis komentar disini"></textarea>
+														</div>
 													</label>
 													<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
-														<input type="checkbox" id="seleseai_diperiksa" name="seleseai_diperiksa"> Tidak selesai dan secara tegas dihentikan
+														<input onclick="fungsi_komentar()" type="checkbox" id="pengambilan_langkah" name="pengambilan_langkah"> Beberapa langkah harus diambil sebelum instalasi dapat dioperasikan kembali.
 														<span></span>
-													</label>
-													<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
-														<input type="checkbox" id="seleseai_diperiksa" name="seleseai_diperiksa"> Beberapa langkah harus diambil sebelum instalasi dapat dioperasikan kembali <b><span id="langkah_lain" name="langkah_lain">
-																isian
-															</span></b>
-														<span></span>
+														<div id="container-pengambilan-langkah" style="margin-top: 15px;display: none;" class="form-group">
+															<textarea class="form-control" id="komentar_pengambilan_langkah" name="komentar_pengambilan_langkah" rows="3" placeholder="tulis komentar disini"></textarea>
+														</div>
 													</label>
 												</div>
 											</div>
@@ -333,6 +340,8 @@
 	<!--begin:: Global Optional Vendors -->
 	<script src="../assets/vendors/general/sweetalert2/dist/sweetalert2.min.js" type="text/javascript"></script>
 	<script src="../assets/vendors/custom/components/vendors/sweetalert2/init.js" type="text/javascript"></script>
+	<script src="../assets/vendors/general/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js" type="text/javascript"></script>
+	<script src="../assets/vendors/custom/components/vendors/bootstrap-datepicker/init.js" type="text/javascript"></script>
 	<!--end:: Global Optional Vendors -->
 	<!--begin::Global Theme Bundle(used by all pages) -->
 	<script src="../assets/demo/default/base/scripts.bundle.js" type="text/javascript"></script>
@@ -340,9 +349,6 @@
 	<!--begin::Page Vendors(used by this page) -->
 	<script src="../assets/vendors/custom/fullcalendar/fullcalendar.bundle.js" type="text/javascript"></script>
 	<!--end::Page Vendors -->
-	<!--begin::Page Scripts(used by this page) -->
-	<script src="../assets/app/custom/general/dashboard.js" type="text/javascript"></script>
-	<!--end::Page Scripts -->
 	<!--begin::Global App Bundle(used by all pages) -->
 	<script src="../assets/app/bundle/app.bundle.js" type="text/javascript"></script>
 	<!--begin::Page Vendors(used by this page) -->
@@ -389,6 +395,109 @@
 		jQuery(document).ready(function() {
 			KTSweetAlert2Demo.init();
 		});
+	</script>
+	<script>
+		var KTBootstrapDatepicker = function () {
+
+			var arrows;
+			if (KTUtil.isRTL()) {
+				arrows = {
+					leftArrow: '<i class="la la-angle-right"></i>',
+					rightArrow: '<i class="la la-angle-left"></i>'
+				}
+			} else {
+				arrows = {
+					leftArrow: '<i class="la la-angle-left"></i>',
+					rightArrow: '<i class="la la-angle-right"></i>'
+				}
+			}
+			var demos = function () {
+				$('#kt_datepicker_1, #kt_datepicker_1_validate').datepicker({
+					rtl: KTUtil.isRTL(),
+					todayHighlight: true,
+					orientation: "bottom left",
+					templates: arrows
+				});
+
+				$('#tanggal_clearance').datepicker({
+					rtl: KTUtil.isRTL(),
+					todayHighlight: true
+					orientation: "bottom left",
+					templates: arrows
+				});
+				$('#tanggal_committing').datepicker({
+					rtl: KTUtil.isRTL(),
+					todayHighlight: true,
+					orientation: "bottom left",
+					templates: arrows
+				});
+			}
+
+			return {
+				init: function() {
+					demos(); 
+				}
+			};
+		}();
+
+		jQuery(document).ready(function() {    
+			KTBootstrapDatepicker.init();
+		});
+	</script>
+	<script>
+		// assign function to onclick property of checkbox
+		document.getElementById('selesai_diperiksa').onclick = function() {
+	    // call toggleSub when checkbox clicked
+	    // toggleSub args: checkbox clicked on (this), id of element to show/hide
+		    toggleSub1(this, 'active_sub');
+		};
+		document.getElementById('tidak_selesai').onclick = function() {
+	    // call toggleSub when checkbox clicked
+	    // toggleSub args: checkbox clicked on (this), id of element to show/hide
+		    toggleSub2(this, 'active_sub');
+		};
+		document.getElementById('pengambilan_langkah').onclick = function() {
+	    // call toggleSub when checkbox clicked
+	    // toggleSub args: checkbox clicked on (this), id of element to show/hide
+		    toggleSub3(this, 'active_sub');
+		};
+
+		// called onclick of checkbox
+		function toggleSub1(box, id) {
+		    // get reference to related content to display/hide
+		    let el = document.getElementById('container-komentar-selesai');
+		    
+		    if ( box.checked ) {
+		    	el.style.display = 'block';
+		    } else {
+		    	el.style.display = 'none';
+		    }
+		}
+
+			
+		// called onclick of checkbox
+		function toggleSub2(box, id) {
+		    // get reference to related content to display/hide
+		    let el = document.getElementById('container-komentar-tidak-selesai');
+		    
+		    if ( box.checked ) {
+		    	el.style.display = 'block';
+		    } else {
+		    	el.style.display = 'none';
+		    }
+		}
+
+		// called onclick of checkbox
+		function toggleSub3(box, id) {
+		    // get reference to related content to display/hide
+		    let el = document.getElementById('container-pengambilan-langkah');
+		    
+		    if ( box.checked ) {
+		    	el.style.display = 'block';
+		    } else {
+		    	el.style.display = 'none';
+		    }
+		}
 	</script>
 </body>
 <!-- end::Body -->

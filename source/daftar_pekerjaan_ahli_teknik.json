@@ -11,7 +11,7 @@
                  "sifat" : "Swakelola",
                  "tipe" : "hot",
                  "validasi" : null,
-                 "status" : "baru",
+                 "status" : "draft",
                  "aksi" : null
                 
              },
@@ -23,7 +23,7 @@
                  "sifat" : "ABI",
                  "tipe" : "hot",
                  "validasi" : null,
-                 "status" : "perpanjang",
+                 "status" : "pengajuan_awal",
                  "aksi" : null
              },
              {
@@ -34,7 +34,7 @@
                  "sifat" : "ABO",
                  "tipe" : "cold",
                  "validasi" : null,
-                 "status" : "resubmit",
+                 "status" : "pengajuan_ulang",
                  "aksi" : null
              },
              {
@@ -45,7 +45,7 @@
                  "sifat" : "Swakelola",
                  "tipe" : "cold",
                  "validasi" : null,
-                 "status" : "ditolak",
+                 "status" : "perpanjang",
                  "aksi" : null
              },
              {
@@ -56,7 +56,7 @@
                  "sifat" : "ABI",
                  "tipe" : "hot",
                  "validasi" : null,
-                 "status" : "berlangsung",
+                 "status" : "ditolak",
                  "aksi" : null
              },
              {
@@ -67,7 +67,7 @@
                  "sifat" : "ABO",
                  "tipe" : "hot",
                  "validasi" : null,
-                 "status" : "ditunda",
+                 "status" : "tutup",
                  "aksi" : null
              },
              {
@@ -78,7 +78,7 @@
                  "sifat" : "Swakelola",
                  "tipe" : "hot",
                  "validasi" : null,
-                 "status" : "selesai",
+                 "status" : "ditunda",
                  "aksi" : null
              },
               {
@@ -89,7 +89,7 @@
                  "sifat" : "Swakelola",
                  "tipe" : "hot",
                  "validasi" : null,
-                 "status" : "draft",
+                 "status" : "progress",
                  "aksi" : null
              },
              {
@@ -100,7 +100,7 @@
                  "sifat" : "Swakelola",
                  "tipe" : "hot",
                  "validasi" : null,
-                 "status" : "kadaluarsa",
+                 "status" : "selesai",
                  "aksi" : null
              },
              {
@@ -111,7 +111,7 @@
                  "sifat" : "Swakelola",
                  "tipe" : "hot",
                  "validasi" : null,
-                 "status" : "tutup",
+                 "status" : "kadaluarsa",
                  "aksi" : null
              }
 ]

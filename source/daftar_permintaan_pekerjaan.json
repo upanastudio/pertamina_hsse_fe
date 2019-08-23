@@ -1,0 +1,52 @@
+{
+    "iTotalRecords": 10,
+    "iTotalDisplayRecords": 10,
+    "sEcho": 0,
+    "sColumns": "",
+    "aaData": [
+             {
+                "no": 1,
+                 "pekerjaan" : "penggalian",
+                 "vendor" : "CV. Upana",
+                 "tanggal" : "10 November 2019",
+                 "sifat" : "ABI",
+                 "tipe" : "hot",
+                 "validasi" : null,
+                 "status" : "pengajuan_awal",
+                 "aksi" : null
+             },
+             {
+                 "no": 2,
+                 "pekerjaan" : "penggalian",
+                 "vendor" : "CV. Upana",
+                 "tanggal" : "10 November 2019",
+                 "sifat" : "ABO",
+                 "tipe" : "cold",
+                 "validasi" : null,
+                 "status" : "pengajuan_ulang",
+                 "aksi" : null
+             },
+             {
+                 "no": 3,
+                 "pekerjaan" : "penggalian",
+                 "vendor" : "CV. Upana",
+                 "tanggal" : "10 November 2019",
+                 "sifat" : "Swakelola",
+                 "tipe" : "cold",
+                 "validasi" : null,
+                 "status" : "perpanjang",
+                 "aksi" : null
+             },
+             {
+                 "no": 4,
+                 "pekerjaan" : "penggalian",
+                 "vendor" : "CV. Upana",
+                 "tanggal" : "10 November 2019",
+                 "sifat" : "ABO",
+                 "tipe" : "hot",
+                 "validasi" : null,
+                 "status" : "tutup",
+                 "aksi" : null
+             }
+]
+}

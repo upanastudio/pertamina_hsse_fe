@@ -6,11 +6,11 @@ $(document).ready(function() {
 		$("#container_amdal").append('<div data-id="'+i+'" class="input-berkas berkas_amdal">'+
 			'<div  class="row inputan">'+
 			'<div  class="col-sm-6">'+
-			'<input class="form-control" type="text" placeholder="input text" id="input" name="input" required>'+
+			'<input class="form-control" type="text" placeholder="input text" id="input" name="input">'+
 			'</div>'+
 			'<div class="col-sm-5">'+
 			'<div class="custom-file">'+
-			'<input type="file" class="custom-file-input" id="document" name="document" required>'+
+			'<input type="file" class="custom-file-input" id="document" name="document">'+
 			'<label class="custom-file-label" for="customFile">Pilih berkas</label>'+
 			'</div>'+
 			'</div>'+
@@ -263,12 +263,15 @@ $(document).ready(function() {
 		console.log(i);
 		$("#container_pja").append('<div data-id="'+i+'" class="input-berkas berkas_pja">'+
 			'<div  class="row inputan">'+
-			'<div  class="col-sm-6">'+
-			'<input class="form-control" type="text" placeholder="input text" id="input" name="input" required>'+
+			'<div  class="col-sm-4">'+
+			'<input class="form-control" type="text" placeholder="input text" id="input" name="input">'+
+			'</div>'+
+			'<div  class="col-sm-2">'+
+			'<input class="form-control" type="number" placeholder="nilai (85.7)" id="nilai" name="nilai" min="0" max="100" step="0.1">'+
 			'</div>'+
 			'<div class="col-sm-5">'+
 			'<div class="custom-file">'+
-			'<input type="file" class="custom-file-input" id="document" name="document" required>'+
+			'<input type="file" class="custom-file-input" id="document" name="document">'+
 			'<label class="custom-file-label" for="customFile">Pilih berkas</label>'+
 			'</div>'+
 			'</div>'+
@@ -362,11 +365,11 @@ $(document).ready(function() {
 		$("#container").append('<div data-id="'+i+'" class="input-berkas berkas_hazard">'+
 			'<div  class="row inputan">'+
 			'<div  class="col-sm-5">'+
-			'<input class="form-control" type="text" placeholder="input text" id="input" name="input" required>'+
+			'<input class="form-control" type="text" placeholder="input text" id="input" name="input">'+
 			'</div>'+
 			'<div class="col-sm-6">'+
 			'<div class="custom-file">'+
-			'<input type="file" class="custom-file-input" id="document" name="document" required>'+
+			'<input type="file" class="custom-file-input" id="document" name="document">'+
 			'<label class="custom-file-label" for="customFile">Pilih berkas</label>'+
 			'</div>'+
 			'</div>'+
@@ -498,11 +501,11 @@ $(document).ready(function() {
 		$("#container_isolasi_energi").append('<div data-id="'+i+'" class="input-berkas berkas_isolasi_energi">'+
 			'<div  class="row inputan">'+
 			'<div  class="col-sm-6">'+
-			'<input class="form-control" type="text" placeholder="input text" id="input" name="input" required>'+
+			'<input class="form-control" type="text" placeholder="input text" id="input" name="input">'+
 			'</div>'+
 			'<div class="col-sm-5">'+
 			'<div class="custom-file">'+
-			'<input type="file" class="custom-file-input" id="document" name="document" required>'+
+			'<input type="file" class="custom-file-input" id="document" name="document">'+
 			'<label class="custom-file-label" for="customFile">Pilih berkas</label>'+
 			'</div>'+
 			'</div>'+
@@ -597,7 +600,7 @@ $(document).ready(function() {
 			'<div  class="row inputan">'+
 			'<div class="col-sm-11">'+
 			'<div class="custom-file">'+
-			'<input type="file" class="custom-file-input" id="document" name="document" required	>'+
+			'<input type="file" class="custom-file-input" id="document" name="document"	>'+
 			'<label class="custom-file-label" for="customFile">Pilih berkas</label>'+
 			'</div>'+
 			'</div>'+
@@ -626,7 +629,7 @@ $(document).ready(function() {
 			'<div  class="row inputan">'+
 			'<div class="col-sm-11">'+
 			'<div class="custom-file">'+
-			'<input type="file" class="custom-file-input" id="document" name="document" required>'+
+			'<input type="file" class="custom-file-input" id="document" name="document">'+
 			'<label class="custom-file-label" for="customFile">Pilih berkas</label>'+
 			'</div>'+
 			'</div>'+
