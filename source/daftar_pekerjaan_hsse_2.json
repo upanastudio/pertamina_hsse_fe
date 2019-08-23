@@ -21,7 +21,7 @@
                  "vendor" : "CV. Upana",
                  "tanggal" : "10 November 2019",
                  "tipe" : "hot",
-                 "status" : "perpanjang",
+                 "status" : "kadaluarsa",
                  "sifat" : "Swakelola",
                  "validasi": null,
                  "aksi" : null
@@ -32,7 +32,7 @@
                  "vendor" : "CV. Upana",
                  "tanggal" : "10 November 2019",
                  "tipe" : "cold",
-                 "status" : "baru",
+                 "status" : "berlangsung",
                  "sifat" : "ABO",
                  "validasi": null,
                  "aksi" : null
@@ -54,7 +54,7 @@
                  "vendor" : "CV. Upana",
                  "tanggal" : "10 November 2019",
                  "tipe" : "hot",
-                 "status" : "tutup",
+                 "status" : "ditolak",
                  "sifat" : "ABO",
                  "validasi": null,
                  "aksi" : null

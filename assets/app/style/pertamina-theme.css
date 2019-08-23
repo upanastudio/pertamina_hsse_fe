@@ -98,9 +98,9 @@ tr td {
 	font-size:3rem;
 }
 /*admin depot*/
-.nav-pills .nav-item .nav-link:active, 
-.nav-pills .nav-item .nav-link.active, 
-.nav-pills .nav-item .nav-link.active:hover {	
+.nav-pills .nav-item .nav-link:active,
+.nav-pills .nav-item .nav-link.active,
+.nav-pills .nav-item .nav-link.active:hover {
 	background-color: #a10c0c;;
 	color: #ffffff;
 }
@@ -226,10 +226,9 @@ polyline,
 	.kt-aside--minimize .kt-aside-menu .kt-menu__nav > .kt-menu__item > .kt-menu__link > .kt-menu__link-icon {
 		color: #ffffff;
 	}
-<<<<<<< HEAD
 }
 
-@media screen and (min-width: 575px){
+@media screen and (min-width: 576px){
 	.divider-border-right {
 		border-right: 1px solid #6c7293;
 	}
@@ -241,5 +240,50 @@ polyline,
 		transform: translateY(-50%);
 	}
 }
-=======
->>>>>>> ded8825bb35afc491e313bd116149c79adcfa0a6
+
+.btn.btn-label-not-so-danger {
+	background-color: rgba(226, 169, 0, 0.1);
+    color: #e05b2b;
+    cursor: text !important;
+}
+
+ .btn.btn-label-not-so-danger-o2 {
+	background-color: rgba(226, 169, 0, 0.1);
+	color: #e05b2b;
+	cursor: text !important; }
+
+ .btn.btn-label-not-so-brand {
+	background-color: rgba(162, 162, 162, 0.1);
+    color: #747a94;
+    cursor: text !important;
+}
+
+ .spacer-dashed {
+	margin-top: 3.5rem;
+	border-top: 0.1rem dashed #babfcc;
+	padding-top: 1rem;
+}
+
+ .border-bold {
+	border: 1px solid #b8bccc;
+}
+
+ .btn-xsm {
+	padding: 0.4rem 0.75rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    border-radius: 0.2rem;
+}
+
+.custom-label {
+	margin:2px 0px;
+	display:flex;
+	justify-content:space-between;
+}
+
+ .overflow-text {
+	overflow:hidden;
+	display:inline-block;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}

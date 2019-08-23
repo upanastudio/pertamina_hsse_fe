@@ -78,7 +78,7 @@
 			padding: 0.75rem 4rem;
 		}
 		.modal-content {
-			width: 80%;
+			width: 100%;
 		}
 		.select2 {
 			width: 100% !important;
@@ -398,17 +398,9 @@
 											<div class="tab-pane" id="kt_tabs_jsa" role="tabpanel">
 												<div>
 													<div class="form-group row">
-														<label class="col-sm-12">Hazard Analysis Doc (JSA)</label>
-														<div class="col-sm-6">
-															<input disabled="" class="form-control" type="text" value="hazard analysis" id="input_hazard_analysis" name="input_hazard_analysis">
-														</div>
-														<div align="" class="offset-sm-4 col-sm-2">
-															<button type="button" class="btn btn-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="fa fa-eye "></i>lihat file</button>
-															<div style="min-width:9rem;padding:5px 5px 0px 5px;" class="dropdown-menu dropdown-menu-right">
-																<button style="margin-bottom:5px;" class="dropdown-item btn btn-secondary" href="#"> <i class="flaticon2-file-1"></i>File 1</button>
-																<button style="margin-bottom:5px;" class="dropdown-item btn btn-secondary" href="#"> <i class="flaticon2-file-1"></i>File 1</button>
-																<button style="margin-bottom:5px;" class="dropdown-item btn btn-secondary" href="#"> <i class="flaticon2-file-1"></i>File 1</button>
-															</div>
+														<label class="col-sm-8">Hazard Analysis Doc (JSA)</label>
+														<div align="right" class="col-sm-4">
+															<button id="lihat_file_hazard" name="lihat_file_hazard" type="button" class="btn btn-sm btn-outline-brand" data-toggle="modal" data-target="#kt_modal_rincian"> <i class="fa fa-eye "></i>Lihat File</button>
 														</div>
 														<div id="checkbox_hazard" name="checkbox_hazard" class="col-sm-12">
 															<div class="kt-checkbox-inline">
@@ -429,14 +421,11 @@
 															</div>
 														</div>
 													</div>
+													<div class="kt-separator kt-separator--border-dashed kt-separator--space-md"></div>
 													<div class="form-group row">
-														<label class="col-sm-12">Heavy Equipment / Mobile Equipment</label>
-														<div class="col-sm-6">
-															<input disabled="" class="form-control" type="text" value="heavy equipment / mobile equipment" id="input_heavy_equipment" name="input_heavy_equipment">
-														</div>
-														<div align="" class="offset-sm-4 col-sm-2">
-															<button type="button" class="btn btn-link"> <i class="fa fa-eye "></i>lihat SOP</button>
-															<button type="button" class="btn btn-link"> <i class="fa fa-eye "></i>lihat Sertifikat</button>
+														<label class="col-sm-8">Heavy Equipment / Mobile Equipment</label>
+														<div align="right" class="col-sm-4">
+															<button id="lihat_file_heavy_equipment" name="lihat_file_heavy_equipment" type="button" class="btn btn-sm btn-outline-brand" data-toggle="modal" data-target="#kt_modal_rincian_heavy_equipment"> <i class="fa fa-eye "></i>Lihat File</button>
 														</div>
 														<div id="checkbox_heavy_equipment" name="checkbox_heavy_equipment" class="col-sm-12">
 															<div class="kt-checkbox-inline">
@@ -457,13 +446,11 @@
 															</div>
 														</div>
 													</div>
+													<div class="kt-separator kt-separator--border-dashed kt-separator--space-md"></div>
 													<div class="form-group row">
-														<label class="col-sm-12">Lifting Plan</label>
-														<div class="col-sm-6">
-															<input disabled="" class="form-control" type="text" value="text lifting plan" id="input_lifting_plan" name="input_lifting_plan">
-														</div>
-														<div align="" class="offset-sm-4 col-sm-2">
-															<button type="button" class="btn btn-link"> <i class="fa fa-eye "></i>lihat file</button>
+														<label class="col-sm-8">Lifting Plan</label>
+														<div align="right" class="col-sm-4">
+															<button id="lihat_file_lifting" name="lihat_file_lifting" type="button" class="btn btn-sm btn-outline-brand" data-toggle="modal" data-target="#kt_modal_rincian"> <i class="fa fa-eye "></i>Lihat File</button>
 														</div>
 														<div id="checkbox_lifting_plan" name="checkbox_lifting_plan" class="col-sm-12">
 															<div class="kt-checkbox-inline">
@@ -484,13 +471,11 @@
 															</div>
 														</div>
 													</div>
+													<div class="kt-separator kt-separator--border-dashed kt-separator--space-md"></div>
 													<div class="form-group row">
-														<label class="col-sm-12">Prosedur Kerja</label>
-														<div class="col-sm-6">
-															<input disabled="" class="form-control" type="text" value="text sop peralatan" id="input_prosedur_kerja" name="input_prosedur_kerja">
-														</div>
-														<div align="" class="offset-sm-4 col-sm-2">
-															<button type="button" class="btn btn-link"> <i class="fa fa-eye "></i>lihat file</button>
+														<label class="col-sm-8">Prosedur Kerja</label>
+														<div align="right" class="col-sm-4">
+															<button id="lihat_file_prosedur_kerja" name="lihat_file_prosedu_kerja" type="button" class="btn btn-sm btn-outline-brand" data-toggle="modal" data-target="#kt_modal_rincian"> <i class="fa fa-eye "></i>Lihat File</button>
 														</div>
 														<div id="checkbox_prosedur_kerja" name="checkbox_prosedur_kerja" class="col-sm-12">
 															<div class="kt-checkbox-inline">
@@ -511,6 +496,7 @@
 															</div>
 														</div>
 													</div>
+													<div class="kt-separator kt-separator--border-dashed kt-separator--space-md"></div>
 													<div class="form-group row">
 														<label class="col-sm-12">Hazard Identification</label>
 														<div class="col-sm-10">
@@ -535,41 +521,28 @@
 														<div style="margin-bottom:5px" class="col-sm-2">
 															<button style="width: 100%" type="button" class="btn btn-success"> <i class="fa fa-plus"></i> Tambah</button>
 														</div>
-														<!-- <div class="col-sm-10" class="pilihan_hazard_identification">
-															<span  class="kt-badge kt-badge--dark kt-badge--inline kt-badge--pill kt-badge--rounded">
-																Flammable / explosive material / bahan mudah terbakar / meledak
-															</span>
-															<span class="kt-badge  kt-badge--dark kt-badge--inline kt-badge--pill kt-badge--rounded">
-																Presence of gas (hazardous area,...) / Gas (daerah berbahaya, ....)
-															</span>
-															<span class="kt-badge  kt-badge--dark kt-badge--inline kt-badge--pill kt-badge--rounded">
-																Liquid hydrocarbon (oil leakage) / ceceran BBM
-															</span>
-															<span class="kt-badge  kt-badge--dark kt-badge--inline kt-badge--pill kt-badge--rounded">
-																Single valve isolation / isolasi keruangan tunggal
-															</span>
-														</div> -->
 														<div class="col-sm-12">
 															<div class="pilihan_hazard_identification">
-																<div style="cursor:auto!important;" class="btn btn-bold btn-sm btn-font-sm btn-label-dark col-sm-10 custom-label">
+																<div style="cursor:auto!important;" class="btn btn-bold btn-sm btn-font-sm btn-label-dark col-sm-12 custom-label">
 																	<span class="overflow-text">Flammable / explosive material / bahan mudah terbakar / meledak bahan mudah terbakar / meledak bahan mudah terbakar / meledak</span>
 																	<i id="hazard_0" class="fa fa-times"></i>
 																</div>
-																<div style="cursor:auto!important;" class="btn btn-bold btn-sm btn-font-sm btn-label-dark col-sm-10 custom-label">
+																<div style="cursor:auto!important;" class="btn btn-bold btn-sm btn-font-sm btn-label-dark col-sm-12 custom-label">
 																	<span class="overflow-text">Presence of gas (hazardous area,...) / Gas (daerah berbahaya, ....)</span>
 																	<i id="hazard_0" class="fa fa-times"></i>
 																</div>
-																<div style="cursor:auto!important;" class="btn btn-bold btn-sm btn-font-sm btn-label-dark col-sm-10 custom-label">
+																<div style="cursor:auto!important;" class="btn btn-bold btn-sm btn-font-sm btn-label-dark col-sm-12 custom-label">
 																	<span class="overflow-text">Liquid hydrocarbon (oil leakage) / ceceran BBM</span>
 																	<i id="hazard_0" class="fa fa-times"></i>
 																</div>
-																<div style="cursor:auto!important;" class="btn btn-bold btn-sm btn-font-sm btn-label-dark col-sm-10 custom-label">
+																<div style="cursor:auto!important;" class="btn btn-bold btn-sm btn-font-sm btn-label-dark col-sm-12 custom-label">
 																	<span class="overflow-text">Single valve isolation / isolasi keruangan tunggal</span>
 																	<i id="hazard_0" class="fa fa-times"></i>
 																</div>
 															</div>
 														</div>
 													</div>
+													<div class="kt-separator kt-separator--border-dashed kt-separator--space-md"></div>
 													<div class="form-group row">
 														<label class="col-sm-12">Komentar</label>
 														<div class="col-sm-12">
@@ -581,12 +554,9 @@
 											<div class="tab-pane" id="kt_tabs_moc" role="tabpanel">
 												<div>
 													<div class="form-group row">
-														<label class="col-sm-12">Isoalasi Energi / LOTO</label>
-														<div class="col-sm-6">
-															<input disabled="" class="form-control" type="text" value="text isolasi energi/LOTO" id="input_hazard_analysis" name="input_hazard_analysis">
-														</div>
-														<div align="right" class="offset-sm-4 col-sm-2">
-															<button type="button" class="btn btn-link"> <i class="fa fa-eye "></i>lihat file</button>
+														<label class="col-sm-8">Isolasi Energi / LOTO</label>
+														<div align="right" class="col-sm-4">
+															<button id="lihat_file_isolasi" name="lihat_file_prosedur" type="button" class="btn btn-sm btn-outline-brand" data-toggle="modal" data-target="#kt_modal_rincian"> <i class="fa fa-eye "></i>Lihat File</button>
 														</div>
 														<div class="col-sm-12" style="margin-bottom: 10px">
 															<div class="kt-checkbox-inline">
@@ -605,8 +575,11 @@
 																		</label>
 																	</div>
 																	<div align="right" class="col-sm-4">
-																		<button id="btn_tambah_prosedur" name="btn_tambah_prosedur" type="button" class="btn btn-sm btn-success">
+																		<!-- <button id="btn_tambah_prosedur" name="btn_tambah_prosedur" type="button" class="btn btn-sm btn-success">
 																			<i class="fa fa-plus"></i> Tambah file
+																		</button> -->
+																		<button type="button" id="btn_tambah_input" name="btn_tambah_input" class="btn btn-secondary" data-container="body" data-toggle="kt-tooltip" data-placement="left" title="Tambah berkas">
+																			<span class="fa fa-plus"></span>
 																		</button>
 																	</div>
 																</div>
@@ -615,8 +588,8 @@
 																<div class="row">
 																	<div class="col-sm-11">
 																		<div class="custom-file">
-																			<input type="file" class="custom-file-input" id="isolasi_energi_doc" name="isolasi_energi_doc">
-																			<label class="custom-file-label" for="customFile">Pilih berkas</label>
+																			<input style="font-size:1rem" type="file" class="custom-file-input" id="isolasi_energi_doc" name="isolasi_energi_doc">
+																			<label style="font-size:1rem" class="custom-file-label" for="customFile">Pilih berkas</label>
 																		</div>
 																	</div>
 																	<div align="right" class="col-sm-1">
@@ -630,8 +603,8 @@
 																<div class="row">
 																	<div class="col-sm-11">
 																		<div class="custom-file">
-																			<input type="file" class="custom-file-input" id="isolasi_energi_doc" name="isolasi_energi_doc">
-																			<label class="custom-file-label" for="customFile">Pilih berkas</label>
+																			<input style="font-size:1rem" type="file" class="custom-file-input" id="isolasi_energi_doc" name="isolasi_energi_doc">
+																			<label style="font-size:1rem" class="custom-file-label" for="customFile">Pilih berkas</label>
 																		</div>
 																	</div>
 																	<div align="right" class="col-sm-1">
@@ -643,13 +616,11 @@
 															</div>
 														</div>
 													</div>
+													<div class="kt-separator kt-separator--border-dashed kt-separator--space-md"></div>
 													<div class="form-group row">
-														<label class="col-sm-12">Prosedur</label>
-														<div class="col-sm-6">
-															<input disabled="" class="form-control" type="text" value="text prosedur" id="input_prosedur" name="input_prosedur">
-														</div>
-														<div align="" class="offset-sm-4 col-sm-2">
-															<button type="button" class="btn btn-link"> <i class="fa fa-eye "></i>lihat file</button>
+														<label class="col-sm-8">Prosedur</label>
+														<div align="right" class="col-sm-4">
+															<button id="lihat_file_prosedur" name="lihat_file_prosedur" type="button" class="btn btn-sm btn-outline-brand" data-toggle="modal" data-target="#kt_modal_rincian"> <i class="fa fa-eye "></i>Lihat File</button>
 														</div>
 														<div id="checkbox_prosedur" name="checkbox_prosedur" class="col-sm-12">
 															<div class="kt-checkbox-inline">
@@ -670,13 +641,11 @@
 															</div>
 														</div>
 													</div>
+													<div class="kt-separator kt-separator--border-dashed kt-separator--space-md"></div>
 													<div class="form-group row">
-														<label class="col-sm-12">Engineering PID/Layout</label>
-														<div class="col-sm-6">
-															<input disabled="" class="form-control" type="text" value="text engineering layout" id="input_engineering_pid" name="input_engineering_pid">
-														</div>
-														<div align="" class="offset-sm-4 col-sm-2">
-															<button type="button" class="btn btn-link"> <i class="fa fa-eye "></i>lihat file</button>
+														<label class="col-sm-8">Engineering PID/Layout</label>
+														<div align="right" class="col-sm-4">
+															<button id="lihat_file_engineering" name="lihat_file_engineering" type="button" class="btn btn-sm btn-outline-brand" data-toggle="modal" data-target="#kt_modal_rincian"> <i class="fa fa-eye "></i>Lihat File</button>
 														</div>
 														<div id="checkbox_engineering_pid" name="checkbox_engineering_pid" class="col-sm-12">
 															<div class="kt-checkbox-inline">
@@ -697,13 +666,11 @@
 															</div>
 														</div>
 													</div>
+													<div class="kt-separator kt-separator--border-dashed kt-separator--space-md"></div>
 													<div class="form-group row">
-														<label class="col-sm-12">Training</label>
-														<div class="col-sm-6">
-															<input disabled="" class="form-control" type="text" value="text training" id="input_training" name="input_training">
-														</div>
-														<div align="" class="offset-sm-4 col-sm-2">
-															<button type="button" class="btn btn-link"> <i class="fa fa-eye "></i>lihat file</button>
+														<label class="col-sm-8">Training</label>
+														<div align="right" class="col-sm-4">
+															<button id="lihat_file_training" name="lihat_file_training" type="button" class="btn btn-sm btn-outline-brand" data-toggle="modal" data-target="#kt_modal_rincian"> <i class="fa fa-eye "></i>Lihat File</button>
 														</div>
 														<div id="checkbox_prosedur_kerja" name="checkbox_prosedur_kerja" class="col-sm-12">
 															<div class="kt-checkbox-inline">
@@ -718,6 +685,7 @@
 															</div>
 														</div>
 													</div>
+													<div class="kt-separator kt-separator--border-dashed kt-separator--space-md"></div>
 													<div class="form-group row">
 														<label class="col-sm-12">Komentar</label>
 														<div class="col-sm-12">
@@ -735,9 +703,9 @@
 														</div>
 													</div>
 													<div class="form-group row">
-														<label class="col-sm-3">Dasar Kontak SPMP</label>
-														<div align="right" class="col-sm-9">
-															<button type="button" class="btn btn-link"> <i class="fa fa-eye "></i>lihat file</button>
+														<label class="col-sm-8">Dasar Kontak SPMP</label>
+														<div align="right" class="col-sm-4">
+															<button id="lihat_file_spmp" name="lihat_file_spmp" type="button" class="btn btn-sm btn-outline-brand" data-toggle="modal" data-target="#kt_modal_rincian"> <i class="fa fa-eye "></i>Lihat File</button>
 														</div>
 														<div id="checkbox_dasar_kontak_spmp" name="checkbox_dasar_kontak_spmp" class="col-sm-12">
 															<div class="kt-checkbox-inline">
@@ -758,10 +726,11 @@
 															</div>
 														</div>
 													</div>
+													<div class="kt-separator kt-separator--border-dashed kt-separator--space-md"></div>
 													<div class="form-group row">
-														<label class="col-sm-3">Surat Permohonan</label>
-														<div align="right" class="col-sm-9">
-															<button type="button" class="btn btn-link"> <i class="fa fa-eye "></i>lihat file</button>
+														<label class="col-sm-8">Surat Permohonan</label>
+														<div align="right" class="col-sm-4">
+															<button id="lihat_file_surat_permohonan" name="lihat_file_surat_permohonan" type="button" class="btn btn-sm btn-outline-brand" data-toggle="modal" data-target="#kt_modal_rincian"> <i class="fa fa-eye "></i>Lihat File</button>
 														</div>
 														<div id="checkbox_surat_permohonan" name="checkbox_surat_permohonan" class="col-sm-12">
 															<div class="kt-checkbox-inline">
@@ -782,10 +751,11 @@
 															</div>
 														</div>
 													</div>
+													<div class="kt-separator kt-separator--border-dashed kt-separator--space-md"></div>
 													<div class="form-group row">
-														<label class="col-sm-3">Gambar Kerja</label>
-														<div align="right" class="col-sm-9">
-															<button type="button" class="btn btn-link"> <i class="fa fa-eye "></i>lihat file</button>
+														<label class="col-sm-8">Gambar Kerja</label>
+														<div align="right" class="col-sm-4">
+															<button id="lihat_file_gambar_kerja" name="lihat_file_gambar_kerja" type="button" class="btn btn-sm btn-outline-brand" data-toggle="modal" data-target="#kt_modal_rincian"> <i class="fa fa-eye "></i>Lihat File</button>
 														</div>
 														<div id="checkbox_gambar_kerja" name="checkbox_gambar_kerja" class="col-sm-12">
 															<div class="kt-checkbox-inline">
@@ -806,6 +776,7 @@
 															</div>
 														</div>
 													</div>
+													<div class="kt-separator kt-separator--border-dashed kt-separator--space-md"></div>
 													<div class="form-group row">
 														<label class="col-sm-12">Daftar Nama Pekerja</label>
 														<div style="display:flex;justify-content:space-between;" class="col-sm-12">
@@ -869,14 +840,14 @@
 															</div>
 														</div>
 													</div>
-													<div class="kt-separator kt-separator--border-dashed kt-separator--space-lg"></div>
+													<div class="kt-separator kt-separator--border-dashed kt-separator--space-md"></div>
 													<div class="form-group row">
 														<h5 style="margin-bottom: 20px" class="col-sm-12">Peralatan Kerja</h5>
 														<div style="padding: 5px 20px" class="col-sm-12">
 															<div class="form-group row">
-																<label class="col-sm-3">Nama Peralatan</label>
-																<div align="right" class="col-sm-9">
-																	<button type="button" class="btn btn-link"> <i class="fa fa-eye "></i>lihat file</button>
+																<label class="col-sm-8">Nama Peralatan</label>
+																<div align="right" class="col-sm-4">
+																	<button id="lihat_file_nama_peralatan" name="lihat_file_nama_peralatan" type="button" class="btn btn-sm btn-outline-brand" data-toggle="modal" data-target="#kt_modal_rincian"> <i class="fa fa-eye "></i>Lihat File</button>
 																</div>
 																<div id="checkbox_nama_peralatan" name="checkbox_nama_peralatan" class="col-sm-12">
 																	<div class="kt-checkbox-inline">
@@ -948,6 +919,110 @@
 							<div class="modal-footer">
 								<button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
 								<button type="button" class="btn btn-danger kt_sweetalert_tolak" data-dismiss="modal">Tolak</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="modal fade" id="kt_modal_rincian" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="exampleModalLabel">Dokumen dan file</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								</button>
+							</div>
+							<div class="modal-body">
+								<div class="form-group row group-dokumen">
+									<label class="col-6 col-form-label dokumen">
+										<span id="nama_dokumen" name="nama_dokumen">Nama Dokumen 42334</span>
+									</label>
+									<div align="right" class="col-sm-6">
+										<button onclick=" window.open('#','_blank')" class="btn btn-sm btn-link">
+											<i class="fa fa-download"></i> Download/View
+										</button>
+									</div>
+								</div>
+								<div class="form-group row group-dokumen">
+									<label class="col-6 col-form-label dokumen">
+										<span id="nama_dokumen" name="nama_dokumen">Nama Dokumen 12312</span>
+									</label>
+									<div align="right" class="col-sm-6">
+										<button onclick=" window.open('#','_blank')" class="btn btn-sm btn-link">
+											<i class="fa fa-download"></i> Download/View
+										</button>
+									</div>
+								</div>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">
+									<i class="fa fa-times"></i> Tutup
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="modal fade" id="kt_modal_rincian_heavy_equipment" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="exampleModalLabel">Dokumen dan file</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								</button>
+							</div>
+							<div class="modal-body">
+								<div class="form-group group-dokumen">
+									<label class="col-12 col-form-label dokumen">Sertifikat</label>
+									<div class="row col-sm-12" style="padding-right: 0px;padding-left: 20px;">
+										<label style="font-size:1rem;" class="col-6 col-form-label dokumen">
+											Nama Dokumen 12312
+										</label>
+										<div align="right" class="col-sm-6">
+											<button onclick=" window.open('#','_blank')" class="btn btn-sm btn-link">
+												<i class="fa fa-download"></i> Download/View
+											</button>
+										</div>
+									</div>
+									<div class="row col-sm-12" style="padding-right: 0px;padding-left: 20px;">
+										<label style="font-size:1rem;" class="col-6 col-form-label dokumen">
+											Nama Dokumen 12312
+										</label>
+										<div align="right" class="col-sm-6">
+											<button onclick=" window.open('#','_blank')" class="btn btn-sm btn-link">
+												<i class="fa fa-download"></i> Download/View
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="form-group group-dokumen">
+									<label class="col-12 col-form-label dokumen">SOP</label>
+									<div class="row col-sm-12" style="padding-right: 0px;padding-left: 20px;">
+										<label style="font-size:1rem;" class="col-6 col-form-label dokumen">
+											Nama Dokumen 12312
+										</label>
+										<div align="right" class="col-sm-6">
+											<button onclick=" window.open('#','_blank')" class="btn btn-sm btn-link">
+												<i class="fa fa-download"></i> Download/View
+											</button>
+										</div>
+									</div>
+									<div class="row col-sm-12" style="padding-right: 0px;padding-left: 20px;">
+										<label style="font-size:1rem;" class="col-6 col-form-label dokumen">
+											Nama Dokumen 12312
+										</label>
+										<div align="right" class="col-sm-6">
+											<button onclick=" window.open('#','_blank')" class="btn btn-sm btn-link">
+												<i class="fa fa-download"></i> Download/View
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">
+									<i class="fa fa-times"></i> Tutup
+								</button>
 							</div>
 						</div>
 					</div>
