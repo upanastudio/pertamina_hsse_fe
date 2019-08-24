@@ -1142,6 +1142,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 		// begin first table
 		var table = $('#daftar_pob').DataTable({
 			responsive: true,
+			order: [[1, "desc"], [2, "desc"]],
 			// Pagination settings
 			dom: `<'row'<'col-sm-12'tr>>
 			<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7 dataTables_pager'lp>>`,
@@ -1170,9 +1171,19 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 			},
 			columns: [
 			{
-				data: 'no',
-				title: 'No.',
-				orderable: false,
+				data: 'null',
+				title: 'No',
+				render: function (data, type, row, meta) {
+					return meta.row + meta.settings._iDisplayStart + 1;
+				},
+				// title: 'No.',
+				// orderable: false,
+			},{
+				data: 'tanggal',
+				title: 'Tanggal',
+			},{
+				data: 'waktu',
+				title: 'Waktu',
 			},{
 				data: 'kategori',
 				title: 'Kategori',
@@ -1185,12 +1196,6 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 			},{
 				data: 'vendor',
 				title: 'Vendor',
-			},{
-				data: 'tanggal',
-				title: 'Tanggal',
-			},{
-				data: 'waktu',
-				title: 'Waktu',
 			},{
 				data: 'status',
 				title: 'Status',
@@ -1214,7 +1219,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 					switch (column.title()) {
 						case 'Kategori':
 						column.data().unique().sort().each(function(d, j) {
-							$('.kt-input[data-col-index="1"]').append('<option value="' + d + '">' + d + '</option>');
+							$('.kt-input[data-col-index="3"]').append('<option value="' + d + '">' + d + '</option>');
 						});
 						break;
 						// case 'Waktu':
@@ -1229,10 +1234,17 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 			columnDefs: [
 			{
 				targets: [0,1,2,3,4,5,6],
-				className: 'text-center'
+				className: 'text-center',
+				orderable: false,
 			}
 			],
 		});
+
+		table.on( 'order.dt search.dt', function () {
+	        table.column(0, {search:'applied', order:'applied'}).nodes().each( function (cell, i) {
+	            cell.innerHTML = i+1;
+	        } );
+	    } ).draw();
 
 		var filter = function() {
 			var val = $.fn.dataTable.util.escapeRegex($(this).val());
@@ -1294,13 +1306,30 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 			});
 			table.table().draw();
 		});
-		$('#kt_datepicker').datepicker({
+
+		$.fn.datepicker.dates['id'] = {
+		    days: 'Minggu_Senin_Selasa_Rabu_Kamis_Jumat_Sabtu'.split('_'),
+		    daysShort: 'Min_Sen_Sel_Rab_Kam_Jum_Sab'.split('_'),
+		    daysMin: 'Mg_Sn_Sl_Rb_Km_Jm_Sb'.split('_'),
+		    months: 'Januari_Februari_Maret_April_Mei_Juni_Juli_Agustus_September_Oktober_November_Desember'.split('_'),
+		    monthsShort: 'Jan_Feb_Mar_Apr_Mei_Jun_Jul_Agt_Sep_Okt_Nov_Des'.split('_'),
+		    today: "Hari ini",
+		    clear: "Reset",
+		    format: "dd MM yyyy",
+		    titleFormat: "MM yyyy"
+		};
+
+		$('#kt_search_waktu').datepicker({
             todayHighlight: true,
+			language: 'id',
+			rtl: KTUtil.isRTL(),
+            todayBtn: "linked",
+            clearBtn: true,
             templates: {
                 leftArrow: '<i class="la la-angle-left"></i>',
                 rightArrow: '<i class="la la-angle-right"></i>',
             },
-        });
+        }).datepicker("setDate", new Date());
 	};
 	return {
 		//main function to initiate the module

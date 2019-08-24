@@ -126,6 +126,7 @@
 								<a href="javascript:;" class="kt-menu__link kt-menu__toggle">
 									<i class="kt-menu__link-icon fa fa-briefcase"></i>
 									<span class="kt-menu__link-text">Pekerjaan</span>
+									<span class="kt-menu__link-badge"><span class="kt-badge kt-badge--rounded kt-badge--brand">10</span></span>
 									<i class="kt-menu__ver-arrow la la-angle-right"></i>
 								</a>
 								<div class="kt-menu__submenu" kt-hidden-height="80" style="display: none; overflow: hidden;"><span class="kt-menu__arrow"><span class="kt-menu__arrow"><span class="kt-menu__arrow"></span>
@@ -139,6 +140,7 @@
 													<span></span>
 												</i>
 												<span class="kt-menu__link-text">Permintaan Pekerjaan</span>
+												<span class="kt-menu__link-badge"><span class="kt-badge kt-badge--rounded kt-badge--brand">10</span></span>
 											</a>
 										</li>
 										<li class="kt-menu__item" aria-haspopup="true">
@@ -156,6 +158,7 @@
 								<a href="javascript:;" class="kt-menu__link kt-menu__toggle">
 									<i class="kt-menu__link-icon fa fa-passport"></i>
 									<span class="kt-menu__link-text">SIKA</span>
+									<span class="kt-menu__link-badge"><span class="kt-badge kt-badge--rounded kt-badge--brand">10</span></span>
 									<i class="kt-menu__ver-arrow la la-angle-right"></i>
 								</a>
 								<div class="kt-menu__submenu"></span>
@@ -169,6 +172,7 @@
 													<span></span>
 												</i>
 												<span class="kt-menu__link-text">Permintaan SIKA</span>
+												<span class="kt-menu__link-badge"><span class="kt-badge kt-badge--rounded kt-badge--brand">10</span></span>
 											</a>
 										</li>
 										<li class="kt-menu__item " aria-haspopup="true">
@@ -246,22 +250,33 @@
 												POB
 											</h3>
 										</div>
+										<div align="right" class="kt-portlet__toolbar">
+											<div style="width:40%;padding:10px 0px;" class="input-group" data-toggle="kt-tooltip" data-placement="left" title="Jumlah POB hari ini">
+												<input id="jumlah_pob" name="jumlah_pob" style=";cursor:default;" type="text" class="form-control kt-font-success" name="url" value="26" readonly>
+												<div class="input-group-append"><span style="cursor:default;" class="input-group-text kt-font-dark">Orang</span></div>
+											</div>
+										</div>
 									</div>
 									<div class="kt-portlet__body">
 										<form class="kt-form kt-form--fit kt-margin-b-10">
 											<div class="row kt-margin-b-2">
-												<div class="col-lg-4 kt-margin-b-10-tablet-and-mobile">
+												<div class="col-sm-4 kt-margin-b-10-tablet-and-mobile">
 													<div class="input-daterange input-group" id="kt_datepicker">
-														<input type="text" class="form-control kt-input" name="start" placeholder="Pilih Waktu" data-col-index="5" id="kt_search_waktu"/>
+														<input readonly type="text" class="form-control kt-input" name="start" value="05/20/2017" data-col-index="1" id="kt_search_waktu"/>
+														<div class="input-group-append">
+															<span class="input-group-text">
+																<i class="la la-calendar"></i>
+															</span>
+														</div>
 													</div>
 												</div>
 												<div class="col-lg-4 kt-margin-b-10-tablet-and-mobile">
-													<select class="form-control kt-input" data-col-index="1" id="kt_search_kategori">
+													<select class="form-control kt-input" data-col-index="3" id="kt_search_kategori">
 														<option value="">Pilih Kategori</option>
 													</select>
 												</div>
 												<div class="col-lg-4 kt-margin-b-10-tablet-and-mobile">
-													<input type="text" class="form-control kt-input" placeholder="Search" data-col-index="2" id="kt_search_all">
+													<input type="text" class="form-control kt-input" placeholder="Search" id="kt_search_all">
 												</div>
 											</div>
 										</form>
@@ -359,10 +374,8 @@
 	<!--begin::Global App Bundle(used by all pages) -->
 	<script src="../assets/app/bundle/app.bundle.js" type="text/javascript"></script>
 	<!--begin::Page Scripts(used by this page) -->
+	<script src="../assets/app/custom/general/crud/forms/widgets/bootstrap-datepicker.js" type="text/javascript"></script>
 	<!--end::Global App Bundle -->
-	<!-- datepicker -->
-	<script src="../assets/app/script/custom_datepicker.js" type="text/javascript"></script>
-	<script src="../assets/app/script/helper.js" type="text/javascript"></script>
 	<!-- AJAX -->
 	<script src="../assets/vendors/custom/datatables/datatables.bundle.js" type="text/javascript"></script>
 	<script src="../assets/app/script/js_ajax_hsse.js" type="text/javascript"></script>
