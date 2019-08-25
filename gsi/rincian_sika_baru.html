@@ -19,7 +19,8 @@
 		});
 	</script>
 	<!--end::Fonts -->
-	<link href="../assets/vendors/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" />
+	<!--begin::Page Vendors Styles(used by this page) -->
+	<link href="//www.amcharts.com/lib/3/plugins/export/export.css" rel="stylesheet" type="text/css" />
 	<!--begin::Page Vendors Styles(used by this page) -->
 	<link href="../assets/vendors/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" />
 	<!--end::Page Vendors Styles -->
@@ -128,7 +129,7 @@
 									<span class="kt-menu__link-text">Pekerjaan</span>
 									<i class="kt-menu__ver-arrow la la-angle-right"></i>
 								</a>
-								<div class="kt-menu__submenu" kt-hidden-height="80" style="display: none; overflow: hidden;"><span class="kt-menu__arrow"><span class="kt-menu__arrow"><span class="kt-menu__arrow"></span>
+								<div class="kt-menu__submenu " kt-hidden-height="80" style="display: none; overflow: hidden;"><span class="kt-menu__arrow"></span>
 									<ul class="kt-menu__subnav">
 										<li class="kt-menu__item  kt-menu__item--parent" aria-haspopup="true">
 											<span class="kt-menu__link"><span class="kt-menu__link-text">Pekerjaan</span></span>
@@ -158,12 +159,12 @@
 									<span class="kt-menu__link-text">SIKA</span>
 									<i class="kt-menu__ver-arrow la la-angle-right"></i>
 								</a>
-								<div class="kt-menu__submenu"></span>
+								<div class="kt-menu__submenu "><span class="kt-menu__arrow"><span class="kt-menu__arrow"></span>
 									<ul class="kt-menu__subnav">
 										<li class="kt-menu__item  kt-menu__item--parent" aria-haspopup="true">
 											<span class="kt-menu__link"><span class="kt-menu__link-text">SIKA</span></span>
 										</li>
-										<li class="kt-menu__item kt-menu__item--active" aria-haspopup="true">
+										<li class="kt-menu__item " aria-haspopup="true">
 											<a href="permintaan_pembuatan_sika.html" class="kt-menu__link ">
 												<i class="kt-menu__link-bullet kt-menu__link-bullet--dot">
 													<span></span>
@@ -171,7 +172,7 @@
 												<span class="kt-menu__link-text">Permintaan SIKA</span>
 											</a>
 										</li>
-										<li class="kt-menu__item " aria-haspopup="true">
+										<li class="kt-menu__item kt-menu__item--active" aria-haspopup="true">
 											<a href="riwayat_sika.html" class="kt-menu__link ">
 												<i class="kt-menu__link-bullet kt-menu__link-bullet--dot">
 													<span></span>
@@ -206,7 +207,7 @@
 						<div class="kt-header__topbar-item kt-header__topbar-item--user">
 							<div class="user-name">
 								<p style="display: inline;">Hi, <span name="user_name">Rifal</span></p>
-								<a id="btn_log_out" class="btn btn-secondary"> <i class="fa fa-sign-out-alt"></i> Logut</a>
+								<a id="btn_log_out" class="btn btn-secondary"> <i class="fa fa-sign-out-alt"></i> Keluar</a>
 							</div>
 						</div>
 						<!--end: User Bar -->
@@ -223,20 +224,17 @@
 							</h3>
 							<span class="kt-subheader__separator kt-hidden"></span>
 							<div class="kt-subheader__breadcrumbs">
-								<a href="#" class="kt-subheader__breadcrumbs-home"><i class="flaticon2-shelter"></i></a>
+								<a href="riwayat_sika.html" class="kt-subheader__breadcrumbs-home"><i class="flaticon2-shelter"></i></a>
 								<span class="kt-subheader__breadcrumbs-separator"></span>
-								<a href="permintaan_pembuatan_sika.html" class="kt-subheader__breadcrumbs-link">
-								Permintaan SIKA </a>
+								<a href="riwayat_sika.html" class="kt-subheader__breadcrumbs-link">
+								Semua SIKA </a>
 								<span class="kt-subheader__breadcrumbs-separator"></span>
-								<a href="rincian_permintaan_sika_tutup.html" class="kt-subheader__breadcrumbs-link">
-								Penutupan SIKA </a>
+								<a href="#" class="kt-subheader__breadcrumbs-link">
+								Rincian SIKA </a>
 							</div>
 						</div>
-                        <div class="kt-subheader__toolbar">
-                            <a href="permintaan_pembuatan_sika.html" class="btn btn-secondary">
-                                <i class="fa fa-arrow-left"></i> Kembali
-                            </a>
-                        </div>
+						<div class="kt-subheader__toolbar">
+						</div>
 					</div>
 					<!-- end:: Subheader -->
 					<!-- begin:: Content -->
@@ -250,11 +248,11 @@
 												<i class="la la-gear"></i>
 											</span>
 											<h3 class="kt-portlet__head-title">
-												Penutupan SIKA
+												Rincian SIKA
 											</h3>
 										</div>
 									</div>
-                                    <div class="kt-portlet__body">
+									<div class="kt-portlet__body">
 										<div class="col-sm-12">
 											<div class="form-group row">
 	                                            <label class="col-3 col-form-label">
@@ -294,187 +292,95 @@
 	                                                Durasi
 	                                            </label>
 	                                            <div class="col-9">
-													<div class="row">
-														<div class="col-sm-3">
-															<div class="input-group">
-																<input disabled type="number" class="form-control" id="waktu_hari" name="waktu_hari" value="3">
+	                                                <div class="row">
+	                                                    <div class="col-sm-4">
+	                                                        <div class="input-group">
+																<input type="number" class="form-control" id="waktu_hari" name="waktu_hari" value="3" disabled>
 																<div class="input-group-append"><span style="color:#464457;" class="input-group-text">Hari</span></div>
 															</div>
-														</div>
-														<div class="col-sm-3">
-															<div class="input-group">
-																<input disabled type="number" class="form-control" id="waktu_jam" name="waktu_jam" value="2">
+	                                                    </div>
+	                                                    <div class="col-sm-4">
+	                                                        <div class="input-group">
+																<input type="number" class="form-control" id="waktu_jam" name="waktu_jam" value="2" disabled>
 																<div class="input-group-append"><span style="color:#464457;" class="input-group-text">Jam</span></div>
 															</div>
-														</div>
-													</div>
+	                                                    </div>
+	                                                </div>
 	                                            </div>
 	                                        </div>
 										</div>
                                     </div>
 								</div>
 							</div>
-							<div class="col-sm-12 row">
-								<div class="col-sm-6">
-									<div class="kt-portlet">
-										<div class="kt-portlet__head">
-											<div class="kt-portlet__head-label">
-												<span class="kt-portlet__head-icon kt-hidden">
-													<i class="la la-gear"></i>
-												</span>
-												<h3 class="kt-portlet__head-title">
-													Ahli Teknik
-												</h3>
-											</div>
-										</div>
-	                                    <div class="kt-portlet__body">
-											<div class="col-sm-12">
-												<div class="row">
-													<div class="col-sm-6">
-														<div style="margin-bottom: 0rem;" class="form-group row">
-															<div style="margin-bottom: 0rem;" class="form-group row col-sm-12">
-																<label style="font-size: 12px;" class="col-sm-6 col-form-label">
-																	SIKA
-																</label>
-																<div align="right" class="col-sm-6">
-																	<button type="button" class="btn btn-sm btn-link"> <i class="fa fa-eye "></i>lihat</button>
-																</div>
-															</div>
-															<div class="form-group row col-sm-12">
-																<label style="font-size: 12px;" class="col-sm-12 col-form-label">
-																	Tanggal Clearance:
-																</label>
-																<div class="col-sm-12">
-																	<input type="text" class="form-control" id="kt_datepicker_1" disabled value="07/31/2019" />
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="col-sm-6">
-														<div style="margin-bottom: 0rem;" class="form-group row">
-															<div style="margin-bottom: 0rem;" class="form-group row col-sm-12">
-																<label style="font-size: 12px;" class="col-sm-6 col-form-label">
-																	Berita Acara
-																</label>
-																<div align="right" class="col-sm-6">
-																	<button type="button" class="btn btn-sm btn-link"> <i class="fa fa-eye "></i>lihat</button>
-																</div>
-															</div>
-															<div class="form-group row col-sm-12">
-																<label style="font-size: 12px;" class="col-sm-12 col-form-label">
-																	Tanggal Clearance:
-																</label>
-																<div class="col-sm-12">
-																	<input type="text" class="form-control" id="kt_datepicker_1" disabled value="07/31/2019" />
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="col-sm-12">
-														<div style="margin-bottom: 0rem;" class="form-group row">
-															<div class="form-group col-sm-12">
-																<label style="margin-bottom: 0rem;" class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
-																	<input checked disabled id="status_perpanjang" name="status_perpanjang" type="checkbox">
-																	<p>Selesai dan dilakukan pemeriksaan, tindakan pencegahan khusus (isolasi) telah diambil kembali, lokasi kerja ditinggalkan dalam keadaan aman.</p>
-																	<span></span>
-																</label>
-																<textarea disabled class="form-control" id="exampleTextarea" rows="3">"Lorem ipsum dolor sit amet"</textarea>
-															</div>
-															<div class="form-group col-sm-12">
-																<label style="margin-bottom: 0rem;" class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
-																	<input checked disabled id="status_perpanjang" name="status_perpanjang" type="checkbox">
-																	<p>Tidak selesai dan secara tegas dihentikan.</p>
-																	<span></span>
-																</label>
-																<textarea disabled class="form-control" id="exampleTextarea" rows="3">"Lorem ipsum dolor sit amet"</textarea>
-															</div>
-														</div>
-													</div>
-												 </div>
-											 </div>
-										 </div>
-									</div>
-								</div>
-								<div class="col-sm-6">
-									<div class="row">
-										<div class="col-sm-6" style="display: flex;">
-											<div class="kt-portlet">
-												<div class="kt-portlet__head">
-													<div class="kt-portlet__head-label">
-														<span class="kt-portlet__head-icon kt-hidden">
-															<i class="la la-gear"></i>
-														</span>
-														<h3 class="kt-portlet__head-title">
-															HSSE
-														</h3>
-													</div>
-												</div>
-												<div class="kt-portlet__body">
-													<div class="col-sm-12">
-														<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
-															<input disabled checked id="status_perpanjang" name="status_perpanjang" type="checkbox"><p style="font-size: 12px;" >Good House Keeping</p>
-															<span></span>
-														</label>
-														<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
-															<input disabled checked id="status_perpanjang" name="status_perpanjang" type="checkbox"><p style="font-size: 12px;" >Area Clearance</p>
-															<span></span>
-														</label>
-													</div>
-			                                    </div>
-											</div>
-										</div>
-										<div class="col-sm-6" style="display: flex;">
-											<div style="" class="kt-portlet">
-												<div class="kt-portlet__head">
-													<div class="kt-portlet__head-label">
-														<span class="kt-portlet__head-icon kt-hidden">
-															<i class="la la-gear"></i>
-														</span>
-														<h3 class="kt-portlet__head-title">
-															GSI
-														</h3>
-													</div>
-												</div>
-			                                    <div class="kt-portlet__body">
-													<div class="col-sm-12">
-														<p align="center">Tekan tombol <span class="kt-font-brand">Verifikasi</span> untuk menutup SIKA</p>
-													</div>
-												 </div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
                             <div class="col-sm-12">
-                                <div align="center">
-                                    <button style="padding:5px 25px" type="button" class="btn btn-md btn-outline-secondary" data-toggle="modal" data-target="#kt_modal_tolak"><i class="fa fa-times"></i>Tolak</button>&nbsp;
-                                    <button style="padding:5px 25px" type="button" class="btn btn-md btn-brand kt_sweetalert_verified"><i class="fa fa-check"></i>Verifikasi</button>
+                                <div class="row">
+                                    <div class="col-sm-6" style="display: flex;">
+                                        <div class="kt-portlet">
+                                            <div class="kt-portlet__head">
+                                                <div class="kt-portlet__head-label">
+                                                    <span class="kt-portlet__head-icon kt-hidden">
+                                                        <i class="la la-gear"></i>
+                                                    </span>
+                                                    <h3 class="kt-portlet__head-title">
+                                                        HSSE
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                            <div class="kt-portlet__body">
+                                                <div class="col-sm-12">
+                                                    <label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
+                                                        <input checked disabled did="status_perpanjang" name="status_perpanjang" type="checkbox"><p style="font-size: 12px;" >Good House Keeping</p>
+                                                        <span></span>
+                                                    </label><br>
+                                                    <label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
+                                                        <input checked disabled id="status_perpanjang" name="status_perpanjang" type="checkbox"><p style="font-size: 12px;" >Area Clearance</p>
+                                                        <span></span>
+                                                    </label>
+                                                </div>
+                                                <p align="center">Diverifikasi pada tanggal 29 November 2019</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6" style="display: flex;">
+                                        <div style="background-color:#f7f8fa" class="kt-portlet">
+                                            <div class="kt-portlet__head">
+                                                <div class="kt-portlet__head-label">
+                                                    <span class="kt-portlet__head-icon kt-hidden">
+                                                        <i class="la la-gear"></i>
+                                                    </span>
+                                                    <h3 class="kt-portlet__head-title">
+                                                        GSI
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                            <div class="kt-portlet__body">
+                                                <div style="margin: 40px 0px" class="col-sm-12">
+                                                    <p style="margin-bottom:0px" align="center">Diverifikasi pada tanggal 29 November 2019</p>
+                                                </div>
+                                             </div>
+                                        </div>
+                                    </div>
                                 </div>
-							</div>
+                            </div>
 						</div>
 					</div>
 					<!-- end:: Content -->
 				</div>
 				<!--begin::Modal-->
-				<div class="modal fade" id="kt_modal_tolak" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-					<div class="modal-dialog modal-lg" role="document">
+				<div class="modal fade" id="kt_modal_1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog" role="document">
 						<div class="modal-content">
 							<div class="modal-header">
-								<h5 class="modal-title" id="exampleModalLabel">Tolak</h5>
+								<h5 class="modal-title" id="exampleModalLabel">Approve</h5>
 								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 								</button>
 							</div>
-							<div class="modal-body">
-								<form>
-									<div class="form-group">
-										<label for="message-text" class="form-control-label">Alasan Penolakan:</label>
-										<textarea class="form-control" id="alasan_penolakan" name="alasan_penolakan" rows="3"></textarea>
-									</div>
-								</form>
-							</div>
-							<div class="modal-footer">
-								<button type="button" class="btn btn-secondary" data-dismiss="modal">Tidak</button>
-								<button type="button" class="btn btn-danger kt_sweetalert_tolak" data-dismiss="modal">Tolak</button>
+							<div align="center" class="modal-body">
+								<h4>Approve Sekarang ?</h4>
+								<div style="padding:15px 0px">
+									<button type="button" class="btn btn-secondary" data-dismiss="modal">Tidak</button>
+									<button type="button" class="btn btn-primary kt_sweetalert_approve" data-dismiss="modal">Ya</button>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -529,8 +435,6 @@
 	<script src="../assets/vendors/general/perfect-scrollbar/dist/perfect-scrollbar.js" type="text/javascript"></script>
 	<script src="../assets/vendors/general/sticky-js/dist/sticky.min.js" type="text/javascript"></script>
 	<script src="../assets/vendors/general/wnumb/wNumb.js" type="text/javascript"></script>
-	<script src="../assets/vendors/general/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js" type="text/javascript"></script>
-	<script src="../assets/vendors/custom/components/vendors/bootstrap-datepicker/init.js" type="text/javascript"></script>
 	<!--end:: Global Mandatory Vendors -->
 	<!--begin:: Global Optional Vendors -->
 	<!--end:: Global Optional Vendors -->
@@ -541,9 +445,6 @@
 	<script src="../assets/vendors/custom/fullcalendar/fullcalendar.bundle.js" type="text/javascript"></script>
 	<!--end::Page Vendors -->
 	<!--begin::Page Scripts(used by this page) -->
-	<script src="../assets/app/custom/general/crud/forms/widgets/bootstrap-datepicker.js" type="text/javascript"></script>
-	<script src="../assets/vendors/general/sweetalert2/dist/sweetalert2.min.js" type="text/javascript"></script>
-	<script src="../assets/vendors/custom/components/vendors/sweetalert2/init.js" type="text/javascript"></script>
 	<script src="../assets/app/custom/general/dashboard.js" type="text/javascript"></script>
 	<!--end::Page Scripts -->
 	<!--begin::Global App Bundle(used by all pages) -->
@@ -553,41 +454,6 @@
 	<!-- AJAX -->
 	<script src="../assets/vendors/custom/datatables/datatables.bundle.js" type="text/javascript"></script>
 	<script src="../assets/app/script/js_ajax_gsi.js" type="text/javascript"></script>
-	<!-- sweetalert2 -->
-	<script>
-		// Class definition
-		var KTSweetAlert2Demo = function() {
-
-	    // Demos
-	    var initDemos = function() {
-	    	$('.kt_sweetalert_verified').click(function(e) {
-	    		swal.fire("Terverifikasi!", "Pekerjaan berhasil diverifikasi!", "success");
-	    	});
-
-
-	    };
-		var initDemosTolak = function() {
-	    	$('.kt_sweetalert_tolak').click(function(e) {
-	    		swal.fire("Ditolak!", "Pekerjaan berhasil ditolak!", "success");
-	    	});
-
-
-	    };
-
-	    return {
-	        // Init
-	        init: function() {
-	        	initDemos();
-				initDemosTolak();
-	        },
-	    };
-	}();
-
-		// Class Initialization
-		jQuery(document).ready(function() {
-			KTSweetAlert2Demo.init();
-		});
-	</script>
 </body>
 <!-- end::Body -->
 </html>

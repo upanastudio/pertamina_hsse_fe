@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <!-- begin::Head -->
@@ -118,6 +119,26 @@
 						<ul class="kt-menu__nav ">
 							<li class="kt-menu__item  " aria-haspopup="true"><a href="index.html" class="kt-menu__link "><i class="kt-menu__link-icon flaticon-home"></i><span class="kt-menu__link-text">Dashboard</span></a>
 							</li>
+							<li class="kt-menu__item kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
+								<a href="javascript:;" class="kt-menu__link kt-menu__toggle">
+									<i class="kt-menu__link-icon flaticon-user"></i>
+									<span class="kt-menu__link-text">Pekerja</span>
+									<i class="kt-menu__ver-arrow la la-angle-right"></i>
+								</a>
+								<div class="kt-menu__submenu " kt-hidden-height="80" style="display: none; overflow: hidden;"><span class="kt-menu__arrow"></span>
+									<ul class="kt-menu__subnav">
+										<li class="kt-menu__item  kt-menu__item--parent" aria-haspopup="true">
+											<span class="kt-menu__link"><span class="kt-menu__link-text">Pekerja</span></span>
+										</li>
+										<li class="kt-menu__item " aria-haspopup="true">
+											<a href="pekerja_belum_terverifikasi.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Belum Terverifikasi</span></a>
+										</li>
+										<li class="kt-menu__item " aria-haspopup="true">
+											<a href="pekerja_terverifikasi.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Terverifikasi</span></a>
+										</li>
+									</ul>
+								</div>
+							</li>
 							<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--open kt-menu__item--here" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
 								<a href="javascript:;" class="kt-menu__link kt-menu__toggle">
 									<i class="kt-menu__link-icon fa fa-briefcase"></i>
@@ -164,15 +185,7 @@
 												<i class="kt-menu__link-bullet kt-menu__link-bullet--dot">
 													<span></span>
 												</i>
-												<span class="kt-menu__link-text">Permintaan Pembuatan SIKA</span>
-											</a>
-										</li>
-										<li class="kt-menu__item " aria-haspopup="true">
-											<a href="permintaan_tutup_sika.html" class="kt-menu__link ">
-												<i class="kt-menu__link-bullet kt-menu__link-bullet--dot">
-													<span></span>
-												</i>
-												<span class="kt-menu__link-text">Permintaan Tutup SIKA</span>
+												<span class="kt-menu__link-text">Permintaan SIKA</span>
 											</a>
 										</li>
 										<li class="kt-menu__item " aria-haspopup="true">
@@ -180,7 +193,7 @@
 												<i class="kt-menu__link-bullet kt-menu__link-bullet--dot">
 													<span></span>
 												</i>
-												<span class="kt-menu__link-text">Riwayat SIKA</span>
+												<span class="kt-menu__link-text">Semua SIKA</span>
 											</a>
 										</li>
 									</ul>
@@ -210,7 +223,7 @@
 						<div class="kt-header__topbar-item kt-header__topbar-item--user">
 							<div class="user-name">
 								<p style="display: inline;">Hi, <span name="user_name">Rifal</span></p>
-								<a id="btn_log_out" class="btn btn-secondary"> <i class="fa fa-sign-out-alt"></i> Logut</a>
+								<a id="btn_log_out" class="btn btn-secondary"> <i class="fa fa-sign-out-alt"></i> Keluar</a>
 							</div>
 						</div>
 						<!--end: User Bar -->
@@ -374,7 +387,7 @@
 														<div class="col-sm-6">
 															<input disabled="" class="form-control" type="text" value="hazard analysis" id="input_hazard_analysis" name="input_hazard_analysis">
 														</div>
-														<div align="" class="offset-sm-4 col-sm-2">
+														<div align="" class="offset-sm-4 col-sm-2" style="text-align:right;">
 															<button type="button" class="btn btn-link"> <i class="fa fa-eye "></i>lihat file</button>
 														</div>
 														<div class="col-sm-12">
@@ -382,13 +395,13 @@
 																<div class="row">
 																	<div class="col-sm-3">
 																		<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
-																			<input checked="" disabled="" name="status_dokumen" type="checkbox"> Dokumen telah ditinjau
+																			<input name="status_dokumen" type="checkbox"> Dokumen telah ditinjau
 																			<span></span>
 																		</label>
 																	</div>
 																	<div class="col-sm-3">
 																		<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
-																			<input checked="" disabled="" name="status_dokumen" type="checkbox"> Telah disosialisasikan
+																			<input name="status_dokumen" type="checkbox"> Telah disosialisasikan
 																			<span></span>
 																		</label>
 																	</div>
@@ -401,7 +414,7 @@
 														<div class="col-sm-6">
 															<input disabled="" class="form-control" type="text" value="text rifting plan" id="input_rifting_plan" name="input_rifting_plan">
 														</div>
-														<div align="" class="offset-sm-4 col-sm-2">
+														<div align="" class="offset-sm-4 col-sm-2" style="text-align:right;">
 															<button type="button" class="btn btn-link"> <i class="fa fa-eye "></i>lihat file</button>
 														</div>
 													</div>
@@ -410,7 +423,7 @@
 														<div class="col-sm-6">
 															<input disabled="" class="form-control" type="text" value="text sop peralatan" id="input_sop_peralatan" name="input_sop_peralatan">
 														</div>
-														<div align="" class="offset-sm-4 col-sm-2">
+														<div align="" class="offset-sm-4 col-sm-2" style="text-align:right;">
 															<button type="button" class="btn btn-link"> <i class="fa fa-eye "></i>lihat file</button>
 														</div>
 													</div>
@@ -419,7 +432,7 @@
 														<div class="col-sm-6">
 															<input disabled="" class="form-control" type="text" value="text form inspection" id="input_form_inspection" name="input_form_inspection">
 														</div>
-														<div align="" class="offset-sm-4 col-sm-2">
+														<div align="" class="offset-sm-4 col-sm-2" style="text-align:right;">
 															<button type="button" class="btn btn-link"> <i class="fa fa-eye "></i>lihat file</button>
 														</div>
 													</div>
@@ -440,6 +453,12 @@
 															</span>
 														</div>
 													</div>
+													<div class="form-group row">
+														<label class="col-sm-12">Komentar</label>
+														<div class="col-sm-12">
+															<textarea class="form-control border-bold" id="exampleTextarea" rows="3" placeholder="Tulis komentar..."></textarea>
+														</div>
+													</div>
 												</div>
 											</div>
 											<div class="tab-pane" id="kt_tabs_moc" role="tabpanel">
@@ -449,13 +468,13 @@
 														<div class="col-sm-6">
 															<input disabled="" class="form-control" type="text" value="text isolasi energi/LOTO" id="input_hazard_analysis" name="input_hazard_analysis">
 														</div>
-														<div align="" class="offset-sm-4 col-sm-2">
+														<div align="" class="offset-sm-4 col-sm-2" style="text-align:right;">
 															<button type="button" class="btn btn-link"> <i class="fa fa-eye "></i>lihat file</button>
 														</div>
 														<div class="col-sm-12">
 															<div class="kt-checkbox-inline">
 																<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
-																	<input checked="" disabled="" name="status_dokumen" type="checkbox"> Tindakan LOTO sudah direalisasikan dilokasi
+																	<input name="status_dokumen" type="checkbox"> Tindakan LOTO sudah direalisasikan dilokasi
 																	<span></span>
 																</label>
 															</div>
@@ -466,7 +485,7 @@
 														<div class="col-sm-6">
 															<input disabled="" class="form-control" type="text" value="text prosedur" id="input_prosedur" name="input_prosedur">
 														</div>
-														<div align="" class="offset-sm-4 col-sm-2">
+														<div align="" class="offset-sm-4 col-sm-2" style="text-align:right;">
 															<button type="button" class="btn btn-link"> <i class="fa fa-eye "></i>lihat file</button>
 														</div>
 													</div>
@@ -475,7 +494,7 @@
 														<div class="col-sm-6">
 															<input disabled="" class="form-control" type="text" value="text engineering layout" id="input_engineering_pid" name="input_engineering_pid">
 														</div>
-														<div align="" class="offset-sm-4 col-sm-2">
+														<div align="" class="offset-sm-4 col-sm-2" style="text-align:right;">
 															<button type="button" class="btn btn-link"> <i class="fa fa-eye "></i>lihat file</button>
 														</div>
 													</div>
@@ -484,8 +503,14 @@
 														<div class="col-sm-6">
 															<input disabled="" class="form-control" type="text" value="text training" id="input_training" name="input_training">
 														</div>
-														<div align="" class="offset-sm-4 col-sm-2">
+														<div align="" class="offset-sm-4 col-sm-2" style="text-align:right;">
 															<button type="button" class="btn btn-link"> <i class="fa fa-eye "></i>lihat file</button>
+														</div>
+													</div>
+													<div class="form-group row">
+														<label class="col-sm-12">Komentar</label>
+														<div class="col-sm-12">
+															<textarea class="form-control border-bold" id="exampleTextarea" rows="3" placeholder="Tulis komentar..."></textarea>
 														</div>
 													</div>
 												</div>
@@ -609,38 +634,15 @@
 														<div style="padding: 5px 20px" class="col-sm-12">
 															<div class="form-group row">
 																<label class="col-sm-3">Nama Peralatan</label>
-																<div align="right" class="col-sm-9">
+																<div align="right" class="col-sm-9" style="text-align:right;">
 																	<button type="button" class="btn btn-link"> <i class="fa fa-eye "></i>lihat file</button>
 																</div>
 															</div>
-															<div class="form-group row">
-																<label class="col-sm-3">SOP</label>
-																<div align="right" class="col-sm-9">
-																	<button type="button" class="btn btn-link"> <i class="fa fa-eye "></i>lihat file</button>
-																</div>
-															</div>
-
 															<div class="form-group row kt-hidden">
 																<label for="example-text-input" class="col-3 col-form-label">Tanggal Izin</label>
 																<div class="col-9">
 																	<input disabled="" class="form-control" type="date" value="" id="tanggal_izin" name="tanggal_izin">
 
-																</div>
-															</div>
-															<div class="form-group row">
-																<label class="col-sm-3">Form Inspeksi</label>
-																<div align="right" class="col-sm-9">
-																	<button type="button" class="btn btn-link"> <i class="fa fa-eye "></i>lihat file</button>
-																</div>
-															</div>
-															<div class="form-group row">
-																<label class="col-sm-3">Izin</label>
-																<div class="col-7">
-																	<input disabled="" class="form-control" type="date" value="" id="tanggal_izin" name="tanggal_izin">
-																	<span class="form-text text-muted">Tanggal Izin</span>
-																</div>
-																<div align="right" class="col-sm-2">
-																	<button type="button" class="btn btn-link"> <i class="fa fa-eye "></i>lihat file</button>
 																</div>
 															</div>
 														</div>
@@ -741,7 +743,7 @@
 	<!--end::Global App Bundle -->
 	<!-- AJAX -->
 	<script src="../assets/vendors/custom/datatables/datatables.bundle.js" type="text/javascript"></script>
-	<script src="../assets/app/script/js_ajax_hsse.js" type="text/javascript"></script>
+	<script src="../assets/app/script/js_ajax_gsi.js" type="text/javascript"></script>
 	<!-- SweetAlert2 -->
 	<script>
 		// Class definition

@@ -1,0 +1,107 @@
+{
+    "iTotalRecords": 10,
+    "iTotalDisplayRecords": 10,
+    "sEcho": 0,
+    "sColumns": "",
+    "aaData": [{
+                 "no": "1",
+                 "pekerjaan" : "penggalian",
+                 "vendor" : "CV. Upana",
+                 "tanggal" : "10 November 2019",
+                 "tipe" : "hot",
+                 "status" : "kadaluarsa",
+                 "sifat" : "Swakelola",
+                 "validasi": "gsi",
+                 "aksi" : null
+
+             },
+             {
+                "no": "2",
+                 "pekerjaan" : "penggalian",
+                 "vendor" : "CV. Upana",
+                 "tanggal" : "10 November 2019",
+                 "tipe" : "hot",
+                 "status" : "pengajuan awal",
+                 "sifat" : "Swakelola",
+                 "validasi": "gsi",
+                 "aksi" : null
+             },
+             {
+                 "no": "3",
+                 "pekerjaan" : "penggalian",
+                 "vendor" : "CV. Upana",
+                 "tanggal" : "10 November 2019",
+                 "tipe" : "cold",
+                 "status" : "pengajuan ulang",
+                 "sifat" : "ABO",
+                 "validasi": "gsi",
+                 "aksi" : null
+             },
+             {
+                 "no": "4",
+                 "pekerjaan" : "penggalian",
+                 "vendor" : "CV. Upana",
+                 "tanggal" : "10 November 2019",
+                 "tipe" : "cold",
+                 "status" : "progress",
+                 "sifat" : "ABO",
+                 "validasi": "gsi",
+                 "aksi" : null
+             },
+             {
+                 "no": "5",
+                 "pekerjaan" : "penggalian",
+                 "vendor" : "CV. Upana",
+                 "tanggal" : "10 November 2019",
+                 "tipe" : "hot",
+                 "status" : "ditolak",
+                 "sifat" : "ABO",
+                 "validasi": "gsi",
+                 "aksi" : null
+             },
+             {
+                 "no": "6",
+                 "pekerjaan" : "penggalian",
+                 "vendor" : "CV. Upana",
+                 "tanggal" : "10 November 2019",
+                 "tipe" : "hot",
+                 "status" : "perpanjang",
+                 "sifat" : "ABI",
+                 "validasi": "gsi",
+                 "aksi" : null
+             },
+             {
+                 "no": "7",
+                 "pekerjaan" : "penggalian",
+                 "vendor" : "CV. Upana",
+                 "tanggal" : "10 November 2019",
+                 "tipe" : "hot",
+                 "status" : "ditunda",
+                 "sifat" : "ABI",
+                 "validasi": "gsi",
+                 "aksi" : null
+             },
+             {
+                 "no": "8",
+                 "pekerjaan" : "penggalian",
+                 "vendor" : "CV. Upana",
+                 "tanggal" : "10 November 2019",
+                 "tipe" : "hot",
+                 "status" : "selesai",
+                 "sifat" : "ABI",
+                 "validasi": "gsi",
+                 "aksi" : null
+             },
+             {
+                 "no": "9",
+                 "pekerjaan" : "penggalian",
+                 "vendor" : "CV. Upana",
+                 "tanggal" : "10 November 2019",
+                 "tipe" : "hot",
+                 "status" : "tutup",
+                 "sifat" : "ABI",
+                 "validasi": "gsi",
+                 "aksi" : null
+             }
+]
+}

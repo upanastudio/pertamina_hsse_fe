@@ -1,0 +1,98 @@
+{
+    "iTotalRecords": 10,
+    "iTotalDisplayRecords": 10,
+    "sEcho": 0,
+    "sColumns": "",
+    "aaData": [{
+                 "no": 1,
+                 "jenis_sika" : "SIKA Panas",
+                 "no_sika" : "01/23/12345123",
+                 "status" : "pengajuan awal",
+                 "validasi" : "gsi",
+                 "rincian" : null,
+                 "aksi" : null
+
+             },
+             {
+                "no": 2,
+                  "jenis_sika" : "SIKA Panas",
+                 "no_sika" : "01/23/12345123",
+                 "status" : "pengajuan ulang",
+                 "validasi" : "gsi",
+                 "rincian" : null,
+                 "aksi" : null
+             },
+             {
+                 "no": 3,
+                  "jenis_sika" : "SIKA Panas",
+                 "no_sika" : "01/23/12345123",
+                 "status" : "perpanjang",
+                 "validasi" : "gsi",
+                 "rincian" : null,
+                 "aksi" : null
+             },
+             {
+                 "no": 4,
+                 "jenis_sika" : "SIKA Panas",
+                 "no_sika" : "01/23/12345123",
+                 "status" : "ditolak",
+                 "validasi" : "gsi",
+                 "rincian" : null,
+                 "aksi" : null
+             },
+             {
+                 "no": 5,
+                  "jenis_sika" : "SIKA Panas",
+                 "no_sika" : "01/23/12345123",
+                 "status" : "tutup",
+                 "validasi" : "gsi",
+                 "rincian" : null,
+                 "aksi" : null
+             },
+             {
+                 "no": 6,
+                 "jenis_sika" : "SIKA Panas",
+                 "no_sika" : "01/23/12345123",
+                 "status" : "kadaluarsa",
+                 "validasi" : "gsi",
+                 "rincian" : null,
+                 "aksi" : null
+             },
+             {
+                 "no": 7,
+                 "jenis_sika" : "SIKA Panas",
+                 "no_sika" : "01/23/12345123",
+                 "status" : "ditunda",
+                 "validasi" : "gsi",
+                 "rincian" : null,
+                 "aksi" : null
+             },
+              {
+                 "no": 8,
+                  "jenis_sika" : "SIKA Panas",
+                 "no_sika" : "01/23/12345123",
+                 "status" : "progress",
+                 "validasi" : "gsi",
+                 "rincian" : null,
+                 "aksi" : null
+             },
+             {
+                 "no": 9,
+                  "jenis_sika" : "SIKA Panas",
+                 "no_sika" : "01/23/12345123",
+                 "status" : "tutup",
+                 "validasi" : "gsi",
+                 "rincian" : null,
+                 "aksi" : null
+             },
+              {
+                 "no": 10,
+                  "jenis_sika" : "SIKA Panas",
+                 "no_sika" : "01/23/12345123",
+                 "status" : "kadaluarsa",
+                 "validasi" : "gsi",
+                 "rincian" : null,
+                 "aksi" : null
+             }
+]
+}

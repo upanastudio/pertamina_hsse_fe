@@ -3,7 +3,7 @@
 <!-- begin::Head -->
 <head>
 	<meta charset="utf-8" />
-	<title>GSI| Permintaan Pekerjaan</title>
+	<title>GSI | Permintaan Pekerjaan</title>
 	<meta name="description" content="Page with empty content">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<!--begin::Fonts -->
@@ -67,18 +67,26 @@
 	<link href="../assets/app/style/pertamina-theme.css" rel="stylesheet" type="text/css" />
 	<link href="../assets/app/style/text_black.css" rel="stylesheet" type="text/css" />
 	<link href="../assets/app/style/jsa-style.css" rel="stylesheet" type="text/css" />
-	<link href="../assets/app/style/at_rincian-pekerjaan-style.css" rel="stylesheet" type="text/css" />
+	<!-- <link href="../assets/app/style/at_rincian-pekerjaan-style.css" rel="stylesheet" type="text/css" /> -->
 	<link href="../assets/app/style/tab-style.css" rel="stylesheet" type="text/css" />
 	<style>
 		#kt_tabs_umum .form-group,
 		#kt_tabs_simlok .form-group {
 			margin-bottom: 1rem;
 		}
-		.kt-badge {
-			justify-content: center;
+		.nav-tabs .nav-item .nav-link {
+			padding: 0.75rem 4rem;
 		}
 		.modal-content {
-			width: 80%;
+			width: 100%;
+		}
+		.select2 {
+			width: 100% !important;
+		}
+		.kt-badge--warning {
+			width: 60% !important;
+			background: transparent !important;
+			border-bottom: 1px solid #80808078 !important;
 		}
 	</style>
 </head>
@@ -117,6 +125,26 @@
 					<div id="kt_aside_menu" class="kt-aside-menu " data-ktmenu-vertical="1" data-ktmenu-scroll="1" data-ktmenu-dropdown-timeout="500">
 						<ul class="kt-menu__nav ">
 							<li class="kt-menu__item  " aria-haspopup="true"><a href="index.html" class="kt-menu__link "><i class="kt-menu__link-icon flaticon-home"></i><span class="kt-menu__link-text">Dashboard</span></a>
+							</li>
+							<li class="kt-menu__item kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
+								<a href="javascript:;" class="kt-menu__link kt-menu__toggle">
+									<i class="kt-menu__link-icon flaticon-user"></i>
+									<span class="kt-menu__link-text">Pekerja</span>
+									<i class="kt-menu__ver-arrow la la-angle-right"></i>
+								</a>
+								<div class="kt-menu__submenu " kt-hidden-height="80" style="display: none; overflow: hidden;"><span class="kt-menu__arrow"></span>
+									<ul class="kt-menu__subnav">
+										<li class="kt-menu__item  kt-menu__item--parent" aria-haspopup="true">
+											<span class="kt-menu__link"><span class="kt-menu__link-text">Pekerja</span></span>
+										</li>
+										<li class="kt-menu__item " aria-haspopup="true">
+											<a href="pekerja_belum_terverifikasi.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Belum Terverifikasi</span></a>
+										</li>
+										<li class="kt-menu__item " aria-haspopup="true">
+											<a href="pekerja_terverifikasi.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Terverifikasi</span></a>
+										</li>
+									</ul>
+								</div>
 							</li>
 							<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--open kt-menu__item--here" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
 								<a href="javascript:;" class="kt-menu__link kt-menu__toggle">
@@ -164,15 +192,7 @@
 												<i class="kt-menu__link-bullet kt-menu__link-bullet--dot">
 													<span></span>
 												</i>
-												<span class="kt-menu__link-text">Permintaan Pembuatan SIKA</span>
-											</a>
-										</li>
-										<li class="kt-menu__item " aria-haspopup="true">
-											<a href="permintaan_tutup_sika.html" class="kt-menu__link ">
-												<i class="kt-menu__link-bullet kt-menu__link-bullet--dot">
-													<span></span>
-												</i>
-												<span class="kt-menu__link-text">Permintaan Tutup SIKA</span>
+												<span class="kt-menu__link-text">Permintaan SIKA</span>
 											</a>
 										</li>
 										<li class="kt-menu__item " aria-haspopup="true">
@@ -180,7 +200,7 @@
 												<i class="kt-menu__link-bullet kt-menu__link-bullet--dot">
 													<span></span>
 												</i>
-												<span class="kt-menu__link-text">Riwayat SIKA</span>
+												<span class="kt-menu__link-text">Semua SIKA</span>
 											</a>
 										</li>
 									</ul>
@@ -210,7 +230,7 @@
 						<div class="kt-header__topbar-item kt-header__topbar-item--user">
 							<div class="user-name">
 								<p style="display: inline;">Hi, <span name="user_name">Rifal</span></p>
-								<a id="btn_log_out" class="btn btn-secondary"> <i class="fa fa-sign-out-alt"></i> Logut</a>
+								<a id="btn_log_out" class="btn btn-secondary"> <i class="fa fa-sign-out-alt"></i> Keluar</a>
 							</div>
 						</div>
 						<!--end: User Bar -->
@@ -237,7 +257,7 @@
 							</div>
 						</div>
 						<div class="kt-subheader__toolbar">
-							<button class="btn btn-secondary">
+							<button class="btn btn-secondary" data-toggle="modal" data-target="#kt_modal_tolak">
 								<i class="fa fa-times"></i> Tolak
 							</button>
 							<button class="btn btn-primary" data-toggle="modal" data-target="#kt_modal_1">
@@ -297,6 +317,12 @@
 														<label for="example-text-input" class="col-3 col-form-label">ID Pekerjaan</label>
 														<div class="col-9">
 															<input disabled="" class="form-control" type="text" value="00/000/0000/00" id="id_pekerjaan" name="id_pekerjaan">
+														</div>
+													</div>
+													<div class="form-group row">
+														<label for="example-text-input" class="col-3 col-form-label">Nama Pekerjaan</label>
+														<div class="col-9">
+															<input disabled="" class="form-control" type="text" value="Penggalian" id="id_pekerjaan" name="id_pekerjaan">
 														</div>
 													</div>
 													<div class="form-group row">
@@ -370,25 +396,22 @@
 											<div class="tab-pane" id="kt_tabs_jsa" role="tabpanel">
 												<div style="padding: 5px 20px">
 													<div class="form-group row">
-														<label class="col-sm-12">Hazard Analysis Doc (JSA)</label>
-														<div class="col-sm-6">
-															<input disabled="" class="form-control" type="text" value="hazard analysis" id="input_hazard_analysis" name="input_hazard_analysis">
+														<label class="col-sm-8">Hazard Analysis Doc (JSA)</label>
+														<div align="right" class="col-sm-4">
+															<button id="lihat_file_hazard" name="lihat_file_hazard" type="button" class="btn btn-sm btn-outline-brand" data-toggle="modal" data-target="#kt_modal_rincian"> <i class="fa fa-eye "></i>Lihat File</button>
 														</div>
-														<div align="" class="offset-sm-4 col-sm-2">
-															<button type="button" class="btn btn-link"> <i class="fa fa-eye "></i>lihat file</button>
-														</div>
-														<div class="col-sm-12">
+														<div id="checkbox_hazard" name="checkbox_hazard" class="col-sm-12">
 															<div class="kt-checkbox-inline">
 																<div class="row">
 																	<div class="col-sm-3">
 																		<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
-																			<input checked="" disabled="" name="status_dokumen" type="checkbox"> Dokumen telah ditinjau
+																			<input checked disabled id="tinjau_dokumen_hazard" name="tinjau_dokumen_hazard" type="checkbox"> Dokumen telah ditinjau
 																			<span></span>
 																		</label>
 																	</div>
 																	<div class="col-sm-3">
 																		<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
-																			<input checked="" disabled="" name="status_dokumen" type="checkbox"> Telah disosialisasikan
+																			<input checked disabled id="sosialisasi_dokumen_hazard" name="sosialisasi_dokumen_hazard" type="checkbox"> Telah disosialisasikan
 																			<span></span>
 																		</label>
 																	</div>
@@ -396,48 +419,132 @@
 															</div>
 														</div>
 													</div>
+													<div class="kt-separator kt-separator--border-dashed kt-separator--space-md"></div>
 													<div class="form-group row">
-														<label class="col-sm-12">Rifting Plan</label>
-														<div class="col-sm-6">
-															<input disabled="" class="form-control" type="text" value="text rifting plan" id="input_rifting_plan" name="input_rifting_plan">
+														<label class="col-sm-8">Heavy Equipment / Mobile Equipment</label>
+														<div align="right" class="col-sm-4">
+															<button id="lihat_file_heavy_equipment" name="lihat_file_heavy_equipment" type="button" class="btn btn-sm btn-outline-brand" data-toggle="modal" data-target="#kt_modal_rincian_heavy_equipment"> <i class="fa fa-eye "></i>Lihat File</button>
 														</div>
-														<div align="" class="offset-sm-4 col-sm-2">
-															<button type="button" class="btn btn-link"> <i class="fa fa-eye "></i>lihat file</button>
+														<div id="checkbox_heavy_equipment" name="checkbox_heavy_equipment" class="col-sm-12">
+															<div class="kt-checkbox-inline">
+																<div class="row">
+																	<div class="col-sm-3">
+																		<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
+																			<input checked disabled id="tinjau_dokumen_heavy_equipment" name="tinjau_dokumen_heavy_equipment" type="checkbox"> Dokumen telah ditinjau
+																			<span></span>
+																		</label>
+																	</div>
+																	<div class="col-sm-3">
+																		<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
+																			<input checked disabled id="sosialisasi_dokumen_heavy_equipment" name="sosialisasi_dokumen_heavy_equipment" type="checkbox"> Telah disosialisasikan
+																			<span></span>
+																		</label>
+																	</div>
+																</div>
+															</div>
 														</div>
 													</div>
+													<div class="kt-separator kt-separator--border-dashed kt-separator--space-md"></div>
 													<div class="form-group row">
-														<label class="col-sm-12">SOP Peralatan</label>
-														<div class="col-sm-6">
-															<input disabled="" class="form-control" type="text" value="text sop peralatan" id="input_sop_peralatan" name="input_sop_peralatan">
+														<label class="col-sm-8">Lifting Plan</label>
+														<div align="right" class="col-sm-4">
+															<button id="lihat_file_lifting" name="lihat_file_lifting" type="button" class="btn btn-sm btn-outline-brand" data-toggle="modal" data-target="#kt_modal_rincian"> <i class="fa fa-eye "></i>Lihat File</button>
 														</div>
-														<div align="" class="offset-sm-4 col-sm-2">
-															<button type="button" class="btn btn-link"> <i class="fa fa-eye "></i>lihat file</button>
+														<div id="checkbox_lifting_plan" name="checkbox_lifting_plan" class="col-sm-12">
+															<div class="kt-checkbox-inline">
+																<div class="row">
+																	<div class="col-sm-3">
+																		<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
+																			<input checked disabled id="tinjau_dokumen_lifting_plan" name="tinjau_dokumen_lifting_plan" type="checkbox"> Dokumen telah ditinjau
+																			<span></span>
+																		</label>
+																	</div>
+																	<div class="col-sm-3">
+																		<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
+																			<input checked disabled id="sosialisasi_dokumen_lifting_plan" name="sosialisasi_dokumen_lifting_plan" type="checkbox"> Telah disosialisasikan
+																			<span></span>
+																		</label>
+																	</div>
+																</div>
+															</div>
 														</div>
 													</div>
+													<div class="kt-separator kt-separator--border-dashed kt-separator--space-md"></div>
 													<div class="form-group row">
-														<label class="col-sm-12">Form Inspection</label>
-														<div class="col-sm-6">
-															<input disabled="" class="form-control" type="text" value="text form inspection" id="input_form_inspection" name="input_form_inspection">
+														<label class="col-sm-8">Prosedur Kerja</label>
+														<div align="right" class="col-sm-4">
+															<button id="lihat_file_prosedur_kerja" name="lihat_file_prosedu_kerja" type="button" class="btn btn-sm btn-outline-brand" data-toggle="modal" data-target="#kt_modal_rincian"> <i class="fa fa-eye "></i>Lihat File</button>
 														</div>
-														<div align="" class="offset-sm-4 col-sm-2">
-															<button type="button" class="btn btn-link"> <i class="fa fa-eye "></i>lihat file</button>
+														<div id="checkbox_prosedur_kerja" name="checkbox_prosedur_kerja" class="col-sm-12">
+															<div class="kt-checkbox-inline">
+																<div class="row">
+																	<div class="col-sm-3">
+																		<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
+																			<input checked disabled id="tinjau_dokumen_prosedur_kerja" name="tinjau_dokumen_prosedur_kerja" type="checkbox"> Dokumen telah ditinjau
+																			<span></span>
+																		</label>
+																	</div>
+																	<div class="col-sm-3">
+																		<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
+																			<input checked disabled id="sosialisasi_dokumen_prosedur_kerja" name="sosialisasi_dokumen_prosedur_kerja" type="checkbox"> Telah disosialisasikan
+																			<span></span>
+																		</label>
+																	</div>
+																</div>
+															</div>
 														</div>
 													</div>
+													<div class="kt-separator kt-separator--border-dashed kt-separator--space-md"></div>
 													<div class="form-group row">
 														<label class="col-sm-12">Hazard Identification</label>
-														<div class="col-sm-10" class="pilihan_hazard_identification">
-															<span  class="kt-badge kt-badge--dark kt-badge--inline kt-badge--pill kt-badge--rounded">
-																Flammable / explosive material / bahan mudah terbakar / meledak
-															</span>
-															<span class="kt-badge  kt-badge--dark kt-badge--inline kt-badge--pill kt-badge--rounded">
-																Presence of gas (hazardous area,...) / Gas (daerah berbahaya, ....)
-															</span>
-															<span class="kt-badge  kt-badge--dark kt-badge--inline kt-badge--pill kt-badge--rounded">
-																Liquid hydrocarbon (oil leakage) / ceceran BBM
-															</span>
-															<span class="kt-badge  kt-badge--dark kt-badge--inline kt-badge--pill kt-badge--rounded">
-																Single valve isolation / isolasi keruangan tunggal
-															</span>
+														<div class="col-sm-10">
+															<select w class="form-control select-2" id="hazard_identification_select" name="hazard_identification_select">
+																<option value="1">
+																	Flammable / explosive material / bahan mudah terbakar / meledak
+																</option>
+																<option value="2">
+																	Presence of gas (hazardous area,...) / Gas (daerah berbahaya, ....)
+																</option>
+																<option value="3">
+																	Liquid hydrocarbon (oil leakage) / ceceran BBM
+																</option>
+																<option value="4">
+																	Single valve isolation / isolasi keruangan tunggal
+																</option>
+																<option value="5">
+																	Hazardous substance / bahan berbahaya
+																</option>
+															</select>
+														</div>
+														<div style="margin-bottom:5px" class="col-sm-2">
+															<button style="width: 100%" type="button" class="btn btn-success"> <i class="fa fa-plus"></i> Tambah</button>
+														</div>
+														<div class="col-sm-12">
+															<div class="pilihan_hazard_identification">
+																<div style="cursor:auto!important;" class="btn btn-bold btn-sm btn-font-sm btn-label-dark col-sm-12 custom-label">
+																	<span class="overflow-text">Flammable / explosive material / bahan mudah terbakar / meledak bahan mudah terbakar / meledak bahan mudah terbakar / meledak</span>
+																	<i id="hazard_0" class="fa fa-times"></i>
+																</div>
+																<div style="cursor:auto!important;" class="btn btn-bold btn-sm btn-font-sm btn-label-dark col-sm-12 custom-label">
+																	<span class="overflow-text">Presence of gas (hazardous area,...) / Gas (daerah berbahaya, ....)</span>
+																	<i id="hazard_0" class="fa fa-times"></i>
+																</div>
+																<div style="cursor:auto!important;" class="btn btn-bold btn-sm btn-font-sm btn-label-dark col-sm-12 custom-label">
+																	<span class="overflow-text">Liquid hydrocarbon (oil leakage) / ceceran BBM</span>
+																	<i id="hazard_0" class="fa fa-times"></i>
+																</div>
+																<div style="cursor:auto!important;" class="btn btn-bold btn-sm btn-font-sm btn-label-dark col-sm-12 custom-label">
+																	<span class="overflow-text">Single valve isolation / isolasi keruangan tunggal</span>
+																	<i id="hazard_0" class="fa fa-times"></i>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="kt-separator kt-separator--border-dashed kt-separator--space-md"></div>
+													<div class="form-group row">
+														<label class="col-sm-12">Komentar</label>
+														<div class="col-sm-12">
+															<textarea class="form-control border-bold" id="exampleTextarea" rows="3" placeholder="Tulis komentar..."></textarea>
 														</div>
 													</div>
 												</div>
@@ -445,47 +552,142 @@
 											<div class="tab-pane" id="kt_tabs_moc" role="tabpanel">
 												<div style="padding: 5px 20px">
 													<div class="form-group row">
-														<label class="col-sm-12">Isoalasi Energi / LOTO</label>
-														<div class="col-sm-6">
-															<input disabled="" class="form-control" type="text" value="text isolasi energi/LOTO" id="input_hazard_analysis" name="input_hazard_analysis">
+														<label class="col-sm-8">Isolasi Energi / LOTO</label>
+														<div align="right" class="col-sm-4">
+															<button id="lihat_file_isolasi" name="lihat_file_prosedur" type="button" class="btn btn-sm btn-outline-brand" data-toggle="modal" data-target="#kt_modal_rincian"> <i class="fa fa-eye "></i>Lihat File</button>
 														</div>
-														<div align="" class="offset-sm-4 col-sm-2">
-															<button type="button" class="btn btn-link"> <i class="fa fa-eye "></i>lihat file</button>
-														</div>
-														<div class="col-sm-12">
+														<div class="col-sm-12" style="margin-bottom: 10px">
 															<div class="kt-checkbox-inline">
 																<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
-																	<input checked="" disabled="" name="status_dokumen" type="checkbox"> Tindakan LOTO sudah direalisasikan dilokasi
+																	<input name="status_dokumen" type="checkbox"> Tindakan LOTO sudah direalisasikan dilokasi
 																	<span></span>
 																</label>
 															</div>
 														</div>
+														<div class="col-sm-12" style="padding: 0px 10px">
+															<div class="col-sm-12" style="margin-bottom: 12px">
+																<div class="row">
+																	<div class="col-sm-8" style="margin:auto">
+																		<i class="flaticon2-right-arrow" style="margin-right:5px; color:#0abb87"></i>
+																		<label style="margin-bottom: 0rem">Unggah Berkas
+																		</label>
+																	</div>
+																	<div align="right" class="col-sm-4">
+																		<!-- <button id="btn_tambah_prosedur" name="btn_tambah_prosedur" type="button" class="btn btn-sm btn-success">
+																			<i class="fa fa-plus"></i> Tambah file
+																		</button> -->
+																		<button type="button" id="btn_tambah_input" name="btn_tambah_input" class="btn btn-secondary" data-container="body" data-toggle="kt-tooltip" data-placement="left" title="Tambah berkas">
+																			<span class="fa fa-plus"></span>
+																		</button>
+																	</div>
+																</div>
+															</div>
+															<div class="col-sm-12 input-berkas">
+																<div class="row">
+																	<div class="col-sm-11">
+																		<div class="custom-file">
+																			<input style="font-size:1rem" type="file" class="custom-file-input" id="isolasi_energi_doc" name="isolasi_energi_doc">
+																			<label style="font-size:1rem" class="custom-file-label" for="customFile">Pilih berkas</label>
+																		</div>
+																	</div>
+																	<div align="right" class="col-sm-1">
+																		<button type="button" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary">
+																			<span class="fa fa-trash-alt"></span>
+																		</button>
+																	</div>
+																</div>
+															</div>
+															<div class="col-sm-12 input-berkas">
+																<div class="row">
+																	<div class="col-sm-11">
+																		<div class="custom-file">
+																			<input style="font-size:1rem" type="file" class="custom-file-input" id="isolasi_energi_doc" name="isolasi_energi_doc">
+																			<label style="font-size:1rem" class="custom-file-label" for="customFile">Pilih berkas</label>
+																		</div>
+																	</div>
+																	<div align="right" class="col-sm-1">
+																		<button type="button" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary">
+																			<span class="fa fa-trash-alt"></span>
+																		</button>
+																	</div>
+																</div>
+															</div>
+														</div>
 													</div>
+													<div class="kt-separator kt-separator--border-dashed kt-separator--space-md"></div>
 													<div class="form-group row">
-														<label class="col-sm-12">Prosedur</label>
-														<div class="col-sm-6">
-															<input disabled="" class="form-control" type="text" value="text prosedur" id="input_prosedur" name="input_prosedur">
+														<label class="col-sm-8">Prosedur</label>
+														<div align="right" class="col-sm-4">
+															<button id="lihat_file_prosedur" name="lihat_file_prosedur" type="button" class="btn btn-sm btn-outline-brand" data-toggle="modal" data-target="#kt_modal_rincian"> <i class="fa fa-eye "></i>Lihat File</button>
 														</div>
-														<div align="" class="offset-sm-4 col-sm-2">
-															<button type="button" class="btn btn-link"> <i class="fa fa-eye "></i>lihat file</button>
+														<div id="checkbox_prosedur" name="checkbox_prosedur" class="col-sm-12">
+															<div class="kt-checkbox-inline">
+																<div class="row">
+																	<div class="col-sm-3">
+																		<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
+																			<input checked disabled id="tinjau_dokumen_prosedur" name="tinjau_dokumen_prosedur" type="checkbox"> Dokumen telah ditinjau
+																			<span></span>
+																		</label>
+																	</div>
+																	<div class="col-sm-3">
+																		<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
+																			<input checked disabled id="sosialisasi_dokumen_prosedur" name="sosialisasi_dokumen_prosedur" type="checkbox"> Telah disosialisasikan
+																			<span></span>
+																		</label>
+																	</div>
+																</div>
+															</div>
 														</div>
 													</div>
+													<div class="kt-separator kt-separator--border-dashed kt-separator--space-md"></div>
 													<div class="form-group row">
-														<label class="col-sm-12">Engineering PID/Layout</label>
-														<div class="col-sm-6">
-															<input disabled="" class="form-control" type="text" value="text engineering layout" id="input_engineering_pid" name="input_engineering_pid">
+														<label class="col-sm-8">Engineering PID/Layout</label>
+														<div align="right" class="col-sm-4">
+															<button id="lihat_file_engineering" name="lihat_file_engineering" type="button" class="btn btn-sm btn-outline-brand" data-toggle="modal" data-target="#kt_modal_rincian"> <i class="fa fa-eye "></i>Lihat File</button>
 														</div>
-														<div align="" class="offset-sm-4 col-sm-2">
-															<button type="button" class="btn btn-link"> <i class="fa fa-eye "></i>lihat file</button>
+														<div id="checkbox_engineering_pid" name="checkbox_engineering_pid" class="col-sm-12">
+															<div class="kt-checkbox-inline">
+																<div class="row">
+																	<div class="col-sm-3">
+																		<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
+																			<input checked disabled id="tinjau_dokumen_engineering_pid" name="tinjau_dokumen_engineering_pid" type="checkbox"> Dokumen telah ditinjau
+																			<span></span>
+																		</label>
+																	</div>
+																	<div class="col-sm-3">
+																		<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
+																			<input checked disabled id="sosialisasi_dokumen_engineering_pid" name="sosialisasi_dokumen_engineering_pid" type="checkbox"> Telah disosialisasikan
+																			<span></span>
+																		</label>
+																	</div>
+																</div>
+															</div>
 														</div>
 													</div>
+													<div class="kt-separator kt-separator--border-dashed kt-separator--space-md"></div>
 													<div class="form-group row">
-														<label class="col-sm-12">Training</label>
-														<div class="col-sm-6">
-															<input disabled="" class="form-control" type="text" value="text training" id="input_training" name="input_training">
+														<label class="col-sm-8">Training</label>
+														<div align="right" class="col-sm-4">
+															<button id="lihat_file_training" name="lihat_file_training" type="button" class="btn btn-sm btn-outline-brand" data-toggle="modal" data-target="#kt_modal_rincian"> <i class="fa fa-eye "></i>Lihat File</button>
 														</div>
-														<div align="" class="offset-sm-4 col-sm-2">
-															<button type="button" class="btn btn-link"> <i class="fa fa-eye "></i>lihat file</button>
+														<div id="checkbox_prosedur_kerja" name="checkbox_prosedur_kerja" class="col-sm-12">
+															<div class="kt-checkbox-inline">
+																<div class="row">
+																	<div class="col-sm-3">
+																		<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
+																			<input checked disabled id="check_training" name="check training" type="checkbox"> Telah dilakukan
+																			<span></span>
+																		</label>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="kt-separator kt-separator--border-dashed kt-separator--space-md"></div>
+													<div class="form-group row">
+														<label class="col-sm-12">Komentar</label>
+														<div class="col-sm-12">
+															<textarea class="form-control border-bold" id="exampleTextarea" rows="3" placeholder="Tulis komentar..."></textarea>
 														</div>
 													</div>
 												</div>
@@ -499,148 +701,169 @@
 														</div>
 													</div>
 													<div class="form-group row">
-														<label class="col-sm-3">Dasar Kontak SPMP</label>
-														<div align="right" class="col-sm-9">
-															<button type="button" class="btn btn-link"> <i class="fa fa-eye "></i>lihat file</button>
+														<label class="col-sm-8">Dasar Kontak SPMP</label>
+														<div align="right" class="col-sm-4">
+															<button id="lihat_file_spmp" name="lihat_file_spmp" type="button" class="btn btn-sm btn-outline-brand" data-toggle="modal" data-target="#kt_modal_rincian"> <i class="fa fa-eye "></i>Lihat File</button>
+														</div>
+														<div id="checkbox_dasar_kontak_spmp" name="checkbox_dasar_kontak_spmp" class="col-sm-12">
+															<div class="kt-checkbox-inline">
+																<div class="row">
+																	<div class="col-sm-3">
+																		<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
+																			<input checked disabled id="tinjau_dokumen_dasar_kontak_spmp" name="tinjau_dokumen_dasar_kontak_spmp" type="checkbox"> Dokumen telah ditinjau
+																			<span></span>
+																		</label>
+																	</div>
+																	<div class="col-sm-3">
+																		<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
+																			<input checked disabled id="sosialisasi_dokumen_dasar_kontak_spmp" name="sosialisasi_dokumen_dasar_kontak_spmp" type="checkbox"> Telah disosialisasikan
+																			<span></span>
+																		</label>
+																	</div>
+																</div>
+															</div>
 														</div>
 													</div>
+													<div class="kt-separator kt-separator--border-dashed kt-separator--space-md"></div>
 													<div class="form-group row">
-														<label class="col-sm-3">Surat Permohonan</label>
-														<div align="right" class="col-sm-9">
-															<button type="button" class="btn btn-link"> <i class="fa fa-eye "></i>lihat file</button>
+														<label class="col-sm-8">Surat Permohonan</label>
+														<div align="right" class="col-sm-4">
+															<button id="lihat_file_surat_permohonan" name="lihat_file_surat_permohonan" type="button" class="btn btn-sm btn-outline-brand" data-toggle="modal" data-target="#kt_modal_rincian"> <i class="fa fa-eye "></i>Lihat File</button>
+														</div>
+														<div id="checkbox_surat_permohonan" name="checkbox_surat_permohonan" class="col-sm-12">
+															<div class="kt-checkbox-inline">
+																<div class="row">
+																	<div class="col-sm-3">
+																		<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
+																			<input checked disabled id="tinjau_dokumen_surat_permohonan" name="tinjau_dokumen_surat_permohonan" type="checkbox"> Dokumen telah ditinjau
+																			<span></span>
+																		</label>
+																	</div>
+																	<div class="col-sm-3">
+																		<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
+																			<input checked disabled id="sosialisasi_dokumen_surat_permohonan" name="sosialisasi_dokumen_surat_permohonan" type="checkbox"> Telah disosialisasikan
+																			<span></span>
+																		</label>
+																	</div>
+																</div>
+															</div>
 														</div>
 													</div>
+													<div class="kt-separator kt-separator--border-dashed kt-separator--space-md"></div>
 													<div class="form-group row">
-														<label class="col-sm-3">Gambar Kerja</label>
-														<div align="right" class="col-sm-9">
-															<button type="button" class="btn btn-link"> <i class="fa fa-eye "></i>lihat file</button>
+														<label class="col-sm-8">Gambar Kerja</label>
+														<div align="right" class="col-sm-4">
+															<button id="lihat_file_gambar_kerja" name="lihat_file_gambar_kerja" type="button" class="btn btn-sm btn-outline-brand" data-toggle="modal" data-target="#kt_modal_rincian"> <i class="fa fa-eye "></i>Lihat File</button>
+														</div>
+														<div id="checkbox_gambar_kerja" name="checkbox_gambar_kerja" class="col-sm-12">
+															<div class="kt-checkbox-inline">
+																<div class="row">
+																	<div class="col-sm-3">
+																		<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
+																			<input checked disabled id="tinjau_dokumen_gambar_kerja" name="tinjau_dokumen_gambar_kerja" type="checkbox"> Dokumen telah ditinjau
+																			<span></span>
+																		</label>
+																	</div>
+																	<div class="col-sm-3">
+																		<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
+																			<input checked disabled id="sosialisasi_dokumen_gambar_kerja" name="sosialisasi_dokumen_gambar_kerja" type="checkbox"> Telah disosialisasikan
+																			<span></span>
+																		</label>
+																	</div>
+																</div>
+															</div>
 														</div>
 													</div>
+													<div class="kt-separator kt-separator--border-dashed kt-separator--space-md"></div>
 													<div class="form-group row">
 														<label class="col-sm-12">Daftar Nama Pekerja</label>
-														<div align="center" class="col-sm-6">
-															<span  class="kt-badge  kt-badge--dark kt-badge--inline kt-badge--pill kt-badge--rounded">
-																<span id="nama_pekerja" name="nama_pekerjaan">
-																	<b>Ahmad Rifaldi</b>
-																</span> <span>&nbsp; : &nbsp;</span>
-																<span id="nama_pekerjaan" name="nama_pekerjaan">
-																	Penggalian
-																</span>
-															</span>
-															<span  class="kt-badge  kt-badge--dark kt-badge--inline kt-badge--pill kt-badge--rounded">
-																<span id="nama_pekerja" name="nama_pekerjaan">
-																	<b>Ahmad Rifaldi</b>
-																</span> <span>&nbsp; : &nbsp;</span>
-																<span id="nama_pekerjaan" name="nama_pekerjaan">
-																	Penggalian
-																</span>
-															</span>
-															<span  class="kt-badge  kt-badge--dark kt-badge--inline kt-badge--pill kt-badge--rounded">
-																<span id="nama_pekerja" name="nama_pekerjaan">
-																	<b>Ahmad Rifaldi</b>
-																</span> <span>&nbsp; : &nbsp;</span>
-																<span id="nama_pekerjaan" name="nama_pekerjaan">
-																	Penggalian
-																</span>
-															</span>
-															<span  class="kt-badge  kt-badge--dark kt-badge--inline kt-badge--pill kt-badge--rounded">
-																<span id="nama_pekerja" name="nama_pekerjaan">
-																	<b>Ahmad Rifaldi</b>
-																</span> <span>&nbsp; : &nbsp;</span>
-																<span id="nama_pekerjaan" name="nama_pekerjaan">
-																	Penggalian
-																</span>
-															</span>
-															<span  class="kt-badge  kt-badge--dark kt-badge--inline kt-badge--pill kt-badge--rounded">
-																<span id="nama_pekerja" name="nama_pekerjaan">
-																	<b>Ahmad Rifaldi</b>
-																</span> <span>&nbsp; : &nbsp;</span>
-																<span id="nama_pekerjaan" name="nama_pekerjaan">
-																	Penggalian
-																</span>
-															</span>
-															<span  class="kt-badge  kt-badge--dark kt-badge--inline kt-badge--pill kt-badge--rounded">
-																<span id="nama_pekerja" name="nama_pekerjaan">
-																	<b>Ahmad Rifaldi</b>
-																</span> <span>&nbsp; : &nbsp;</span>
-																<span id="nama_pekerjaan" name="nama_pekerjaan">
-																	Penggalian
-																</span>
-															</span>
+														<div style="display:flex;justify-content:space-between;" class="col-sm-12">
+															<div style="cursor:auto!important;margin:2px -2px" class="btn btn-bold btn-sm btn-font-sm btn-label-brand col-sm-6">
+																<span id="nama_pekerja" name="nama_pekerja">Fascal Ivandry</span></b>
+																<span> : </span>
+																<span id="pekerjaan" name="pekerjaan">Teknisi</span>
+															</div>
+															<div style="cursor:auto!important;margin:2px -2px" class="btn btn-bold btn-sm btn-font-sm btn-label-brand col-sm-6">
+																<span id="nama_pekerja" name="nama_pekerja">Fascal Ivandry</span></b>
+																<span> : </span>
+																<span id="pekerjaan" name="pekerjaan">Teknisi</span>
+															</div>
 														</div>
-														<div align="center" class="col-sm-6">
-															<span  class="kt-badge  kt-badge--dark kt-badge--inline kt-badge--pill kt-badge--rounded">
-																<span id="nama_pekerja" name="nama_pekerjaan">
-																	<b>Ahmad Rifaldi</b>
-																</span> <span>&nbsp; : &nbsp;</span>
-																<span id="nama_pekerjaan" name="nama_pekerjaan">
-																	Penggalian
-																</span>
-															</span>
-															<span  class="kt-badge  kt-badge--dark kt-badge--inline kt-badge--pill kt-badge--rounded">
-																<span id="nama_pekerja" name="nama_pekerjaan">
-																	<b>Ahmad Rifaldi</b>
-																</span> <span>&nbsp; : &nbsp;</span>
-																<span id="nama_pekerjaan" name="nama_pekerjaan">
-																	Penggalian
-																</span>
-															</span>
-															<span  class="kt-badge  kt-badge--dark kt-badge--inline kt-badge--pill kt-badge--rounded">
-																<span id="nama_pekerja" name="nama_pekerjaan">
-																	<b>Ahmad Rifaldi</b>
-																</span> <span>&nbsp; : &nbsp;</span>
-																<span id="nama_pekerjaan" name="nama_pekerjaan">
-																	Penggalian
-																</span>
-															</span>
-															<span  class="kt-badge  kt-badge--dark kt-badge--inline kt-badge--pill kt-badge--rounded">
-																<span id="nama_pekerja" name="nama_pekerjaan">
-																	<b>Ahmad Rifaldi</b>
-																</span> <span>&nbsp; : &nbsp;</span>
-																<span id="nama_pekerjaan" name="nama_pekerjaan">
-																	Penggalian
-																</span>
-															</span>
+														<div style="display:flex;justify-content:space-between;" class="col-sm-12">
+															<div style="cursor:auto!important;margin:2px -2px" class="btn btn-bold btn-sm btn-font-sm btn-label-brand col-sm-6">
+																<span id="nama_pekerja" name="nama_pekerja">Fascal Ivandry</span></b>
+																<span> : </span>
+																<span id="pekerjaan" name="pekerjaan">Teknisi</span>
+															</div>
+															<div style="cursor:auto!important;margin:2px -2px" class="btn btn-bold btn-sm btn-font-sm btn-label-brand col-sm-6">
+																<span id="nama_pekerja" name="nama_pekerja">Fascal Ivandry</span></b>
+																<span> : </span>
+																<span id="pekerjaan" name="pekerjaan">Teknisi</span>
+															</div>
+														</div>
+														<div style="display:flex;justify-content:space-between;" class="col-sm-12">
+															<div style="cursor:auto!important;margin:2px -2px" class="btn btn-bold btn-sm btn-font-sm btn-label-brand col-sm-6">
+																<span id="nama_pekerja" name="nama_pekerja">Fascal Ivandry</span></b>
+																<span> : </span>
+																<span id="pekerjaan" name="pekerjaan">Teknisi</span>
+															</div>
+															<div style="cursor:auto!important;margin:2px -2px" class="btn btn-bold btn-sm btn-font-sm btn-label-brand col-sm-6">
+																<span id="nama_pekerja" name="nama_pekerja">Fascal Ivandry</span></b>
+																<span> : </span>
+																<span id="pekerjaan" name="pekerjaan">Teknisi</span>
+															</div>
+														</div>
+														<div style="display:flex;justify-content:space-between;" class="col-sm-12">
+															<div style="cursor:auto!important;margin:2px -2px" class="btn btn-bold btn-sm btn-font-sm btn-label-brand col-sm-6">
+																<span id="nama_pekerja" name="nama_pekerja">Fascal Ivandry</span></b>
+																<span> : </span>
+																<span id="pekerjaan" name="pekerjaan">Teknisi</span>
+															</div>
+															<div style="cursor:auto!important;margin:2px -2px" class="btn btn-bold btn-sm btn-font-sm btn-label-brand col-sm-6">
+																<span id="nama_pekerja" name="nama_pekerja">Fascal Ivandry</span></b>
+																<span> : </span>
+																<span id="pekerjaan" name="pekerjaan">Teknisi</span>
+															</div>
+														</div>
+														<div style="display:flex;justify-content:space-between;" class="col-sm-12">
+															<div style="cursor:auto!important;margin:2px -2px" class="btn btn-bold btn-sm btn-font-sm btn-label-brand col-sm-6">
+																<span id="nama_pekerja" name="nama_pekerja">Fascal Ivandry</span></b>
+																<span> : </span>
+																<span id="pekerjaan" name="pekerjaan">Teknisi</span>
+															</div>
+															<div style="cursor:auto!important;margin:2px -2px" class="btn btn-bold btn-sm btn-font-sm btn-label-brand col-sm-6">
+																<span id="nama_pekerja" name="nama_pekerja">Fascal Ivandry</span></b>
+																<span> : </span>
+																<span id="pekerjaan" name="pekerjaan">Teknisi</span>
+															</div>
 														</div>
 													</div>
-													<div class="kt-separator kt-separator--border-dashed kt-separator--space-lg"></div>
+													<div class="kt-separator kt-separator--border-dashed kt-separator--space-md"></div>
 													<div class="form-group row">
 														<h5 style="margin-bottom: 20px" class="col-sm-12">Peralatan Kerja</h5>
 														<div style="padding: 5px 20px" class="col-sm-12">
 															<div class="form-group row">
-																<label class="col-sm-3">Nama Peralatan</label>
-																<div align="right" class="col-sm-9">
-																	<button type="button" class="btn btn-link"> <i class="fa fa-eye "></i>lihat file</button>
+																<label class="col-sm-8">Nama Peralatan</label>
+																<div align="right" class="col-sm-4">
+																	<button id="lihat_file_nama_peralatan" name="lihat_file_nama_peralatan" type="button" class="btn btn-sm btn-outline-brand" data-toggle="modal" data-target="#kt_modal_rincian"> <i class="fa fa-eye "></i>Lihat File</button>
 																</div>
-															</div>
-															<div class="form-group row">
-																<label class="col-sm-3">SOP</label>
-																<div align="right" class="col-sm-9">
-																	<button type="button" class="btn btn-link"> <i class="fa fa-eye "></i>lihat file</button>
-																</div>
-															</div>
-
-															<div class="form-group row kt-hidden">
-																<label for="example-text-input" class="col-3 col-form-label">Tanggal Izin</label>
-																<div class="col-9">
-																	<input disabled="" class="form-control" type="date" value="" id="tanggal_izin" name="tanggal_izin">
-
-																</div>
-															</div>
-															<div class="form-group row">
-																<label class="col-sm-3">Form Inspeksi</label>
-																<div align="right" class="col-sm-9">
-																	<button type="button" class="btn btn-link"> <i class="fa fa-eye "></i>lihat file</button>
-																</div>
-															</div>
-															<div class="form-group row">
-																<label class="col-sm-3">Izin</label>
-																<div class="col-7">
-																	<input disabled="" class="form-control" type="date" value="" id="tanggal_izin" name="tanggal_izin">
-																	<span class="form-text text-muted">Tanggal Izin</span>
-																</div>
-																<div align="right" class="col-sm-2">
-																	<button type="button" class="btn btn-link"> <i class="fa fa-eye "></i>lihat file</button>
+																<div id="checkbox_nama_peralatan" name="checkbox_nama_peralatan" class="col-sm-12">
+																	<div class="kt-checkbox-inline">
+																		<div class="row">
+																			<div class="col-sm-3">
+																				<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
+																					<input checked disabled id="tinjau_dokumen_nama_peralatan" name="tinjau_dokumen_nama_peralatan" type="checkbox"> Dokumen telah ditinjau
+																					<span></span>
+																				</label>
+																			</div>
+																			<div class="col-sm-3">
+																				<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
+																					<input checked disabled id="sosialisasi_dokumen_nama_peralatan" name="sosialisasi_dokumen_nama_peralatan" type="checkbox"> Telah disosialisasikan
+																					<span></span>
+																				</label>
+																			</div>
+																		</div>
+																	</div>
 																</div>
 															</div>
 														</div>
@@ -667,9 +890,137 @@
 							<div align="center" class="modal-body">
 								<h4>Approve Sekarang ?</h4>
 								<div style="padding:15px 0px">
-									<button type="button" class="btn btn-secondary" data-dismiss="modal">Tidak</button>
+									<button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
 									<button type="button" class="btn btn-primary kt_sweetalert_approve" data-dismiss="modal">Ya</button>
 								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="modal fade" id="kt_modal_tolak" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog modal-lg" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="exampleModalLabel">Tolak</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								</button>
+							</div>
+							<div class="modal-body">
+								<form>
+									<div class="form-group">
+										<label for="message-text" class="form-control-label">Alasan Penolakan:</label>
+										<textarea class="form-control" id="alasan_penolakan" name="alasan_penolakan" rows="3"></textarea>
+									</div>
+								</form>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+								<button type="button" class="btn btn-danger kt_sweetalert_tolak" data-dismiss="modal">Tolak</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="modal fade" id="kt_modal_rincian" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="exampleModalLabel">Dokumen dan file</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								</button>
+							</div>
+							<div class="modal-body">
+								<div class="form-group row group-dokumen">
+									<label class="col-6 col-form-label dokumen">
+										<span id="nama_dokumen" name="nama_dokumen">Nama Dokumen 42334</span>
+									</label>
+									<div align="right" class="col-sm-6">
+										<button onclick=" window.open('#','_blank')" class="btn btn-sm btn-link">
+											<i class="fa fa-download"></i> Download/View
+										</button>
+									</div>
+								</div>
+								<div class="form-group row group-dokumen">
+									<label class="col-6 col-form-label dokumen">
+										<span id="nama_dokumen" name="nama_dokumen">Nama Dokumen 12312</span>
+									</label>
+									<div align="right" class="col-sm-6">
+										<button onclick=" window.open('#','_blank')" class="btn btn-sm btn-link">
+											<i class="fa fa-download"></i> Download/View
+										</button>
+									</div>
+								</div>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">
+									<i class="fa fa-times"></i> Tutup
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="modal fade" id="kt_modal_rincian_heavy_equipment" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="exampleModalLabel">Dokumen dan file</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								</button>
+							</div>
+							<div class="modal-body">
+								<div class="form-group group-dokumen">
+									<label class="col-12 col-form-label dokumen">Sertifikat</label>
+									<div class="row col-sm-12" style="padding-right: 0px;padding-left: 20px;">
+										<label style="font-size:1rem;" class="col-6 col-form-label dokumen">
+											Nama Dokumen 12312
+										</label>
+										<div align="right" class="col-sm-6">
+											<button onclick=" window.open('#','_blank')" class="btn btn-sm btn-link">
+												<i class="fa fa-download"></i> Download/View
+											</button>
+										</div>
+									</div>
+									<div class="row col-sm-12" style="padding-right: 0px;padding-left: 20px;">
+										<label style="font-size:1rem;" class="col-6 col-form-label dokumen">
+											Nama Dokumen 12312
+										</label>
+										<div align="right" class="col-sm-6">
+											<button onclick=" window.open('#','_blank')" class="btn btn-sm btn-link">
+												<i class="fa fa-download"></i> Download/View
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="form-group group-dokumen">
+									<label class="col-12 col-form-label dokumen">SOP</label>
+									<div class="row col-sm-12" style="padding-right: 0px;padding-left: 20px;">
+										<label style="font-size:1rem;" class="col-6 col-form-label dokumen">
+											Nama Dokumen 12312
+										</label>
+										<div align="right" class="col-sm-6">
+											<button onclick=" window.open('#','_blank')" class="btn btn-sm btn-link">
+												<i class="fa fa-download"></i> Download/View
+											</button>
+										</div>
+									</div>
+									<div class="row col-sm-12" style="padding-right: 0px;padding-left: 20px;">
+										<label style="font-size:1rem;" class="col-6 col-form-label dokumen">
+											Nama Dokumen 12312
+										</label>
+										<div align="right" class="col-sm-6">
+											<button onclick=" window.open('#','_blank')" class="btn btn-sm btn-link">
+												<i class="fa fa-download"></i> Download/View
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">
+									<i class="fa fa-times"></i> Tutup
+								</button>
 							</div>
 						</div>
 					</div>
@@ -726,8 +1077,7 @@
 	<script src="../assets/vendors/general/wnumb/wNumb.js" type="text/javascript"></script>
 	<!--end:: Global Mandatory Vendors -->
 	<!--begin:: Global Optional Vendors -->
-	<script src="../assets/vendors/general/sweetalert2/dist/sweetalert2.min.js" type="text/javascript"></script>
-	<script src="../assets/vendors/custom/components/vendors/sweetalert2/init.js" type="text/javascript"></script>
+	<script src="../assets/vendors/general/select2/dist/js/select2.full.js" type="text/javascript"></script>
 	<!--end:: Global Optional Vendors -->
 	<!--begin::Global Theme Bundle(used by all pages) -->
 	<script src="../assets/demo/default/base/scripts.bundle.js" type="text/javascript"></script>
@@ -737,11 +1087,15 @@
 	<!--end::Page Vendors -->
 	<!--begin::Global App Bundle(used by all pages) -->
 	<script src="../assets/app/bundle/app.bundle.js" type="text/javascript"></script>
+	<!--begin::Page Vendors(used by this page) -->
+	<script src="../assets/vendors/general/sweetalert2/dist/sweetalert2.min.js" type="text/javascript"></script>
+	<script src="../assets/vendors/custom/components/vendors/sweetalert2/init.js" type="text/javascript"></script>
+	<!--end::Page Vendors -->
 	<!--begin::Page Scripts(used by this page) -->
 	<!--end::Global App Bundle -->
 	<!-- AJAX -->
 	<script src="../assets/vendors/custom/datatables/datatables.bundle.js" type="text/javascript"></script>
-	<script src="../assets/app/script/js_ajax_hsse.js" type="text/javascript"></script>
+	<script src="../assets/app/script/js_ajax_gsi.js" type="text/javascript"></script>
 	<!-- SweetAlert2 -->
 	<script>
 		// Class definition
@@ -755,11 +1109,19 @@
 
 
 	    };
+		var initDemosTolak = function() {
+	    	$('.kt_sweetalert_tolak').click(function(e) {
+	    		swal.fire("Ditolak!", "Pekerjaan berhasil ditolak!", "success");
+	    	});
+
+
+	    };
 
 	    return {
 	        // Init
 	        init: function() {
 	        	initDemos();
+				initDemosTolak();
 	        },
 	    };
 	}();
@@ -767,6 +1129,54 @@
 		// Class Initialization
 		jQuery(document).ready(function() {
 			KTSweetAlert2Demo.init();
+		});
+	</script>
+	<!-- Search2 -->
+	<script>
+		// Class definition
+		var KTSelect2 = function() {
+		    // Private functions
+		    var demos = function() {
+		    	$('.select-2, .select_validate').select2({
+		    		placeholder: "Select a state"
+		    	});
+
+		    }
+
+		    var modalDemos = function() {
+		    	$('#kt_select2_modal').on('shown.bs.modal', function () {
+		            // basic
+		            $('.select-2_modal').select2({
+		            	placeholder: "Select a state"
+		            });
+		        });
+		    }
+
+		    // Public functions
+		    return {
+		    	init: function() {
+		    		demos();
+		    		modalDemos();
+		    	}
+		    };
+		}();
+
+		// Initialization
+		jQuery(document).ready(function() {
+			KTSelect2.init();
+		});
+	</script>
+	<script>
+		$(document).ready(function () {
+			$(document).on('click', '#hazard_0', function() {
+				$(this).parent().remove();
+			}).on('click', '#hazard_1', function() {
+				$(this).parent().remove();
+			}).on('click', '#hazard_2', function() {
+				$(this).parent().remove();
+			}).on('click', '#hazard_3', function() {
+				$(this).parent().remove();
+			});
 		});
 	</script>
 </body>

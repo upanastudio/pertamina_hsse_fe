@@ -104,8 +104,29 @@
 							</li>
 							<li class="kt-menu__item kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
 								<a href="javascript:;" class="kt-menu__link kt-menu__toggle">
+									<i class="kt-menu__link-icon flaticon-user"></i>
+									<span class="kt-menu__link-text">Pekerja</span>
+									<i class="kt-menu__ver-arrow la la-angle-right"></i>
+								</a>
+								<div class="kt-menu__submenu " kt-hidden-height="80" style="display: none; overflow: hidden;"><span class="kt-menu__arrow"></span>
+									<ul class="kt-menu__subnav">
+										<li class="kt-menu__item  kt-menu__item--parent" aria-haspopup="true">
+											<span class="kt-menu__link"><span class="kt-menu__link-text">Pekerja</span></span>
+										</li>
+										<li class="kt-menu__item " aria-haspopup="true">
+											<a href="pekerja_belum_terverifikasi.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Belum Terverifikasi</span></a>
+										</li>
+										<li class="kt-menu__item " aria-haspopup="true">
+											<a href="pekerja_terverifikasi.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Terverifikasi</span></a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="kt-menu__item kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
+								<a href="javascript:;" class="kt-menu__link kt-menu__toggle">
 									<i class="kt-menu__link-icon fa fa-briefcase"></i>
 									<span class="kt-menu__link-text">Pekerjaan</span>
+									<span class="kt-menu__link-badge"><span class="kt-badge kt-badge--rounded kt-badge--brand">10</span></span>
 									<i class="kt-menu__ver-arrow la la-angle-right"></i>
 								</a>
 								<div class="kt-menu__submenu " kt-hidden-height="80" style="display: none; overflow: hidden;"><span class="kt-menu__arrow"></span>
@@ -119,6 +140,7 @@
 													<span></span>
 												</i>
 												<span class="kt-menu__link-text">Permintaan Pekerjaan</span>
+												<span class="kt-menu__link-badge"><span class="kt-badge kt-badge--rounded kt-badge--brand">10</span></span>
 											</a>
 										</li>
 										<li class="kt-menu__item " aria-haspopup="true">
@@ -136,6 +158,7 @@
 								<a href="javascript:;" class="kt-menu__link kt-menu__toggle">
 									<i class="kt-menu__link-icon fa fa-passport"></i>
 									<span class="kt-menu__link-text">SIKA</span>
+									<span class="kt-menu__link-badge"><span class="kt-badge kt-badge--rounded kt-badge--brand">10</span></span>
 									<i class="kt-menu__ver-arrow la la-angle-right"></i>
 								</a>
 								<div class="kt-menu__submenu " kt-hidden-height="80" style="display: none; overflow: hidden;"><span class="kt-menu__arrow"></span>
@@ -148,15 +171,8 @@
 												<i class="kt-menu__link-bullet kt-menu__link-bullet--dot">
 													<span></span>
 												</i>
-												<span class="kt-menu__link-text">Permintaan Pembuatan SIKA</span>
-											</a>
-										</li>
-										<li class="kt-menu__item " aria-haspopup="true">
-											<a href="permintaan_tutup_sika.html" class="kt-menu__link ">
-												<i class="kt-menu__link-bullet kt-menu__link-bullet--dot">
-													<span></span>
-												</i>
-												<span class="kt-menu__link-text">Permintaan Tutup SIKA</span>
+												<span class="kt-menu__link-text">Permintaan SIKA</span>
+												<span class="kt-menu__link-badge"><span class="kt-badge kt-badge--rounded kt-badge--brand">10</span></span>
 											</a>
 										</li>
 										<li class="kt-menu__item " aria-haspopup="true">
@@ -164,7 +180,7 @@
 												<i class="kt-menu__link-bullet kt-menu__link-bullet--dot">
 													<span></span>
 												</i>
-												<span class="kt-menu__link-text">Riwayat SIKA</span>
+												<span class="kt-menu__link-text">Semua SIKA</span>
 											</a>
 										</li>
 									</ul>
@@ -220,7 +236,124 @@
 					<!-- end:: Subheader -->
 					<!-- begin:: Content -->
 					<div class="kt-content  kt-grid__item kt-grid__item--fluid" id="kt_content">
+						<div class="row">
+							<div class="col-sm-12">
+								<div style="background-color:#dfe1e6;" class="kt-portlet">
+									<div class="kt-portlet__head">
+										<div class="kt-portlet__head-label">
+											<span class="kt-portlet__head-icon kt-hidden">
+												<i class="la la-gear"></i>
+											</span>
+											<h3 class="kt-portlet__head-title">
+												Digital Passport
+											</h3>
+										</div>
+									</div>
+                                    <div align="center" class="kt-portlet__body">
+                                        <div class="row col-sm-12">
+											<div class="col-sm-4">
+												<div class="kt-portlet">
+													<div class="kt-portlet__head">
+														<div class="kt-portlet__head-label">
+															<span class="kt-portlet__head-icon kt-hidden">
+																<i class="la la-gear"></i>
+															</span>
+															<h3 class="kt-portlet__head-title">
+																HSSE
+															</h3>
+														</div>
+													</div>
+				                                    <div class="kt-portlet__body">
+				                                        <div class="form-group row">
+				                                            <label class="col-12 col-form-label">
+				                                                Komentar
+				                                            </label>
+				                                            <div class="col-12">
+				                                                <textarea class="form-control" id="exampleTextarea" name="alasan_pemberhentian" placeholder="Tulis komentar..." type="text" rows="3"></textarea>
+				                                            </div>
+				                                        </div>
+				                                    </div>
+												</div>
+											</div>
 
+											<div class="col-sm-4">
+												<div style="margin: 0px 2px;" class="kt-portlet">
+													<div class="kt-portlet__head">
+														<div class="kt-portlet__head-label">
+															<span class="kt-portlet__head-icon kt-hidden">
+																<i class="la la-gear"></i>
+															</span>
+															<h3 class="kt-portlet__head-title">
+																HSSE
+															</h3>
+														</div>
+													</div>
+				                                    <div class="kt-portlet__body">
+				                                        <div class="form-group row">
+				                                            <label class="col-12 col-form-label">
+				                                                Komentar
+				                                            </label>
+				                                            <div class="col-12">
+				                                                <textarea class="form-control" id="exampleTextarea" name="alasan_pemberhentian" placeholder="Tulis komentar..." type="text" rows="3"></textarea>
+				                                            </div>
+				                                        </div>
+				                                    </div>
+												</div>
+											</div>
+
+											<div class="col-sm-4">
+												<div class="kt-portlet">
+													<div class="kt-portlet__head">
+														<div class="kt-portlet__head-label">
+															<span class="kt-portlet__head-icon kt-hidden">
+																<i class="la la-gear"></i>
+															</span>
+															<h3 class="kt-portlet__head-title">
+																HSSE
+															</h3>
+														</div>
+													</div>
+				                                    <div class="kt-portlet__body">
+				                                        <div class="form-group row">
+				                                            <label class="col-12 col-form-label">
+				                                                Komentar
+				                                            </label>
+				                                            <div class="col-12">
+				                                                <textarea class="form-control" id="exampleTextarea" name="alasan_pemberhentian" placeholder="Tulis komentar..." type="text" rows="3"></textarea>
+				                                            </div>
+				                                        </div>
+				                                    </div>
+												</div>
+											</div>
+                                        </div>
+                                    </div>
+								</div>
+							</div>
+                            <div class="col-sm-6">
+								<div class="kt-portlet">
+									<div class="kt-portlet__head">
+										<div class="kt-portlet__head-label">
+											<span class="kt-portlet__head-icon kt-hidden">
+												<i class="la la-gear"></i>
+											</span>
+											<h3 class="kt-portlet__head-title">
+												HSSE
+											</h3>
+										</div>
+									</div>
+                                    <div class="kt-portlet__body">
+                                        <div class="form-group row">
+                                            <label class="col-12 col-form-label">
+                                                Komentar
+                                            </label>
+                                            <div class="col-12">
+                                                <textarea class="form-control" id="exampleTextarea" name="alasan_pemberhentian" placeholder="Tulis komentar..." type="text" rows="3"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+								</div>
+							</div>
+						</div>
 					</div>
 					<!-- end:: Content -->
 				</div>
@@ -290,7 +423,7 @@
 	<!--end::Global App Bundle -->
 	<!-- AJAX -->
 	<script src="../assets/vendors/custom/datatables/datatables.bundle.js" type="text/javascript"></script>
-	<script src="../assets/app/script/js_ajax_gsi.js" type="text/javascript"></script>
+	<script src="../assets/app/script/js_ajax_pertamina.js" type="text/javascript"></script>
 </body>
 <!-- end::Body -->
 </html>

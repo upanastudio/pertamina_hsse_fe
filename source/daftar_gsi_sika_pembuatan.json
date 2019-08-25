@@ -1,0 +1,80 @@
+{
+    "iTotalRecords": 10,
+    "iTotalDisplayRecords": 10,
+    "sEcho": 0,
+    "sColumns": "",
+    "aaData": [{
+                 "no": 1,
+                 "no_sika" : "01/23/12345123",
+                 "nama_pekerjaan" : "Penggalian",
+                 "jenis_sika" : "SIKA Panas",
+                 "status" : "pengajuan awal",
+                 "validasi": "hsse",
+                 "aksi" : null
+
+             },
+             {
+                "no": 2,
+                 "no_sika" : "01/23/12345123",
+                 "nama_pekerjaan" : "Penggalian",
+                 "jenis_sika" : "Izin Kerja Bahan Radiobaru",
+                 "status" : "pengajuan ulang",
+                 "validasi": "hsse",
+                 "aksi" : null
+             },
+             {
+                 "no": 3,
+                 "no_sika" : "01/23/12345123",
+                 "nama_pekerjaan" : "Penggalian",
+                 "jenis_sika" : "Izin Kerja Pengangkatan",
+                 "status" : "perpanjang",
+                 "validasi": "hsse",
+                 "aksi" : null
+             },
+             {
+                 "no": 4,
+                 "no_sika" : "01/23/12345123",
+                 "nama_pekerjaan" : "Penggalian",
+                 "jenis_sika" : "Izin Kerja Pengangkatan",
+                 "status" : "tutup",
+                 "validasi": "hsse",
+                 "aksi" : null
+             },
+             {
+                 "no": 5,
+                 "no_sika" : "01/23/12345123",
+                 "nama_pekerjaan" : "Penggalian",
+                 "jenis_sika" : "Izin Kerja Bahan Radiobaru",
+                 "status" : "pengajuan awal",
+                 "validasi": "hsse",
+                 "aksi" : null
+             },
+             {
+                 "no": 6,
+                 "no_sika" : "01/23/12345123",
+                 "nama_pekerjaan" : "Penggalian",
+                 "jenis_sika" : "Izin Kerja Bahan Radiobaru",
+                 "status" : "tutup",
+                 "validasi": "hsse",
+                 "aksi" : null
+             },
+             {
+                 "no": 7,
+                 "no_sika" : "01/23/12345123",
+                 "nama_pekerjaan" : "Penggalian",
+                 "jenis_sika" : "Izin Kerja Bahan Radiobaru",
+                 "status" : "pengajuan ulang",
+                 "validasi": "hsse",
+                 "aksi" : null
+             },
+              {
+                 "no": 8,
+                 "no_sika" : "01/23/12345123",
+                 "nama_pekerjaan" : "Penggalian",
+                 "jenis_sika" : "SIKA Panas",
+                 "status" : "perpanjang",
+                 "validasi": "hsse",
+                 "aksi" : null
+             }
+]
+}
