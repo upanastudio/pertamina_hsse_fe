@@ -281,9 +281,19 @@ polyline,
 	justify-content:space-between;
 }
 
- .overflow-text {
+.overflow-text {
 	overflow:hidden;
 	display:inline-block;
 	text-overflow: ellipsis;
 	white-space: nowrap;
+}
+
+.divider {
+    border-right: 3px dashed #717171;
+    height: auto;
+}
+
+.disable-card {
+    background-color: #b7b7b7!important;
+    pointer-events: none;
 }

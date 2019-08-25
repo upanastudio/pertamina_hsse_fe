@@ -5,74 +5,92 @@
     "sColumns": "",
     "aaData": [{
                  "no": 1,
-                 "jenis_sika" : "Izin Penggunaan Listrik dalam Vessel",
+                 "jenis_sika" : "SIKA Cold",
                  "no_sika" : "01/23/12345123",
-                 "status" : "baru",
+                 "status" : "pengajuan awal",
+                 "validasi" : "hsse",
                  "rincian" : null,
                  "aksi" : null
 
              },
              {
                 "no": 2,
-                  "jenis_sika" : "Izin Isolasi Proses/Mekanik/Instrumen",
+                  "jenis_sika" : "SIKA Cold",
                  "no_sika" : "01/23/12345123",
-                  "status" : "perpanjang",
+                 "status" : "pengajuan ulang",
+                 "validasi" : "hsse",
                  "rincian" : null,
                  "aksi" : null
              },
              {
                  "no": 3,
-                  "jenis_sika" : "Izin Pengangkatan",
+                  "jenis_sika" : "SIKA Cold",
                  "no_sika" : "01/23/12345123",
-                 "status" : "resubmit",
+                 "status" : "perpanjang",
+                 "validasi" : "hsse",
                  "rincian" : null,
                  "aksi" : null
              },
              {
                  "no": 4,
-                 "jenis_sika" : "Izin Kerja Penggalian",
+                 "jenis_sika" : "SIKA Cold",
                  "no_sika" : "01/23/12345123",
                  "status" : "ditolak",
+                 "validasi" : "hsse",
                  "rincian" : null,
                  "aksi" : null
              },
              {
                  "no": 5,
-                  "jenis_sika" : "Izin Masuk Ruang Tertutup",
+                  "jenis_sika" : "SIKA Cold",
                  "no_sika" : "01/23/12345123",
-                 "status" : "berlangsung",
+                 "status" : "tutup",
+                 "validasi" : "hsse",
                  "rincian" : null,
                  "aksi" : null
              },
              {
                  "no": 6,
-                 "jenis_sika" : "Penggunaan Barang Radio Aktif",
+                 "jenis_sika" : "SIKA Cold",
                  "no_sika" : "01/23/12345123",
-                 "status" : "ditunda",
-                 "rincian" : null,
-                 "aksi" : null
-             },
-              {
-                 "no": 7,
-                 "jenis_sika" : "Penggunaan Barang Radio Aktif",
-                 "no_sika" : "01/23/12345123",
-                 "status" : "tutup",
+                 "status" : "kadaluarsa",
+                 "validasi" : "hsse",
                  "rincian" : null,
                  "aksi" : null
              },
              {
-                 "no": 8,
-                  "jenis_sika" : "SIKA Panas",
+                 "no": 7,
+                 "jenis_sika" : "SIKA Cold",
                  "no_sika" : "01/23/12345123",
-                 "status" : "draft",
+                 "status" : "ditunda",
+                 "validasi" : "hsse",
                  "rincian" : null,
                  "aksi" : null
              },
               {
+                 "no": 8,
+                  "jenis_sika" : "SIKA Cold",
+                 "no_sika" : "01/23/12345123",
+                 "status" : "progress",
+                 "validasi" : "hsse",
+                 "rincian" : null,
+                 "aksi" : null
+             },
+             {
                  "no": 9,
-                  "jenis_sika" : "SIKA Panas",
+                  "jenis_sika" : "SIKA Cold",
+                 "no_sika" : "01/23/12345123",
+                 "status" : "tutup",
+                 "validasi" : "hsse",
+                 "rincian" : null,
+                 "aksi" : null
+             },
+              {
+                 "no": 10,
+                  "jenis_sika" : "SIKA Cold",
                  "no_sika" : "01/23/12345123",
                  "status" : "kadaluarsa",
+                 "validasi" : "hsse",
                  "rincian" : null,
                  "aksi" : null
              }

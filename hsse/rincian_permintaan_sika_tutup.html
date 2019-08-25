@@ -65,6 +65,20 @@
 	<link rel="shortcut icon" href="../assets/media/logos/favicon.ico" />
 	<link href="../assets/app/style/pertamina-theme.css" rel="stylesheet" type="text/css" />
 	<link href="../assets/app/style/text_black.css" rel="stylesheet" type="text/css" />
+	<style>
+		div.dataTables_wrapper div.dataTables_filter input {
+			width: 255px;
+		}
+		.modal-content {
+			width: 100%;
+		}
+		.statistik_wip {
+			width: 130%;
+		}
+		.group-dokumen {
+			margin-bottom: .7rem;
+		}
+	</style>
 </head>
 <!-- end::Head -->
 <!-- begin::Body -->
@@ -297,13 +311,13 @@
 	                                            </label>
 	                                            <div class="col-9">
 													<div class="row">
-														<div class="col-sm-6">
+														<div class="col-sm-4">
 															<div class="input-group">
 																<input disabled type="number" class="form-control" id="waktu_hari" name="waktu_hari" value="3">
 																<div class="input-group-append"><span style="color:#464457;" class="input-group-text">Hari</span></div>
 															</div>
 														</div>
-														<div class="col-sm-6">
+														<div class="col-sm-4">
 															<div class="input-group">
 																<input disabled type="number" class="form-control" id="waktu_jam" name="waktu_jam" value="2">
 																<div class="input-group-append"><span style="color:#464457;" class="input-group-text">Jam</span></div>
@@ -416,7 +430,7 @@
 														<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
 															<input id="status_perpanjang" name="status_perpanjang" type="checkbox"><p style="font-size: 12px;" >Good House Keeping</p>
 															<span></span>
-														</label>
+														</label><br>
 														<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
 															<input id="status_perpanjang" name="status_perpanjang" type="checkbox"><p style="font-size: 12px;" >Area Clearance</p>
 															<span></span>

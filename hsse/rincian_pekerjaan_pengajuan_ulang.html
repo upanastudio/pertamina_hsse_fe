@@ -68,6 +68,27 @@
 	<link href="../assets/app/style/text_black.css" rel="stylesheet" type="text/css" />
 	<link href="../assets/app/style/at_rincian-pekerjaan-style.css" rel="stylesheet" type="text/css" />
 	<link href="../assets/app/style/tab-style.css" rel="stylesheet" type="text/css" />
+    <style>
+		div.dataTables_wrapper div.dataTables_filter input {
+			width: 255px;
+		}
+		.modal-content {
+			width: 100%;
+		}
+		.statistik_wip {
+			width: 130%;
+		}
+		.group-dokumen {
+			margin-bottom: .7rem;
+		}
+	</style>
+	<style>
+		#statistik_wip {
+			width: 100%;
+			height: 400px;
+		}
+
+	</style>
 </head>
 <!-- end::Head -->
 <!-- begin::Body -->
@@ -234,7 +255,10 @@
 								Semua Pekerjaan </a>
 							</div>
 						</div>
-						<div class="kt-subheader__toolbar">
+                        <div class="kt-subheader__toolbar">
+							<button data-toggle="modal" data-target="#kt_modal_riwayat " class="btn btn-secondary">
+								<i class="fa fa-history"></i> Riwayat
+							</button>
 						</div>
 					</div>
 					<!-- end:: Subheader -->
@@ -1275,6 +1299,82 @@
 									</div>
 								</div>
 
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">
+									<i class="fa fa-times"></i> Tutup
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+                <div class="modal fade" id="kt_modal_riwayat" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="exampleModalLabel">Riwayat</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								</button>
+							</div>
+							<div class="modal-body">
+								<div class="kt-scroll ps ps--active-y" data-scroll="true" data-height="400" data-scrollbar-shown="true" style="height: 400px; overflow: hidden;">
+									<div class="info-riwayat">
+										<div class="form-group row">
+											<h5 class="col-sm-12">Penolakan</h5>
+											<label class="col-2 col-form-label">Tanggal</label>
+											<div style="margin-bottom:10px" class="col-10">
+												<input disabled="" class="form-control" type="date" id="tanggal_penolakan" name="tanggal_penolakan">
+											</div>
+											<label class="col-2 col-form-label">Alasan</label>
+											<div class="col-10">
+												<textarea disabled="" style="resize: none" class="form-control" id="alasan_ditolak" name="alasan_ditolak" rows="3"></textarea>
+											</div>
+										</div>
+										<div class="kt-separator kt-separator--border-dashed kt-separator--space-sm"></div>
+									</div>
+									<div class="info-riwayat">
+										<div class="form-group row">
+											<h5 class="col-sm-12">Pemberhentian Sementara</h5>
+											<label class="col-2 col-form-label">Tanggal</label>
+											<div style="margin-bottom:10px" class="col-10">
+												<input disabled="" class="form-control" type="date" id="tanggal_pemberhentian" name="tanggal_pemberhentian">
+											</div>
+											<label class="col-2 col-form-label">Alasan</label>
+											<div class="col-10">
+												<textarea disabled="" style="resize: none" class="form-control" id="alasan_ditolak" name="alasan_ditolak" rows="3"></textarea>
+											</div>
+										</div>
+										<div class="kt-separator kt-separator--border-dashed kt-separator--space-sm"></div>
+									</div>
+									<div class="info-riwayat">
+										<div class="form-group row">
+											<h5 class="col-sm-12">Pemberhentian Sementara</h5>
+											<label class="col-2 col-form-label">Tanggal</label>
+											<div style="margin-bottom:10px" class="col-10">
+												<input disabled="" class="form-control" type="date" id="tanggal_pemberhentian" name="tanggal_pemberhentian">
+											</div>
+											<label class="col-2 col-form-label">Alasan</label>
+											<div class="col-10">
+												<textarea disabled="" style="resize: none" class="form-control" id="alasan_ditolak" name="alasan_ditolak" rows="3"></textarea>
+											</div>
+										</div>
+										<div class="kt-separator kt-separator--border-dashed kt-separator--space-sm"></div>
+									</div>
+									<div class="info-riwayat">
+										<div class="form-group row">
+											<h5 class="col-sm-12">Pemberhentian Sementara</h5>
+											<label class="col-2 col-form-label">Tanggal</label>
+											<div style="margin-bottom:10px" class="col-10">
+												<input disabled="" class="form-control" type="date" id="tanggal_pemberhentian" name="tanggal_pemberhentian">
+											</div>
+											<label class="col-2 col-form-label">Alasan</label>
+											<div class="col-10">
+												<textarea disabled="" style="resize: none" class="form-control" id="alasan_ditolak" name="alasan_ditolak" rows="3"></textarea>
+											</div>
+										</div>
+										<div class="kt-separator kt-separator--border-dashed kt-separator--space-sm"></div>
+									</div>
+								</div>
 							</div>
 							<div class="modal-footer">
 								<button type="button" class="btn btn-secondary" data-dismiss="modal">

@@ -112,13 +112,13 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 				width: 100,
 				render: function(data, type, full, meta) {
 					if (sifat_pekerjaan == "Swakelola") {
-						return `<a href="rincian_permintaan_pekerjaan_swakelola.html" class="btn btn-sm btn-brand" style="color:white;border-radius:20px">Rincian</a> `;
+						return `<a href="rincian_permintaan_pekerjaan_swakelola.html" class="btn btn-sm btn-primary" style="color:white;border-radius:20px">Rincian</a> `;
 					} else if (sifat_pekerjaan == "ABI") {
-						return `<a href="rincian_permintaan_pekerjaan_abi.html" class="btn btn-sm btn-brand" style="color:white;border-radius:20px">Rincian</a> `;
+						return `<a href="rincian_permintaan_pekerjaan_abi.html" class="btn btn-sm btn-primary" style="color:white;border-radius:20px">Rincian</a> `;
 					} else if (sifat_pekerjaan == "ABO") {
-						return `<a href="rincian_permintaan_pekerjaan_abo.html" class="btn btn-sm btn-brand" style="color:white;border-radius:20px">Rincian</a> `;
+						return `<a href="rincian_permintaan_pekerjaan_abo.html" class="btn btn-sm btn-primary" style="color:white;border-radius:20px">Rincian</a> `;
 					} else {
-						return `<a href="#" class="btn btn-sm btn-brand" style="color:white;border-radius:20px">Rincian</a> `;
+						return `<a href="#" class="btn btn-sm btn-primary" style="color:white;border-radius:20px">Rincian</a> `;
 					}
 				},
 			}],
@@ -172,7 +172,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 				responsivePriority: -1,
 				render: function(data, type, full, meta) {
 					if (data == "hsse") {
-						if (status_validasi == "progress" || status_validasi == "selesai") {
+						if (full.status == "progress" || full.status == "selesai") {
 							return `
 							`;
 						}
@@ -244,8 +244,19 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 				orderable: false,
 				width: 100,
 				render: function(data, type, full, meta) {
+					var status = {
+						kadaluarsa: {'href': 'rincian_pekerjaan_kadaluarsa.html'},
+						'pengajuan awal': {'href': 'rincian_riwayat_pekerjaan.html'},
+						perpanjang : {'href': 'rincian_riwayat_pekerjaan.html'},
+						'pengajuan ulang' : {'href': 'rincian_pekerjaan_pengajuan_ulang.html'},
+						ditolak : {'href': 'rincian_pekerjaan_ditolak.html'},
+						progress : {'href': 'rincian_pekerjaan_berlangsung.html'},
+						ditunda : {'href': 'rincian_pekerjaan_ditunda.html'},
+						tutup : {'href': 'rincian_riwayat_pekerjaan.html'},
+						selesai : {'href': 'rincian_pekerjaan_selesai.html'}
+					};
 					return `
-					<a href="rincian_riwayat_pekerjaan.html" class="btn btn-sm btn-primary" style="color:white;border-radius:20px">Rincian</a>`;
+					<a href="${status[full.status].href}" class="btn btn-sm btn-primary" style="color:white;border-radius:20px">Rincian</a>`;
 				},
 			}],
 			columnDefs: [
@@ -356,8 +367,19 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 				className: 'text-center',
 				orderable: false,
 				render: function(data, type, full, meta) {
+					var status = {
+						kadaluarsa: {'href': 'rincian_sika_kadaluarsa.html'},
+						'pengajuan awal': {'href': 'rincian_sika_baru.html'},
+						perpanjang : {'href': 'rincian_sika_perpanjang.html'},
+						'pengajuan ulang' : {'href': 'rincian_sika_resubmit.html'},
+						ditolak : {'href': 'rincian_sika_ditolak.html'},
+						progress : {'href': 'rincian_riwayat_sika.html'},
+						ditunda : {'href': 'rincian_sika_tunda.html'},
+						tutup : {'href': 'rincian_sika_tutup.html'},
+						selesai : {'href': 'rincian_riwayat_sika.html'}
+					};
 					return `
-					<a href="rincian_riwayat_sika.html" class="btn btn-sm btn-primary" style="color:white;border-radius:20px">Rincian</a>`;
+					<a href="${status[full.status].href}" class="btn btn-sm btn-primary" style="color:white;border-radius:20px">Rincian</a>`;
 				},
 			},{
 				field: 'aksi',
@@ -874,19 +896,19 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 				render: function(data, type, full, meta) {
 					if (status_sika == "pengajuan awal") {
 						return `
-						<a href="rincian_permintaan_sika_pembuatan.html" class="btn btn-sm btn-brand" style="color:white;border-radius:20px">Rincian</a> `;
+						<a href="rincian_permintaan_sika_pembuatan.html" class="btn btn-sm btn-primary" style="color:white;border-radius:20px">Rincian</a> `;
 					} else if (status_sika == "perpanjang") {
 						return `
-						<a href="rincian_permintaan_sika_perpanjang.html" class="btn btn-sm btn-brand" style="color:white;border-radius:20px">Rincian</a> `;
+						<a href="rincian_permintaan_sika_perpanjang.html" class="btn btn-sm btn-primary" style="color:white;border-radius:20px">Rincian</a> `;
 					} else if (status_sika == "pengajuan ulang"){
 						return `
-						<a href="rincian_permintaan_sika_resubmit.html" class="btn btn-sm btn-brand" style="color:white;border-radius:20px">Rincian</a> `;
+						<a href="rincian_permintaan_sika_resubmit.html" class="btn btn-sm btn-primary" style="color:white;border-radius:20px">Rincian</a> `;
 					} else if (status_sika == "tutup"){
 						return `
-						<a href="rincian_permintaan_sika_tutup.html" class="btn btn-sm btn-brand" style="color:white;border-radius:20px">Rincian</a> `;
+						<a href="rincian_permintaan_sika_tutup.html" class="btn btn-sm btn-primary" style="color:white;border-radius:20px">Rincian</a> `;
 					} else {
 						return `
-						<a href="rincian_permintaan_sika_pembuatan.html" class="btn btn-sm btn-brand" style="color:white;border-radius:20px">Rincian</a> `;
+						<a href="rincian_permintaan_sika_pembuatan.html" class="btn btn-sm btn-primary" style="color:white;border-radius:20px">Rincian</a> `;
 					}
 				},
 			}],
@@ -997,8 +1019,19 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 				orderable: false,
 				width: 100,
 				render: function(data, type, full, meta) {
+					var status = {
+						kadaluarsa: {'href': 'rincian_sika_kadaluarsa.html'},
+						'pengajuan awal': {'href': 'rincian_sika_baru.html'},
+						perpanjang : {'href': 'rincian_sika_perpanjang.html'},
+						'pengajuan ulang' : {'href': 'rincian_sika_resubmit.html'},
+						ditolak : {'href': 'rincian_sika_ditolak.html'},
+						progress : {'href': 'rincian_riwayat_sika.html'},
+						ditunda : {'href': 'rincian_sika_tunda.html'},
+						tutup : {'href': 'rincian_sika_tutup.html'},
+						selesai : {'href': 'rincian_riwayat_sika.html'}
+					};
 					return `
-					<a href="rincian_riwayat_sika.html" class="btn btn-sm btn-brand" style="color:white;border-radius:20px">Rincian</a> `;
+					<a href="${status[full.status].href}" class="btn btn-sm btn-primary" style="color:white;border-radius:20px">Rincian</a>`;
 				},
 			}],
 			columnDefs: [
@@ -1020,7 +1053,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 			processing: true,
 			serverSide: false,
 			ajax: {
-				url: '../source/daftar_sika_semua.json',
+				url: '../source/daftar_sika_pekerjaan_hsse_cold.json',
 				type: 'POST',
 				data: {
 					pagination: {
@@ -1109,8 +1142,19 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 				className: 'text-center',
 				orderable: false,
 				render: function(data, type, full, meta) {
+					var status = {
+						kadaluarsa: {'href': 'rincian_sika_kadaluarsa.html'},
+						'pengajuan awal': {'href': 'rincian_sika_baru.html'},
+						perpanjang : {'href': 'rincian_sika_perpanjang.html'},
+						'pengajuan ulang' : {'href': 'rincian_sika_resubmit.html'},
+						ditolak : {'href': 'rincian_sika_ditolak.html'},
+						progress : {'href': 'rincian_riwayat_sika.html'},
+						ditunda : {'href': 'rincian_sika_tunda.html'},
+						tutup : {'href': 'rincian_sika_tutup.html'},
+						selesai : {'href': 'rincian_riwayat_sika.html'}
+					};
 					return `
-					<a href="rincian_riwayat_sika.html" class="btn btn-sm btn-primary" style="color:white;border-radius:20px">Rincian</a>`;
+					<a href="${status[full.status].href}" class="btn btn-sm btn-primary" style="color:white;border-radius:20px">Rincian</a>`;
 				},
 			},{
 				field: 'aksi',
