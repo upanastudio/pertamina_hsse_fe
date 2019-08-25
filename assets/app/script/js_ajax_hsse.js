@@ -190,17 +190,23 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 							</div>`;
 						}
 					} else if (data == "gsi") {
-						return `
-						<div class="kt-checkbox-list">
-							<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
-								<input disabled checked id="hsse_validation" name="hsse_validation" type="checkbox">HSSE
-								<span></span>
-							</label>
-							<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
-								<input disabled checked id="gsi_validation" name="gsi_validation" type="checkbox">GSI
-								<span></span>
-							</label>
-						</div>`;
+						if (full.status == "progress" || full.status == "selesai") {
+							return `
+							`;
+						}
+						else {
+							return `
+							<div class="kt-checkbox-list">
+								<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
+									<input disabled checked id="hsse_validation" name="hsse_validation" type="checkbox">HSSE
+									<span></span>
+								</label>
+								<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
+									<input disabled checked id="gsi_validation" name="gsi_validation" type="checkbox">GSI
+									<span></span>
+								</label>
+							</div>`;
+						}
 					} else {
 						return `
 						<div class="kt-checkbox-list">
@@ -320,17 +326,23 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 							</div>`;
 						}
 					} else if (data == "gsi") {
-						return `
-						<div class="kt-checkbox-list">
-							<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
-								<input disabled checked id="hsse_validation" name="hsse_validation" type="checkbox">HSSE
-								<span></span>
-							</label>
-							<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
-								<input disabled checked id="gsi_validation" name="gsi_validation" type="checkbox">GSI
-								<span></span>
-							</label>
-						</div>`;
+						if (full.status == "progress" || full.status == "selesai") {
+							return `
+							`;
+						}
+						else {
+							return `
+							<div class="kt-checkbox-list">
+								<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
+									<input disabled checked id="hsse_validation" name="hsse_validation" type="checkbox">HSSE
+									<span></span>
+								</label>
+								<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
+									<input disabled checked id="gsi_validation" name="gsi_validation" type="checkbox">GSI
+									<span></span>
+								</label>
+							</div>`;
+						}
 					} else {
 						return `
 						<div class="kt-checkbox-list">
@@ -979,17 +991,23 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 							</div>`;
 						}
 					} else if (data == "gsi") {
-						return `
-						<div class="kt-checkbox-list">
-							<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
-								<input disabled checked id="hsse_validation" name="hsse_validation" type="checkbox">HSSE
-								<span></span>
-							</label>
-							<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
-								<input disabled checked id="gsi_validation" name="gsi_validation" type="checkbox">GSI
-								<span></span>
-							</label>
-						</div>`;
+						if (full.status == "progress" || full.status == "selesai") {
+							return `
+							`;
+						}
+						else {
+							return `
+							<div class="kt-checkbox-list">
+								<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
+									<input disabled checked id="hsse_validation" name="hsse_validation" type="checkbox">HSSE
+									<span></span>
+								</label>
+								<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
+									<input disabled checked id="gsi_validation" name="gsi_validation" type="checkbox">GSI
+									<span></span>
+								</label>
+							</div>`;
+						}
 					} else {
 						return `
 						<div class="kt-checkbox-list">
@@ -1107,17 +1125,23 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 							</div>`;
 						}
 					} else if (data == "gsi") {
-						return `
-						<div class="kt-checkbox-list">
-							<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
-								<input disabled checked id="hsse_validation" name="hsse_validation" type="checkbox">HSSE
-								<span></span>
-							</label>
-							<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
-								<input disabled checked id="gsi_validation" name="gsi_validation" type="checkbox">GSI
-								<span></span>
-							</label>
-						</div>`;
+						if (full.status == "progress" || full.status == "selesai") {
+							return `
+							`;
+						}
+						else {
+							return `
+							<div class="kt-checkbox-list">
+								<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
+									<input disabled checked id="hsse_validation" name="hsse_validation" type="checkbox">HSSE
+									<span></span>
+								</label>
+								<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
+									<input disabled checked id="gsi_validation" name="gsi_validation" type="checkbox">GSI
+									<span></span>
+								</label>
+							</div>`;
+						}
 					} else {
 						return `
 						<div class="kt-checkbox-list">
