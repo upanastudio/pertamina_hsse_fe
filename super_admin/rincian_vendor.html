@@ -3,7 +3,7 @@
 <!-- begin::Head -->
 <head>
 	<meta charset="utf-8" />
-	<title>Ahli Teknik | Tutup SIKA Cold</title>
+	<title>Super Admin | Rincian Vendor</title>
 	<meta name="description" content="Page with empty content">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<!--begin::Fonts -->
@@ -19,8 +19,6 @@
 		});
 	</script>
 	<!--end::Fonts -->
-	<!--begin::Page Vendors Styles(used by this page) -->
-	<link href="//www.amcharts.com/lib/3/plugins/export/export.css" rel="stylesheet" type="text/css" />
 	<!--begin::Page Vendors Styles(used by this page) -->
 	<link href="../assets/vendors/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" />
 	<!--end::Page Vendors Styles -->
@@ -66,11 +64,6 @@
 	<link rel="shortcut icon" href="../assets/media/logos/favicon.ico" />
 	<link href="../assets/app/style/pertamina-theme.css" rel="stylesheet" type="text/css" />
 	<link href="../assets/app/style/text_black.css" rel="stylesheet" type="text/css" />
-	<link href="../assets/app/style/at_rincian-pekerjaan-style.css" rel="stylesheet" type="text/css" />
-	<link href="../assets/app/style/jsa-style.css" rel="stylesheet" type="text/css" />
-	<style>
-
-	</style>
 </head>
 <!-- end::Head -->
 <!-- begin::Body -->
@@ -80,11 +73,13 @@
 	<div id="kt_header_mobile" class="kt-header-mobile  kt-header-mobile--fixed ">
 		<div class="kt-header-mobile__logo">
 			<a href="index.html">
-				<img style="height: 30px;width: auto" alt="Logo" src="../assets/media/logos/logo_1.png" />
+				<img alt="Logo" style="height: auto;width: 170px" src="../assets/media/logos/logo_1.png" />
 			</a>
 		</div>
 		<div class="kt-header-mobile__toolbar">
 			<button class="kt-header-mobile__toggler kt-header-mobile__toggler--left" id="kt_aside_mobile_toggler"><span></span></button>
+			<button class="kt-header-mobile__toggler" id="kt_header_mobile_toggler"><span></span></button>
+			<button class="kt-header-mobile__topbar-toggler" id="kt_header_mobile_topbar_toggler"><i class="flaticon-more"></i></button>
 		</div>
 	</div>
 	<!-- end:: Header Mobile -->
@@ -100,17 +95,59 @@
 							<img alt="Logo" style="height: auto;width: 170px" src="../assets/media/logos/logo_1.png" />
 						</a>
 					</div>
+					<div class="kt-aside__brand-tools">
+						<button class="kt-aside__brand-aside-toggler" id="kt_aside_toggler">
+							<span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
+								<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+									<polygon id="Shape" points="0 0 24 0 24 24 0 24" />
+									<path d="M5.29288961,6.70710318 C4.90236532,6.31657888 4.90236532,5.68341391 5.29288961,5.29288961 C5.68341391,4.90236532 6.31657888,4.90236532 6.70710318,5.29288961 L12.7071032,11.2928896 C13.0856821,11.6714686 13.0989277,12.281055 12.7371505,12.675721 L7.23715054,18.675721 C6.86395813,19.08284 6.23139076,19.1103429 5.82427177,18.7371505 C5.41715278,18.3639581 5.38964985,17.7313908 5.76284226,17.3242718 L10.6158586,12.0300721 L5.29288961,6.70710318 Z" id="Path-94" fill="#000000" fill-rule="nonzero" transform="translate(8.999997, 11.999999) scale(-1, 1) translate(-8.999997, -11.999999) " />
+									<path d="M10.7071009,15.7071068 C10.3165766,16.0976311 9.68341162,16.0976311 9.29288733,15.7071068 C8.90236304,15.3165825 8.90236304,14.6834175 9.29288733,14.2928932 L15.2928873,8.29289322 C15.6714663,7.91431428 16.2810527,7.90106866 16.6757187,8.26284586 L22.6757187,13.7628459 C23.0828377,14.1360383 23.1103407,14.7686056 22.7371482,15.1757246 C22.3639558,15.5828436 21.7313885,15.6103465 21.3242695,15.2371541 L16.0300699,10.3841378 L10.7071009,15.7071068 Z" id="Path-94" fill="#000000" fill-rule="nonzero" opacity="0.3" transform="translate(15.999997, 11.999999) scale(-1, 1) rotate(-270.000000) translate(-15.999997, -11.999999) " />
+								</g>
+							</svg></span>
+							<span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
+								<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+									<polygon id="Shape" points="0 0 24 0 24 24 0 24" />
+									<path d="M12.2928955,6.70710318 C11.9023712,6.31657888 11.9023712,5.68341391 12.2928955,5.29288961 C12.6834198,4.90236532 13.3165848,4.90236532 13.7071091,5.29288961 L19.7071091,11.2928896 C20.085688,11.6714686 20.0989336,12.281055 19.7371564,12.675721 L14.2371564,18.675721 C13.863964,19.08284 13.2313966,19.1103429 12.8242777,18.7371505 C12.4171587,18.3639581 12.3896557,17.7313908 12.7628481,17.3242718 L17.6158645,12.0300721 L12.2928955,6.70710318 Z" id="Path-94" fill="#000000" fill-rule="nonzero" />
+									<path d="M3.70710678,15.7071068 C3.31658249,16.0976311 2.68341751,16.0976311 2.29289322,15.7071068 C1.90236893,15.3165825 1.90236893,14.6834175 2.29289322,14.2928932 L8.29289322,8.29289322 C8.67147216,7.91431428 9.28105859,7.90106866 9.67572463,8.26284586 L15.6757246,13.7628459 C16.0828436,14.1360383 16.1103465,14.7686056 15.7371541,15.1757246 C15.3639617,15.5828436 14.7313944,15.6103465 14.3242754,15.2371541 L9.03007575,10.3841378 L3.70710678,15.7071068 Z" id="Path-94" fill="#000000" fill-rule="nonzero" opacity="0.3" transform="translate(9.000003, 11.999999) rotate(-270.000000) translate(-9.000003, -11.999999) " />
+								</g>
+							</svg></span>
+						</button>
+					</div>
 				</div>
 				<!-- end:: Aside -->
 				<!-- begin:: Aside Menu -->
 				<div class="kt-aside-menu-wrapper kt-grid__item kt-grid__item--fluid" id="kt_aside_menu_wrapper">
 					<div id="kt_aside_menu" class="kt-aside-menu " data-ktmenu-vertical="1" data-ktmenu-scroll="1" data-ktmenu-dropdown-timeout="500">
 						<ul class="kt-menu__nav ">
-							<li class="kt-menu__item  " aria-haspopup="true"><a href="index.html" class="kt-menu__link "><i class="kt-menu__link-icon flaticon-home"></i><span class="kt-menu__link-text">Dashboard</span></a>
+							<li class="kt-menu__item " aria-haspopup="true"><a href="index.html" class="kt-menu__link "><i class="kt-menu__link-icon fa fa-home"></i><span class="kt-menu__link-text">Dashboard</span></a>
 							</li>
-							<li class="kt-menu__item kt-menu__item--active" aria-haspopup="true"><a href="pekerjaan.html" class="kt-menu__link "><i class="kt-menu__link-icon fa fa-briefcase"></i><span class="kt-menu__link-text">Pekerjaan</span></a>
+							<li class="kt-menu__item  kt-menu__item--submenu " aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
+								<a href="javascript:;" class="kt-menu__link kt-menu__toggle">
+									<i class="kt-menu__link-icon fa fa-briefcase"></i>
+									<span class="kt-menu__link-text">Master Data 12 LSR</span>
+									<i class="kt-menu__ver-arrow la la-angle-right"></i>
+								</a>
+								<div class="kt-menu__submenu "><span class="kt-menu__arrow"><span class="kt-menu__arrow"></span>
+									<ul class="kt-menu__subnav">
+										<li class="kt-menu__item  kt-menu__item--parent" aria-haspopup="true">
+											<span class="kt-menu__link"><span class="kt-menu__link-text">Master Data 12 LSR	</span></span>
+										</li>
+										<li class="kt-menu__item" aria-haspopup="true">
+											<a href="master_data_12_lsr.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Manajemen Pertanyaan 12 LSR</span></a>
+										</li>
+										<li class="kt-menu__item " aria-haspopup="true">
+											<a href="daftar_nilai_12_lsr.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Daftar Nilai 12 LSR</span></a>
+										</li>
+									</ul>
+								</div>
 							</li>
-							<li class="kt-menu__item " aria-haspopup="true"><a href="sika.html" class="kt-menu__link "><i class="kt-menu__link-icon fa fa-passport"></i><span class="kt-menu__link-text">SIKA</span></a>
+							<li class="kt-menu__item" aria-haspopup="true"><a href="depot.html" class="kt-menu__link "><i class="kt-menu__link-icon fa fa-map-pin"></i><span class="kt-menu__link-text">Depot</span></a>
+							</li>
+							<li class="kt-menu__item kt-menu__item--active" aria-haspopup="true"><a href="master_data_vendor.html" class="kt-menu__link "><i class="kt-menu__link-icon fa fa-id-card-alt"></i><span class="kt-menu__link-text">Master Data Vendor</span></a>
+							</li>
+							<li class="kt-menu__item " aria-haspopup="true"><a href="pekerjaan.html" class="kt-menu__link "><i class="kt-menu__link-icon fa fa-briefcase"></i><span class="kt-menu__link-text">Pekerjaan</span></a>
+							</li>
+							<li class="kt-menu__item " aria-haspopup="true"><a href="sika.html" class="kt-menu__link "><i class="kt-menu__link-icon fa fa-atlas"></i><span class="kt-menu__link-text">SIKA</span></a>
 							</li>
 						</ul>
 					</div>
@@ -126,11 +163,10 @@
 					</button>
 					<div class="kt-header-menu-wrapper" id="kt_header_menu_wrapper">
 						<div id="kt_header_menu" class="kt-header-menu kt-header-menu-mobile  kt-header-menu--layout-default ">
-							<img style="width: auto; height: 20px; margin-top: 20px" src="../assets/media/logos/user_ahli_teknik.png">
+							<img style="width: auto; height: 20px; margin-top: 20px" src="../assets/media/logos/user_super_admin.png">
 						</div>
 					</div>
 					<!-- end:: Header Menu -->
-					<!-- begin:: Header Topbar -->
 					<div class="kt-header__topbar">
 						<!--begin: User Bar -->
 						<div class="kt-header__topbar-item kt-header__topbar-item--user">
@@ -149,141 +185,58 @@
 					<div class="kt-subheader   kt-grid__item" id="kt_subheader">
 						<div class="kt-subheader__main">
 							<h3 class="kt-subheader__title">
-							Pekerjaan </h3>
+							Master Data Vendor </h3>
 							<span class="kt-subheader__separator kt-hidden"></span>
 							<div class="kt-subheader__breadcrumbs">
-								<a href="#" class="kt-subheader__breadcrumbs-home"><i class="flaticon2-shelter"></i></a>
+								<a href="pekerjaan.html" class="kt-subheader__breadcrumbs-home"><i class="flaticon2-shelter"></i></a>
 								<span class="kt-subheader__breadcrumbs-separator"></span>
-								<a href="" class="kt-subheader__breadcrumbs-link">
-									Rincian Pekerjaan
-								</a>
-								<span class="kt-subheader__breadcrumbs-separator"></span>
-								<a href="" class="kt-subheader__breadcrumbs-link">
-									Tutup SIKA
-								</a>
+								<a href="master_data_12_lsr.html" class="kt-subheader__breadcrumbs-link">
+								Rincian Vendor </a>
 							</div>
-						</div>
-						<div class="kt-subheader__toolbar">
 						</div>
 					</div>
 					<!-- end:: Subheader -->
 					<!-- begin:: Content -->
 					<div class="kt-content  kt-grid__item kt-grid__item--fluid" id="kt_content">
-						<div class="row">
-							<div class="kt-portlet">
-								<div class="kt-portlet__head">
-									<div class="kt-portlet__head-label">
-										<h3 class="kt-portlet__head-title">
-											<span>Pekerjaan</span>
-											<span> / </span>
-											<span name="nama_pekerjaan">Penggalian</span> 
-											<span> / </span> 
-											<span>Tutup SIKA</span>
-										</h3>
+						<div class="kt-portlet">
+							<div class="kt-portlet__head">
+								<div class="kt-portlet__head-label">
+									<h3 class="kt-portlet__head-title">
+										Rincian Vendor
+									</h3>
+								</div>
+								<div class="kt-portlet__head-toolbar">
+									<div class="kt-portlet__head-actions">
+										<a href="master_data_vendor.html" class="btn btn-md btn-secondary"> <i class="fa fa-arrow-left"></i> Kembali</a>
 									</div>
 								</div>
-								<form class="kt-form">
-									<div class="kt-portlet__body">
-										<div class="row">
-											<div class="col-sm-12">
-												<h5>Tutup SIKA</h5>
-											</div>
-										</div>
-										<div style="padding: 20px">
-											<div class="row">
-												<div class="col-sm">
-													<div class="form-group">
-														<label>Upload SIKA <span style="color: red;font-size: 1.4rem">*</span></label>
-														<div></div>
-														<div class="custom-file">
-															<input type="file" class="custom-file-input" id="upload_file_sika" name="upload_file_sika" required="">
-															<label class="custom-file-label" for="customFile">Pilih berkas....</label>
-														</div>
-													</div>
-												</div>
-												<div class="col-sm">
-													<div class="form-group">
-														<label>Berita Acara <span style="color: red;font-size: 1.4rem">*</span></label>
-														<div></div>
-														<div class="custom-file">
-															<input type="file" class="custom-file-input" id="upload_berita_acara" name="upload_berita_acara">
-															<label class="custom-file-label" for="customFile">Pilih Berkas....</label>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="form-group">
-												<label>Melebihi Masa Kontrak ?</label>
-												<div></div>
-												<div class="kt-radio-inline">
-													<label class="kt-radio kt-radio--solid kt-radio--danger">
-														<input  type="radio" name="melebih_masa_kontrak"> Ya
-														<span></span>
-													</label>
-													<label class="kt-radio kt-radio--solid kt-radio--success">
-														<input checked="" type="radio" name="melebih_masa_kontrak"> Tidak
-														<span></span>
-													</label>
-												</div>
-											</div>
-											<div class="row">
-												<div class="col-sm-5">
-													<div class="form-group">
-														<label>Tanggal Clearance</label>
-														<input  type="text" class="form-control" id="tanggal_clearance" name="tanggal_clearance" readonly placeholder="20/11/2019" />
-													</div>
-												</div>
-												<div class="offset-sm-2 col-sm-5">
-													<div class="form-group">
-														<label>Tanggal Committing</label>
-														<input  type="text" class="form-control" id="tanggal_committing" name="tanggal_committing" readonly placeholder="20/11/2019" />
-													</div>
-												</div>
-											</div>
-											<div class="form-group">
-												<label>Penyelesaian Izin Kerja</label>
-												<div class="kt-checkbox-list">
-													<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
-														<input onclick="fungsi_komentar()" type="checkbox" id="selesai_diperiksa" name="selesai_diperiksa"> Selesai dan dilakukan pemeriksaan, tindakan pencegahan khusus (isolasi) telah diambil kembali, lokasi kerja ditinggalkan dalam keadaan aman.
-														<span></span>
-														<div id="container-komentar-selesai" style="margin-top: 15px;display: none;" class="form-group">
-															<textarea class="form-control" id="komentar_selesai_diperiksa" name="komentar_selesai_diperiksa" rows="3" placeholder="tulis komentar disini"></textarea>
-														</div>
-													</label>
-													<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
-														<input  type="checkbox" id="belum_selesai" name="belum_selesai"> Belum selesai dan akan dilanjutkan dengan izin kerja no. <b><span id="no_izin_kerja_baru" name="no_izin_kerja_baru">
-															00/000/00000
-														</span></b>
-														<span></span>
-													</label>
-													<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
-														<input onclick="fungsi_komentar()" type="checkbox" id="tidak_selesai" name="tidak_selesai"> Tidak selesai dan secara tegas dihentikan
-														<span></span>
-														<div id="container-komentar-tidak-selesai" style="margin-top: 15px;display: none;" class="form-group">
-															<textarea class="form-control" id="komentar_tidak_selesai" name="komentar_tidak_selesai" rows="3" placeholder="tulis komentar disini"></textarea>
-														</div>
-													</label>
-													<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
-														<input onclick="fungsi_komentar()" type="checkbox" id="pengambilan_langkah" name="pengambilan_langkah"> Beberapa langkah harus diambil sebelum instalasi dapat dioperasikan kembali.
-														<span></span>
-														<div id="container-pengambilan-langkah" style="margin-top: 15px;display: none;" class="form-group">
-															<textarea class="form-control" id="komentar_pengambilan_langkah" name="komentar_pengambilan_langkah" rows="3" placeholder="tulis komentar disini"></textarea>
-														</div>
-													</label>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div  align="right" class="kt-portlet__foot">
-										<a href="rincian_pekerjaan.html" class="btn btn-secondary">
-											<i class="fa fa-arrow-left"></i> Kembali
-										</a>
-										<button type="button" class="btn btn-danger kt_sweetalert_tutup_sika"> 
-											<i class="fa fa-ban"></i> Tutup SIKA
-										</button>
-									</div>
-								</form>
 							</div>
+							<form class="kt-form">
+								<div class="kt-portlet__body">
+									<div class="form-group row">
+										<label for="example-text-input" class="col-4 col-form-label">Nama Vendor</label>
+										<div class="col-8">
+											<input class="form-control" type="text" value="Upana Studio" id="nama_vendor" name="nama_vendor">
+										</div>
+									</div>
+									<div class="form-group row">
+										<label for="example-text-input" class="col-4 col-form-label">Alamat Vendor</label>
+										<div class="col-8">
+											<textarea style="resize: none" class="form-control" id="exampleTextarea" rows="3" id="alamat_vendor" name="alamat_vendor">Ruko I Walk J/10 Ciputra Citraland Celebes, Jl. Tun Abdul Razak, Tombolo, Kec. Somba Opu, Kabupaten Gowa, Sulawesi Selatan 92114</textarea>
+										</div>
+									</div>
+								</div>
+								<div class="kt-portlet__foot">
+									<center>
+										<button id="btn_edit" type="button" class="btn btn-primary">
+											<i class="fa fa-edit"></i> Edit
+										</button>
+										<button id="btn_simpan" type="submit" class="btn  btn-success kt_sweetalert_simpan">
+											<i class="fa fa-save"></i> Simpan
+										</button>
+									</center>
+								</div>
+							</form>
 						</div>
 					</div>
 					<!-- end:: Content -->
@@ -291,7 +244,7 @@
 				<!-- begin:: Footer -->
 				<div class="kt-footer kt-grid__item kt-grid kt-grid--desktop kt-grid--ver-desktop">
 					<div class="kt-footer__copyright">
-						2019&nbsp;&copy;&nbsp;<a href="http://keenthemes.com/metronic" target="_blank" class="kt-link">Upana Studio</a>
+						2019&nbsp;&copy;&nbsp;<a href="https://upanastudio.com" target="_blank" class="kt-link">Upana Studio</a>
 					</div>
 				</div>
 				<!-- end:: Footer -->
@@ -299,11 +252,33 @@
 		</div>
 	</div>
 	<!-- end:: Page -->
+	<!-- begin::Quick Panel -->
+	<div id="kt_quick_panel" class="kt-quick-panel">
+		<a href="#" class="kt-quick-panel__close" id="kt_quick_panel_close_btn"><i class="flaticon2-delete"></i></a>
+		<div class="kt-quick-panel__nav">
+			<ul class="nav nav-tabs nav-tabs-line nav-tabs-bold nav-tabs-line-3x nav-tabs-line-brand  kt-notification-item-padding-x" role="tablist">
+				<li class="nav-item active">
+					<a class="nav-link active" data-toggle="tab" href="#kt_quick_panel_tab_notifications" role="tab">Notifications</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" data-toggle="tab" href="#kt_quick_panel_tab_logs" role="tab">Audit Logs</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" data-toggle="tab" href="#kt_quick_panel_tab_settings" role="tab">Settings</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- end::Quick Panel -->
 	<!-- begin::Scrolltop -->
 	<div id="kt_scrolltop" class="kt-scrolltop">
 		<i class="fa fa-arrow-up"></i>
 	</div>
 	<!-- end::Scrolltop -->
+	<!-- begin::Sticky Toolbar -->
+	<!-- end::Sticky Toolbar -->
+	<!-- begin::Demo Panel -->
+	<!-- end::Demo Panel -->
 	<!-- begin::Global Config(global config for global JS sciprts) -->
 	<script>
 		var KTAppOptions = {
@@ -340,49 +315,31 @@
 	<!--begin:: Global Optional Vendors -->
 	<script src="../assets/vendors/general/sweetalert2/dist/sweetalert2.min.js" type="text/javascript"></script>
 	<script src="../assets/vendors/custom/components/vendors/sweetalert2/init.js" type="text/javascript"></script>
-	<script src="../assets/vendors/general/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js" type="text/javascript"></script>
-	<script src="../assets/vendors/custom/components/vendors/bootstrap-datepicker/init.js" type="text/javascript"></script>
 	<!--end:: Global Optional Vendors -->
 	<!--begin::Global Theme Bundle(used by all pages) -->
 	<script src="../assets/demo/default/base/scripts.bundle.js" type="text/javascript"></script>
 	<!--end::Global Theme Bundle -->
 	<!--begin::Page Vendors(used by this page) -->
 	<script src="../assets/vendors/custom/fullcalendar/fullcalendar.bundle.js" type="text/javascript"></script>
-	<!--end::Page Vendors -->
-	<!--begin::Global App Bundle(used by all pages) -->
-	<script src="../assets/app/bundle/app.bundle.js" type="text/javascript"></script>
-	<!--begin::Page Vendors(used by this page) -->
+	<script src="//maps.google.com/maps/api/js?key=AIzaSyBTGnKT7dt597vo9QgeQ7BFhvSRP4eiMSM" type="text/javascript"></script>
+	<script src="../assets/vendors/custom/gmaps/gmaps.js" type="text/javascript"></script>
 	<!--end::Page Vendors -->
 	<!--begin::Page Scripts(used by this page) -->
+	<script src="../assets/app/custom/general/dashboard.js" type="text/javascript"></script>
+	<!--end::Page Scripts -->
+	<!--begin::Global App Bundle(used by all pages) -->
+	<script src="../assets/app/bundle/app.bundle.js" type="text/javascript"></script>
 	<!--end::Global App Bundle -->
-	<!-- AJAX -->
-	<script src="../assets/vendors/custom/datatables/datatables.bundle.js" type="text/javascript"></script>
-	<script src="../assets/app/script/js_ajax_ahli_teknik.js" type="text/javascript"></script>
+	<!-- Sweet Alert -->
 	<script>
 		// Class definition
 		var KTSweetAlert2Demo = function() {
 	    // Demos
 	    var initDemos = function() {
-	    	$('.kt_sweetalert').click(function(e) {
-	    		swal.fire("Ditutup!", "SIKA berhasil ditutup!", "success");
+	    	$('.kt_sweetalert_simpan').click(function(e) {
+	    		swal.fire("Berhasil!", "Data Berhasil disimpan!", "success");
 	    	});
-	    	$('.kt_sweetalert_tutup_sika').click(function(e) {
-	    		swal.fire({
-	    			title: 'Apakah anda yakin?',
-	    			text: "Sika akan ditutup setelah proses ini!",
-	    			type: 'warning',
-	    			showCancelButton: true,
-	    			confirmButtonText: 'Tutup!'
-	    		}).then(function(result) {
-	    			if (result.value) {
-	    				swal.fire(
-	    					'Berhasil!',
-	    					'SIKA Berhasil ditutup',
-	    					'success'
-	    					)
-	    			}
-	    		});
-	    	});
+	    	
 	    };
 	    return {
 	        // Init
@@ -397,107 +354,23 @@
 		});
 	</script>
 	<script>
-		var KTBootstrapDatepicker = function () {
+		$('input').attr('disabled', true);
+		$('textarea').attr('disabled', true);
+		$('#btn_simpan').attr('disabled', true);
 
-			var arrows;
-			if (KTUtil.isRTL()) {
-				arrows = {
-					leftArrow: '<i class="la la-angle-right"></i>',
-					rightArrow: '<i class="la la-angle-left"></i>'
-				}
-			} else {
-				arrows = {
-					leftArrow: '<i class="la la-angle-left"></i>',
-					rightArrow: '<i class="la la-angle-right"></i>'
-				}
-			}
-			var demos = function () {
-				$('#kt_datepicker_1, #kt_datepicker_1_validate').datepicker({
-					rtl: KTUtil.isRTL(),
-					todayHighlight: true,
-					orientation: "bottom left",
-					templates: arrows
-				});
+		$('#btn_edit').on('click', function(e) {
+			e.preventDefault();
+			$('input').attr('disabled', false);
+			$('textarea').attr('disabled', false);
+			$('#btn_simpan').attr('disabled', false);
+		})
 
-				$('#tanggal_clearance').datepicker({
-					rtl: KTUtil.isRTL(),
-					todayHighlight: true
-					orientation: "bottom left",
-					templates: arrows
-				});
-				$('#tanggal_committing').datepicker({
-					rtl: KTUtil.isRTL(),
-					todayHighlight: true,
-					orientation: "bottom left",
-					templates: arrows
-				});
-			}
-
-			return {
-				init: function() {
-					demos(); 
-				}
-			};
-		}();
-
-		jQuery(document).ready(function() {    
-			KTBootstrapDatepicker.init();
-		});
-	</script>
-	<script>
-		// assign function to onclick property of checkbox
-		document.getElementById('selesai_diperiksa').onclick = function() {
-	    // call toggleSub when checkbox clicked
-	    // toggleSub args: checkbox clicked on (this), id of element to show/hide
-		    toggleSub1(this, 'active_sub');
-		};
-		document.getElementById('tidak_selesai').onclick = function() {
-	    // call toggleSub when checkbox clicked
-	    // toggleSub args: checkbox clicked on (this), id of element to show/hide
-		    toggleSub2(this, 'active_sub');
-		};
-		document.getElementById('pengambilan_langkah').onclick = function() {
-	    // call toggleSub when checkbox clicked
-	    // toggleSub args: checkbox clicked on (this), id of element to show/hide
-		    toggleSub3(this, 'active_sub');
-		};
-
-		// called onclick of checkbox
-		function toggleSub1(box, id) {
-		    // get reference to related content to display/hide
-		    let el = document.getElementById('container-komentar-selesai');
-		    
-		    if ( box.checked ) {
-		    	el.style.display = 'block';
-		    } else {
-		    	el.style.display = 'none';
-		    }
-		}
-
-			
-		// called onclick of checkbox
-		function toggleSub2(box, id) {
-		    // get reference to related content to display/hide
-		    let el = document.getElementById('container-komentar-tidak-selesai');
-		    
-		    if ( box.checked ) {
-		    	el.style.display = 'block';
-		    } else {
-		    	el.style.display = 'none';
-		    }
-		}
-
-		// called onclick of checkbox
-		function toggleSub3(box, id) {
-		    // get reference to related content to display/hide
-		    let el = document.getElementById('container-pengambilan-langkah');
-		    
-		    if ( box.checked ) {
-		    	el.style.display = 'block';
-		    } else {
-		    	el.style.display = 'none';
-		    }
-		}
+		$('#btn_simpan').on('click', function(e) {
+			e.preventDefault();
+			$('input').attr('disabled', true);
+			$('textarea').attr('disabled', true);
+			$('#btn_simpan').attr('disabled', true);
+		})
 	</script>
 </body>
 <!-- end::Body -->

@@ -1,0 +1,53 @@
+{
+    "iTotalRecords": 10,
+    "iTotalDisplayRecords": 10,
+    "sEcho": 0,
+    "sColumns": "",
+    "aaData": [{
+                 "no": 1,
+                 "waktu": "08.00",
+                 "lokasi": "Makassar",
+                 "vendor": "Upana Studio",
+                 "status":"masuk",
+                 "nama": "Ahmad Rifaldi",
+                 "jabatan" : "Jabatan A"
+                
+             },
+             {
+               "no": 2,
+                 "waktu": "08.00",
+                 "lokasi": "Makassar",
+                  "vendor": "Upana Studio",
+                 "status":"masuk",
+                  "nama": "fascal Ivandry",
+                 "jabatan" : "Jabatan B"
+             },
+             {
+                "no": 3,
+                 "waktu": "13.00",
+                 "lokasi": "Makassar",
+                  "vendor": "Upana Studio",
+                 "status":"keluar",
+                  "nama": "Aigi Walie",
+                 "jabatan" : "Jabatan C"
+             },
+             {
+                "no": 4,
+                 "waktu": "14.00",
+                 "lokasi": "Makassar",
+                  "vendor": "Upana Studio",
+                 "status":"keluar",
+                  "nama": "Ahmad Afandi",
+                 "jabatan" : "Jabatan D"
+             },
+             {
+                "no": 5,
+                 "waktu": "10.00",
+                 "lokasi": "Makassar",
+                  "vendor": "Upana Studio",
+                 "status":"masuk",
+                  "nama": "Muh. Adhim Arashy",
+                 "jabatan" : "Jabatan E"
+             }
+]
+}

@@ -129,20 +129,20 @@
 										<li class="kt-menu__item  kt-menu__item--parent" aria-haspopup="true">
 											<span class="kt-menu__link"><span class="kt-menu__link-text">Pekerjaan</span></span>
 										</li>
-										<li class="kt-menu__item kt-menu__item--active" aria-haspopup="true">
-											<a href="tambah_pekerjaan_abo_perizinan.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Perizinan <span name="swakelola_jsa_progress" style="margin-left: 75px">100%</span></span></a>
+										<li id="menu_perizinan" class="kt-menu__item kt-menu__item--active" aria-haspopup="true">
+											<a  class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Perizinan <span name="swakelola_jsa_progress" style="margin-left: 75px">100%</span></span></a>
 										</li>
-										<li class="kt-menu__item" aria-haspopup="true">
-											<a href="tambah_pekerjaan_abo_csms.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">CSMS <span name="swakelola_jsa_progress" style="margin-left: 97px">100%</span></span></a>
+										<li id="menu_csms" class="kt-menu__item" aria-haspopup="true">
+											<a  class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">CSMS <span name="swakelola_jsa_progress" style="margin-left: 97px">100%</span></span></a>
 										</li>
-										<li class="kt-menu__item" aria-haspopup="true">
-											<a href="tambah_pekerjaan_abo_jsa.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">JSA <span name="swakelola_jsa_progress" style="margin-left: 110px">100%</span></span></a>
+										<li id="menu_jsa" class="kt-menu__item" aria-haspopup="true">
+											<a  class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">JSA <span name="swakelola_jsa_progress" style="margin-left: 110px">100%</span></span></a>
 										</li>
-										<li class="kt-menu__item " aria-haspopup="true">
-											<a href="tambah_pekerjaan_abo_moc.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">MOC <span name="swakelola_moc_progress" style="margin-left: 102px">50%</span></span></span></a>
+										<li id="menu_moc" class="kt-menu__item " aria-haspopup="true">
+											<a  class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">MOC <span name="swakelola_moc_progress" style="margin-left: 102px">50%</span></span></span></a>
 										</li>
-										<li class="kt-menu__item " aria-haspopup="true">
-											<a href="tambah_pekerjaan_abo_simlok.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">SIMLOK <span name="swakelola_simlok_progress" style="margin-left: 90px">80%</span></span></span></a>
+										<li id="menu_simlok" class="kt-menu__item " aria-haspopup="true">
+											<a  class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">SIMLOK <span name="swakelola_simlok_progress" style="margin-left: 90px">80%</span></span></span></a>
 										</li>
 									</ul>
 								</div>
@@ -222,27 +222,27 @@
 										<div class="kt-portlet__body">
 											<ul class="nav nav-tabs nav-fill" role="tablist">
 												<li class="nav-item">
-													<a class="nav-link active" data-toggle="tab" href="#" data-target="#kt_tabs_perizinan">
+													<a class="nav-link active" onclick="menuFunction_perizinan()" data-toggle="tab" href="#" data-target="#kt_tabs_perizinan">
 														Perizinan
 													</a>
 												</li>
 												<li class="nav-item">
-													<a class="nav-link" data-toggle="tab" href="#" data-target="#kt_tabs_csms">
+													<a class="nav-link" onclick="menuFunction_csms()" data-toggle="tab" href="#" data-target="#kt_tabs_csms">
 														CSMS
 													</a>
 												</li>
 												<li class="nav-item">
-													<a class="nav-link" data-toggle="tab" href="#" data-target="#kt_tabs_jsa">
+													<a class="nav-link" onclick="menuFunction_jsa()"  data-toggle="tab" href="#" data-target="#kt_tabs_jsa">
 														JSA
 													</a>
 												</li>
 												<li class="nav-item">
-													<a class="nav-link" data-toggle="tab" href="#" data-target="#kt_tabs_moc">
+													<a class="nav-link" onclick="menuFunction_moc()" data-toggle="tab" href="#" data-target="#kt_tabs_moc">
 														MOC
 													</a>
 												</li>
 												<li class="nav-item">
-													<a class="nav-link" data-toggle="tab" href="#" data-target="#kt_tabs_simlok">
+													<a class="nav-link" onclick="menuFunction_simlok()" data-toggle="tab" href="#" data-target="#kt_tabs_simlok">
 														SIMLOK
 													</a>
 												</li>
@@ -555,7 +555,7 @@
 														<div style="margin-bottom: 15px" class="col-sm-12">
 															<div class="row">
 																<div class="col-sm">
-																	<label>PJA <small>required</small> </label>
+																	<label>PJA <span style="color: red;font-size: 1.4rem">*</span> </label>
 																</div>
 																<div align="right" class="col-sm">
 																	<button id="btn_tambah_pja" name="btn_tambah_pja" type="button" class="btn btn-sm btn-success">
@@ -661,7 +661,7 @@
 														<div style="margin-bottom: 15px" class="col-sm-12">
 															<div class="row">
 																<div class="col-sm">
-																	<label>Hazard Analysis Doc (JSA) <small>required</small> </label>
+																	<label>Hazard Analysis Doc (JSA) <span style="color: red;font-size: 1.4rem">*</span> </label>
 																</div>
 																<div align="right" class="col-sm">
 																	<button id="btn_tambah_hazard" name="btn_tambah_hazard" type="button" class="btn btn-sm btn-success">
@@ -848,7 +848,7 @@
 														<div style="margin-bottom: 15px" class="col-sm-12">
 															<div class="row">
 																<div class="col-sm">
-																	<label>Isolasi Energi / LOTO <small>required</small> </label>
+																	<label>Isolasi Energi / LOTO <span style="color: red;font-size: 1.4rem">*</span> </label>
 																</div>
 																<div align="right" class="col-sm">
 																	<button id="btn_tambah_isolasi_energi" name="btn_tambah_isolasi_energi" type="button" class="btn btn-sm btn-success">
@@ -989,7 +989,7 @@
 														<div style="margin-bottom: 15px" class="col-sm-12">
 															<div class="row">
 																<div class="col-sm">
-																	<label>Dasar Pekerjaan <small>required</small> </label>
+																	<label>Dasar Pekerjaan <span style="color: red;font-size: 1.4rem">*</span> </label>
 																</div>
 																<div align="right" class="col-sm">
 																	<button id="btn_tambah_dasar_pekerjaan" name="btn_tambah_dasar_pekerjaan" type="button" class="btn btn-sm btn-success">
@@ -1021,7 +1021,7 @@
 														<div style="margin-bottom: 15px" class="col-sm-12">
 															<div class="row">
 																<div class="col-sm">
-																	<label>Dasar Kontrak / SPMP <small>required</small> </label>
+																	<label>Dasar Kontrak / SPMP <span style="color: red;font-size: 1.4rem">*</span> </label>
 																</div>
 																<div align="right" class="col-sm">
 																	<button id="btn_tambah_dasar_kontrak_spmp" name="btn_tambah_dasar_kontrak_spmp" type="button" class="btn btn-sm btn-success">
@@ -1440,6 +1440,55 @@
 				$(this).parent().remove();
 			});
 		});
+	</script>
+	<script>
+		var element_perizinan = document.getElementById("menu_perizinan");
+		var element_csms = document.getElementById("menu_csms")
+		var element_moc = document.getElementById("menu_moc");
+		var element_jsa = document.getElementById("menu_jsa")
+		var element_simlok = document.getElementById("menu_simlok");
+		
+
+		function menuFunction_perizinan(){
+			element_perizinan.classList.add("kt-menu__item--active");
+			element_jsa.classList.remove("kt-menu__item--active");
+			element_simlok.classList.remove("kt-menu__item--active");
+			element_moc.classList.remove("kt-menu__item--active");
+			element_csms.classList.remove("kt-menu__item--active");
+		}
+
+		function menuFunction_csms(){
+			element_csms.classList.add("kt-menu__item--active");
+			element_jsa.classList.remove("kt-menu__item--active");
+			element_simlok.classList.remove("kt-menu__item--active");
+			element_moc.classList.remove("kt-menu__item--active");
+			element_perizinan.classList.remove("kt-menu__item--active");
+		}
+
+		function menuFunction_moc(){
+			element_moc.classList.add("kt-menu__item--active");
+			element_jsa.classList.remove("kt-menu__item--active");
+			element_simlok.classList.remove("kt-menu__item--active");
+			element_perizinan.classList.remove("kt-menu__item--active");
+			element_csms.classList.remove("kt-menu__item--active");
+		}
+
+		function menuFunction_jsa(){
+			element_jsa.classList.add("kt-menu__item--active");
+			element_moc.classList.remove("kt-menu__item--active");
+			element_simlok.classList.remove("kt-menu__item--active");
+			element_perizinan.classList.remove("kt-menu__item--active");
+			element_csms.classList.remove("kt-menu__item--active");
+		}
+
+		function menuFunction_simlok(){
+			element_simlok.classList.add("kt-menu__item--active");
+			element_jsa.classList.remove("kt-menu__item--active");
+			element_moc.classList.remove("kt-menu__item--active");
+			element_perizinan.classList.remove("kt-menu__item--active");
+			element_csms.classList.remove("kt-menu__item--active");
+		}
+
 	</script>
 </body>
 <!-- end::Body -->

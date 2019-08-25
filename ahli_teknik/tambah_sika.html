@@ -173,24 +173,12 @@
 													<i class="la la-gear"></i>
 												</span>
 												<h3 class="kt-portlet__head-title">
-													Permohonan Tambah SIKA
+													<span id="nama_pekerjaan" name="nama_pekerjaan">Penggalian</span> / Permohonan Tambah SIKA 
 												</h3>
 											</div>
 										</div>
 										<form class="kt-form">
 											<div class="kt-portlet__body">
-												<div class="form-group row">
-													<label for="example-text-input" class="col-3 col-form-label">Nama Pekerjaan</label>
-													<div class="col-9">
-														<select class="form-control select-2" id="nama_pekerjaan" name="nama_pekerjaan">
-															<option value="0">Pekerjaan 1</option>
-															<option value="1">Pekerjaan 2</option>
-															<option value="3">Pekerjaan 3</option>
-															<option value="4">Pekerjaan 4</option>
-															<option value="5">Pekerjaan 5</option>
-														</select>
-													</div>
-												</div>
 												<div class="form-group row">
 													<label for="example-text-input" class="col-3 col-form-label">Nomor SIKA</label>
 													<div class="col-9">
@@ -250,7 +238,7 @@
 											</div>
 											<div class="kt-portlet__foot">
 												<div align="right">
-													<button type="button" class="btn btn-secondary">
+													<button type="button" onclick="goBack()" type="button" class="btn btn-secondary">
 														<i class="fa fa-times"></i> Batal
 													</button>
 													<button type="button" class="btn btn-success" data-toggle="modal" data-target="#modal_tambah_sika">
@@ -466,6 +454,11 @@
 			}
 			function show2(){
 				document.getElementById('turunan_sika').style.display = 'block';
+			}
+		</script>
+		<script>
+			function goBack() {
+				window.history.back();
 			}
 		</script>
 	</body>

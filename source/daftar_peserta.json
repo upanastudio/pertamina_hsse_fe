@@ -1,0 +1,43 @@
+{
+    "iTotalRecords": 10,
+    "iTotalDisplayRecords": 10,
+    "sEcho": 0,
+    "sColumns": "",
+    "aaData": [{
+                 "no": 1,
+                 "nama_peserta": "Ahmad Rifaldi",
+                 "tanggal_tes" : "17 Agustus 2019",
+                 "status" : "lulus",
+                 "aksi" : null
+                
+             },
+             {
+                "no": 2,
+                 "nama_peserta": "Fascal ivandry",
+                 "tanggal_tes" : "17 Agustus 2019",
+                  "status" : "lulus",
+                 "aksi" : null
+             },
+             {
+                "no": 3,
+                 "nama_peserta": "Aigi Walie",
+                 "tanggal_tes" : "20 Agustus 2019",
+                  "status" : "lulus",
+                 "aksi" : null
+             },
+             {
+                "no": 4,
+                "nama_peserta": "Muhammad Adhim",
+                 "tanggal_tes" : "20 Agustus 2019",
+                  "status" : "tidak_lulus",
+                 "aksi" : null
+             },
+             {
+                "no": 5,
+                 "nama_peserta": "Fatahuddin Haspan",
+                 "tanggal_tes" : "1 September 2019",
+                  "status" : "tidak_lulus",
+                 "aksi" : null
+             }
+]
+}

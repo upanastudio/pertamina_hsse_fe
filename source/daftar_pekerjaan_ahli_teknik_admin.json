@@ -5,18 +5,20 @@
     "sColumns": "",
     "aaData": [{
                  "no": "1",
+                 "depot": "depot satu",
                  "pekerjaan" : "penggalian",
                  "vendor" : "CV. Upana",
                  "tanggal" : "10 November 2019",
                  "sifat" : "Swakelola",
                  "tipe" : "hot",
                  "validasi" : null,
-                 "status" : "draft",
+                 "status" : "selesai",
                  "aksi" : null
                 
              },
              {
                 "no": "2",
+                "depot":"depot dua",
                  "pekerjaan" : "penggalian",
                  "vendor" : "CV. Upana",
                  "tanggal" : "10 November 2019",
@@ -28,6 +30,7 @@
              },
              {
                  "no": "3",
+                 "depot":"depot tiga",
                  "pekerjaan" : "penggalian",
                  "vendor" : "CV. Upana",
                  "tanggal" : "10 November 2019",
@@ -39,6 +42,7 @@
              },
              {
                  "no": "4",
+                 "depot":"depot empat",
                  "pekerjaan" : "penggalian",
                  "vendor" : "CV. Upana",
                  "tanggal" : "10 November 2019",
@@ -50,6 +54,7 @@
              },
              {
                  "no": "5",
+                 "depot":"depot lima",
                  "pekerjaan" : "penggalian",
                  "vendor" : "CV. Upana",
                  "tanggal" : "10 November 2019",
@@ -61,6 +66,7 @@
              },
              {
                  "no": "6",
+                 "depot":"depot enam",
                  "pekerjaan" : "penggalian",
                  "vendor" : "CV. Upana",
                  "tanggal" : "10 November 2019",
@@ -72,6 +78,7 @@
              },
              {
                  "no": "7",
+                 "depot":"depot tujuh",
                  "pekerjaan" : "penggalian",
                  "vendor" : "CV. Upana",
                  "tanggal" : "10 November 2019",
@@ -83,6 +90,7 @@
              },
               {
                  "no": "8",
+                 "depot":"depot delapan",
                  "pekerjaan" : "penggalian",
                  "vendor" : "CV. Upana",
                  "tanggal" : "10 November 2019",
@@ -94,6 +102,7 @@
              },
              {
                  "no": "9",
+                 "depot":"depot sembilan",
                  "pekerjaan" : "penggalian",
                  "vendor" : "CV. Upana",
                  "tanggal" : "10 November 2019",
@@ -105,6 +114,7 @@
              },
              {
                  "no": "10",
+                 "depot":"depot sepuluh",
                  "pekerjaan" : "penggalian",
                  "vendor" : "CV. Upana",
                  "tanggal" : "10 November 2019",
