@@ -112,11 +112,29 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 				width: 100,
 				render: function(data, type, full, meta) {
 					if (sifat_pekerjaan == "Swakelola") {
-						return `<a href="rincian_permintaan_pekerjaan_swakelola.html" class="btn btn-sm btn-primary" style="color:white;border-radius:20px">Rincian</a> `;
+						if (full.status == "perpanjang") {
+							return `<a href="rincian_permintaan_pekerjaan_swakelola_perpanjang.html" class="btn btn-sm btn-primary" style="color:white;border-radius:20px">Rincian</a> `;
+						} else if (full.status == "tutup") {
+							return `<a href="rincian_permintaan_pekerjaan_swakelola_tutup.html" class="btn btn-sm btn-primary" style="color:white;border-radius:20px">Rincian</a> `;
+						} else {
+							return `<a href="rincian_permintaan_pekerjaan_swakelola.html" class="btn btn-sm btn-primary" style="color:white;border-radius:20px">Rincian</a> `;
+						}
 					} else if (sifat_pekerjaan == "ABI") {
-						return `<a href="rincian_permintaan_pekerjaan_abi.html" class="btn btn-sm btn-primary" style="color:white;border-radius:20px">Rincian</a> `;
+						if (full.status == "perpanjang") {
+							return `<a href="rincian_permintaan_pekerjaan_abi_perpanjang.html" class="btn btn-sm btn-primary" style="color:white;border-radius:20px">Rincian</a> `;
+						} else if (full.status == "tutup") {
+							return `<a href="rincian_permintaan_pekerjaan_abi_tutup.html" class="btn btn-sm btn-primary" style="color:white;border-radius:20px">Rincian</a> `;
+						} else {
+							return `<a href="rincian_permintaan_pekerjaan_abi.html" class="btn btn-sm btn-primary" style="color:white;border-radius:20px">Rincian</a> `;
+						}
 					} else if (sifat_pekerjaan == "ABO") {
-						return `<a href="rincian_permintaan_pekerjaan_abo.html" class="btn btn-sm btn-primary" style="color:white;border-radius:20px">Rincian</a> `;
+						if (full.status == "perpanjang") {
+							return `<a href="rincian_permintaan_pekerjaan_abo_perpanjang.html" class="btn btn-sm btn-primary" style="color:white;border-radius:20px">Rincian</a> `;
+						} else if (full.status == "tutup") {
+							return `<a href="rincian_permintaan_pekerjaan_abo_tutup.html" class="btn btn-sm btn-primary" style="color:white;border-radius:20px">Rincian</a> `;
+						} else {
+							return `<a href="rincian_permintaan_pekerjaan_abo.html" class="btn btn-sm btn-primary" style="color:white;border-radius:20px">Rincian</a> `;
+						}
 					} else {
 						return `<a href="#" class="btn btn-sm btn-primary" style="color:white;border-radius:20px">Rincian</a> `;
 					}

@@ -23,7 +23,7 @@
                  "sifat" : "ABO",
                  "tipe" : "cold",
                  "validasi" : null,
-                 "status" : "pengajuan ulang",
+                 "status" : "pengajuan awal",
                  "aksi" : null
              },
              {
@@ -34,7 +34,7 @@
                  "sifat" : "Swakelola",
                  "tipe" : "cold",
                  "validasi" : null,
-                 "status" : "perpanjang",
+                 "status" : "pengajuan awal",
                  "aksi" : null
              },
              {
@@ -42,10 +42,98 @@
                  "pekerjaan" : "penggalian",
                  "vendor" : "CV. Upana",
                  "tanggal" : "10 November 2019",
+                 "sifat" : "ABI",
+                 "tipe" : "hot",
+                 "validasi" : null,
+                 "status" : "tutup",
+                 "aksi" : null
+             },
+             {
+                "no": 5,
+                 "pekerjaan" : "penggalian",
+                 "vendor" : "CV. Upana",
+                 "tanggal" : "10 November 2019",
                  "sifat" : "ABO",
                  "tipe" : "hot",
                  "validasi" : null,
                  "status" : "tutup",
+                 "aksi" : null
+             },
+             {
+                 "no": 6,
+                 "pekerjaan" : "penggalian",
+                 "vendor" : "CV. Upana",
+                 "tanggal" : "10 November 2019",
+                 "sifat" : "Swakelola",
+                 "tipe" : "cold",
+                 "validasi" : null,
+                 "status" : "tutup",
+                 "aksi" : null
+             },
+             {
+                 "no": 7,
+                 "pekerjaan" : "penggalian",
+                 "vendor" : "CV. Upana",
+                 "tanggal" : "10 November 2019",
+                 "sifat" : "ABI",
+                 "tipe" : "cold",
+                 "validasi" : null,
+                 "status" : "perpanjang",
+                 "aksi" : null
+             },
+             {
+                 "no": 8,
+                 "pekerjaan" : "penggalian",
+                 "vendor" : "CV. Upana",
+                 "tanggal" : "10 November 2019",
+                 "sifat" : "ABO",
+                 "tipe" : "hot",
+                 "validasi" : null,
+                 "status" : "perpanjang",
+                 "aksi" : null
+             },
+             {
+                 "no": 9,
+                 "pekerjaan" : "penggalian",
+                 "vendor" : "CV. Upana",
+                 "tanggal" : "10 November 2019",
+                 "sifat" : "Swakelola",
+                 "tipe" : "hot",
+                 "validasi" : null,
+                 "status" : "perpanjang",
+                 "aksi" : null
+             },
+             {
+                 "no": 10,
+                 "pekerjaan" : "penggalian",
+                 "vendor" : "CV. Upana",
+                 "tanggal" : "10 November 2019",
+                 "sifat" : "ABI",
+                 "tipe" : "hot",
+                 "validasi" : null,
+                 "status" : "pengajuan ulang",
+                 "aksi" : null
+             },
+             {
+                 "no": 11,
+                 "pekerjaan" : "penggalian",
+                 "vendor" : "CV. Upana",
+                 "tanggal" : "10 November 2019",
+                 "sifat" : "ABO",
+                 "tipe" : "hot",
+                 "validasi" : null,
+                 "status" : "pengajuan ulang",
+                 "aksi" : null
+             },
+             {
+                 "no": 12,
+                 "pekerjaan" : "penggalian",
+                 "vendor" : "CV. Upana",
+                 "tanggal" : "10 November 2019",
+                 "sifat" : "Swakelola",
+                 "tipe" : "hot",
+                 "validasi" : null,
+                 "status" : "pengajuan ulang",
                  "aksi" : null
              }
 ]
