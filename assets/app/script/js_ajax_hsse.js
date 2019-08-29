@@ -488,7 +488,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 					<i class="flaticon-more-1"></i>
 					</button>
 					<div style="min-width:9rem;padding:5px;" class="dropdown-menu dropdown-menu-right">
-					<a href="rincian_data_pekerja.html" style="margin-bottom:5px;" class="dropdown-item btn btn-secondary" href="#"> <i class="fa fa-clipboard-list"></i>Rincian</a>
+					<a href="rincian_data_pekerja_approval.html" style="margin-bottom:5px;" class="dropdown-item btn btn-secondary" href="#"> <i class="fa fa-clipboard-list"></i>Rincian</a>
 					<button data-toggle="modal" data-target="#terima" style="margin-bottom:5px;" class="dropdown-item btn btn-secondary" href="#"> <i class="fa fa-check"></i>Terima</button>
 					<button data-toggle="modal" data-target="#tolak"  class="dropdown-item btn btn-secondary"> <i class="fa fa-times"></i>Tolak</button>`
 					;
@@ -1418,7 +1418,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 		    months: 'Januari_Februari_Maret_April_Mei_Juni_Juli_Agustus_September_Oktober_November_Desember'.split('_'),
 		    monthsShort: 'Jan_Feb_Mar_Apr_Mei_Jun_Jul_Agt_Sep_Okt_Nov_Des'.split('_'),
 		    today: "Hari ini",
-		    clear: "Reset",
+		    clear: "Semua Hari",
 		    format: "dd MM yyyy",
 		    titleFormat: "MM yyyy"
 		};
