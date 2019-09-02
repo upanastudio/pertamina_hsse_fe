@@ -315,7 +315,7 @@
 								</div>
 							</div>
 							<div class="col-sm-6">
-								<div class="kt-portlet">
+                                <div class="kt-portlet">
 									<div class="kt-portlet__head">
 										<div class="kt-portlet__head-label">
 											<span class="kt-portlet__head-icon kt-hidden">
@@ -326,54 +326,48 @@
 											</h3>
 										</div>
 									</div>
-									<div class="kt-portlet__body">
-										<div class="col-sm-12">
-											<div class="form-group row">
-												<label class="col-8 col-form-label">
-													File yang telah diprint sebelumnya
-												</label>
-												<div class="col-4">
-													<button class="btn btn-link">
-														<i class="fa fa-eye"></i> Lihat File
-													</button>
-												</div>
-											</div>
-											<div class="form-group row">
-												<label class="col-8 col-form-label">
-													Melebihi masa kontrak ?
-												</label>
-												<div class="col-4">
-													<label style="font-weight: 600" class="col-form-label" id="melebihi_masa_kontrak" name="melebihi_masa_kontrak">YA</label>
-												</div>
-											</div>
-											<div class="form-group row">
-												<label class="col-8 col-form-label">
-													Tanggal Clearance
-												</label>
-												<div class="col-4">
-													<label class="col-form-label" id="tanggal_clearance" name="tanggal_clearance">20 November 2019</label>
-												</div>
-											</div>
-											<div class="form-group row">
-												<label class="col-8 col-form-label">
-													Tanggal Committing
-												</label>
-												<div class="col-4">
-													<label class="col-form-label" id="tanggal_committing" name="tanggal_committing">10 November 2019</label>
-												</div>
-											</div>
-											<div class="form-group row">
-												<label class="col-8 col-form-label">
-													Berita Acara
-												</label>
-												<div class="col-4">
-													<button class="btn btn-link">
-														<i class="fa fa-eye"></i> Lihat File
-													</button>
-												</div>
-											</div>
-										</div>
-									</div>
+                                    <div class="kt-portlet__body">
+                                        <div class="col-sm-12">
+                                            <div class="form-group">
+                                                <div class="form-group row">
+                                                    <label class="col-sm-6 col-form-label">
+                                                        SIKA
+                                                    </label>
+                                                    <div align="right" class="col-sm-6">
+                                                        <button type="button" class="btn btn-link"> <i class="fa fa-eye "></i>lihat file</button>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label class="col-3 col-form-label">
+                                                        Durasi
+                                                    </label>
+                                                    <div class="col-9">
+                                                        <div class="row">
+                                                            <div class="col-sm-6">
+                                                                <div class="input-group">
+                                                                    <input disabled type="number" class="form-control" id="waktu_hari" name="waktu_hari" value="3">
+                                                                    <div class="input-group-append"><span style="color:#464457;" class="input-group-text">Hari</span></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <div class="input-group">
+                                                                    <input disabled type="number" class="form-control" id="waktu_jam" name="waktu_jam" value="2">
+                                                                    <div class="input-group-append"><span style="color:#464457;" class="input-group-text">Jam</span></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
+                                                    <input checked disabled id="status_perpanjang" name="status_perpanjang" type="checkbox">Belum selesai
+                                                    <span></span>
+                                                </label>
+                                                <span class="form-text">Akan dilanjutkan dengan<span style="color:#5f70ca"> Izin kerja : 00/1233/443213/234</span></span>
+                                            </div>
+                                         </div>
+                                     </div>
 								</div>
 							</div>
 							<div class="col-sm-6">
@@ -449,7 +443,6 @@
 						</div>
 					</div>
 				</div>
-
 				<!--end::Modal-->
 				<!-- begin:: Footer -->
 				<div class="kt-footer kt-grid__item kt-grid kt-grid--desktop kt-grid--ver-desktop">
