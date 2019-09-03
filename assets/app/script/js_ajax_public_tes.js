@@ -747,13 +747,10 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 		});
 	};
 	var initTable9 = function() {
-		// begin first table
 		var table = $('#kt_table_pekerjaan').DataTable({
 			responsive: true,
-			// Pagination settings
 			dom: `<'row'<'col-sm-12'tr>>
 			<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7 dataTables_pager'lp>>`,
-			// read more: https://datatables.net/examples/basic_init/dom.html
 
 			lengthMenu: [5, 10, 25, 50],
 
@@ -770,7 +767,6 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 				url: '../source/daftar_pekerjaan_ahli_teknik_admin.json',
 				type: 'POST',
 				data: {
-					// parameters for custom backend script demo
 					columnsDef: [
 					'no', 'depot', 'vendor', 'pekerjaan', 'sifat',
 					'tanggal', 'status', 'aksi',],
@@ -907,7 +903,6 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 				}
 			});
 			$.each(params, function(i, val) {
-				// apply search params to datatable
 				table.column(i).search(val ? val : '', false, false);
 			});
 			table.table().draw();
@@ -921,10 +916,9 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 			});
 			table.table().draw();
 		});
-
 	};
 	var initTable10 = function() {
-		var table = $('#daftar_depot');
+	var table = $('#daftar_depot');
 
 		// begin first table
 		table.DataTable({
@@ -1061,6 +1055,16 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 			],
 		});
 	};
+	var initTable12 = function() {
+		var table = $('#total_karyawan').DataTable( {
+			scrollY:        "500px",
+			scrollX:        true,
+			scrollCollapse: true,
+			paging:         true,
+			orderable: false
+		} );
+
+	};
 	return {
 		//main function to initiate the module
 		init: function() {
@@ -1075,6 +1079,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 			initTable9();
 			initTable10();
 			initTable11();
+			initTable12();
 		},
 
 	};

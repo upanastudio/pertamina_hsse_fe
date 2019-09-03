@@ -83,6 +83,7 @@
 		#chart {
 			margin: 30px auto;
 		}
+
 	</style>
 </head>
 <!-- end::Head -->
@@ -173,13 +174,13 @@
 							</div>
 						</div>
 						<div class="kt-subheader__toolbar">
-							<a href="edit_pekerjaan.html" class="btn btn-secondary btn-out-hijau">
+							<button class="btn btn-secondary btn-out-hijau kt-hidden">
 								Edit Pekerjaan
-							</a>
-							<button data-toggle="modal" data-target="#kt_modal_riwayat" class="btn btn-secondary">
+							</button>
+							<button data-toggle="modal" data-target="#kt_modal_riwayat " class="btn btn-secondary kt-hidden">
 								<i class="fa fa-history"></i> Riwayat
 							</button>
-							<a href="edit_pekerjaan.html" class="btn btn-brand">
+							<a href="edit_pekerjaan_abi.html" class="btn btn-brand kt-hidden">
 								<i class="fa fa-angle-double-up"></i> Resubmit
 							</a>
 						</div>
@@ -203,8 +204,6 @@
 									<div>
 										<h4>Daftar SIKA COLD</h4>
 										<table class="table table-bordered table-hover table-checkable" id="childrow_contoh"></table>
-										<!-- <table class="table table-striped- table-bordered table-hover table-checkable" id="daftar_sika_cold_pekerjaan">
-										</table> -->
 									</div>
 									<div class="kt-separator kt-separator--border-dashed kt-separator--space-md"></div>	
 									<ul class="nav nav-tabs" role="tablist">
@@ -738,27 +737,27 @@
 																					</label>
 																				</div>
 																				<div class="col-sm-12">
-																						<a href="profil_pekerja.html" target="_blank"  class="btn btn-bold btn-sm btn-font-sm btn-label-brand">
-																							<b><span id="nama_pekerja" name="nama_pekerja">Fascal Ivandry</span></b>
-																							<span> : </span>
-																							<span id="pekerjaan" name="pekerjaan">Teknisi</span>
-																						</a>
-																						<a href="profil_pekerja.html" target="_blank"  class="btn btn-bold btn-sm btn-font-sm btn-label-brand">
-																							<b><span id="nama_pekerja" name="nama_pekerja">Ahmad Rifaldi</span></b>
-																							<span> : </span>
-																							<span id="pekerjaan" name="pekerjaan">Teknisi</span>
-																						</a>
-																						<a href="profil_pekerja.html" target="_blank"  class="btn btn-bold btn-sm btn-font-sm btn-label-brand">
-																							<b><span id="nama_pekerja" name="nama_pekerja">Ewit Pratiwi</span></b>
-																							<span> : </span>
-																							<span id="pekerjaan" name="pekerjaan">Operator</span>
-																						</a>
-																						<a href="profil_pekerja.html" target="_blank"  class="btn btn-bold btn-sm btn-font-sm btn-label-brand">
-																							<b><span id="nama_pekerja" name="nama_pekerja">Aigi Walie</span></b>
-																							<span> : </span>
-																							<span id="pekerjaan" name="pekerjaan">Teknisi</span>
-																						</a>
-																					</div>
+																					<a href="profil_pekerja.html" target="_blank"  class="btn btn-bold btn-sm btn-font-sm btn-label-brand">
+																						<b><span id="nama_pekerja" name="nama_pekerja">Fascal Ivandry</span></b>
+																						<span> : </span>
+																						<span id="pekerjaan" name="pekerjaan">Teknisi</span>
+																					</a>
+																					<a href="profil_pekerja.html" target="_blank"  class="btn btn-bold btn-sm btn-font-sm btn-label-brand">
+																						<b><span id="nama_pekerja" name="nama_pekerja">Ahmad Rifaldi</span></b>
+																						<span> : </span>
+																						<span id="pekerjaan" name="pekerjaan">Teknisi</span>
+																					</a>
+																					<a href="profil_pekerja.html" target="_blank"  class="btn btn-bold btn-sm btn-font-sm btn-label-brand">
+																						<b><span id="nama_pekerja" name="nama_pekerja">Ewit Pratiwi</span></b>
+																						<span> : </span>
+																						<span id="pekerjaan" name="pekerjaan">Operator</span>
+																					</a>
+																					<a href="profil_pekerja.html" target="_blank"  class="btn btn-bold btn-sm btn-font-sm btn-label-brand">
+																						<b><span id="nama_pekerja" name="nama_pekerja">Aigi Walie</span></b>
+																						<span> : </span>
+																						<span id="pekerjaan" name="pekerjaan">Teknisi</span>
+																					</a>
+																				</div>
 																			</div>
 																		</div>
 																		<div class="form-group">
@@ -901,7 +900,7 @@
 																</div>
 															</div>
 															<div class="card">
-																<div class="card-header " id="headingTwo4">
+																<div class="card-header" id="headingTwo4">
 																	<div style="margin-left:20px" class="card-title collapsed" data-toggle="collapse" data-target="#collapse_fe" aria-expanded="false" aria-controls="collapse_fe">
 																		FE
 																	</div>
@@ -960,7 +959,7 @@
 																</div>
 															</div>
 															<div class="card">
-																<div class="card-header " id="headingTwo4">
+																<div class="card-header" id="headingTwo4">
 																	<div style="margin-left:20px" class="card-title collapsed" data-toggle="collapse" data-target="#collapse_kpi" aria-expanded="false" aria-controls="collapse_kpi">
 																		POB
 																	</div>
@@ -1290,7 +1289,7 @@
 											</div>
 											<label class="col-2 col-form-label">Alasan</label>
 											<div class="col-10">
-												<textarea disabled="" style="resize: none" class="form-control" id="alasan_ditolak" name="alasan_ditolak" rows="3"></textarea>
+												<textarea disabled="" style="resize: none" class="form-control"id="alasan_ditolak" name="alasan_ditolak" rows="3"></textarea>
 											</div>
 										</div>
 										<div class="kt-separator kt-separator--border-dashed kt-separator--space-sm"></div>
@@ -1304,7 +1303,7 @@
 											</div>
 											<label class="col-2 col-form-label">Alasan</label>
 											<div class="col-10">
-												<textarea disabled="" style="resize: none" class="form-control" id="alasan_ditolak" name="alasan_ditolak" rows="3"></textarea>
+												<textarea disabled="" style="resize: none" class="form-control"id="alasan_ditolak" name="alasan_ditolak" rows="3"></textarea>
 											</div>
 										</div>
 										<div class="kt-separator kt-separator--border-dashed kt-separator--space-sm"></div>
@@ -1318,7 +1317,7 @@
 											</div>
 											<label class="col-2 col-form-label">Alasan</label>
 											<div class="col-10">
-												<textarea disabled="" style="resize: none" class="form-control" id="alasan_ditolak" name="alasan_ditolak" rows="3"></textarea>
+												<textarea disabled="" style="resize: none" class="form-control"id="alasan_ditolak" name="alasan_ditolak" rows="3"></textarea>
 											</div>
 										</div>
 										<div class="kt-separator kt-separator--border-dashed kt-separator--space-sm"></div>
@@ -1580,70 +1579,70 @@
 		});
 	</script>
 	<script>
-    	Highcharts.chart('container', {
-    		colors: ['#D32F2F', '#FBC02D', '#689F38', '#1976D2'],
-    		chart: {
-    			type: 'column'
-    		},
-    		title: {
-    			text: 'Statistik WIP'
-    		},
-    		xAxis: {
-    			categories: ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember']
-    		},
-    		yAxis: {
-    			min: 0,
-    			title: {
-    				text: 'Total Pekerjaan'
-    			},
-    			stackLabels: {
-    				enabled: true,
-    				style: {
-    					color: (
-    						Highcharts.defaultOptions.title.style &&
-    						Highcharts.defaultOptions.title.style.color
-    						) || 'gray'
-    				}
-    			}
-    		},
-    		legend: {
-    			align: 'right',
-    			x: -30,
-    			verticalAlign: 'top',
-    			y: 25,
-    			floating: true,
-    			backgroundColor:
-    			Highcharts.defaultOptions.legend.backgroundColor || 'white',
-    			shadow: false
-    		},
-    		tooltip: {
-    			headerFormat: '<b>{point.x}</b><br/>',
-    			pointFormat: '{series.name}: {point.y}<br/>Total: {point.stackTotal}'
-    		},
-    		plotOptions: {
-    			column: {
-    				stacking: 'normal',
-    				dataLabels: {
-    					enabled: true,
+		Highcharts.chart('container', {
+			colors: ['#D32F2F', '#FBC02D', '#689F38', '#1976D2'],
+			chart: {
+				type: 'column'
+			},
+			title: {
+				text: 'Statistik WIP'
+			},
+			xAxis: {
+				categories: ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember']
+			},
+			yAxis: {
+				min: 0,
+				title: {
+					text: 'Total Pekerjaan'
+				},
+				stackLabels: {
+					enabled: true,
+					style: {
+						color: (
+							Highcharts.defaultOptions.title.style &&
+							Highcharts.defaultOptions.title.style.color
+							) || 'gray'
+					}
+				}
+			},
+			legend: {
+				align: 'right',
+				x: -30,
+				verticalAlign: 'top',
+				y: 25,
+				floating: true,
+				backgroundColor:
+				Highcharts.defaultOptions.legend.backgroundColor || 'white',
+				shadow: false
+			},
+			tooltip: {
+				headerFormat: '<b>{point.x}</b><br/>',
+				pointFormat: '{series.name}: {point.y}<br/>Total: {point.stackTotal}'
+			},
+			plotOptions: {
+				column: {
+					stacking: 'normal',
+					dataLabels: {
+						enabled: true,
 
-    				}
-    			}
-    		},
-    		series: [{
-    			name: 'KPI',
-    			data: [21, 7, 25, 13, 22, 8, 10, 8, 13, 27, 23, 23]
-    		},{
-    			name: 'Inspeksi',
-    			data: [13, 23, 20, 8, 13, 27, 23, 23, 20, 13, 5, 18]
-    		},{
-    			name: 'Program',
-    			data: [11, 17, 15, 15, 21, 14, 16, 17, 15, 15, 21, 20]
-    		},{
-    			name: 'PJA',
-    			data: [44, 44, 44, 44, 44, 44, 44, 44, 44, 44, 44,44]
-    		}]
-    	});
-    </script>
+					}
+				}
+			},
+			series: [{
+				name: 'KPI',
+				data: [21, 7, 25, 13, 22, 8, 10, 8, 13, 27, 23, 23]
+			},{
+				name: 'Inspeksi',
+				data: [13, 23, 20, 8, 13, 27, 23, 23, 20, 13, 5, 18]
+			},{
+				name: 'Program',
+				data: [11, 17, 15, 15, 21, 14, 16, 17, 15, 15, 21, 20]
+			},{
+				name: 'PJA',
+				data: [44, 44, 44, 44, 44, 44, 44, 44, 44, 44, 44,44]
+			}]
+		});
+	</script>
 </body>
 <!-- end::Body -->
 </html>
