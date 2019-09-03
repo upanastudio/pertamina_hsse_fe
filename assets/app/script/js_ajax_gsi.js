@@ -112,11 +112,29 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 				width: 100,
 				render: function(data, type, full, meta) {
 					if (sifat_pekerjaan == "Swakelola") {
-						return `<a href="rincian_permintaan_pekerjaan_swakelola.html" class="btn btn-sm btn-primary" style="color:white;border-radius:20px">Rincian</a> `;
+						if (full.status == "perpanjang") {
+							return `<a href="rincian_permintaan_pekerjaan_swakelola_perpanjang.html" class="btn btn-sm btn-primary" style="color:white;border-radius:20px">Rincian</a> `;
+						} else if (full.status == "tutup") {
+							return `<a href="rincian_permintaan_pekerjaan_swakelola_tutup.html" class="btn btn-sm btn-primary" style="color:white;border-radius:20px">Rincian</a> `;
+						} else {
+							return `<a href="rincian_permintaan_pekerjaan_swakelola.html" class="btn btn-sm btn-primary" style="color:white;border-radius:20px">Rincian</a> `;
+						}
 					} else if (sifat_pekerjaan == "ABI") {
-						return `<a href="rincian_permintaan_pekerjaan_abi.html" class="btn btn-sm btn-primary" style="color:white;border-radius:20px">Rincian</a> `;
+						if (full.status == "perpanjang") {
+							return `<a href="rincian_permintaan_pekerjaan_abi_perpanjang.html" class="btn btn-sm btn-primary" style="color:white;border-radius:20px">Rincian</a> `;
+						} else if (full.status == "tutup") {
+							return `<a href="rincian_permintaan_pekerjaan_abi_tutup.html" class="btn btn-sm btn-primary" style="color:white;border-radius:20px">Rincian</a> `;
+						} else {
+							return `<a href="rincian_permintaan_pekerjaan_abi.html" class="btn btn-sm btn-primary" style="color:white;border-radius:20px">Rincian</a> `;
+						}
 					} else if (sifat_pekerjaan == "ABO") {
-						return `<a href="rincian_permintaan_pekerjaan_abo.html" class="btn btn-sm btn-primary" style="color:white;border-radius:20px">Rincian</a> `;
+						if (full.status == "perpanjang") {
+							return `<a href="rincian_permintaan_pekerjaan_abo_perpanjang.html" class="btn btn-sm btn-primary" style="color:white;border-radius:20px">Rincian</a> `;
+						} else if (full.status == "tutup") {
+							return `<a href="rincian_permintaan_pekerjaan_abo_tutup.html" class="btn btn-sm btn-primary" style="color:white;border-radius:20px">Rincian</a> `;
+						} else {
+							return `<a href="rincian_permintaan_pekerjaan_abo.html" class="btn btn-sm btn-primary" style="color:white;border-radius:20px">Rincian</a> `;
+						}
 					} else {
 						return `<a href="#" class="btn btn-sm btn-primary" style="color:white;border-radius:20px">Rincian</a> `;
 					}
@@ -470,7 +488,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 					<i class="flaticon-more-1"></i>
 					</button>
 					<div style="min-width:9rem;padding:5px;" class="dropdown-menu dropdown-menu-right">
-					<a href="rincian_data_pekerja.html" style="margin-bottom:5px;" class="dropdown-item btn btn-secondary" href="#"> <i class="fa fa-clipboard-list"></i>Rincian</a>
+					<a href="rincian_data_pekerja_approval.html" style="margin-bottom:5px;" class="dropdown-item btn btn-secondary" href="#"> <i class="fa fa-clipboard-list"></i>Rincian</a>
 					<button data-toggle="modal" data-target="#terima" style="margin-bottom:5px;" class="dropdown-item btn btn-secondary" href="#"> <i class="fa fa-check"></i>Terima</button>
 					<button data-toggle="modal" data-target="#tolak"  class="dropdown-item btn btn-secondary"> <i class="fa fa-times"></i>Tolak</button>`
 					;
@@ -1400,7 +1418,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 		    months: 'Januari_Februari_Maret_April_Mei_Juni_Juli_Agustus_September_Oktober_November_Desember'.split('_'),
 		    monthsShort: 'Jan_Feb_Mar_Apr_Mei_Jun_Jul_Agt_Sep_Okt_Nov_Des'.split('_'),
 		    today: "Hari ini",
-		    clear: "Reset",
+		    clear: "Semua Hari",
 		    format: "dd MM yyyy",
 		    titleFormat: "MM yyyy"
 		};

@@ -297,3 +297,8 @@ polyline,
     background-color: #b7b7b7!important;
     pointer-events: none;
 }
+
+.kt-checkbox > input:disabled {
+
+  	cursor: default;
+}
