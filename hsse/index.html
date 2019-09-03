@@ -65,6 +65,34 @@
 	<!--end::Layout Skins -->
 	<link rel="shortcut icon" href="../assets/media/logos/favicon.ico" />
 	<link href="../assets/app/style/pertamina-theme.css" rel="stylesheet" type="text/css" />
+	<link href="../assets/app/style/text_black.css" rel="stylesheet" type="text/css" />
+	<style>
+		.padding-body {
+			padding: 10px !important;
+		}
+		#tipe_pekerja,
+		#status_digital_passport {
+			width: 100%;
+			height: 320px;
+		}
+
+		#status_pekerjaan
+		{
+			width: 100%;
+			height: 500px;
+		}
+
+		#jumlah_pekerjaan_tahun_ini {
+			margin: 10px auto;
+			width: 100%;
+			height: 384px;
+		}
+		.head-title{
+			font-size: 1.5rem !important;
+			font-weight: 500!important;
+		}
+	</style>
+
 </head>
 <!-- end::Head -->
 <!-- begin::Body -->
@@ -126,7 +154,6 @@
 								<a href="javascript:;" class="kt-menu__link kt-menu__toggle">
 									<i class="kt-menu__link-icon fa fa-briefcase"></i>
 									<span class="kt-menu__link-text">Pekerjaan</span>
-									<span class="kt-menu__link-badge"><span class="kt-badge kt-badge--rounded kt-badge--brand">10</span></span>
 									<i class="kt-menu__ver-arrow la la-angle-right"></i>
 								</a>
 								<div class="kt-menu__submenu " kt-hidden-height="80" style="display: none; overflow: hidden;"><span class="kt-menu__arrow"></span>
@@ -140,7 +167,6 @@
 													<span></span>
 												</i>
 												<span class="kt-menu__link-text">Permintaan Pekerjaan</span>
-												<span class="kt-menu__link-badge"><span class="kt-badge kt-badge--rounded kt-badge--brand">10</span></span>
 											</a>
 										</li>
 										<li class="kt-menu__item " aria-haspopup="true">
@@ -158,7 +184,6 @@
 								<a href="javascript:;" class="kt-menu__link kt-menu__toggle">
 									<i class="kt-menu__link-icon fa fa-passport"></i>
 									<span class="kt-menu__link-text">SIKA</span>
-									<span class="kt-menu__link-badge"><span class="kt-badge kt-badge--rounded kt-badge--brand">10</span></span>
 									<i class="kt-menu__ver-arrow la la-angle-right"></i>
 								</a>
 								<div class="kt-menu__submenu " kt-hidden-height="80" style="display: none; overflow: hidden;"><span class="kt-menu__arrow"></span>
@@ -172,7 +197,6 @@
 													<span></span>
 												</i>
 												<span class="kt-menu__link-text">Permintaan SIKA</span>
-												<span class="kt-menu__link-badge"><span class="kt-badge kt-badge--rounded kt-badge--brand">10</span></span>
 											</a>
 										</li>
 										<li class="kt-menu__item " aria-haspopup="true">
@@ -212,7 +236,7 @@
 						<div class="kt-header__topbar-item kt-header__topbar-item--user">
 							<div class="user-name">
 								<p style="display: inline;">Hi, <span name="user_name">Rifal</span></p>
-								<a id="btn_log_out" class="btn btn-secondary"> <i class="fa fa-sign-out-alt"></i> Keluar</a>
+								<a id="btn_log_out" class="btn btn-secondary"> <i class="fa fa-sign-out-alt"></i> Logout</a>
 							</div>
 						</div>
 						<!--end: User Bar -->
@@ -240,20 +264,20 @@
 					<div class="kt-content  kt-grid__item kt-grid__item--fluid" id="kt_content">
 						<div class="row">
 							<div class="col-sm-12">
-								<div style="background-color:#dfe1e6;" class="kt-portlet">
+								<div style="background-color:#e1e1ef;" class="kt-portlet">
 									<div class="kt-portlet__head">
 										<div class="kt-portlet__head-label">
 											<span class="kt-portlet__head-icon kt-hidden">
 												<i class="la la-gear"></i>
 											</span>
-											<h3 class="kt-portlet__head-title">
+											<h3  class="kt-portlet__head-title head-title">
 												Digital Passport
 											</h3>
 										</div>
 									</div>
-                                    <div align="center" class="kt-portlet__body">
-                                        <div class="row col-sm-12">
-											<div class="col-sm-4">
+									<div align="center" class="kt-portlet__body padding-body">
+										<div class="row">
+											<div  class="col-sm-12">
 												<div class="kt-portlet">
 													<div class="kt-portlet__head">
 														<div class="kt-portlet__head-label">
@@ -261,49 +285,47 @@
 																<i class="la la-gear"></i>
 															</span>
 															<h3 class="kt-portlet__head-title">
-																HSSE
+																Jumlah Digital Passort Keluar
 															</h3>
 														</div>
 													</div>
-				                                    <div class="kt-portlet__body">
-				                                        <div class="form-group row">
-				                                            <label class="col-12 col-form-label">
-				                                                Komentar
-				                                            </label>
-				                                            <div class="col-12">
-				                                                <textarea class="form-control" id="exampleTextarea" name="alasan_pemberhentian" placeholder="Tulis komentar..." type="text" rows="3"></textarea>
-				                                            </div>
-				                                        </div>
-				                                    </div>
-												</div>
-											</div>
-
-											<div class="col-sm-4">
-												<div style="margin: 0px 2px;" class="kt-portlet">
-													<div class="kt-portlet__head">
-														<div class="kt-portlet__head-label">
-															<span class="kt-portlet__head-icon kt-hidden">
-																<i class="la la-gear"></i>
-															</span>
-															<h3 class="kt-portlet__head-title">
-																HSSE
-															</h3>
+													<div class="kt-portlet__body">
+														<div class="row">
+															<div align="center" class="col-sm-4">
+																<div style="padding: 5px" class="">
+																	<div class="isinya">
+																		<h4 class="isi_informasi" name="passport_keluar_bulan_ini">5</h4>
+																	</div>
+																	<div class="headnya">
+																		<h4 class="judul_pekerjaan">Bulan Ini</h4>
+																	</div>
+																</div>
+															</div>
+															<div align="center" class="col-sm-4">
+																<div style="padding: 5px" class="">
+																	<div class="isinya">
+																		<h4 class="isi_informasi" name="passport_keluar_tahun_ini">63</h4>
+																	</div>
+																	<div class="headnya">
+																		<h4 class="judul_pekerjaan">Tahun ini</h4>
+																	</div>
+																</div>
+															</div>
+															<div  align="center" class="col-sm-4">
+																<div style="padding: 5px" class="">
+																	<div class="isinya">
+																		<h4 class="isi_informasi">125</h4>
+																	</div>
+																	<div style="margin-bottom: 20px" class="headnya">
+																		<h4 class="judul_pekerjaan" name="passport_keluar_total">Total</h4>
+																	</div>
+																</div>
+															</div>
 														</div>
 													</div>
-				                                    <div class="kt-portlet__body">
-				                                        <div class="form-group row">
-				                                            <label class="col-12 col-form-label">
-				                                                Komentar
-				                                            </label>
-				                                            <div class="col-12">
-				                                                <textarea class="form-control" id="exampleTextarea" name="alasan_pemberhentian" placeholder="Tulis komentar..." type="text" rows="3"></textarea>
-				                                            </div>
-				                                        </div>
-				                                    </div>
 												</div>
 											</div>
-
-											<div class="col-sm-4">
+											<div  class="col-sm-6">
 												<div class="kt-portlet">
 													<div class="kt-portlet__head">
 														<div class="kt-portlet__head-label">
@@ -311,48 +333,252 @@
 																<i class="la la-gear"></i>
 															</span>
 															<h3 class="kt-portlet__head-title">
-																HSSE
+																Tipe Pekerja
 															</h3>
 														</div>
 													</div>
-				                                    <div class="kt-portlet__body">
-				                                        <div class="form-group row">
-				                                            <label class="col-12 col-form-label">
-				                                                Komentar
-				                                            </label>
-				                                            <div class="col-12">
-				                                                <textarea class="form-control" id="exampleTextarea" name="alasan_pemberhentian" placeholder="Tulis komentar..." type="text" rows="3"></textarea>
-				                                            </div>
-				                                        </div>
-				                                    </div>
+													<div class="kt-portlet__body">
+														<div id="tipe_pekerja"></div>
+													</div>
 												</div>
 											</div>
-                                        </div>
-                                    </div>
+											<div class="col-sm-6">
+												<div  class="kt-portlet">
+													<div class="kt-portlet__head">
+														<div class="kt-portlet__head-label">
+															<span class="kt-portlet__head-icon kt-hidden">
+																<i class="la la-gear"></i>
+															</span>
+															<h3 class="kt-portlet__head-title">
+																Status Digital Passport
+															</h3>
+														</div>
+													</div>
+													<div class="kt-portlet__body">
+														<div id="status_digital_passport"></div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
-                            <div class="col-sm-6">
-								<div class="kt-portlet">
+							<div class="col-sm-12">
+								<div style="background-color:#e1e1ef;" class="kt-portlet">
 									<div class="kt-portlet__head">
 										<div class="kt-portlet__head-label">
 											<span class="kt-portlet__head-icon kt-hidden">
 												<i class="la la-gear"></i>
 											</span>
-											<h3 class="kt-portlet__head-title">
-												HSSE
+											<h3  class="kt-portlet__head-title head-title">
+												Pekerjaan
 											</h3>
 										</div>
 									</div>
-                                    <div class="kt-portlet__body">
-                                        <div class="form-group row">
-                                            <label class="col-12 col-form-label">
-                                                Komentar
-                                            </label>
-                                            <div class="col-12">
-                                                <textarea class="form-control" id="exampleTextarea" name="alasan_pemberhentian" placeholder="Tulis komentar..." type="text" rows="3"></textarea>
-                                            </div>
-                                        </div>
-                                    </div>
+									<div align="center" class="kt-portlet__body padding-body">
+										<div class="row">
+											<div class="col-sm-12">
+												<div  class="kt-portlet">
+													<div class="kt-portlet__head">
+														<div class="kt-portlet__head-label">
+															<span class="kt-portlet__head-icon kt-hidden">
+																<i class="la la-gear"></i>
+															</span>
+															<h3 class="kt-portlet__head-title">
+																Status Pekerjaan
+															</h3>
+														</div>
+													</div>
+													<div class="kt-portlet__body">
+														<div id="status_pekerjaan"></div>
+													</div>
+												</div>
+											</div>
+											<div  class="col-sm-4">
+												<div class="kt-portlet">
+													<div class="kt-portlet__head">
+														<div class="kt-portlet__head-label">
+															<span class="kt-portlet__head-icon kt-hidden">
+																<i class="la la-gear"></i>
+															</span>
+															<h3 class="kt-portlet__head-title">
+																Jumlah Pekerjaan Keluar
+															</h3>
+														</div>
+													</div>
+													<div class="kt-portlet__body">
+														<div class="row">
+															<div align="center" class="col-sm-12">
+																<div style="padding: 15px" class="">
+																	<div class="isinya">
+																		<h4 class="isi_informasi" name="pekerjaan_bulan_ini">5</h4>
+																	</div>
+																	<div class="headnya">
+																		<h4 class="judul_pekerjaan">Bulan Ini</h4>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="kt-separator kt-separator--border-dashed kt-separator--space-sm"></div>
+														<div class="row">
+															<div align="center" class="col-sm-12">
+																<div style="padding: 15px" class="">
+																	<div class="isinya">
+																		<h4 class="isi_informasi" name="pekerjaan_tahun_ini">63</h4>
+																	</div>
+																	<div class="headnya">
+																		<h4 class="judul_pekerjaan">Tahun ini</h4>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="kt-separator kt-separator--border-dashed kt-separator--space-sm"></div>
+														<div class="row">
+															<div  align="center" class="col-sm-12">
+																<div style="padding: 15px" class="">
+																	<div class="isinya">
+																		<h4 class="isi_informasi">125</h4>
+																	</div>
+																	<div style="margin-bottom: 20px" class="headnya">
+																		<h4 class="judul_pekerjaan" name="pekerjaan_total">Total</h4>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="col-sm-8">
+												<div class="kt-portlet">
+													<div class="kt-portlet__head">
+														<div class="kt-portlet__head-label">
+															<span class="kt-portlet__head-icon kt-hidden">
+																<i class="la la-gear"></i>
+															</span>
+															<h3 class="kt-portlet__head-title">
+																Jumlah Pekerjaan Tahun ini
+															</h3>
+														</div>
+													</div>
+													<div class="kt-portlet__body">
+														<div id="jumlah_pekerjaan_tahun_ini"></div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-12">
+								<div style="background-color:#e1e1ef;" class="kt-portlet">
+									<div class="kt-portlet__head">
+										<div class="kt-portlet__head-label">
+											<span class="kt-portlet__head-icon kt-hidden">
+												<i class="la la-gear"></i>
+											</span>
+											<h3  class="kt-portlet__head-title head-title">
+												Personal on Board (Hari ini)
+											</h3>
+										</div>
+									</div>
+									<div align="center" class="kt-portlet__body padding-body">
+										<div class="row">
+											<div style="margin-top: 20px" class="col-sm-4">
+												<div class="kt-portlet">
+													<div class="kt-portlet__head">
+														<div class="kt-portlet__head-label">
+															<span class="kt-portlet__head-icon kt-hidden">
+																<i class="la la-gear"></i>
+															</span>
+															<h3 class="kt-portlet__head-title">
+																POB
+															</h3>
+														</div>
+													</div>
+													<div class="kt-portlet__body">
+														<div class="row">
+															<div align="center" class="col-sm-12">
+																<div style="padding: 15px" class="">
+																	<div class="isinya">
+																		<h4 class="isi_informasi" id="jumlah_insite" name="jumlah_insite">20</h4>
+																	</div>
+																	<div class="headnya">
+																		<h4 class="">Insite Restricted Area</h4>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="kt-separator kt-separator--border-dashed kt-separator--space-md"></div>
+														<div class="row">
+															<div align="center" class="col-sm-12">
+																<div style="padding: 15px" class="">
+																	<div class="isinya">
+																		<h4 class="isi_informasi" id="jumlah_outsite" name="jumlah_outsite">10</h4>
+																	</div>
+																	<div class="headnya">
+																		<h4 class="">Outsite Restricted Area</h4>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div style="margin-top: 18px">
+														</div>
+													</div>
+												</div>
+											</div>
+											<div  style="margin-top: 20px" class="col-sm-8">
+												<div class="kt-portlet">
+													<div class="kt-portlet__head">
+														<div class="kt-portlet__head-label">
+															<span class="kt-portlet__head-icon kt-hidden">
+																<i class="la la-gear"></i>
+															</span>
+															<h3 class="kt-portlet__head-title">
+																Tipe Pekerja
+															</h3>
+														</div>
+													</div>
+													<div class="kt-portlet__body">
+														<div class="row">
+															<div class="col-sm">
+																<h3>Pekerja</h3>
+															</div>
+															<div class="col-sm">
+																<h3 id="jumlah_pekerja" name="jumlah_pekerja">50</h3>
+															</div>
+														</div>
+														<div class="kt-separator kt-separator--border-dashed kt-separator--space-md"></div>	
+														<div class="row">
+															<div class="col-sm">
+																<h3>AMT</h3>
+															</div>
+															<div class="col-sm">
+																<h3 id="jumlah_amt" name="jumlah_amt">20</h3>
+															</div>
+														</div>
+														<div class="kt-separator kt-separator--border-dashed kt-separator--space-md"></div>	
+														<div class="row">
+															<div class="col-sm">
+																<h3>TKJP</h3>
+															</div>
+															<div class="col-sm">
+																<h3 id="jumlah_tkjp" name="jumlah_tkjp">30</h3>
+															</div>
+														</div>
+														<div class="kt-separator kt-separator--border-dashed kt-separator--space-md"></div>	
+														<div class="row">
+															<div class="col-sm">
+																<h3>Kontraktor</h3>
+															</div>
+															<div class="col-sm">
+																<h3 id="jumlah_kontraktor" name="jumlah_kontraktor">30</h3>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -409,6 +635,12 @@
 	<script src="../assets/vendors/general/wnumb/wNumb.js" type="text/javascript"></script>
 	<!--end:: Global Mandatory Vendors -->
 	<!--begin:: Global Optional Vendors -->
+	<script src="https://www.amcharts.com/lib/4/core.js"></script>
+	<script src="https://www.amcharts.com/lib/4/charts.js"></script>
+	<script src="https://www.amcharts.com/lib/4/themes/dataviz.js"></script>
+	<script src="https://www.amcharts.com/lib/4/themes/material.js"></script>
+	<script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 	<!--end:: Global Optional Vendors -->
 	<!--begin::Global Theme Bundle(used by all pages) -->
 	<script src="../assets/demo/default/base/scripts.bundle.js" type="text/javascript"></script>
@@ -416,9 +648,6 @@
 	<!--begin::Page Vendors(used by this page) -->
 	<script src="../assets/vendors/custom/fullcalendar/fullcalendar.bundle.js" type="text/javascript"></script>
 	<!--end::Page Vendors -->
-	<!--begin::Page Scripts(used by this page) -->
-	<script src="../assets/app/custom/general/dashboard.js" type="text/javascript"></script>
-	<!--end::Page Scripts -->
 	<!--begin::Global App Bundle(used by all pages) -->
 	<script src="../assets/app/bundle/app.bundle.js" type="text/javascript"></script>
 	<!--begin::Page Scripts(used by this page) -->
@@ -426,6 +655,273 @@
 	<!-- AJAX -->
 	<script src="../assets/vendors/custom/datatables/datatables.bundle.js" type="text/javascript"></script>
 	<script src="../assets/app/script/js_ajax_pertamina.js" type="text/javascript"></script>
+	<script>
+		var options = {
+			colors: ['#2196F3', '#E53935'],
+			chart: {
+				height: 328,
+				type: 'bar',
+				stacked: true,
+				toolbar: {
+					show: true
+				},
+				zoom: {
+					enabled: true
+				}
+			},
+			responsive: [{
+				breakpoint: 480,
+				options: {
+					legend: {
+						position: 'bottom',
+						offsetX: -10,
+						offsetY: 0
+					}
+				}
+			}],
+			plotOptions: {
+				bar: {
+					horizontal: false,
+				},
+			},
+			dataLabels: {
+				/*formatter: function (val) {
+					return val + "%";
+				},*/
+				style: {
+					fontSize: '18px'
+				}
+			},
+			series: [{
+				name: 'Medium Risk',
+				data: [32, 21, 15]
+			},{ 
+				name: 'High Risk',
+				data: [13, 23, 20]
+			}],
+			xaxis: {
+				type: 'text',
+				categories: ['ABI','ABO','Swakelola'],
+			},
+			legend: {
+				position: 'bottom',
+				offsetY: -10,
+			},
+			fill: {
+				opacity: 1,
+
+			},
+
+		}
+		var chart = new ApexCharts(
+			document.querySelector("#jumlah_pekerjaan_tahun_ini"),
+			options
+			);
+
+		chart.render();
+	</script>
+	<script>
+		am4core.ready(function() {
+
+		// Themes begin
+		am4core.useTheme(am4themes_animated);
+		am4core.useTheme(am4themes_dataviz);
+		// Themes end
+
+		// Create chart
+		var chart = am4core.create("tipe_pekerja", am4charts.PieChart);
+		chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
+
+		chart.data = [
+		{
+			tipe: "Pekerja",
+			value: 260
+		},
+		{
+			tipe: "TKJP",
+			value: 230
+		},
+		{
+			tipe: "AMT",
+			value: 200
+		},
+		{
+			tipe: "Kontraktor",
+			value: 165
+		}
+		];
+
+		var series = chart.series.push(new am4charts.PieSeries());
+		series.dataFields.value = "value";
+		series.dataFields.radiusValue = "value";
+		series.dataFields.category = "tipe";
+		series.slices.template.cornerRadius = 3;
+		series.colors.step = 3;
+
+		series.hiddenState.properties.endAngle = -90;
+
+		chart.legend = new am4charts.Legend();
+		/*series.labels.template.disabled = true;*/
+		/*series.ticks.template.disabled = true;*/
+
+		}); // end am4core.ready()
+	</script>
+	<script>
+		am4core.ready(function() {
+
+		// Themes begin
+		am4core.useTheme(am4themes_animated);
+		am4core.useTheme(am4themes_material);
+		// Themes end
+
+		// Create chart instance
+		var chart = am4core.create("status_pekerjaan", am4charts.XYChart);
+		/*chart.scrollbarX = new am4core.Scrollbar();*/
+
+		// Add data
+		chart.data = [{
+			"status": "Pengajuan Awal",
+			"jumlah": 302
+		}, {
+			"status": "Pengajuan Ulang",
+			"jumlah": 188
+		}, {
+			"status": "Perpanjang",
+			"jumlah": 180
+		}, {
+			"status": "Ditolak",
+			"jumlah": 132
+		}, {
+			"status": "Tutup",
+			"jumlah": 112
+		}, {
+			"status": "Ditunda",
+			"jumlah": 111
+		}, {
+			"status": "Progress",
+			"jumlah": 98
+		}, {
+			"status": "Selesai",
+			"jumlah": 71
+		}, {
+			"status": "Kadaluarsa",
+			"jumlah": 66
+		}];
+
+		// Create axes
+		var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
+		categoryAxis.dataFields.category = "status";
+		categoryAxis.renderer.grid.template.location = 0;
+		categoryAxis.renderer.minGridDistance = 30;
+		categoryAxis.renderer.labels.template.horizontalCenter = "right";
+		categoryAxis.renderer.labels.template.verticalCenter = "middle";
+		categoryAxis.renderer.labels.template.rotation = 270;
+		categoryAxis.tooltip.disabled = true;
+		categoryAxis.renderer.minHeight = 110;
+
+		var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+		valueAxis.renderer.minWidth = 50;
+
+		// Create series
+		var series = chart.series.push(new am4charts.ColumnSeries());
+		series.sequencedInterpolation = true;
+		series.dataFields.valueY = "jumlah";
+		series.dataFields.categoryX = "status";
+		series.tooltipText = "[{categoryX}: bold]{valueY}[/]";
+		series.columns.template.strokeWidth = 0;
+
+		series.tooltip.pointerOrientation = "vertical";
+
+		series.columns.template.column.cornerRadiusTopLeft = 10;
+		series.columns.template.column.cornerRadiusTopRight = 10;
+		series.columns.template.column.fillOpacity = 0.8;
+
+		// on hover, make corner radiuses bigger
+		var hoverState = series.columns.template.column.states.create("hover");
+		hoverState.properties.cornerRadiusTopLeft = 0;
+		hoverState.properties.cornerRadiusTopRight = 0;
+		hoverState.properties.fillOpacity = 1;
+
+		series.columns.template.adapter.add("fill", function(fill, target) {
+			return chart.colors.getIndex(target.dataItem.index);
+		});
+
+		// Cursor
+		chart.cursor = new am4charts.XYCursor();
+
+		}); // end am4core.ready()
+	</script>
+	<script>
+		am4core.ready(function() {
+
+		// Themes begin
+		am4core.useTheme(am4themes_animated);
+		am4core.useTheme(am4themes_material);
+		// Themes end
+
+		// Create chart instance
+		var chart = am4core.create("status_digital_passport", am4charts.XYChart);
+		/*chart.scrollbarX = new am4core.Scrollbar();*/
+
+		// Add data
+		chart.data = [{
+			"status": "Aktif",
+			"jumlah": 302
+		}, {
+			"status": 'Belum Terverifikasi',
+			"jumlah": 188
+		}, {
+			"status": "Terverifikasi",
+			"jumlah": 180
+		}, {
+			"status": "Kadaluarsa",
+			"jumlah": 132
+		}];
+
+		// Create axes
+		var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
+		categoryAxis.dataFields.category = "status";
+		categoryAxis.renderer.grid.template.location = 0;
+		categoryAxis.renderer.minGridDistance = 30;
+		categoryAxis.renderer.labels.template.horizontalCenter = "right";
+		categoryAxis.renderer.labels.template.verticalCenter = "middle";
+		categoryAxis.renderer.labels.template.rotation = 270;
+		categoryAxis.tooltip.disabled = true;
+		categoryAxis.renderer.minHeight = 110;
+
+		var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+		valueAxis.renderer.minWidth = 50;
+
+		// Create series
+		var series = chart.series.push(new am4charts.ColumnSeries());
+		series.sequencedInterpolation = true;
+		series.dataFields.valueY = "jumlah";
+		series.dataFields.categoryX = "status";
+		series.tooltipText = "[{categoryX}: bold]{valueY}[/]";
+		series.columns.template.strokeWidth = 0;
+
+		series.tooltip.pointerOrientation = "vertical";
+
+		series.columns.template.column.cornerRadiusTopLeft = 10;
+		series.columns.template.column.cornerRadiusTopRight = 10;
+		series.columns.template.column.fillOpacity = 0.8;
+
+		// on hover, make corner radiuses bigger
+		var hoverState = series.columns.template.column.states.create("hover");
+		hoverState.properties.cornerRadiusTopLeft = 0;
+		hoverState.properties.cornerRadiusTopRight = 0;
+		hoverState.properties.fillOpacity = 1;
+
+		series.columns.template.adapter.add("fill", function(fill, target) {
+			return chart.colors.getIndex(target.dataItem.index);
+		});
+
+		// Cursor
+		chart.cursor = new am4charts.XYCursor();
+
+		}); // end am4core.ready()
+	</script>
+	
 </body>
 <!-- end::Body -->
 </html>

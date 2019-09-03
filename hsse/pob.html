@@ -126,7 +126,6 @@
 								<a href="javascript:;" class="kt-menu__link kt-menu__toggle">
 									<i class="kt-menu__link-icon fa fa-briefcase"></i>
 									<span class="kt-menu__link-text">Pekerjaan</span>
-									<span class="kt-menu__link-badge"><span class="kt-badge kt-badge--rounded kt-badge--brand">10</span></span>
 									<i class="kt-menu__ver-arrow la la-angle-right"></i>
 								</a>
 								<div class="kt-menu__submenu" kt-hidden-height="80" style="display: none; overflow: hidden;"><span class="kt-menu__arrow"><span class="kt-menu__arrow"><span class="kt-menu__arrow"></span>
@@ -140,7 +139,6 @@
 													<span></span>
 												</i>
 												<span class="kt-menu__link-text">Permintaan Pekerjaan</span>
-												<span class="kt-menu__link-badge"><span class="kt-badge kt-badge--rounded kt-badge--brand">10</span></span>
 											</a>
 										</li>
 										<li class="kt-menu__item" aria-haspopup="true">
@@ -158,7 +156,6 @@
 								<a href="javascript:;" class="kt-menu__link kt-menu__toggle">
 									<i class="kt-menu__link-icon fa fa-passport"></i>
 									<span class="kt-menu__link-text">SIKA</span>
-									<span class="kt-menu__link-badge"><span class="kt-badge kt-badge--rounded kt-badge--brand">10</span></span>
 									<i class="kt-menu__ver-arrow la la-angle-right"></i>
 								</a>
 								<div class="kt-menu__submenu"></span>
@@ -172,7 +169,6 @@
 													<span></span>
 												</i>
 												<span class="kt-menu__link-text">Permintaan SIKA</span>
-												<span class="kt-menu__link-badge"><span class="kt-badge kt-badge--rounded kt-badge--brand">10</span></span>
 											</a>
 										</li>
 										<li class="kt-menu__item " aria-haspopup="true">
@@ -212,7 +208,7 @@
 						<div class="kt-header__topbar-item kt-header__topbar-item--user">
 							<div class="user-name">
 								<p style="display: inline;">Hi, <span name="user_name">Rifal</span></p>
-								<a id="btn_log_out" class="btn btn-secondary"> <i class="fa fa-sign-out-alt"></i> Keluar</a>
+								<a id="btn_log_out" class="btn btn-secondary"> <i class="fa fa-sign-out-alt"></i> Logut</a>
 							</div>
 						</div>
 						<!--end: User Bar -->
@@ -250,38 +246,38 @@
 												POB
 											</h3>
 										</div>
-										<div align="right" class="kt-portlet__toolbar">
-											<div style="width:40%;padding:10px 0px;" class="input-group" data-toggle="kt-tooltip" data-placement="left" title="Jumlah POB hari ini">
-												<input id="jumlah_pob" name="jumlah_pob" style=";cursor:default;" type="text" class="form-control kt-font-success" name="url" value="26" readonly>
-												<div class="input-group-append"><span style="cursor:default;" class="input-group-text kt-font-dark">Orang</span></div>
-											</div>
-										</div>
 									</div>
 									<div class="kt-portlet__body">
-										<form class="kt-form kt-form--fit kt-margin-b-10">
-											<div class="row kt-margin-b-2">
-												<div class="col-sm-4 kt-margin-b-10-tablet-and-mobile">
-													<div class="input-daterange input-group" id="kt_datepicker">
-														<input readonly type="text" class="form-control kt-input" name="start" value="05/20/2017" data-col-index="1" id="kt_search_waktu"/>
-														<div class="input-group-append">
-															<span class="input-group-text">
-																<i class="la la-calendar"></i>
-															</span>
-														</div>
-													</div>
+										<form class="kt-form kt-form--fit kt-margin-b-20">
+											<div class="row kt-margin-b-20">
+												<div class="col-md-6 kt-margin-b-10-tablet-and-mobile">
+													<label>Pekerjaan:</label>
+													<input type="text" class="form-control kt-input" placeholder="cari berdasarkan pekerjaan" data-col-index="4">
 												</div>
-												<div class="col-lg-4 kt-margin-b-10-tablet-and-mobile">
-													<select class="form-control kt-input" data-col-index="3" id="kt_search_kategori">
+												<div class="col-md-6 kt-margin-b-10-tablet-and-mobile">
+													<label>Kategori :</label>
+													<select class="form-control kt-input" data-col-index="1" id="kt_search_kategori">
 														<option value="">Pilih Kategori</option>
 													</select>
 												</div>
-												<div class="col-lg-4 kt-margin-b-10-tablet-and-mobile">
-													<input type="text" class="form-control kt-input" placeholder="Search" id="kt_search_all">
+												<div align="right" class="col-md-3 kt-margin-b-10-tablet-and-mobile">
 												</div>
 											</div>
 										</form>
-                                        <table class="table table-striped- table-bordered table-hover table-checkable" id="daftar_pob"></table>
-                                    </div>
+										<div>
+											<div class="form-group row">
+												<label for="example-text-input" class="col-2 col-form-label">Insite Restricted Area</label>
+												<div class="col-2">
+													<div class="input-group">
+														<input disabled="" type="text" class="form-control" value="48" id="jumlah_insite_restricted_area" name="jumlah_insite_restricted_area">
+														<div class="input-group-append"><span class="input-group-text" id="basic-addon2">Orang</span></div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<table class="table table-striped- table-bordered table-hover table-checkable" id="daftar_pob">
+										</table>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -366,15 +362,9 @@
 	<!--begin::Page Vendors(used by this page) -->
 	<script src="../assets/vendors/custom/fullcalendar/fullcalendar.bundle.js" type="text/javascript"></script>
 	<!--end::Page Vendors -->
-	<!--begin::Page Scripts(used by this page) -->
-	<script src="../assets/vendors/general/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js" type="text/javascript"></script>
-	<script src="../assets/vendors/custom/components/vendors/bootstrap-datepicker/init.js" type="text/javascript"></script>
-	<script src="../assets/app/custom/general/dashboard.js" type="text/javascript"></script>
-	<!--end::Page Scripts -->
 	<!--begin::Global App Bundle(used by all pages) -->
 	<script src="../assets/app/bundle/app.bundle.js" type="text/javascript"></script>
 	<!--begin::Page Scripts(used by this page) -->
-	<script src="../assets/app/custom/general/crud/forms/widgets/bootstrap-datepicker.js" type="text/javascript"></script>
 	<!--end::Global App Bundle -->
 	<!-- AJAX -->
 	<script src="../assets/vendors/custom/datatables/datatables.bundle.js" type="text/javascript"></script>

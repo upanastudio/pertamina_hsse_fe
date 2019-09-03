@@ -65,20 +65,6 @@
 	<link rel="shortcut icon" href="../assets/media/logos/favicon.ico" />
 	<link href="../assets/app/style/pertamina-theme.css" rel="stylesheet" type="text/css" />
 	<link href="../assets/app/style/text_black.css" rel="stylesheet" type="text/css" />
-	<style>
-		div.dataTables_wrapper div.dataTables_filter input {
-			width: 255px;
-		}
-		.modal-content {
-			width: 100%;
-		}
-		.statistik_wip {
-			width: 130%;
-		}
-		.group-dokumen {
-			margin-bottom: .7rem;
-		}
-	</style>
 </head>
 <!-- end::Head -->
 <!-- begin::Body -->
@@ -222,7 +208,7 @@
 						<div class="kt-header__topbar-item kt-header__topbar-item--user">
 							<div class="user-name">
 								<p style="display: inline;">Hi, <span name="user_name">Rifal</span></p>
-								<a id="btn_log_out" class="btn btn-secondary"> <i class="fa fa-sign-out-alt"></i> Keluar</a>
+								<a id="btn_log_out" class="btn btn-secondary"> <i class="fa fa-sign-out-alt"></i> Logut</a>
 							</div>
 						</div>
 						<!--end: User Bar -->
@@ -286,12 +272,12 @@
 	                                            </label>
 	                                            <div class="col-9">
 	                                                <div class="row">
-	                                                    <div  class="col-sm-8">
+	                                                    <div  class="col-sm-9">
 	                                                        <input class="form-control" type="text" value="Penggalian" id="no_sika" name="nama_pekerjaan" disabled="">
 	                                                    </div>
-	                                                    <div align="right" class="col-sm-4">
+	                                                    <div align="right" class="col-sm-3">
 	                                                        <div class="custom-file">
-	                                                            <button onclick="window.location.href='rincian_riwayat_pekerjaan.html'" type="button" class="btn btn-brand"><i class="la la-copy"></i>Lihat Pekerjaan</button>
+	                                                            <button type="button" class="btn btn-brand"><i class="la la-copy"></i>Lihat Pekerjaan</button>
 	                                                        </div>
 	                                                    </div>
 	                                                </div>
@@ -311,15 +297,15 @@
 	                                            </label>
 	                                            <div class="col-9">
 	                                                <div class="row">
-	                                                    <div class="col-sm-4">
+	                                                    <div class="col-sm-6">
 	                                                        <div class="input-group">
-																<input type="number" class="form-control" id="waktu_hari" name="waktu_hari" value="3" disabled>
+																<input type="number" class="form-control" id="waktu_hari" name="waktu_hari" placeholder="Masukkan jumlah hari">
 																<div class="input-group-append"><span style="color:#464457;" class="input-group-text">Hari</span></div>
 															</div>
 	                                                    </div>
-	                                                    <div class="col-sm-4">
+	                                                    <div class="col-sm-6">
 	                                                        <div class="input-group">
-																<input type="number" class="form-control" id="waktu_jam" name="waktu_jam" value="2" disabled>
+																<input type="number" class="form-control" id="waktu_jam" name="waktu_jam" placeholder="Masukkan jumlah jam">
 																<div class="input-group-append"><span style="color:#464457;" class="input-group-text">Jam</span></div>
 															</div>
 	                                                    </div>
