@@ -252,10 +252,7 @@
 								Semua Pekerjaan </a>
 							</div>
 						</div>
-                        <div class="kt-subheader__toolbar">
-							<button data-toggle="modal" data-target="#kt_modal_riwayat " class="btn btn-secondary">
-								<i class="fa fa-history"></i> Riwayat
-							</button>
+						<div class="kt-subheader__toolbar">
 						</div>
 					</div>
 					<!-- end:: Subheader -->
@@ -888,7 +885,7 @@
 															</div>
 															<div id="monitoring" class="accordion  accordion-toggle-arrow">
 																<div class="card">
-																	<div class="card-header" id="headingOne4">
+																	<div class="card-header " id="headingOne4">
 																		<div style="margin-left:20px" class="card-title collapsed" data-toggle="collapse" data-target="#collapse_wip" aria-expanded="false" aria-controls="collapse_wip">
 																			WIP
 																		</div>
@@ -975,7 +972,7 @@
 																	</div>
 																</div>
 																<div class="card">
-																	<div class="card-header" id="headingTwo4">
+																	<div class="card-header " id="headingTwo4">
 																		<div style="margin-left:20px" class="card-title collapsed" data-toggle="collapse" data-target="#collapse_fe" aria-expanded="false" aria-controls="collapse_fe">
 																			FE
 																		</div>
@@ -1034,7 +1031,7 @@
 																	</div>
 																</div>
 																<div class="card">
-																	<div class="card-header" id="headingTwo4">
+																	<div class="card-header " id="headingTwo4">
 																		<div style="margin-left:20px" class="card-title collapsed" data-toggle="collapse" data-target="#collapse_kpi" aria-expanded="false" aria-controls="collapse_kpi">
 																			POB
 																		</div>
@@ -1142,167 +1139,30 @@
 						</div>
 					</div>
 				</div>
-				<div class="modal fade" id="kt_modal_statistik_wip" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal fade" id="kt_modal_tolak" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 					<div class="modal-dialog modal-lg" role="document">
-						<div class="modal-content statistik_wip">
+						<div class="modal-content">
 							<div class="modal-header">
-								<h5 class="modal-title" id="exampleModalLabel">Statistik WIP</h5>
+								<h5 class="modal-title" id="exampleModalLabel">Tolak</h5>
 								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 								</button>
 							</div>
 							<div class="modal-body">
-								<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+								<form>
+									<div class="form-group">
+										<label for="message-text" class="form-control-label">Alasan Penolakan:</label>
+										<textarea class="form-control" id="alasan_penolakan" name="alasan_penolakan" rows="3"></textarea>
+									</div>
+								</form>
 							</div>
 							<div class="modal-footer">
-								<button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+								<button type="button" class="btn btn-danger kt_sweetalert_tolak" data-dismiss="modal">Tolak</button>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="modal fade" id="kt_modal_tambah_wip" tabindex="" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-					<div class="modal-dialog" role="document">
-						<div class="modal-content">
-							<div class="modal-header">
-								<h5 class="modal-title" id="exampleModalLabel">Tambah WIP</h5>
-								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-								</button>
-							</div>
-							<form>
-								<div class="modal-body">
-									<div class="form-group row">
-										<label for="example-text-input" class="col-4 col-form-label">No. SIKA</label>
-										<div class="col-8">
-											<input disabled="" class="form-control" type="text" value="01/000/1111" id="no_sika" name="no_sika">
-										</div>
-									</div>
-									<div class="form-group row">
-										<label class="col-4 col-form-label">Tanggal</label>
-										<div class="col-8">
-											<input type="text" class="form-control" id="tanggal_wip" name="tanggal_wip" readonly placeholder="pilih tanggal"/>
-										</div>
-									</div>
-									<div class="form-group">
-										<h6>
-											WIP Inspeksi HSE Work Practice
-										</h6>
-										<div class="row">
-											<label for="example-text-input" class="col-4 col-form-label">Nilai</label>
-											<div class="col-sm-8">
-												<input type="text" class="form-control" id="nilai_wip_work_practice" name="nilai_wip_work_practice" value="80">
-											</div>
-										</div>
-									</div>
-									<div class="form-group">
-										<h6>
-											WIP Inspeksi Program HSE
-										</h6>
-										<div class="row">
-											<label for="example-text-input" class="col-4 col-form-label">Nilai</label>
-											<div class="col-sm-8">
-												<input type="text" class="form-control" id="nilai_wip_program_hse" name="nilai_wip_program_hse" value="80">
-											</div>
-										</div>
-									</div>
-									<div class="form-group">
-										<h6>
-											HSE Performance (KPI)
-										</h6>
-										<div class="row">
-											<label for="example-text-input" class="col-4 col-form-label">Nilai</label>
-											<div class="col-sm-8">
-												<input type="text" class="form-control" id="nilai_kpi" name="nilai_kpi" value="80">
-											</div>
-										</div>
-									</div>
-									<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success ">
-										<input id="check-fe" type="checkbox" onclick="myFunction_simpan()"> WIP ini akan menjadi Final Evaluation
-										<span></span>
-									</label>
-								</div>
-								<div class="modal-footer">
-									<button type="button" class="btn btn-secondary" data-dismiss="modal">
-										<i class="fa fa-times"></i> Tutup
-									</button>
-									<button type="button" style="margin-right:0px" id="btn_simpan_wip" class="btn btn-primary btn_simpan_wip kt_sweetalert_simpan"><i class="fa fa-save"></i> Simpan</button>
-									<button type="button" id="btn_simpan_wip_fe" style="display: none;margin-right:0px" class="btn btn-primary btn_simpan_wip kt_sweetalert_fe"> <i class="fa fa-save"></i> Simpan</button>
-								</div>
-							</form>
-						</div>
-					</div>
-				</div>
-				<div class="modal fade" id="kt_modal_rincian" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-					<div class="modal-dialog" role="document">
-						<div class="modal-content">
-							<div class="modal-header">
-								<h5 class="modal-title" id="exampleModalLabel">Dokumen dan file</h5>
-								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-								</button>
-							</div>
-							<div class="modal-body">
-								<div class="form-group row group-dokumen">
-									<label class="col-6 col-form-label dokumen">
-										<span id="nama_dokumen" name="nama_dokumen">Nama Dokumen 42334</span>
-									</label>
-									<div align="right" class="col-sm-6">
-										<button onclick=" window.open('#','_blank')" class="btn btn-sm btn-link">
-											<i class="fa fa-download"></i> Download/View
-										</button>
-									</div>
-								</div>
-								<div class="form-group row group-dokumen">
-									<label class="col-6 col-form-label dokumen">
-										<span id="nama_dokumen" name="nama_dokumen">Nama Dokumen 12312</span>
-									</label>
-									<div align="right" class="col-sm-6">
-										<button onclick=" window.open('#','_blank')" class="btn btn-sm btn-link">
-											<i class="fa fa-download"></i> Download/View
-										</button>
-									</div>
-								</div>
-							</div>
-							<div class="modal-footer">
-								<button type="button" class="btn btn-secondary" data-dismiss="modal">
-									<i class="fa fa-times"></i> Tutup
-								</button>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="modal fade" id="kt_modal_peralatan_kerja" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-					<div class="modal-dialog" role="document">
-						<div class="modal-content">
-							<div class="modal-header">
-								<h5 class="modal-title" id="exampleModalLabel">Peralatan Kerja</h5>
-								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-								</button>
-							</div>
-							<div class="modal-body">
-								<div class="row">
-									<div class="col-sm-6">
-										<ul>
-											<li name="nama_peralatan">Palu</li>
-											<li name="nama_peralatan">Mesin Bor</li>
-											<li name="nama_peralatan">Kapak</li>
-										</ul>
-									</div>
-									<div class="col-sm-6">
-										<ul>
-											<li name="nama_peralatan">Palu</li>
-											<li name="nama_peralatan">Mesin Bor</li>
-											<li name="nama_peralatan">Kapak</li>
-										</ul>
-									</div>
-								</div>
 
-							</div>
-							<div class="modal-footer">
-								<button type="button" class="btn btn-secondary" data-dismiss="modal">
-									<i class="fa fa-times"></i> Tutup
-								</button>
-							</div>
-						</div>
-					</div>
-				</div>
 				<div class="modal fade" id="kt_modal_statistik_wip" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 					<div class="modal-dialog modal-lg" role="document">
 						<div class="modal-content statistik_wip">

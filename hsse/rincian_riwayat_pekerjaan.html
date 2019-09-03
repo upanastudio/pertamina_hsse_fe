@@ -20,6 +20,7 @@
 	</script>
 	<!--end::Fonts -->
 	<!--begin::Page Vendors Styles(used by this page) -->
+	<link href="//www.amcharts.com/lib/3/plugins/export/export.css" rel="stylesheet" type="text/css" />
 	<!--begin::Page Vendors Styles(used by this page) -->
 	<link href="../assets/vendors/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" />
 	<link href="../assets/vendors/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" />
@@ -69,8 +70,25 @@
 	<link href="../assets/app/style/at_rincian-pekerjaan-style.css" rel="stylesheet" type="text/css" />
 	<link href="../assets/app/style/tab-style.css" rel="stylesheet" type="text/css" />
 	<style>
+<<<<<<< HEAD
 		.modal-content {
 			width: auto !important;
+=======
+		#kt_tabs_umum .form-group,
+		#kt_tabs_simlok .form-group {
+			margin-bottom: 1rem;
+		}
+		.modal-content {
+			width: 100%;
+		}
+		.select2 {
+			width: 100% !important;
+		}
+		.kt-badge--warning {
+			width: 60% !important;
+			background: transparent !important;
+			border-bottom: 1px solid #80808078 !important;
+>>>>>>> 1aa029b706da2f8a01832ff891eedc46e96ec687
 		}
 	</style>
 </head>
@@ -1137,6 +1155,30 @@
 						</div>
 					</div>
 				</div>
+				<div class="modal fade" id="kt_modal_tolak" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog modal-lg" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="exampleModalLabel">Tolak</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								</button>
+							</div>
+							<div class="modal-body">
+								<form>
+									<div class="form-group">
+										<label for="message-text" class="form-control-label">Alasan Penolakan:</label>
+										<textarea class="form-control" id="alasan_penolakan" name="alasan_penolakan" rows="3"></textarea>
+									</div>
+								</form>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+								<button type="button" class="btn btn-danger kt_sweetalert_tolak" data-dismiss="modal">Tolak</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
 				<div class="modal fade" id="kt_modal_statistik_wip" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 					<div class="modal-dialog modal-lg" role="document">
 						<div class="modal-content statistik_wip">
@@ -1154,6 +1196,80 @@
 						</div>
 					</div>
 				</div>
+<<<<<<< HEAD
+=======
+				<div class="modal fade" id="kt_modal_tambah_wip" tabindex="" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="exampleModalLabel">Tambah WIP</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								</button>
+							</div>
+							<form>
+								<div class="modal-body">
+									<div class="form-group row">
+										<label for="example-text-input" class="col-4 col-form-label">No. SIKA</label>
+										<div class="col-8">
+											<input disabled="" class="form-control" type="text" value="01/000/1111" id="no_sika" name="no_sika">
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-4 col-form-label">Tanggal</label>
+										<div class="col-8">
+											<input type="text" class="form-control" id="tanggal_wip" name="tanggal_wip" readonly placeholder="pilih tanggal"/>
+										</div>
+									</div>
+									<div class="form-group">
+										<h6>
+											WIP Inspeksi HSE Work Practice
+										</h6>
+										<div class="row">
+											<label for="example-text-input" class="col-4 col-form-label">Nilai</label>
+											<div class="col-sm-8">
+												<input type="text" class="form-control" id="nilai_wip_work_practice" name="nilai_wip_work_practice" value="80">
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<h6>
+											WIP Inspeksi Program HSE
+										</h6>
+										<div class="row">
+											<label for="example-text-input" class="col-4 col-form-label">Nilai</label>
+											<div class="col-sm-8">
+												<input type="text" class="form-control" id="nilai_wip_program_hse" name="nilai_wip_program_hse" value="80">
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<h6>
+											HSE Performance (KPI)
+										</h6>
+										<div class="row">
+											<label for="example-text-input" class="col-4 col-form-label">Nilai</label>
+											<div class="col-sm-8">
+												<input type="text" class="form-control" id="nilai_kpi" name="nilai_kpi" value="80">
+											</div>
+										</div>
+									</div>
+									<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success ">
+										<input id="check-fe" type="checkbox" onclick="myFunction_simpan()"> WIP ini akan menjadi Final Evaluation
+										<span></span>
+									</label>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary" data-dismiss="modal">
+										<i class="fa fa-times"></i> Tutup
+									</button>
+									<button type="button" style="margin-right:0px" id="btn_simpan_wip" class="btn btn-primary btn_simpan_wip kt_sweetalert_simpan"><i class="fa fa-save"></i> Simpan</button>
+									<button type="button" id="btn_simpan_wip_fe" style="display: none;margin-right:0px" class="btn btn-primary btn_simpan_wip kt_sweetalert_fe"> <i class="fa fa-save"></i> Simpan</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+>>>>>>> 1aa029b706da2f8a01832ff891eedc46e96ec687
 				<div class="modal fade" id="kt_modal_rincian" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 					<div class="modal-dialog" role="document">
 						<div class="modal-content">
@@ -1248,16 +1364,16 @@
 								<div class="row">
 									<div class="col-sm-6">
 										<ul>
-											<li name="nama_peralatan" >Palu</li>
-											<li name="nama_peralatan" >Mesin Bor</li>
-											<li name="nama_peralatan" >Kapak</li>
+											<li name="nama_peralatan">Palu</li>
+											<li name="nama_peralatan">Mesin Bor</li>
+											<li name="nama_peralatan">Kapak</li>
 										</ul>
 									</div>
 									<div class="col-sm-6">
 										<ul>
-											<li name="nama_peralatan" >Palu</li>
-											<li name="nama_peralatan" >Mesin Bor</li>
-											<li name="nama_peralatan" >Kapak</li>
+											<li name="nama_peralatan">Palu</li>
+											<li name="nama_peralatan">Mesin Bor</li>
+											<li name="nama_peralatan">Kapak</li>
 										</ul>
 									</div>
 								</div>
@@ -1322,11 +1438,20 @@
 	<script src="../assets/vendors/general/wnumb/wNumb.js" type="text/javascript"></script>
 	<!--end:: Global Mandatory Vendors -->
 	<!--begin:: Global Optional Vendors -->
+<<<<<<< HEAD
+=======
+	<script src="../assets/vendors/general/select2/dist/js/select2.full.js" type="text/javascript"></script>
+	<script src="https://code.highcharts.com/highcharts.js"></script>
+	<script src="https://code.highcharts.com/modules/exporting.js"></script>
+	<script src="https://code.highcharts.com/modules/export-data.js"></script>
+>>>>>>> 1aa029b706da2f8a01832ff891eedc46e96ec687
 	<!--end:: Global Optional Vendors -->
 	<!--begin::Global Theme Bundle(used by all pages) -->
 	<script src="../assets/demo/default/base/scripts.bundle.js" type="text/javascript"></script>
 	<!--end::Global Theme Bundle -->
 	<!--begin::Page Vendors(used by this page) -->
+	<script src="../assets/vendors/general/sweetalert2/dist/sweetalert2.min.js" type="text/javascript"></script>
+	<script src="../assets/vendors/custom/components/vendors/sweetalert2/init.js" type="text/javascript"></script>
 	<script src="../assets/vendors/custom/fullcalendar/fullcalendar.bundle.js" type="text/javascript"></script>
 	<!--end::Page Vendors -->
 	<!--begin::Global App Bundle(used by all pages) -->
