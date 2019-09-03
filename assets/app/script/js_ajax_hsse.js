@@ -271,12 +271,12 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 					var status = {
 						kadaluarsa: {'href': 'rincian_pekerjaan_kadaluarsa.html'},
 						'pengajuan awal': {'href': 'rincian_riwayat_pekerjaan.html'},
-						perpanjang : {'href': 'rincian_riwayat_pekerjaan.html'},
+						perpanjang : {'href': 'rincian_pekerjaan_perpanjang.html'},
 						'pengajuan ulang' : {'href': 'rincian_pekerjaan_pengajuan_ulang.html'},
 						ditolak : {'href': 'rincian_pekerjaan_ditolak.html'},
 						progress : {'href': 'rincian_pekerjaan_berlangsung.html'},
 						ditunda : {'href': 'rincian_pekerjaan_ditunda.html'},
-						tutup : {'href': 'rincian_riwayat_pekerjaan.html'},
+						tutup : {'href': 'rincian_pekerjaan_tutup.html'},
 						selesai : {'href': 'rincian_pekerjaan_selesai.html'}
 					};
 					return `
