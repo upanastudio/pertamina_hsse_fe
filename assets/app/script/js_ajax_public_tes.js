@@ -145,84 +145,11 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 			],
 		});
 	};
-	var initTable4a = function() {
-		var table = $('#daftar_sika');
-
-		// begin first table
-		table.DataTable({
-			responsive: true,
-			searchDelay: 500,
-			processing: true,
-			serverSide: false,
-			ajax: {
-				url: '../source/daftar_sika_pekerjaan_ahli_teknik.json',
-				type: 'POST',
-				data: {
-					pagination: {
-						perpage: 50,
-					},
-				},
-			},
-			columns: [
-			{
-				data: 'no',
-				title: 'No.',
-			},{
-				data: 'depot',
-				title: 'Depot',
-			},{
-				data: 'pekerjaan',
-				title: 'Pekerjaan',
-			},{
-				data: 'jenis_sika',
-				title: 'Jenis SIKA',
-			},{
-				data: 'no_sika',
-				title: 'No. SIKA',
-			},{
-				data: 'status',
-				title: 'Status',
-				width: 160,
-				render: function(data, type, full, meta) {
-					var status = {
-						draft: {'title': 'Draft', 'class': 'btn-label-bold bold-status'},
-						pengajuan_awal: {'title': 'Pengajuan Awal', 'class': 'btn-label-danger'},
-						pengajuan_ulang : {'title' : 'Pengajuan Ulang', 'class' : 'btn-label-danger'},
-						perpanjang : {'title': 'Perpanjang', 'class': 'btn-label-danger'},
-						ditolak : {'title' : 'Ditolak', 'class' : 'btn-label-danger'},
-						tutup : {'title' : 'Tutup', 'class' : 'btn-label-danger'},
-						ditunda : {'title' : 'Interupsi/Ditunda','class' : 'btn-label-danger'},
-						progress : {'title' : 'Progress', 'class' : 'btn-label-warning'},
-						selesai : {'title' : 'Selesai', 'class' : 'btn-label-success'},
-						kadaluarsa: {'title': 'Kadaluarsa', 'class': 'btn-label-dark'},
-					};
-					if (typeof status[data] === 'undefined') {
-						return data;
-					}
-					return '<span style="width:100%" class="btn btn-bold btn-sm btn-font-sm ' + status[data].class + '">' + status[data].title + '</span>';
-				},
-			},{
-				field: 'rincian',
-				title: 'Rincian',
-				className: 'text-center',
-				orderable: false,
-				render: function(data, type, full, meta) {
-					return `
-					<a href="rincian_sika.html" class="btn btn-sm btn-primary" style="color:white;border-radius:20px">Rincian</a>`;
-				},
-			}],
-			columnDefs: [
-			{
-				targets: [0,1,2,3,4],
-				className: 'text-center'
-			}
-			],
-		});
-	};
 	var initTable4 = function() {
 		// begin first table
 		var table = $('#daftar_sika').DataTable({
 			responsive: true,
+			/*order: [[1, "desc"], [2, "desc"]],*/
 			// Pagination settings
 			dom: `<'row'<'col-sm-12'tr>>
 			<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7 dataTables_pager'lp>>`,
@@ -242,17 +169,14 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 			ajax: {
 				url: '../source/daftar_sika_pekerjaan_ahli_teknik.json',
 				type: 'POST',
-				data: {
-					// parameters for custom backend script demo
-					columnsDef: [
-					'no', 'depot', 'vendor', 'pekerjaan', 'sifat',
-					'tanggal', 'status', 'aksi',],
-				},
 			},
 			columns: [
 			{
-				data: 'no',
+				data: 'null',
 				title: 'No.',
+				render: function (data, type, row, meta) {
+					return meta.row + meta.settings._iDisplayStart + 1;
+				},
 			},{
 				data: 'depot',
 				title: 'Depot',
@@ -272,8 +196,8 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 				render: function(data, type, full, meta) {
 					var status = {
 						draft: {'title': 'Draft', 'class': 'btn-label-bold bold-status'},
-						pengajuan_awal: {'title': 'Pengajuan Awal', 'class': 'btn-label-danger'},
-						pengajuan_ulang : {'title' : 'Pengajuan Ulang', 'class' : 'btn-label-danger'},
+						'pengajuan awal': {'title': 'Pengajuan Awal', 'class': 'btn-label-danger'},
+						'pengajuan ulang' : {'title' : 'Pengajuan Ulang', 'class' : 'btn-label-danger'},
 						perpanjang : {'title': 'Perpanjang', 'class': 'btn-label-danger'},
 						ditolak : {'title' : 'Ditolak', 'class' : 'btn-label-danger'},
 						tutup : {'title' : 'Tutup', 'class' : 'btn-label-danger'},
@@ -310,12 +234,27 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 						break;
 					}
 				});
+
+				this.api().columns().every(function() {
+					var column = this;
+
+					switch (column.title()) {
+						case 'Status':
+						column.data().unique().sort().each(function(d, j) {
+							$('.kt-input[data-col-index="5"]').append('<option value="' + d + '">' + d + '</option>');
+						});
+						break;
+					}
+				});
 			},
+
+			
 
 			columnDefs: [
 			{
-				targets: [0,1,2,3,4],
-				className: 'text-center'
+				targets: [0,1,2,3,4,5,6],
+				className: 'text-center',
+				orderable: false,
 			}
 			],
 		});
@@ -330,7 +269,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 			table.column(index).search(val ? val : '', false, true);
 		};
 
-		$('#kt_search').on('click', function(e) {
+		$('#kt_search_depot').on('change', function(e) {
 			e.preventDefault();
 			var params = {};
 			$('.kt-input').each(function() {
@@ -348,7 +287,27 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 			});
 			table.table().draw();
 		});
-
+		$('#kt_search_status').on('change', function(e) {
+			e.preventDefault();
+			var params = {};
+			$('.kt-input').each(function() {
+				var i = $(this).data('col-index');
+				if (params[i]) {
+					params[i] += '|' + $(this).val();
+				}
+				else {
+					params[i] = $(this).val();
+				}
+			});
+			$.each(params, function(i, val) {
+				// apply search params to datatable
+				table.column(i).search(val ? val : '', false, false);
+			});
+			table.table().draw();
+		});
+		$('#kt_search_all').on( 'keyup', function () {
+		    table.search( this.value ).draw();
+		} );
 		$('#kt_reset').on('click', function(e) {
 			e.preventDefault();
 			$('.kt-input').each(function() {
@@ -410,8 +369,8 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 				render: function(data, type, full, meta) {
 					var status = {
 						draft: {'title': 'Draft', 'class': 'btn-label-bold bold-status'},
-						pengajuan_awal: {'title': 'Pengajuan Awal', 'class': 'btn-label-danger'},
-						pengajuan_ulang : {'title' : 'Pengajuan Ulang', 'class' : 'btn-label-danger'},
+						'pengajuan awal': {'title': 'Pengajuan Awal', 'class': 'btn-label-danger'},
+						'pengajuan ulang' : {'title' : 'Pengajuan Ulang', 'class' : 'btn-label-danger'},
 						perpanjang : {'title': 'Perpanjang', 'class': 'btn-label-danger'},
 						ditolak : {'title' : 'Ditolak', 'class' : 'btn-label-danger'},
 						tutup : {'title' : 'Tutup', 'class' : 'btn-label-danger'},
@@ -434,8 +393,8 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 				render: function(data, type, full, meta) {
 					var status = {
 						draft: {'href': 'edit_pekerjaan_abi.html'},
-						pengajuan_awal: {'href': 'rincian_pekerjaan.html'},
-						pengajuan_ulang: {'href': 'rincian_pekerjaan_pengajuan_ulang.html'},
+						'pengajuan awal': {'href': 'rincian_pekerjaan.html'},
+						'pengajuan ulang': {'href': 'rincian_pekerjaan_pengajuan_ulang.html'},
 						perpanjang: {'href': 'rincian_pekerjaan.html'},
 						ditolak: {'href': 'rincian_pekerjaan_ditolak.html'},
 						tutup: {'href': 'rincian_pekerjaan.html'},
@@ -537,32 +496,15 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 			},{
 				data: 'no_sika',
 				title: 'No. SIKA',
-			}/*,{
-				data: 'validasi',
-				title: 'Validasi',
-				responsivePriority: -1,
-				render: function(data, type, full, meta) {
-					return `
-					<div class="kt-checkbox-list">
-					<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success validasi_check">
-					<input disabled checked="" type="checkbox" id="check_hsse" name="check_hsse"> HSSE
-					<span></span>
-					</label>
-					<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success validasi_check">
-					<input disabled checked="" type="checkbox" id="check_gsi" name="check_hsse"> GSI
-					<span></span>
-					</label>
-					</div>`;
-				},
-			}*/,{
+			},{
 				data: 'status',
 				title: 'Status',
 				width: 150,
 				render: function(data, type, full, meta) {
 					var status = {
 						draft: {'title': 'Draft', 'class': 'btn-label-bold bold-status'},
-						pengajuan_awal: {'title': 'Pengajuan Awal', 'class': 'btn-label-danger'},
-						pengajuan_ulang : {'title' : 'Pengajuan Ulang', 'class' : 'btn-label-danger'},
+						'pengajuan awal': {'title': 'Pengajuan Awal', 'class': 'btn-label-danger'},
+						'pengajuan ulang' : {'title' : 'Pengajuan Ulang', 'class' : 'btn-label-danger'},
 						perpanjang : {'title': 'Perpanjang', 'class': 'btn-label-danger'},
 						ditolak : {'title' : 'Ditolak', 'class' : 'btn-label-danger'},
 						tutup : {'title' : 'Tutup', 'class' : 'btn-label-danger'},
@@ -622,32 +564,15 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 			},{
 				data: 'no_sika',
 				title: 'No. SIKA',
-			}/*,{
-				data: 'validasi',
-				title: 'Validasi',
-				responsivePriority: -1,
-				render: function(data, type, full, meta) {
-					return `
-					<div class="kt-checkbox-list">
-					<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success validasi_check">
-					<input disabled checked="" type="checkbox" id="check_hsse" name="check_hsse"> HSSE
-					<span></span>
-					</label>
-					<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success validasi_check">
-					<input disabled checked="" type="checkbox" id="check_gsi" name="check_hsse"> GSI
-					<span></span>
-					</label>
-					</div>`;
-				},
-			}*/,{
+			},{
 				data: 'status',
 				title: 'Status',
 				width: 160,
 				render: function(data, type, full, meta) {
 					var status = {
 						draft: {'title': 'Draft', 'class': 'btn-label-bold bold-status'},
-						pengajuan_awal: {'title': 'Pengajuan Awal', 'class': 'btn-label-danger'},
-						pengajuan_ulang : {'title' : 'Pengajuan Ulang', 'class' : 'btn-label-danger'},
+						'pengajuan awal': {'title': 'Pengajuan Awal', 'class': 'btn-label-danger'},
+						'pengajuan ulang' : {'title' : 'Pengajuan Ulang', 'class' : 'btn-label-danger'},
 						perpanjang : {'title': 'Perpanjang', 'class': 'btn-label-danger'},
 						ditolak : {'title' : 'Ditolak', 'class' : 'btn-label-danger'},
 						tutup : {'title' : 'Tutup', 'class' : 'btn-label-danger'},
@@ -818,8 +743,8 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 				render: function(data, type, full, meta) {
 					var status = {
 						draft: {'title': 'Draft', 'class': 'btn-label-bold bold-status'},
-						pengajuan_awal: {'title': 'Pengajuan Awal', 'class': 'btn-label-danger'},
-						pengajuan_ulang : {'title' : 'Pengajuan Ulang', 'class' : 'btn-label-danger'},
+						'pengajuan awal': {'title': 'Pengajuan Awal', 'class': 'btn-label-danger'},
+						'pengajuan ulang' : {'title' : 'Pengajuan Ulang', 'class' : 'btn-label-danger'},
 						perpanjang : {'title': 'Perpanjang', 'class': 'btn-label-danger'},
 						ditolak : {'title' : 'Ditolak', 'class' : 'btn-label-danger'},
 						tutup : {'title' : 'Tutup', 'class' : 'btn-label-danger'},
@@ -842,8 +767,8 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 				render: function(data, type, full, meta) {
 					var status = {
 						draft: {'href': 'edit_pekerjaan_abi.html'},
-						pengajuan_awal: {'href': 'rincian_pekerjaan.html'},
-						pengajuan_ulang: {'href': 'rincian_pekerjaan_pengajuan_ulang.html'},
+						'pengajuan awal': {'href': 'rincian_pekerjaan.html'},
+						'pengajuan ulang': {'href': 'rincian_pekerjaan_pengajuan_ulang.html'},
 						perpanjang: {'href': 'rincian_pekerjaan.html'},
 						ditolak: {'href': 'rincian_pekerjaan_ditolak.html'},
 						tutup: {'href': 'rincian_pekerjaan.html'},
@@ -1008,8 +933,8 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 				render: function(data, type, full, meta) {
 					var status = {
 						draft: {'title': 'Draft', 'class': 'btn-label-bold bold-status'},
-						pengajuan_awal: {'title': 'Pengajuan Awal', 'class': 'btn-label-danger'},
-						pengajuan_ulang : {'title' : 'Pengajuan Ulang', 'class' : 'btn-label-danger'},
+						'pengajuan awal': {'title': 'Pengajuan Awal', 'class': 'btn-label-danger'},
+						'pengajuan ulang' : {'title' : 'Pengajuan Ulang', 'class' : 'btn-label-danger'},
 						perpanjang : {'title': 'Perpanjang', 'class': 'btn-label-danger'},
 						ditolak : {'title' : 'Ditolak', 'class' : 'btn-label-danger'},
 						tutup : {'title' : 'Tutup', 'class' : 'btn-label-danger'},
@@ -1032,8 +957,8 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 				render: function(data, type, full, meta) {
 					var status = {
 						draft: {'href': 'edit_pekerjaan_abi.html'},
-						pengajuan_awal: {'href': 'rincian_pekerjaan.html'},
-						pengajuan_ulang: {'href': 'rincian_pekerjaan_pengajuan_ulang.html'},
+						'pengajuan awal': {'href': 'rincian_pekerjaan.html'},
+						'pengajuan ulang': {'href': 'rincian_pekerjaan_pengajuan_ulang.html'},
 						perpanjang: {'href': 'rincian_pekerjaan.html'},
 						ditolak: {'href': 'rincian_pekerjaan_ditolak.html'},
 						tutup: {'href': 'rincian_pekerjaan.html'},

@@ -66,6 +66,7 @@
 	<link rel="shortcut icon" href="../assets/media/logos/favicon.ico" />
 	<link href="../assets/app/style/pertamina-theme.css" rel="stylesheet" type="text/css" />
 	<link href="../assets/app/style/text_black.css" rel="stylesheet" type="text/css" />
+	<link href="../assets/app/style/blue-theme.css" rel="stylesheet" type="text/css" />
 	<style>
 		.modal-content {
 			width: 100%;
@@ -281,7 +282,7 @@
 								</div>
 							</div>
 							<div class="kt-portlet__body">
-								<ul class="nav nav-tabs" role="tablist">
+								<ul class="nav nav-tabs nav-fill" role="tablist">
 									<li class="nav-item">
 										<a class="nav-link active" data-toggle="tab" href="#kt_tabs_biodata">Biodata</a>
 									</li>
@@ -344,6 +345,12 @@
 													<label for="example-text-input" class="col-3 col-form-label">Umur</label>
 													<div class="col-9">
 														<input disabled="" class="form-control" type="text" id="umur_pekerja" value="23 Tahun" name="umur_pekerja">
+													</div>
+												</div>
+												<div class="form-group row">
+													<label for="example-text-input" class="col-3 col-form-label">Tanggal Kadaluarsa</label>
+													<div class="col-9">
+														<input disabled="" class="form-control datepicker_mode"  value="20/November/2019" id="tanggal_kadaluarsa" name="tanggal_kadaluarsa">
 													</div>
 												</div>
 											</div>
@@ -455,7 +462,7 @@
 												<div class="form-group row">
 													<label for="example-text-input" class="col-3 col-form-label">Tanggal Tes</label>
 													<div class="col-9">
-														<input disabled="" class="form-control" type="date" value="2019-08-19" id="tanggal_tes" name="tanggal_tes">
+														<input disabled="" class="form-control datepicker_mode" value="20/November/2019" id="tanggal_tes" name="tanggal_tes">
 													</div>
 												</div>
 												<div class="form-group row">
@@ -467,7 +474,7 @@
 												<div class="form-group row">
 													<label for="example-text-input" class="col-3 col-form-label">Expired Date</label>
 													<div class="col-9">
-														<input disabled="" class="form-control" type="date" value="2019-12-19" id="expired_date_induksi_12_SLR" name="expired_date_induksi_12_SLR">
+														<input disabled="" class="form-control datepicker_mode" value="20/November/2019" id="expired_date_induksi_12_SLR" name="expired_date_induksi_12_SLR">
 													</div>
 												</div>
 												<div class="" align="center">
@@ -559,7 +566,7 @@
 									<label>Expired Date</label>
 									<div class="row">
 										<div class="col-8">
-											<input disabled="" type="date" class="form-control" aria-describedby="emailHelp" value="2020-11-09">
+											<input disabled="" class="form-control datepicker_mode" value="20/November/2019" id="expired_date_ktp" name="expired_date_ktp">
 										</div>
 										<div class="col-4">
 											<a href="#" target="_blank" id="btn_preview_ktp" name="btn_preview_ktp" class="btn btn-brand"> <i class="fa fa-eye"></i>Lihat KTP</a>
@@ -587,7 +594,7 @@
 									<label>Expired Date</label>
 									<div class="row">
 										<div class="col-8">
-											<input disabled="" type="date" class="form-control" aria-describedby="emailHelp" value="2020-11-09">
+											<input disabled="" class="form-control datepicker_mode" value="20/November/2019" id="expired_date_mcu" name="expired_date_mcu">
 										</div>
 										<div class="col-4">
 											<a href="#" target="_blank" id="btn_preview_mcu" name="btn_preview_mcu" class="btn btn-brand"> <i class="fa fa-eye"></i>Lihat MCU</a>
@@ -615,7 +622,7 @@
 									<label>Expired Date</label>
 									<div class="row">
 										<div class="col-8">
-											<input disabled="" type="date" class="form-control" aria-describedby="emailHelp" value="2020-11-09">
+											<input disabled=""  class="form-control datepicker_mode" value="20/November/2019" id="expired_date_narkoba" name="expired_date_narkoba">
 										</div>
 										<div class="col-4">
 											<a href="#" target="_blank" id="btn_preview_tes_narkoba" name="btn_preview_tes_narkoba" class="btn btn-brand"> <i class="fa fa-eye"></i>Lihat Tes</a>
@@ -643,7 +650,7 @@
 									<label>Expired Date</label>
 									<div class="row">
 										<div class="col-8">
-											<input disabled="" type="date" class="form-control" aria-describedby="emailHelp" value="2020-11-09">
+											<input disabled="" class="form-control datepicker_mode" value="20/November/2019" id="expired_date_sim" name="expired_date_sim">
 										</div>
 										<div class="col-4">
 											<a href="#" target="_blank" id="btn_preview_sim" name="btn_preview_sim" class="btn btn-brand"> <i class="fa fa-eye"></i>Lihat SIM</a>
@@ -754,48 +761,84 @@
 	<script src="../assets/app/script/js_ajax_hsse.js" type="text/javascript"></script>
 	<!-- SweetAlert2 -->
 	<script>
-			// Class definition
-			var KTSweetAlert2Demo = function() {
-		    // Demos
-		    var initDemos = function() {
-		    	$('#kt_sweetalert_submit').click(function(e) {
-		    		swal.fire("Berhasil!", "Data anda telah tersubmit!", "success");
-		    	});
-		    	$('#kt_sweetalert_save_draft').click(function(e) {
-		    		swal.fire("Berhasil!", "Data anda telah disimpan sebagai draft!", "success");
-		    	});
-		    	$('.kt_sweetalert_upload').click(function(e) {
-		    		swal.fire("Berhasil!", "Data anda telah terupload!", "success");
-		    	});
-		    	$('#kt_sweetalert_tambah_paket').click(function(e) {
-		    		swal.fire("Ditambahkan!", "Paket Telah Ditambahkan!", "success");
-		    	});
-		        // Sweetalert Demo 5
-		        $('#kt_sweetalert_demo_5').click(function(e) {
-		        	swal.fire({
-		        		title: "Good job!",
-		        		text: "You clicked the button!",
-		        		type: "success",
-		        		confirmButtonText: "<span><i class='la la-headphones'></i><span>I am game!</span></span>",
-		        		confirmButtonClass: "btn btn-danger--pill--air--icon",
-		        		showCancelButton: true,
-		        		cancelButtonText: "<span><i class='la la-thumbs-down'></i><span>No, thanks</span></span>",
-		        		cancelButtonClass: "btn btn-secondary--pill--icon"
-		        	});
-		        });
-		    };
-		    return {
-		        // Init
-		        init: function() {
-		        	initDemos();
-		        },
-		    };
+		var KTSweetAlert2Demo = function() {
+			var initDemos = function() {
+				$('#kt_sweetalert_submit').click(function(e) {
+					swal.fire("Berhasil!", "Data anda telah tersubmit!", "success");
+				});
+				$('#kt_sweetalert_save_draft').click(function(e) {
+					swal.fire("Berhasil!", "Data anda telah disimpan sebagai draft!", "success");
+				});
+				$('.kt_sweetalert_upload').click(function(e) {
+					swal.fire("Berhasil!", "Data anda telah terupload!", "success");
+				});
+				$('#kt_sweetalert_tambah_paket').click(function(e) {
+					swal.fire("Ditambahkan!", "Paket Telah Ditambahkan!", "success");
+				});
+				$('#kt_sweetalert_demo_5').click(function(e) {
+					swal.fire({
+						title: "Good job!",
+						text: "You clicked the button!",
+						type: "success",
+						confirmButtonText: "<span><i class='la la-headphones'></i><span>I am game!</span></span>",
+						confirmButtonClass: "btn btn-danger--pill--air--icon",
+						showCancelButton: true,
+						cancelButtonText: "<span><i class='la la-thumbs-down'></i><span>No, thanks</span></span>",
+						cancelButtonClass: "btn btn-secondary--pill--icon"
+					});
+				});
+			};
+			return {
+				init: function() {
+					initDemos();
+				},
+			};
 		}();
-	// Class Initialization
-	jQuery(document).ready(function() {
-		KTSweetAlert2Demo.init();
-	});
-</script>
+		jQuery(document).ready(function() {
+			KTSweetAlert2Demo.init();
+		});
+	</script>
+	<script>
+		var KTBootstrapDatepicker = function () {
+			var arrows;
+			if (KTUtil.isRTL()) {
+				arrows = {
+					leftArrow: '<i class="la la-angle-right"></i>',
+					rightArrow: '<i class="la la-angle-left"></i>'
+				}
+			} else {
+				arrows = {
+					leftArrow: '<i class="la la-angle-left"></i>',
+					rightArrow: '<i class="la la-angle-right"></i>'
+				}
+			}
+			var demos = function () {
+				$('.datepicker_mode, .datepicker_mode_validate').datepicker({
+					rtl: KTUtil.isRTL(),
+					todayHighlight: true,
+					orientation: "bottom left",
+					templates: arrows,
+					format: 'dd/MM/yyyy'
+				});
+
+				$('.datepicker_mode_modal').datepicker({
+					rtl: KTUtil.isRTL(),
+					todayHighlight: true,
+					orientation: "bottom left",
+					templates: arrows
+				});
+
+			}
+			return {
+				init: function() {
+					demos(); 
+				}
+			};
+		}();
+		jQuery(document).ready(function() {    
+			KTBootstrapDatepicker.init();
+		});
+	</script>
 </body>
 <!-- end::Body -->
 </html>

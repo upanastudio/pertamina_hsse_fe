@@ -59,6 +59,7 @@
 	<!--end::Layout Skins -->
 	<link rel="shortcut icon" href="../assets/media/logos/favicon.ico" />
 	<link rel="stylesheet" type="text/css" href="../assets/app/style/header_publik_pertamina.css">
+	<link href="../assets/app/style/text_black.css" rel="stylesheet" type="text/css" />
 	<style>
 		.card_tgl_tes {
 			width: 100%;
@@ -75,6 +76,9 @@
 		.card {
 			margin-bottom: 20px;
 			border: none;
+		}
+		.peserta_ujian {
+			pointer-events: none;
 		}
 		@media (max-width: 1024px) {
 			.kt-header-menu-wrapper {
@@ -166,7 +170,7 @@
 							<div class="kt-header__brand   kt-grid__item" id="kt_header_brand">
 								<div class="kt-header__brand-logo">
 									<a href="index.html">
-										<img class="logo_pertamina" style="height: 90px" alt="Logo" src="../assets/media/logos/logo_3.png" />
+										<img class="logo_pertamina" style="height: 90px" alt="Logo" src="../assets/media/logos/logo_1.png" />
 									</a>
 								</div>
 							</div>
@@ -316,6 +320,15 @@
 														<h3 class="kt-portlet__head-title">
 															Jadwal Tes 12 LSR
 														</h3>
+														<div style="margin-left: 30px;width: 300px">
+															<select class="form-control" id="pilih_depot" name="pilih_depot">
+																<option value="0">--Pilih Depot--</option>
+																<option value="1">Depot 1</option>
+																<option value="2">Depot 2</option>
+																<option value="3">Depot 3</option>
+																<option value="4">Depot 4</option>
+															</select>
+														</div>
 													</div>
 												</div>
 												<div class="kt-portlet__body">
@@ -330,7 +343,7 @@
 															<div style="margin-top:10px">
 																<h5>List Peserta Ujian :</h5>
 															</div>
-															<div class="row">
+															<div class="row peserta_ujian">
 																<div class="col-sm-4" align="center">
 																	<p>1. Ahmad Rifaldi</p>
 																	<p>2. Ahmad Rifaldi</p>
@@ -366,7 +379,7 @@
 															<div style="margin-top:10px">
 																<h5>List Peserta Ujian :</h5>
 															</div>
-															<div class="row">
+															<div class="row peserta_ujian">
 																<div class="col-sm-4" align="center">
 																	<p>1. Ahmad Rifaldi</p>
 																	<p>2. Ahmad Rifaldi</p>
@@ -402,7 +415,7 @@
 															<div style="margin-top:10px">
 																<h5>List Peserta Ujian :</h5>
 															</div>
-															<div class="row">
+															<div class="row peserta_ujian">
 																<div class="col-sm-4" align="center">
 																	<p>1. Ahmad Rifaldi</p>
 																	<p>2. Ahmad Rifaldi</p>

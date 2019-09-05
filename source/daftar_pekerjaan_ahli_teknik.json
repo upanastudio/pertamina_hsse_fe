@@ -23,7 +23,7 @@
                  "sifat" : "ABI",
                  "tipe" : "hot",
                  "validasi" : null,
-                 "status" : "pengajuan_awal",
+                 "status" : "pengajuan awal",
                  "aksi" : null
              },
              {
@@ -34,7 +34,7 @@
                  "sifat" : "ABO",
                  "tipe" : "cold",
                  "validasi" : null,
-                 "status" : "pengajuan_ulang",
+                 "status" : "pengajuan ulang",
                  "aksi" : null
              },
              {

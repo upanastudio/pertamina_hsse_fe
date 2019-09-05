@@ -68,6 +68,7 @@
 	<link href="../assets/app/style/text_black.css" rel="stylesheet" type="text/css" />
 	<link href="../assets/app/style/at_rincian-pekerjaan-style.css" rel="stylesheet" type="text/css" />
 	<link href="../assets/app/style/tab-style.css" rel="stylesheet" type="text/css" />
+	<link href="../assets/app/style/blue-theme.css" rel="stylesheet" type="text/css" />
 	<style>
 		div.dataTables_wrapper div.dataTables_filter input {
 			width: 255px;
@@ -1259,11 +1260,11 @@
 											<h5 class="col-sm-12">Penolakan</h5>
 											<label class="col-2 col-form-label">Tanggal</label>
 											<div style="margin-bottom:10px" class="col-10">
-												<input disabled="" class="form-control" type="date" id="tanggal_penolakan" name="tanggal_penolakan">
+												<input disabled="" type="text" class="form-control datepicker_mode" id="tanggal_penolakan" name="tanggal_penolakan" value="20/November/2019" />
 											</div>
 											<label class="col-2 col-form-label">Alasan</label>
 											<div class="col-10">
-												<textarea disabled="" style="resize: none" class="form-control" id="alasan_ditolak" name="alasan_ditolak" rows="3"></textarea>
+												<textarea disabled="" style="resize: none" class="form-control"id="alasan_ditolak" name="alasan_ditolak" rows="4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sodales venenatis tempor. Nullam lacinia imperdiet consectetur. Vestibulum dictum purus eget urna porta, vitae laoreet diam imperdiet. Nullam tempus pellentesque sodales.</textarea>
 											</div>
 										</div>
 										<div class="kt-separator kt-separator--border-dashed kt-separator--space-sm"></div>
@@ -1273,11 +1274,11 @@
 											<h5 class="col-sm-12">Pemberhentian Sementara</h5>
 											<label class="col-2 col-form-label">Tanggal</label>
 											<div style="margin-bottom:10px" class="col-10">
-												<input disabled="" class="form-control" type="date" id="tanggal_pemberhentian" name="tanggal_pemberhentian">
+												<input disabled="" type="text" class="form-control datepicker_mode" id="tanggal_pemberhentian" name="tanggal_pemberhentian" value="20/November/2019" />
 											</div>
 											<label class="col-2 col-form-label">Alasan</label>
 											<div class="col-10">
-												<textarea disabled="" style="resize: none" class="form-control" id="alasan_ditolak" name="alasan_ditolak" rows="3"></textarea>
+												<textarea disabled="" style="resize: none" class="form-control" id="alasan_ditolak" name="alasan_ditolak" rows="4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sodales venenatis tempor. Nullam lacinia imperdiet consectetur. Vestibulum dictum purus eget urna porta, vitae laoreet diam imperdiet. Nullam tempus pellentesque sodales.</textarea>
 											</div>
 										</div>
 										<div class="kt-separator kt-separator--border-dashed kt-separator--space-sm"></div>
@@ -1287,11 +1288,11 @@
 											<h5 class="col-sm-12">Pemberhentian Sementara</h5>
 											<label class="col-2 col-form-label">Tanggal</label>
 											<div style="margin-bottom:10px" class="col-10">
-												<input disabled="" class="form-control" type="date" id="tanggal_pemberhentian" name="tanggal_pemberhentian">
+												<input disabled="" type="text" class="form-control datepicker_mode" id="tanggal_pemberhentian" name="tanggal_pemberhentian" value="20/November/2019" />
 											</div>
 											<label class="col-2 col-form-label">Alasan</label>
 											<div class="col-10">
-												<textarea disabled="" style="resize: none" class="form-control" id="alasan_ditolak" name="alasan_ditolak" rows="3"></textarea>
+												<textarea disabled="" style="resize: none" class="form-control" id="alasan_ditolak" name="alasan_ditolak" rows="4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sodales venenatis tempor. Nullam lacinia imperdiet consectetur. Vestibulum dictum purus eget urna porta, vitae laoreet diam imperdiet. Nullam tempus pellentesque sodales.</textarea>
 											</div>
 										</div>
 										<div class="kt-separator kt-separator--border-dashed kt-separator--space-sm"></div>
@@ -1301,11 +1302,11 @@
 											<h5 class="col-sm-12">Pemberhentian Sementara</h5>
 											<label class="col-2 col-form-label">Tanggal</label>
 											<div style="margin-bottom:10px" class="col-10">
-												<input disabled="" class="form-control" type="date" id="tanggal_pemberhentian" name="tanggal_pemberhentian">
+												<input disabled="" type="text" class="form-control datepicker_mode" id="tanggal_pemberhentian" name="tanggal_pemberhentian" value="20/November/2019" />
 											</div>
 											<label class="col-2 col-form-label">Alasan</label>
 											<div class="col-10">
-												<textarea disabled="" style="resize: none" class="form-control" id="alasan_ditolak" name="alasan_ditolak" rows="3"></textarea>
+												<textarea disabled="" style="resize: none" class="form-control" id="alasan_ditolak" name="alasan_ditolak" rows="4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sodales venenatis tempor. Nullam lacinia imperdiet consectetur. Vestibulum dictum purus eget urna porta, vitae laoreet diam imperdiet. Nullam tempus pellentesque sodales.</textarea>
 											</div>
 										</div>
 										<div class="kt-separator kt-separator--border-dashed kt-separator--space-sm"></div>
@@ -1528,6 +1529,51 @@
 		});*/
 
 		}); // end am4core.ready()
+	</script>
+	<script>
+
+		var KTBootstrapDatepicker = function () {
+
+			var arrows;
+			if (KTUtil.isRTL()) {
+				arrows = {
+					leftArrow: '<i class="la la-angle-right"></i>',
+					rightArrow: '<i class="la la-angle-left"></i>'
+				}
+			} else {
+				arrows = {
+					leftArrow: '<i class="la la-angle-left"></i>',
+					rightArrow: '<i class="la la-angle-right"></i>'
+				}
+			}
+			var demos = function () {
+				$('.datepicker_mode, .datepicker_mode_validate').datepicker({
+					rtl: KTUtil.isRTL(),
+					todayHighlight: true,
+					orientation: "bottom left",
+					templates: arrows,
+					format: 'dd/MM/yyyy'
+				});
+
+				$('.datepicker_mode_modal').datepicker({
+					rtl: KTUtil.isRTL(),
+					todayHighlight: true,
+					orientation: "bottom left",
+					templates: arrows
+				});
+
+			}
+
+			return {
+				init: function() {
+					demos(); 
+				}
+			};
+		}();
+
+		jQuery(document).ready(function() {    
+			KTBootstrapDatepicker.init();
+		});
 	</script>
 </body>
 <!-- end::Body -->

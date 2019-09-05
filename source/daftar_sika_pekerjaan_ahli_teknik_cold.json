@@ -7,7 +7,7 @@
                  "no": 1,
                  "jenis_sika" : "SIKA Cold",
                  "no_sika" : "01/23/12345123",
-                 "status" : "pengajuan_awal",
+                 "status" : "pengajuan awal",
                  "rincian" : null,
                  "aksi" : null
 
@@ -16,7 +16,7 @@
                 "no": 2,
                   "jenis_sika" : "SIKA Cold",
                  "no_sika" : "01/23/12345123",
-                  "status" : "pengajuan_ulang",
+                  "status" : "pengajuan ulang",
                  "rincian" : null,
                  "aksi" : null
              },

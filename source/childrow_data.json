@@ -7,8 +7,9 @@
 		"sifat" : "Swakelola",
 		"tipe" : "hot",
 		"validasi" : null,
-		"status" : "baru",
+		"status" : "pengajuan awal",
 		"aksi" : null,
+		"rincian" : null,
 		"no_child": [
 			"1.a", "1.b"
 		],
@@ -25,13 +26,13 @@
 			"Hot", "Hot"
 		],
 		"tanggal_child": [
-			"12 November 2019", "20 November 2019"
+			"20 November 2019", "12 November 2019"
 		],
 		"validasi_child": [
 			null, null
 		],
 		"status_child": [
-			"ditolak", "selesai"
+			"selesai", "ditolak"
 		],
 		"aksi_child": [
 			null, null

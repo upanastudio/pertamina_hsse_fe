@@ -51,7 +51,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 				render: function(data, type, full, meta) {
 					if (data == "hsse") {
 						return `
-						<div class="kt-checkbox-list">
+						<div style="pointer-events: none" class="kt-checkbox-list">
 							<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
 								<input disabled checked id="hsse_validation" name="hsse_validation" type="checkbox">HSSE
 								<span></span>
@@ -63,7 +63,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 						</div>`;
 					} else if (data == "gsi") {
 						return `
-						<div class="kt-checkbox-list">
+						<div style="pointer-events: none" class="kt-checkbox-list">
 							<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
 								<input disabled checked id="hsse_validation" name="hsse_validation" type="checkbox">HSSE
 								<span></span>
@@ -75,7 +75,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 						</div>`;
 					} else {
 						return `
-						<div class="kt-checkbox-list">
+						<div style="pointer-events: none" class="kt-checkbox-list">
 							<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
 								<input disabled id="hsse_validation" name="hsse_validation" type="checkbox">HSSE
 								<span></span>
@@ -196,7 +196,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 						}
 						else {
 							return `
-							<div class="kt-checkbox-list">
+							<div style="pointer-events: none" class="kt-checkbox-list">
 								<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
 									<input disabled checked id="hsse_validation" name="hsse_validation" type="checkbox">HSSE
 									<span></span>
@@ -214,7 +214,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 						}
 						else {
 							return `
-							<div class="kt-checkbox-list">
+							<div style="pointer-events: none" class="kt-checkbox-list">
 								<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
 									<input disabled checked id="hsse_validation" name="hsse_validation" type="checkbox">HSSE
 									<span></span>
@@ -227,7 +227,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 						}
 					} else {
 						return `
-						<div class="kt-checkbox-list">
+						<div style="pointer-events: none" class="kt-checkbox-list">
 							<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
 								<input disabled id="hsse_validation" name="hsse_validation" type="checkbox">HSSE
 								<span></span>
@@ -332,7 +332,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 						}
 						else {
 							return `
-							<div class="kt-checkbox-list">
+							<div style="pointer-events: none" class="kt-checkbox-list">
 								<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
 									<input disabled checked id="hsse_validation" name="hsse_validation" type="checkbox">HSSE
 									<span></span>
@@ -350,7 +350,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 						}
 						else {
 							return `
-							<div class="kt-checkbox-list">
+							<div style="pointer-events: none" class="kt-checkbox-list">
 								<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
 									<input disabled checked id="hsse_validation" name="hsse_validation" type="checkbox">HSSE
 									<span></span>
@@ -868,8 +868,8 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 				render: function(data, type, full, meta) {
 					if (data == "hsse") {
 						return `
-						<div class="kt-checkbox-list">
-							<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
+						<div style="pointer-events: none !important" class="kt-checkbox-list">
+							<label  class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
 								<input disabled checked id="hsse_validation" name="hsse_validation" type="checkbox">HSSE
 								<span></span>
 							</label>
@@ -880,7 +880,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 						</div>`;
 					} else if (data == "gsi") {
 						return `
-						<div class="kt-checkbox-list">
+						<div style="pointer-events: none !important" class="kt-checkbox-list">
 							<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
 								<input disabled checked id="hsse_validation" name="hsse_validation" type="checkbox">HSSE
 								<span></span>
@@ -892,7 +892,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 						</div>`;
 					} else {
 						return `
-						<div class="kt-checkbox-list">
+						<div style="pointer-events: none !important" class="kt-checkbox-list">
 							<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
 								<input disabled id="hsse_validation" name="hsse_validation" type="checkbox">HSSE
 								<span></span>

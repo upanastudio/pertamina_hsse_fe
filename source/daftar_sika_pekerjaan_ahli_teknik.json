@@ -9,7 +9,7 @@
                  "pekerjaan" : "Penggalian",
                  "jenis_sika" : "Izin Penggunaan Listrik dalam Vessel",
                  "no_sika" : "01/23/12345123",
-                 "status" : "pengajuan_awal",
+                 "status" : "pengajuan awal",
                  "rincian" : null,
                  "aksi" : null
 
@@ -20,7 +20,7 @@
                  "pekerjaan" : "Penggalian",
                   "jenis_sika" : "Izin Isolasi Proses/Mekanik/Instrumen",
                  "no_sika" : "01/23/12345123",
-                 "status" : "pengajuan_ulang",
+                 "status" : "pengajuan ulang",
                  "rincian" : null,
                  "aksi" : null
              },

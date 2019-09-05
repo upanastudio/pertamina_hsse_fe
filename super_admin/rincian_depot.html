@@ -66,20 +66,24 @@
 	<link href="../assets/app/style/pertamina-theme.css" rel="stylesheet" type="text/css" />
 	<link href="../assets/app/style/text_black.css" rel="stylesheet" type="text/css" />
 	<link href="../assets/app/style/tab-style.css" rel="stylesheet" type="text/css" />
+	<link href="../assets/app/style/blue-theme.css" rel="stylesheet" type="text/css" />
 	<style>
 		.padding-body {
 			padding: 10px !important;
 		}
 		#tipe_pekerja,
+		#tipe_pekerja_pob,
 		#status_digital_passport {
 			width: 100%;
 			height: 320px;
 		}
 
-		#status_pekerjaan
+		#status_pekerjaan,
+		#status_sika,
+		#status_wip
 		{
 			width: 100%;
-			height: 500px;
+			height: 350px;
 		}
 
 		#jumlah_pekerjaan_tahun_ini {
@@ -90,6 +94,9 @@
 		.head-title{
 			font-size: 1.5rem !important;
 			font-weight: 500!important;
+		}
+		.popover {
+			max-width: 40%;
 		}
 	</style>
 </head>
@@ -323,7 +330,7 @@
 																		</div>
 																	</div>
 																	<div class="kt-portlet__body">
-																		<div id="tipe_pekerja"></div>
+																		<div style="width: 100%;height: 357px;" id="tipe_pekerja"></div>
 																	</div>
 																</div>
 															</div>
@@ -340,7 +347,18 @@
 																		</div>
 																	</div>
 																	<div class="kt-portlet__body">
+																		<div align="left">
+																			<a tabindex="0"
+																			class="btn btn-secondary" 
+																			role="button" 
+																			data-html="true" 
+																			data-toggle="popover" 
+																			data-trigger="hover" 
+																			title="<b>Penjelasan Grafik</b>" 
+																			data-content="<div><b>Aktif : <br></b> Telah disetujui dan berlaku <br><b>Belum Terverifikasi : <br></b> Dokumen telah tersubmit dan belum terverifikasi <br><b>Terverifikasi : <br></b> Terverifikasi dan belum melalui 12 LSR <br><b>Kadaluarsa : <br></b> HSSE Passport telah melewati masa berlaku <br></div>">Penjelasan Grafik</a>
+																		</div>
 																		<div id="status_digital_passport"></div>
+																		<!-- <div id="chartdiv"></div> -->	
 																	</div>
 																</div>
 															</div>
@@ -375,7 +393,68 @@
 																		</div>
 																	</div>
 																	<div class="kt-portlet__body">
+																		<div align="left">
+																			<a tabindex="0"
+																			class="btn btn-secondary" 
+																			role="button" 
+																			data-html="true" 
+																			data-toggle="popover" 
+																			data-trigger="hover" 
+																			title="<b>Penjelasan Grafik</b>" 
+																			data-content="<div><b>Pengajuan Awal : <br>
+																			</b> terdapat dokumen pengajuan untuk diverifikasi sebagai persetujuan SIKA <br>
+																			<b>Pengajuan Ulang : <br>
+																			</b> terdapat dokumen revisi yang harus di verifikasi ulang sebagai persetujuan SIKA <br>
+																			<b>Perpanjang : <br>
+																			</b> terdapat SIKA kadaluarsa yang butuh diperpanjang <br>
+																			<b>Ditolak : <br>
+																			</b> Terdapat dokument pengajuan dan/atau SIKA yang ditolak dan membutuhkan revisi pengajuan <br>
+																			<b>Tutup : <br>
+																			</b> Terdapat pekerjaan yang sudan selesi, dan membutuhkan persetujuan penutupan SIKA<br>
+																			<b>Ditunda : <br>
+																			</b> Terdapat SIKA yang mash berlangsung namun dihentikan paksa (momentary of interruption)<br>
+																			<b>Progress : <br>
+																			</b> Terdapat SIKA yang masih berlangsung<br>
+																			<b>Selesai : <br>
+																			</b> Terdapat SIKA dengan status selesai<br>
+																			<b>Kadaluarsa : <br>
+																			</b>Terdapat SIKA yang melewati masa berlaku<br></div>">Penjelasan Grafik</a>
+																		</div>
 																		<div id="status_pekerjaan"></div>
+																	</div>
+																</div>
+															</div>
+															<div class="col-sm-12">
+																<div  class="kt-portlet">
+																	<div class="kt-portlet__head">
+																		<div class="kt-portlet__head-label">
+																			<span class="kt-portlet__head-icon kt-hidden">
+																				<i class="la la-gear"></i>
+																			</span>
+																			<h3 class="kt-portlet__head-title">
+																				Status SIKA
+																			</h3>
+																		</div>
+																	</div>
+																	<div class="kt-portlet__body">
+																		<div id="status_sika"></div>
+																	</div>
+																</div>
+															</div>
+															<div class="col-sm-12">
+																<div  class="kt-portlet">
+																	<div class="kt-portlet__head">
+																		<div class="kt-portlet__head-label">
+																			<span class="kt-portlet__head-icon kt-hidden">
+																				<i class="la la-gear"></i>
+																			</span>
+																			<h3 class="kt-portlet__head-title">
+																				Status WIP
+																			</h3>
+																		</div>
+																	</div>
+																	<div class="kt-portlet__body">
+																		<div id="statistik_wip" style="min-width: 900px; height: 400px; margin: 0 auto"></div>
 																	</div>
 																</div>
 															</div>
@@ -391,7 +470,8 @@
 																			</h3>
 																		</div>
 																	</div>
-																	<div class="kt-portlet__body">
+																	<div style="height: 492px" class="kt-portlet__body">
+
 																		<div class="row">
 																			<div align="center" class="col-sm-12">
 																				<div style="padding: 15px" class="">
@@ -440,12 +520,29 @@
 																			<span class="kt-portlet__head-icon kt-hidden">
 																				<i class="la la-gear"></i>
 																			</span>
-																			<h3 class="	kt-portlet__head-title">
+																			<h3 class="kt-portlet__head-title">
 																				Jumlah Pekerjaan Tahun ini
 																			</h3>
 																		</div>
 																	</div>
 																	<div class="kt-portlet__body">
+																		<div align="left">
+																			<a tabindex="0"
+																			class="btn btn-secondary" 
+																			role="button" 
+																			data-html="true" 
+																			data-toggle="popover" 
+																			data-trigger="hover" 
+																			title="<b>Penjelasan Grafik</b>" 
+																			data-content="<div>
+																				<b>ABI : <br>
+																				</b> Pelaksanaan pengadaan Barang/Jasa yang tercantum dalam RKAP dan sudah mendapatkan FID dan bersifat mengamankan atau meningkatkan nilai aset<br>
+																				<b>ABO : <br>
+																				</b> Pelaksanaan pengadaan barang/jasa yang direncanakan oleh lokasi dan bersifat menunjang keberlangsungan operasional  <br>
+																				<b>Swakelola : <br>
+																				</b>Pelaksanaan Pengadaan Barang/Jasa yang direncanakan, dikerjakan dan diawasi sendiri dengan menggunakan tenaga sendiri, alat sendiri, atau upah borongan tenaga <br>
+																			</div>">Penjelasan Grafik</a>
+																		</div>
 																		<div id="jumlah_pekerjaan_tahun_ini"></div>
 																	</div>
 																</div>
@@ -469,7 +566,7 @@
 													<div align="center" class="kt-portlet__body padding-body">
 														<div class="row">
 															<div style="margin-top: 20px" class="col-sm-4">
-																<div class="kt-portlet">
+																<div style="height: 430px" class="kt-portlet">
 																	<div class="kt-portlet__head">
 																		<div class="kt-portlet__head-label">
 																			<span class="kt-portlet__head-icon kt-hidden">
@@ -524,41 +621,7 @@
 																		</div>
 																	</div>
 																	<div class="kt-portlet__body">
-																		<div class="row">
-																			<div class="col-sm">
-																				<h3>Pekerja</h3>
-																			</div>
-																			<div class="col-sm">
-																				<h3 id="jumlah_pekerja" name="jumlah_pekerja">50</h3>
-																			</div>
-																		</div>
-																		<div class="kt-separator kt-separator--border-dashed kt-separator--space-md"></div>	
-																		<div class="row">
-																			<div class="col-sm">
-																				<h3>AMT</h3>
-																			</div>
-																			<div class="col-sm">
-																				<h3 id="jumlah_amt" name="jumlah_amt">20</h3>
-																			</div>
-																		</div>
-																		<div class="kt-separator kt-separator--border-dashed kt-separator--space-md"></div>	
-																		<div class="row">
-																			<div class="col-sm">
-																				<h3>TKJP</h3>
-																			</div>
-																			<div class="col-sm">
-																				<h3 id="jumlah_tkjp" name="jumlah_tkjp">30</h3>
-																			</div>
-																		</div>
-																		<div class="kt-separator kt-separator--border-dashed kt-separator--space-md"></div>	
-																		<div class="row">
-																			<div class="col-sm">
-																				<h3>Kontraktor</h3>
-																			</div>
-																			<div class="col-sm">
-																				<h3 id="jumlah_kontraktor" name="jumlah_kontraktor">30</h3>
-																			</div>
-																		</div>
+																		<div id="tipe_pekerja_pob"></div>
 																	</div>
 																</div>
 															</div>
@@ -656,6 +719,9 @@
 	<script src="https://www.amcharts.com/lib/4/themes/material.js"></script>
 	<script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+	<script src="https://code.highcharts.com/highcharts.js"></script>
+	<script src="https://code.highcharts.com/modules/exporting.js"></script>
+	<script src="https://code.highcharts.com/modules/export-data.js"></script>
 	<!--end:: Global Optional Vendors -->
 	<!--begin::Global Theme Bundle(used by all pages) -->
 	<script src="../assets/demo/default/base/scripts.bundle.js" type="text/javascript"></script>
@@ -672,10 +738,11 @@
 	<script src="../assets/app/script/js_ajax_public_tes.js" type="text/javascript"></script>
 	<script>
 		var options = {
-			colors: ['#2196F3', '#E53935'],
+			colors: ['#b052c0', '#f6695e'],
 			chart: {
 				height: 328,
 				type: 'bar',
+				radius: 10,
 				stacked: true,
 				toolbar: {
 					show: true
@@ -697,6 +764,7 @@
 			plotOptions: {
 				bar: {
 					horizontal: false,
+					columnWidth: '55%',
 				},
 			},
 			dataLabels: {
@@ -704,7 +772,8 @@
 					return val + "%";
 				},*/
 				style: {
-					fontSize: '18px'
+					fontSize: '20px',
+					textOutline: false
 				}
 			},
 			series: [{
@@ -740,7 +809,6 @@
 
 		// Themes begin
 		am4core.useTheme(am4themes_animated);
-		am4core.useTheme(am4themes_dataviz);
 		// Themes end
 
 		// Create chart
@@ -770,7 +838,52 @@
 		series.dataFields.value = "value";
 		series.dataFields.radiusValue = "value";
 		series.dataFields.category = "tipe";
-		series.slices.template.cornerRadius = 3;
+		series.slices.template.cornerRadius = 1;
+		series.colors.step = 3;
+
+		series.hiddenState.properties.endAngle = -90;
+
+		chart.legend = new am4charts.Legend();
+		/*series.labels.template.disabled = true;*/
+		/*series.ticks.template.disabled = true;*/
+
+		}); // end am4core.ready()
+	</script>
+	<script>
+		am4core.ready(function() {
+
+		// Themes begin
+		am4core.useTheme(am4themes_animated);
+		// Themes end
+
+		// Create chart
+		var chart = am4core.create("tipe_pekerja_pob", am4charts.PieChart);
+		chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
+
+		chart.data = [
+		{
+			tipe: "Pekerja",
+			value: 130
+		},
+		{
+			tipe: "TKJP",
+			value: 80
+		},
+		{
+			tipe: "AMT",
+			value: 100
+		},
+		{
+			tipe: "Kontraktor",
+			value: 79
+		}
+		];
+
+		var series = chart.series.push(new am4charts.PieSeries());
+		series.dataFields.value = "value";
+		series.dataFields.radiusValue = "value";
+		series.dataFields.category = "tipe";
+		series.slices.template.cornerRadius = 1;
 		series.colors.step = 3;
 
 		series.hiddenState.properties.endAngle = -90;
@@ -828,11 +941,13 @@
 		categoryAxis.dataFields.category = "status";
 		categoryAxis.renderer.grid.template.location = 0;
 		categoryAxis.renderer.minGridDistance = 30;
-		categoryAxis.renderer.labels.template.horizontalCenter = "right";
-		categoryAxis.renderer.labels.template.verticalCenter = "middle";
-		categoryAxis.renderer.labels.template.rotation = 270;
-		categoryAxis.tooltip.disabled = true;
-		categoryAxis.renderer.minHeight = 110;
+
+		categoryAxis.renderer.labels.template.adapter.add("dy", function(dy, target) {
+			if (target.dataItem && target.dataItem.index & 2 == 2) {
+				return dy + 25;
+			}
+			return dy;
+		});
 
 		var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
 		valueAxis.renderer.minWidth = 50;
@@ -847,8 +962,8 @@
 
 		series.tooltip.pointerOrientation = "vertical";
 
-		series.columns.template.column.cornerRadiusTopLeft = 10;
-		series.columns.template.column.cornerRadiusTopRight = 10;
+		series.columns.template.column.cornerRadiusTopLeft = 0;
+		series.columns.template.column.cornerRadiusTopRight = 0;
 		series.columns.template.column.fillOpacity = 0.8;
 
 		// on hover, make corner radiuses bigger
@@ -875,6 +990,95 @@
 		// Themes end
 
 		// Create chart instance
+		var chart = am4core.create("status_sika", am4charts.XYChart);
+		/*chart.scrollbarX = new am4core.Scrollbar();*/
+
+		// Add data
+		chart.data = [{
+			"status": "Cold",
+			"jumlah": 188
+		}, {
+			"status": "Hot",
+			"jumlah": 320
+		}, {
+			"status": "Bahan Radioaktif",
+			"jumlah": 180
+		}, {
+			"status": "Pengangkatan",
+			"jumlah": 132
+		}, {
+			"status": "Gas Tes",
+			"jumlah": 112
+		}, {
+			"status": "Proses Mekanikal",
+			"jumlah": 111
+		}, {
+			"status": "Ruang Tertutup",
+			"jumlah": 98
+		}, {
+			"status": "Penggalian",
+			"jumlah": 112
+		},{
+			"status": "Pekerjaan Listrik",
+			"jumlah": 71
+		},{
+			"status": "Penyelaman",
+			"jumlah": 132
+		}];
+
+		// Create axes
+		var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
+		categoryAxis.dataFields.category = "status";
+		categoryAxis.renderer.grid.template.location = 0;
+		categoryAxis.renderer.minGridDistance = 30;
+
+		categoryAxis.renderer.labels.template.adapter.add("dy", function(dy, target) {
+			if (target.dataItem && target.dataItem.index & 2 == 2) {
+				return dy + 25;
+			}
+			return dy;
+		});
+
+		var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+		valueAxis.renderer.minWidth = 50;
+
+		// Create series
+		var series = chart.series.push(new am4charts.ColumnSeries());
+		series.sequencedInterpolation = true;
+		series.dataFields.valueY = "jumlah";
+		series.dataFields.categoryX = "status";
+		series.tooltipText = "[{categoryX}: bold]{valueY}[/]";
+		series.columns.template.strokeWidth = 0;
+
+		series.tooltip.pointerOrientation = "vertical";
+
+		series.columns.template.column.cornerRadiusTopLeft = 0;
+		series.columns.template.column.cornerRadiusTopRight = 0;
+		series.columns.template.column.fillOpacity = 0.8;
+
+		// on hover, make corner radiuses bigger
+		var hoverState = series.columns.template.column.states.create("hover");
+		hoverState.properties.cornerRadiusTopLeft = 0;
+		hoverState.properties.cornerRadiusTopRight = 0;
+		hoverState.properties.fillOpacity = 1;
+
+		series.columns.template.adapter.add("fill", function(fill, target) {
+			return chart.colors.getIndex(target.dataItem.index);
+		});
+
+		// Cursor
+		chart.cursor = new am4charts.XYCursor();
+
+		}); // end am4core.ready()
+	</script>
+	<script>
+		am4core.ready(function() {
+
+		// Themes begin
+		am4core.useTheme(am4themes_animated);
+		// Themes end
+
+		// Create chart instance
 		var chart = am4core.create("status_digital_passport", am4charts.XYChart);
 		/*chart.scrollbarX = new am4core.Scrollbar();*/
 
@@ -898,14 +1102,17 @@
 		categoryAxis.dataFields.category = "status";
 		categoryAxis.renderer.grid.template.location = 0;
 		categoryAxis.renderer.minGridDistance = 30;
-		categoryAxis.renderer.labels.template.horizontalCenter = "right";
-		categoryAxis.renderer.labels.template.verticalCenter = "middle";
-		categoryAxis.renderer.labels.template.rotation = 270;
-		categoryAxis.tooltip.disabled = true;
-		categoryAxis.renderer.minHeight = 110;
+
+		categoryAxis.renderer.labels.template.adapter.add("dy", function(dy, target) {
+			if (target.dataItem && target.dataItem.index & 2 == 2) {
+				return dy + 25;
+			}
+			return dy;
+		});
 
 		var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
 		valueAxis.renderer.minWidth = 50;
+
 
 		// Create series
 		var series = chart.series.push(new am4charts.ColumnSeries());
@@ -917,8 +1124,8 @@
 
 		series.tooltip.pointerOrientation = "vertical";
 
-		series.columns.template.column.cornerRadiusTopLeft = 10;
-		series.columns.template.column.cornerRadiusTopRight = 10;
+		series.columns.template.column.cornerRadiusTopLeft = 0;
+		series.columns.template.column.cornerRadiusTopRight = 0;
 		series.columns.template.column.fillOpacity = 0.8;
 
 		// on hover, make corner radiuses bigger
@@ -936,6 +1143,99 @@
 
 		}); // end am4core.ready()
 	</script>
+	<script>
+	Highcharts.chart('statistik_wip', {
+		colors: ['#FFD54F','#FFB300','#7480c1','#5f6db5','#78ca7e', '#61a566', '#79BDF2', '#4daaf3'],
+		chart: {
+			type: 'column'
+		},
+		title: {
+			text: 'Statistik WIP'
+		},
+		xAxis: {
+			categories: ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember']
+		},
+		yAxis: {
+			min: 0,
+			title: {
+				text: 'Total Pekerjaan'
+			},
+			stackLabels: {
+				enabled: true,
+				style: {
+					color: (
+						Highcharts.defaultOptions.title.style &&
+						Highcharts.defaultOptions.title.style.color
+						) || 'black'
+				},
+				formatter: function () {
+					var jumlah_wip = this.points[7][1] + 
+					(this.points[5][1] - this.points[5][0]) +
+					(this.points[3][1] - this.points[3][0]) +
+					(this.points[1][1] - this.points[1][0]);
+					return jumlah_wip;
+				}
+			}
+		},
+		legend: {
+			align: 'right',
+			x: -30,
+			verticalAlign: 'top',
+			y: 25,
+			floating: true,
+			backgroundColor:
+			Highcharts.defaultOptions.legend.backgroundColor || 'white',
+			shadow: false
+		},
+		tooltip: {
+			headerFormat: '{point.x}<br/>',
+			pointFormat: '<b>{series.name}: {point.y}</b>',
+		},
+		plotOptions: {
+			column: {
+				stacking: 'normal',
+				dataLabels: {
+					enabled: true,
+					color: 'white',
+					style: {
+						textOutline: false
+					},
+
+				}
+			}
+		},
+		series: [{
+			name: 'Max KPI',
+			data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+		},{
+			name: 'KPI',
+			data: [10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
+		},{	
+			name: 'Max Inspeksi',
+			data: [10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
+		},{
+			name: 'Inspeksi',
+			data: [30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30]
+		},{
+			name: 'Max Program',
+			data: [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5]
+		},{
+			name: 'Program',
+			data: [15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15]
+		},{
+			name: 'Max PJA',
+			data: [3, 2, 1, 9, 8, 7, 6, 5, 4, 8, 6, 1]
+		},{
+			name: 'PJA',
+			data: [27, 28, 29, 21, 22, 23, 24, 25, 26, 22, 24,29]
+		}]
+	});
+</script>
+<script>
+	$(function(){
+		$("[data-toggle=popover]").popover();
+	});
+</script>
 	
 </body>
 <!-- end::Body -->

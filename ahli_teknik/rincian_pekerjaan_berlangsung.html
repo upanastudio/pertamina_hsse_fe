@@ -68,6 +68,7 @@
 	<link href="../assets/app/style/text_black.css" rel="stylesheet" type="text/css" />
 	<link href="../assets/app/style/at_rincian-pekerjaan-style.css" rel="stylesheet" type="text/css" />
 	<link href="../assets/app/style/tab-style.css" rel="stylesheet" type="text/css" />
+	<link href="../assets/app/style/blue-theme.css" rel="stylesheet" type="text/css" />
 	<style>
 		div.dataTables_wrapper div.dataTables_filter input {
 			width: 255px;
@@ -1060,7 +1061,7 @@
 								</button>
 							</div>
 							<div class="modal-body">
-								<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+								<div id="statistik_wip" style="height: 400px; margin: 0 auto"></div>
 							</div>
 							<div class="modal-footer">
 								<button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
@@ -1271,11 +1272,11 @@
 											<h5 class="col-sm-12">Penolakan</h5>
 											<label class="col-2 col-form-label">Tanggal</label>
 											<div style="margin-bottom:10px" class="col-10">
-												<input disabled="" class="form-control" type="date" id="tanggal_penolakan" name="tanggal_penolakan">
+												<input disabled="" type="text" class="form-control datepicker_mode" id="tanggal_penolakan" name="tanggal_penolakan" value="20/November/2019" />
 											</div>
 											<label class="col-2 col-form-label">Alasan</label>
 											<div class="col-10">
-												<textarea disabled="" style="resize: none" class="form-control" id="alasan_ditolak" name="alasan_ditolak" rows="3"></textarea>
+												<textarea disabled="" style="resize: none" class="form-control"id="alasan_ditolak" name="alasan_ditolak" rows="4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sodales venenatis tempor. Nullam lacinia imperdiet consectetur. Vestibulum dictum purus eget urna porta, vitae laoreet diam imperdiet. Nullam tempus pellentesque sodales.</textarea>
 											</div>
 										</div>
 										<div class="kt-separator kt-separator--border-dashed kt-separator--space-sm"></div>
@@ -1285,11 +1286,11 @@
 											<h5 class="col-sm-12">Pemberhentian Sementara</h5>
 											<label class="col-2 col-form-label">Tanggal</label>
 											<div style="margin-bottom:10px" class="col-10">
-												<input disabled="" class="form-control" type="date" id="tanggal_pemberhentian" name="tanggal_pemberhentian">
+												<input disabled="" type="text" class="form-control datepicker_mode" id="tanggal_pemberhentian" name="tanggal_pemberhentian" value="20/November/2019" />
 											</div>
 											<label class="col-2 col-form-label">Alasan</label>
 											<div class="col-10">
-												<textarea disabled="" style="resize: none" class="form-control" id="alasan_ditolak" name="alasan_ditolak" rows="3"></textarea>
+												<textarea disabled="" style="resize: none" class="form-control" id="alasan_ditolak" name="alasan_ditolak" rows="4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sodales venenatis tempor. Nullam lacinia imperdiet consectetur. Vestibulum dictum purus eget urna porta, vitae laoreet diam imperdiet. Nullam tempus pellentesque sodales.</textarea>
 											</div>
 										</div>
 										<div class="kt-separator kt-separator--border-dashed kt-separator--space-sm"></div>
@@ -1299,11 +1300,11 @@
 											<h5 class="col-sm-12">Pemberhentian Sementara</h5>
 											<label class="col-2 col-form-label">Tanggal</label>
 											<div style="margin-bottom:10px" class="col-10">
-												<input disabled="" class="form-control" type="date" id="tanggal_pemberhentian" name="tanggal_pemberhentian">
+												<input disabled="" type="text" class="form-control datepicker_mode" id="tanggal_pemberhentian" name="tanggal_pemberhentian" value="20/November/2019" />
 											</div>
 											<label class="col-2 col-form-label">Alasan</label>
 											<div class="col-10">
-												<textarea disabled="" style="resize: none" class="form-control" id="alasan_ditolak" name="alasan_ditolak" rows="3"></textarea>
+												<textarea disabled="" style="resize: none" class="form-control" id="alasan_ditolak" name="alasan_ditolak" rows="4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sodales venenatis tempor. Nullam lacinia imperdiet consectetur. Vestibulum dictum purus eget urna porta, vitae laoreet diam imperdiet. Nullam tempus pellentesque sodales.</textarea>
 											</div>
 										</div>
 										<div class="kt-separator kt-separator--border-dashed kt-separator--space-sm"></div>
@@ -1313,11 +1314,11 @@
 											<h5 class="col-sm-12">Pemberhentian Sementara</h5>
 											<label class="col-2 col-form-label">Tanggal</label>
 											<div style="margin-bottom:10px" class="col-10">
-												<input disabled="" class="form-control" type="date" id="tanggal_pemberhentian" name="tanggal_pemberhentian">
+												<input disabled="" type="text" class="form-control datepicker_mode" id="tanggal_pemberhentian" name="tanggal_pemberhentian" value="20/November/2019" />
 											</div>
 											<label class="col-2 col-form-label">Alasan</label>
 											<div class="col-10">
-												<textarea disabled="" style="resize: none" class="form-control" id="alasan_ditolak" name="alasan_ditolak" rows="3"></textarea>
+												<textarea disabled="" style="resize: none" class="form-control" id="alasan_ditolak" name="alasan_ditolak" rows="4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sodales venenatis tempor. Nullam lacinia imperdiet consectetur. Vestibulum dictum purus eget urna porta, vitae laoreet diam imperdiet. Nullam tempus pellentesque sodales.</textarea>
 											</div>
 										</div>
 										<div class="kt-separator kt-separator--border-dashed kt-separator--space-sm"></div>
@@ -1578,70 +1579,139 @@
 		});
 	</script>
 	<script>
-    	Highcharts.chart('container', {
-    		colors: ['#D32F2F', '#FBC02D', '#689F38', '#1976D2'],
-    		chart: {
-    			type: 'column'
-    		},
-    		title: {
-    			text: 'Statistik WIP'
-    		},
-    		xAxis: {
-    			categories: ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember']
-    		},
-    		yAxis: {
-    			min: 0,
-    			title: {
-    				text: 'Total Pekerjaan'
-    			},
-    			stackLabels: {
-    				enabled: true,
-    				style: {
-    					color: (
-    						Highcharts.defaultOptions.title.style &&
-    						Highcharts.defaultOptions.title.style.color
-    						) || 'gray'
-    				}
-    			}
-    		},
-    		legend: {
-    			align: 'right',
-    			x: -30,
-    			verticalAlign: 'top',
-    			y: 25,
-    			floating: true,
-    			backgroundColor:
-    			Highcharts.defaultOptions.legend.backgroundColor || 'white',
-    			shadow: false
-    		},
-    		tooltip: {
-    			headerFormat: '<b>{point.x}</b><br/>',
-    			pointFormat: '{series.name}: {point.y}<br/>Total: {point.stackTotal}'
-    		},
-    		plotOptions: {
-    			column: {
-    				stacking: 'normal',
-    				dataLabels: {
-    					enabled: true,
+		Highcharts.chart('statistik_wip', {
+			colors: ['#f97b72','#ea655d','#7480c1','#5f6db5','#78ca7e', '#61a566', '#79BDF2', '#4daaf3'],
+			chart: {
+				type: 'column'
+			},
+			title: {
+				text: 'Statistik WIP'
+			},
+			xAxis: {
+				categories: ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember']
+			},
+			yAxis: {
+				min: 0,
+				title: {
+					text: 'Total Pekerjaan'
+				},
+				stackLabels: {
+					enabled: true,
+					style: {
+						color: (
+							Highcharts.defaultOptions.title.style &&
+							Highcharts.defaultOptions.title.style.color
+							) || 'black'
+					},
+					formatter: function () {
+						// var chart = $('#statistik_wip').highcharts();
+						var jumlah_wip = this.points[7][1] + 
+						(this.points[5][1] - this.points[5][0]) +
+						(this.points[3][1] - this.points[3][0]) +
+						(this.points[1][1] - this.points[1][0]);
+						return jumlah_wip;
+					}
+				}
+			},
+			legend: {
+				align: 'right',
+				x: -30,
+				verticalAlign: 'top',
+				y: 25,
+				floating: true,
+				backgroundColor:
+				Highcharts.defaultOptions.legend.backgroundColor || 'white',
+				shadow: false
+			},
+			tooltip: {
+				headerFormat: '<b>{point.x}</b><br/>',
+				pointFormat: '{series.name}: {point.y}<br/>Total: {point.stackTotal}',
+			},
+			plotOptions: {
+				column: {
+					stacking: 'normal',
+					dataLabels: {
+						enabled: true,
+						color: 'white',
+						style: {
+							textOutline: false
+						},
 
-    				}
-    			}
-    		},
-    		series: [{
-    			name: 'KPI',
-    			data: [21, 7, 25, 13, 22, 8, 10, 8, 13, 27, 23, 23]
-    		},{
-    			name: 'Inspeksi',
-    			data: [13, 23, 20, 8, 13, 27, 23, 23, 20, 13, 5, 18]
-    		},{
-    			name: 'Program',
-    			data: [11, 17, 15, 15, 21, 14, 16, 17, 15, 15, 21, 20]
-    		},{
-    			name: 'PJA',
-    			data: [44, 44, 44, 44, 44, 44, 44, 44, 44, 44, 44,44]
-    		}]
-    	});
-    </script>
+					}
+				}
+			},
+			series: [{
+				name: 'Max KPI',
+				data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+			},{
+				name: 'KPI',
+				data: [10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
+			},{	
+				name: 'Max Inspeksi',
+				data: [10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
+			},{
+				name: 'Inspeksi',
+				data: [30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30]
+			},{
+				name: 'Max Program',
+				data: [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5]
+			},{
+				name: 'Program',
+				data: [15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15]
+			},{
+				name: 'Max PJA',
+				data: [3, 2, 1, 9, 8, 7, 6, 5, 4, 8, 6, 1]
+			},{
+				name: 'PJA',
+				data: [27, 28, 29, 21, 22, 23, 24, 25, 26, 22, 24,29]
+			}]
+		});
+	</script>
+	<script>
+
+		var KTBootstrapDatepicker = function () {
+
+			var arrows;
+			if (KTUtil.isRTL()) {
+				arrows = {
+					leftArrow: '<i class="la la-angle-right"></i>',
+					rightArrow: '<i class="la la-angle-left"></i>'
+				}
+			} else {
+				arrows = {
+					leftArrow: '<i class="la la-angle-left"></i>',
+					rightArrow: '<i class="la la-angle-right"></i>'
+				}
+			}
+			var demos = function () {
+				$('.datepicker_mode, .datepicker_mode_validate').datepicker({
+					rtl: KTUtil.isRTL(),
+					todayHighlight: true,
+					orientation: "bottom left",
+					templates: arrows,
+					format: 'dd/MM/yyyy'
+				});
+
+				$('.datepicker_mode_modal').datepicker({
+					rtl: KTUtil.isRTL(),
+					todayHighlight: true,
+					orientation: "bottom left",
+					templates: arrows
+				});
+
+			}
+
+			return {
+				init: function() {
+					demos(); 
+				}
+			};
+		}();
+
+		jQuery(document).ready(function() {    
+			KTBootstrapDatepicker.init();
+		});
+	</script>
 </body>
 <!-- end::Body -->
 </html>

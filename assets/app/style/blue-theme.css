@@ -1,14 +1,16 @@
 /*background di logo*/
 .kt-aside__brand {
-    background-color: #486475;
+    background-color: #17455F;
 }
 /*Sidebar area luar*/
 .kt-grid.kt-grid--hor-desktop.kt-grid--desktop > .kt-grid__item.kt-grid__item--fluid {
-	background: #4CB5F5;
+	background: #225165;
 }
 /*Sidebar area dalam(menu)*/
 .kt-aside-menu {
-    background-color: #4CB5F5;
+	background-image: url("http://localhost/hsse_fe/assets/media/bg/dot_bg.png");
+    background-color: #225165;
+
 }
 /*Menu Aktif*/
 .kt-aside-menu .kt-menu__nav > .kt-menu__item.kt-menu__item--active > .kt-menu__heading, .kt-aside-menu .kt-menu__nav > .kt-menu__item.kt-menu__item--active > .kt-menu__link {
@@ -32,5 +34,35 @@
 }
 /*warna hover menu*/
 .kt-aside-menu .kt-menu__nav > .kt-menu__item:not(.kt-menu__item--parent):not(.kt-menu__item--open):not(.kt-menu__item--here):not(.kt-menu__item--active):hover > .kt-menu__heading, .kt-aside-menu .kt-menu__nav > .kt-menu__item:not(.kt-menu__item--parent):not(.kt-menu__item--open):not(.kt-menu__item--here):not(.kt-menu__item--active):hover > .kt-menu__link {
-    background-color: #49ADEB;
+    background-color: #2F7289;
+}
+
+.kt-aside-menu .kt-menu__nav > .kt-menu__item.kt-menu__item--here > .kt-menu__link {
+     background-color: #225165;
+}
+
+.kt-aside-menu .kt-menu__nav > .kt-menu__item .kt-menu__submenu .kt-menu__item.kt-menu__item--active > .kt-menu__heading, .kt-aside-menu .kt-menu__nav > .kt-menu__item .kt-menu__submenu .kt-menu__item.kt-menu__item--active > .kt-menu__link {
+    background-color: #3C8FC2;
+}
+
+.kt-aside-menu .kt-menu__nav > .kt-menu__item.kt-menu__item--here > .kt-menu__link .kt-menu__link-icon {
+    color: #ffffff;
+}
+
+.kt-aside-menu .kt-menu__nav > .kt-menu__item .kt-menu__submenu .kt-menu__item:not(.kt-menu__item--parent):not(.kt-menu__item--open):not(.kt-menu__item--here):not(.kt-menu__item--active):hover > .kt-menu__link {
+    background-color: #285b7a;
+}
+
+.kt-aside-menu .kt-menu__nav > .kt-menu__item .kt-menu__submenu .kt-menu__item > .kt-menu__link .kt-menu__link-text {
+    color: #dcdcdc;
+}
+
+.kt-aside-menu .kt-menu__nav > .kt-menu__item.kt-menu__item--open > .kt-menu__heading, .kt-aside-menu .kt-menu__nav > .kt-menu__item.kt-menu__item--open > .kt-menu__link {
+     background-color: #225165;
+}
+.kt-aside-menu .kt-menu__nav > .kt-menu__item.kt-menu__item--open > .kt-menu__link .kt-menu__link-icon {
+    color: #ffffff;
+}
+.kt-aside-menu .kt-menu__nav > .kt-menu__item > .kt-menu__link .kt-menu__ver-arrow {
+    color: #ffffff;
 }

@@ -68,7 +68,7 @@
 	<link href="../assets/app/style/text_black.css" rel="stylesheet" type="text/css" />
 	<link href="../assets/app/style/pertamina-theme.css" rel="stylesheet" type="text/css" />
 	<!-- <link href="../assets/app/style/green-theme.css" rel="stylesheet" type="text/css" /> -->
-	<!-- <link href="../assets/app/style/blue-theme.css" rel="stylesheet" type="text/css" /> -->
+	<link href="../assets/app/style/blue-theme.css" rel="stylesheet" type="text/css" />
 	<!-- <link href="../assets/app/style/red-theme.css" rel="stylesheet" type="text/css" /> -->
 	<!-- <link href="../assets/app/style/redblack-theme.css" rel="stylesheet" type="text/css" /> -->
 	<style>
@@ -243,7 +243,7 @@
 										</div>
 									</div>
 									<div class="kt-portlet__body">
-										<div id="chart"></div>
+										<div id="pekerjaan_berjalan"></div>
 									</div>
 								</div>
 							</div>
@@ -319,9 +319,9 @@
 	<script src="../assets/app/script/js_ajax_ahli_teknik.js" type="text/javascript"></script>
 	<script>
 		var options = {
-			colors: ['#2196F3', '#E53935'],
+			colors: ['#b052c0', '#f6695e'],
 			chart: {
-				height: 328,
+				height: 387,
 				type: 'bar',
 				stacked: true,
 				toolbar: {
@@ -376,7 +376,7 @@
 
 		}
 		var chart = new ApexCharts(
-			document.querySelector("#chart"),
+			document.querySelector("#pekerjaan_berjalan"),
 			options
 			);
 

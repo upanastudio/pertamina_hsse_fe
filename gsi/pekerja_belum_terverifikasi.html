@@ -65,6 +65,7 @@
 	<link rel="shortcut icon" href="../assets/media/logos/favicon.ico" />
 	<link href="../assets/app/style/pertamina-theme.css" rel="stylesheet" type="text/css" />
 	<link href="../assets/app/style/text_black.css" rel="stylesheet" type="text/css" />
+	<link href="../assets/app/style/blue-theme.css" rel="stylesheet" type="text/css" />
 	<style>
 		.btn-sm {
 			margin-right: 5px;
@@ -375,11 +376,6 @@
 	<script src="../assets/vendors/general/wnumb/wNumb.js" type="text/javascript"></script>
 	<!--end:: Global Mandatory Vendors -->
 	<!--begin:: Global Optional Vendors -->
-	<script src="../assets/vendors/general/sweetalert2/dist/sweetalert2.min.js" type="text/javascript"></script>
-	<script src="../assets/vendors/custom/components/vendors/sweetalert2/init.js" type="text/javascript"></script>
-	<script src="../assets/vendors/general/bootstrap-daterangepicker/daterangepicker.js" type="text/javascript"></script>
-	<script src="../assets/vendors/general/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js" type="text/javascript"></script>
-	<script src="../assets/vendors/custom/components/vendors/bootstrap-datepicker/init.js" type="text/javascript"></script>
 	<!--end:: Global Optional Vendors -->
 	<!--begin::Global Theme Bundle(used by all pages) -->
 	<script src="../assets/demo/default/base/scripts.bundle.js" type="text/javascript"></script>
@@ -387,9 +383,6 @@
 	<!--begin::Page Vendors(used by this page) -->
 	<script src="../assets/vendors/custom/fullcalendar/fullcalendar.bundle.js" type="text/javascript"></script>
 	<!--end::Page Vendors -->
-	<!--begin::Page Scripts(used by this page) -->
-	<script src="../assets/app/custom/general/dashboard.js" type="text/javascript"></script>
-	<!--end::Page Scripts -->
 	<script src="../assets/app/custom/general/crud/forms/widgets/bootstrap-datepicker.js" type="text/javascript"></script>
 	<!--begin::Global App Bundle(used by all pages) -->
 	<script src="../assets/app/bundle/app.bundle.js" type="text/javascript"></script>
@@ -397,30 +390,6 @@
 	<!-- AJAX -->
 	<script src="../assets/vendors/custom/datatables/datatables.bundle.js" type="text/javascript"></script>
 	<script src="../assets/app/script/js_ajax_gsi.js" type="text/javascript"></script>
-	<script>
-	// Class definition
-	var KTSweetAlert2Demo = function() {
-    // Demos
-    var initDemos = function() {
-    	$('.kt_sweetalert_terima').click(function(e) {
-    		swal.fire("Tersimpan!", "Tanggal tes telah tersimpan!", "success");
-    	});
-    	$('.kt_sweetalert_tolak').click(function(e) {
-    		swal.fire("Tersimpan!", "Alasan penolakan telah tersimpan!", "success");
-    	});
-    };
-    return {
-        // Init
-        init: function() {
-        	initDemos();
-        },
-    };
-}();
-	// Class Initialization
-	jQuery(document).ready(function() {
-		KTSweetAlert2Demo.init();
-	});
-</script>
 </body>
 <!-- end::Body -->
 </html>

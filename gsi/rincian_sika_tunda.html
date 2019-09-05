@@ -66,6 +66,7 @@
 	<link rel="shortcut icon" href="../assets/media/logos/favicon.ico" />
 	<link href="../assets/app/style/pertamina-theme.css" rel="stylesheet" type="text/css" />
 	<link href="../assets/app/style/text_black.css" rel="stylesheet" type="text/css" />
+	<link href="../assets/app/style/blue-theme.css" rel="stylesheet" type="text/css" />
 </head>
 <!-- end::Head -->
 <!-- begin::Body -->
@@ -352,7 +353,7 @@
 						</div>
 					</div>
 				</div>
-                <div class="modal fade" id="kt_modal_riwayat" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+               <div class="modal fade" id="kt_modal_riwayat" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 					<div class="modal-dialog" role="document">
 						<div class="modal-content">
 							<div class="modal-header">
@@ -367,7 +368,7 @@
 											<h5 class="col-sm-12">Penolakan</h5>
 											<label class="col-2 col-form-label">Tanggal</label>
 											<div style="margin-bottom:10px" class="col-10">
-												<input disabled="" class="form-control" type="date" id="tanggal_penolakan" name="tanggal_penolakan">
+												<input disabled="" class="form-control datepicker_mode" id="tanggal_penolakan" name="tanggal_penolakan" value="20/November/2019">
 											</div>
 											<label class="col-2 col-form-label">Alasan</label>
 											<div class="col-10">
@@ -381,7 +382,7 @@
 											<h5 class="col-sm-12">Pemberhentian Sementara</h5>
 											<label class="col-2 col-form-label">Tanggal</label>
 											<div style="margin-bottom:10px" class="col-10">
-												<input disabled="" class="form-control" type="date" id="tanggal_pemberhentian" name="tanggal_pemberhentian">
+												<input disabled="" class="form-control datepicker_mode" value="20/November/2019" id="tanggal_pemberhentian" name="tanggal_pemberhentian">
 											</div>
 											<label class="col-2 col-form-label">Alasan</label>
 											<div class="col-10">
@@ -395,7 +396,7 @@
 											<h5 class="col-sm-12">Pemberhentian Sementara</h5>
 											<label class="col-2 col-form-label">Tanggal</label>
 											<div style="margin-bottom:10px" class="col-10">
-												<input disabled="" class="form-control" type="date" id="tanggal_pemberhentian" name="tanggal_pemberhentian">
+												<input disabled="" class="form-control datepicker_mode" value="20/November/2019" id="tanggal_pemberhentian" name="tanggal_pemberhentian">
 											</div>
 											<label class="col-2 col-form-label">Alasan</label>
 											<div class="col-10">
@@ -409,7 +410,7 @@
 											<h5 class="col-sm-12">Pemberhentian Sementara</h5>
 											<label class="col-2 col-form-label">Tanggal</label>
 											<div style="margin-bottom:10px" class="col-10">
-												<input disabled="" class="form-control" type="date" id="tanggal_pemberhentian" name="tanggal_pemberhentian">
+												<input disabled="" class="form-control datepicker_mode" value="20/November/2019" id="tanggal_pemberhentian" name="tanggal_pemberhentian">
 											</div>
 											<label class="col-2 col-form-label">Alasan</label>
 											<div class="col-10">
@@ -479,6 +480,8 @@
 	<script src="../assets/vendors/general/wnumb/wNumb.js" type="text/javascript"></script>
 	<!--end:: Global Mandatory Vendors -->
 	<!--begin:: Global Optional Vendors -->
+	<script src="../assets/vendors/general/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js" type="text/javascript"></script>
+	<script src="../assets/vendors/custom/components/vendors/bootstrap-datepicker/init.js" type="text/javascript"></script>
 	<!--end:: Global Optional Vendors -->
 	<!--begin::Global Theme Bundle(used by all pages) -->
 	<script src="../assets/demo/default/base/scripts.bundle.js" type="text/javascript"></script>
@@ -486,9 +489,6 @@
 	<!--begin::Page Vendors(used by this page) -->
 	<script src="../assets/vendors/custom/fullcalendar/fullcalendar.bundle.js" type="text/javascript"></script>
 	<!--end::Page Vendors -->
-	<!--begin::Page Scripts(used by this page) -->
-	<script src="../assets/app/custom/general/dashboard.js" type="text/javascript"></script>
-	<!--end::Page Scripts -->
 	<!--begin::Global App Bundle(used by all pages) -->
 	<script src="../assets/app/bundle/app.bundle.js" type="text/javascript"></script>
 	<!--begin::Page Scripts(used by this page) -->
@@ -496,6 +496,47 @@
 	<!-- AJAX -->
 	<script src="../assets/vendors/custom/datatables/datatables.bundle.js" type="text/javascript"></script>
 	<script src="../assets/app/script/js_ajax_gsi.js" type="text/javascript"></script>
+	<script>
+		var KTBootstrapDatepicker = function () {
+			var arrows;
+			if (KTUtil.isRTL()) {
+				arrows = {
+					leftArrow: '<i class="la la-angle-right"></i>',
+					rightArrow: '<i class="la la-angle-left"></i>'
+				}
+			} else {
+				arrows = {
+					leftArrow: '<i class="la la-angle-left"></i>',
+					rightArrow: '<i class="la la-angle-right"></i>'
+				}
+			}
+			var demos = function () {
+				$('.datepicker_mode, .datepicker_mode_validate').datepicker({
+					rtl: KTUtil.isRTL(),
+					todayHighlight: true,
+					orientation: "bottom left",
+					templates: arrows,
+					format: 'dd/MM/yyyy'
+				});
+
+				$('.datepicker_mode_modal').datepicker({
+					rtl: KTUtil.isRTL(),
+					todayHighlight: true,
+					orientation: "bottom left",
+					templates: arrows
+				});
+
+			}
+			return {
+				init: function() {
+					demos(); 
+				}
+			};
+		}();
+		jQuery(document).ready(function() {    
+			KTBootstrapDatepicker.init();
+		});
+	</script>
 </body>
 <!-- end::Body -->
 </html>

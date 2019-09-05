@@ -99,7 +99,7 @@
 		<div id="kt_header_mobile" class="kt-header-mobile  kt-header-mobile--fixed ">
 			<div class="kt-header-mobile__brand">
 				<a class="kt-header-mobile__logo" href="index.html">
-					<img style="height: 35px" class="logo_pertamina" alt="Logo" src="../assets/media/logos/logo_3.png" />
+					<img style="height: 35px" class="logo_pertamina" alt="Logo" src="../assets/media/logos/logo_1.png" />
 				</a>
 				<div class="kt-header-mobile__nav">
 					<div class="dropdown">
@@ -123,7 +123,7 @@
 								<div class="kt-header__brand   kt-grid__item" id="kt_header_brand">
 									<div class="kt-header__brand-logo">
 										<a href="index.html">
-											<img class="logo_pertamina" style="height: 90px" alt="Logo" src="../assets/media/logos/logo_3.png" />
+											<img class="logo_pertamina" style="height: 90px" alt="Logo" src="../assets/media/logos/logo_1.png" />
 										</a>
 									</div>
 								</div>
@@ -340,7 +340,7 @@
 														<div class="form-group row">
 															<label for="example-text-input" class="col-3 col-form-label">Tanggal Lahir</label>
 															<div class="col-9">
-																<input class="form-control" type="date" value="2011-08-19" id="tanggal_lahir" name="tanggal_lahir">
+																<input class="form-control datepicker_mode" placeholder="pilih tanggal lahir" id="tanggal_lahir" name="tanggal_lahir">
 															</div>
 														</div>
 														<div class="form-group row">
@@ -450,7 +450,7 @@
 																<button type="button" id="kt_sweetalert_save_draft" class="btn btn-secondary" name="btn_save_as_draft">
 																	<i class="fa fa-save"></i> Save as Draft
 																</button>
-																<button type="submit" id="kt_sweetalert_submit" class="btn btn-primary" name="btn_submit">
+																<button type="button" id="kt_sweetalert_submit" class="btn btn-primary" name="btn_submit">
 																	<i class="fa fa-check"></i> Submit
 																</button>
 															</div>
@@ -472,88 +472,38 @@
 							<div class="modal-content">
 								<div class="modal-header">
 									<h5 class="modal-title" id="exampleModalLabel">Upload file Sertifikat</h5>
-									<button onclick="Scroll()" id="btn_tambah_sertifikat" class="btn btn-primary">
+									<button id="btn_tambah_sertifikat" class="btn btn-primary">
 										<i class="fa fa-plus"></i> Tambah Sertifikat
 									</button>
 								</div>
 								<form class="kt-form">
 									<div class="modal-body">
 										<div id="test" style="max-height: 300px;overflow: auto;scroll-behavior: smooth;">
-											<div class="card_sertifikat" id="card_sertifikat[0]">
-												<div class="form-group row">	
-													<h5 class="col-sm-12" >
-														Sertifikat 01
-													</h5>
-													<label for="example-text-input" class="col-3 col-form-label">File Sertifikat</label>
-													<div class="col-9">
-														<div class="custom-file">
-															<input type="file" class="custom-file-input" placeholder="pilih file sertifikat" id="file_scan_sertifikat" name="file_scan_sertifikat">
-															<label class="custom-file-label" for="customFile">Pilih file Sertifikat..</label>
+											<div id="container_sertifikat">
+												<div class="card_sertifikat" id="card_sertifikat[0]">
+													<div class="form-group row">	
+														<h5 class="col-sm-12" >
+															Sertifikat 1
+														</h5>
+														<label for="example-text-input" class="col-3 col-form-label">File Sertifikat</label>
+														<div class="col-9">
+															<div class="custom-file">
+																<input type="file" class="custom-file-input" placeholder="pilih file sertifikat" id="file_scan_sertifikat[0]" name="file_scan_sertifikat[0]">
+																<label class="custom-file-label" for="customFile">Pilih file Sertifikat..</label>
+															</div>
 														</div>
 													</div>
-												</div>
-												<div class="form-group row">
-													<label for="example-date-input" class="col-3 col-form-label">Jenis Sertifikat</label>
-													<div class="col-9">
-														<input class="form-control" type="text"  id="jenis_sertifikat" name="jenis_sertifikat">
-													</div>
-												</div>
-												<div class="form-group row">
-													<label for="example-date-input" class="col-3 col-form-label">Expired Date</label>
-													<div class="col-9">
-														<input class="form-control" type="date" value="2011-08-19" id="expired_date_sertifikat" name="expired_date_sertifikat">
-													</div>
-												</div>
-											</div>
-											<div style="display: block" id="card_sertifikat[1]" class="card_sertifikat">
-												<div class="form-group row">
-													<h5 class="col-sm-12" >
-														Sertifikat 02
-													</h5>
-													<label for="example-text-input" class="col-3 col-form-label">File Sertifikat</label>
-													<div class="col-9">
-														<div class="custom-file">
-															<input type="file" class="custom-file-input" placeholder="pilih file sertifikat" id="file_scan_sertifikat" name="file_scan_sertifikat">
-															<label class="custom-file-label" for="customFile">Pilih file Sertifikat..</label>
+													<div class="form-group row">
+														<label for="example-date-input" class="col-3 col-form-label">Jenis Sertifikat</label>
+														<div class="col-9">
+															<input class="form-control" type="text"  id="jenis_sertifikat[0]" name="jenis_sertifikat[0]">
 														</div>
 													</div>
-												</div>
-												<div class="form-group row">
-													<label for="example-date-input" class="col-3 col-form-label">Jenis Sertifikat</label>
-													<div class="col-9">
-														<input class="form-control" type="text"  id="jenis_sertifikat" name="jenis_sertifikat">
-													</div>
-												</div>
-												<div class="form-group row">
-													<label for="example-date-input" class="col-3 col-form-label">Expired Date</label>
-													<div class="col-9">
-														<input class="form-control" type="date" value="2011-08-19" id="expired_date_sertifikat" name="expired_date_sertifikat">
-													</div>
-												</div>
-											</div>
-											<div style="display: none" id="card_sertifikat[2]" class="card_sertifikat">
-												<div class="form-group row">
-													<h5 class="col-sm-12" >
-														Sertifikat 03
-													</h5>
-													<label for="example-text-input" class="col-3 col-form-label">File Sertifikat</label>
-													<div class="col-9">
-														<div class="custom-file">
-															<input type="file" class="custom-file-input" placeholder="pilih file sertifikat" id="file_scan_sertifikat" name="file_scan_sertifikat">
-															<label class="custom-file-label" for="customFile">Pilih file Sertifikat..</label>
+													<div class="form-group row">
+														<label for="example-date-input" class="col-3 col-form-label">Expired Date</label>
+														<div class="col-9">
+															<input class="form-control datepicker_mode" placeholder="tanggal expired" id="expired_date_sertifikat[0]" name="expired_date_sertifikat[0]">
 														</div>
-													</div>
-												</div>
-												<div class="form-group row">
-													<label for="example-date-input" class="col-3 col-form-label">Jenis Sertifikat</label>
-													<div class="col-9">
-														<input class="form-control" type="text"  id="jenis_sertifikat" name="jenis_sertifikat">
-													</div>
-												</div>
-												<div class="form-group row">
-													<label for="example-date-input" class="col-3 col-form-label">Expired Date</label>
-													<div class="col-9">
-														<input class="form-control" type="date" value="2011-08-19" id="expired_date_sertifikat" name="expired_date_sertifikat">
 													</div>
 												</div>
 											</div>
@@ -594,7 +544,7 @@
 										<div class="form-group row">
 											<label for="example-date-input" class="col-3 col-form-label">Expired Date</label>
 											<div class="col-9">
-												<input class="form-control" type="date" value="2011-08-19" id="expired_date_ktp" name="expired_date_ktp">
+												<input class="form-control datepicker_mode" placeholder="tanggal expired" id="expired_date_ktp" name="expired_date_ktp">
 											</div>
 										</div>
 									</div>
@@ -633,7 +583,7 @@
 										<div class="form-group row">
 											<label for="example-date-input" class="col-3 col-form-label">Expired Date</label>
 											<div class="col-9">
-												<input class="form-control" type="date" value="2011-08-19" id="expired_date_mcu" name="expired_date_mcu">
+												<input class="form-control datepicker_mode" placeholder="tanggal expired" id="expired_date_mcu" name="expired_date_mcu">
 											</div>
 										</div>
 									</div>
@@ -672,7 +622,7 @@
 										<div class="form-group row">
 											<label for="example-date-input" class="col-3 col-form-label">Expired Date</label>
 											<div class="col-9">
-												<input class="form-control" type="date" value="2011-08-19" id="expired_date_sim" name="expired_date_sim">
+												<input class="form-control datepicker_mode" placeholder="tanggal expired" id="expired_date_sim" name="expired_date_sim">
 											</div>
 										</div>
 									</div>
@@ -711,7 +661,7 @@
 										<div class="form-group row">
 											<label for="example-date-input" class="col-3 col-form-label">Expired Date</label>
 											<div class="col-9">
-												<input class="form-control" type="date" value="2011-08-19" id="expired_date_hasil_tes_narkoba" name="expired_date_hasil_tes_narkoba">
+												<input class="form-control datepicker_mode" placeholder="tanggal expired" id="expired_date_hasil_tes_narkoba" name="expired_date_hasil_tes_narkoba">
 											</div>
 										</div>
 									</div>
@@ -889,6 +839,81 @@
 			// Initialization
 			jQuery(document).ready(function() {
 				KTSelect2.init();
+			});
+		</script>
+		<script>
+			$(document).ready(function() {
+				let i = 2;
+				$("#btn_tambah_sertifikat").click(function () {
+					$("#container_sertifikat").append(
+						'<div class="card_sertifikat" id="card_sertifikat['+i+']">' +
+						'<div class="form-group row">' +
+						'<h5 class="col-sm-12" >' +
+						'Sertifikat '+i+'</h5>' +
+						'<label for="example-text-input" class="col-3 col-form-label">File Sertifikat</label>' +
+						'<div class="col-9">' +
+						'<div class="custom-file">' +
+						'<input type="file" class="custom-file-input" placeholder="pilih file sertifikat" id="file_scan_sertifikat['+i+']" name="file_scan_sertifikat['+i+']">' +
+						'<label class="custom-file-label" for="customFile">Pilih file Sertifikat..</label>' +
+						'</div>' +
+						'</div>' +
+						'</div>' +
+						'<div class="form-group row">' +
+						'<label for="example-date-input" class="col-3 col-form-label">Jenis Sertifikat</label>' +
+						'<div class="col-9">' +
+						'<input class="form-control" type="text"  id="jenis_sertifikat['+i+']" name="jenis_sertifikat['+i+']">' +
+						'</div>' +
+						'</div>' +
+						'<div class="form-group row">' +
+						'<label for="example-date-input" class="col-3 col-form-label">Expired Date</label>' +
+						'<div class="col-9">' +
+						'<input class="form-control datepicker_mode" placeholder="tanggal expired" id="expired_date_sertifikat[0]" name="expired_date_sertifikat['+i+']">' +
+						'</div></div></div>'
+						);
+					i++; 
+
+				});
+			})
+		</script>
+		<script>
+			var KTBootstrapDatepicker = function () {
+				var arrows;
+				if (KTUtil.isRTL()) {
+					arrows = {
+						leftArrow: '<i class="la la-angle-right"></i>',
+						rightArrow: '<i class="la la-angle-left"></i>'
+					}
+				} else {
+					arrows = {
+						leftArrow: '<i class="la la-angle-left"></i>',
+						rightArrow: '<i class="la la-angle-right"></i>'
+					}
+				}
+				var demos = function () {
+					$('.datepicker_mode, .datepicker_mode_validate').datepicker({
+						rtl: KTUtil.isRTL(),
+						todayHighlight: true,
+						orientation: "bottom left",
+						templates: arrows,
+						format: 'dd/MM/yyyy'
+					});
+
+					$('.datepicker_mode_modal').datepicker({
+						rtl: KTUtil.isRTL(),
+						todayHighlight: true,
+						orientation: "bottom left",
+						templates: arrows
+					});
+
+				}
+				return {
+					init: function() {
+						demos(); 
+					}
+				};
+			}();
+			jQuery(document).ready(function() {    
+				KTBootstrapDatepicker.init();
 			});
 		</script>
 	</body>

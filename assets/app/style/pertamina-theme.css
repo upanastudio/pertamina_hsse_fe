@@ -91,16 +91,16 @@ tr td {
 }
 
 .judul_pekerjaan {
-	font-size:2.3rem;
+	font-size: 1.5rem;
 }
 
 .isi_informasi {
 	font-size:3rem;
 }
 /*admin depot*/
-.nav-pills .nav-item .nav-link:active,
-.nav-pills .nav-item .nav-link.active,
-.nav-pills .nav-item .nav-link.active:hover {
+.nav-pills .nav-item .nav-link:active, 
+.nav-pills .nav-item .nav-link.active, 
+.nav-pills .nav-item .nav-link.active:hover {	
 	background-color: #a10c0c;;
 	color: #ffffff;
 }
@@ -221,12 +221,28 @@ polyline,
 .btn_hapus {
 	width: 100%;
 }
+
+.required_sign {
+	color: red !important;
+}
+
+.divider{
+	border-right: 3px dashed #717171;
+	height: auto;
+}
+
+td.details-control {
+	background: url('https://raw.githubusercontent.com/DataTables/DataTables/1.10.7/examples/resources/details_open.png') no-repeat center center;
+	cursor: pointer;
+}
+tr.shown td.details-control {
+	background: url('https://raw.githubusercontent.com/DataTables/DataTables/1.10.7/examples/resources/details_close.png') no-repeat center center;
+}
 /*End: Ahli Teknik*/
 @media (min-width: 1025px){
 	.kt-aside--minimize .kt-aside-menu .kt-menu__nav > .kt-menu__item > .kt-menu__link > .kt-menu__link-icon {
 		color: #ffffff;
 	}
-}
 
 @media screen and (min-width: 576px){
 	.divider-border-right {

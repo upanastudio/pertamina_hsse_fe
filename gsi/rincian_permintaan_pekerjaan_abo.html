@@ -53,6 +53,7 @@
 	<link href="../assets/vendors/custom/vendors/flaticon/flaticon.css" rel="stylesheet" type="text/css" />
 	<link href="../assets/vendors/custom/vendors/flaticon2/flaticon.css" rel="stylesheet" type="text/css" />
 	<link href="../assets/vendors/custom/vendors/fontawesome5/css/all.min.css" rel="stylesheet" type="text/css" />
+
 	<!--end:: Global Optional Vendors -->
 	<!--begin::Global Theme Styles(used by all pages) -->
 	<link href="../assets/demo/default/base/style.bundle.css" rel="stylesheet" type="text/css" />
@@ -69,6 +70,7 @@
 	<link href="../assets/app/style/jsa-style.css" rel="stylesheet" type="text/css" />
 	<!-- <link href="../assets/app/style/at_rincian-pekerjaan-style.css" rel="stylesheet" type="text/css" /> -->
 	<link href="../assets/app/style/tab-style.css" rel="stylesheet" type="text/css" />
+	<link href="../assets/app/style/blue-theme.css" rel="stylesheet" type="text/css" />
 	<style>
 		#kt_tabs_umum .form-group,
 		#kt_tabs_simlok .form-group {
@@ -380,13 +382,13 @@
 													<div class="form-group row">
 														<label for="example-text-input" class="col-3 col-form-label">Tanggal Mulai</label>
 														<div class="col-9">
-															<input disabled="" class="form-control" type="date" value="" id="tanggal_mulai" name="tanggal_mulai">
+															<input disabled="" class="form-control datepicker_mode"  value="20/November/2019" id="tanggal_mulai" name="tanggal_mulai">
 														</div>
 													</div>
 													<div class="form-group row">
 														<label for="example-text-input" class="col-3 col-form-label">Tanggal Selesai</label>
 														<div class="col-9">
-															<input disabled="" class="form-control" type="date" value="" id="tanggal_selesai" name="tanggal_selesai">
+															<input disabled="" class="form-control datepicker_mode"  value="20/November/2019" id="tanggal_selesai" name="tanggal_selesai">
 														</div>
 													</div>
 													<div class="form-group row">
@@ -1372,6 +1374,8 @@
 	<!--end:: Global Mandatory Vendors -->
 	<!--begin:: Global Optional Vendors -->
 	<script src="../assets/vendors/general/select2/dist/js/select2.full.js" type="text/javascript"></script>
+	<script src="../assets/vendors/general/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js" type="text/javascript"></script>
+	<script src="../assets/vendors/custom/components/vendors/bootstrap-datepicker/init.js" type="text/javascript"></script>
 	<!--end:: Global Optional Vendors -->
 	<!--begin::Global Theme Bundle(used by all pages) -->
 	<script src="../assets/demo/default/base/scripts.bundle.js" type="text/javascript"></script>
@@ -1471,6 +1475,47 @@
 			}).on('click', '#hazard_3', function() {
 				$(this).parent().remove();
 			});
+		});
+	</script>
+	<script>
+		var KTBootstrapDatepicker = function () {
+			var arrows;
+			if (KTUtil.isRTL()) {
+				arrows = {
+					leftArrow: '<i class="la la-angle-right"></i>',
+					rightArrow: '<i class="la la-angle-left"></i>'
+				}
+			} else {
+				arrows = {
+					leftArrow: '<i class="la la-angle-left"></i>',
+					rightArrow: '<i class="la la-angle-right"></i>'
+				}
+			}
+			var demos = function () {
+				$('.datepicker_mode, .datepicker_mode_validate').datepicker({
+					rtl: KTUtil.isRTL(),
+					todayHighlight: true,
+					orientation: "bottom left",
+					templates: arrows,
+					format: 'dd/MM/yyyy'
+				});
+
+				$('.datepicker_mode_modal').datepicker({
+					rtl: KTUtil.isRTL(),
+					todayHighlight: true,
+					orientation: "bottom left",
+					templates: arrows
+				});
+
+			}
+			return {
+				init: function() {
+					demos(); 
+				}
+			};
+		}();
+		jQuery(document).ready(function() {    
+			KTBootstrapDatepicker.init();
 		});
 	</script>
 </body>
