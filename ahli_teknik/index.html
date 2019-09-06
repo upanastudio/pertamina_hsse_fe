@@ -72,9 +72,8 @@
 	<!-- <link href="../assets/app/style/red-theme.css" rel="stylesheet" type="text/css" /> -->
 	<!-- <link href="../assets/app/style/redblack-theme.css" rel="stylesheet" type="text/css" /> -->
 	<style>
-		#chart {
-			margin: 30px auto;
-			width: 100%;
+		.popover {
+			max-width: 40%;
 		}
 	</style>
 </head>
@@ -188,7 +187,7 @@
 											</h3>
 										</div>
 									</div>
-									<div class="kt-portlet__body">
+									<div style="height: 492px" class="kt-portlet__body">
 										<div class="row">
 											<div align="center" class="col-sm-12">
 												<div style="padding: 15px" class="">
@@ -243,6 +242,23 @@
 										</div>
 									</div>
 									<div class="kt-portlet__body">
+										<div align="left">
+											<a tabindex="0"
+											class="btn btn-secondary" 
+											role="button" 
+											data-html="true" 
+											data-toggle="popover" 
+											data-trigger="hover" 
+											title="<b>Penjelasan Grafik</b>" 
+											data-content="<div>
+												<b>ABI : <br>
+												</b> Pelaksanaan pengadaan Barang/Jasa yang tercantum dalam RKAP dan sudah mendapatkan FID dan bersifat mengamankan atau meningkatkan nilai aset<br>
+												<b>ABO : <br>
+												</b> Pelaksanaan pengadaan barang/jasa yang direncanakan oleh lokasi dan bersifat menunjang keberlangsungan operasional  <br>
+												<b>Swakelola : <br>
+												</b>Pelaksanaan Pengadaan Barang/Jasa yang direncanakan, dikerjakan dan diawasi sendiri dengan menggunakan tenaga sendiri, alat sendiri, atau upah borongan tenaga <br>
+											</div>">Penjelasan Grafik</a>
+										</div>
 										<div id="pekerjaan_berjalan"></div>
 									</div>
 								</div>
@@ -382,7 +398,11 @@
 
 		chart.render();
 	</script>
-
+	<script>
+		$(function(){
+			$("[data-toggle=popover]").popover();
+		});
+	</script>
 </body>
 <!-- end::Body -->
 </html>

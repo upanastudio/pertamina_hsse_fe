@@ -241,47 +241,47 @@
 				<!-- end:: Header -->
 				<div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor">
 					<!-- begin:: Subheader -->
-					<div class="kt-subheader   kt-grid__item" id="kt_subheader">
-						<div class="kt-subheader__main">
-							<h3 class="kt-subheader__title">
-								Pekerjaan
-							</h3>
-							<span class="kt-subheader__separator kt-hidden"></span>
-							<div class="kt-subheader__breadcrumbs">
-								<a href="pekerjaan.html" class="kt-subheader__breadcrumbs-home"><i class="flaticon2-shelter"></i></a>
-								<span class="kt-subheader__breadcrumbs-separator"></span>
-								<a href="permintaan_pekerjaan.html" class="kt-subheader__breadcrumbs-link">
-								Permintaan Pekerjaan </a>
-								<span class="kt-subheader__breadcrumbs-separator"></span>
-								<a href="#" class="kt-subheader__breadcrumbs-link">
-								Rincian </a>
+					<form class="kt-form">
+						<div class="kt-subheader   kt-grid__item" id="kt_subheader">
+							<div class="kt-subheader__main">
+								<h3 class="kt-subheader__title">
+									Pekerjaan
+								</h3>
+								<span class="kt-subheader__separator kt-hidden"></span>
+								<div class="kt-subheader__breadcrumbs">
+									<a href="pekerjaan.html" class="kt-subheader__breadcrumbs-home"><i class="flaticon2-shelter"></i></a>
+									<span class="kt-subheader__breadcrumbs-separator"></span>
+									<a href="permintaan_pekerjaan.html" class="kt-subheader__breadcrumbs-link">
+									Permintaan Pekerjaan </a>
+									<span class="kt-subheader__breadcrumbs-separator"></span>
+									<a href="#" class="kt-subheader__breadcrumbs-link">
+									Rincian </a>
+								</div>
+							</div>
+							<div class="kt-subheader__toolbar">
+								<button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#kt_modal_tolak">
+									<i class="fa fa-times"></i> Tolak
+								</button>
+								<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#kt_modal_persetujuan">
+									<i class="fa fa-check"></i> Approve
+								</button>
 							</div>
 						</div>
-						<div class="kt-subheader__toolbar">
-							<button class="btn btn-secondary" data-toggle="modal" data-target="#kt_modal_tolak">
-								<i class="fa fa-times"></i> Tolak
-							</button>
-							<button class="btn btn-primary" data-toggle="modal" data-target="#kt_modal_1">
-								<i class="fa fa-check"></i> Approve
-							</button>
-						</div>
-					</div>
-					<!-- end:: Subheader -->
-					<!-- begin:: Content -->
-					<div class="kt-content  kt-grid__item kt-grid__item--fluid" id="kt_content">
-						<div class="row">
-							<div class="kt-portlet">
-								<div class="kt-portlet__head">
-									<div class="kt-portlet__head-label">
-										<span class="kt-portlet__head-icon kt-hidden">
-											<i class="la la-gear"></i>
-										</span>
-										<h3 class="kt-portlet__head-title">
-											Permintaan Pekerjaan / <span name="nama_pekerjaan">Penggalian</span>
-										</h3>
+						<!-- end:: Subheader -->
+						<!-- begin:: Content -->
+						<div class="kt-content  kt-grid__item kt-grid__item--fluid" id="kt_content">
+							<div class="row">
+								<div class="kt-portlet">
+									<div class="kt-portlet__head">
+										<div class="kt-portlet__head-label">
+											<span class="kt-portlet__head-icon kt-hidden">
+												<i class="la la-gear"></i>
+											</span>
+											<h3 class="kt-portlet__head-title">
+												Permintaan Pekerjaan / <span name="nama_pekerjaan">Penggalian</span>
+											</h3>
+										</div>
 									</div>
-								</div>
-								<form class="kt-form">
 									<div class="kt-portlet__body">
 										<ul class="nav nav-tabs nav-fill" role="tablist">
 											<li class="nav-item">
@@ -371,13 +371,13 @@
 													<div class="form-group row">
 														<label for="example-text-input" class="col-3 col-form-label">Tanggal Mulai</label>
 														<div class="col-9">
-															<input disabled="" class="form-control datepicker_mode"  value="20/November/2019" id="tanggal_mulai" name="tanggal_mulai">
+															<input disabled=""  class="form-control datepicker_mode"  value="20/November/2019" id="tanggal_mulai" name="tanggal_mulai">
 														</div>
 													</div>
 													<div class="form-group row">
 														<label for="example-text-input" class="col-3 col-form-label">Tanggal Selesai</label>
 														<div class="col-9">
-															<input disabled="" class="form-control datepicker_mode"  value="20/November/2019" id="tanggal_selesai" name="tanggal_selesai">
+															<input disabled=""  class="form-control datepicker_mode"  value="20/November/2019" id="tanggal_selesai" name="tanggal_selesai">
 														</div>
 													</div>
 													<div class="form-group row">
@@ -406,13 +406,13 @@
 																<div class="row">
 																	<div class="col-sm-3">
 																		<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
-																			<input checked disabled id="tinjau_dokumen_hazard" name="tinjau_dokumen_hazard" type="checkbox"> Dokumen telah ditinjau
+																			<input id="tinjau_dokumen_hazard" name="tinjau_dokumen_hazard" type="checkbox"> Dokumen telah ditinjau
 																			<span></span>
 																		</label>
 																	</div>
 																	<div class="col-sm-3">
 																		<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
-																			<input checked disabled id="sosialisasi_dokumen_hazard" name="sosialisasi_dokumen_hazard" type="checkbox"> Telah disosialisasikan
+																			<input id="sosialisasi_dokumen_hazard" name="sosialisasi_dokumen_hazard" type="checkbox"> Telah disosialisasikan
 																			<span></span>
 																		</label>
 																	</div>
@@ -431,13 +431,13 @@
 																<div class="row">
 																	<div class="col-sm-3">
 																		<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
-																			<input checked disabled id="tinjau_dokumen_heavy_equipment" name="tinjau_dokumen_heavy_equipment" type="checkbox"> Dokumen telah ditinjau
+																			<input id="tinjau_dokumen_heavy_equipment" name="tinjau_dokumen_heavy_equipment" type="checkbox"> Dokumen telah ditinjau
 																			<span></span>
 																		</label>
 																	</div>
 																	<div class="col-sm-3">
 																		<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
-																			<input checked disabled id="sosialisasi_dokumen_heavy_equipment" name="sosialisasi_dokumen_heavy_equipment" type="checkbox"> Telah disosialisasikan
+																			<input id="sosialisasi_dokumen_heavy_equipment" name="sosialisasi_dokumen_heavy_equipment" type="checkbox"> Telah disosialisasikan
 																			<span></span>
 																		</label>
 																	</div>
@@ -456,13 +456,13 @@
 																<div class="row">
 																	<div class="col-sm-3">
 																		<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
-																			<input checked disabled id="tinjau_dokumen_lifting_plan" name="tinjau_dokumen_lifting_plan" type="checkbox"> Dokumen telah ditinjau
+																			<input id="tinjau_dokumen_lifting_plan" name="tinjau_dokumen_lifting_plan" type="checkbox"> Dokumen telah ditinjau
 																			<span></span>
 																		</label>
 																	</div>
 																	<div class="col-sm-3">
 																		<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
-																			<input checked disabled id="sosialisasi_dokumen_lifting_plan" name="sosialisasi_dokumen_lifting_plan" type="checkbox"> Telah disosialisasikan
+																			<input id="sosialisasi_dokumen_lifting_plan" name="sosialisasi_dokumen_lifting_plan" type="checkbox"> Telah disosialisasikan
 																			<span></span>
 																		</label>
 																	</div>
@@ -481,13 +481,13 @@
 																<div class="row">
 																	<div class="col-sm-3">
 																		<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
-																			<input checked disabled id="tinjau_dokumen_prosedur_kerja" name="tinjau_dokumen_prosedur_kerja" type="checkbox"> Dokumen telah ditinjau
+																			<input id="tinjau_dokumen_prosedur_kerja" name="tinjau_dokumen_prosedur_kerja" type="checkbox"> Dokumen telah ditinjau
 																			<span></span>
 																		</label>
 																	</div>
 																	<div class="col-sm-3">
 																		<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
-																			<input checked disabled id="sosialisasi_dokumen_prosedur_kerja" name="sosialisasi_dokumen_prosedur_kerja" type="checkbox"> Telah disosialisasikan
+																			<input id="sosialisasi_dokumen_prosedur_kerja" name="sosialisasi_dokumen_prosedur_kerja" type="checkbox"> Telah disosialisasikan
 																			<span></span>
 																		</label>
 																	</div>
@@ -560,7 +560,7 @@
 														<div class="col-sm-12" style="margin-bottom: 10px">
 															<div class="kt-checkbox-inline">
 																<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
-																	<input checked disabled id="status_dokumen_loto" name="status_dokumen" type="checkbox"> Tindakan LOTO sudah direalisasikan dilokasi
+																	<input name="status_dokumen" type="checkbox"> Tindakan LOTO sudah direalisasikan dilokasi
 																	<span></span>
 																</label>
 															</div>
@@ -574,42 +574,26 @@
 																		</label>
 																	</div>
 																	<div align="right" class="col-sm-4">
-																		<!-- <button id="btn_tambah_prosedur" name="btn_tambah_prosedur" type="button" class="btn btn-sm btn-success">
-																			<i class="fa fa-plus"></i> Tambah file
-																		</button> -->
-																		<button type="button" id="btn_tambah_input" name="btn_tambah_input" class="btn btn-secondary" data-container="body" data-toggle="kt-tooltip" data-placement="left" title="Tambah berkas">
+																		<button type="button" id="btn_tambah_berkas" name="btn_tambah_berkas" class="btn btn-secondary" data-container="body" data-toggle="kt-tooltip" data-placement="left" title="Tambah berkas">
 																			<span class="fa fa-plus"></span>
 																		</button>
 																	</div>
 																</div>
 															</div>
-															<div class="col-sm-12 input-berkas">
-																<div class="row">
-																	<div class="col-sm-11">
-																		<div class="custom-file">
-																			<input style="font-size:1rem" type="file" class="custom-file-input" id="isolasi_energi_doc" name="isolasi_energi_doc">
-																			<label style="font-size:1rem" class="custom-file-label" for="customFile">Pilih berkas</label>
+															<div id="container_tambah_berkas">
+																<div class="col-sm-12 input-berkas">
+																	<div class="row">
+																		<div class="col-sm-11">
+																			<div class="custom-file">
+																				<input style="font-size:1rem" type="file" class="custom-file-input" id="isolasi_energi_doc" name="isolasi_energi_doc">
+																				<label style="font-size:1rem" class="custom-file-label" for="customFile">Pilih berkas</label>
+																			</div>
 																		</div>
-																	</div>
-																	<div align="right" class="col-sm-1">
-																		<button type="button" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary">
-																			<span class="fa fa-trash-alt"></span>
-																		</button>
-																	</div>
-																</div>
-															</div>
-															<div class="col-sm-12 input-berkas">
-																<div class="row">
-																	<div class="col-sm-11">
-																		<div class="custom-file">
-																			<input style="font-size:1rem" type="file" class="custom-file-input" id="isolasi_energi_doc" name="isolasi_energi_doc">
-																			<label style="font-size:1rem" class="custom-file-label" for="customFile">Pilih berkas</label>
+																		<div align="right" class="col-sm-1">
+																			<button style="pointer-events: none" disabled="" type="button" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary">
+																				<span class="fa fa-trash-alt"></span>
+																			</button>
 																		</div>
-																	</div>
-																	<div align="right" class="col-sm-1">
-																		<button type="button" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary">
-																			<span class="fa fa-trash-alt"></span>
-																		</button>
 																	</div>
 																</div>
 															</div>
@@ -626,13 +610,13 @@
 																<div class="row">
 																	<div class="col-sm-3">
 																		<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
-																			<input checked disabled id="tinjau_dokumen_prosedur" name="tinjau_dokumen_prosedur" type="checkbox"> Dokumen telah ditinjau
+																			<input id="tinjau_dokumen_prosedur" name="tinjau_dokumen_prosedur" type="checkbox"> Dokumen telah ditinjau
 																			<span></span>
 																		</label>
 																	</div>
 																	<div class="col-sm-3">
 																		<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
-																			<input checked disabled id="sosialisasi_dokumen_prosedur" name="sosialisasi_dokumen_prosedur" type="checkbox"> Telah disosialisasikan
+																			<input id="sosialisasi_dokumen_prosedur" name="sosialisasi_dokumen_prosedur" type="checkbox"> Telah disosialisasikan
 																			<span></span>
 																		</label>
 																	</div>
@@ -651,13 +635,13 @@
 																<div class="row">
 																	<div class="col-sm-3">
 																		<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
-																			<input checked disabled id="tinjau_dokumen_engineering_pid" name="tinjau_dokumen_engineering_pid" type="checkbox"> Dokumen telah ditinjau
+																			<input id="tinjau_dokumen_engineering_pid" name="tinjau_dokumen_engineering_pid" type="checkbox"> Dokumen telah ditinjau
 																			<span></span>
 																		</label>
 																	</div>
 																	<div class="col-sm-3">
 																		<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
-																			<input checked disabled id="sosialisasi_dokumen_engineering_pid" name="sosialisasi_dokumen_engineering_pid" type="checkbox"> Telah disosialisasikan
+																			<input id="sosialisasi_dokumen_engineering_pid" name="sosialisasi_dokumen_engineering_pid" type="checkbox"> Telah disosialisasikan
 																			<span></span>
 																		</label>
 																	</div>
@@ -676,7 +660,7 @@
 																<div class="row">
 																	<div class="col-sm-3">
 																		<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
-																			<input checked disabled id="check_training" name="check training" type="checkbox"> Telah dilakukan
+																			<input id="check_training" name="check training" type="checkbox"> Telah dilakukan
 																			<span></span>
 																		</label>
 																	</div>
@@ -711,13 +695,13 @@
 																<div class="row">
 																	<div class="col-sm-3">
 																		<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
-																			<input checked disabled id="tinjau_dokumen_dasar_kontak_spmp" name="tinjau_dokumen_dasar_kontak_spmp" type="checkbox"> Dokumen telah ditinjau
+																			<input id="tinjau_dokumen_dasar_kontak_spmp" name="tinjau_dokumen_dasar_kontak_spmp" type="checkbox"> Dokumen telah ditinjau
 																			<span></span>
 																		</label>
 																	</div>
 																	<div class="col-sm-3">
 																		<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
-																			<input checked disabled id="sosialisasi_dokumen_dasar_kontak_spmp" name="sosialisasi_dokumen_dasar_kontak_spmp" type="checkbox"> Telah disosialisasikan
+																			<input id="sosialisasi_dokumen_dasar_kontak_spmp" name="sosialisasi_dokumen_dasar_kontak_spmp" type="checkbox"> Telah disosialisasikan
 																			<span></span>
 																		</label>
 																	</div>
@@ -736,13 +720,13 @@
 																<div class="row">
 																	<div class="col-sm-3">
 																		<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
-																			<input checked disabled id="tinjau_dokumen_surat_permohonan" name="tinjau_dokumen_surat_permohonan" type="checkbox"> Dokumen telah ditinjau
+																			<input id="tinjau_dokumen_surat_permohonan" name="tinjau_dokumen_surat_permohonan" type="checkbox"> Dokumen telah ditinjau
 																			<span></span>
 																		</label>
 																	</div>
 																	<div class="col-sm-3">
 																		<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
-																			<input checked disabled id="sosialisasi_dokumen_surat_permohonan" name="sosialisasi_dokumen_surat_permohonan" type="checkbox"> Telah disosialisasikan
+																			<input id="sosialisasi_dokumen_surat_permohonan" name="sosialisasi_dokumen_surat_permohonan" type="checkbox"> Telah disosialisasikan
 																			<span></span>
 																		</label>
 																	</div>
@@ -761,13 +745,13 @@
 																<div class="row">
 																	<div class="col-sm-3">
 																		<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
-																			<input checked disabled id="tinjau_dokumen_gambar_kerja" name="tinjau_dokumen_gambar_kerja" type="checkbox"> Dokumen telah ditinjau
+																			<input id="tinjau_dokumen_gambar_kerja" name="tinjau_dokumen_gambar_kerja" type="checkbox"> Dokumen telah ditinjau
 																			<span></span>
 																		</label>
 																	</div>
 																	<div class="col-sm-3">
 																		<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
-																			<input checked disabled id="sosialisasi_dokumen_gambar_kerja" name="sosialisasi_dokumen_gambar_kerja" type="checkbox"> Telah disosialisasikan
+																			<input id="sosialisasi_dokumen_gambar_kerja" name="sosialisasi_dokumen_gambar_kerja" type="checkbox"> Telah disosialisasikan
 																			<span></span>
 																		</label>
 																	</div>
@@ -846,20 +830,20 @@
 															<div class="form-group row">
 																<label class="col-sm-8">Nama Peralatan</label>
 																<div align="right" class="col-sm-4">
-																	<button id="lihat_file_nama_peralatan" name="lihat_file_nama_peralatan" type="button" class="btn btn-sm btn-outline-brand" data-toggle="modal" data-target="#kt_modal_rincian"> <i class="fa fa-eye "></i>Lihat File</button>
+																	<button id="lihat_file_nama_peralatan" name="lihat_file_nama_peralatan" type="button" class="btn btn-sm btn-outline-brand" data-toggle="modal" data-target="#kt_modal_peralatan_kerja"> <i class="fa fa-eye "></i>Lihat Peralatan</button>
 																</div>
 																<div id="checkbox_nama_peralatan" name="checkbox_nama_peralatan" class="col-sm-12">
 																	<div class="kt-checkbox-inline">
 																		<div class="row">
 																			<div class="col-sm-3">
 																				<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
-																					<input checked disabled id="tinjau_dokumen_nama_peralatan" name="tinjau_dokumen_nama_peralatan" type="checkbox"> Dokumen telah ditinjau
+																					<input id="tinjau_dokumen_nama_peralatan" name="tinjau_dokumen_nama_peralatan" type="checkbox"> Dokumen telah ditinjau
 																					<span></span>
 																				</label>
 																			</div>
 																			<div class="col-sm-3">
 																				<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
-																					<input checked disabled id="sosialisasi_dokumen_nama_peralatan" name="sosialisasi_dokumen_nama_peralatan" type="checkbox"> Telah disosialisasikan
+																					<input id="sosialisasi_dokumen_nama_peralatan" name="sosialisasi_dokumen_nama_peralatan" type="checkbox"> Telah disosialisasikan
 																					<span></span>
 																				</label>
 																			</div>
@@ -873,31 +857,31 @@
 											</div>
 										</div>
 									</div>
-								</form>
+								</div>
 							</div>
 						</div>
-					</div>
-					<!-- end:: Content -->
+						<!-- end:: Content -->
+					</form>
 				</div>
 				<!--begin::Modal-->
-				<div class="modal fade" id="kt_modal_1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-					<div class="modal-dialog" role="document">
-						<div class="modal-content">
-							<div class="modal-header">
-								<h5 class="modal-title" id="exampleModalLabel">Approve</h5>
-								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-								</button>
-							</div>
-							<div align="center" class="modal-body">
-								<h4>Approve Sekarang ?</h4>
-								<div style="padding:15px 0px">
-									<button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-									<button type="button" class="btn btn-primary kt_sweetalert_approve" data-dismiss="modal">Ya</button>
+				<div class="modal fade" id="kt_modal_persetujuan" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="exampleModalLabel">Approve</h5>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									</button>
+								</div>
+								<div align="center" class="modal-body">
+									<h4>Approve Sekarang ?</h4>
+									<div style="padding:15px 0px">
+										<button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+										<button type="button" class="btn btn-primary kt_sweetalert_approve" data-dismiss="modal">Ya</button>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>
 
 				<div class="modal fade" id="kt_modal_tolak" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 					<div class="modal-dialog modal-lg" role="document">
@@ -1027,6 +1011,41 @@
 					</div>
 				</div>
 
+				<div class="modal fade" id="kt_modal_peralatan_kerja" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="exampleModalLabel">Peralatan Kerja</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								</button>
+							</div>
+							<div class="modal-body">
+								<div class="row">
+									<div class="col-sm-6">
+										<ul>
+											<li name="nama_peralatan" >Palu</li>
+											<li name="nama_peralatan" >Mesin Bor</li>
+											<li name="nama_peralatan" >Kapak</li>
+										</ul>
+									</div>
+									<div class="col-sm-6">
+										<ul>
+											<li name="nama_peralatan" >Palu</li>
+											<li name="nama_peralatan" >Mesin Bor</li>
+											<li name="nama_peralatan" >Kapak</li>
+										</ul>
+									</div>
+								</div>
+								
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">
+									<i class="fa fa-times"></i> Tutup
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
 				<!--end::Modal-->
 				<!-- begin:: Footer -->
 				<div class="kt-footer kt-grid__item kt-grid kt-grid--desktop kt-grid--ver-desktop">
@@ -1110,7 +1129,7 @@
 
 
 	    };
-		var initDemosTolak = function() {
+	    var initDemosTolak = function() {
 	    	$('.kt_sweetalert_tolak').click(function(e) {
 	    		swal.fire("Ditolak!", "Pekerjaan berhasil ditolak!", "success");
 	    	});
@@ -1122,7 +1141,7 @@
 	        // Init
 	        init: function() {
 	        	initDemos();
-				initDemosTolak();
+	        	initDemosTolak();
 	        },
 	    };
 	}();
@@ -1179,6 +1198,37 @@
 				$(this).parent().remove();
 			});
 		});
+	</script>
+	<script>
+		$(document).ready(function() {
+			let i = 1;
+			$("#btn_tambah_berkas").click(function () {
+				$("#container_tambah_berkas").append(
+					'<div data-id="'+i+'" class="col-sm-12 input-berkas tambah_berkas">' +
+					'<div class="row">' +
+					'<div class="col-sm-11">' +
+					'<div class="custom-file">' +
+					'<input style="font-size:1rem" type="file" class="custom-file-input" id="isolasi_energi_doc" name="isolasi_energi_doc">' +
+					'<label style="font-size:1rem" class="custom-file-label" for="customFile">Pilih berkas</label>' +
+					'</div>' +
+					'</div>'+
+					'<div align="right" class="col-sm-1">' +
+					'<button type="button" data-id="'+i+'" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary">' +
+					'<span class="fa fa-trash-alt"></span>' +
+					'</button>' +
+					'</div>' +
+					'</div>' +
+					'</div>'
+					);
+				i++; 
+
+			});
+			$('#container_tambah_berkas').on('click','#btn_hapus_input', function (e) {
+				let id = $(this).data('id');
+				console.log(id);
+				$('.tambah_berkas[data-id="' + id + '"]').remove();
+			});
+		})
 	</script>
 </body>
 <!-- end::Body -->

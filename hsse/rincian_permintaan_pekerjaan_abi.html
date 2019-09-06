@@ -245,49 +245,50 @@
 					<!-- end:: Header Topbar -->
 				</div>
 				<!-- end:: Header -->
+				
 				<div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor">
 					<!-- begin:: Subheader -->
-					<div class="kt-subheader   kt-grid__item" id="kt_subheader">
-						<div class="kt-subheader__main">
-							<h3 class="kt-subheader__title">
-								Pekerjaan
-							</h3>
-							<span class="kt-subheader__separator kt-hidden"></span>
-							<div class="kt-subheader__breadcrumbs">
-								<a href="pekerjaan.html" class="kt-subheader__breadcrumbs-home"><i class="flaticon2-shelter"></i></a>
-								<span class="kt-subheader__breadcrumbs-separator"></span>
-								<a href="permintaan_pekerjaan.html" class="kt-subheader__breadcrumbs-link">
-								Permintaan Pekerjaan </a>
-								<span class="kt-subheader__breadcrumbs-separator"></span>
-								<a href="#" class="kt-subheader__breadcrumbs-link">
-								Rincian </a>
+					<form class="kt-form">
+						<div class="kt-subheader   kt-grid__item" id="kt_subheader">
+							<div class="kt-subheader__main">
+								<h3 class="kt-subheader__title">
+									Pekerjaan
+								</h3>
+								<span class="kt-subheader__separator kt-hidden"></span>
+								<div class="kt-subheader__breadcrumbs">
+									<a href="pekerjaan.html" class="kt-subheader__breadcrumbs-home"><i class="flaticon2-shelter"></i></a>
+									<span class="kt-subheader__breadcrumbs-separator"></span>
+									<a href="permintaan_pekerjaan.html" class="kt-subheader__breadcrumbs-link">
+									Permintaan Pekerjaan </a>
+									<span class="kt-subheader__breadcrumbs-separator"></span>
+									<a href="#" class="kt-subheader__breadcrumbs-link">
+									Rincian </a>
+								</div>
+							</div>
+							<div class="kt-subheader__toolbar">
+								<button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#kt_modal_tolak">
+									<i class="fa fa-times"></i> Tolak
+								</button>
+								<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#kt_modal_persetujuan">
+									<i class="fa fa-check"></i> Approve
+								</button>
 							</div>
 						</div>
-						<div class="kt-subheader__toolbar">
-							<button class="btn btn-secondary" data-toggle="modal" data-target="#kt_modal_tolak">
-								<i class="fa fa-times"></i> Tolak
-							</button>
-							<button class="btn btn-primary" data-toggle="modal" data-target="#kt_modal_persetujuan">
-								<i class="fa fa-check"></i> Approve
-							</button>
-						</div>
-					</div>
-					<!-- end:: Subheader -->
-					<!-- begin:: Content -->
-					<div class="kt-content  kt-grid__item kt-grid__item--fluid" id="kt_content">
-						<div class="row">
-							<div class="kt-portlet">
-								<div class="kt-portlet__head">
-									<div class="kt-portlet__head-label">
-										<span class="kt-portlet__head-icon kt-hidden">
-											<i class="la la-gear"></i>
-										</span>
-										<h3 class="kt-portlet__head-title">
-											Permintaan Pekerjaan / <span name="nama_pekerjaan">Penggalian</span>
-										</h3>
+						<!-- end:: Subheader -->
+						<!-- begin:: Content -->
+						<div class="kt-content  kt-grid__item kt-grid__item--fluid" id="kt_content">
+							<div class="row">
+								<div class="kt-portlet">
+									<div class="kt-portlet__head">
+										<div class="kt-portlet__head-label">
+											<span class="kt-portlet__head-icon kt-hidden">
+												<i class="la la-gear"></i>
+											</span>
+											<h3 class="kt-portlet__head-title">
+												Permintaan Pekerjaan / <span name="nama_pekerjaan">Penggalian</span>
+											</h3>
+										</div>
 									</div>
-								</div>
-								<form class="kt-form">
 									<div class="kt-portlet__body">
 										<ul class="nav nav-tabs nav-fill" role="tablist">
 											<li class="nav-item">
@@ -874,42 +875,26 @@
 																		</label>
 																	</div>
 																	<div align="right" class="col-sm-4">
-																		<!-- <button id="btn_tambah_prosedur" name="btn_tambah_prosedur" type="button" class="btn btn-sm btn-success">
-																			<i class="fa fa-plus"></i> Tambah file
-																		</button> -->
-																		<button type="button" id="btn_tambah_input" name="btn_tambah_input" class="btn btn-secondary" data-container="body" data-toggle="kt-tooltip" data-placement="left" title="Tambah berkas">
+																		<button type="button" id="btn_tambah_berkas" name="btn_tambah_berkas" class="btn btn-secondary" data-container="body" data-toggle="kt-tooltip" data-placement="left" title="Tambah berkas">
 																			<span class="fa fa-plus"></span>
 																		</button>
 																	</div>
 																</div>
 															</div>
-															<div class="col-sm-12 input-berkas">
-																<div class="row">
-																	<div class="col-sm-11">
-																		<div class="custom-file">
-																			<input style="font-size:1rem" type="file" class="custom-file-input" id="isolasi_energi_doc" name="isolasi_energi_doc">
-																			<label style="font-size:1rem" class="custom-file-label" for="customFile">Pilih berkas</label>
+															<div id="container_tambah_berkas">
+																<div class="col-sm-12 input-berkas">
+																	<div class="row">
+																		<div class="col-sm-11">
+																			<div class="custom-file">
+																				<input style="font-size:1rem" type="file" class="custom-file-input" id="isolasi_energi_doc" name="isolasi_energi_doc">
+																				<label style="font-size:1rem" class="custom-file-label" for="customFile">Pilih berkas</label>
+																			</div>
 																		</div>
-																	</div>
-																	<div align="right" class="col-sm-1">
-																		<button type="button" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary">
-																			<span class="fa fa-trash-alt"></span>
-																		</button>
-																	</div>
-																</div>
-															</div>
-															<div class="col-sm-12 input-berkas">
-																<div class="row">
-																	<div class="col-sm-11">
-																		<div class="custom-file">
-																			<input style="font-size:1rem" type="file" class="custom-file-input" id="isolasi_energi_doc" name="isolasi_energi_doc">
-																			<label style="font-size:1rem" class="custom-file-label" for="customFile">Pilih berkas</label>
+																		<div align="right" class="col-sm-1">
+																			<button style="pointer-events: none" disabled="" type="button" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary">
+																				<span class="fa fa-trash-alt"></span>
+																			</button>
 																		</div>
-																	</div>
-																	<div align="right" class="col-sm-1">
-																		<button type="button" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary">
-																			<span class="fa fa-trash-alt"></span>
-																		</button>
 																	</div>
 																</div>
 															</div>
@@ -1146,7 +1131,7 @@
 															<div class="form-group row">
 																<label class="col-sm-8">Nama Peralatan</label>
 																<div align="right" class="col-sm-4">
-																	<button id="lihat_file_nama_peralatan" name="lihat_file_nama_peralatan" type="button" class="btn btn-sm btn-outline-brand" data-toggle="modal" data-target="#kt_modal_rincian"> <i class="fa fa-eye "></i>Lihat File</button>
+																	<button id="lihat_file_nama_peralatan" name="lihat_file_nama_peralatan" type="button" class="btn btn-sm btn-outline-brand" data-toggle="modal" data-target="#kt_modal_peralatan_kerja"> <i class="fa fa-eye "></i>Lihat Peralatan</button>
 																</div>
 																<div id="checkbox_nama_peralatan" name="checkbox_nama_peralatan" class="col-sm-12">
 																	<div class="kt-checkbox-inline">
@@ -1173,10 +1158,10 @@
 											</div>
 										</div>
 									</div>
-								</form>
+								</div>
 							</div>
 						</div>
-					</div>
+					</form>
 					<!-- end:: Content -->
 				</div>
 				<!--begin::Modal-->
@@ -1218,45 +1203,6 @@
 							<div class="modal-footer">
 								<button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
 								<button type="button" class="btn btn-danger kt_sweetalert_tolak" data-dismiss="modal">Tolak</button>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="modal fade" id="kt_modal_rincian" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-					<div class="modal-dialog" role="document">
-						<div class="modal-content">
-							<div class="modal-header">
-								<h5 class="modal-title" id="exampleModalLabel">Dokumen dan file</h5>
-								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-								</button>
-							</div>
-							<div class="modal-body">
-								<div class="form-group row group-dokumen">
-									<label class="col-6 col-form-label dokumen">
-										<span id="nama_dokumen" name="nama_dokumen">Nama Dokumen 42334</span>
-									</label>
-									<div align="right" class="col-sm-6">
-										<button onclick=" window.open('#','_blank')" class="btn btn-sm btn-link">
-											<i class="fa fa-download"></i> Download/View
-										</button>
-									</div>
-								</div>
-								<div class="form-group row group-dokumen">
-									<label class="col-6 col-form-label dokumen">
-										<span id="nama_dokumen" name="nama_dokumen">Nama Dokumen 12312</span>
-									</label>
-									<div align="right" class="col-sm-6">
-										<button onclick=" window.open('#','_blank')" class="btn btn-sm btn-link">
-											<i class="fa fa-download"></i> Download/View
-										</button>
-									</div>
-								</div>
-							</div>
-							<div class="modal-footer">
-								<button type="button" class="btn btn-secondary" data-dismiss="modal">
-									<i class="fa fa-times"></i> Tutup
-								</button>
 							</div>
 						</div>
 					</div>
@@ -1366,6 +1312,41 @@
 					</div>
 				</div>
 
+				<div class="modal fade" id="kt_modal_peralatan_kerja" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="exampleModalLabel">Peralatan Kerja</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								</button>
+							</div>
+							<div class="modal-body">
+								<div class="row">
+									<div class="col-sm-6">
+										<ul>
+											<li name="nama_peralatan" >Palu</li>
+											<li name="nama_peralatan" >Mesin Bor</li>
+											<li name="nama_peralatan" >Kapak</li>
+										</ul>
+									</div>
+									<div class="col-sm-6">
+										<ul>
+											<li name="nama_peralatan" >Palu</li>
+											<li name="nama_peralatan" >Mesin Bor</li>
+											<li name="nama_peralatan" >Kapak</li>
+										</ul>
+									</div>
+								</div>
+								
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">
+									<i class="fa fa-times"></i> Tutup
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
 				<!--end::Modal-->
 				<!-- begin:: Footer -->
 				<div class="kt-footer kt-grid__item kt-grid kt-grid--desktop kt-grid--ver-desktop">
@@ -1561,6 +1542,37 @@
 		jQuery(document).ready(function() {    
 			KTBootstrapDatepicker.init();
 		});
+	</script>
+	<script>
+		$(document).ready(function() {
+			let i = 1;
+			$("#btn_tambah_berkas").click(function () {
+				$("#container_tambah_berkas").append(
+					'<div data-id="'+i+'" class="col-sm-12 input-berkas tambah_berkas">' +
+					'<div class="row">' +
+					'<div class="col-sm-11">' +
+					'<div class="custom-file">' +
+					'<input style="font-size:1rem" type="file" class="custom-file-input" id="isolasi_energi_doc" name="isolasi_energi_doc">' +
+					'<label style="font-size:1rem" class="custom-file-label" for="customFile">Pilih berkas</label>' +
+					'</div>' +
+					'</div>'+
+					'<div align="right" class="col-sm-1">' +
+					'<button type="button" data-id="'+i+'" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary">' +
+					'<span class="fa fa-trash-alt"></span>' +
+					'</button>' +
+					'</div>' +
+					'</div>' +
+					'</div>'
+					);
+				i++; 
+
+			});
+			$('#container_tambah_berkas').on('click','#btn_hapus_input', function (e) {
+				let id = $(this).data('id');
+				console.log(id);
+				$('.tambah_berkas[data-id="' + id + '"]').remove();
+			});
+		})
 	</script>
 </body>
 <!-- end::Body -->

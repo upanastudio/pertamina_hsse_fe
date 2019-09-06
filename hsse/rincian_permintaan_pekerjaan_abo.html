@@ -247,47 +247,47 @@
 				<!-- end:: Header -->
 				<div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor">
 					<!-- begin:: Subheader -->
-					<div class="kt-subheader   kt-grid__item" id="kt_subheader">
-						<div class="kt-subheader__main">
-							<h3 class="kt-subheader__title">
-								Pekerjaan
-							</h3>
-							<span class="kt-subheader__separator kt-hidden"></span>
-							<div class="kt-subheader__breadcrumbs">
-								<a href="pekerjaan.html" class="kt-subheader__breadcrumbs-home"><i class="flaticon2-shelter"></i></a>
-								<span class="kt-subheader__breadcrumbs-separator"></span>
-								<a href="permintaan_pekerjaan.html" class="kt-subheader__breadcrumbs-link">
-								Permintaan Pekerjaan </a>
-								<span class="kt-subheader__breadcrumbs-separator"></span>
-								<a href="#" class="kt-subheader__breadcrumbs-link">
-								Rincian </a>
+					<form class="kt-form">
+						<div class="kt-subheader   kt-grid__item" id="kt_subheader">
+							<div class="kt-subheader__main">
+								<h3 class="kt-subheader__title">
+									Pekerjaan
+								</h3>
+								<span class="kt-subheader__separator kt-hidden"></span>
+								<div class="kt-subheader__breadcrumbs">
+									<a href="pekerjaan.html" class="kt-subheader__breadcrumbs-home"><i class="flaticon2-shelter"></i></a>
+									<span class="kt-subheader__breadcrumbs-separator"></span>
+									<a href="permintaan_pekerjaan.html" class="kt-subheader__breadcrumbs-link">
+									Permintaan Pekerjaan </a>
+									<span class="kt-subheader__breadcrumbs-separator"></span>
+									<a href="#" class="kt-subheader__breadcrumbs-link">
+									Rincian </a>
+								</div>
+							</div>
+							<div class="kt-subheader__toolbar">
+								<button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#kt_modal_tolak">
+									<i class="fa fa-times"></i> Tolak
+								</button>
+								<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#kt_modal_persetujuan">
+									<i class="fa fa-check"></i> Approve
+								</button>
 							</div>
 						</div>
-						<div class="kt-subheader__toolbar">
-							<button class="btn btn-secondary" data-toggle="modal" data-target="#kt_modal_tolak">
-								<i class="fa fa-times"></i> Tolak
-							</button>
-							<button class="btn btn-primary" data-toggle="modal" data-target="#kt_modal_persetujuan">
-								<i class="fa fa-check"></i> Approve
-							</button>
-						</div>
-					</div>
-					<!-- end:: Subheader -->
-					<!-- begin:: Content -->
-					<div class="kt-content  kt-grid__item kt-grid__item--fluid" id="kt_content">
-						<div class="row">
-							<div class="kt-portlet">
-								<div class="kt-portlet__head">
-									<div class="kt-portlet__head-label">
-										<span class="kt-portlet__head-icon kt-hidden">
-											<i class="la la-gear"></i>
-										</span>
-										<h3 class="kt-portlet__head-title">
-											Permintaan Pekerjaan / <span name="nama_pekerjaan">Penggalian</span>
-										</h3>
+						<!-- end:: Subheader -->
+						<!-- begin:: Content -->
+						<div class="kt-content  kt-grid__item kt-grid__item--fluid" id="kt_content">
+							<div class="row">
+								<div class="kt-portlet">
+									<div class="kt-portlet__head">
+										<div class="kt-portlet__head-label">
+											<span class="kt-portlet__head-icon kt-hidden">
+												<i class="la la-gear"></i>
+											</span>
+											<h3 class="kt-portlet__head-title">
+												Permintaan Pekerjaan / <span name="nama_pekerjaan">Penggalian</span>
+											</h3>
+										</div>
 									</div>
-								</div>
-								<form class="kt-form">
 									<div class="kt-portlet__body">
 										<ul class="nav nav-tabs nav-fill" role="tablist">
 											<li class="nav-item">
@@ -874,42 +874,26 @@
 																		</label>
 																	</div>
 																	<div align="right" class="col-sm-4">
-																		<!-- <button id="btn_tambah_prosedur" name="btn_tambah_prosedur" type="button" class="btn btn-sm btn-success">
-																			<i class="fa fa-plus"></i> Tambah file
-																		</button> -->
-																		<button type="button" id="btn_tambah_input" name="btn_tambah_input" class="btn btn-secondary" data-container="body" data-toggle="kt-tooltip" data-placement="left" title="Tambah berkas">
+																		<button type="button" id="btn_tambah_berkas" name="btn_tambah_berkas" class="btn btn-secondary" data-container="body" data-toggle="kt-tooltip" data-placement="left" title="Tambah berkas">
 																			<span class="fa fa-plus"></span>
 																		</button>
 																	</div>
 																</div>
 															</div>
-															<div class="col-sm-12 input-berkas">
-																<div class="row">
-																	<div class="col-sm-11">
-																		<div class="custom-file">
-																			<input style="font-size:1rem" type="file" class="custom-file-input" id="isolasi_energi_doc" name="isolasi_energi_doc">
-																			<label style="font-size:1rem" class="custom-file-label" for="customFile">Pilih berkas</label>
+															<div id="container_tambah_berkas">
+																<div class="col-sm-12 input-berkas">
+																	<div class="row">
+																		<div class="col-sm-11">
+																			<div class="custom-file">
+																				<input style="font-size:1rem" type="file" class="custom-file-input" id="isolasi_energi_doc" name="isolasi_energi_doc">
+																				<label style="font-size:1rem" class="custom-file-label" for="customFile">Pilih berkas</label>
+																			</div>
 																		</div>
-																	</div>
-																	<div align="right" class="col-sm-1">
-																		<button type="button" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary">
-																			<span class="fa fa-trash-alt"></span>
-																		</button>
-																	</div>
-																</div>
-															</div>
-															<div class="col-sm-12 input-berkas">
-																<div class="row">
-																	<div class="col-sm-11">
-																		<div class="custom-file">
-																			<input style="font-size:1rem" type="file" class="custom-file-input" id="isolasi_energi_doc" name="isolasi_energi_doc">
-																			<label style="font-size:1rem" class="custom-file-label" for="customFile">Pilih berkas</label>
+																		<div align="right" class="col-sm-1">
+																			<button style="pointer-events: none" disabled="" type="button" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary">
+																				<span class="fa fa-trash-alt"></span>
+																			</button>
 																		</div>
-																	</div>
-																	<div align="right" class="col-sm-1">
-																		<button type="button" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary">
-																			<span class="fa fa-trash-alt"></span>
-																		</button>
 																	</div>
 																</div>
 															</div>
@@ -1146,7 +1130,7 @@
 															<div class="form-group row">
 																<label class="col-sm-8">Nama Peralatan</label>
 																<div align="right" class="col-sm-4">
-																	<button id="lihat_file_nama_peralatan" name="lihat_file_nama_peralatan" type="button" class="btn btn-sm btn-outline-brand" data-toggle="modal" data-target="#kt_modal_rincian"> <i class="fa fa-eye "></i>Lihat File</button>
+																	<button id="lihat_file_nama_peralatan" name="lihat_file_nama_peralatan" type="button" class="btn btn-sm btn-outline-brand" data-toggle="modal" data-target="#kt_modal_peralatan_kerja"> <i class="fa fa-eye "></i>Lihat Peralatan</button>
 																</div>
 																<div id="checkbox_nama_peralatan" name="checkbox_nama_peralatan" class="col-sm-12">
 																	<div class="kt-checkbox-inline">
@@ -1173,109 +1157,67 @@
 											</div>
 										</div>
 									</div>
-								</form>
+								</div>
+							</div>
+						</div>
+						<!-- end:: Content -->\
+					</form>
+					<!--begin::Modal-->
+					<div class="modal fade" id="kt_modal_persetujuan" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="exampleModalLabel">Approve</h5>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									</button>
+								</div>
+								<div align="center" class="modal-body">
+									<h4>Approve Sekarang ?</h4>
+									<div style="padding:15px 0px">
+										<button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+										<button type="button" class="btn btn-primary kt_sweetalert_approve" data-dismiss="modal">Ya</button>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
-					<!-- end:: Content -->
-				</div>
-				<!--begin::Modal-->
-				<div class="modal fade" id="kt_modal_persetujuan" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-					<div class="modal-dialog" role="document">
-						<div class="modal-content">
-							<div class="modal-header">
-								<h5 class="modal-title" id="exampleModalLabel">Approve</h5>
-								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-								</button>
-							</div>
-							<div align="center" class="modal-body">
-								<h4>Approve Sekarang ?</h4>
-								<div style="padding:15px 0px">
+
+					<div class="modal fade" id="kt_modal_tolak" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+						<div class="modal-dialog modal-lg" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="exampleModalLabel">Tolak</h5>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									</button>
+								</div>
+								<div class="modal-body">
+									<form>
+										<div class="form-group">
+											<label for="message-text" class="form-control-label">Alasan Penolakan:</label>
+											<textarea class="form-control" id="alasan_penolakan" name="alasan_penolakan" rows="3"></textarea>
+										</div>
+									</form>
+								</div>
+								<div class="modal-footer">
 									<button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-									<button type="button" class="btn btn-primary kt_sweetalert_approve" data-dismiss="modal">Ya</button>
+									<button type="button" class="btn btn-danger kt_sweetalert_tolak" data-dismiss="modal">Tolak</button>
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>
 
-				<div class="modal fade" id="kt_modal_tolak" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-					<div class="modal-dialog modal-lg" role="document">
-						<div class="modal-content">
-							<div class="modal-header">
-								<h5 class="modal-title" id="exampleModalLabel">Tolak</h5>
-								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-								</button>
-							</div>
-							<div class="modal-body">
-								<form>
-									<div class="form-group">
-										<label for="message-text" class="form-control-label">Alasan Penolakan:</label>
-										<textarea class="form-control" id="alasan_penolakan" name="alasan_penolakan" rows="3"></textarea>
-									</div>
-								</form>
-							</div>
-							<div class="modal-footer">
-								<button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-								<button type="button" class="btn btn-danger kt_sweetalert_tolak" data-dismiss="modal">Tolak</button>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="modal fade" id="kt_modal_rincian" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-					<div class="modal-dialog" role="document">
-						<div class="modal-content">
-							<div class="modal-header">
-								<h5 class="modal-title" id="exampleModalLabel">Dokumen dan file</h5>
-								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-								</button>
-							</div>
-							<div class="modal-body">
-								<div class="form-group row group-dokumen">
-									<label class="col-6 col-form-label dokumen">
-										<span id="nama_dokumen" name="nama_dokumen">Nama Dokumen 42334</span>
-									</label>
-									<div align="right" class="col-sm-6">
-										<button onclick=" window.open('#','_blank')" class="btn btn-sm btn-link">
-											<i class="fa fa-download"></i> Download/View
-										</button>
-									</div>
+					<div class="modal fade" id="kt_modal_rincian" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="exampleModalLabel">Dokumen dan file</h5>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									</button>
 								</div>
-								<div class="form-group row group-dokumen">
-									<label class="col-6 col-form-label dokumen">
-										<span id="nama_dokumen" name="nama_dokumen">Nama Dokumen 12312</span>
-									</label>
-									<div align="right" class="col-sm-6">
-										<button onclick=" window.open('#','_blank')" class="btn btn-sm btn-link">
-											<i class="fa fa-download"></i> Download/View
-										</button>
-									</div>
-								</div>
-							</div>
-							<div class="modal-footer">
-								<button type="button" class="btn btn-secondary" data-dismiss="modal">
-									<i class="fa fa-times"></i> Tutup
-								</button>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="modal fade" id="kt_modal_rincian_heavy_equipment" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-					<div class="modal-dialog" role="document">
-						<div class="modal-content">
-							<div class="modal-header">
-								<h5 class="modal-title" id="exampleModalLabel">Dokumen dan file</h5>
-								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-								</button>
-							</div>
-							<div class="modal-body">
-								<div class="form-group group-dokumen">
-									<label class="col-12 col-form-label dokumen">Sertifikat</label>
-									<div class="row col-sm-12" style="padding-right: 0px;padding-left: 20px;">
-										<label style="font-size:1rem;" class="col-6 col-form-label dokumen">
-											Nama Dokumen 12312
+								<div class="modal-body">
+									<div class="form-group row group-dokumen">
+										<label class="col-6 col-form-label dokumen">
+											<span id="nama_dokumen" name="nama_dokumen">Nama Dokumen 42334</span>
 										</label>
 										<div align="right" class="col-sm-6">
 											<button onclick=" window.open('#','_blank')" class="btn btn-sm btn-link">
@@ -1283,9 +1225,9 @@
 											</button>
 										</div>
 									</div>
-									<div class="row col-sm-12" style="padding-right: 0px;padding-left: 20px;">
-										<label style="font-size:1rem;" class="col-6 col-form-label dokumen">
-											Nama Dokumen 12312
+									<div class="form-group row group-dokumen">
+										<label class="col-6 col-form-label dokumen">
+											<span id="nama_dokumen" name="nama_dokumen">Nama Dokumen 12312</span>
 										</label>
 										<div align="right" class="col-sm-6">
 											<button onclick=" window.open('#','_blank')" class="btn btn-sm btn-link">
@@ -1294,113 +1236,189 @@
 										</div>
 									</div>
 								</div>
-								<div class="form-group group-dokumen">
-									<label class="col-12 col-form-label dokumen">SOP</label>
-									<div class="row col-sm-12" style="padding-right: 0px;padding-left: 20px;">
-										<label style="font-size:1rem;" class="col-6 col-form-label dokumen">
-											Nama Dokumen 12312
-										</label>
-										<div align="right" class="col-sm-6">
-											<button onclick=" window.open('#','_blank')" class="btn btn-sm btn-link">
-												<i class="fa fa-download"></i> Download/View
-											</button>
-										</div>
-									</div>
-									<div class="row col-sm-12" style="padding-right: 0px;padding-left: 20px;">
-										<label style="font-size:1rem;" class="col-6 col-form-label dokumen">
-											Nama Dokumen 12312
-										</label>
-										<div align="right" class="col-sm-6">
-											<button onclick=" window.open('#','_blank')" class="btn btn-sm btn-link">
-												<i class="fa fa-download"></i> Download/View
-											</button>
-										</div>
-									</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary" data-dismiss="modal">
+										<i class="fa fa-times"></i> Tutup
+									</button>
 								</div>
-							</div>
-							<div class="modal-footer">
-								<button type="button" class="btn btn-secondary" data-dismiss="modal">
-									<i class="fa fa-times"></i> Tutup
-								</button>
 							</div>
 						</div>
 					</div>
-				</div>
 
-				<!--end::Modal-->
-				<!-- begin:: Footer -->
-				<div class="kt-footer kt-grid__item kt-grid kt-grid--desktop kt-grid--ver-desktop">
-					<div class="kt-footer__copyright">
-						2019&nbsp;&copy;&nbsp;<a href="http://keenthemes.com/metronic" target="_blank" class="kt-link">Upana Studio</a>
+					<div class="modal fade" id="kt_modal_rincian_heavy_equipment" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="exampleModalLabel">Dokumen dan file</h5>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									</button>
+								</div>
+								<div class="modal-body">
+									<div class="form-group group-dokumen">
+										<label class="col-12 col-form-label dokumen">Sertifikat</label>
+										<div class="row col-sm-12" style="padding-right: 0px;padding-left: 20px;">
+											<label style="font-size:1rem;" class="col-6 col-form-label dokumen">
+												Nama Dokumen 12312
+											</label>
+											<div align="right" class="col-sm-6">
+												<button onclick=" window.open('#','_blank')" class="btn btn-sm btn-link">
+													<i class="fa fa-download"></i> Download/View
+												</button>
+											</div>
+										</div>
+										<div class="row col-sm-12" style="padding-right: 0px;padding-left: 20px;">
+											<label style="font-size:1rem;" class="col-6 col-form-label dokumen">
+												Nama Dokumen 12312
+											</label>
+											<div align="right" class="col-sm-6">
+												<button onclick=" window.open('#','_blank')" class="btn btn-sm btn-link">
+													<i class="fa fa-download"></i> Download/View
+												</button>
+											</div>
+										</div>
+									</div>
+									<div class="form-group group-dokumen">
+										<label class="col-12 col-form-label dokumen">SOP</label>
+										<div class="row col-sm-12" style="padding-right: 0px;padding-left: 20px;">
+											<label style="font-size:1rem;" class="col-6 col-form-label dokumen">
+												Nama Dokumen 12312
+											</label>
+											<div align="right" class="col-sm-6">
+												<button onclick=" window.open('#','_blank')" class="btn btn-sm btn-link">
+													<i class="fa fa-download"></i> Download/View
+												</button>
+											</div>
+										</div>
+										<div class="row col-sm-12" style="padding-right: 0px;padding-left: 20px;">
+											<label style="font-size:1rem;" class="col-6 col-form-label dokumen">
+												Nama Dokumen 12312
+											</label>
+											<div align="right" class="col-sm-6">
+												<button onclick=" window.open('#','_blank')" class="btn btn-sm btn-link">
+													<i class="fa fa-download"></i> Download/View
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary" data-dismiss="modal">
+										<i class="fa fa-times"></i> Tutup
+									</button>
+								</div>
+							</div>
+						</div>
 					</div>
+
+					<div class="modal fade" id="kt_modal_peralatan_kerja" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="exampleModalLabel">Peralatan Kerja</h5>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									</button>
+								</div>
+								<div class="modal-body">
+									<div class="row">
+										<div class="col-sm-6">
+											<ul>
+												<li name="nama_peralatan" >Palu</li>
+												<li name="nama_peralatan" >Mesin Bor</li>
+												<li name="nama_peralatan" >Kapak</li>
+											</ul>
+										</div>
+										<div class="col-sm-6">
+											<ul>
+												<li name="nama_peralatan" >Palu</li>
+												<li name="nama_peralatan" >Mesin Bor</li>
+												<li name="nama_peralatan" >Kapak</li>
+											</ul>
+										</div>
+									</div>
+									
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary" data-dismiss="modal">
+										<i class="fa fa-times"></i> Tutup
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--end::Modal-->
+					<!-- begin:: Footer -->
+					<div class="kt-footer kt-grid__item kt-grid kt-grid--desktop kt-grid--ver-desktop">
+						<div class="kt-footer__copyright">
+							2019&nbsp;&copy;&nbsp;<a href="http://keenthemes.com/metronic" target="_blank" class="kt-link">Upana Studio</a>
+						</div>
+					</div>
+					<!-- end:: Footer -->
 				</div>
-				<!-- end:: Footer -->
 			</div>
 		</div>
-	</div>
-	<!-- end:: Page -->
-	<!-- begin::Scrolltop -->
-	<div id="kt_scrolltop" class="kt-scrolltop">
-		<i class="fa fa-arrow-up"></i>
-	</div>
-	<!-- end::Scrolltop -->
-	<!-- begin::Global Config(global config for global JS sciprts) -->
-	<script>
-		var KTAppOptions = {
-			"colors": {
-				"state": {
-					"brand": "#5d78ff",
-					"dark": "#282a3c",
-					"light": "#ffffff",
-					"primary": "#5867dd",
-					"success": "#34bfa3",
-					"info": "#36a3f7",
-					"warning": "#ffb822",
-					"danger": "#fd3995"
-				},
-				"base": {
-					"label": ["#c5cbe3", "#a1a8c3", "#3d4465", "#3e4466"],
-					"shape": ["#f0f3ff", "#d9dffa", "#afb4d4", "#646c9a"]
+		<!-- end:: Page -->
+		<!-- begin::Scrolltop -->
+		<div id="kt_scrolltop" class="kt-scrolltop">
+			<i class="fa fa-arrow-up"></i>
+		</div>
+		<!-- end::Scrolltop -->
+		<!-- begin::Global Config(global config for global JS sciprts) -->
+		<script>
+			var KTAppOptions = {
+				"colors": {
+					"state": {
+						"brand": "#5d78ff",
+						"dark": "#282a3c",
+						"light": "#ffffff",
+						"primary": "#5867dd",
+						"success": "#34bfa3",
+						"info": "#36a3f7",
+						"warning": "#ffb822",
+						"danger": "#fd3995"
+					},
+					"base": {
+						"label": ["#c5cbe3", "#a1a8c3", "#3d4465", "#3e4466"],
+						"shape": ["#f0f3ff", "#d9dffa", "#afb4d4", "#646c9a"]
+					}
 				}
-			}
-		};
-	</script>
-	<!-- end::Global Config -->
-	<!--begin:: Global Mandatory Vendors -->
-	<script src="../assets/vendors/general/jquery/dist/jquery.js" type="text/javascript"></script>
-	<script src="../assets/vendors/general/popper.js/dist/umd/popper.js" type="text/javascript"></script>
-	<script src="../assets/vendors/general/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
-	<script src="../assets/vendors/general/js-cookie/src/js.cookie.js" type="text/javascript"></script>
-	<script src="../assets/vendors/general/moment/min/moment.min.js" type="text/javascript"></script>
-	<script src="../assets/vendors/general/tooltip.js/dist/umd/tooltip.min.js" type="text/javascript"></script>
-	<script src="../assets/vendors/general/perfect-scrollbar/dist/perfect-scrollbar.js" type="text/javascript"></script>
-	<script src="../assets/vendors/general/sticky-js/dist/sticky.min.js" type="text/javascript"></script>
-	<script src="../assets/vendors/general/wnumb/wNumb.js" type="text/javascript"></script>
-	<!--end:: Global Mandatory Vendors -->
-	<!--begin:: Global Optional Vendors -->
-	<script src="../assets/vendors/general/select2/dist/js/select2.full.js" type="text/javascript"></script>
-	<script src="../assets/vendors/general/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js" type="text/javascript"></script>
-	<script src="../assets/vendors/custom/components/vendors/bootstrap-datepicker/init.js" type="text/javascript"></script>
-	<!--end:: Global Optional Vendors -->
-	<!--begin::Global Theme Bundle(used by all pages) -->
-	<script src="../assets/demo/default/base/scripts.bundle.js" type="text/javascript"></script>
-	<!--end::Global Theme Bundle -->
-	<!--begin::Page Vendors(used by this page) -->
-	<script src="../assets/vendors/custom/fullcalendar/fullcalendar.bundle.js" type="text/javascript"></script>
-	<!--end::Page Vendors -->
-	<!--begin::Global App Bundle(used by all pages) -->
-	<script src="../assets/app/bundle/app.bundle.js" type="text/javascript"></script>
-	<!--begin::Page Vendors(used by this page) -->
-	<script src="../assets/vendors/general/sweetalert2/dist/sweetalert2.min.js" type="text/javascript"></script>
-	<script src="../assets/vendors/custom/components/vendors/sweetalert2/init.js" type="text/javascript"></script>
-	<!--end::Page Vendors -->
-	<!--begin::Page Scripts(used by this page) -->
-	<!--end::Global App Bundle -->
-	<!-- AJAX -->
-	<script src="../assets/vendors/custom/datatables/datatables.bundle.js" type="text/javascript"></script>
-	<script src="../assets/app/script/js_ajax_hsse.js" type="text/javascript"></script>
-	<!-- SweetAlert2 -->
-	<script>
+			};
+		</script>
+		<!-- end::Global Config -->
+		<!--begin:: Global Mandatory Vendors -->
+		<script src="../assets/vendors/general/jquery/dist/jquery.js" type="text/javascript"></script>
+		<script src="../assets/vendors/general/popper.js/dist/umd/popper.js" type="text/javascript"></script>
+		<script src="../assets/vendors/general/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
+		<script src="../assets/vendors/general/js-cookie/src/js.cookie.js" type="text/javascript"></script>
+		<script src="../assets/vendors/general/moment/min/moment.min.js" type="text/javascript"></script>
+		<script src="../assets/vendors/general/tooltip.js/dist/umd/tooltip.min.js" type="text/javascript"></script>
+		<script src="../assets/vendors/general/perfect-scrollbar/dist/perfect-scrollbar.js" type="text/javascript"></script>
+		<script src="../assets/vendors/general/sticky-js/dist/sticky.min.js" type="text/javascript"></script>
+		<script src="../assets/vendors/general/wnumb/wNumb.js" type="text/javascript"></script>
+		<!--end:: Global Mandatory Vendors -->
+		<!--begin:: Global Optional Vendors -->
+		<script src="../assets/vendors/general/select2/dist/js/select2.full.js" type="text/javascript"></script>
+		<script src="../assets/vendors/general/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js" type="text/javascript"></script>
+		<script src="../assets/vendors/custom/components/vendors/bootstrap-datepicker/init.js" type="text/javascript"></script>
+		<!--end:: Global Optional Vendors -->
+		<!--begin::Global Theme Bundle(used by all pages) -->
+		<script src="../assets/demo/default/base/scripts.bundle.js" type="text/javascript"></script>
+		<!--end::Global Theme Bundle -->
+		<!--begin::Page Vendors(used by this page) -->
+		<script src="../assets/vendors/custom/fullcalendar/fullcalendar.bundle.js" type="text/javascript"></script>
+		<!--end::Page Vendors -->
+		<!--begin::Global App Bundle(used by all pages) -->
+		<script src="../assets/app/bundle/app.bundle.js" type="text/javascript"></script>
+		<!--begin::Page Vendors(used by this page) -->
+		<script src="../assets/vendors/general/sweetalert2/dist/sweetalert2.min.js" type="text/javascript"></script>
+		<script src="../assets/vendors/custom/components/vendors/sweetalert2/init.js" type="text/javascript"></script>
+		<!--end::Page Vendors -->
+		<!--begin::Page Scripts(used by this page) -->
+		<!--end::Global App Bundle -->
+		<!-- AJAX -->
+		<script src="../assets/vendors/custom/datatables/datatables.bundle.js" type="text/javascript"></script>
+		<script src="../assets/app/script/js_ajax_hsse.js" type="text/javascript"></script>
+		<!-- SweetAlert2 -->
+		<script>
 		// Class definition
 		var KTSweetAlert2Demo = function() {
 
@@ -1522,6 +1540,37 @@
 		jQuery(document).ready(function() {    
 			KTBootstrapDatepicker.init();
 		});
+	</script>
+	<script>
+		$(document).ready(function() {
+			let i = 1;
+			$("#btn_tambah_berkas").click(function () {
+				$("#container_tambah_berkas").append(
+					'<div data-id="'+i+'" class="col-sm-12 input-berkas tambah_berkas">' +
+					'<div class="row">' +
+					'<div class="col-sm-11">' +
+					'<div class="custom-file">' +
+					'<input style="font-size:1rem" type="file" class="custom-file-input" id="isolasi_energi_doc" name="isolasi_energi_doc">' +
+					'<label style="font-size:1rem" class="custom-file-label" for="customFile">Pilih berkas</label>' +
+					'</div>' +
+					'</div>'+
+					'<div align="right" class="col-sm-1">' +
+					'<button type="button" data-id="'+i+'" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary">' +
+					'<span class="fa fa-trash-alt"></span>' +
+					'</button>' +
+					'</div>' +
+					'</div>' +
+					'</div>'
+					);
+				i++; 
+
+			});
+			$('#container_tambah_berkas').on('click','#btn_hapus_input', function (e) {
+				let id = $(this).data('id');
+				console.log(id);
+				$('.tambah_berkas[data-id="' + id + '"]').remove();
+			});
+		})
 	</script>
 </body>
 <!-- end::Body -->
