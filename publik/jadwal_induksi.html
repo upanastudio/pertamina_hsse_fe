@@ -26,27 +26,10 @@
 	<link href="../assets/vendors/general/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" type="text/css" />
 	<!--end:: Global Mandatory Vendors -->
 	<!--begin:: Global Optional Vendors -->
-	<link href="../assets/vendors/general/tether/dist/css/tether.css" rel="stylesheet" type="text/css" />
 	<link href="../assets/vendors/general/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css" rel="stylesheet" type="text/css" />
-	<link href="../assets/vendors/general/bootstrap-datetime-picker/css/bootstrap-datetimepicker.css" rel="stylesheet" type="text/css" />
-	<link href="../assets/vendors/general/bootstrap-timepicker/css/bootstrap-timepicker.css" rel="stylesheet" type="text/css" />
 	<link href="../assets/vendors/general/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css" />
-	<link href="../assets/vendors/general/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.css" rel="stylesheet" type="text/css" />
-	<link href="../assets/vendors/general/bootstrap-select/dist/css/bootstrap-select.css" rel="stylesheet" type="text/css" />
-	<link href="../assets/vendors/general/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.css" rel="stylesheet" type="text/css" />
 	<link href="../assets/vendors/general/select2/dist/css/select2.css" rel="stylesheet" type="text/css" />
-	<link href="../assets/vendors/general/ion-rangeslider/css/ion.rangeSlider.css" rel="stylesheet" type="text/css" />
-	<link href="../assets/vendors/general/nouislider/distribute/nouislider.css" rel="stylesheet" type="text/css" />
-	<link href="../assets/vendors/general/owl.carousel/dist/assets/owl.carousel.css" rel="stylesheet" type="text/css" />
-	<link href="../assets/vendors/general/owl.carousel/dist/assets/owl.theme.default.css" rel="stylesheet" type="text/css" />
-	<link href="../assets/vendors/general/dropzone/dist/dropzone.css" rel="stylesheet" type="text/css" />
-	<link href="../assets/vendors/general/summernote/dist/summernote.css" rel="stylesheet" type="text/css" />
-	<link href="../assets/vendors/general/bootstrap-markdown/css/bootstrap-markdown.min.css" rel="stylesheet" type="text/css" />
-	<link href="../assets/vendors/general/animate.css/animate.css" rel="stylesheet" type="text/css" />
-	<link href="../assets/vendors/general/toastr/build/toastr.css" rel="stylesheet" type="text/css" />
-	<link href="../assets/vendors/general/morris.js/morris.css" rel="stylesheet" type="text/css" />
 	<link href="../assets/vendors/general/sweetalert2/dist/sweetalert2.css" rel="stylesheet" type="text/css" />
-	<link href="../assets/vendors/general/socicon/css/socicon.css" rel="stylesheet" type="text/css" />
 	<link href="../assets/vendors/custom/vendors/line-awesome/css/line-awesome.css" rel="stylesheet" type="text/css" />
 	<link href="../assets/vendors/custom/vendors/flaticon/flaticon.css" rel="stylesheet" type="text/css" />
 	<link href="../assets/vendors/custom/vendors/flaticon2/flaticon.css" rel="stylesheet" type="text/css" />
@@ -79,6 +62,15 @@
 		}
 		.peserta_ujian {
 			pointer-events: none;
+			padding: 20px;
+		}
+		.user-name {
+			margin-top: 18px;
+			margin-right: 20px;
+		}
+		.btn-secondary:hover {
+			border-color: rgba(88, 103, 221, 0.25) !important;
+			background-color: #a7abc3 !important;
 		}
 		@media (max-width: 1024px) {
 			.kt-header-menu-wrapper {
@@ -198,93 +190,12 @@
 							</div>
 							<!-- end: Header Menu -->
 						</div>
-						<div class="kt-header__topbar-item kt-header__topbar-item--user">
-							<div class="kt-header__topbar-wrapper" data-toggle="dropdown" data-offset="0px,0px">
-								<div style="margin: 15px 30px" class="kt-header__topbar-user">
-									<span class="kt-header__topbar-welcome kt-hidden-mobile">Hi,</span>
-									<span class="kt-header__topbar-username kt-hidden-mobile">Rifal</span>
-									<img class="kt-hidden" alt="Pic" src="../assets/media/users/300_25.jpg" />
-									<!--use below badge element instead the user avatar to display username's first letter(remove kt-hidden class to display it) -->
-									<span class="kt-badge kt-badge--username kt-badge--unified-primary kt-badge--lg kt-badge--rounded kt-badge--bold">R</span>
-								</div>
+						<!-- <div class="kt-header__topbar-item kt-header__topbar-item--user">
+							<div style="color: white" class="user-name">
+								<p style="display: inline;margin-right:15px">Hi, <span name="user_name">Rifal</span></p>
+								<a id="btn_log_out" class="btn btn-sm btn-secondary"> <i class="fa fa-sign-out-alt"></i> Keluar</a>
 							</div>
-							<div class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-top-unround dropdown-menu-xl">
-								<!--begin: Head -->
-								<div class="kt-user-card kt-user-card--skin-dark kt-notification-item-padding-x" style="background-image: url(../assets/media/misc/bg-1.jpg)">
-									<div class="kt-user-card__avatar">
-										<img class="kt-hidden" alt="Pic" src="../assets/media/users/300_25.jpg" />
-										<!--use below badge element instead the user avatar to display username's first letter(remove kt-hidden class to display it) -->
-										<span class="kt-badge kt-badge--lg kt-badge--rounded kt-badge--bold kt-font-success">S</span>
-									</div>
-									<div class="kt-user-card__name">
-										Sean Stone
-									</div>
-									<div class="kt-user-card__badge">
-										<span class="btn btn-success btn-sm btn-bold btn-font-md">23 messages</span>
-									</div>
-								</div>
-								<!--end: Head -->
-								<!--begin: Navigation -->
-								<div class="kt-notification">
-									<a href="#" class="kt-notification__item">
-										<div class="kt-notification__item-icon">
-											<i class="flaticon2-calendar-3 kt-font-success"></i>
-										</div>
-										<div class="kt-notification__item-details">
-											<div class="kt-notification__item-title kt-font-bold">
-												My Profile
-											</div>
-											<div class="kt-notification__item-time">
-												Account settings and more
-											</div>
-										</div>
-									</a>
-									<a href="#" class="kt-notification__item">
-										<div class="kt-notification__item-icon">
-											<i class="flaticon2-mail kt-font-warning"></i>
-										</div>
-										<div class="kt-notification__item-details">
-											<div class="kt-notification__item-title kt-font-bold">
-												My Messages
-											</div>
-											<div class="kt-notification__item-time">
-												Inbox and tasks
-											</div>
-										</div>
-									</a>
-									<a href="#" class="kt-notification__item">
-										<div class="kt-notification__item-icon">
-											<i class="flaticon2-rocket-1 kt-font-danger"></i>
-										</div>
-										<div class="kt-notification__item-details">
-											<div class="kt-notification__item-title kt-font-bold">
-												My Activities
-											</div>
-											<div class="kt-notification__item-time">
-												Logs and notifications
-											</div>
-										</div>
-									</a>
-									<a href="#" class="kt-notification__item">
-										<div class="kt-notification__item-icon">
-											<i class="flaticon2-hourglass kt-font-brand"></i>
-										</div>
-										<div class="kt-notification__item-details">
-											<div class="kt-notification__item-title kt-font-bold">
-												My Tasks
-											</div>
-											<div class="kt-notification__item-time">
-												latest tasks and projects
-											</div>
-										</div>
-									</a>
-									<div class="kt-notification__custom">
-										<a href="custom_user_login-v2.html" target="_blank" class="btn btn-label-brand btn-sm btn-bold">Sign Out</a>
-									</div>
-								</div>
-								<!--end: Navigation -->
-							</div>
-						</div>
+						</div> -->
 					</div>
 				</div>
 				<!-- end:: Header -->
@@ -321,6 +232,9 @@
 															Jadwal Tes 12 LSR
 														</h3>
 														<div style="margin-left: 30px;width: 300px">
+															<input class="form-control datepicker_mode" placeholder="--Pilih Tanggal--" id="filter_tanggal" name="filter_tanggal">
+														</div>
+														<div style="margin-left: 30px;width: 300px">
 															<select class="form-control" id="pilih_depot" name="pilih_depot">
 																<option value="0">--Pilih Depot--</option>
 																<option value="1">Depot 1</option>
@@ -338,27 +252,27 @@
 																<span class="kt-portlet__head-icon">
 																	<i class="flaticon-calendar"></i>
 																</span><h5 style="display: inline">Tanggal Tes :</h5>
-																<p name="tanggal_tes" style="margin-top: 5px;font-size: 1.2rem">20 November 2019</p>
+																<p id="tanggal_tes" name="tanggal_tes" style="margin-top: 5px;font-size: 1.2rem">20/November/2019</p>
 															</div>
 															<div style="margin-top:10px">
 																<h5>List Peserta Ujian :</h5>
 															</div>
 															<div class="row peserta_ujian">
-																<div class="col-sm-4" align="center">
+																<div class="col-sm-4" align="left">
 																	<p>1. Ahmad Rifaldi</p>
 																	<p>2. Ahmad Rifaldi</p>
 																	<p>3. Ahmad Rifaldi</p>
 																	<p>4. Ahmad Rifaldi</p>
 																	<p>5. Ahmad Rifaldi</p>
 																</div>
-																<div class="col-sm-4" align="center">
+																<div class="col-sm-4" align="left">
 																	<p>6. Ahmad Rifaldi</p>
 																	<p>7. Ahmad Rifaldi</p>
 																	<p>8. Ahmad Rifaldi</p>
 																	<p>9. Ahmad Rifaldi</p>
 																	<p>10. Ahmad Rifaldi</p>
 																</div>
-																<div class="col-sm-4" align="center">
+																<div class="col-sm-4" align="left">
 																	<p>11. Ahmad Rifaldi</p>
 																	<p>12. Ahmad Rifaldi</p>
 																	<p>13. Ahmad Rifaldi</p>
@@ -374,27 +288,27 @@
 																<span class="kt-portlet__head-icon">
 																	<i class="flaticon-calendar"></i>
 																</span><h5 style="display: inline">Tanggal Tes :</h5>
-																<p name="tanggal_tes" style="margin-top: 5px;font-size: 1.2rem">21 November 2019</p>
+																<p id="tanggal_tes" name="tanggal_tes" style="margin-top: 5px;font-size: 1.2rem">21/November/2019</p>
 															</div>
 															<div style="margin-top:10px">
 																<h5>List Peserta Ujian :</h5>
 															</div>
 															<div class="row peserta_ujian">
-																<div class="col-sm-4" align="center">
+																<div class="col-sm-4" align="left">
 																	<p>1. Ahmad Rifaldi</p>
 																	<p>2. Ahmad Rifaldi</p>
 																	<p>3. Ahmad Rifaldi</p>
 																	<p>4. Ahmad Rifaldi</p>
 																	<p>5. Ahmad Rifaldi</p>
 																</div>
-																<div class="col-sm-4" align="center">
+																<div class="col-sm-4" align="left">
 																	<p>6. Ahmad Rifaldi</p>
 																	<p>7. Ahmad Rifaldi</p>
 																	<p>8. Ahmad Rifaldi</p>
 																	<p>9. Ahmad Rifaldi</p>
 																	<p>10. Ahmad Rifaldi</p>
 																</div>
-																<div class="col-sm-4" align="center">
+																<div class="col-sm-4" align="left">
 																	<p>11. Ahmad Rifaldi</p>
 																	<p>12. Ahmad Rifaldi</p>
 																	<p>13. Ahmad Rifaldi</p>
@@ -410,27 +324,27 @@
 																<span class="kt-portlet__head-icon">
 																	<i class="flaticon-calendar"></i>
 																</span><h5 style="display: inline">Tanggal Tes :</h5>
-																<p name="tanggal_tes" style="margin-top: 5px;font-size: 1.2rem">21 November 2019</p>
+																<p id="tanggal_tes" name="tanggal_tes" style="margin-top: 5px;font-size: 1.2rem">21/November/2019</p>
 															</div>
 															<div style="margin-top:10px">
 																<h5>List Peserta Ujian :</h5>
 															</div>
 															<div class="row peserta_ujian">
-																<div class="col-sm-4" align="center">
+																<div class="col-sm-4" align="left">
 																	<p>1. Ahmad Rifaldi</p>
 																	<p>2. Ahmad Rifaldi</p>
 																	<p>3. Ahmad Rifaldi</p>
 																	<p>4. Ahmad Rifaldi</p>
 																	<p>5. Ahmad Rifaldi</p>
 																</div>
-																<div class="col-sm-4" align="center">
+																<div class="col-sm-4" align="left">
 																	<p>6. Ahmad Rifaldi</p>
 																	<p>7. Ahmad Rifaldi</p>
 																	<p>8. Ahmad Rifaldi</p>
 																	<p>9. Ahmad Rifaldi</p>
 																	<p>10. Ahmad Rifaldi</p>
 																</div>
-																<div class="col-sm-4" align="center">
+																<div class="col-sm-4" align="left">
 																	<p>11. Ahmad Rifaldi</p>
 																	<p>12. Ahmad Rifaldi</p>
 																	<p>13. Ahmad Rifaldi</p>
@@ -728,6 +642,47 @@
 			// Class Initialization
 			jQuery(document).ready(function() {
 				KTSweetAlert2Demo.init();
+			});
+		</script>
+		<script>
+			var KTBootstrapDatepicker = function () {
+				var arrows;
+				if (KTUtil.isRTL()) {
+					arrows = {
+						leftArrow: '<i class="la la-angle-right"></i>',
+						rightArrow: '<i class="la la-angle-left"></i>'
+					}
+				} else {
+					arrows = {
+						leftArrow: '<i class="la la-angle-left"></i>',
+						rightArrow: '<i class="la la-angle-right"></i>'
+					}
+				}
+				var demos = function () {
+					$('.datepicker_mode, .datepicker_mode_validate').datepicker({
+						rtl: KTUtil.isRTL(),
+						todayHighlight: true,
+						orientation: "bottom left",
+						templates: arrows,
+						format: 'dd/MM/yyyy'
+					});
+
+					$('.datepicker_mode_modal').datepicker({
+						rtl: KTUtil.isRTL(),
+						todayHighlight: true,
+						orientation: "bottom left",
+						templates: arrows
+					});
+
+				}
+				return {
+					init: function() {
+						demos(); 
+					}
+				};
+			}();
+			jQuery(document).ready(function() {    
+				KTBootstrapDatepicker.init();
 			});
 		</script>
 	</body>

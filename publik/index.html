@@ -26,27 +26,10 @@
 		<link href="../assets/vendors/general/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" type="text/css" />
 		<!--end:: Global Mandatory Vendors -->
 		<!--begin:: Global Optional Vendors -->
-		<link href="../assets/vendors/general/tether/dist/css/tether.css" rel="stylesheet" type="text/css" />
 		<link href="../assets/vendors/general/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css" rel="stylesheet" type="text/css" />
-		<link href="../assets/vendors/general/bootstrap-datetime-picker/css/bootstrap-datetimepicker.css" rel="stylesheet" type="text/css" />
-		<link href="../assets/vendors/general/bootstrap-timepicker/css/bootstrap-timepicker.css" rel="stylesheet" type="text/css" />
 		<link href="../assets/vendors/general/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css" />
-		<link href="../assets/vendors/general/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.css" rel="stylesheet" type="text/css" />
-		<link href="../assets/vendors/general/bootstrap-select/dist/css/bootstrap-select.css" rel="stylesheet" type="text/css" />
-		<link href="../assets/vendors/general/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.css" rel="stylesheet" type="text/css" />
 		<link href="../assets/vendors/general/select2/dist/css/select2.css" rel="stylesheet" type="text/css" />
-		<link href="../assets/vendors/general/ion-rangeslider/css/ion.rangeSlider.css" rel="stylesheet" type="text/css" />
-		<link href="../assets/vendors/general/nouislider/distribute/nouislider.css" rel="stylesheet" type="text/css" />
-		<link href="../assets/vendors/general/owl.carousel/dist/assets/owl.carousel.css" rel="stylesheet" type="text/css" />
-		<link href="../assets/vendors/general/owl.carousel/dist/assets/owl.theme.default.css" rel="stylesheet" type="text/css" />
-		<link href="../assets/vendors/general/dropzone/dist/dropzone.css" rel="stylesheet" type="text/css" />
-		<link href="../assets/vendors/general/summernote/dist/summernote.css" rel="stylesheet" type="text/css" />
-		<link href="../assets/vendors/general/bootstrap-markdown/css/bootstrap-markdown.min.css" rel="stylesheet" type="text/css" />
-		<link href="../assets/vendors/general/animate.css/animate.css" rel="stylesheet" type="text/css" />
-		<link href="../assets/vendors/general/toastr/build/toastr.css" rel="stylesheet" type="text/css" />
-		<link href="../assets/vendors/general/morris.js/morris.css" rel="stylesheet" type="text/css" />
 		<link href="../assets/vendors/general/sweetalert2/dist/sweetalert2.css" rel="stylesheet" type="text/css" />
-		<link href="../assets/vendors/general/socicon/css/socicon.css" rel="stylesheet" type="text/css" />
 		<link href="../assets/vendors/custom/vendors/line-awesome/css/line-awesome.css" rel="stylesheet" type="text/css" />
 		<link href="../assets/vendors/custom/vendors/flaticon/flaticon.css" rel="stylesheet" type="text/css" />
 		<link href="../assets/vendors/custom/vendors/flaticon2/flaticon.css" rel="stylesheet" type="text/css" />
@@ -72,6 +55,14 @@
 				margin-bottom: 20px;
 				padding: 15px;
 				border-bottom: 1px solid #E0E0E0;
+			}
+			.user-name {
+				margin-top: 18px;
+				margin-right: 20px;
+			}
+			.btn-secondary:hover {
+				border-color: rgba(88, 103, 221, 0.25) !important;
+				background-color: #a7abc3 !important;
 			}
 			@media (max-width: 1024px) {
 				.kt-header-menu-wrapper {
@@ -108,7 +99,7 @@
 			</div>
 			<div class="kt-header-mobile__toolbar">
 				<button class="kt-header-mobile__toolbar-toggler" id="kt_header_mobile_toggler"><span></span></button>
-				
+
 			</div>
 		</div>
 		<!-- end:: Header Mobile -->
@@ -151,91 +142,12 @@
 								</div>
 								<!-- end: Header Menu -->
 							</div>
-							<div class="kt-header__topbar-item kt-header__topbar-item--user">
-								<div class="kt-header__topbar-wrapper" data-toggle="dropdown" data-offset="0px,0px">
-									<div style="margin: 15px 30px" class="kt-header__topbar-user">
-										<span class="kt-header__topbar-welcome kt-hidden-mobile">Hi,</span>
-										<span class="kt-header__topbar-username kt-hidden-mobile">Rifal</span>
-										<img class="kt-hidden" alt="Pic" src="../assets/media/users/300_25.jpg" />
-										<span class="kt-badge kt-badge--username kt-badge--unified-primary kt-badge--lg kt-badge--rounded kt-badge--bold">R</span>
-									</div>
+							<!-- <div class="kt-header__topbar-item kt-header__topbar-item--user">
+								<div style="color: white" class="user-name">
+									<p style="display: inline;margin-right:15px">Hi, <span name="user_name">Rifal</span></p>
+									<a id="btn_log_out" class="btn btn-sm btn-secondary"> <i class="fa fa-sign-out-alt"></i> Keluar</a>
 								</div>
-								<div class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-top-unround dropdown-menu-xl">
-									<!--begin: Head -->
-									<div class="kt-user-card kt-user-card--skin-dark kt-notification-item-padding-x" style="background-image: url(../assets/media/misc/bg-1.jpg)">
-										<div class="kt-user-card__avatar">
-											<img class="kt-hidden" alt="Pic" src="../assets/media/users/300_25.jpg" />
-											<span class="kt-badge kt-badge--lg kt-badge--rounded kt-badge--bold kt-font-success">S</span>
-										</div>
-										<div class="kt-user-card__name">
-											Sean Stone
-										</div>
-										<div class="kt-user-card__badge">
-											<span class="btn btn-success btn-sm btn-bold btn-font-md">23 messages</span>
-										</div>
-									</div>
-									<!--end: Head -->
-									<!--begin: Navigation -->
-									<div class="kt-notification">
-										<a href="#" class="kt-notification__item">
-											<div class="kt-notification__item-icon">
-												<i class="flaticon2-calendar-3 kt-font-success"></i>
-											</div>
-											<div class="kt-notification__item-details">
-												<div class="kt-notification__item-title kt-font-bold">
-													My Profile
-												</div>
-												<div class="kt-notification__item-time">
-													Account settings and more
-												</div>
-											</div>
-										</a>
-										<a href="#" class="kt-notification__item">
-											<div class="kt-notification__item-icon">
-												<i class="flaticon2-mail kt-font-warning"></i>
-											</div>
-											<div class="kt-notification__item-details">
-												<div class="kt-notification__item-title kt-font-bold">
-													My Messages
-												</div>
-												<div class="kt-notification__item-time">
-													Inbox and tasks
-												</div>
-											</div>
-										</a>
-										<a href="#" class="kt-notification__item">
-											<div class="kt-notification__item-icon">
-												<i class="flaticon2-rocket-1 kt-font-danger"></i>
-											</div>
-											<div class="kt-notification__item-details">
-												<div class="kt-notification__item-title kt-font-bold">
-													My Activities
-												</div>
-												<div class="kt-notification__item-time">
-													Logs and notifications
-												</div>
-											</div>
-										</a>
-										<a href="#" class="kt-notification__item">
-											<div class="kt-notification__item-icon">
-												<i class="flaticon2-hourglass kt-font-brand"></i>
-											</div>
-											<div class="kt-notification__item-details">
-												<div class="kt-notification__item-title kt-font-bold">
-													My Tasks
-												</div>
-												<div class="kt-notification__item-time">
-													latest tasks and projects
-												</div>
-											</div>
-										</a>
-										<div class="kt-notification__custom">
-											<a href="custom_user_login-v2.html" target="_blank" class="btn btn-label-brand btn-sm btn-bold">Sign Out</a>
-										</div>
-									</div>
-									<!--end: Navigation -->
-								</div>
-							</div>
+							</div> -->
 						</div>
 					</div>
 					<!-- end:: Header -->
@@ -254,7 +166,7 @@
 											<a href="" class="kt-subheader__breadcrumbs-link">
 											Daftar Pekerja </a>
 										</div>
-										<button style="position: absolute;right: 25px" class="btn btn-md btn-success">
+										<button  style="position: absolute;right: 25px" class="btn btn-md btn-success kt_sweetalert_lanjutkan_draft">
 											<i class="fa fa-file-import"></i> Lanjutkan Draft
 										</button>
 									</div>
@@ -270,8 +182,9 @@
 												</h3>
 											</div>
 										</div>
-										<div class="kt-portlet__body">
-											<form class="kt-form">
+										<form class="kt-form">
+											<div class="kt-portlet__body">
+
 												<div class="row">
 													<div class="col-sm-6">
 														<div class="form-group row">
@@ -333,8 +246,7 @@
 														<div class="form-group row">
 															<label for="example-text-input" class="col-3 col-form-label">Alamat Perusahaan</label>
 															<div class="col-9">
-																<input class="form-control" type="text"
-																placeholder="input alamat perusahaan" id="alamat_perusahaan" name="alamat_perusahaan">
+																<textarea style="resize: none" disabled="" class="form-control" id="alamat_perusahaan" name="alamat_perusahaan" rows="3">Lorem ipsum dolor sit amet</textarea>
 															</div>
 														</div>
 														<div class="form-group row">
@@ -445,20 +357,18 @@
 																<button type="button" data-toggle="modal" data-target="#modal_upload_hasil_tes_narkoba" class="btn btn-primary" name="btn_upload_hasil_tes">Upload Hasil Tes</button>
 															</div>
 														</div>
-														<div class="row" align="right">
-															<div style="position: absolute;right: 0;bottom: 0" class="col-sm-6 offset-sm-6">
-																<button type="button" id="kt_sweetalert_save_draft" class="btn btn-secondary" name="btn_save_as_draft">
-																	<i class="fa fa-save"></i> Save as Draft
-																</button>
-																<button type="button" id="kt_sweetalert_submit" class="btn btn-primary" name="btn_submit">
-																	<i class="fa fa-check"></i> Submit
-																</button>
-															</div>
-														</div>
 													</div>
 												</div>
-											</form>
-										</div>
+											</div>
+											<div align="right" class="kt-portlet__foot">
+												<button type="button" id="kt_sweetalert_save_draft" class="btn btn-secondary" name="btn_save_as_draft">
+													<i class="fa fa-save"></i> Save as Draft
+												</button>
+												<button type="button" id="kt_sweetalert_submit" class="btn btn-primary" name="btn_submit">
+													<i class="fa fa-check"></i> Submit
+												</button>
+											</div>
+										</form>
 									</div>
 								</div>
 								<!-- end:: Content -->
@@ -472,7 +382,7 @@
 							<div class="modal-content">
 								<div class="modal-header">
 									<h5 class="modal-title" id="exampleModalLabel">Upload file Sertifikat</h5>
-									<button id="btn_tambah_sertifikat" class="btn btn-primary">
+									<button type="button" id="btn_tambah_sertifikat" class="btn btn-primary">
 										<i class="fa fa-plus"></i> Tambah Sertifikat
 									</button>
 								</div>
@@ -773,6 +683,9 @@
 		    	});
 		    	$('.kt_sweetalert_upload').click(function(e) {
 		    		swal.fire("Berhasil!", "Data anda telah terupload!", "success");
+		    	});
+		    	$('.kt_sweetalert_lanjutkan_draft').click(function(e) {
+		    		swal.fire("Berhasil!", "Draft berhasil diload", "success");
 		    	});
 		    	$('#kt_sweetalert_tambah_paket').click(function(e) {
 		    		swal.fire("Ditambahkan!", "Paket Telah Ditambahkan!", "success");
