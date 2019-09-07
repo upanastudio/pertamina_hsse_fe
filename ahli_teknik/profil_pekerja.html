@@ -28,27 +28,10 @@
 	<link href="../assets/vendors/general/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" type="text/css" />
 	<!--end:: Global Mandatory Vendors -->
 	<!--begin:: Global Optional Vendors -->
-	<link href="../assets/vendors/general/tether/dist/css/tether.css" rel="stylesheet" type="text/css" />
 	<link href="../assets/vendors/general/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css" rel="stylesheet" type="text/css" />
-	<link href="../assets/vendors/general/bootstrap-datetime-picker/css/bootstrap-datetimepicker.css" rel="stylesheet" type="text/css" />
-	<link href="../assets/vendors/general/bootstrap-timepicker/css/bootstrap-timepicker.css" rel="stylesheet" type="text/css" />
 	<link href="../assets/vendors/general/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css" />
-	<link href="../assets/vendors/general/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.css" rel="stylesheet" type="text/css" />
-	<link href="../assets/vendors/general/bootstrap-select/dist/css/bootstrap-select.css" rel="stylesheet" type="text/css" />
-	<link href="../assets/vendors/general/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.css" rel="stylesheet" type="text/css" />
 	<link href="../assets/vendors/general/select2/dist/css/select2.css" rel="stylesheet" type="text/css" />
-	<link href="../assets/vendors/general/ion-rangeslider/css/ion.rangeSlider.css" rel="stylesheet" type="text/css" />
-	<link href="../assets/vendors/general/nouislider/distribute/nouislider.css" rel="stylesheet" type="text/css" />
-	<link href="../assets/vendors/general/owl.carousel/dist/assets/owl.carousel.css" rel="stylesheet" type="text/css" />
-	<link href="../assets/vendors/general/owl.carousel/dist/assets/owl.theme.default.css" rel="stylesheet" type="text/css" />
-	<link href="../assets/vendors/general/dropzone/dist/dropzone.css" rel="stylesheet" type="text/css" />
-	<link href="../assets/vendors/general/summernote/dist/summernote.css" rel="stylesheet" type="text/css" />
-	<link href="../assets/vendors/general/bootstrap-markdown/css/bootstrap-markdown.min.css" rel="stylesheet" type="text/css" />
-	<link href="../assets/vendors/general/animate.css/animate.css" rel="stylesheet" type="text/css" />
-	<link href="../assets/vendors/general/toastr/build/toastr.css" rel="stylesheet" type="text/css" />
-	<link href="../assets/vendors/general/morris.js/morris.css" rel="stylesheet" type="text/css" />
 	<link href="../assets/vendors/general/sweetalert2/dist/sweetalert2.css" rel="stylesheet" type="text/css" />
-	<link href="../assets/vendors/general/socicon/css/socicon.css" rel="stylesheet" type="text/css" />
 	<link href="../assets/vendors/custom/vendors/line-awesome/css/line-awesome.css" rel="stylesheet" type="text/css" />
 	<link href="../assets/vendors/custom/vendors/flaticon/flaticon.css" rel="stylesheet" type="text/css" />
 	<link href="../assets/vendors/custom/vendors/flaticon2/flaticon.css" rel="stylesheet" type="text/css" />
@@ -78,6 +61,20 @@
 		}
 		.btn-primary {
 			color: white !important;
+		}
+		.image-cropper {
+			width: 210px;
+			height: 210px;
+			position: relative;
+			overflow: hidden;
+			border-radius: 20px;
+		}
+
+		#foto_pekerja {
+			display: inline;
+			margin: 0 auto;
+			height: 100%;
+			width: auto;
 		}
 	</style>
 </head>
@@ -185,8 +182,6 @@
 									<h3 id="nama_pekerja" class="kt-portlet__head-title">
 										<span style="margin-right: 6px" class="fa fa-user"></span>
 										<span id="nama_pekerja" name="nama_pekerja">Ahmad Rifaldi</span>
-										<span> - </span>
-										<span id="pekerjaan" name="pekerjaan">Teknisi</span>
 									</h3>
 								</div>
 							</div>
@@ -210,7 +205,10 @@
 										<div class="row">
 											<div class="col-sm-12" >
 												<div align="center" class=""  >
-													<img id="foto_pekerja" name="foto_pekerja" style="width: 150px; height: auto; border-radius: 20px" src="../assets/media/users/profil_user.png">
+													<!-- <img id="foto_pekerja" name="foto_pekerja" style="width: 200px; height: auto; border-radius: 100%" src="../assets/media/users/profil_user.png"> -->
+													<div class="image-cropper">
+														<img id="foto_pekerja" name="foto_pekerja" src="http://www.pn-dompu.go.id/sys-content/uploads/image/profil/Honorer/3x4%20egi.jpg" class="rounded" />
+													</div>
 												</div>
 											</div>
 										</div>
@@ -259,7 +257,7 @@
 												<div class="form-group row">
 													<label for="example-text-input" class="col-3 col-form-label">Tanggal Kadaluarsa</label>
 													<div class="col-9">
-														<input disabled="" type="text" class="form-control datepicker_mode" id="tanggal_kadaluarsa" name="tanggal_kadaluarsa" value="20/November/2019" />
+														<input disabled="" class="form-control datepicker_mode"  value="20/November/2019" id="tanggal_kadaluarsa" name="tanggal_kadaluarsa">
 													</div>
 												</div>
 											</div>
@@ -371,7 +369,7 @@
 												<div class="form-group row">
 													<label for="example-text-input" class="col-3 col-form-label">Tanggal Tes</label>
 													<div class="col-9">
-														<input disabled="" type="text" class="form-control datepicker_mode" id="tanggal_tes" name="tanggal_tes" value="20/November/2019" />
+														<input disabled="" class="form-control datepicker_mode" value="20/November/2019" id="tanggal_tes" name="tanggal_tes">
 													</div>
 												</div>
 												<div class="form-group row">
@@ -383,7 +381,7 @@
 												<div class="form-group row">
 													<label for="example-text-input" class="col-3 col-form-label">Expired Date</label>
 													<div class="col-9">
-														<input disabled="" type="text" class="form-control datepicker_mode" id="expired_date" name="expired_date" value="10/Februari/2020" />
+														<input disabled="" class="form-control datepicker_mode" value="20/November/2019" id="expired_date_induksi_12_SLR" name="expired_date_induksi_12_SLR">
 													</div>
 												</div>
 												<div class="" align="center">
@@ -403,12 +401,18 @@
 										</div>
 									</div>
 									<div class="tab-pane " id="kt_tabs_riwayat_pekerjaan" role="tabpanel">
+										<div class="kt-portlet__head">
+											<h4>Daftar Pekerjaan</h4>
+										</div>
 										<div class="kt-portlet__body">
 											<table class="table table-striped- table-bordered table-hover table-checkable" id="tbl_list_daftar_pekerjaan">
 											</table>
 										</div>
 									</div>
 									<div class="tab-pane" id="kt_tabs_daftar_kehadiran" role="tabpanel">
+										<div class="kt-portlet__head">
+											<h4>Kehadiran</h4>
+										</div>
 										<div class="kt-portlet__body">
 											<table class="table table-striped- table-bordered table-hover table-checkable" id="tbl_list_kehadiran">
 												<thead>
