@@ -127,14 +127,6 @@
 										<p style="font-size: 1.1rem"><b>Aturan Main</b> : Jawablah Soal Pilihan Ganda. Setiap Jawaban Benar Maka Anda Mendapatkan Poin 5+ dan Jawaban Salah Skor Tidak Berkurang</p>
 									</div>
 									<div style="margin-top: 20px" align="center">
-										<!-- <p style="font-size: 1.1rem">Skor Anda pada <b><span name="nama_tes">Save Zone Position</span>:</b></p>
-										<div class="informasi_skor">
-											<p>
-												<span id="skor" name="skor">0</span>
-												<span>/</span>
-												<span id="skor_maks" name="skor_maks">25</span>
-											</p>
-										</div> -->
 										<div class="pertanyaan">
 											<p>1. Bagian ini merupakan tempat pertanyaan akan dimuat</p>
 										</div>
@@ -161,7 +153,10 @@
 													</div>
 												</div>
 											</div>
-											<button type="button" class="btn btn-lg btn-success">
+											<button type="button" id="btn_kirim_jawaban" class="btn btn-lg btn-success kt_sweetalert_tanpa_jawaban">
+												Kirim Jawaban
+											</button>
+											<button style="display: none" type="button" id="btn_kirim_jawaban" class="btn btn-lg btn-success kt_sweetalert_jawaban">
 												Kirim Jawaban
 											</button>
 										</form>
@@ -170,16 +165,6 @@
 							</div>
 						</div>
 					</div>
-					<!-- end:: Page -->
-					<!-- begin::Quick Panel -->
-					<!-- end::Quick Panel -->
-					<!-- begin::Scrolltop -->
-					<!-- end::Scrolltop -->
-					<!-- begin::Sticky Toolbar -->
-					<!-- end::Sticky Toolbar -->
-					<!-- begin::Demo Panel -->
-					<!-- end::Demo Panel -->
-					<!-- begin::Global Config(global config for global JS sciprts) -->
 					<script>
 						var KTAppOptions = {
 							"colors": {
@@ -226,10 +211,28 @@
 					<script src="../assets/app/bundle/app.bundle.js" type="text/javascript"></script>
 					<!--end::Global App Bundle -->
 					<script>
+						$(document).ready(function (){
+							$('input[type="radio"]').on( "click", function(){
+								if ($(this).is(':checked'))
+								{
+									 $(".kt_sweetalert_tanpa_jawaban").hide();
+									 $(".kt_sweetalert_jawaban").show();
+								}
+								else {
+									 $(".kt_sweetalert_tanpa_jawaban").show();
+									 $(".kt_sweetalert_jawaban").hide();
+								}
+							});
+						});
+					</script>
+					<script>
 						var KTSweetAlert2Demo = function() {
 							var initDemos = function() {
 								$('.kt_sweetalert_jawaban').click(function(e) {
-									swal.fire("Berhasil!", "Jawaban anda telah disubmit", "success");
+									swal.fire("Berhasil!", "Jawaban anda telah disubmit, lanjut ke soal berikutnya.", "success");
+								});
+								$('.kt_sweetalert_tanpa_jawaban').click(function(e) {
+									swal.fire("Gagal!", "Pilih jawaban terlebih dahulu!", "error");
 								});
 							};
 							return {

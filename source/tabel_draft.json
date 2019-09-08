@@ -1,0 +1,43 @@
+{
+    "iTotalRecords": 10,
+    "iTotalDisplayRecords": 10,
+    "sEcho": 0,
+    "sColumns": "",
+    "aaData": [{
+                 "no": 1,
+                 "tanggal": "10/November/2019",
+                 "nama" : "Ahmad Rifaldi",
+                 "tipe" : "AMT",
+                 "aksi" : null
+                
+             },
+             {
+                "no": 2,
+                 "tanggal": "15/November/2019",
+                 "nama" : "Ahmad Rifaldi",
+                 "tipe" : "TJKJP",
+                 "aksi" : null
+             },
+             {
+                "no": 3,
+                 "tanggal": "20/November/2019",
+                 "nama" : "Ahmad Rifaldi",
+                 "tipe" : "Kontraktor",
+                 "aksi" : null
+             },
+             {
+                "no": 4,
+                 "tanggal": "25/November/2019",
+                 "nama" : "Ahmad Rifaldi",
+                 "tipe" : "AMT",
+                 "aksi" : null
+             },
+             {
+                "no": 5,
+                  "tanggal": "27/November/2019",
+                 "nama" : "Ahmad Rifaldi",
+                 "tipe" : "Kontarktor",
+                 "aksi" : null
+             }
+]
+}

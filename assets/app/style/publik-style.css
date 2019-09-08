@@ -1,0 +1,51 @@
+.vl {
+	border-left: 2px solid #E0E0E0;
+	height: 100%;
+	position: absolute;
+	left: 50%;
+	margin-left: -3px;
+	top: 0;
+}
+.card_sertifikat {
+	margin-bottom: 20px;
+	padding: 15px;
+	border-bottom: 1px solid #E0E0E0;
+}
+.card_tgl_tes {
+	width: 100%;
+	border: 2px solid #E8EAF6	;
+	padding: 15px;
+	border-radius: 8px;
+	-webkit-box-shadow: 0px 10px 26px -15px rgba(0,0,0,0.5);
+	-moz-box-shadow: 0px 10px 26px -15px rgba(0,0,0,0.5);
+	box-shadow: 0px 10px 26px -15px rgba(0,0,0,0.5);
+}
+.col-sm-6 p {
+	font-size: 1.2rem;
+}
+.card {
+	margin-bottom: 20px;
+	border: none;
+}
+.peserta_ujian {
+	pointer-events: none;
+	padding: 20px;
+}
+.user-name {
+	margin-top: 18px;
+	margin-right: 20px;
+}
+@media (max-width: 1024px) {
+	.kt-header-menu-wrapper {
+		background-color: #18132a;
+	}
+	.kt-header-menu-wrapper .kt-header-menu .kt-menu__nav {
+		background-color: #18132a; 
+	}
+	.kt-header__topbar-item--user {
+		display: none;
+	}
+	.publik_header {
+		height: 150px !important;
+	}
+}

@@ -800,46 +800,63 @@
 	});
 </script>
 <script>
-		var KTBootstrapDatepicker = function () {
-			var arrows;
-			if (KTUtil.isRTL()) {
-				arrows = {
-					leftArrow: '<i class="la la-angle-right"></i>',
-					rightArrow: '<i class="la la-angle-left"></i>'
-				}
-			} else {
-				arrows = {
-					leftArrow: '<i class="la la-angle-left"></i>',
-					rightArrow: '<i class="la la-angle-right"></i>'
-				}
+	var KTBootstrapDatepicker = function () {
+		var arrows;
+		if (KTUtil.isRTL()) {
+			arrows = {
+				leftArrow: '<i class="la la-angle-right"></i>',
+				rightArrow: '<i class="la la-angle-left"></i>'
 			}
-			var demos = function () {
-				$('.datepicker_mode, .datepicker_mode_validate').datepicker({
-					rtl: KTUtil.isRTL(),
-					todayHighlight: true,
-					orientation: "bottom left",
-					templates: arrows,
-					format: 'dd/MM/yyyy'
-				});
-
-				$('.datepicker_mode_modal').datepicker({
-					rtl: KTUtil.isRTL(),
-					todayHighlight: true,
-					orientation: "bottom left",
-					templates: arrows
-				});
-
+		} else {
+			arrows = {
+				leftArrow: '<i class="la la-angle-left"></i>',
+				rightArrow: '<i class="la la-angle-right"></i>'
 			}
-			return {
-				init: function() {
-					demos(); 
-				}
-			};
-		}();
-		jQuery(document).ready(function() {    
-			KTBootstrapDatepicker.init();
-		});
-	</script>
+		}
+		var demos = function () {
+			$('.datepicker_mode, .datepicker_mode_validate').datepicker({
+				rtl: KTUtil.isRTL(),
+				todayHighlight: true,
+				orientation: "bottom left",
+				templates: arrows,
+				format: 'dd/MM/yyyy'
+			});
+
+			$('.datepicker_mode_modal').datepicker({
+				rtl: KTUtil.isRTL(),
+				todayHighlight: true,
+				orientation: "bottom left",
+				templates: arrows
+			});
+
+		}
+		return {
+			init: function() {
+				demos(); 
+			}
+		};
+	}();
+	jQuery(document).ready(function() {    
+		KTBootstrapDatepicker.init();
+	});
+</script>
+<script>
+	$.fn.datepicker.dates['en'] = {
+		days: ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"],
+		daysShort: ["Min", "Sen", "Sel", "Rab", "Kam", "Jum", "Sab"],
+		daysMin: ["Min", "Sen", "Sel", "Rab", "Kam", "Jum", "Sab"],
+		months: ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"],
+		monthsShort: ["Jan", "Feb", "Mar", "Apr", "Mei", "Jun", "Jul", "Agu", "Sep", "Okt", "Nov", "Des"],
+		today: "Today",
+		clear: "Clear",
+		titleFormat: "MM yyyy", /* Leverages same syntax as 'format' */
+		weekStart: 0
+	};
+
+	$('.datepicker').datepicker({
+		language: 'XX'
+	});
+</script>
 </body>
 <!-- end::Body -->
 </html>

@@ -184,16 +184,7 @@
 										<span id="nama_pekerja" name="nama_pekerja">Ahmad Rifaldi</span>
 									</h3>
 								</div>
-								<div class="kt-portlet__head-toolbar">
-									<div class="kt-portlet__head-actions">
-										<a href="#" class="btn btn-outline-brand btn-bold btn-sm">
-											Tools
-										</a>
-										<a href="#" class="btn btn-danger btn-sm btn-bold">
-											Export
-										</a>
-									</div>
-								</div>
+								
 							</div>
 							<div class="kt-portlet__body">
 								<ul class="nav nav-tabs nav-fill" role="tablist">
@@ -772,6 +763,23 @@
 
 		jQuery(document).ready(function() {    
 			KTBootstrapDatepicker.init();
+		});
+	</script>
+	<script>
+		$.fn.datepicker.dates['en'] = {
+			days: ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"],
+			daysShort: ["Min", "Sen", "Sel", "Rab", "Kam", "Jum", "Sab"],
+			daysMin: ["Min", "Sen", "Sel", "Rab", "Kam", "Jum", "Sab"],
+			months: ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"],
+			monthsShort: ["Jan", "Feb", "Mar", "Apr", "Mei", "Jun", "Jul", "Agu", "Sep", "Okt", "Nov", "Des"],
+			today: "Today",
+			clear: "Clear",
+			titleFormat: "MM yyyy", /* Leverages same syntax as 'format' */
+			weekStart: 0
+		};
+
+		$('.datepicker').datepicker({
+			language: 'XX'
 		});
 	</script>
 </body>
