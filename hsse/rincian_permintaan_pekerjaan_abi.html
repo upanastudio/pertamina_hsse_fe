@@ -605,7 +605,7 @@
 													<div class="form-group row">
 														<label class="col-sm-8">PJA</label>
 														<div align="right" class="col-sm-4">
-															<button id="lihat_file_pja" name="lihat_file_pja" type="button" class="btn btn-sm btn-outline-brand" data-toggle="modal" data-target="#kt_modal_rincian"> <i class="fa fa-eye "></i>Lihat File</button>
+															<button id="lihat_file_pja" name="lihat_file_pja" type="button" class="btn btn-sm btn-outline-brand" data-toggle="modal" data-target="#kt_modal_rincian_pja"> <i class="fa fa-eye "></i>Lihat File</button>
 														</div>
 														<div id="checkbox_pja" name="checkbox_pja" class="col-sm-12">
 															<div class="kt-checkbox-inline">
@@ -1321,6 +1321,51 @@
 									</div>
 								</div>
 								
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">
+									<i class="fa fa-times"></i> Tutup
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="modal fade" id="kt_modal_rincian_pja" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="exampleModalLabel">Dokumen dan file</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								</button>
+							</div>
+							<div class="modal-body">
+								<div class="form-group row group-dokumen">
+									<label class="col-4 col-form-label dokumen">
+										<span id="nama_dokumen" name="nama_dokumen">Nama Dokumen 42334</span>
+									</label>
+									<label class="col-4 col-form-label dokumen">
+										Nilai : <span id="nilai_pja" name="nilai_pja">80</span>
+									</label>
+									<div align="right" class="col-sm-4">
+										<button onclick=" window.open('#','_blank')" class="btn btn-sm btn-link">
+											<i class="fa fa-download"></i> Download/View
+										</button>
+									</div>
+								</div>
+								<div class="form-group row group-dokumen">
+									<label class="col-4 col-form-label dokumen">
+										<span id="nama_dokumen" name="nama_dokumen">Nama Dokumen 12312</span>
+									</label>
+									<label class="col-4 col-form-label dokumen">
+										Nilai : <span id="nilai_pja" name="nilai_pja">80</span>
+									</label>
+									<div align="right" class="col-sm-4">
+										<button onclick=" window.open('#','_blank')" class="btn btn-sm btn-link">
+											<i class="fa fa-download"></i> Download/View
+										</button>
+									</div>
+								</div>
 							</div>
 							<div class="modal-footer">
 								<button type="button" class="btn btn-secondary" data-dismiss="modal">
