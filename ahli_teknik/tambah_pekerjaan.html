@@ -70,7 +70,7 @@
 	<div class="kt-grid kt-grid--hor kt-grid--root">
 		<div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--ver kt-page">
 			<!-- begin:: Aside -->
-			<button class="kt-aside-close " id="kt_aside_close_btn"><i class="la la-close"></i></button>
+			<button class="kt-aside-close " id="kt_aside_close_btn"><i class="fa fa-chevron-down"></i></button>
 			<div class="kt-aside  kt-aside--fixed  kt-grid__item kt-grid kt-grid--desktop kt-grid--hor-desktop" id="kt_aside">
 				<!-- begin:: Aside -->
 				<div class="kt-aside__brand kt-grid__item " id="kt_aside_brand">
@@ -101,7 +101,7 @@
 				<!-- begin:: Header -->
 				<div id="kt_header" class="kt-header kt-grid__item  kt-header--fixed ">
 					<!-- begin:: Header Menu -->
-					<button class="kt-header-menu-wrapper-close" id="kt_header_menu_mobile_close_btn"><i class="la la-close"></i>
+					<button class="kt-header-menu-wrapper-close" id="kt_header_menu_mobile_close_btn"><i class="fa fa-chevron-down"></i>
 					</button>
 					<div class="kt-header-menu-wrapper" id="kt_header_menu_wrapper">
 						<div id="kt_header_menu" class="kt-header-menu kt-header-menu-mobile  kt-header-menu--layout-default ">
@@ -251,11 +251,11 @@
 											<div class="form-group row">
 												<label for="example-text-input" class="col-3 col-form-label">Tanggal Mulai</label>
 												<div class="col-3">
-													<input  type="text" class="form-control" id="tanggal_mulai" name="tanggal_mulai" readonly placeholder="20/11/2019" />
+													<input  type="text" class="form-control datepicker_mode" id="tanggal_mulai" name="tanggal_mulai" readonly placeholder="20/November/2019" />
 												</div>
 												<label for="example-text-input" class="col-3 col-form-label">Tanggal Selesai</label>
 												<div class="col-3">
-													<input  type="text" class="form-control" id="tanggal_selesai" name="tanggal_selesai" readonly placeholder="20/11/2019" />
+													<input  type="text" class="form-control datepicker_mode" id="tanggal_selesai" name="tanggal_selesai" readonly placeholder="20/11/2019" />
 												</div>
 											</div>
 											<div class="form-group row">
@@ -411,37 +411,21 @@
 				}
 			}
 			var demos = function () {
-				$('#kt_datepicker_1, #kt_datepicker_1_validate').datepicker({
+				$('.datepicker_mode, .datepicker_mode_validate').datepicker({
+					rtl: KTUtil.isRTL(),
+					todayHighlight: true,
+					orientation: "bottom left",
+					templates: arrows,
+					format: 'dd/MM/yyyy'
+				});
+
+				$('.datepicker_mode_modal').datepicker({
 					rtl: KTUtil.isRTL(),
 					todayHighlight: true,
 					orientation: "bottom left",
 					templates: arrows
 				});
 
-				$('#tanggal_mulai').datepicker({
-					rtl: KTUtil.isRTL(),
-					todayHighlight: true,
-					orientation: "bottom left",
-					templates: arrows
-				});
-				$('#tanggal_selesai').datepicker({
-					rtl: KTUtil.isRTL(),
-					todayHighlight: true,
-					orientation: "bottom left",
-					templates: arrows
-				});
-				$('#tanggal_wip').datepicker({
-					rtl: KTUtil.isRTL(),
-					todayHighlight: true,
-					orientation: "bottom left",
-					templates: arrows
-				});
-				$('#tanggal_pob').datepicker({
-					rtl: KTUtil.isRTL(),
-					todayHighlight: true,
-					orientation: "bottom left",
-					templates: arrows
-				});
 			}
 
 			return {
@@ -453,6 +437,23 @@
 
 		jQuery(document).ready(function() {    
 			KTBootstrapDatepicker.init();
+		});
+	</script>
+	<script>
+		$.fn.datepicker.dates['en'] = {
+			days: ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"],
+			daysShort: ["Min", "Sen", "Sel", "Rab", "Kam", "Jum", "Sab"],
+			daysMin: ["Min", "Sen", "Sel", "Rab", "Kam", "Jum", "Sab"],
+			months: ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"],
+			monthsShort: ["Jan", "Feb", "Mar", "Apr", "Mei", "Jun", "Jul", "Agu", "Sep", "Okt", "Nov", "Des"],
+			today: "Today",
+			clear: "Clear",
+			titleFormat: "MM yyyy", /* Leverages same syntax as 'format' */
+			weekStart: 0
+		};
+
+		$('.datepicker').datepicker({
+			language: 'XX'
 		});
 	</script>
 </body>

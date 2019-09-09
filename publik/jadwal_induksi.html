@@ -197,11 +197,11 @@
 																<option value="4">Depot 4</option>
 															</select>
 														</div>
-														<div style="margin-left: 30px;width: 300px" id='jadwal_tes' class='input-group'>
+														<div style="margin-left: 30px;width: 300px" id='kt_daterangepicker_6' class='input-group'>
 															<!-- <input autocomplete="off" class="form-control" placeholder="--Pilih Tanggal--" id="jadwal_tes" name="kt_daterangepicker_1"> -->
 															<input type='text' class="form-control" readonly placeholder="Pilih tanggal " />
 															<div class="input-group-append">
-																<span class="input-group-text"><i class="la la-calendar-check-o"></i></span>
+																<span class="input-group-text"><i class="fa fa-calendar-check"></i></span>
 															</div>
 														</div>
 													</div>
@@ -663,19 +663,43 @@
 						$('#jadwal_tes .form-control').val( start.format('DD/MM/YYYY',) + ' - ' + end.format('DD/MM/YYYY'));
 					});
 
-				}
+					 // predefined ranges
+					 var start = moment().subtract(29, 'days');
+					 var end = moment();
 
-				return {
-					init: function() {
-						demos();
+					 $('#kt_daterangepicker_6').daterangepicker({
+					 	buttonClasses: ' btn',
+					 	applyClass: 'btn-primary',
+					 	cancelClass: 'btn-secondary',
+					 	locale: {
+							format: 'DD/MM/YYYY'
+						},
+					 	startDate: start,
+					 	endDate: end,
+					 	ranges: {
+					 		'Hari ini': [moment(), moment()],
+					 		'Kemarin': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+					 		'7 Hari terakhir': [moment().subtract(6, 'days'), moment()],
+					 		'Bulan ini': [moment().startOf('month'), moment().endOf('month')],
+					 		'Bulan lalu': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+					 	}
+					 }, function(start, end, label) {
+					 	$('#kt_daterangepicker_6 .form-control').val( start.format('DD/MM/YYYY',) + ' - ' + end.format('DD/MM/YYYY'));
+					 });
+
 					}
-				};
-			}();
 
-			jQuery(document).ready(function() {
-				KTBootstrapDaterangepicker.init();
-			});
-		</script>
-	</body>
-	<!-- end::Body -->
-	</html>
+					return {
+						init: function() {
+							demos();
+						}
+					};
+				}();
+
+				jQuery(document).ready(function() {
+					KTBootstrapDaterangepicker.init();
+				});
+			</script>
+		</body>
+		<!-- end::Body -->
+		</html>

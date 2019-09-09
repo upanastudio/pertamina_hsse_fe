@@ -74,7 +74,7 @@
             applyLabel: 'Terapkan',
             cancelLabel: 'Batal',
             weekLabel: 'W',
-            customRangeLabel: 'Custom Range',
+            customRangeLabel: 'Pilih tanggal',
             daysOfWeek: moment.weekdaysMin(),
             monthNames: moment.monthsShort(),
             firstDay: moment.localeData().firstDayOfWeek()
