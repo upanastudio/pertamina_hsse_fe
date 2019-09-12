@@ -4,7 +4,6 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 	$.fn.dataTable.Api.register('column().title()', function() {
 		return $(this.header()).text().trim();
 	});
-	
 	var initTable1 = function() {
 		var table = $('#daftar_nama_pekerja');
 
@@ -166,6 +165,8 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 	};
 	var initTable3 = function() {
 		var table = $('#daftar_sika');
+
+		// begin first table
 		table.DataTable({
 			responsive: true,
 			searchDelay: 500,
@@ -1324,8 +1325,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 			],
 		});
 	};
-
-return {
+	return {
 		//main function to initiate the module
 		init: function() {
 			initTable1();
