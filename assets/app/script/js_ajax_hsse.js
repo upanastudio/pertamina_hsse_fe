@@ -1768,7 +1768,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 		});
 	};
 	var initTable18 = function() {
-		var table = $('#total_karyawan');
+		var table = $('#tbl_total_karyawan');
 		var status_validasi = "";
 
 		// begin first table
