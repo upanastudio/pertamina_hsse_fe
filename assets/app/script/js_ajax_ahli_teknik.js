@@ -4,6 +4,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 	$.fn.dataTable.Api.register('column().title()', function() {
 		return $(this.header()).text().trim();
 	});
+	
 	var initTable1 = function() {
 		var table = $('#daftar_nama_pekerja');
 
@@ -165,8 +166,6 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 	};
 	var initTable3 = function() {
 		var table = $('#daftar_sika');
-
-		// begin first table
 		table.DataTable({
 			responsive: true,
 			searchDelay: 500,
@@ -677,27 +676,24 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 			}
 			]
 		});
+		$('#childrow_contoh tbody').on('click', 'td.details-control', function () {
+			var tr = $(this).closest('tr');
+			var row = table.row( tr );
 
+			if ( row.child.isShown() ) {
+				row.child.hide();
+				tr.removeClass('shown');
+			}
+			else {
+				row.child( format(row.data(), tr.children('td')) ).show();
+				tr.addClass('shown');
+				/*tr.next('tr').children('td').css('padding', '0px');*/
+			}
 
-
-$('#childrow_contoh tbody').on('click', 'td.details-control', function () {
-	var tr = $(this).closest('tr');
-	var row = table.row( tr );
-
-	if ( row.child.isShown() ) {
-		row.child.hide();
-		tr.removeClass('shown');
-	}
-	else {
-		row.child( format(row.data(), tr.children('td')) ).show();
-		tr.addClass('shown');
-		/*tr.next('tr').children('td').css('padding', '0px');*/
-	}
-
-});
-};
-var initTable7 = function() {
-	var table = $('#daftar_sika_cold_novalidasi');
+		});
+	};
+	var initTable7 = function() {
+		var table = $('#daftar_sika_cold_novalidasi');
 
 		// begin first table
 		table.DataTable({
@@ -1209,7 +1205,127 @@ var initTable7 = function() {
 			],
 		});
 	};
-	return {
+	var initTable16 = function() {
+		var table = $('#total_karyawan');
+		var status_validasi = "";
+
+		// begin first table
+		table.DataTable({
+			responsive: true,
+			searchDelay: 500,
+			processing: true,
+			serverSide: false,
+			ajax: {
+				url: '../source/total_karyawan.json',
+				type: 'POST',
+				data: {
+					pagination: {
+						perpage: 50,
+					},
+				},
+			},
+			columns: [
+			{
+				data: 'no',
+				width: 30,
+				title: 'No.',
+				orderable: false,
+			},
+			{
+				data: 'nama',
+				title: 'Nama'
+			},
+			{
+				data: '1',
+				title: '01',
+				orderable: false,
+				render: function(data, type, full, meta) {
+					var status = {
+						masuk: {'title': 'Masuk', 'class': 'btn-label-success'},
+						absen: {'title': 'Absen', 'class': 'btn-label-danger'},
+						outsite: {'title' : 'Outsite', 'class' : 'btn-label-dark'},
+					};
+					if (typeof status[data] === 'undefined') {
+						return data;
+					}
+					return '<span style="width:100%" class="btn btn-bold btn-sm btn-font-sm ' + status[data].class + '">' + status[data].title + '</span>';
+				},
+			},
+			{
+				data: '2',
+				title: '02',
+				orderable: false,
+				render: function(data, type, full, meta) {
+					var status = {
+						masuk: {'title': 'Masuk', 'class': 'btn-label-success'},
+						absen: {'title': 'Absen', 'class': 'btn-label-danger'},
+						outsite: {'title' : 'Outsite', 'class' : 'btn-label-dark'},
+					};
+					if (typeof status[data] === 'undefined') {
+						return data;
+					}
+					return '<span style="width:100%" class="btn btn-bold btn-sm btn-font-sm ' + status[data].class + '">' + status[data].title + '</span>';
+				},
+			},
+			{
+				data: '3',
+				title: '03',
+				orderable: false,
+				render: function(data, type, full, meta) {
+					var status = {
+						masuk: {'title': 'Masuk', 'class': 'btn-label-success'},
+						absen: {'title': 'Absen', 'class': 'btn-label-danger'},
+						outsite: {'title' : 'Outsite', 'class' : 'btn-label-dark'},
+					};
+					if (typeof status[data] === 'undefined') {
+						return data;
+					}
+					return '<span style="width:100%" class="btn btn-bold btn-sm btn-font-sm ' + status[data].class + '">' + status[data].title + '</span>';
+				},
+			},
+			{
+				data: '4',
+				title: '04',
+				orderable: false,
+				render: function(data, type, full, meta) {
+					var status = {
+						masuk: {'title': 'Masuk', 'class': 'btn-label-success'},
+						absen: {'title': 'Absen', 'class': 'btn-label-danger'},
+						outsite: {'title' : 'Outsite', 'class' : 'btn-label-dark'},
+					};
+					if (typeof status[data] === 'undefined') {
+						return data;
+					}
+					return '<span style="width:100%" class="btn btn-bold btn-sm btn-font-sm ' + status[data].class + '">' + status[data].title + '</span>';
+				},
+			},
+			{
+				data: '5',
+				title: '05',
+				orderable: false,
+				render: function(data, type, full, meta) {
+					var status = {
+						masuk: {'title': 'Masuk', 'class': 'btn-label-success'},
+						absen: {'title': 'Absen', 'class': 'btn-label-danger'},
+						outsite: {'title' : 'Outsite', 'class' : 'btn-label-dark'},
+					};
+					if (typeof status[data] === 'undefined') {
+						return data;
+					}
+					return '<span style="width:100%" class="btn btn-bold btn-sm btn-font-sm ' + status[data].class + '">' + status[data].title + '</span>';
+				},
+			}
+			],
+			columnDefs: [
+			{
+				targets: [0,1],
+				className: 'text-center'
+			}
+			],
+		});
+	};
+
+return {
 		//main function to initiate the module
 		init: function() {
 			initTable1();
@@ -1227,6 +1343,7 @@ var initTable7 = function() {
 			initTable13();
 			initTable14();
 			initTable15();
+			initTable16();
 		},
 
 	};

@@ -1,0 +1,57 @@
+{
+    "iTotalRecords": 10,
+    "iTotalDisplayRecords": 10,
+    "sEcho": 0,
+    "sColumns": "",
+    "aaData": [{
+                 "no": 1,
+                 "nama": "Ahmad Rifaldi",
+                 "1" : "masuk",
+                 "2" : "absen",
+                 "3" : "outsite",
+                 "4" : "masuk",
+                 "5" : "masuk"
+                
+             },
+             {
+                 "no": 2,
+                 "nama": "Fascal Ivandry",
+                 "1" : "masuk",
+                 "2" : "masuk",
+                 "3" : "masuk",
+                 "4" : "masuk",
+                 "5" : "masuk"
+                
+             },
+             {
+                 "no": 3,
+                 "nama": "Aigi Walie",
+                 "1" : "masuk",
+                 "2" : "outsite",
+                 "3" : "outsite",
+                 "4" : "masuk",
+                 "5" : "masuk"
+                
+             },
+             {
+                 "no": 4,
+                 "nama": "Surya Aditama",
+                 "1" : "absen",
+                 "2" : "masuk",
+                 "3" : "masuk",
+                 "4" : "masuk",
+                 "5" : "masuk"
+                
+             },
+             {
+                 "no": 5,
+                 "nama": "Ahmad Rifaldi",
+                 "1" : "outsite",
+                 "2" : "masuk",
+                 "3" : "outsite",
+                 "4" : "masuk",
+                 "5" : "outsite"
+                
+             }
+]
+}

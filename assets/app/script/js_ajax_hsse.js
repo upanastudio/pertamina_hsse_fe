@@ -1767,6 +1767,125 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 			],
 		});
 	};
+	var initTable18 = function() {
+		var table = $('#total_karyawan');
+		var status_validasi = "";
+
+		// begin first table
+		table.DataTable({
+			responsive: true,
+			searchDelay: 500,
+			processing: true,
+			serverSide: false,
+			ajax: {
+				url: '../source/total_karyawan.json',
+				type: 'POST',
+				data: {
+					pagination: {
+						perpage: 50,
+					},
+				},
+			},
+			columns: [
+			{
+				data: 'no',
+				width: 30,
+				title: 'No.',
+				orderable: false,
+			},
+			{
+				data: 'nama',
+				title: 'Nama'
+			},
+			{
+				data: '1',
+				title: '01',
+				orderable: false,
+				render: function(data, type, full, meta) {
+					var status = {
+						masuk: {'title': 'Masuk', 'class': 'btn-label-success'},
+						absen: {'title': 'Absen', 'class': 'btn-label-danger'},
+						outsite: {'title' : 'Outsite', 'class' : 'btn-label-dark'},
+					};
+					if (typeof status[data] === 'undefined') {
+						return data;
+					}
+					return '<span style="width:100%" class="btn btn-bold btn-sm btn-font-sm ' + status[data].class + '">' + status[data].title + '</span>';
+				},
+			},
+			{
+				data: '2',
+				title: '02',
+				orderable: false,
+				render: function(data, type, full, meta) {
+					var status = {
+						masuk: {'title': 'Masuk', 'class': 'btn-label-success'},
+						absen: {'title': 'Absen', 'class': 'btn-label-danger'},
+						outsite: {'title' : 'Outsite', 'class' : 'btn-label-dark'},
+					};
+					if (typeof status[data] === 'undefined') {
+						return data;
+					}
+					return '<span style="width:100%" class="btn btn-bold btn-sm btn-font-sm ' + status[data].class + '">' + status[data].title + '</span>';
+				},
+			},
+			{
+				data: '3',
+				title: '03',
+				orderable: false,
+				render: function(data, type, full, meta) {
+					var status = {
+						masuk: {'title': 'Masuk', 'class': 'btn-label-success'},
+						absen: {'title': 'Absen', 'class': 'btn-label-danger'},
+						outsite: {'title' : 'Outsite', 'class' : 'btn-label-dark'},
+					};
+					if (typeof status[data] === 'undefined') {
+						return data;
+					}
+					return '<span style="width:100%" class="btn btn-bold btn-sm btn-font-sm ' + status[data].class + '">' + status[data].title + '</span>';
+				},
+			},
+			{
+				data: '4',
+				title: '04',
+				orderable: false,
+				render: function(data, type, full, meta) {
+					var status = {
+						masuk: {'title': 'Masuk', 'class': 'btn-label-success'},
+						absen: {'title': 'Absen', 'class': 'btn-label-danger'},
+						outsite: {'title' : 'Outsite', 'class' : 'btn-label-dark'},
+					};
+					if (typeof status[data] === 'undefined') {
+						return data;
+					}
+					return '<span style="width:100%" class="btn btn-bold btn-sm btn-font-sm ' + status[data].class + '">' + status[data].title + '</span>';
+				},
+			},
+			{
+				data: '5',
+				title: '05',
+				orderable: false,
+				render: function(data, type, full, meta) {
+					var status = {
+						masuk: {'title': 'Masuk', 'class': 'btn-label-success'},
+						absen: {'title': 'Absen', 'class': 'btn-label-danger'},
+						outsite: {'title' : 'Outsite', 'class' : 'btn-label-dark'},
+					};
+					if (typeof status[data] === 'undefined') {
+						return data;
+					}
+					return '<span style="width:100%" class="btn btn-bold btn-sm btn-font-sm ' + status[data].class + '">' + status[data].title + '</span>';
+				},
+			}
+			],
+			columnDefs: [
+			{
+				targets: [0,1],
+				className: 'text-center'
+			}
+			],
+		});
+	};
 	return {
 		//main function to initiate the module
 		init: function() {
@@ -1787,6 +1906,8 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 			initTable15();
 			initTable16();
 			initTable17();
+			initTable18();
+
 		},
 
 	};
