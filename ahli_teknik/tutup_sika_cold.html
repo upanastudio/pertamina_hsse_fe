@@ -211,13 +211,13 @@
 												<div class="col-sm-5">
 													<div class="form-group">
 														<label>Tanggal Clearance</label>
-														<input  type="text" class="form-control" id="tanggal_clearance" name="tanggal_clearance" readonly placeholder="20/11/2019" />
+														<input  type="text" class="form-control" id="tanggal_clearance" name="tanggal_clearance" readonly placeholder="20/November/2019" />
 													</div>
 												</div>
 												<div class="offset-sm-2 col-sm-5">
 													<div class="form-group">
 														<label>Tanggal Committing</label>
-														<input  type="text" class="form-control" id="tanggal_committing" name="tanggal_committing" readonly placeholder="20/11/2019" />
+														<input  type="text" class="form-control" id="tanggal_committing" name="tanggal_committing" readonly placeholder="20/November/2019" />
 													</div>
 												</div>
 											</div>
@@ -402,15 +402,17 @@
 
 				$('#tanggal_clearance').datepicker({
 					rtl: KTUtil.isRTL(),
-					todayHighlight: true
+					todayHighlight: true,
 					orientation: "bottom left",
-					templates: arrows
+					templates: arrows,
+					format: 'dd/MM/yyyy'
 				});
 				$('#tanggal_committing').datepicker({
 					rtl: KTUtil.isRTL(),
 					todayHighlight: true,
 					orientation: "bottom left",
-					templates: arrows
+					templates: arrows,
+					format: 'dd/MM/yyyy'
 				});
 			}
 
@@ -430,18 +432,18 @@
 		document.getElementById('selesai_diperiksa').onclick = function() {
 	    // call toggleSub when checkbox clicked
 	    // toggleSub args: checkbox clicked on (this), id of element to show/hide
-		    toggleSub1(this, 'active_sub');
-		};
-		document.getElementById('tidak_selesai').onclick = function() {
+	    toggleSub1(this, 'active_sub');
+	};
+	document.getElementById('tidak_selesai').onclick = function() {
 	    // call toggleSub when checkbox clicked
 	    // toggleSub args: checkbox clicked on (this), id of element to show/hide
-		    toggleSub2(this, 'active_sub');
-		};
-		document.getElementById('pengambilan_langkah').onclick = function() {
+	    toggleSub2(this, 'active_sub');
+	};
+	document.getElementById('pengambilan_langkah').onclick = function() {
 	    // call toggleSub when checkbox clicked
 	    // toggleSub args: checkbox clicked on (this), id of element to show/hide
-		    toggleSub3(this, 'active_sub');
-		};
+	    toggleSub3(this, 'active_sub');
+	};
 
 		// called onclick of checkbox
 		function toggleSub1(box, id) {
@@ -455,7 +457,7 @@
 		    }
 		}
 
-			
+
 		// called onclick of checkbox
 		function toggleSub2(box, id) {
 		    // get reference to related content to display/hide
@@ -479,6 +481,23 @@
 		    	el.style.display = 'none';
 		    }
 		}
+	</script>
+	<script>
+		$.fn.datepicker.dates['en'] = {
+			days: ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"],
+			daysShort: ["Min", "Sen", "Sel", "Rab", "Kam", "Jum", "Sab"],
+			daysMin: ["Min", "Sen", "Sel", "Rab", "Kam", "Jum", "Sab"],
+			months: ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"],
+			monthsShort: ["Jan", "Feb", "Mar", "Apr", "Mei", "Jun", "Jul", "Agu", "Sep", "Okt", "Nov", "Des"],
+			today: "Today",
+			clear: "Clear",
+			titleFormat: "MM yyyy", /* Leverages same syntax as 'format' */
+			weekStart: 0
+		};
+
+		$('.datepicker').datepicker({
+			language: 'XX'
+		});
 	</script>
 </body>
 <!-- end::Body -->

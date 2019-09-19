@@ -96,19 +96,15 @@
 										<img style="height: 3rem;width: auto" src="../assets/media/logos/tes_publik_logo.png">
 									</div>
 								</div>
-								<div class="kt-header-toolbar">
-									<div class="dropdown dropdown-inline">
-										<button type="button" class="btn btn-clean btn-icon btn-sm btn-icon-md" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-											<i class="flaticon-more"></i>
-										</button>
-										<div class="dropdown-menu dropdown-menu-right" x-placement="bottom-end" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(32px, 33px, 0px);">
-											<a class="dropdown-item" href="#"><i class="la la-plus"></i> New Report</a>
-											<a class="dropdown-item" href="#"><i class="la la-user"></i> Add Customer</a>
-											<a class="dropdown-item" href="#"><i class="la la-cloud-download"></i> New Download</a>
-											<div class="dropdown-divider"></div>
-											<a class="dropdown-item" href="#"><i class="la la-cog"></i> Settings</a>
+								<div class="kt-header__topbar">
+									<!--begin: User Bar -->
+									<div class="kt-header__topbar-item kt-header__topbar-item--user">
+										<div class="user-name">
+											<<p style="display: inline;margin-right: 7px">Hi, <span name="user_name">Rifal</span></p>
+											<a id="btn_log_out" class="btn btn-secondary"> <i class="fa fa-sign-out-alt"></i> Keluar</a>	
 										</div>
 									</div>
+									<!--end: User Bar -->
 								</div>
 							</div>
 							<!-- end: Header Menu -->
@@ -129,27 +125,32 @@
 									<div align="center" class="header_menu">
 										<img style="height: 80px" src="../assets/media/logos/lsr_logo.png">
 									</div>
-									<div style="padding: 0px 40px" class="row">
-										<div class="col-sm-3 col-6 ">
+									<div  style="padding: 0px 40px" class="row">
+										<div id="safe_zone_position_done" style="" class="col-sm-3 col-6 ">
 											<div align="center" class="pilihan_tes tes-selesai">
 												<div class="triangle-topright"></div>
 												<i class="fa fa-check check-selesai"></i>
 												<h4 class="tulisan-selesai">Telah Dikerjakan</h4>
 												<img class="icon-tes" src="../assets/media/icons/save_zone_position.png">
-												<button class="btn btn-secondary btn-klik tes-selesai" disabled="">
-													Klik Disini!
-												</button>
-											</div>
-											<div class="col-sm-3 col-6 kt-hidden">
-												<div align="center" class="pilihan_tes">
-													<img class="icon-tes" src="../assets/media/icons/save_zone_position.png">
-													<a href="intro.html" class="btn btn-danger btn-klik">
-														Klik Disini!
-													</a>
-												</div>
 											</div>
 										</div>
-										<div class="col-sm-3 col-6">
+										<div id="safe_zone_position" style="display: none" class="col-sm-3 col-6">
+											<div align="center" class="pilihan_tes">
+												<img class="icon-tes" src="../assets/media/icons/save_zone_position.png">
+												<a href="intro.html" class="btn btn-danger btn-klik">
+													Klik Disini!
+												</a>
+											</div>
+										</div>
+										<div id="permit_to_work_done" style="" class="col-sm-3 col-6 ">
+											<div align="center" class="pilihan_tes tes-selesai">
+												<div class="triangle-topright"></div>
+												<i class="fa fa-check check-selesai"></i>
+												<h4 class="tulisan-selesai">Telah Dikerjakan</h4>
+												<img class="icon-tes" src="../assets/media/icons/permit_to_work.png">
+											</div>
+										</div>
+										<div id="permit_to_work" style="display: none" class="col-sm-3 col-6">
 											<div align="center" class="pilihan_tes">
 												<img class="icon-tes" src="../assets/media/icons/permit_to_work.png">
 												<a href="intro.html" class="btn btn-danger btn-klik">
@@ -157,7 +158,15 @@
 												</a>
 											</div>
 										</div>
-										<div class="col-sm-3 col-6">
+										<div id="tools_equipment_done" style=" display: none" class="col-sm-3 col-6 ">
+											<div align="center" class="pilihan_tes tes-selesai">
+												<div class="triangle-topright"></div>
+												<i class="fa fa-check check-selesai"></i>
+												<h4 class="tulisan-selesai">Telah Dikerjakan</h4>
+												<img class="icon-tes" src="../assets/media/icons/tools_equipment.png">
+											</div>
+										</div>
+										<div id="tools_equipment" class="col-sm-3 col-6">
 											<div align="center" class="pilihan_tes">
 												<img class="icon-tes" src="../assets/media/icons/tools_equipment.png">
 												<a href="intro.html" class="btn btn-danger btn-klik">
@@ -165,7 +174,15 @@
 												</a>
 											</div>
 										</div>
-										<div class="col-sm-3 col-6">
+										<div id="asset_integrity_done" style=" display: none" class="col-sm-3 col-6 ">
+											<div align="center" class="pilihan_tes tes-selesai">
+												<div class="triangle-topright"></div>
+												<i class="fa fa-check check-selesai"></i>
+												<h4 class="tulisan-selesai">Telah Dikerjakan</h4>
+												<img class="icon-tes" src="../assets/media/icons/asset_integrity.png">
+											</div>
+										</div>
+										<div id="asset_integrity" class="col-sm-3 col-6">
 											<div align="center" class="pilihan_tes">
 												<img class="icon-tes" src="../assets/media/icons/asset_integrity.png">
 												<a href="intro.html" class="btn btn-danger btn-klik">
@@ -173,7 +190,15 @@
 												</a>
 											</div>
 										</div>
-										<div class="col-sm-3 col-6">
+										<div id="isolation_done" style=" display: none" class="col-sm-3 col-6 ">
+											<div align="center" class="pilihan_tes tes-selesai">
+												<div class="triangle-topright"></div>
+												<i class="fa fa-check check-selesai"></i>
+												<h4 class="tulisan-selesai">Telah Dikerjakan</h4>
+												<img class="icon-tes" src="../assets/media/icons/isolation.png">
+											</div>
+										</div>
+										<div id="isolation" class="col-sm-3 col-6">
 											<div align="center" class="pilihan_tes">
 												<img class="icon-tes" src="../assets/media/icons/isolation.png">
 												<a href="intro.html" class="btn btn-danger btn-klik">
@@ -181,7 +206,15 @@
 												</a>
 											</div>
 										</div>
-										<div class="col-sm-3 col-6">
+										<div id="confined_space_done" style=" display: none" class="col-sm-3 col-6 ">
+											<div align="center" class="pilihan_tes tes-selesai">
+												<div class="triangle-topright"></div>
+												<i class="fa fa-check check-selesai"></i>
+												<h4 class="tulisan-selesai">Telah Dikerjakan</h4>
+												<img class="icon-tes" src="../assets/media/icons/confined_space.png">
+											</div>
+										</div>
+										<div id="confined_space" class="col-sm-3 col-6">
 											<div align="center" class="pilihan_tes">
 												<img class="icon-tes" src="../assets/media/icons/confined_space.png">
 												<a href="intro.html" class="btn btn-danger btn-klik">
@@ -189,7 +222,15 @@
 												</a>
 											</div>
 										</div>
-										<div class="col-sm-3 col-6">
+										<div id="fit_to_work_done" style=" display: none" class="col-sm-3 col-6 ">
+											<div align="center" class="pilihan_tes tes-selesai">
+												<div class="triangle-topright"></div>
+												<i class="fa fa-check check-selesai"></i>
+												<h4 class="tulisan-selesai">Telah Dikerjakan</h4>
+												<img class="icon-tes" src="../assets/media/icons/fit_to_work.png">
+											</div>
+										</div>
+										<div id="fit_to_work" class="col-sm-3 col-6">
 											<div align="center" class="pilihan_tes">
 												<img class="icon-tes" src="../assets/media/icons/fit_to_work.png">
 												<a href="intro.html" class="btn btn-danger btn-klik">
@@ -197,7 +238,15 @@
 												</a>
 											</div>
 										</div>
-										<div class="col-sm-3 col-6">
+										<div id="lifting_operation_done" style=" display: none" class="col-sm-3 col-6 ">
+											<div align="center" class="pilihan_tes tes-selesai">
+												<div class="triangle-topright"></div>
+												<i class="fa fa-check check-selesai"></i>
+												<h4 class="tulisan-selesai">Telah Dikerjakan</h4>
+												<img class="icon-tes" src="../assets/media/icons/lifting_operation.png">
+											</div>
+										</div>
+										<div id="lifting_operation" class="col-sm-3 col-6">
 											<div align="center" class="pilihan_tes">
 												<img class="icon-tes" src="../assets/media/icons/lifting_operation.png">
 												<a href="intro.html" class="btn btn-danger btn-klik">
@@ -205,7 +254,15 @@
 												</a>
 											</div>
 										</div>
-										<div class="col-sm-3 col-6">
+										<div id="floating_device_done" style=" display: none" class="col-sm-3 col-6 ">
+											<div align="center" class="pilihan_tes tes-selesai">
+												<div class="triangle-topright"></div>
+												<i class="fa fa-check check-selesai"></i>
+												<h4 class="tulisan-selesai">Telah Dikerjakan</h4>
+												<img class="icon-tes" src="../assets/media/icons/floating_device.png">
+											</div>
+										</div>
+										<div id="floating_device" class="col-sm-3 col-6">
 											<div align="center" class="pilihan_tes">
 												<img class="icon-tes" src="../assets/media/icons/floating_device.png">
 												<a href="intro.html" class="btn btn-danger btn-klik">
@@ -213,7 +270,15 @@
 												</a>
 											</div>
 										</div>
-										<div class="col-sm-3 col-6">
+										<div id="working_at_height_done" style=" display: none" class="col-sm-3 col-6 ">
+											<div align="center" class="pilihan_tes tes-selesai">
+												<div class="triangle-topright"></div>
+												<i class="fa fa-check check-selesai"></i>
+												<h4 class="tulisan-selesai">Telah Dikerjakan</h4>
+												<img class="icon-tes" src="../assets/media/icons/working_at_height.png">
+											</div>
+										</div>
+										<div id="working_at_height" class="col-sm-3 col-6">
 											<div align="center" class="pilihan_tes">
 												<img class="icon-tes" src="../assets/media/icons/working_at_height.png">
 												<a href="intro.html" class="btn btn-danger btn-klik">
@@ -221,7 +286,15 @@
 												</a>
 											</div>
 										</div>
-										<div class="col-sm-3 col-6">
+										<div id="system_override_done" style=" display: none" class="col-sm-3 col-6 ">
+											<div align="center" class="pilihan_tes tes-selesai">
+												<div class="triangle-topright"></div>
+												<i class="fa fa-check check-selesai"></i>
+												<h4 class="tulisan-selesai">Telah Dikerjakan</h4>
+												<img class="icon-tes" src="../assets/media/icons/system_override.png">
+											</div>
+										</div>
+										<div id="system_override" class="col-sm-3 col-6">
 											<div align="center" class="pilihan_tes">
 												<img class="icon-tes" src="../assets/media/icons/system_override.png">
 												<a href="intro.html" class="btn btn-danger btn-klik">
@@ -229,7 +302,15 @@
 												</a>
 											</div>
 										</div>
-										<div class="col-sm-3 col-6">
+										<div id="savety_driving_done" style=" display: none" class="col-sm-3 col-6 ">
+											<div align="center" class="pilihan_tes tes-selesai">
+												<div class="triangle-topright"></div>
+												<i class="fa fa-check check-selesai"></i>
+												<h4 class="tulisan-selesai">Telah Dikerjakan</h4>
+												<img class="icon-tes" src="../assets/media/icons/savety_driving.png">
+											</div>
+										</div>
+										<div id="savety_driving" class="col-sm-3 col-6">
 											<div align="center" class="pilihan_tes">
 												<img class="icon-tes" src="../assets/media/icons/savety_driving.png">
 												<a href="intro.html" class="btn btn-danger btn-klik">

@@ -306,7 +306,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 			table.table().draw();
 		});
 		$('#kt_search_all').on( 'keyup', function () {
-		    table.search( this.value ).draw();
+			table.search( this.value ).draw();
 		} );
 		$('#kt_reset').on('click', function(e) {
 			e.preventDefault();
@@ -795,6 +795,18 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 						break;
 					}
 				});
+
+				this.api().columns().every(function() {
+					var column = this;
+
+					switch (column.title()) {
+						case 'Pekerjaan':
+						column.data().unique().sort().each(function(d, j) {
+							$('.kt-input[data-col-index="3"]').append('<option value="' + d + '">' + d + '</option>');
+						});
+						break;
+					}
+				});
 			},
 
 			columnDefs: [
@@ -815,7 +827,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 			table.column(index).search(val ? val : '', false, true);
 		};
 
-		$('#kt_search').on('click', function(e) {
+		$('#kt_search_depot').on('change', function(e) {
 			e.preventDefault();
 			var params = {};
 			$('.kt-input').each(function() {
@@ -828,11 +840,32 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 				}
 			});
 			$.each(params, function(i, val) {
+				// apply search params to datatable
 				table.column(i).search(val ? val : '', false, false);
 			});
 			table.table().draw();
 		});
-
+		$('#kt_search_pekerjaan').on('change', function(e) {
+			e.preventDefault();
+			var params = {};
+			$('.kt-input').each(function() {
+				var i = $(this).data('col-index');
+				if (params[i]) {
+					params[i] += '|' + $(this).val();
+				}
+				else {
+					params[i] = $(this).val();
+				}
+			});
+			$.each(params, function(i, val) {
+				// apply search params to datatable
+				table.column(i).search(val ? val : '', false, false);
+			});
+			table.table().draw();
+		});
+		$('#kt_search_all').on( 'keyup', function () {
+			table.search( this.value ).draw();
+		} );
 		$('#kt_reset').on('click', function(e) {
 			e.preventDefault();
 			$('.kt-input').each(function() {
@@ -841,8 +874,9 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 			});
 			table.table().draw();
 		});
+
 	};
-	var initTable10 = function() {
+var initTable10 = function() {
 	var table = $('#daftar_depot');
 
 		// begin first table

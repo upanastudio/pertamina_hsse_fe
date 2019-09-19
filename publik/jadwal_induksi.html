@@ -189,7 +189,7 @@
 															Jadwal Tes 12 LSR
 														</h3>
 														<div style="margin-left: 30px;width: 300px">
-															<select class="form-control" id="pilih_depot" name="pilih_depot">
+															<select class="form-control select2_noSearch" id="pilih_depot" name="pilih_depot">
 																<option value="0">--Pilih Depot--</option>
 																<option value="1">Depot 1</option>
 																<option value="2">Depot 2</option>
@@ -197,8 +197,7 @@
 																<option value="4">Depot 4</option>
 															</select>
 														</div>
-														<div style="margin-left: 30px;width: 300px" id='kt_daterangepicker_6' class='input-group'>
-															<!-- <input autocomplete="off" class="form-control" placeholder="--Pilih Tanggal--" id="jadwal_tes" name="kt_daterangepicker_1"> -->
+														<div style="margin-left: 30px;width: 300px" id='pilih_tanggal' class='input-group'>
 															<input type='text' class="form-control" readonly placeholder="Pilih tanggal " />
 															<div class="input-group-append">
 																<span class="input-group-text"><i class="fa fa-calendar-check"></i></span>
@@ -568,6 +567,7 @@
 		<script src="../assets/vendors/general/bootstrap-daterangepicker/daterangepicker.js" type="text/javascript"></script>
 		<script src="../assets/vendors/general/sweetalert2/dist/sweetalert2.min.js" type="text/javascript"></script>
 		<script src="../assets/vendors/custom/components/vendors/sweetalert2/init.js" type="text/javascript"></script>
+		<script src="../assets/vendors/general/select2/dist/js/select2.full.js" type="text/javascript"></script>
 		<!--end:: Global Optional Vendors -->
 		<!--begin::Global Theme Bundle(used by all pages) -->
 		<script src="../assets/demo/demo5/base/scripts.bundle.js" type="text/javascript"></script>
@@ -662,44 +662,62 @@
 					}, function(start, end, label) {
 						$('#jadwal_tes .form-control').val( start.format('DD/MM/YYYY',) + ' - ' + end.format('DD/MM/YYYY'));
 					});
+					var start = moment().subtract(29, 'days');
+					var end = moment();
 
-					 // predefined ranges
-					 var start = moment().subtract(29, 'days');
-					 var end = moment();
-
-					 $('#kt_daterangepicker_6').daterangepicker({
-					 	buttonClasses: ' btn',
-					 	applyClass: 'btn-primary',
-					 	cancelClass: 'btn-secondary',
-					 	locale: {
+					$('#pilih_tanggal').daterangepicker({
+						buttonClasses: ' btn',
+						applyClass: 'btn-primary',
+						cancelClass: 'btn-secondary',
+						locale: {
 							format: 'DD/MM/YYYY'
 						},
-					 	startDate: start,
-					 	endDate: end,
-					 	ranges: {
-					 		'Hari ini': [moment(), moment()],
-					 		'Kemarin': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
-					 		'7 Hari terakhir': [moment().subtract(6, 'days'), moment()],
-					 		'Bulan ini': [moment().startOf('month'), moment().endOf('month')],
-					 		'Bulan lalu': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
-					 	}
-					 }, function(start, end, label) {
-					 	$('#kt_daterangepicker_6 .form-control').val( start.format('DD/MM/YYYY',) + ' - ' + end.format('DD/MM/YYYY'));
-					 });
-
-					}
-
-					return {
-						init: function() {
-							demos();
+						startDate: start,
+						endDate: end,
+						ranges: {
+							'Hari ini': [moment(), moment()],
+							'Kemarin': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+							'7 Hari terakhir': [moment().subtract(6, 'days'), moment()],
+							'Bulan ini': [moment().startOf('month'), moment().endOf('month')],
+							'Bulan lalu': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
 						}
-					};
-				}();
+					}, function(start, end, label) {
+						$('#pilih_tanggal .form-control').val( start.format('DD/MM/YYYY',) + ' - ' + end.format('DD/MM/YYYY'));
+					});
 
-				jQuery(document).ready(function() {
-					KTBootstrapDaterangepicker.init();
-				});
-			</script>
-		</body>
-		<!-- end::Body -->
-		</html>
+				}
+
+				return {
+					init: function() {
+						demos();
+					}
+				};
+			}();
+
+			jQuery(document).ready(function() {
+				KTBootstrapDaterangepicker.init();
+			});
+		</script>
+		<script>
+			var KTSelect2 = function() {
+				var demos = function() {
+
+					$('.select2_noSearch').select2({
+						placeholder: "Select an option",
+						minimumResultsForSearch: Infinity
+					});
+				}
+				return {
+					init: function() {
+						demos();
+					}
+				};
+			}();
+
+			jQuery(document).ready(function() {
+				KTSelect2.init();
+			});
+		</script>
+	</body>
+	<!-- end::Body -->
+	</html>

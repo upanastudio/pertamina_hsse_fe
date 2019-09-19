@@ -258,7 +258,6 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 						selesai: {'class': 'btn-label-success'},
 						kadaluarsa: {'class': 'btn-label-dark'},
 					};
-					console.log(status[full.status].class);
 					if (status[full.status].class == 'btn-label-danger') {
 						return `
 						<button  type="button" class="btn btn-hover-brand btn-elevate-hover btn-icon btn-sm btn-icon-md btn-circle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -286,9 +285,9 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 			}
 			],
 		});
-	};
-	var initTable4 = function() {
-		var table = $('#daftar_sika_pekerjaan');
+};
+var initTable4 = function() {
+	var table = $('#daftar_sika_pekerjaan');
 
 		// begin first table
 		table.DataTable({
@@ -370,15 +369,36 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 				className: 'text-center',
 				orderable: false,
 				render: function(data, type, full, meta) {
+					var status = {
+						draft: {'class': 'btn-label-bold bold-status'},
+						'pengajuan awal': {'class': 'btn-label-danger'},
+						'pengajuan ulang': {'class': 'btn-label-danger'},
+						perpanjang: {'class': 'btn-label-danger'},
+						ditolak: {'class': 'btn-label-danger'},
+						tutup: {'class': 'btn-label-danger'},
+						ditunda: {'class': 'btn-label-danger'},
+						progress: {'class': 'btn-label-warning'},
+						selesai: {'class': 'btn-label-success'},
+						kadaluarsa: {'class': 'btn-label-dark'},
+					};
+					if (status[full.status].class == 'btn-label-danger') {
+						return `
+						<button  type="button" class="btn btn-hover-brand btn-elevate-hover btn-icon btn-sm btn-icon-md btn-circle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<i class="flaticon-more-1"></i>
+						</button>
+						<div style="min-width:9rem;padding:5px;" class="dropdown-menu dropdown-menu-right">
+						<button disabled="" style="margin-bottom:5px;" class="dropdown-item btn btn-secondary"> <i class="fa fa-angle-double-up"></i> Perpanjang</button>
+						<a href="tutup_sika_cold.html"  class="dropdown-item btn btn-secondary"> <i class="fa fa-ban"></i> Tutup</a>` 
+						;
+					}
 					return `
 					<button type="button" class="btn btn-hover-brand btn-elevate-hover btn-icon btn-sm btn-icon-md btn-circle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 					<i class="flaticon-more-1"></i>
 					</button>
 					<div style="min-width:9rem;padding:5px;" class="dropdown-menu dropdown-menu-right">
-					<a href="perpanjang_sika.html" style="margin-bottom:5px;" class="dropdown-item btn btn-secondary"> <i class="fa fa-angle-double-up"></i> Perpanjang</a>
-					<a href="tutup_sika.html"  class="dropdown-item btn btn-secondary">  <i class="fa fa-ban"></i> Tutup</a>` 
+					<a href="perpanjang_sika_cold.html" style="margin-bottom:5px;" class="dropdown-item btn btn-secondary"> <i class="fa fa-angle-double-up"></i> Perpanjang</button>
+					<a href="tutup_sika_cold.html"  class="dropdown-item btn btn-secondary"> <i class="fa fa-ban"></i> Tutup</a>` 
 					;
-					
 				},
 			}],
 			columnDefs: [
@@ -388,9 +408,9 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 			}
 			],
 		});
-	};
-	var initTable5 = function() {
-		var table = $('#daftar_sika_cold_pekerjaan');
+};
+var initTable5 = function() {
+	var table = $('#daftar_sika_cold_pekerjaan');
 
 		// begin first table
 		table.DataTable({
@@ -649,7 +669,6 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 						selesai: {'class': 'btn-label-success'},
 						kadaluarsa: {'class': 'btn-label-dark'},
 					};
-					console.log(status[full.status].class);
 					if (status[full.status].class == 'btn-label-danger') {
 						return `
 						<button  type="button" class="btn btn-hover-brand btn-elevate-hover btn-icon btn-sm btn-icon-md btn-circle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -677,24 +696,24 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 			}
 			]
 		});
-		$('#childrow_contoh tbody').on('click', 'td.details-control', function () {
-			var tr = $(this).closest('tr');
-			var row = table.row( tr );
+$('#childrow_contoh tbody').on('click', 'td.details-control', function () {
+	var tr = $(this).closest('tr');
+	var row = table.row( tr );
 
-			if ( row.child.isShown() ) {
-				row.child.hide();
-				tr.removeClass('shown');
-			}
-			else {
-				row.child( format(row.data(), tr.children('td')) ).show();
-				tr.addClass('shown');
-				/*tr.next('tr').children('td').css('padding', '0px');*/
-			}
+	if ( row.child.isShown() ) {
+		row.child.hide();
+		tr.removeClass('shown');
+	}
+	else {
+		row.child( format(row.data(), tr.children('td')) ).show();
+		tr.addClass('shown');
+		/*tr.next('tr').children('td').css('padding', '0px');*/
+	}
 
-		});
-	};
-	var initTable7 = function() {
-		var table = $('#daftar_sika_cold_novalidasi');
+});
+};
+var initTable7 = function() {
+	var table = $('#daftar_sika_cold_novalidasi');
 
 		// begin first table
 		table.DataTable({
@@ -855,7 +874,6 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 						selesai: {'class': 'btn-label-success'},
 						kadaluarsa: {'class': 'btn-label-dark'},
 					};
-					console.log(status[full.status].class);
 					if (status[full.status].class == 'btn-label-danger') {
 						return `
 						<button  type="button" class="btn btn-hover-brand btn-elevate-hover btn-icon btn-sm btn-icon-md btn-circle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

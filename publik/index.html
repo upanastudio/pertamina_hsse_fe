@@ -165,8 +165,7 @@
 														<div class="form-group row">
 															<label for="example-text-input" class="col-3 col-form-label">Tipe Pekerja</label>
 															<div class="col-9">
-																<select class="form-control" id="tipe_pekerja" name="tipe_pekerja">
-																	<option value="0">--Pilih Tipe Pekerja--</option>
+																<select class="form-control select2_noSearch" id="tipe_pekerja" name="tipe_pekerja">
 																	<option value="1">Pekerja Pertamina</option>
 																	<option value="2">Tenaga Kerja Jasa Penunjang (TKJP)</option>
 																	<option value="3">Awak Mobil Tangi (AMT)</option>
@@ -177,7 +176,7 @@
 														<div class="form-group row">
 															<label for="example-text-input" class="col-3 col-form-label">Lokasi Depot</label>
 															<div class="col-9">
-																<select class="form-control m-select2" id="lokasi_depot" name="lokasi_depot">
+																<select class="form-control ktselect2_mode" id="lokasi_depot" name="lokasi_depot">
 																	<option value="0">--Pilih Lokasi Depot--</option>
 																	<option value="1">Area 1</option>
 																	<option value="2">Area 2</option>
@@ -199,7 +198,7 @@
 														<div class="form-group row">
 															<label for="example-text-input" class="col-3 col-form-label">Nama Perusahaan</label>
 															<div class="col-9">
-																<select style="width: 100%" class="form-control m-select2" id="nama_perusahaan" name="nama_perusahaan">
+																<select style="width: 100%" class="form-control ktselect2_mode" id="nama_perusahaan" name="nama_perusahaan">
 																	<option value="0">--Pilih Perusahaan--</option>
 																	<option value="pertamina">Pertamina</option>
 																	<option value="upana">Upana Studio</option>
@@ -719,44 +718,6 @@
 			});
 		</script>
 		<script>
-			// Class definition
-			var KTSelect2 = function() {
-			    // Private functions
-			    var demos = function() {
-			        // basic
-			        $('#lokasi_depot, #lokasi_depot_validate').select2({
-			        	placeholder: "Select a state"
-			        });
-			        // basic
-			        $('#nama_perusahaan, #nama_perusahaan_validate').select2({
-			        	placeholder: "Select a state"
-			        });
-			    }
-			    var modalDemos = function() {
-			    	$('#kt_select2_modal').on('shown.bs.modal', function () {
-			            // basic
-			            $('#lokasi_depot_modal').select2({
-			            	placeholder: "Select a state"
-			            });
-			            $('#nama_perusahaan_modal').select2({
-			            	placeholder: "Select a state"
-			            });
-			        });
-			    }
-			    // Public functions
-			    return {
-			    	init: function() {
-			    		demos();
-			    		modalDemos();
-			    	}
-			    };
-			}();
-			// Initialization
-			jQuery(document).ready(function() {
-				KTSelect2.init();
-			});
-		</script>
-		<script>
 			$(document).ready(function() {
 				let i = 2;
 				$("#btn_tambah_sertifikat").click(function () {
@@ -894,7 +855,30 @@
 					$('#alamat_perusahaan').val('Jln. alamat perusahaan Suara utama');
 				}
 			});
-			
+		</script>
+		<script>
+			var KTSelect2 = function() {
+				var demos = function() {
+
+					$('.select2_noSearch').select2({
+						placeholder: "Select an option",
+						minimumResultsForSearch: Infinity
+					});
+
+					$('.ktselect2_mode').select2({
+						placeholder: "Select an option"
+					});
+				}
+				return {
+					init: function() {
+						demos();
+					}
+				};
+			}();
+
+			jQuery(document).ready(function() {
+				KTSelect2.init();
+			});
 		</script>
 	</body>
 	<!-- end::Body -->

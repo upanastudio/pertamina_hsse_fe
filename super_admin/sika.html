@@ -192,12 +192,12 @@
 								<form class="kt-form kt-form--fit kt-margin-b-10">
 									<div class="row kt-margin-b-2">
 										<div class="col-lg-4 kt-margin-b-10-tablet-and-mobile">
-											<select class="form-control kt-input" data-col-index="1" id="kt_search_depot">
+											<select class="form-control kt-input select2_noSearch" data-col-index="1" id="kt_search_depot">
 												<option value="">Pilih Depot</option>
 											</select>
 										</div>
 										<div class="col-lg-4 kt-margin-b-10-tablet-and-mobile">
-											<select class="form-control kt-input" data-col-index="5" id="kt_search_status">
+											<select class="form-control kt-input select2_noSearch" data-col-index="5" id="kt_search_status">
 												<option value="">Pilih Status</option>
 											</select>
 										</div>
@@ -285,7 +285,7 @@
 	<script src="../assets/vendors/general/wnumb/wNumb.js" type="text/javascript"></script>
 	<!--end:: Global Mandatory Vendors -->
 	<!--begin:: Global Optional Vendors -->
-
+	<script src="../assets/vendors/general/select2/dist/js/select2.full.js" type="text/javascript"></script>
 	<!--end:: Global Optional Vendors -->
 	<!--begin::Global Theme Bundle(used by all pages) -->
 	<script src="../assets/demo/default/base/scripts.bundle.js" type="text/javascript"></script>
@@ -301,6 +301,31 @@
 	<!-- AJAX -->
 	<script src="../assets/vendors/custom/datatables/datatables.bundle.js" type="text/javascript"></script>
 	<script src="../assets/app/script/js_ajax_public_tes.js" type="text/javascript"></script>
+	<script>
+		var KTSelect2 = function() {
+			var demos = function() {
+
+				$('#kt_search_depot').select2({
+					placeholder: "Filter berdasarkan depot",
+					minimumResultsForSearch: Infinity
+				});
+
+				$('#kt_search_status').select2({
+					placeholder: "Filter berdasarkan status",
+					minimumResultsForSearch: Infinity
+				});
+			}
+			return {
+				init: function() {
+					demos();
+				}
+			};
+		}();
+
+		jQuery(document).ready(function() {
+			KTSelect2.init();
+		});
+	</script>
 </body>
 <!-- end::Body -->
 </html>

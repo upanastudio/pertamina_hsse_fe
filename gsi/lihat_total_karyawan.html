@@ -245,7 +245,7 @@
 										<div style="width: 400px" class=" row">
 											<label for="example-text-input" class="col-3 col-form-label">Pilih Bulan</label>
 											<div class="col-9">
-												<select class="form-control" id="exampleSelect1">
+												<select class="form-control select2_noSearch" id="pilih_bulan" name="pilih_bulan">
 													<option>Novemeber 18</option>
 													<option>Desember 18</option>
 													<option>Januari 19</option>
@@ -467,6 +467,7 @@
 	<script src="../assets/vendors/general/bootstrap-daterangepicker/daterangepicker.js" type="text/javascript"></script>
 	<script src="../assets/vendors/general/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js" type="text/javascript"></script>
 	<script src="../assets/vendors/custom/components/vendors/bootstrap-datepicker/init.js" type="text/javascript"></script>
+	<script src="../assets/vendors/general/select2/dist/js/select2.full.js" type="text/javascript"></script>
 	<!--end:: Global Optional Vendors -->
 	<!--begin::Global Theme Bundle(used by all pages) -->
 	<script src="../assets/demo/default/base/scripts.bundle.js" type="text/javascript"></script>
@@ -481,6 +482,26 @@
 	<script src="../assets/vendors/custom/datatables/datatables.bundle.js" type="text/javascript"></script>
 	<script src="../assets/app/script/js_ajax_hsse.js" type="text/javascript"></script>
 	<!-- end::Body -->
+	<script>
+		var KTSelect2 = function() {
+			var demos = function() {
+
+				$('.select2_noSearch').select2({
+					placeholder: "Select an option",
+					minimumResultsForSearch: Infinity
+				});
+			}
+			return {
+				init: function() {
+					demos();
+				}
+			};
+		}();
+
+		jQuery(document).ready(function() {
+			KTSelect2.init();
+		});
+	</script>
 </body>
 <!-- end::Body -->
 </html>

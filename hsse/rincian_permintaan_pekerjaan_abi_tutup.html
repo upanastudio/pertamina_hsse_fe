@@ -1115,7 +1115,7 @@
 																				<div class="form-group row">
 																					<label for="example-text-input" class="col-4 col-form-label">Tanggal</label>
 																					<div class="col-8">
-																						<select class="form-control" id="tanggal_wip_select" name="tanggal_wip_select">
+																						<select style="width: 100%" class="form-control select2_noSearch" id="tanggal_wip_select" name="tanggal_wip_select">
 																							<option value="0">--Pilih Tanggal WIP--</option>
 																							<option value="1">1 Januari 2019</option>
 																							<option value="2">2 Februari 2019</option>
@@ -1983,6 +1983,26 @@
 
 		$('.datepicker').datepicker({
 			language: 'XX'
+		});
+	</script>
+	<script>
+		var KTSelect2 = function() {
+			var demos = function() {
+
+				$('.select2_noSearch').select2({
+					placeholder: "Select an option",
+					minimumResultsForSearch: Infinity
+				});
+			}
+			return {
+				init: function() {
+					demos();
+				}
+			};
+		}();
+
+		jQuery(document).ready(function() {
+			KTSelect2.init();
 		});
 	</script>
 </body>
