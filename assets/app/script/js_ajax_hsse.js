@@ -808,7 +808,7 @@ var KTDatatablesSearchOptionsAdvancedSearch = function() {
 				width: 100,
 				render: function(data, type, full, meta) {
 					return `
-					<a href="rincian_data_pekerja.html" class="btn btn-sm btn-primary" style="color:white;border-radius:20px">Rincian</a>`;
+					<a href="rincian_data_pekerja_terverifikasi.html" class="btn btn-sm btn-primary" style="color:white;border-radius:20px">Rincian</a>`;
 				},
 			}],
 			columnDefs: [
