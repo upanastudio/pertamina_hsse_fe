@@ -51,6 +51,13 @@
 			width: 1693px;
 			height: 2598px;
 		}
+		.scale {
+			transform: scale(0.2);
+			transform-origin: top left;
+		}
+		.perantara {
+			margin-top: 120px;
+		}
 		#photo-container {
 			/*max-width: 9cm;
 			max-height: 12cm;*/
@@ -95,6 +102,16 @@
 	</style>
 	<style>
 		@media print {
+			.id-card-outline {
+				border: 1px solid white;
+				background-color: white;
+				width: 1693px;
+				height: 2598px;
+			}
+			.scale {
+				transform: scale(1);
+				transform-origin: top left;
+			}
 			@page{
 				size: auto;
 				margin: 0px;
@@ -130,10 +147,10 @@
 			<!-- <div style="margin: 10px 5px">
 				<button id="btnSave"  class="btn btn-md btn-primary">Generate to png</button>
 			</div> -->
-			<div id="section-to-print">
+			<div id="section-to-print" class="scale">
 				<div class="row">
 					<div  class="col-3">
-						<div  id="generate_depan" class="id-card-outline">
+						<div  id="generate_depan" class="id-card-outline ">
 							<div style="" align="center">
 								<img style="width: 100%;margin-top: 0px" src="../assets/media/id_card/top_idcard.png">
 								<img style="height: auto;width: 600px;margin-top: 90px;margin-bottom: 100px;margin-left: 920px;" src="../assets/media/id_card/logo_idcard.png">
@@ -158,9 +175,9 @@
 						</div>
 					</div>
 				</div>
-				<div  style="margin-top: 120px" class="row">
+				<div class="row perantara">
 					<div class="col-3">
-						<div id="generate_belakang" class="id-card-outline  bagian-belakang">
+						<div id="generate_belakang" class="id-card-outline  bagian-belakang ">
 							<div style="" align="center">
 								<img style="width: 100%;margin-top: 0px" src="../assets/media/id_card/top_idcard.png">
 								<img id="barcode" name="barcode" style="width: 50%;margin-top:90px" src="../assets/media/id_card/barcode.png">
@@ -280,7 +297,7 @@
 				// 	}
 				// });
 			});
-		}); 
+		});
 	</script>
 	<!-- <script>
 		html2canvas($('#generate_depan'), {
