@@ -46,29 +46,80 @@
 		.id-card-outline {
 			border: 1px solid white;
 			background-color: white;
-			width: 5.4cm;
-			height: 8.6cm;
+			/*width: 5.4cm;
+			height: 8.6cm;*/
+			width: 1693px;
+			height: 2598px;
 		}
 		#photo-container {
-			max-width: 3cm;
-			max-height: 4cm;
+			/*max-width: 9cm;
+			max-height: 12cm;*/
 		}
 		#photo-user {
-			max-width: 100%;
-			max-height: 100%;
+			width: 730px;
+			height: auto;
+			padding-left: 60px;
 		}
 		.info-user p {
 			margin-bottom: 0rem;
 		}
 		.info_belakang h6 {
 			font-size: 10px;
+			font-size: 7.5rem;
 		}
 		.aturan_belakang p {
-			font-size: 9px;
+			font-size: 6.2rem;
 			margin-bottom: .6rem;
-			text-align: justify;
+		}
+		.info-user p {
+			font-size: 7.2rem;
+			padding-left: 60px;
+		}
+		#footer-depan {
+			position: absolute;
+			bottom: 0;
+			width: 1693px;
+		}
+		#footer-depan img {
+			width: 1600px
+		}
+		#footer-belakang {
+			position: absolute;
+			width: 100%;
+			bottom: 0;
+			width: 1693px;
+		}
+		#footer-belakang img {
+			width: 1600px
 		}
 	</style>
+	<style>
+		@media print {
+			@page{
+				size: auto;
+				margin: 0px;
+			}
+			body * {
+				visibility: hidden;
+			}
+			#section-to-print, #section-to-print * {
+				visibility: visible;
+			}
+			#section-to-print {
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+			.id-card-outline {
+				border: 1px solid white;
+				background-color: white;
+			/*width: 5.4cm;
+			height: 8.6cm;*/
+			width: 1693px;
+			height: 2598px;
+		}
+	}
+</style>
 </head>
 <!-- end::Head -->
 <!-- begin::Body -->
@@ -76,59 +127,67 @@
 	
 	<div class="kt-content  kt-grid__item kt-grid__item--fluid" id="kt_content">
 		<div class="kt-portlet__body">
-			<div style="margin: 10px 5px">
-				<!-- <button id="btnSave" class="btn btn-md btn-primary">Generate to png</button> -->
-			</div>
-			<div class="row">
-				<div  class="col-3">
-					<div  id="generate_depan" class="id-card-outline">
-						<div style="" align="center">
-							<img style="width: 100%;margin-top: -8px" src="../assets/media/id_card/top_idcard.png">
-							<img style="height: auto;width: 70px;margin-top: 10px;margin-bottom: 10px; margin-left: 95px" src="../assets/media/id_card/logo_idcard.png">
-							<p style="font-size: 1.8rem;font-weight: 600;margin-bottom:0;line-height: 1;margin-top: 5px">HSSE <br> PASSPORT</p>
-						</div>
-						<div style="padding:10px;margin-top:10px;margin-bottom:37px" class="row">
-							<div class="col-sm">
-								<div id="photo-container">
-									<img id="photo-user" name="photo-user" src="../assets/media/id_card/photo_id.jpg">
+			<!-- <div style="margin: 10px 5px">
+				<button id="btnSave"  class="btn btn-md btn-primary">Generate to png</button>
+			</div> -->
+			<div id="section-to-print">
+				<div class="row">
+					<div  class="col-3">
+						<div  id="generate_depan" class="id-card-outline">
+							<div style="" align="center">
+								<img style="width: 100%;margin-top: 0px" src="../assets/media/id_card/top_idcard.png">
+								<img style="height: auto;width: 600px;margin-top: 90px;margin-bottom: 100px;margin-left: 920px;" src="../assets/media/id_card/logo_idcard.png">
+								<p style="font-size: 13.4rem;font-weight: 600;margin-bottom:155px;line-height: 1;margin-top: 15px">HSSE <br> PASSPORT</p>
+							</div>
+							<div style="padding:10px;margin-top:10px;margin-bottom:255px" class="row">
+								<div class="col-sm">
+									<div id="photo-container">
+										<img id="photo-user" name="photo-user" src="../assets/media/id_card/photo_id.jpg">
+									</div>
+								</div>
+								<div class="col-sm info-user">
+									<p><span id="kode_user" name="kode_user" style="font-weight: 600">32123441</span></p>
+									<p><span id="nama_user" name="nama_user" style="font-weight: 600">RIFAL</span></p>
+									<p><span id="tgl_berlaku" name="tgl_berlaku" style="font-weight: 600">2019/2020</span></p>
+									<img id="qr_code_user" name="qr_code_user" style="width: 73%"  src="../assets/media/id_card/qrcode/qr_code_2.png">
 								</div>
 							</div>
-							<div class="col-sm info-user">
-								<p><span id="kode_user" name="kode_user" style="font-weight: 600">32123441</span></p>
-								<p><span id="nama_user" name="nama_user" style="font-weight: 600">RIFAL</span></p>
-								<p><span id="tgl_berlaku" name="tgl_berlaku" style="font-weight: 600">2019/2020</span></p>
-								<img id="qr_code_user" name="qr_code_user" style="width: 73%"  src="../assets/media/id_card/qrcode/qr_code_2.png">
+							<div id="footer-depan">
+								<img src="../assets/media/id_card/footer_idcard.png">
 							</div>
-						</div>
-						<div id="footer">
-							<img style="width: 95%" src="../assets/media/id_card/footer_idcard.png">
 						</div>
 					</div>
 				</div>
-				<div class="col-3">
-					<div id="generate_belakang" class="id-card-outline  bagian-belakang">
-						<div style="" align="center">
-							<img style="width: 100%;margin-top: -8px" src="../assets/media/id_card/top_idcard.png">
-							<img id="barcode" name="barcode" style="width: 50%;margin-top:5px" src="../assets/media/id_card/barcode.png">
-						</div>
-						<div class="info_belakang" style="padding: 0px 15px;margin-top:10px" >
-							<h6>Nomor   : <span id="nomor" name="nomor">001-I /DR/F00237/2019</span></h6>
-							<h6>Expired : <span id="expired" name="expired">Desember 2020</span></h6>
-						</div>
-						<div class="aturan_belakang" style="padding: 9px 15px;margin-top:10px">
-							<p>1. Kartu ini tanda pekerja telah mendapatkan Induksi HSSE & Corporate Life Saving Rules.</p>
-							<p>2. Kartu ini berlaku diseluruh lingkungan Pertamina (Persero) MOR VII.</p>
-							<p>3. Kartu ini wajib ditunjukkan pada saat masuk dan keluar wilayah kerja.</p>
-							<p>4. Kartu tidak berlaku jika telah terjadi pelanggaran sebanyak 3 kali oleh pemegang kartu</p>
-						</div>
-						<div id="footer">
-							<img style="width: 100%" src="../assets/media/id_card/foot_idcard_belakang.png">
+				<div  style="margin-top: 120px" class="row">
+					<div class="col-3">
+						<div id="generate_belakang" class="id-card-outline  bagian-belakang">
+							<div style="" align="center">
+								<img style="width: 100%;margin-top: 0px" src="../assets/media/id_card/top_idcard.png">
+								<img id="barcode" name="barcode" style="width: 50%;margin-top:90px" src="../assets/media/id_card/barcode.png">
+							</div>
+							<div class="info_belakang" style="padding: 0px 55px;margin-top:90px" >
+								<h6>Nomor   : <span id="nomor" name="nomor">001-I /DR/F00237/2019</span></h6>
+								<h6>Expired : <span id="expired" name="expired">Desember 2020</span></h6>
+							</div>
+							<div class="aturan_belakang" style="padding: 9px 65px;margin-top:90px;margin-bottom: 200px">
+								<p>1. Kartu ini tanda pekerja telah mendapatkan Induksi HSSE & Corporate Life Saving Rules.</p>
+								<p>2. Kartu ini berlaku diseluruh lingkungan Pertamina (Persero) MOR VII.</p>
+								<p>3. Kartu ini wajib ditunjukkan pada saat masuk dan keluar wilayah kerja.</p>
+								<p>4. Kartu tidak berlaku jika telah terjadi pelanggaran sebanyak 3 kali oleh pemegang kartu</p>
+							</div>
+							<div id="footer-belakang">
+								<img style="width: 100%" src="../assets/media/id_card/foot_idcard_belakang.png">
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 		<div style="margin-top:30px" class="kt-portlet__body">
+			<div id="penjelasan-download" style="width: 40vw;display: none" align="center">
+				<h4>Hasil Convert PNG</h4>
+				<p>Silahkan klik kanan pada gambar di bawah dan download</p>
+			</div>
 			<div class="row">
 				<div class="col-3">
 					<div id="img-out_depan"></div>
@@ -170,6 +229,7 @@
 	<script src="../assets/vendors/general/perfect-scrollbar/dist/perfect-scrollbar.js" type="text/javascript"></script>
 	<script src="../assets/vendors/general/sticky-js/dist/sticky.min.js" type="text/javascript"></script>
 	<script src="../assets/vendors/general/wnumb/wNumb.js" type="text/javascript"></script>
+
 	<script src="https://cdn.jsdelivr.net/npm/canvas2image@1.0.5/canvas2image.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
@@ -185,43 +245,44 @@
 	<!--begin::Global App Bundle(used by all pages) -->
 	<script src="../assets/app/bundle/app.bundle.js" type="text/javascript"></script>
 	<!--end::Global App Bundle -->
-	<!-- <script>
+	<script>
 		$(function() { 
 			$("#btnSave").click(function() { 
 				// html2canvas($("#generate_depan"), {
 				// 	onrendered: function(canvas) {
 				// 		theCanvas = canvas;
 				// 		document.body.appendChild(canvas);
-				// 		Canvas2Image.saveAsPNG(canvas); 
+				// 		// Canvas2Image.saveAsPNG(canvas); 
 				// 		$("#img-out_depan").append(canvas); 
 				// 		// document.body.removeChild(canvas);
 				// 	}
 				// });
-				// html2canvas($("#generate_belakang"), {
+				html2canvas($("#generate_belakang"), {
+					onrendered: function(canvas) {
+						theCanvas = canvas;
+						document.body.appendChild(canvas);
+						// Canvas2Image.saveAsPNG(canvas); 
+						$("#img-out_belakang").append(canvas); 
+						// document.body.removeChild(canvas);
+					}
+				});
+				$('#penjelasan-download').css("display", "block");
+				// html2canvas($('#generate_depan'), {
 				// 	onrendered: function(canvas) {
-				// 		theCanvas = canvas;
-				// 		document.body.appendChild(canvas);
-				// 		Canvas2Image.saveAsPNG(canvas); 
-				// 		$("#img-out_belakang").append(canvas); 
-				// 		// document.body.removeChild(canvas);
+				// 		var img = canvas.toDataURL("image/png")
+				// 		window.open(img);
 				// 	}
 				// });
-				html2canvas($('#generate_depan'), {
-					onrendered: function(canvas) {
-						var img = canvas.toDataURL("image/png")
-						window.open(img);
-					}
-				});
-				html2canvas($('#generate_belakang'), {
-					onrendered: function(canvas) {
-						var img = canvas.toDataURL("image/png")
-						window.open(img);
-					}
-				});
+				// html2canvas($('#generate_belakang'), {
+				// 	onrendered: function(canvas) {
+				// 		var img = canvas.toDataURL("image/png")
+				// 		window.open(img);
+				// 	}
+				// });
 			});
 		}); 
-	</script> -->
-	<script>
+	</script>
+	<!-- <script>
 		html2canvas($('#generate_depan'), {
 			onrendered: function(canvas) {
 				var img = canvas.toDataURL("image/png")
@@ -235,7 +296,7 @@
 			}
 		});
 		
-	</script>
+	</script> -->
 </body>
 <!-- end::Body -->
 </html>
