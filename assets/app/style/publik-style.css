@@ -1,3 +1,14 @@
+@font-face {
+	font-family: 'Futura Md BT Medium';
+	font-style: normal;
+	font-weight: normal;
+	src: url('../futura/futuram.woff') format('woff');
+}
+
+* {
+	font-family: 'Futura Md BT Medium';
+}
+
 .vl {
 	border-left: 2px solid #E0E0E0;
 	height: 100%;

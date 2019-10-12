@@ -1,3 +1,14 @@
+@font-face {
+	font-family: 'Futura Md BT Medium';
+	font-style: normal;
+	font-weight: normal;
+	src: url('../futura/futuram.woff') format('woff');
+}
+
+* {
+	font-family: 'Futura Md BT Medium';
+}
+
 
 #bg_image { 
 	-webkit-background-size: cover;
@@ -92,8 +103,16 @@
 	border-color: #D9182A;
 }
 
+.btn-ulang {
+	width: 80%;
+	position: absolute;
+	bottom: 10px;
+	left: 10%;
+}
+
 .pilihan_tes {
-	background-color: #d9d9d9;
+	/*background-color: #d9d9d9;*/
+	background: linear-gradient(to bottom right, #00C9FF 0%, #92FE9D 100%);
 	padding: 5px;
 	border-radius: 5px;
 	color: white;
@@ -102,168 +121,836 @@
 
 }
 
+.judul_tes{
+	position: absolute;
+	top: 20px;
+	left: 0;
+	right: 0;
+	color: black;
+	font-weight: 500;
+}
+
 .btn-klik{
 	width: 80%;
 	position: absolute;
-	bottom: 15%;
+	bottom: 10px;
 	left: 10%;
 }
 
-.icon-tes {
+/*.icon-tes {
 	width: 65%;
 	position: absolute;
 	left: 17.5%;
 	bottom: 43%;
-}
+	}*/
 
-#btn-mulai-tes {
-	width: 25%;
-}
-
-.aturan {
-	padding: 10px;
-	background-color: #FFCDD2;
-	border-radius: 10px;
-}
-
-.informasi_skor p {
-	font-size:3rem;
-	font-weight: 500;
-}
-
-p #skor {
-	font-size: 4.5rem;
-}
-
-.pertanyaan p {
-	font-size: 1.7rem;
-	font-weight: 500;
-}
-
-.dataTables_wrapper .dataTables_pager,
-.dataTables_wrapper .dataTables_info {
-	display: none;
-}
-
-
-.dataTables_wrapper .dataTable th {
-	font-size:1.2rem;
-}
-.dataTables_wrapper .dataTable td {
-	font-size:1.15rem;
-}
-.tes-selesai{
-	background: rgb(0,0,0,.5);
-	border-color: transparent;
-}
-
-.check-selesai {
-	position: absolute;
-	right: 10%;
-	top: 5%;
-	font-size: 2rem;
-}
-
-.tulisan-selesai {
-	position: absolute;
-	font-size: 1.7rem;
-	bottom: 50%;
-	right: 0;
-	left: 0;
-	z-index: 999;
-	font-weight:600;
-}
-.triangle-topright {
-	width: 0;
-	height: 0;
-	border-top: 100px solid #ed1b2f;
-	border-left: 100px solid transparent;
-	position: absolute;
-	right: 3.5%;
-	top: 0;
-}
-@media (max-width: 720px) {
-	.login_menu {
-		width: 95%;
-		top: 15%;
-		left:2.5%;
-	}
-	.main_menu {
-		width: 100%;
-		top: 7%;
-		left:0;
-		padding: 10px;
-	}
-	.main_menu_tes {
-		width: 100%;
-		top: 10%;
-		left:0;
-		padding: 10px;
-	}
-	.intro_menu {
-		width: 95%;
-		top: 25%;
-		left:2.5%;
-		background-color: rgba(255,255,255,.95);
-	}
-	#bg_image {
-		background-position: 90% 0%;
-	}
-	#bg_image_intro {
-		background-position: 68% 0%;
-	}
-	#bg_image_menu_tes {
-		background-position: 90% 0%;
-		min-height: 190%;
-	}
-	.pilihan_tes {
-		height: 155px;
-		margin-bottom: 20px;
-	}
-	.main_menu .row {
-		padding: 0px 5px !important;
-	}
-	.main_menu_tes .row {
-		padding: 0px 5px !important;
-	}
 	.icon-tes {
-		bottom: 44%;
+		width: 100px;
+		position: absolute;
+		left: 30%;
+		bottom: 30%;
 	}
-	.btn-klik {
-		bottom: 16%
-	}
-	#btn-siap,
-	#btn-blm-siap {
-		width: 85% !important;
-	}
-	video {
-		height: 35vh !important;
-	}
+
 	#btn-mulai-tes {
-		width: 85%;
-		margin-top: 10px;
+		width: 25%;
 	}
-	.tabel_hasil {
-		padding: 0px 0px !important;
+
+	.aturan {
+		padding: 10px;
+		background-color: #FFCDD2;
+		border-radius: 10px;
 	}
+
+	.informasi_skor p {
+		font-size:3rem;
+		font-weight: 500;
+	}
+
+	p #skor {
+		font-size: 4.5rem;
+	}
+
+	.pertanyaan p {
+		font-size: 1.7rem;
+		font-weight: 500;
+	}
+
+	.dataTables_wrapper .dataTables_pager,
+	.dataTables_wrapper .dataTables_info {
+		display: none;
+	}
+
+
 	.dataTables_wrapper .dataTable th {
-		font-size:1.3rem;
-	}
-	.dataTables_wrapper .dataTable td {
 		font-size:1.2rem;
 	}
-	.triangle-topright {
-		border-top: 50px solid #ed1b2f;
-		border-left: 50px solid transparent;
-		right: 5.5%;
+	.dataTables_wrapper .dataTable td {
+		font-size:1.15rem;
 	}
-	.tulisan-selesai {
-		font-size: 1.2rem;
+	.tes-ulang{
+		background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+
+		border-color: transparent;
 	}
+
+	.tes-selesai {
+		background-image: linear-gradient(60deg, #abecd6 0%, #fbed96 100%);
+		border-color: transparent;
+	}
+
+	.triangle-sukses {
+		border-top: 100px solid #64DD17 !important;
+	}
+
 	.check-selesai {
-		font-size: 1.5rem;
+		position: absolute;
+		right: 10%;
+		top: 5%;
+		font-size: 2rem;
 	}
-	#video-playback{
-		width: 100% !important;
+
+	.tulisan-selesai {
+		position: absolute;
+		font-size: 1.1rem;
+		top: 5%;
+		left: 5%;
+		z-index: 999;
+		font-weight:600;
 	}
-}
+	.tulisan-done {
+		position: absolute;
+		bottom: 10px;
+		left: 0;
+		right: 0;
+		color: black;
+	}
+
+	.judul_done {
+		position: absolute;
+		left: 10px;
+		top: 10px;
+		color: #33691E;
+	}
+
+	.judul_ulang {
+		color: black;
+	}
+
+	.triangle-topright {
+		width: 0;
+		height: 0;
+		border-top: 100px solid #ed1b2f;
+		border-left: 100px solid transparent;
+		position: absolute;
+		right: 0px;
+		top: 0;
+	}
+
+	.safe_zone_icon {
+		width: 120px !important;
+		bottom: 68px !important;
+		left: 50% !important;
+		margin-left: -60px;
+	}
+	.permit_to_work_icon{
+		width: 70px !important;
+		bottom: 68px !important;
+		left: 50% !important;
+		margin-left: -35px;
+	}
+	.tools_equipment_icon{
+		width: 80px !important;
+		bottom: 68px !important;
+		left: 50% !important;
+		margin-left: -40px;
+	}
+	.asset_integrity_icon {
+		width: 70px !important;
+		bottom: 68px !important;
+		left: 50% !important;
+		margin-left: -35px;
+	}
+	.isolation_icon {
+		width: 52px !important;
+		bottom: 68px !important;
+		left: 50% !important;
+		margin-left: -26px;
+	}
+	.confined_space_icon {
+		width: 100px !important;
+		bottom: 68px !important;
+		left: 50% !important;
+		margin-left: -50px;
+	}
+	.fit_to_work_icon {
+		width: 66px !important;
+		bottom: 68px !important;
+		left: 50% !important;
+		margin-left: -33px;
+	}
+	.lifting_operation_icon {
+		width: 100px !important;
+		bottom: 68px !important;
+		left: 50% !important;
+		margin-left: -50px;
+	}
+	.floating_devices_icon {
+		width: 100px !important;
+		bottom: 68px !important;
+		left: 50% !important;
+		margin-left: -50px;
+	}
+	.working_at_height_icon {
+		width: 86px !important;
+		bottom: 68px !important;
+		left: 50% !important;
+		margin-left: -23px;
+	}
+	.system_override_icon {
+		width: 90px !important;
+		bottom: 68px !important;
+		left: 50% !important;
+		margin-left: -45px;
+	}
+	.savety_driving_icon {
+		width: 90px !important;
+		bottom: 68px !important;
+		left: 50% !important;
+		margin-left: -45px;
+	}
+
+	.func_button {
+		position: absolute;
+		left: 110px;
+		bottom: 70px;
+	}
+
+	.icon-intro {
+		width: 190px;
+	}
+	#nama_tes {
+		margin-top: 20px !important;
+	}
+
+	@media (max-width: 720px) {
+		.login_menu {
+			width: 95%;
+			top: 15%;
+			left:2.5%;
+		}
+		.main_menu {
+			width: 100%;
+			top: 7%;
+			left:0;
+			padding: 10px;
+		}
+		.main_menu_tes {
+			width: 100%;
+			top: 10%;
+			left:0;
+			padding: 10px;
+		}
+		.intro_menu {
+			width: 95%;
+			top: 25%;
+			left:2.5%;
+			background-color: rgba(255,255,255,.95);
+		}
+		#bg_image {
+			background-position: 90% 0%;
+		}
+		#bg_image_intro {
+			background-position: 68% 0%;
+		}
+		#bg_image_menu_tes {
+			background-position: 90% 0%;
+			min-height: 190%;
+		}
+		.pilihan_tes {
+			height: 155px;
+			margin-bottom: 20px;
+		}
+		.main_menu .row {
+			padding: 0px 5px !important;
+		}
+		.main_menu_tes .row {
+			padding: 0px 5px !important;
+		}
+		.icon-tes {
+			bottom: 44%;
+		}
+		.btn-klik {
+			bottom: 16%;
+			background-color: #306cb3;
+			border-color: #306cb3;
+		}
+		#btn-siap,
+		#btn-blm-siap {
+			width: 85% !important;
+		}
+		video {
+			height: 35vh !important;
+		}
+		#btn-mulai-tes {
+			width: 85%;
+			margin-top: 10px;
+		}
+		.tabel_hasil {
+			padding: 0px 0px !important;
+		}
+		.dataTables_wrapper .dataTable th {
+			font-size:1.3rem;
+		}
+		.dataTables_wrapper .dataTable td {
+			font-size:1.2rem;
+		}
+		.triangle-topright {
+			border-top: 50px solid #ed1b2f;
+			border-left: 50px solid transparent;
+			right: 5.5%;
+		}
+		.tulisan-selesai {
+			font-size: 1.2rem;
+		}
+		.check-selesai {
+			font-size: 1.5rem;
+		}
+		#video-playback{
+			width: 100% !important;
+		}
+	}
+
+
+	@media (max-width: 800px) {
+		.func_button{
+			left: 62px;
+			bottom: 62px;
+		}
+		#bg_image_menu_tes{
+			min-height: 217% !important;
+		}
+		.judul_tes {
+			font-size: 1rem;
+		}
+		.btn-klik {
+			bottom: 5px;
+		}
+		.safe_zone_icon {
+			width: 85px !important;
+			bottom: 80px !important;
+			left: 50% !important;
+			margin-left: -42.5px;
+		}
+		.permit_to_work_icon{
+			width: 52px !important;
+			bottom: 80px !important;
+			left: 50% !important;
+			margin-left: -26px;
+		}
+		.tools_equipment_icon{
+			width: 57px !important;
+			bottom: 80px !important;
+			left: 50% !important;
+			margin-left: -28.5px;
+		}
+		.asset_integrity_icon {
+			width: 48px !important;
+			bottom: 80px !important;
+			left: 50% !important;
+			margin-left: -24px;
+		}
+		.isolation_icon {
+			width: 40px !important;
+			bottom: 80px !important;
+			left: 50% !important;
+			margin-left: -20px;
+		}
+		.confined_space_icon {
+			width: 69px !important;
+			bottom: 80px !important;
+			left: 50% !important;
+			margin-left: -34.5px;
+		}
+		.fit_to_work_icon {
+			width: 49px !important;
+			bottom: 80px !important;
+			left: 50% !important;
+			margin-left: -24.5px;
+		}
+		.lifting_operation_icon {
+			width: 70px !important;
+			bottom: 80px !important;
+			left: 50% !important;
+			margin-left: -35px;
+		}
+		.floating_devices_icon {
+			width: 80px !important;
+			bottom: 80px !important;
+			left: 50% !important;
+			margin-left: -40px;
+		}
+		.working_at_height_icon {
+			width: 60px !important;
+			bottom: 80px !important;
+			left: 50% !important;
+			margin-left: -30px;
+		}
+		.system_override_icon {
+			width: 62px !important;
+			bottom: 80px !important;
+			left: 50% !important;
+			margin-left: -31px;
+		}
+		.savety_driving_icon {
+			width: 57px !important;
+			bottom: 80px !important;
+			left: 50% !important;
+			margin-left: -28.5px;
+		}
+		.judul_done {
+			font-size: .9rem;
+			top: 25px;
+		}
+		.triangle-topright {
+			right: 0%;
+			border-top: 58px solid #ed1b2f;
+			border-left: 58px solid transparent;
+		}
+		.check-selesai {
+			right: 5%;
+			font-size: 1.4rem;
+		}
+		.triangle-sukses {
+			border-top: 55px solid #64DD17 !important;
+		}
+		.tulisan-done {
+			font-size: 1.1rem;
+		}
+		#bg_image_menu_tes {
+			min-height: 150% !important;
+		}
+	}
+	@media (max-width: 720px) {
+		.func_button{
+			left: 53px;
+			bottom: 65px;
+		}
+		#bg_image_menu_tes {
+			background-position: 90% 0%;
+			max-height: 100% !important;
+		}
+		.judul_tes {
+			font-size: 1rem;
+		}
+		.btn-klik {
+			bottom: 5px;
+		}
+		.safe_zone_icon {
+			width: 75px !important;
+			bottom: 52px !important;
+			left: 50% !important;
+			margin-left: -37.5px;
+		}
+		.permit_to_work_icon{
+			width: 47px !important;
+			bottom: 50px !important;
+			left: 50% !important;
+			margin-left: -23.5px;
+		}
+		.tools_equipment_icon{
+			width: 52px !important;
+			bottom: 55px !important;
+			left: 50% !important;
+			margin-left: -26px;
+		}
+		.asset_integrity_icon {
+			width: 43px !important;
+			bottom: 52px !important;
+			left: 50% !important;
+			margin-left: -21.5px;
+		}
+		.isolation_icon {
+			width: 35px !important;
+			bottom: 52px !important;
+			left: 50% !important;
+			margin-left: -17.5px;
+		}
+		.confined_space_icon {
+			width: 64px !important;
+			bottom: 52px !important;
+			left: 50% !important;
+			margin-left: -32px;
+		}
+		.fit_to_work_icon {
+			width: 44px !important;
+			bottom: 52px !important;
+			left: 50% !important;
+			margin-left: -22px;
+		}
+		.lifting_operation_icon {
+			width: 65px !important;
+			bottom: 52px !important;
+			left: 50% !important;
+			margin-left: -32.5px;
+		}
+		.floating_devices_icon {
+			width: 65px !important;
+			bottom: 52px !important;
+			left: 50% !important;
+			margin-left: -32.5px;
+		}
+		.working_at_height_icon {
+			width: 55px !important;
+			bottom: 52px !important;
+			left: 50% !important;
+			margin-left: -23.5px;
+		}
+		.system_override_icon {
+			width: 57px !important;
+			bottom: 52px !important;
+			left: 50% !important;
+			margin-left: -28.5px;
+		}
+		.savety_driving_icon {
+			width: 57px !important;
+			bottom: 52px !important;
+			left: 50% !important;
+			margin-left: -28.5px;
+		}
+		.judul_done {
+			font-size: .9rem;
+			top: 10px;
+		}
+		.triangle-topright {
+			right: 0%;
+		}
+		.check-selesai {
+			right: 5%;
+		}
+		.triangle-sukses {
+			border-top: 55px solid #64DD17 !important;
+		}
+		.tulisan-done {
+			font-size: 1.1rem;
+		}
+		#bg_image_menu_tes {
+			min-height: 100% !important;
+		}
+	}
+	@media (max-width: 600px) {
+		.func_button{
+			left: 45px;
+			bottom: 65px;
+		}
+		#bg_image_menu_tes {
+			background-position: 90% 0%;
+			max-height: 100% !important;
+		}
+		.judul_tes {
+			font-size: 1rem;
+		}
+		.btn-klik {
+			bottom: 5px;
+		}
+		.safe_zone_icon {
+			width: 75px !important;
+			bottom: 52px !important;
+			left: 50% !important;
+			margin-left: -37.5px;
+		}
+		.permit_to_work_icon{
+			width: 47px !important;
+			bottom: 50px !important;
+			left: 50% !important;
+			margin-left: -23.5px;
+		}
+		.tools_equipment_icon{
+			width: 52px !important;
+			bottom: 55px !important;
+			left: 50% !important;
+			margin-left: -26px;
+		}
+		.asset_integrity_icon {
+			width: 43px !important;
+			bottom: 52px !important;
+			left: 50% !important;
+			margin-left: -21.5px;
+		}
+		.isolation_icon {
+			width: 35px !important;
+			bottom: 52px !important;
+			left: 50% !important;
+			margin-left: -17.5px;
+		}
+		.confined_space_icon {
+			width: 64px !important;
+			bottom: 52px !important;
+			left: 50% !important;
+			margin-left: -32px;
+		}
+		.fit_to_work_icon {
+			width: 44px !important;
+			bottom: 52px !important;
+			left: 50% !important;
+			margin-left: -22px;
+		}
+		.lifting_operation_icon {
+			width: 65px !important;
+			bottom: 52px !important;
+			left: 50% !important;
+			margin-left: -32.5px;
+		}
+		.floating_devices_icon {
+			width: 65px !important;
+			bottom: 52px !important;
+			left: 50% !important;
+			margin-left: -32.5px;
+		}
+		.working_at_height_icon {
+			width: 55px !important;
+			bottom: 52px !important;
+			left: 50% !important;
+			margin-left: -23.5px;
+		}
+		.system_override_icon {
+			width: 57px !important;
+			bottom: 52px !important;
+			left: 50% !important;
+			margin-left: -28.5px;
+		}
+		.savety_driving_icon {
+			width: 57px !important;
+			bottom: 52px !important;
+			left: 50% !important;
+			margin-left: -28.5px;
+		}
+		.judul_done {
+			font-size: .9rem;
+		}
+		.triangle-topright {
+			right: 0%;
+		}
+		.check-selesai {
+			right: 5%;
+		}
+		.triangle-sukses {
+			border-top: 55px solid #64DD17 !important;
+		}
+		.tulisan-done {
+			font-size: 1.1rem;
+		}
+		#bg_image_menu_tes {
+			min-height: 100% !important;
+		}
+	}
+	@media (max-width: 480px) {
+		.icon-intro {
+			width: 170px;
+		}
+		.intro_menu {
+			top: 19%;
+		}
+		.func_button{
+			left: 27px;
+			bottom: 60px;
+		}
+		.judul_tes {
+			font-size: 1rem;
+		}
+		.btn-klik {
+			bottom: 5px;
+		}
+		.safe_zone_icon {
+			width: 75px !important;
+			bottom: 52px !important;
+			left: 50% !important;
+			margin-left: -37.5px;
+		}
+		.permit_to_work_icon{
+			width: 47px !important;
+			bottom: 50px !important;
+			left: 50% !important;
+			margin-left: -23.5px;
+		}
+		.tools_equipment_icon{
+			width: 52px !important;
+			bottom: 55px !important;
+			left: 50% !important;
+			margin-left: -26px;
+		}
+		.asset_integrity_icon {
+			width: 43px !important;
+			bottom: 52px !important;
+			left: 50% !important;
+			margin-left: -21.5px;
+		}
+		.isolation_icon {
+			width: 35px !important;
+			bottom: 52px !important;
+			left: 50% !important;
+			margin-left: -17.5px;
+		}
+		.confined_space_icon {
+			width: 64px !important;
+			bottom: 52px !important;
+			left: 50% !important;
+			margin-left: -32px;
+		}
+		.fit_to_work_icon {
+			width: 44px !important;
+			bottom: 52px !important;
+			left: 50% !important;
+			margin-left: -22px;
+		}
+		.lifting_operation_icon {
+			width: 65px !important;
+			bottom: 52px !important;
+			left: 50% !important;
+			margin-left: -32.5px;
+		}
+		.floating_devices_icon {
+			width: 75px !important;
+			bottom: 52px !important;
+			left: 50% !important;
+			margin-left: -37.5px;
+		}
+		.working_at_height_icon {
+			width: 55px !important;
+			bottom: 52px !important;
+			left: 50% !important;
+			margin-left: -23.5px;
+		}
+		.system_override_icon {
+			width: 57px !important;
+			bottom: 52px !important;
+			left: 50% !important;
+			margin-left: -28.5px;
+		}
+		.savety_driving_icon {
+			width: 57px !important;
+			bottom: 52px !important;
+			left: 50% !important;
+			margin-left: -28.5px;
+		}
+		.judul_done {
+			font-size: .9rem;
+		}
+		.triangle-topright {
+			right: 0%;
+		}
+		.check-selesai {
+			right: 5%;
+		}
+		.triangle-sukses {
+			border-top: 55px solid #64DD17 !important;
+		}
+		.tulisan-done {
+			font-size: 1.1rem;
+		}
+		#bg_image_menu_tes {
+			min-height: 150% !important;
+		}
+	}
+	@media (max-width: 320px) {
+		.icon-intro {
+			width: 170px;
+		}
+		.intro_menu {
+			top: 19%;
+		}
+		.func_button{
+			left: 23px;
+			bottom: 58px;
+		}
+		.judul_tes {
+			font-size: 1rem;
+		}
+		
+		.safe_zone_icon {
+			width: 75px !important;
+			bottom: 52px !important;
+			left: 50% !important;
+			margin-left: -37.5px;
+		}
+		.permit_to_work_icon{
+			width: 47px !important;
+			bottom: 50px !important;
+			left: 50% !important;
+			margin-left: -23.5px;
+		}
+		.tools_equipment_icon{
+			width: 52px !important;
+			bottom: 55px !important;
+			left: 50% !important;
+			margin-left: -26px;
+		}
+		.asset_integrity_icon {
+			width: 43px !important;
+			bottom: 52px !important;
+			left: 50% !important;
+			margin-left: -21.5px;
+		}
+		.isolation_icon {
+			width: 35px !important;
+			bottom: 52px !important;
+			left: 50% !important;
+			margin-left: -17.5px;
+		}
+		.confined_space_icon {
+			width: 64px !important;
+			bottom: 52px !important;
+			left: 50% !important;
+			margin-left: -32px;
+		}
+		.fit_to_work_icon {
+			width: 44px !important;
+			bottom: 52px !important;
+			left: 50% !important;
+			margin-left: -22px;
+		}
+		.lifting_operation_icon {
+			width: 65px !important;
+			bottom: 52px !important;
+			left: 50% !important;
+			margin-left: -32.5px;
+		}
+		.floating_devices_icon {
+			width: 65px !important;
+			bottom: 52px !important;
+			left: 50% !important;
+			margin-left: -32.5px;
+		}
+		.working_at_height_icon {
+			width: 55px !important;
+			bottom: 52px !important;
+			left: 50% !important;
+			margin-left: -23.5px;
+		}
+		.system_override_icon {
+			width: 57px !important;
+			bottom: 52px !important;
+			left: 50% !important;
+			margin-left: -28.5px;
+		}
+		.savety_driving_icon {
+			width: 57px !important;
+			bottom: 52px !important;
+			left: 50% !important;
+			margin-left: -28.5px;
+		}
+		.judul_done {
+			font-size: .8rem;
+		}
+		.triangle-topright {
+			right: 0%;
+		}
+		.check-selesai {
+			right: 7%;
+		}
+		.triangle-sukses {
+			border-top: 55px solid #64DD17 !important;
+		}
+		.tulisan-done {
+			font-size: 1.1rem;
+		}
+	}
