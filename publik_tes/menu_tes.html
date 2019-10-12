@@ -43,9 +43,6 @@
 	<link rel="shortcut icon" href="../assets/media/logos/favicon.ico" />
 	<link href="../assets/app/style/text_black.css" rel="stylesheet" type="text/css" />
 	<link href="../assets/app/style/publik_tes_style.css" rel="stylesheet" type="text/css" />
-	<style>
-		
-	</style>
 </head>
 <!-- end::Head -->
 <!-- begin::Body -->
@@ -100,7 +97,7 @@
 									<!--begin: User Bar -->
 									<div class="kt-header__topbar-item kt-header__topbar-item--user">
 										<div class="user-name">
-											<<p style="display: inline;margin-right: 7px">Hi, <span name="user_name">Rifal</span></p>
+											<p style="display: inline;margin-right: 7px">Hi, <span name="user_name">Rifal</span></p>
 											<a id="btn_log_out" class="btn btn-secondary"> <i class="fa fa-sign-out-alt"></i> Keluar</a>	
 										</div>
 									</div>
@@ -120,204 +117,396 @@
 							</div>
 							<!-- end:: Subheader -->
 							<!-- begin:: Content -->
-							<div id="bg_image_menu_tes" style="background-image: url('../assets/media/bg/bg_spbu.jpg');" class="kt-content kt-grid__item kt-grid__item--fluid">
+							<div id="bg_image_menu_tes" style="background-image: url('../assets/media/bg/mobil_pertamina.jpg');" class="kt-content kt-grid__item kt-grid__item--fluid">
 								<div class="main_menu">
 									<div align="center" class="header_menu">
 										<img style="height: 80px" src="../assets/media/logos/lsr_logo.png">
 									</div>
 									<div  style="padding: 0px 40px" class="row">
-										<div id="safe_zone_position_done" style="" class="col-sm-3 col-6 ">
-											<div align="center" class="pilihan_tes tes-selesai">
-												<div class="triangle-topright"></div>
-												<i class="fa fa-check check-selesai"></i>
-												<h4 class="tulisan-selesai">Telah Dikerjakan</h4>
-												<img class="icon-tes" src="../assets/media/icons/save_zone_position.png">
-											</div>
-										</div>
-										<div id="safe_zone_position" style="display: none" class="col-sm-3 col-6">
-											<div align="center" class="pilihan_tes">
-												<img class="icon-tes" src="../assets/media/icons/save_zone_position.png">
-												<a href="intro.html" class="btn btn-danger btn-klik">
-													Klik Disini!
+
+										<!-- Begin: Safe Zone Position -->
+										<div id="safe_zone_position_done_ulang" style="" class="col-sm-3 col-6 ">
+											<div style="position: relative;" align="center" class="pilihan_tes tes-ulang">
+												<div class="triangle-topright "></div>
+												<i class="fa fa-times check-selesai"></i>
+												<h5 class="judul_done judul_ulang">Safe Zone Position</h5>
+												<img class="icon-tes safe_zone_icon" style="width: 120px" src="../assets/media/icons/02 CLSR.png">
+												<a href="intro.html" class="btn btn-danger btn-ulang">
+													Ulang Tes
 												</a>
 											</div>
 										</div>
-										<div id="permit_to_work_done" style="" class="col-sm-3 col-6 ">
-											<div align="center" class="pilihan_tes tes-selesai">
-												<div class="triangle-topright"></div>
+										<div id="safe_zone_position_done_selesai" style="display: none" class="col-sm-3 col-6 ">
+											<div style="position: relative;" align="center" class="pilihan_tes tes-selesai">
+												<div class="triangle-topright triangle-sukses"></div>
 												<i class="fa fa-check check-selesai"></i>
-												<h4 class="tulisan-selesai">Telah Dikerjakan</h4>
-												<img class="icon-tes" src="../assets/media/icons/permit_to_work.png">
+												<h5 class="judul_done">Safe Zone Position</h5>
+												<h4 class="tulisan-done">Telah Dikerjakan</h4>
+												<img class="icon-tes safe_zone_icon" style="width: 120px" src="../assets/media/icons/02 CLSR.png">
+											</div>
+										</div>
+										<div id="safe_zone_position" style="display: none"  class="col-sm-3 col-6">
+											<div style="position: relative;" align="center" class="pilihan_tes">
+												<h5 class="judul_tes">Safe Zone Position</h5>
+												<img class="icon-tes safe_zone_icon" src="../assets/media/icons/02 CLSR.png">
+												<a href="intro.html" class="btn btn-brand btn-klik">
+													Mulai Tes!
+												</a>
+											</div>
+										</div>
+										<!-- End : Safe Zone Position -->
+
+										<!-- Begin: Pertmit to Work -->
+										<div id="permit_to_work_done_ulang" style="display: none" class="col-sm-3 col-6 ">
+											<div style="position: relative;" align="center" class="pilihan_tes tes-ulang">
+												<div class="triangle-topright "></div>
+												<i class="fa fa-times check-selesai"></i>
+												<h5 class="judul_done judul_ulang">Pertmit to Work</h5>
+												<img class="icon-tes permit_to_work_icon" style="width: 80px;bottom: 28%;left: 32%" src="../assets/media/icons/03 CLSR.png">
+												<a href="intro.html" class="btn btn-danger btn-ulang">
+													Ulang Tes
+												</a>
+											</div>
+										</div>
+										<div id="permit_to_work_done_selesai" style="" class="col-sm-3 col-6 ">
+											<div style="position: relative;" align="center" class="pilihan_tes tes-selesai">
+												<div class="triangle-topright triangle-sukses"></div>
+												<i class="fa fa-check check-selesai"></i>
+												<h5 class="judul_done">Permit to Work</h5>
+												<h4 class="tulisan-done">Telah Dikerjakan</h4>
+												<img class="icon-tes permit_to_work_icon" style="width: 120px" src="../assets/media/icons/03 CLSR.png">
 											</div>
 										</div>
 										<div id="permit_to_work" style="display: none" class="col-sm-3 col-6">
-											<div align="center" class="pilihan_tes">
-												<img class="icon-tes" src="../assets/media/icons/permit_to_work.png">
-												<a href="intro.html" class="btn btn-danger btn-klik">
-													Klik Disini!
+											<div style="position: relative;" align="center" class="pilihan_tes">
+												<h5 class="judul_tes">Permit to Work</h5>
+												<img class="icon-tes permit_to_work_icon" style="width: 80px;bottom: 28%;left: 32%" src="../assets/media/icons/03 CLSR.png">
+												<a href="intro.html" class="btn btn-brand btn-klik">
+													Mulai Tes!
 												</a>
 											</div>
 										</div>
-										<div id="tools_equipment_done" style=" display: none" class="col-sm-3 col-6 ">
-											<div align="center" class="pilihan_tes tes-selesai">
-												<div class="triangle-topright"></div>
-												<i class="fa fa-check check-selesai"></i>
-												<h4 class="tulisan-selesai">Telah Dikerjakan</h4>
-												<img class="icon-tes" src="../assets/media/icons/tools_equipment.png">
-											</div>
-										</div>
-										<div id="tools_equipment" class="col-sm-3 col-6">
-											<div align="center" class="pilihan_tes">
-												<img class="icon-tes" src="../assets/media/icons/tools_equipment.png">
-												<a href="intro.html" class="btn btn-danger btn-klik">
-													Klik Disini!
+										<!-- End: Pertmit to Work -->
+
+										<!-- Begin: Tools and Equipment -->
+										<div id="tools_equipment_done_ulang" style="display: none" class="col-sm-3 col-6 ">
+											<div style="position: relative;" align="center" class="pilihan_tes tes-ulang">
+												<div class="triangle-topright "></div>
+												<i class="fa fa-times check-selesai"></i>
+												<h5 class="judul_done judul_ulang">Tools & Equipment</h5>
+												<img class="icon-tes tools_equipment_icon" style="width: 100px;" src="../assets/media/icons/01 CLSR.png">
+												<a href="intro.html" class="btn btn-danger btn-ulang">
+													Ulang Tes
 												</a>
 											</div>
 										</div>
-										<div id="asset_integrity_done" style=" display: none" class="col-sm-3 col-6 ">
-											<div align="center" class="pilihan_tes tes-selesai">
-												<div class="triangle-topright"></div>
+										<div id="tools_equipment_done_selesai" style="display: none" class="col-sm-3 col-6 ">
+											<div style="position: relative;" align="center" class="pilihan_tes tes-selesai">
+												<div class="triangle-topright triangle-sukses"></div>
 												<i class="fa fa-check check-selesai"></i>
-												<h4 class="tulisan-selesai">Telah Dikerjakan</h4>
-												<img class="icon-tes" src="../assets/media/icons/asset_integrity.png">
+												<h5 class="judul_done">Tools & Equipment</h5>
+												<h4 class="tulisan-done">Telah Dikerjakan</h4>
+												<img class="icon-tes tools_equipment_icon" style="width: 100px;" src="../assets/media/icons/01 CLSR.png">
 											</div>
 										</div>
-										<div id="asset_integrity" class="col-sm-3 col-6">
-											<div align="center" class="pilihan_tes">
-												<img class="icon-tes" src="../assets/media/icons/asset_integrity.png">
-												<a href="intro.html" class="btn btn-danger btn-klik">
-													Klik Disini!
+										<div id="tools_equipment" style="" class="col-sm-3 col-6">
+											<div style="position: relative;" align="center" class="pilihan_tes">
+												<h5 class="judul_tes">Tools & Equipment</h5>
+												<img class="icon-tes tools_equipment_icon" style="width: 100px;" src="../assets/media/icons/01 CLSR.png">
+												<a href="intro.html" class="btn btn-brand btn-klik">
+													Mulai Tes!
 												</a>
 											</div>
 										</div>
-										<div id="isolation_done" style=" display: none" class="col-sm-3 col-6 ">
-											<div align="center" class="pilihan_tes tes-selesai">
-												<div class="triangle-topright"></div>
-												<i class="fa fa-check check-selesai"></i>
-												<h4 class="tulisan-selesai">Telah Dikerjakan</h4>
-												<img class="icon-tes" src="../assets/media/icons/isolation.png">
-											</div>
-										</div>
-										<div id="isolation" class="col-sm-3 col-6">
-											<div align="center" class="pilihan_tes">
-												<img class="icon-tes" src="../assets/media/icons/isolation.png">
-												<a href="intro.html" class="btn btn-danger btn-klik">
-													Klik Disini!
+										<!-- End: Tools and Equipment -->
+
+										<!-- Begin : Asset Integrity -->
+										<div id="asset_integrity_done_ulang" style="display: none" class="col-sm-3 col-6 ">
+											<div style="position: relative;" align="center" class="pilihan_tes tes-ulang">
+												<div class="triangle-topright "></div>
+												<i class="fa fa-times check-selesai"></i>
+												<h5 class="judul_done judul_ulang">Asset Integrity</h5>
+												<img class="icon-tes asset_integrity_icon" style="width: 75px;left: 35%" src="../assets/media/icons/11 CLSR.png">
+												<a href="intro.html" class="btn btn-danger btn-ulang">
+													Ulang Tes
 												</a>
 											</div>
 										</div>
-										<div id="confined_space_done" style=" display: none" class="col-sm-3 col-6 ">
-											<div align="center" class="pilihan_tes tes-selesai">
-												<div class="triangle-topright"></div>
+										<div id="asset_integrity_done_selesai" style="" class="col-sm-3 col-6 ">
+											<div style="position: relative;" align="center" class="pilihan_tes tes-selesai">
+												<div class="triangle-topright triangle-sukses"></div>
 												<i class="fa fa-check check-selesai"></i>
-												<h4 class="tulisan-selesai">Telah Dikerjakan</h4>
-												<img class="icon-tes" src="../assets/media/icons/confined_space.png">
+												<h5 class="judul_done">Asset Integrity</h5>
+												<h4 class="tulisan-done">Telah Dikerjakan</h4>
+												<img class="icon-tes tools_equipment_icon" style="width: 100px;" src="../assets/media/icons/11 CLSR.png">
 											</div>
 										</div>
-										<div id="confined_space" class="col-sm-3 col-6">
-											<div align="center" class="pilihan_tes">
-												<img class="icon-tes" src="../assets/media/icons/confined_space.png">
-												<a href="intro.html" class="btn btn-danger btn-klik">
-													Klik Disini!
+										<div id="asset_integrity" style=" display: none" class="col-sm-3 col-6">
+											<div style="position: relative;" align="center" class="pilihan_tes">
+												<h5 class="judul_tes">Asset Integrity</h5>
+												<img class="icon-tes asset_integrity_icon" style="width: 75px;left: 35%" src="../assets/media/icons/11 CLSR.png">
+												<a href="intro.html" class="btn btn-brand btn-klik">
+													Mulai Tes!
 												</a>
 											</div>
 										</div>
-										<div id="fit_to_work_done" style=" display: none" class="col-sm-3 col-6 ">
-											<div align="center" class="pilihan_tes tes-selesai">
-												<div class="triangle-topright"></div>
-												<i class="fa fa-check check-selesai"></i>
-												<h4 class="tulisan-selesai">Telah Dikerjakan</h4>
-												<img class="icon-tes" src="../assets/media/icons/fit_to_work.png">
-											</div>
-										</div>
-										<div id="fit_to_work" class="col-sm-3 col-6">
-											<div align="center" class="pilihan_tes">
-												<img class="icon-tes" src="../assets/media/icons/fit_to_work.png">
-												<a href="intro.html" class="btn btn-danger btn-klik">
-													Klik Disini!
+										<!-- End : Asset Integrity -->
+
+										<!-- Begin : isolation -->
+										<div id="isolation_done_ulang" style="display: none" class="col-sm-3 col-6 ">
+											<div style="position: relative;" align="center" class="pilihan_tes tes-ulang">
+												<div class="triangle-topright "></div>
+												<i class="fa fa-times check-selesai"></i>
+												<h5 class="judul_done judul_ulang">Isolation</h5>
+												<img class="icon-tes  isolation_icon" style="width: 60px;left: 35%" src="../assets/media/icons/04 CLSR.png">
+												<a href="intro.html" class="btn btn-danger btn-ulang">
+													Ulang Tes
 												</a>
 											</div>
 										</div>
-										<div id="lifting_operation_done" style=" display: none" class="col-sm-3 col-6 ">
-											<div align="center" class="pilihan_tes tes-selesai">
-												<div class="triangle-topright"></div>
+										<div id="isolation_done_selesai" style="" class="col-sm-3 col-6 ">
+											<div style="position: relative;" align="center" class="pilihan_tes tes-selesai">
+												<div class="triangle-topright triangle-sukses"></div>
 												<i class="fa fa-check check-selesai"></i>
-												<h4 class="tulisan-selesai">Telah Dikerjakan</h4>
-												<img class="icon-tes" src="../assets/media/icons/lifting_operation.png">
+												<h5 class="judul_done">Isolation</h5>
+												<h4 class="tulisan-done">Telah Dikerjakan</h4>
+												<img class="icon-tes  isolation_icon" style="width: 60px;left: 35%" src="../assets/media/icons/04 CLSR.png">
 											</div>
 										</div>
-										<div id="lifting_operation" class="col-sm-3 col-6">
-											<div align="center" class="pilihan_tes">
-												<img class="icon-tes" src="../assets/media/icons/lifting_operation.png">
-												<a href="intro.html" class="btn btn-danger btn-klik">
-													Klik Disini!
+										<div id="isolation" style="display: none" class="col-sm-3 col-6">
+											<div style="position: relative;" align="center" class="pilihan_tes">
+												<h5 class="judul_tes">Isolation</h5>
+												<img class="icon-tes  isolation_icon" style="width: 60px;left: 35%" src="../assets/media/icons/04 CLSR.png">
+												<a href="intro.html" class="btn btn-brand btn-klik">
+													Mulai Tes!
 												</a>
 											</div>
 										</div>
-										<div id="floating_device_done" style=" display: none" class="col-sm-3 col-6 ">
-											<div align="center" class="pilihan_tes tes-selesai">
-												<div class="triangle-topright"></div>
-												<i class="fa fa-check check-selesai"></i>
-												<h4 class="tulisan-selesai">Telah Dikerjakan</h4>
-												<img class="icon-tes" src="../assets/media/icons/floating_device.png">
-											</div>
-										</div>
-										<div id="floating_device" class="col-sm-3 col-6">
-											<div align="center" class="pilihan_tes">
-												<img class="icon-tes" src="../assets/media/icons/floating_device.png">
-												<a href="intro.html" class="btn btn-danger btn-klik">
-													Klik Disini!
+										<!-- End : Isolation -->
+
+										<!-- Begin : Confined Space -->
+										<div id="confined_space_done_ulang" style="display: none" class="col-sm-3 col-6 ">
+											<div style="position: relative;" align="center" class="pilihan_tes tes-ulang">
+												<div class="triangle-topright "></div>
+												<i class="fa fa-times check-selesai"></i>
+												<h5 class="judul_done judul_ulang">Confined Space</h5>
+												<img class="icon-tes confined_space_icon" style="width: 110px;left: 28%" src="../assets/media/icons/07 CLSR.png">
+												<a href="intro.html" class="btn btn-danger btn-ulang">
+													Ulang Tes
 												</a>
 											</div>
 										</div>
-										<div id="working_at_height_done" style=" display: none" class="col-sm-3 col-6 ">
-											<div align="center" class="pilihan_tes tes-selesai">
-												<div class="triangle-topright"></div>
+										<div id="confined_space_done_selesai" style="display: none" class="col-sm-3 col-6 ">
+											<div style="position: relative;" align="center" class="pilihan_tes tes-selesai">
+												<div class="triangle-topright triangle-sukses"></div>
 												<i class="fa fa-check check-selesai"></i>
-												<h4 class="tulisan-selesai">Telah Dikerjakan</h4>
-												<img class="icon-tes" src="../assets/media/icons/working_at_height.png">
+												<h5 class="judul_done">Confined Space</h5>
+												<h4 class="tulisan-done">Telah Dikerjakan</h4>
+												<img class="icon-tes confined_space_icon" style="width: 110px;left: 28%" src="../assets/media/icons/07 CLSR.png">
+											</div>
+										</div>
+										<div id="confined_space" style="" class="col-sm-3 col-6">
+											<div style="position: relative;" align="center" class="pilihan_tes">
+												<h5 class="judul_tes">Confined Space</h5>
+												<img class="icon-tes confined_space_icon" style="width: 110px;left: 28%" src="../assets/media/icons/07 CLSR.png">
+												<a href="intro.html" class="btn btn-brand btn-klik">
+													Mulai Tes!
+												</a>
+											</div>
+										</div>
+										<!-- End : Confined Space -->
+
+										<!-- Begin: Fit to Work -->
+										<div id="fit_to_work_done_ulang" style="display: none" class="col-sm-3 col-6 ">
+											<div style="position: relative;" align="center" class="pilihan_tes tes-ulang">
+												<div class="triangle-topright "></div>
+												<i class="fa fa-times check-selesai"></i>
+												<h5 class="judul_done judul_ulang">Fit To Work</h5>
+												<img class="icon-tes fit_to_work_icon" style="width: 75px;left: 32%" src="../assets/media/icons/05 CLSR.png">
+												<a href="intro.html" class="btn btn-danger btn-ulang">
+													Ulang Tes
+												</a>
+											</div>
+										</div>
+										<div id="fit_to_work_done_selesai" style="display: none" class="col-sm-3 col-6 ">
+											<div style="position: relative;" align="center" class="pilihan_tes tes-selesai">
+												<div class="triangle-topright triangle-sukses"></div>
+												<i class="fa fa-check check-selesai"></i>
+												<h5 class="judul_done">Fit to Work</h5>
+												<h4 class="tulisan-done">Telah Dikerjakan</h4>
+												<img class="icon-tes fit_to_work_icon" style="width: 75px;left: 32%" src="../assets/media/icons/05 CLSR.png">
+											</div>
+										</div>
+										<div id="fit_to_work" style="" class="col-sm-3 col-6">
+											<div style="position: relative;" align="center" class="pilihan_tes">
+												<h5 class="judul_tes">Fit to Work</h5>
+												<img class="icon-tes fit_to_work_icon" style="width: 75px;left: 32%" src="../assets/media/icons/05 CLSR.png">
+												<a href="intro.html" class="btn btn-brand btn-klik">
+													Mulai Tes!
+												</a>
+											</div>
+										</div>
+										<!-- End: Fit to Work -->
+
+										<!-- Begin : lifting operation -->
+										<div id="lifting_operation_done_ulang" style="display: none" class="col-sm-3 col-6 ">
+											<div style="position: relative;" align="center" class="pilihan_tes tes-ulang">
+												<div class="triangle-topright "></div>
+												<i class="fa fa-times check-selesai"></i>
+												<h5 class="judul_done judul_ulang">Lifting Operationk</h5>
+												<img class="icon-tes lifting_operation_icon" style="width: 105px;left: 32%" src="../assets/media/icons/08 CLSR.png">
+												<a href="intro.html" class="btn btn-danger btn-ulang">
+													Ulang Tes
+												</a>
+											</div>
+										</div>
+										<div id="lifting_operation_done_selesai" style="display: none" class="col-sm-3 col-6 ">
+											<div style="position: relative;" align="center" class="pilihan_tes tes-selesai">
+												<div class="triangle-topright triangle-sukses"></div>
+												<i class="fa fa-check check-selesai"></i>
+												<h5 class="judul_done">Lifting Operation</h5>
+												<h4 class="tulisan-done">Telah Dikerjakan</h4>
+												<img class="icon-tes lifting_operation_icon" style="width: 105px;left: 32%" src="../assets/media/icons/08 CLSR.png">
+											</div>
+										</div>
+										<div id="lifting_operation" style="" class="col-sm-3 col-6">
+											<div style="position: relative;" align="center" class="pilihan_tes">
+												<h5 class="judul_tes">Lifting Operation</h5>
+												<img class="icon-tes lifting_operation_icon" style="width: 105px;left: 32%" src="../assets/media/icons/08 CLSR.png">
+												<a href="intro.html" class="btn btn-brand btn-klik">
+													Mulai Tes!
+												</a>
+											</div>
+										</div>
+										<!-- End: Lifting operation -->
+
+										<!-- Begin : Floating Device Done -->
+										<div id="floating_device_done_ulang" style="" class="col-sm-3 col-6 ">
+											<div style="position: relative;" align="center" class="pilihan_tes tes-ulang">
+												<div class="triangle-topright "></div>
+												<i class="fa fa-times check-selesai"></i>
+												<h5 class="judul_done judul_ulang">Floating Device</h5>
+												<img class="icon-tes floating_devices_icon" style="width: 125px;left: 27%" src="../assets/media/icons/09 CLSR.png">
+												<a href="intro.html" class="btn btn-danger btn-ulang">
+													Ulang Tes
+												</a>
+											</div>
+										</div>
+										<div id="floating_device_done_selesai" style="display: none" class="col-sm-3 col-6 ">
+											<div style="position: relative;" align="center" class="pilihan_tes tes-selesai">
+												<div class="triangle-topright triangle-sukses"></div>
+												<i class="fa fa-check check-selesai"></i>
+												<h5 class="judul_done">Floating Device</h5>
+												<h4 class="tulisan-done">Telah Dikerjakan</h4>
+												<img class="icon-tes floating_devices_icon" style="width: 125px;left: 27%" src="../assets/media/icons/09 CLSR.png">
+											</div>
+										</div>
+										<div id="floating_device" style="display: none" class="col-sm-3 col-6">
+											<div style="position: relative;" align="center" class="pilihan_tes">
+												<h5 class="judul_tes">Personal Floating Devices</h5>
+												<img class="icon-tes floating_devices_icon" style="width: 125px;left: 27%" src="../assets/media/icons/09 CLSR.png">
+												<a href="intro.html" class="btn btn-brand btn-klik">
+													Mulai Tes!
+												</a>
+											</div>
+										</div>
+										<!-- End : Floating Device Done -->
+
+										<!-- Begin: Workin at Height -->
+										<div id="working_at_height_done_ulang" style="display: none" class="col-sm-3 col-6 ">
+											<div style="position: relative;" align="center" class="pilihan_tes tes-ulang">
+												<div class="triangle-topright "></div>
+												<i class="fa fa-times check-selesai"></i>
+												<h5 class="judul_done judul_ulang">Working at Height</h5>
+												<img class="icon-tes working_at_height_icon" style="width: 90px;left: 32%" src="../assets/media/icons/06 CLSR.png">
+												<a href="intro.html" class="btn btn-danger btn-ulang">
+													Ulang Tes
+												</a>
+											</div>
+										</div>
+										<div id="working_at_height_done_selesai" style="display: none" class="col-sm-3 col-6 ">
+											<div style="position: relative;" align="center" class="pilihan_tes tes-selesai">
+												<div class="triangle-topright triangle-sukses"></div>
+												<i class="fa fa-check check-selesai"></i>
+												<h5 class="judul_done">Working at Height</h5>
+												<h4 class="tulisan-done">Telah Dikerjakan</h4>
+												<img class="icon-tes working_at_height_icon" style="width: 90px;left: 32%" src="../assets/media/icons/06 CLSR.png">
 											</div>
 										</div>
 										<div id="working_at_height" class="col-sm-3 col-6">
-											<div align="center" class="pilihan_tes">
-												<img class="icon-tes" src="../assets/media/icons/working_at_height.png">
-												<a href="intro.html" class="btn btn-danger btn-klik">
-													Klik Disini!
+											<div style="position: relative;" align="center" class="pilihan_tes">
+												<h5 class="judul_tes">Working at Height</h5>
+												<img class="icon-tes working_at_height_icon" style="width: 90px;left: 32%" src="../assets/media/icons/06 CLSR.png">
+												<a href="intro.html" class="btn btn-brand btn-klik">
+													Mulai Tes!
 												</a>
 											</div>
 										</div>
-										<div id="system_override_done" style=" display: none" class="col-sm-3 col-6 ">
-											<div align="center" class="pilihan_tes tes-selesai">
-												<div class="triangle-topright"></div>
+										<!-- End: Working at Height -->
+
+										<!-- Begin : System Override -->
+										<div id="system_override_done_ulang" style="display: none" class="col-sm-3 col-6 ">
+											<div style="position: relative;" align="center" class="pilihan_tes tes-ulang">
+												<div class="triangle-topright "></div>
+												<i class="fa fa-times check-selesai"></i>
+												<h5 class="judul_done judul_ulang">System Override</h5>
+												<img class="icon-tes system_override_icon" style="width: 90px;left: 32%" src="../assets/media/icons/10 CLSR.png">
+												<a href="intro.html" class="btn btn-danger btn-ulang">
+													Ulang Tes
+												</a>
+											</div>
+										</div>
+										<div id="system_override_done_selesai" style="display: none" class="col-sm-3 col-6 ">
+											<div style="position: relative;" align="center" class="pilihan_tes tes-selesai">
+												<div class="triangle-topright triangle-sukses"></div>
 												<i class="fa fa-check check-selesai"></i>
-												<h4 class="tulisan-selesai">Telah Dikerjakan</h4>
-												<img class="icon-tes" src="../assets/media/icons/system_override.png">
+												<h5 class="judul_done">System Override</h5>
+												<h4 class="tulisan-done">Telah Dikerjakan</h4>
+												<img class="icon-tes system_override_icon" style="width: 90px;left: 32%" src="../assets/media/icons/10 CLSR.png">
 											</div>
 										</div>
 										<div id="system_override" class="col-sm-3 col-6">
-											<div align="center" class="pilihan_tes">
-												<img class="icon-tes" src="../assets/media/icons/system_override.png">
-												<a href="intro.html" class="btn btn-danger btn-klik">
-													Klik Disini!
+											<div style="position: relative;" align="center" class="pilihan_tes">
+												<h5 class="judul_tes">System Override</h5>
+												<img class="icon-tes system_override_icon" style="width: 90px;left: 32%" src="../assets/media/icons/10 CLSR.png">
+												<a href="intro.html" class="btn btn-brand btn-klik">
+													Mulai Tes!
 												</a>
 											</div>
 										</div>
-										<div id="savety_driving_done" style=" display: none" class="col-sm-3 col-6 ">
-											<div align="center" class="pilihan_tes tes-selesai">
-												<div class="triangle-topright"></div>
+										<!-- End : System Override -->
+
+										<!-- Begin : Savetyy Driving -->
+										<div id="savety_driving_done_ulang" style="display: none" class="col-sm-3 col-6 ">
+											<div style="position: relative;" align="center" class="pilihan_tes tes-ulang">
+												<div class="triangle-topright "></div>
+												<i class="fa fa-times check-selesai"></i>
+												<h5 class="judul_done judul_ulang">Savety Driving</h5>
+												<img class="icon-tes savety_driving_icon" style="width: 90px;left: 32%" src="../assets/media/icons/12 CLSR.png">
+												<a href="intro.html" class="btn btn-danger btn-ulang">
+													Ulang Tes
+												</a>
+											</div>
+										</div>
+										<div id="savety_driving_done_selesai" style="display: none" class="col-sm-3 col-6 ">
+											<div style="position: relative;" align="center" class="pilihan_tes tes-selesai">
+												<div class="triangle-topright triangle-sukses"></div>
 												<i class="fa fa-check check-selesai"></i>
-												<h4 class="tulisan-selesai">Telah Dikerjakan</h4>
-												<img class="icon-tes" src="../assets/media/icons/savety_driving.png">
+												<h5 class="judul_done">Savety Driving</h5>
+												<h4 class="tulisan-done">Telah Dikerjakan</h4>
+												<img class="icon-tes savety_driving_icon" style="width: 90px;left: 32%" src="../assets/media/icons/12 CLSR.png">
 											</div>
 										</div>
 										<div id="savety_driving" class="col-sm-3 col-6">
-											<div align="center" class="pilihan_tes">
-												<img class="icon-tes" src="../assets/media/icons/savety_driving.png">
-												<a href="intro.html" class="btn btn-danger btn-klik">
-													Klik Disini!
+											<div style="position: relative;" align="center" class="pilihan_tes">
+												<h5 class="judul_tes">Savety driving</h5>
+												<img class="icon-tes savety_driving_icon" style="width: 90px;left: 32%" src="../assets/media/icons/12 CLSR.png">
+												<a href="intro.html" class="btn btn-brand btn-klik">
+													Mulai Tes!
 												</a>
 											</div>
 										</div>
+										<!-- End : Savety Driving -->
 									</div>
 								</div>
 							</div>
@@ -380,6 +569,10 @@
 	<!--begin::Global App Bundle(used by all pages) -->
 	<script src="../assets/app/bundle/app.bundle.js" type="text/javascript"></script>
 	<!--end::Global App Bundle -->
+	<script>
+		var screenWidth = screen.width;
+		console.log(screenWidth);
+	</script>
 </body>
 <!-- end::Body -->
 </html>
