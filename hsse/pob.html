@@ -11,7 +11,7 @@
 	<script>
 		WebFont.load({
 			google: {
-				"families": ["Poppins:300,400,500,600,700", "Roboto:300,400,500,600,700"]
+				"families": ["Futura:300,400,500,600,700", "Roboto:300,400,500,600,700"]
 			},
 			active: function() {
 				sessionStorage.fonts = true;
@@ -234,21 +234,15 @@
 												POB
 											</h3>
 										</div>
-										<div class="kt-portlet__head-toolbar">
-											<div class="kt-portlet__head-wrapper">
-												<div class="kt-portlet__head-actions">
-		                                            <div class="row" style="justify-content:flex-end;">
-														<a href="#" class="btn btn-brand btn-icon-sm">
-															<i class="flaticon2-photo-camera"></i>
-															Scan Barcode
-														</a>
-		                                                &nbsp;
-		                                                <div style="width:30%;margin:0px 10px" class="input-group" data-toggle="kt-tooltip" data-placement="bottom" title="Jumlah POB hari ini">
-		    												<input id="jumlah_pob" name="jumlah_pob" style=";cursor:default;" type="text" class="form-control kt-font-success" name="url" value="26" readonly>
-		    												<div class="input-group-append"><span style="cursor:default;" class="input-group-text kt-font-dark">Orang</span></div>
-		    											</div>
-		                                            </div>
-												</div>
+										<div align="right" class="kt-portlet__toolbar">
+											<div style="position: absolute;bottom: 10px;right: 210px">
+												<button class="btn btn-outline-info">
+													<span class="fa fa-camera"></span>
+												</button>
+											</div>
+											<div style="width:50%;padding:10px 0px;" class="input-group" data-toggle="kt-tooltip" data-placement="left" title="Jumlah POB hari ini">
+												<input id="jumlah_pob" name="jumlah_pob" style=";cursor:default;" type="text" class="form-control kt-font-success" name="url" value="26" readonly>
+												<div class="input-group-append"><span style="cursor:default;" class="input-group-text kt-font-dark">Orang</span></div>
 											</div>
 										</div>
 									</div>
