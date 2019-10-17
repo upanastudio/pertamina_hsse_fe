@@ -59,7 +59,7 @@
 	width: 43vw;
 	min-height: 53vh;
 	position: absolute;
-	left: 7%;
+	left: .5%;
 	top: 25%;
 	border-radius: 10px;
 }
@@ -78,8 +78,9 @@
 	width: 90vw;
 	position: absolute;
 	left: 5vw;
-	top: 15%;
+	top: 1%;
 	border-radius: 10px;
+	position: relative;
 }
 .main_menu_tes{
 	width: 95vw;
@@ -335,6 +336,18 @@
 		padding: 0px 50px;
 	}
 
+	@media (min-width: 1023px) {
+		#bg_image_menu_tes {
+			min-height: 100% !important;
+		}
+
+	}
+	@media (max-width: 1024px) {
+		.aturan h3 {
+			line-height: 1.5rem !important;
+		}
+	}
+
 	@media (max-width: 720px) {
 		.login_menu {
 			width: 95%;
@@ -343,7 +356,7 @@
 		}
 		.main_menu {
 			width: 100%;
-			top: 7%;
+			top: 1	%;
 			left:0;
 			padding: 10px;
 		}
@@ -530,7 +543,7 @@
 			font-size: 1.1rem;
 		}
 		#bg_image_menu_tes {
-			min-height: 150% !important;
+			min-height: 100% !important;
 		}
 	}
 	@media (max-width: 720px) {
@@ -851,7 +864,7 @@
 			font-size: 1.1rem;
 		}
 		#bg_image_menu_tes {
-			min-height: 150% !important;
+			min-height: 100% !important;
 		}
 		.padding-control-jawaban {
 			padding: 0px 25px;
