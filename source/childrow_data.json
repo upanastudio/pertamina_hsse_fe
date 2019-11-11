@@ -2,7 +2,9 @@
 	"data": [{
 		"no" : 1,
 		"pekerjaan" : "penggalian",
+		"jenis_sika" : "Izin Penggunaan Listrik dalam vessel",
 		"vendor" : "CV. Upana",
+		"no_sika": "01/23/12345123",
 		"tanggal" : "10 November 2019",
 		"sifat" : "Swakelola",
 		"tipe" : "hot",

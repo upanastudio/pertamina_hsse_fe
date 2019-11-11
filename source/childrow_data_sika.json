@@ -1,0 +1,58 @@
+{
+	"data": [{
+		"no" : 1,
+		"jenis_sika" : "Izin Penggunaan Listrik dalam vessel",
+		"no_sika": "01/23/12345123",
+		"validasi" : null,
+		"status" : "pengajuan awal",
+		"aksi" : null,
+		"rincian" : null,
+		"no_child": [
+			"1.a", "1.b"
+		],
+		"jenis_sika_child": [
+			"Izin Penggunaan Listrik dalam vessel", "Izin Penggunaan Listrik dalam vessel"
+		],
+		"no_sika_child": [
+			"01/23/12345124", "01/23/12345125"
+		],
+		"validasi_child": [
+			null, null
+		],
+		"status_child": [
+			"selesai", "ditolak"
+		],
+		"aksi_child": [
+			null, null
+		]
+
+	},
+	{
+		"no" : 2,
+		"jenis_sika" : "Lorem Ipsum",
+		"no_sika": "01/23/12341235",
+		"validasi" : null,
+		"status" : "pengajuan awal",
+		"aksi" : null,
+		"rincian" : null,
+		"no_child": [
+			"1.a", "1.b"
+		],
+		"jenis_sika_child": [
+			"Lorem Ipsum", "Lorem Ipsum"
+		],
+		"no_sika_child": [
+			"01/23/12345124", "01/23/12345125"
+		],
+		"validasi_child": [
+			null, null
+		],
+		"status_child": [
+			"selesai", "ditolak"
+		],
+		"aksi_child": [
+			null, null
+		]
+
+	}]
+}
