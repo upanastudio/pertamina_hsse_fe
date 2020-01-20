@@ -333,9 +333,9 @@
 																				</div>
 																			</div>
 																			<div class="form-group row">
-																				<label for="example-text-input" class="col-3 col-form-label">Nomor Identitas</label>
+																				<label for="no_identitas_fasilitas" class="col-3 col-form-label">Nomor Identitas Fasilitas</label>
 																				<div class="col-9">
-																					<input disabled="" class="form-control" type="text" value="000 000 000" id="no_identitas" name="no_identitas">
+																					<input disabled="" class="form-control" type="text" value="000 000 000" id="no_identitas_fasilitas" name="no_identitas_fasilitas">
 																				</div>
 																			</div>
 																			<div class="form-group row">
@@ -345,9 +345,9 @@
 																				</div>
 																			</div>
 																			<div class="form-group row">
-																				<label for="example-text-input" class="col-3 col-form-label">Durasi</label>
+																				<label for="durasi_hari_kerja" class="col-3 col-form-label">Durasi Hari Kerja</label>
 																				<div class="col-9">
-																					<input disabled="" class="form-control" type="text" value="00 Upana" id="durasi" name="durasi">
+																					<input disabled="" class="form-control" type="text" value="XX Hari" id="durasi_hari_kerja" name="durasi_hari_kerja">
 																				</div>
 																			</div>
 																			<div class="form-group row">
@@ -522,7 +522,7 @@
 																						</h5>
 																					</div>
 																					<div class="col-sm-3">
-																						<button id="btn_rincian_pja" name="btn_rincian_pja" style="width: 100%" class="btn btn-sm btn-brand" data-toggle="modal" data-target="#kt_modal_rincian">
+																						<button id="btn_rincian_pja" name="btn_rincian_pja" style="width: 100%" class="btn btn-sm btn-brand" data-toggle="modal" data-target="#kt_modal_rincian_pja">
 																							Rincian
 																						</button>
 																					</div>
@@ -536,7 +536,7 @@
 																						</h5>
 																					</div>
 																					<div class="col-sm-3">
-																						<button id="btn_rincian_hse_plan" name="btn_rincian_hse_plan" style="width: 100%" class="btn btn-sm btn-brand" data-toggle="modal" data-target="#kt_modal_rincian">
+																						<button id="btn_rincian_hse_plan" name="btn_rincian_hse_plan" style="width: 100%" class="btn btn-sm btn-brand" data-toggle="modal" data-target="#kt_modal_rincian_pja">
 																							Rincian
 																						</button>
 																					</div>
@@ -1110,6 +1110,50 @@
 							</div>
 							<div class="modal-footer">
 								<button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal fade" id="kt_modal_rincian_pja" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="exampleModalLabel">Dokumen dan file</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								</button>
+							</div>
+							<div class="modal-body">
+								<div class="form-group row group-dokumen">
+									<label class="col-4 col-form-label dokumen">
+										<span id="nama_dokumen" name="nama_dokumen">Nama Dokumen 42334</span>
+									</label>
+									<label class="col-4 col-form-label dokumen">
+										Nilai : <span id="nilai_pja" name="nilai_pja">80</span>
+									</label>
+									<div align="right" class="col-sm-4">
+										<button onclick=" window.open('#','_blank')" class="btn btn-sm btn-link">
+											<i class="fa fa-download"></i> Download/View
+										</button>
+									</div>
+								</div>
+								<div class="form-group row group-dokumen">
+									<label class="col-4 col-form-label dokumen">
+										<span id="nama_dokumen" name="nama_dokumen">Nama Dokumen 12312</span>
+									</label>
+									<label class="col-4 col-form-label dokumen">
+										Nilai : <span id="nilai_pja" name="nilai_pja">80</span>
+									</label>
+									<div align="right" class="col-sm-4">
+										<button onclick=" window.open('#','_blank')" class="btn btn-sm btn-link">
+											<i class="fa fa-download"></i> Download/View
+										</button>
+									</div>
+								</div>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">
+									<i class="fa fa-times"></i> Tutup
+								</button>
 							</div>
 						</div>
 					</div>
