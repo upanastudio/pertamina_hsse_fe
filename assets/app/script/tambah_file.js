@@ -267,7 +267,7 @@ $(document).ready(function() {
 			'<input class="form-control" type="text" placeholder="input text" id="input" name="input">'+
 			'</div>'+
 			'<div  class="col-sm-2">'+
-			'<input class="form-control" type="number" placeholder="nilai (85.7)" id="nilai" name="nilai" min="0" max="100" step="0.1">'+
+			'<input class="form-control" type="number" placeholder="nilai (100)" id="nilai" name="nilai" min="0" max="100" step="1">'+
 			'</div>'+
 			'<div class="col-sm-5">'+
 			'<div class="custom-file">'+
@@ -298,8 +298,11 @@ $(document).ready(function() {
 		console.log(i);
 		$("#container_hse_plan").append('<div data-id="'+i+'" class="input-berkas berkas_hse_plan">'+
 			'<div  class="row inputan">'+
-			'<div  class="col-sm-6">'+
+			'<div  class="col-sm-4">'+
 			'<input class="form-control" type="text" placeholder="input text" id="input" name="input">'+
+			'</div>'+
+			'<div  class="col-sm-2">'+
+			'<input class="form-control" type="number" placeholder="nilai (100)" id="nilai" name="nilai" min="0" max="100" step="1">'+
 			'</div>'+
 			'<div class="col-sm-5">'+
 			'<div class="custom-file">'+

@@ -198,7 +198,7 @@
 												<i class="la la-gear"></i>
 											</span>
 											<h3 class="kt-portlet__head-title">
-												Tambah Pekerjaan Angaran Biaya Investasi
+												<span id="nama_pekerjaan" name="nama_pekerjaan">(Nama Pekerjaan)</span>
 											</h3>
 										</div>
 									</div>
@@ -551,8 +551,11 @@
 														<div id="container_pja" style="width: 99%">
 															<div class="input-berkas">
 																<div class="row">
-																	<div  class="col-sm-6">
+																	<div  class="col-sm-4">
 																		<input class="form-control" type="text" placeholder="input text" id="input" name="input">
+																	</div>
+																	<div class="col-sm-2">
+																		<input class="form-control" type="number" placeholder="nilai (100)" id="nilai" name="nilai" min="0" max="100" step="1">
 																	</div>
 																	<div class="col-sm-5">
 																		<div class="custom-file">
@@ -586,8 +589,11 @@
 														<div id="container_hse_plan" style="width: 99%">
 															<div class="input-berkas">
 																<div class="row">
-																	<div  class="col-sm-6">
+																	<div  class="col-sm-4">
 																		<input class="form-control" type="text" placeholder="input text" id="input" name="input">
+																	</div>
+																	<div class="col-sm-2">
+																		<input class="form-control" type="number" placeholder="nilai (100)" id="nilai" name="nilai" min="0" max="100" step="1">
 																	</div>
 																	<div class="col-sm-5">
 																		<div class="custom-file">
@@ -645,7 +651,8 @@
 														<div style="margin-bottom: 15px" class="col-sm-12">
 															<div class="row">
 																<div class="col-sm">
-																	<label>Hazard Analysis Doc (JSA) <span style="color: red;font-size: 1.4rem">*</span> </label>
+																	<label>Hazard Analysis Doc (JSA) <span style="color: red;font-size: 1.4rem">*</span> </label><br>
+																	<little class="note-text">Masukan Dokumen JSA yang Disepakati</little>
 																</div>
 																<div align="right" class="col-sm">
 																	<button id="btn_tambah_hazard" name="btn_tambah_hazard" type="button" class="btn btn-sm btn-success">
@@ -1015,38 +1022,6 @@
 															</div>
 														</div>
 														<div style="width: 99%" id="container_dasar_kontrak_spmp">
-															<div class="input-berkas">
-																<div class="row">
-																	<div class="col-sm-11">
-																		<div class="custom-file">
-																			<input type="file" class="custom-file-input" id="doc" name="doc" required="">
-																			<label class="custom-file-label" for="customFile">Pilih berkas</label>
-																		</div>
-																	</div>
-																	<div class="col-sm-1">
-																		<button disabled="" type="button" id="btn_hapus_input" name="btn_hapus_input" class="btn btn-secondary btn_hapus">
-																			<span class="fa fa-trash-alt"></span>
-																		</button>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="kt-separator kt-separator--border-dashed kt-separator--space-md"></div>
-													<div class="form-group row">
-														<div style="margin-bottom: 15px" class="col-sm-12">
-															<div class="row">
-																<div class="col-sm">
-																	<label>Nama Pekerjaan </label>
-																</div>
-																<div align="right" class="col-sm">
-																	<button id="btn_tambah_nama_pekerjaan" name="btn_tambah_nama_pekerjaan" type="button" class="btn btn-sm btn-success">
-																		<i class="fa fa-plus"></i> Tambah file
-																	</button>
-																</div>
-															</div>
-														</div>
-														<div style="width: 99%" id="container_nama_pekerjaan">
 															<div class="input-berkas">
 																<div class="row">
 																	<div class="col-sm-11">
