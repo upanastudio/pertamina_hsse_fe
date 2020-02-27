@@ -52,6 +52,11 @@
 	<link href="../assets/app/style/at_rincian-pekerjaan-style.css" rel="stylesheet" type="text/css" />
 	<link href="../assets/app/style/jsa-style.css" rel="stylesheet" type="text/css" />
 	<link href="../assets/app/style/blue-theme.css" rel="stylesheet" type="text/css" />
+	<style>
+		.box{
+			display: none;
+		}
+	</style>
 </head>
 <!-- end::Head -->
 <!-- begin::Body -->
@@ -223,27 +228,31 @@
 											</div>
 											<div class="form-group">
 												<label>Penyelesaian Izin Kerja</label>
+												<form class="kt-form">
+													<div class="form-group">
+														<div class="kt-radio-list">
+															<label class="kt-radio kt-radio--bold kt-radio--success">
+																<input onclick="fungsi_komentar()" type="radio" name="radio1" id="selesai_diperiksa" value="selesai"> Selesai dan dilakukan pemeriksaan, tindakan pencegahan khusus (isolasi) telah diambil kembali, lokasi kerja ditinggalkan dalam keadaan aman.
+																<span></span>
+																<div id="container-komentar-selesai" style="margin-top: 15px;" class="form-group selesai box">
+																	<textarea class="form-control" id="komentar_selesai_diperiksa" name="komentar_selesai_diperiksa" rows="3" placeholder="tulis komentar disini"></textarea>
+																</div>
+															</label>
+															<label class="kt-radio kt-radio--bold kt-radio--success">
+																<input  type="radio" name="radio1" id="belum_selesai"> Belum selesai dan akan dilanjutkan dengan izin kerja baru
+																<span></span>
+															</label>
+															<label class="kt-radio kt-radio--bold kt-radio--success">
+																<input onclick="fungsi_komentar()" type="radio" id="pengambilan_langkah" name="radio1" value="pengambilan"> Beberapa langkah harus diambil sebelum instalasi dapat dioperasikan kembali.
+																<span></span>
+																<div id="container-pengambilan-langkah" style="margin-top: 15px" class="form-group pengambilan box">
+																	<textarea class="form-control" id="komentar_pengambilan_langkah" name="komentar_pengambilan_langkah" rows="3" placeholder="tulis komentar disini"></textarea>
+																</div>
+															</label>
+														</div>
+													</div>
+												</form>
 												<div class="kt-checkbox-list">
-													<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
-														<input onclick="fungsi_komentar()" type="checkbox" id="selesai_diperiksa" name="selesai_diperiksa"> Selesai dan dilakukan pemeriksaan, tindakan pencegahan khusus (isolasi) telah diambil kembali, lokasi kerja ditinggalkan dalam keadaan aman.
-														<span></span>
-														<div id="container-komentar-selesai" style="margin-top: 15px;display: none;" class="form-group">
-															<textarea class="form-control" id="komentar_selesai_diperiksa" name="komentar_selesai_diperiksa" rows="3" placeholder="tulis komentar disini"></textarea>
-														</div>
-													</label>
-													<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
-														<input  type="checkbox" id="belum_selesai" name="belum_selesai"> Belum selesai dan akan dilanjutkan dengan izin kerja no. <b><span id="no_izin_kerja_baru" name="no_izin_kerja_baru">
-															00/000/00000
-														</span></b>
-														<span></span>
-													</label>
-													<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
-														<input onclick="fungsi_komentar()" type="checkbox" id="tidak_selesai" name="tidak_selesai"> Tidak selesai dan secara tegas dihentikan
-														<span></span>
-														<div id="container-komentar-tidak-selesai" style="margin-top: 15px;display: none;" class="form-group">
-															<textarea class="form-control" id="komentar_tidak_selesai" name="komentar_tidak_selesai" rows="3" placeholder="tulis komentar disini"></textarea>
-														</div>
-													</label>
 													<label class="kt-checkbox kt-checkbox--bold kt-checkbox--success">
 														<input onclick="fungsi_komentar()" type="checkbox" id="pengambilan_langkah" name="pengambilan_langkah"> Beberapa langkah harus diambil sebelum instalasi dapat dioperasikan kembali.
 														<span></span>
@@ -428,59 +437,14 @@
 		});
 	</script>
 	<script>
-		// assign function to onclick property of checkbox
-		document.getElementById('selesai_diperiksa').onclick = function() {
-	    // call toggleSub when checkbox clicked
-	    // toggleSub args: checkbox clicked on (this), id of element to show/hide
-	    toggleSub1(this, 'active_sub');
-	};
-	document.getElementById('tidak_selesai').onclick = function() {
-	    // call toggleSub when checkbox clicked
-	    // toggleSub args: checkbox clicked on (this), id of element to show/hide
-	    toggleSub2(this, 'active_sub');
-	};
-	document.getElementById('pengambilan_langkah').onclick = function() {
-	    // call toggleSub when checkbox clicked
-	    // toggleSub args: checkbox clicked on (this), id of element to show/hide
-	    toggleSub3(this, 'active_sub');
-	};
-
-		// called onclick of checkbox
-		function toggleSub1(box, id) {
-		    // get reference to related content to display/hide
-		    let el = document.getElementById('container-komentar-selesai');
-		    
-		    if ( box.checked ) {
-		    	el.style.display = 'block';
-		    } else {
-		    	el.style.display = 'none';
-		    }
-		}
-
-
-		// called onclick of checkbox
-		function toggleSub2(box, id) {
-		    // get reference to related content to display/hide
-		    let el = document.getElementById('container-komentar-tidak-selesai');
-		    
-		    if ( box.checked ) {
-		    	el.style.display = 'block';
-		    } else {
-		    	el.style.display = 'none';
-		    }
-		}
-
-		// called onclick of checkbox
-		function toggleSub3(box, id) {
-		    // get reference to related content to display/hide
-		    let el = document.getElementById('container-pengambilan-langkah');
-		    
-		    if ( box.checked ) {
-		    	el.style.display = 'block';
-		    } else {
-		    	el.style.display = 'none';
-		    }
-		}
+		$(document).ready(function(){
+			$('input[type="radio"]').click(function(){
+				var inputValue = $(this).attr("value");
+				var targetBox = $("." + inputValue);
+				$(".box").not(targetBox).hide();
+				$(targetBox).show();
+			});
+		});
 	</script>
 	<script>
 		$.fn.datepicker.dates['en'] = {
