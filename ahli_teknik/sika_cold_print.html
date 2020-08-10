@@ -71,7 +71,7 @@
 			}
 			.A4 {  
 				width: 23cm;
-				/*height: 34cm;*/
+				height: 35cm;
 				padding: .75cm !important; 
 			}
 			.wrapPDF{
@@ -119,6 +119,28 @@
 			.border-right{
 				border-right: 1px solid black !important;
 			}
+			.in-checkbox > span{
+				left: 30%;
+				top: -7px;
+			}
+			.a-check{
+				padding: 0px !important;
+			}
+			.m-checkbox{
+				max-width: 31.5px;
+			}
+			.kt-checkbox{
+				font-size: 8px;
+				margin-bottom: 2px;
+			}
+			.kt-checkbox > span{
+				height: 12px;
+				width: 12px;
+
+			}
+			@media print {
+				.pagebreak { page-break-before: always; } /* page-break-after works, as well */
+			}
 		</style>
 		<style type="text/css" media="print">
 			@page {
@@ -126,6 +148,10 @@
 				display: block;
 				margin: 0;
 			}
+			body{
+				background-color: white;
+			}
+
 
 			.A4{
 				width: 21.6cm !important;
@@ -149,12 +175,17 @@
 		<!-- Halaman Pertama -->
 		<style type="text/css"> 
 			.tg  {border-collapse:collapse;border-spacing:0;width: 99.7%}
-			.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:12px; overflow:hidden;padding:10px 5px;word-break:normal;}
+			.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:11px; overflow:hidden;padding:0px 5px;word-break:normal;}
 			.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-			.tg .tg-lboi{border-color:inherit;text-align:left;vertical-align:middle}
+			.tg h6{
+				font-size: 12px;
+			}
+			.tg .tg-lboi{border-color:inherit;text-align:left;vertical-align:top}
 			.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
 			.tg .tg-xy3e{background-color:#cb0000;border-color:inherit;color:#ffffff;text-align:center;vertical-align:top}
-			.tg .tg-roi2{background-color:#c0c0c0;border-color:inherit;text-align:center;vertical-align:middle;max-width: 40px;}
+			.tg .hot-sika{background-color:#cb0000;border-color:inherit;color:#ffffff;text-align:center;vertical-align:top}
+			.tg .cold-sika{background-color:#2c8a01;border-color:inherit;color:#ffffff;text-align:center;vertical-align:top}
+			.tg .tg-roi2{background-color:#c0c0c0;border-color:inherit;text-align:center;vertical-align:middle;max-width: 40px;width: 40px;}
 			.tg .tg-ziz6{background-color:#C0C0C0;font-weight:bold;text-align:center;vertical-align:top}
 			.tg .tg-zlqz{background-color:#c0c0c0;border-color:inherit;font-weight:bold;text-align:center;vertical-align:top;font-size: 15px}
 			.tg .tg-0lax{padding: 0px 10px}
@@ -206,8 +237,8 @@
 										<img class="logo-pertamina" style="" alt="Logo" src="../assets/media/logos/logo_3.png"/>
 									</td>
 
-									<td class="tg-xy3e" colspan="2">
-										<span class="jenis-sika" id="jenisSika" name="jenisSika">HOT PERMIT TO WORK</span>
+									<td class="tg-xy3e cold-sika" colspan="2">
+										<span class="jenis-sika" id="jenisSika" name="jenisSika">COLD PERMIT TO WORK</span>
 									</td>
 								</tr>
 
@@ -217,154 +248,102 @@
 									</td>
 
 									<td class="tg-lboi">
-										<div class="form-group mb-1">
-											<label for="exampleSelects">Lapangan/Site</label>
-											<select class="form-control form-control-sm" id="lapangan" name="lapangan">
-												<option value="0">Pilihan 1</option>
-												<option value="1">Pilihan 2</option>
-												<option value="2">Pilihan 3</option>
-												<option value="3">Pilihan 4</option>
-												<option value="4">Pilihan 5</option>
-											</select>
-										</div>
+										<h6><b>Lapangan/Site</b></h6>
+										<span id="lapanganSite" name="lapanganSite">Lapangan 01</span>
 									</td>
 
 									<td class="tg-lboi">
-										<div class="form-group mb-1">
-											<label for="exampleSelects">Instalasi</label>
-											<select class="form-control form-control-sm" id="instalasi" name="instalasi">
-												<option value="0">Pilihan 1</option>
-												<option value="1">Pilihan 2</option>
-												<option value="2">Pilihan 3</option>
-												<option value="3">Pilihan 4</option>
-												<option value="4">Pilihan 5</option>
-											</select>
-										</div>
+										<h6><b>Instalasi</b></h6>
+										<span id="instalasi" name="instalasi">Instalasi 01</span>
 									</td>
 
 									<td class="tg-lboi">
-										<div class="form-group form-group-last">
-											<label for="exampleTextarea">Peralatan</label>
-											<textarea class="form-control" id="exampleTextarea" rows="2"></textarea>
-										</div>
+										<h6><b>Peralatan</b></h6>
+										<span id="peralatan" name="peralatan">Peralatan 1, Peralatan 2, Peralatan 3</span>
 									</td>
 
 									<td class="tg-lboi">
-										<div class="form-group">
-											<label>No. Identitas(Tag Number)</label>
-											<input type="text" id="noIdentitas" name="noIdentitas" class="form-control form-control-sm" aria-describedby="" placeholder="-">
-										</div>
+										<h6><b>No. Identitas(Tag Number)</b></h6>
+										<span id="tagNumber" name="tagNumber">D42113016</span>
 									</td>
 								</tr>
 								<tr>
 									<td class="tg-lboi" colspan="3">
 										<div class="row">
 											<div class="col-6">
-												<div class="form-group mb-1">
-													<label>Kontraktor</label>
-													<input id="kontraktor" name="kontraktor" type="text" class="form-control form-control-sm" aria-describedby="" placeholder="-">
-												</div>
+												<h6><b>Kontraktor</b></h6>
+												<span id="kontraktor" name="kontraktor">Ahmad Rifaldi</span>
 											</div>
 											<div class="col-6">
-												<div class="form-group mb-1">
-													<label>Perwakilan Mandor</label>
-													<input id="perwakilanMandor" name="perwakilanMandor" type="text" class="form-control form-control-sm" aria-describedby="" placeholder="-">
-												</div>
+												<h6><b>Perwakilan Mandor</b></h6>
+												<span id="perwakilanMandor" name="perwakilanMandor">Fascal Ivandry</span>
 											</div>
 										</div>
 
 									</td>
 									<td class="tg-lboi">
-										<div class="form-group mb-1">
-											<label>Kelanjutan Ijin Kerja No:</label>
-											<input type="text" id="noKelanjutanIjinKerja" name="noKelanjutanIjinKerja" class="form-control form-control-sm" aria-describedby="" placeholder="-">
-										</div>
+										<h6><b>Kelanjutan Ijin Kerja No:</b></h6>
+										<span id="kelanjutanIjin" name="kelanjutanIjin">123/123/123/123</span>
 									</td>
 								</tr>
 								<tr>
 									<td class="tg-lboi">
-										<div class="form-group mb-1">
-											<label>Ijin Kerja diminta:</label>
-											<input type="text" id="tanggalIjinKerja" name="tanggalIjinKerja" class="form-control form-control-sm" aria-describedby="" value="20 November 2020" readonly="">
-										</div>
+										<h6><b>Ijin Kerja diminta:</b></h6>
+										<span id="tanggalIjinKerja" name="tanggalIjinKerja">20 November 2020</span>
 									</td>
 									<td class="tg-lboi">
-										<div class="form-group mb-1">
-											<label>Ijin Kerja berakhir:</label>
-											<input type="text" id="tanggalAkhirIjinKerja" name="tanggalAkhirIjinKerja" class="form-control form-control-sm" aria-describedby="" value="22 November 2020" readonly="">
-										</div>
+										<h6><b>Ijin Kerja Berkhir:</b></h6>
+										<span id="tanggalAkhirIjinKerja" name="tanggalAkhirIjinKerja">29 November 2020</span>
 									</td>
 									<td class="tg-lboi">
-										<div class="form-group mb-1">
-											<label>Perkiraan Durasi:</label>
-											<div class="input-group input-group-sm">
-												<input type="number" id="perkiraanDurasi" name="perkiraanDurasi" class="form-control form-control-sm" aria-describedby="" value="0">
-												<div class="input-group-append"><span class="input-group-text " id="basic-addon2">Hari</span></div>
-											</div>
-
-										</div>
+										<h6><b>Perkiraan durasi:</b></h6>
+										<span id="perkiraanDurasi" name="perkiraanDurasi">9 Hari</span>
 									</td>
 									<td class="tg-lboi">
-										<div class="form-group mb-1">
-											<label>Jumlah Pekerja:</label>
-											<div class="input-group input-group-sm">
-												<input type="number" id="jumlahPekerja" name="jumlahPekerja" class="form-control " aria-describedby="" value="0">
-												<div class="input-group-append"><span class="input-group-text" id="basic-addon2">Orang</span></div>
-											</div>
-
-										</div>
+										<h6><b>Jumlah Pekerja:</b></h6>
+										<span id="jumlahPekeraj" name="jumlahPekeraj">5 Orang</span>
 									</td>
 								</tr>
 								<tr>
 									<td class="tg-lboi" colspan="2">
-										<div class="form-group mb-1">
-											<label>Pekerjaan:</label>
-											<input type="text" id="pekerjaan" name="pekerjaan" class="form-control form-control-sm" aria-describedby="" placeholder="-">
-										</div>
+										<span>
+											<b>Pekerjaan :</b> <span id="pekarjaan" name="pekarjaan">Lorem Ipsum dolor sit amet</span>
+										</span>
 									</td>
 									<td class="tg-lboi">
-										<div class="form-group mb-1">
-											<label>Waktu Mulai:</label>
-											<input type="text" id="waktuMulai" name="waktuMulai" class="form-control form-control-sm" aria-describedby="" placeholder="-">
-										</div>
-										<div class="form-group mb-1">
-											<label>Waktu Selesai</label>
-											<input type="text" id="waktuSelesai" name="waktuSelesai" class="form-control form-control-sm" aria-describedby="" placeholder="-">
-										</div>
+										<span>
+											<b>Waktu Mulai :</b> <span id="waktuMulai" name="waktuMulai">18 : 00</span>
+										</span>
+										<br>
+										<span>
+											<b>Waktu Selesai :</b> <span id="waktuSelesai" name="waktuSelesai">18 : 00</span>
+										</span>
 									</td>
-									<td class="tg-lboi" rowspan="3"><span style="font-weight:bold">Pemohon</span><br>
-										<div class="form-group mb-1">
-											<label>Nama:</label>
-											<input type="text" id="waktuMulai" name="waktuMulai" class="form-control form-control-sm" aria-describedby="" placeholder="-">
-										</div>
-										<div class="form-group mb-1">
-											<label>Posisi:</label>
-											<input type="text" id="waktuMulai" name="waktuMulai" class="form-control form-control-sm" aria-describedby="" placeholder="-">
-										</div>
-										<div class="form-group mb-1">
-											<label>No.Hp:</label>
-											<input type="text" id="waktuMulai" name="waktuMulai" class="form-control form-control-sm" aria-describedby="" placeholder="-">
-										</div>
-										<div class="form-group mb-1">
-											<label>Email:</label>
-											<input type="text" id="waktuMulai" name="waktuMulai" class="form-control form-control-sm" aria-describedby="" placeholder="-">
-										</div>
+									<td class="tg-lboi" rowspan="3"><span style="font-weight:bold;font-size: 1.15rem">Pemohon</span><br>
+										<h6><b>Nama :</b></h6>
+										<p id="namaPemohon" name="namaPemohon">Aigi Walie</p>
+										<h6><b>Posisi:</b></h6>
+										<p id="posisiPemohon" name="posisiPemohon">Manager</p>
+										<h6><b>No. Hp:</b></h6>
+										<p id="noHpPemohon" name="noHpPemohon">085-123-123-123</p>
+										<h6><b>E-mail:</b></h6>
+										<p id="emailPemohon" name="emailPemohon">alamatemail@gmail.com</p>
 									</td>
 								</tr>
 								<tr>
 									<td class="tg-lboi" colspan="3">
-										<div class="form-group form-group-last">
-											<label for="exampleTextarea">Deskripsi Pekerjaan:</label>
-											<textarea class="form-control" id="deskripsiPekerjaan" rows="2"></textarea>
-										</div>
+										<h6><b>Deskripsi Pekerjaan:</b></h6>
+										<span id="deskripsiPekerjaan" name="deskripsiPekerjaan">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu finibus ligula. Nam placerat commodo sodales. Donec luctus volutpat odio, nec suscipit mauris pharetra sit amet. Nam interdum vel enim id tempor. Donec nibh metus, hendrerit vel dapibus nec, consectetur vitae justo.
+										</span>
 									</td>
 								</tr>
 								<tr>
 									<td class="tg-lboi" colspan="3">
-										<div class="form-group form-group-last">
-											<label for="exampleTextarea">Perlengkapan Alat:</label>
-											<textarea class="form-control" id="perlengkapanAlat" rows="2"></textarea>
-										</div>
+										<h6><b>Perlengkapan Alat:</b></h6>
+										<span id="perlengkapanAlat" name="perlengkapanAlat">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu finibus ligula. Nam placerat commodo sodales. Donec luctus volutpat odio, nec suscipit mauris pharetra sit amet. Nam interdum vel enim id tempor. Donec nibh metus, hendrerit vel dapibus nec, consectetur vitae justo.
+										</span>
 									</td>
 								</tr>
 								<tr>
@@ -428,73 +407,66 @@
 								</tr>
 								<tr>
 									<td class="tg-0pky" colspan="2">
-										<div class="form-group mb-1">
-											<label>Perwakilan Wewenang Pelaksanaan yang ditunjuk:</label>
-											<input type="text" id="perwakilanPelaksana" name="perwakilanPelaksana" class="form-control form-control-sm" aria-describedby="" placeholder="nama,posisi">
-										</div>
+										<h6><b>Perwakilan wewenang pelaksana yang ditunjuk:</b></h6>
+										<span>
+											<span id="namaPerwakilanPelaksana" name="namaPerwakilanPelaksana">Muh. Gufran</span>, <span id="posisiPerwakilanPelaksana" name="posisiPerwakilanPelaksana">Manajer</span>
+										</span>
 									</td>
 									<td class="tg-0pky" colspan="2">
-										<div class="form-group mb-1">
-											<label>Perwakilan Wewenang operasi yang ditunjuk:</label>
-											<input type="text" id="perwakilanOperasi" name="perwakilanOperasi" class="form-control form-control-sm" aria-describedby="" placeholder="nama,posisi">
-										</div>
+										<h6><b>Perwakilan wewenang Operasi yang ditunjuk:</b></h6>
+										<span>
+											<span id="namaPerwakilanOperasi" name="namaPerwakilanOperasi">Muh. Gufran</span>, <span id="posisiPerwakilanOperasi" name="posisiPerwakilanOperasi">Manajer</span>
+										</span>
 									</td>
 								</tr>
 								<tr>
 									<td class="tg-0pky">
-										<b>Reviewed by performing Authority</b><br>
-										<div class="form-group mb-1">
-											<label>Nama:</label>
-											<input type="text" id="namaReviewerAuthority" name="namaReviewerAuthority" class="form-control form-control-sm" aria-describedby="" placeholder="-">
-										</div>
-										<div class="form-group mb-1">
-											<label>Tanggal:</label>
-											<input type="text" id="tanggalReviewerAuthority" name="tanggalReviewerAuthority" class="form-control form-control-sm" aria-describedby="" placeholder="-">
-										</div>
+										<b>Reviewed by performing Authority</b><br><br>
+										<p>
+											<b>Nama : </b> <span id="namaReviewerAuthority" name="namaReviewerAuthority">Aigi Walie</span>
+										</p>
+										<p>
+											<b>Tanggal : </b> <span id="tanggalReviewerAuthority" name="tanggalReviewerAuthority">20 November</span>
+										</p>
 									</td>
 									<td class="tg-0pky" colspan="">
-										<b>Reviewed by performing HSSE</b><br>
-										<div class="form-group mb-1">
-											<label>Nama:</label>
-											<input type="text" id="namaReviewerAuthority" name="namaReviewerAuthority" class="form-control form-control-sm" aria-describedby="" placeholder="-">
-										</div>
-										<div class="form-group mb-1">
-											<label>Tanggal:</label>
-											<input type="text" id="tanggalReviewerAuthority" name="tanggalReviewerAuthority" class="form-control form-control-sm" aria-describedby="" placeholder="-">
-										</div>
+										<b>Reviewed by performing HSSE</b><br><br>
+										<p>
+											<b>Nama : </b> <span id="namaReviewerHsse" name="namaReviewerHsse">Aigi Walie</span>
+										</p>
+										<p>
+											<b>Tanggal : </b> <span id="tanggalReviewerHsse" name="tanggalReviewerHsse">20 November</span>
+										</p>
 									</td>
 									<td class="tg-0pky" colspan="2" rowspan="1">
-										<b>Terkait dengan Pihak ke-3</b><br>
-										<div class="form-group mb-1">
-											<label>Nama:</label>
-											<input type="text" id="namaReviewerPh3" name="namaReviewerPh3" class="form-control form-control-sm" aria-describedby="" placeholder="-">
-										</div>
-										<div class="form-group mb-1">
-											<label>Jabatan:</label>
-											<input type="text" id="jabatanReviewerPh3" name="jabatanReviewerPh3" class="form-control form-control-sm" aria-describedby="" placeholder="-">
-										</div>
-										<div class="form-group mb-1">
-											<label>Tanggal:</label>
-											<input type="text" id="tanggalReviewerPh3" name="tanggalReviewerPh3" class="form-control form-control-sm" aria-describedby="" placeholder="-">
-										</div>
+										<b>Terkait dengan Pihak ke-3</b><br><br>
+										<p>
+											<b>Nama : </b> <span id="namaReviewerPh3" name="namaReviewerPh3">Aigi Walie</span>
+										</p>
+										<p>
+											<b>Jabatan : </b> <span id="tanggalReviewerPh3" name="tanggalReviewerPh3">Manager</span>
+										</p>
+										<p>
+											<b>Tanggal : </b> <span id="tanggalReviewerPh3" name="tanggalReviewerPh3">20 November</span>
+										</p>
 									</td>
 								</tr>
 								<tr>
 									<td class="tg-0pky" colspan="4">
-										<div class="form-group row mb-1">
+										<div class="form-group row mb-1 px-0 py-0">
 											<label class="col-3 col-form-label">Ijin kerja berlaku untuk:</label>
 											<div class="col-9">
 												<div class="kt-radio-inline">
 													<label class="kt-radio kt-radio--primary">
-														<input type="radio" name="statusIjinKerja"> Siang Hari Saja
+														<input type="radio" checked="checked" name="statusIjinKerja"> Siang Hari Saja
 														<span></span>
 													</label>
 													<label class="kt-radio kt-radio--primary">
-														<input type="radio" name="statusIjinKerja"> Malam Hari Saja
+														<input type="radio" disabled="" name="statusIjinKerja"> Malam Hari Saja
 														<span></span>
 													</label>
 													<label class="kt-radio kt-radio--primary">
-														<input type="radio" name="statusIjinKerja"> Siang dan Malam
+														<input type="radio" disabled="" name="statusIjinKerja"> Siang dan Malam
 														<span></span>
 													</label>
 												</div>
@@ -506,20 +478,18 @@
 									<td class="tg-0pky" colspan="4">
 										<div class="row">
 											<div class="col-8">
-												<div class="form-group mb-1">
-													<label for="exampleTextarea">Komentar dari GSI dan atau tambahan persayaratan:</label>
-													<textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
-												</div>
+												<h6><b>Komentar dari GSI dan atau tambahan persyaratan:</b></h6>
+												<span id="komentarGsi" name="komentarGsi">
+													Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu finibus ligula. Nam placerat commodo sodales. Donec luctus volutpat odio, nec suscipit mauris pharetra sit amet. Nam interdum vel enim id tempor. Donec nibh metus, hendrerit vel dapibus nec, consectetur vitae justo.
+												</span>
 											</div>
 											<div class="col-4">
-												<div class="form-group mb-1">
-													<label>Nama:</label>
-													<input type="text" id="namaGsi" name="namaGsi" class="form-control form-control-sm" aria-describedby="" placeholder="-">
-												</div>
-												<div class="form-group mb-1">
-													<label>Jabatan:</label>
-													<input type="text" id="jabatanGsi" name="jabatanGsi" class="form-control form-control-sm" aria-describedby="" placeholder="-">
-												</div>
+												<p>
+													<b>Nama : </b> <span id="namaGsi" name="namaGsi">Aigi Walie</span>
+												</p>
+												<p>
+													<b>Jabatan : </b> <span id="jabatanGsi" name="jabatanGsi">SPV</span>
+												</p>
 											</div>
 										</div>
 									</td>
@@ -528,225 +498,875 @@
 						</table>
 					</div>
 				</section>
-				<section class="mt-5">
+
+			</page>
+			<page class="A4">
+				<section class="">
 					<div class="tg-wrap">
 						<table class="tg">
 							<tbody>
 								<tr>
-									<td class="tg-xy3e" colspan="8">
+									<td class="tg-xy3e hot-sika" colspan="8">
 										<span class="jenis-sika" id="jenisIjin" name="jenisIjin">IJIN KERJA PANAS</span>
 									</td>
 									<td class="tg-nrix" colspan="15">No. SF-001/2015/B-301/HSSE<br></td>
 								</tr>
 								<tr>
-									<td class="tg-6qw1" colspan="8">Precaution/Pencegahan</td>
+									<td class="tg-6qw1" colspan="8" rowspan="2">Precaution/Pencegahan</td>
 									<td class="tg-6qw1" colspan="15">On Site Validation/Validasi di lapangan</td>
 								</tr>
 								<tr>
-									<td class="tg-0lax" colspan="8">
-										<label class="kt-checkbox kt-checkbox--dark mt-1">
-											<input type="checkbox"> Equipment depressuirezed/Tekanan pada peralatan dibuang
-											<span></span>
-										</label>
-									</td>
-									<td class="tg-0lax">1</td>
-									<td class="tg-0lax">2</td>
-									<td class="tg-0lax">3</td>
-									<td class="tg-0lax">4</td>
-									<td class="tg-0lax">5</td>
-									<td class="tg-0lax">6</td>
-									<td class="tg-0lax">7</td>
-									<td class="tg-0lax">8</td>
-									<td class="tg-0lax">9</td>
-									<td class="tg-0lax">10</td>
-									<td class="tg-0lax">11</td>
-									<td class="tg-0lax">12</td>
-									<td class="tg-0lax">13</td>
-									<td class="tg-0lax">14</td>
-									<td class="tg-roi2 " rowspan="40">
+									<td class="tg-0lax m-checkbox">1</td>
+									<td class="tg-0lax m-checkbox">2</td>
+									<td class="tg-0lax m-checkbox">3</td>
+									<td class="tg-0lax m-checkbox">4</td>
+									<td class="tg-0lax m-checkbox">5</td>
+									<td class="tg-0lax m-checkbox">6</td>
+									<td class="tg-0lax m-checkbox">7</td>
+									<td class="tg-0lax m-checkbox">8</td>
+									<td class="tg-0lax m-checkbox">9</td>
+									<td class="tg-0lax m-checkbox">10</td>
+									<td class="tg-0lax m-checkbox">11</td>
+									<td class="tg-0lax m-checkbox">12</td>
+									<td class="tg-0lax m-checkbox">13</td>
+									<td class="tg-0lax m-checkbox">14</td>
+									<td class="tg-roi2 " rowspan="47">
 										<div class="rotate">EXECUTION/PELAKSANAAN</div>
 									</td>
 								</tr>
 								<tr>
 									<td class="tg-0lax" colspan="8">
 										<label class="kt-checkbox kt-checkbox--dark mt-1">
-											<input type="checkbox"> Equipment drained/Peralatan dikuras
+											<input type="checkbox" checked disabled=""> Equipment depressuirezed/Tekanan pada peralatan dibuang
 											<span></span>
 										</label>
 									</td>
-									<td class="tg-0lax">1</td>
-									<td class="tg-0lax">2</td>
-									<td class="tg-0lax">3</td>
-									<td class="tg-0lax">4</td>
-									<td class="tg-0lax">5</td>
-									<td class="tg-0lax">6</td>
-									<td class="tg-0lax">7</td>
-									<td class="tg-0lax">8</td>
-									<td class="tg-0lax">9</td>
-									<td class="tg-0lax">10</td>
-									<td class="tg-0lax">11</td>
-									<td class="tg-0lax">12</td>
-									<td class="tg-0lax">13</td>
-									<td class="tg-0lax">14</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-1" name="hari-1" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-2" name="hari-2" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-3" name="hari-3" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-4" name="hari-4" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-5" name="hari-5" checked disabled=""> 
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-6" name="hari-6" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-7" name="hari-7" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-8" name="hari-8" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-9" name="hari-9" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-10" name="hari-10" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-11" name="hari-11" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-12" name="hari-12" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-13" name="hari-13" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-14" name="hari-14"  checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									
 								</tr>
 								<tr>
 									<td class="tg-0lax" colspan="8">
 										<label class="kt-checkbox kt-checkbox--dark mt-1">
-											<input type="checkbox"> Equipment fully gas free/Peralatan bebas dari gas
+											<input type="checkbox" checked disabled=""> Equipment drained/Peralatan dikuras
 											<span></span>
 										</label>
 									</td>
-									<td class="tg-0lax">1</td>
-									<td class="tg-0lax">2</td>
-									<td class="tg-0lax">3</td>
-									<td class="tg-0lax">4</td>
-									<td class="tg-0lax">5</td>
-									<td class="tg-0lax">6</td>
-									<td class="tg-0lax">7</td>
-									<td class="tg-0lax">8</td>
-									<td class="tg-0lax">9</td>
-									<td class="tg-0lax">10</td>
-									<td class="tg-0lax">11</td>
-									<td class="tg-0lax">12</td>
-									<td class="tg-0lax">13</td>
-									<td class="tg-0lax">14</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-1" name="hari-1" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-2" name="hari-2" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-3" name="hari-3" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-4" name="hari-4" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-5" name="hari-5" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-6" name="hari-6" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-7" name="hari-7" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-8" name="hari-8" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-9" name="hari-9" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-10" name="hari-10" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-11" name="hari-11" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-12" name="hari-12" disabled>
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-13" name="hari-13" disabled>
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-14" name="hari-14" checked disabled="">
+											<span></span>
+										</label>
+									</td>
 								</tr>
 								<tr>
 									<td class="tg-0lax" colspan="8">
 										<label class="kt-checkbox kt-checkbox--dark mt-1">
-											<input type="checkbox"> Equipment ventilated/Peralatan di-ventilasi
+											<input type="checkbox" checked disabled> Equipment fully gas free/Peralatan bebas dari gas
 											<span></span>
 										</label>
 									</td>
-									<td class="tg-0lax">1</td>
-									<td class="tg-0lax">2</td>
-									<td class="tg-0lax">3</td>
-									<td class="tg-0lax">4</td>
-									<td class="tg-0lax">5</td>
-									<td class="tg-0lax">6</td>
-									<td class="tg-0lax">7</td>
-									<td class="tg-0lax">8</td>
-									<td class="tg-0lax">9</td>
-									<td class="tg-0lax">10</td>
-									<td class="tg-0lax">11</td>
-									<td class="tg-0lax">12</td>
-									<td class="tg-0lax">13</td>
-									<td class="tg-0lax">14</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-1" name="hari-1" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-2" name="hari-2" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-3" name="hari-3" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-4" name="hari-4" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-5" name="hari-5" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-6" name="hari-6" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-7" name="hari-7" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-8" name="hari-8" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-9" name="hari-9" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-10" name="hari-10" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-11" name="hari-11" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-12" name="hari-12" disabled>
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-13" name="hari-13" disabled>
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-14" name="hari-14" checked disabled="">
+											<span></span>
+										</label>
+									</td>
 								</tr>
 								<tr>
 									<td class="tg-0lax" colspan="8">
 										<label class="kt-checkbox kt-checkbox--dark mt-1">
-											<input type="checkbox"> Equipment fully inerted/Peralatan di-inert
+											<input type="checkbox" checked disabled> Equipment ventilated/Peralatan di-ventilasi
 											<span></span>
 										</label>
 									</td>
-									<td class="tg-0lax">1</td>
-									<td class="tg-0lax">2</td>
-									<td class="tg-0lax">3</td>
-									<td class="tg-0lax">4</td>
-									<td class="tg-0lax">5</td>
-									<td class="tg-0lax">6</td>
-									<td class="tg-0lax">7</td>
-									<td class="tg-0lax">8</td>
-									<td class="tg-0lax">9</td>
-									<td class="tg-0lax">10</td>
-									<td class="tg-0lax">11</td>
-									<td class="tg-0lax">12</td>
-									<td class="tg-0lax">13</td>
-									<td class="tg-0lax">14</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-1" name="hari-1" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-2" name="hari-2" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-3" name="hari-3" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-4" name="hari-4" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-5" name="hari-5" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-6" name="hari-6" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-7" name="hari-7" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-8" name="hari-8" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-9" name="hari-9" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-10" name="hari-10" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-11" name="hari-11" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-12" name="hari-12" disabled>
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-13" name="hari-13" disabled>
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-14" name="hari-14" checked disabled="">
+											<span></span>
+										</label>
+									</td>
 								</tr>
 								<tr>
 									<td class="tg-0lax" colspan="8">
 										<label class="kt-checkbox kt-checkbox--dark mt-1">
-											<input type="checkbox"> Equipment filled with water/peraltan diisi air
+											<input type="checkbox" checked disabled> Equipment fully inerted/Peralatan di-inert
 											<span></span>
 										</label>
 									</td>
-									<td class="tg-0lax">1</td>
-									<td class="tg-0lax">2</td>
-									<td class="tg-0lax">3</td>
-									<td class="tg-0lax">4</td>
-									<td class="tg-0lax">5</td>
-									<td class="tg-0lax">6</td>
-									<td class="tg-0lax">7</td>
-									<td class="tg-0lax">8</td>
-									<td class="tg-0lax">9</td>
-									<td class="tg-0lax">10</td>
-									<td class="tg-0lax">11</td>
-									<td class="tg-0lax">12</td>
-									<td class="tg-0lax">13</td>
-									<td class="tg-0lax">14</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-1" name="hari-1" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-2" name="hari-2" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-3" name="hari-3" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-4" name="hari-4" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-5" name="hari-5" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-6" name="hari-6" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-7" name="hari-7" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-8" name="hari-8" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-9" name="hari-9" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-10" name="hari-10" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-11" name="hari-11" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-12" name="hari-12" disabled>
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-13" name="hari-13" disabled>
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-14" name="hari-14" checked disabled="">
+											<span></span>
+										</label>
+									</td>
 								</tr>
 								<tr>
 									<td class="tg-0lax" colspan="8">
 										<label class="kt-checkbox kt-checkbox--dark mt-1">
-											<input type="checkbox"> Vent to safe place/Dialirkan ke tempat aman dengan peralatan yang aman
+											<input type="checkbox" checked disabled> Equipment filled with water/Peralatan diisi air
 											<span></span>
 										</label>
 									</td>
-									<td class="tg-0lax">1</td>
-									<td class="tg-0lax">2</td>
-									<td class="tg-0lax">3</td>
-									<td class="tg-0lax">4</td>
-									<td class="tg-0lax">5</td>
-									<td class="tg-0lax">6</td>
-									<td class="tg-0lax">7</td>
-									<td class="tg-0lax">8</td>
-									<td class="tg-0lax">9</td>
-									<td class="tg-0lax">10</td>
-									<td class="tg-0lax">11</td>
-									<td class="tg-0lax">12</td>
-									<td class="tg-0lax">13</td>
-									<td class="tg-0lax">14</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-1" name="hari-1" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-2" name="hari-2" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-3" name="hari-3" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-4" name="hari-4" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-5" name="hari-5" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-6" name="hari-6" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-7" name="hari-7" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-8" name="hari-8" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-9" name="hari-9" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-10" name="hari-10" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-11" name="hari-11" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-12" name="hari-12" disabled>
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-13" name="hari-13" disabled>
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-14" name="hari-14" checked disabled="">
+											<span></span>
+										</label>
+									</td>
 								</tr>
 								<tr>
 									<td class="tg-0lax" colspan="8">
 										<label class="kt-checkbox kt-checkbox--dark mt-1">
-											<input type="checkbox"> Mechanical Isolation/Isolasi mekanis
+											<input type="checkbox" checked disabled> Vent to safe place/Dialirkan ke tempat aman dengan peralatan yang aman
 											<span></span>
 										</label>
 									</td>
-									<td class="tg-0lax">1</td>
-									<td class="tg-0lax">2</td>
-									<td class="tg-0lax">3</td>
-									<td class="tg-0lax">4</td>
-									<td class="tg-0lax">5</td>
-									<td class="tg-0lax">6</td>
-									<td class="tg-0lax">7</td>
-									<td class="tg-0lax">8</td>
-									<td class="tg-0lax">9</td>
-									<td class="tg-0lax">10</td>
-									<td class="tg-0lax">11</td>
-									<td class="tg-0lax">12</td>
-									<td class="tg-0lax">13</td>
-									<td class="tg-0lax">14</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-1" name="hari-1" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-2" name="hari-2" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-3" name="hari-3" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-4" name="hari-4" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-5" name="hari-5" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-6" name="hari-6" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-7" name="hari-7" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-8" name="hari-8" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-9" name="hari-9" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-10" name="hari-10" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-11" name="hari-11" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-12" name="hari-12" disabled>
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-13" name="hari-13" disabled>
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-14" name="hari-14" checked disabled="">
+											<span></span>
+										</label>
+									</td>
 								</tr>
 								<tr>
 									<td class="tg-0lax" colspan="8">
 										<label class="kt-checkbox kt-checkbox--dark mt-1">
-											<input type="checkbox"> Gas check prior start/Pemeriksaan gas sebelum mulai
+											<input type="checkbox" checked disabled> Mechanical Isolation/Isolasi mekanis
 											<span></span>
 										</label>
 									</td>
-									<td class="tg-0lax">1</td>
-									<td class="tg-0lax">2</td>
-									<td class="tg-0lax">3</td>
-									<td class="tg-0lax">4</td>
-									<td class="tg-0lax">5</td>
-									<td class="tg-0lax">6</td>
-									<td class="tg-0lax">7</td>
-									<td class="tg-0lax">8</td>
-									<td class="tg-0lax">9</td>
-									<td class="tg-0lax">10</td>
-									<td class="tg-0lax">11</td>
-									<td class="tg-0lax">12</td>
-									<td class="tg-0lax">13</td>
-									<td class="tg-0lax">14</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-1" name="hari-1" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-2" name="hari-2" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-3" name="hari-3" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-4" name="hari-4" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-5" name="hari-5" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-6" name="hari-6" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-7" name="hari-7" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-8" name="hari-8" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-9" name="hari-9" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-10" name="hari-10" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-11" name="hari-11" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-12" name="hari-12" disabled>
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-13" name="hari-13" disabled>
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-14" name="hari-14" checked disabled="">
+											<span></span>
+										</label>
+									</td>
 								</tr>
 								<tr>
 									<td class="tg-0lax" colspan="8">
 										<label class="kt-checkbox kt-checkbox--dark mt-1">
-											<input type="checkbox"> Flammable gas/Gas mudah terbakar
+											<input type="checkbox" checked disabled> Gas check prior start/Pemeriksaan gas sebelum mulai
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-1" name="hari-1" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-2" name="hari-2" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-3" name="hari-3" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-4" name="hari-4" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-5" name="hari-5" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-6" name="hari-6" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-7" name="hari-7" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-8" name="hari-8" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-9" name="hari-9" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-10" name="hari-10" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-11" name="hari-11" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-12" name="hari-12" disabled>
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-13" name="hari-13" disabled>
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-14" name="hari-14" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<td class="tg-0lax" colspan="8">
+										<label class="kt-checkbox kt-checkbox--dark mt-1">
+											<input type="checkbox" checked disabled> Flammable gas/Gas mudah terbakar
 											<span></span>
 										</label>
 										<div class="input-group input-group-sm mb-1 d-none">
@@ -754,25 +1374,95 @@
 											<div class="input-group-append"><span class="input-group-text " id="basic-addon2">%LEL</span></div>
 										</div>
 									</td>
-									<td class="tg-0lax">1</td>
-									<td class="tg-0lax">2</td>
-									<td class="tg-0lax">3</td>
-									<td class="tg-0lax">4</td>
-									<td class="tg-0lax">5</td>
-									<td class="tg-0lax">6</td>
-									<td class="tg-0lax">7</td>
-									<td class="tg-0lax">8</td>
-									<td class="tg-0lax">9</td>
-									<td class="tg-0lax">10</td>
-									<td class="tg-0lax">11</td>
-									<td class="tg-0lax">12</td>
-									<td class="tg-0lax">13</td>
-									<td class="tg-0lax">14</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-1" name="hari-1" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-2" name="hari-2" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-3" name="hari-3" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-4" name="hari-4" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-5" name="hari-5" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-6" name="hari-6" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-7" name="hari-7" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-8" name="hari-8" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-9" name="hari-9" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-10" name="hari-10" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-11" name="hari-11" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-12" name="hari-12" disabled>
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-13" name="hari-13" disabled>
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-14" name="hari-14" checked disabled="">
+											<span></span>
+										</label>
+									</td>
 								</tr>
 								<tr>
 									<td class="tg-0lax" colspan="8">
 										<label class="kt-checkbox kt-checkbox--dark mt-1">
-											<input type="checkbox"> Oxygen O2/Oksigen O2
+											<input type="checkbox" checked disabled> Oxygen O2/Oksigen O2
 											<span></span>
 										</label>
 										<div class="input-group input-group-sm mb-1 d-none">
@@ -780,25 +1470,95 @@
 											<div class="input-group-append"><span class="input-group-text " id="basic-addon2">%</span></div>
 										</div>
 									</td>
-									<td class="tg-0lax">1</td>
-									<td class="tg-0lax">2</td>
-									<td class="tg-0lax">3</td>
-									<td class="tg-0lax">4</td>
-									<td class="tg-0lax">5</td>
-									<td class="tg-0lax">6</td>
-									<td class="tg-0lax">7</td>
-									<td class="tg-0lax">8</td>
-									<td class="tg-0lax">9</td>
-									<td class="tg-0lax">10</td>
-									<td class="tg-0lax">11</td>
-									<td class="tg-0lax">12</td>
-									<td class="tg-0lax">13</td>
-									<td class="tg-0lax">14</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-1" name="hari-1" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-2" name="hari-2" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-3" name="hari-3" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-4" name="hari-4" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-5" name="hari-5" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-6" name="hari-6" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-7" name="hari-7" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-8" name="hari-8" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-9" name="hari-9" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-10" name="hari-10" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-11" name="hari-11" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-12" name="hari-12" disabled>
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-13" name="hari-13" disabled>
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-14" name="hari-14" checked disabled="">
+											<span></span>
+										</label>
+									</td>
 								</tr>
 								<tr>
 									<td class="tg-0lax" colspan="8">
 										<label class="kt-checkbox kt-checkbox--dark mt-1">
-											<input type="checkbox">Toxic Gas/Gas Beracun
+											<input type="checkbox" checked disabled>Toxic Gas/Gas Beracun
 											<span></span>
 										</label>
 										<div class="input-group input-group-sm mb-1 d-none">
@@ -806,42 +1566,2809 @@
 											<div class="input-group-append"><span class="input-group-text " id="basic-addon2">ppm</span></div>
 										</div>
 									</td>
-									<td class="tg-0lax">1</td>
-									<td class="tg-0lax">2</td>
-									<td class="tg-0lax">3</td>
-									<td class="tg-0lax">4</td>
-									<td class="tg-0lax">5</td>
-									<td class="tg-0lax">6</td>
-									<td class="tg-0lax">7</td>
-									<td class="tg-0lax">8</td>
-									<td class="tg-0lax">9</td>
-									<td class="tg-0lax">10</td>
-									<td class="tg-0lax">11</td>
-									<td class="tg-0lax">12</td>
-									<td class="tg-0lax">13</td>
-									<td class="tg-0lax">14</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-1" name="hari-1" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-2" name="hari-2" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-3" name="hari-3" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-4" name="hari-4" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-5" name="hari-5" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-6" name="hari-6" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-7" name="hari-7" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-8" name="hari-8" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-9" name="hari-9" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-10" name="hari-10" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-11" name="hari-11" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-12" name="hari-12" disabled>
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-13" name="hari-13" disabled>
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-14" name="hari-14" checked disabled="">
+											<span></span>
+										</label>
+									</td>
 								</tr>
 								<tr>
 									<td class="tg-0lax" colspan="8">
 										<label class="kt-checkbox kt-checkbox--dark mt-1">
-											<input type="checkbox"> Continous gas monitoring/Pemantauan gas berkelanjutan
+											<input type="checkbox" checked disabled> Continous gas monitoring/Pemantauan gas berkelanjutan
 											<span></span>
 										</label>
 									</td>
-									<td class="tg-0lax">1</td>
-									<td class="tg-0lax">2</td>
-									<td class="tg-0lax">3</td>
-									<td class="tg-0lax">4</td>
-									<td class="tg-0lax">5</td>
-									<td class="tg-0lax">6</td>
-									<td class="tg-0lax">7</td>
-									<td class="tg-0lax">8</td>
-									<td class="tg-0lax">9</td>
-									<td class="tg-0lax">10</td>
-									<td class="tg-0lax">11</td>
-									<td class="tg-0lax">12</td>
-									<td class="tg-0lax">13</td>
-									<td class="tg-0lax">14</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-1" name="hari-1" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-2" name="hari-2" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-3" name="hari-3" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-4" name="hari-4" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-5" name="hari-5" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-6" name="hari-6" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-7" name="hari-7" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-8" name="hari-8" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-9" name="hari-9" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-10" name="hari-10" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-11" name="hari-11" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-12" name="hari-12" disabled>
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-13" name="hari-13" disabled>
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-14" name="hari-14" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<td class="tg-0lax" colspan="8">
+										<label class="kt-checkbox kt-checkbox--dark mt-1">
+											<input type="checkbox" checked disabled> Breathing Apparatus/Alat pernafasan bertekanan
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-1" name="hari-1" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-2" name="hari-2" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-3" name="hari-3" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-4" name="hari-4" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-5" name="hari-5" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-6" name="hari-6" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-7" name="hari-7" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-8" name="hari-8" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-9" name="hari-9" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-10" name="hari-10" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-11" name="hari-11" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-12" name="hari-12" disabled>
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-13" name="hari-13" disabled>
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-14" name="hari-14" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<td class="tg-0lax" colspan="8">
+										<label class="kt-checkbox kt-checkbox--dark mt-1">
+											<input type="checkbox" checked disabled> Dust/Gas mask/Masker debu/Gas
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-1" name="hari-1" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-2" name="hari-2" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-3" name="hari-3" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-4" name="hari-4" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-5" name="hari-5" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-6" name="hari-6" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-7" name="hari-7" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-8" name="hari-8" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-9" name="hari-9" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-10" name="hari-10" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-11" name="hari-11" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-12" name="hari-12" disabled>
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-13" name="hari-13" disabled>
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-14" name="hari-14" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<td class="tg-0lax" colspan="8">
+										<label class="kt-checkbox kt-checkbox--dark mt-1">
+											<input type="checkbox" checked disabled> Chemical adapted PPE/APD bahan kimia
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-1" name="hari-1" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-2" name="hari-2" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-3" name="hari-3" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-4" name="hari-4" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-5" name="hari-5" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-6" name="hari-6" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-7" name="hari-7" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-8" name="hari-8" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-9" name="hari-9" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-10" name="hari-10" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-11" name="hari-11" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-12" name="hari-12" disabled>
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-13" name="hari-13" disabled>
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-14" name="hari-14" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<td class="tg-0lax" colspan="8">
+										<label class="kt-checkbox kt-checkbox--dark mt-1">
+											<input type="checkbox" checked disabled> Goggles/Facemask/Kacamata/Pelindung Muka
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-1" name="hari-1" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-2" name="hari-2" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-3" name="hari-3" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-4" name="hari-4" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-5" name="hari-5" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-6" name="hari-6" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-7" name="hari-7" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-8" name="hari-8" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-9" name="hari-9" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-10" name="hari-10" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-11" name="hari-11" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-12" name="hari-12" disabled>
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-13" name="hari-13" disabled>
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-14" name="hari-14" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<td class="tg-0lax" colspan="8">
+										<label class="kt-checkbox kt-checkbox--dark mt-1">
+											<input type="checkbox" checked disabled> Proteksi pengganti alat proteksi yang dimatikan
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-1" name="hari-1" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-2" name="hari-2" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-3" name="hari-3" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-4" name="hari-4" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-5" name="hari-5" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-6" name="hari-6" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-7" name="hari-7" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-8" name="hari-8" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-9" name="hari-9" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-10" name="hari-10" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-11" name="hari-11" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-12" name="hari-12" disabled>
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-13" name="hari-13" disabled>
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-14" name="hari-14" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<td class="tg-0lax" colspan="8">
+										<label class="kt-checkbox kt-checkbox--dark mt-1">
+											<input type="checkbox" checked disabled> Standby/Check operator/Operator ditempat/cek
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-1" name="hari-1" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-2" name="hari-2" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-3" name="hari-3" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-4" name="hari-4" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-5" name="hari-5" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-6" name="hari-6" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-7" name="hari-7" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-8" name="hari-8" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-9" name="hari-9" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-10" name="hari-10" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-11" name="hari-11" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-12" name="hari-12" disabled>
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-13" name="hari-13" disabled>
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-14" name="hari-14" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<td class="tg-0lax" colspan="8">
+										<label class="kt-checkbox kt-checkbox--dark mt-1">
+											<input type="checkbox" checked disabled> Spark/Blasting protection/Proteksi percikan api/pasir
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-1" name="hari-1" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-2" name="hari-2" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-3" name="hari-3" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-4" name="hari-4" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-5" name="hari-5" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-6" name="hari-6" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-7" name="hari-7" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-8" name="hari-8" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-9" name="hari-9" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-10" name="hari-10" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-11" name="hari-11" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-12" name="hari-12" disabled>
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-13" name="hari-13" disabled>
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-14" name="hari-14" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<td class="tg-0lax" colspan="8">
+										<label class="kt-checkbox kt-checkbox--dark mt-1">
+											<input type="checkbox" checked disabled> Oil Boom Deployment/Oil boom digelar
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-1" name="hari-1" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-2" name="hari-2" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-3" name="hari-3" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-4" name="hari-4" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-5" name="hari-5" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-6" name="hari-6" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-7" name="hari-7" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-8" name="hari-8" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-9" name="hari-9" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-10" name="hari-10" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-11" name="hari-11" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-12" name="hari-12" disabled>
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-13" name="hari-13" disabled>
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-14" name="hari-14" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<td class="tg-0lax" colspan="8">
+										<label class="kt-checkbox kt-checkbox--dark mt-1">
+											<input type="checkbox" checked disabled> Warning sign/Barrier/Tanda peringatan/Penghalang
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-1" name="hari-1" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-2" name="hari-2" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-3" name="hari-3" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-4" name="hari-4" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-5" name="hari-5" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-6" name="hari-6" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-7" name="hari-7" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-8" name="hari-8" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-9" name="hari-9" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-10" name="hari-10" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-11" name="hari-11" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-12" name="hari-12" disabled>
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-13" name="hari-13" disabled>
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-14" name="hari-14" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<td class="tg-0lax" colspan="8">
+										<label class="kt-checkbox kt-checkbox--dark mt-1">
+											<input type="checkbox" checked disabled> Manual Excavation/Penggalian secara manual
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-1" name="hari-1" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-2" name="hari-2" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-3" name="hari-3" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-4" name="hari-4" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-5" name="hari-5" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-6" name="hari-6" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-7" name="hari-7" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-8" name="hari-8" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-9" name="hari-9" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-10" name="hari-10" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-11" name="hari-11" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-12" name="hari-12" disabled>
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-13" name="hari-13" disabled>
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-14" name="hari-14" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<td class="tg-0lax" colspan="8">
+										<label class="kt-checkbox kt-checkbox--dark mt-1">
+											<input type="checkbox" checked disabled> Scaffolding/Perancah
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-1" name="hari-1" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-2" name="hari-2" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-3" name="hari-3" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-4" name="hari-4" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-5" name="hari-5" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-6" name="hari-6" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-7" name="hari-7" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-8" name="hari-8" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-9" name="hari-9" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-10" name="hari-10" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-11" name="hari-11" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-12" name="hari-12" disabled>
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-13" name="hari-13" disabled>
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-14" name="hari-14" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<td class="tg-0lax" colspan="8">
+										<label class="kt-checkbox kt-checkbox--dark mt-1">
+											<input type="checkbox" checked disabled> Full body harness/Life line/Harnes/Tali pengaman
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-1" name="hari-1" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-2" name="hari-2" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-3" name="hari-3" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-4" name="hari-4" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-5" name="hari-5" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-6" name="hari-6" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-7" name="hari-7" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-8" name="hari-8" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-9" name="hari-9" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-10" name="hari-10" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-11" name="hari-11" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-12" name="hari-12" disabled>
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-13" name="hari-13" disabled>
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-14" name="hari-14" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<td class="tg-0lax" colspan="8">
+										<label class="kt-checkbox kt-checkbox--dark mt-1">
+											<input type="checkbox" checked disabled> Life Jacket/Work Vest/Pelampung keselamatan kerja
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-1" name="hari-1" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-2" name="hari-2" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-3" name="hari-3" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-4" name="hari-4" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-5" name="hari-5" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-6" name="hari-6" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-7" name="hari-7" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-8" name="hari-8" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-9" name="hari-9" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-10" name="hari-10" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-11" name="hari-11" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-12" name="hari-12" disabled>
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-13" name="hari-13" disabled>
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-14" name="hari-14" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<td class="tg-0lax" colspan="8">
+										<label class="kt-checkbox kt-checkbox--dark mt-1">
+											<input type="checkbox" checked disabled> Stopping interfering works/Pekerjaan bersamaan dihentikan
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-1" name="hari-1" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-2" name="hari-2" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-3" name="hari-3" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-4" name="hari-4" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-5" name="hari-5" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-6" name="hari-6" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-7" name="hari-7" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-8" name="hari-8" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-9" name="hari-9" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-10" name="hari-10" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-11" name="hari-11" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-12" name="hari-12" disabled>
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-13" name="hari-13" disabled>
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-14" name="hari-14" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<td class="tg-0lax" colspan="8">
+										<label class="kt-checkbox kt-checkbox--dark mt-1">
+											<input type="checkbox" checked disabled> Earthing/Bonding/Pentanahan
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-1" name="hari-1" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-2" name="hari-2" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-3" name="hari-3" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-4" name="hari-4" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-5" name="hari-5" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-6" name="hari-6" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-7" name="hari-7" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-8" name="hari-8" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-9" name="hari-9" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-10" name="hari-10" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-11" name="hari-11" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-12" name="hari-12" disabled>
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-13" name="hari-13" disabled>
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-14" name="hari-14" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<td class="tg-0lax" colspan="8">
+										<label class="kt-checkbox kt-checkbox--dark mt-1">
+											<input type="checkbox" checked disabled> Safety devices on engines/Alat pengaman di mesin
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-1" name="hari-1" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-2" name="hari-2" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-3" name="hari-3" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-4" name="hari-4" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-5" name="hari-5" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-6" name="hari-6" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-7" name="hari-7" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-8" name="hari-8" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-9" name="hari-9" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-10" name="hari-10" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-11" name="hari-11" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-12" name="hari-12" disabled>
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-13" name="hari-13" disabled>
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-14" name="hari-14" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<td class="tg-0lax" colspan="8">
+										<label class="kt-checkbox kt-checkbox--dark mt-1">
+											<input type="checkbox" checked disabled> Additional safety lighting/Lampu penerangan tambahan
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-1" name="hari-1" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-2" name="hari-2" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-3" name="hari-3" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-4" name="hari-4" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-5" name="hari-5" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-6" name="hari-6" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-7" name="hari-7" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-8" name="hari-8" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-9" name="hari-9" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-10" name="hari-10" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-11" name="hari-11" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-12" name="hari-12" disabled>
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-13" name="hari-13" disabled>
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-14" name="hari-14" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<td class="tg-0lax" colspan="8">
+										<label class="kt-checkbox kt-checkbox--dark mt-1">
+											<input type="checkbox" checked disabled> Standby means/Kendaraan di tempat (boat, vehicle, ...)
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-1" name="hari-1" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-2" name="hari-2" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-3" name="hari-3" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-4" name="hari-4" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-5" name="hari-5" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-6" name="hari-6" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-7" name="hari-7" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-8" name="hari-8" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-9" name="hari-9" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-10" name="hari-10" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-11" name="hari-11" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-12" name="hari-12" disabled>
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-13" name="hari-13" disabled>
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-14" name="hari-14" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<td class="tg-0lax" colspan="8">
+										<label class="kt-checkbox kt-checkbox--dark mt-1">
+											<input type="checkbox" checked disabled> Fire protection standby/Standby alat pemadam
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-1" name="hari-1" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-2" name="hari-2" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-3" name="hari-3" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-4" name="hari-4" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-5" name="hari-5" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-6" name="hari-6" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-7" name="hari-7" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-8" name="hari-8" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-9" name="hari-9" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-10" name="hari-10" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-11" name="hari-11" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-12" name="hari-12" disabled>
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-13" name="hari-13" disabled>
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-14" name="hari-14" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<td class="tg-0lax" colspan="8">
+										<label class="kt-checkbox kt-checkbox--dark mt-1">
+											<input type="checkbox" checked disabled> Anti Spark tools/Alat anti percikan
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-1" name="hari-1" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-2" name="hari-2" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-3" name="hari-3" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-4" name="hari-4" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-5" name="hari-5" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-6" name="hari-6" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-7" name="hari-7" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-8" name="hari-8" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-9" name="hari-9" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-10" name="hari-10" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-11" name="hari-11" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-12" name="hari-12" disabled>
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-13" name="hari-13" disabled>
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-14" name="hari-14" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<td class="tg-0lax" colspan="8">
+										<label class="kt-checkbox kt-checkbox--dark mt-1">
+											<input type="checkbox" checked disabled> Pre-job meeting/Rapat sebelum kerja
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-1" name="hari-1" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-2" name="hari-2" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-3" name="hari-3" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-4" name="hari-4" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-5" name="hari-5" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-6" name="hari-6" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-7" name="hari-7" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-8" name="hari-8" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-9" name="hari-9" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-10" name="hari-10" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-11" name="hari-11" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-12" name="hari-12" disabled>
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-13" name="hari-13" disabled>
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-14" name="hari-14" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<td class="tg-0lax" colspan="8">
+										<label class="kt-checkbox kt-checkbox--dark mt-1">
+											<input type="checkbox" checked disabled> Last minute risk assessment/Penilaian risiko akhir
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-1" name="hari-1" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-2" name="hari-2" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-3" name="hari-3" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-4" name="hari-4" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-5" name="hari-5" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-6" name="hari-6" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-7" name="hari-7" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-8" name="hari-8" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-9" name="hari-9" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-10" name="hari-10" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-11" name="hari-11" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-12" name="hari-12" disabled>
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-13" name="hari-13" disabled>
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-14" name="hari-14" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<td class="tg-0lax" colspan="8">
+										<label class="kt-checkbox kt-checkbox--dark mt-1">
+											<input type="checkbox" checked disabled> PPE/APD
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-1" name="hari-1" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-2" name="hari-2" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-3" name="hari-3" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-4" name="hari-4" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-5" name="hari-5" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-6" name="hari-6" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-7" name="hari-7" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-8" name="hari-8" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-9" name="hari-9" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-10" name="hari-10" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-11" name="hari-11" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-12" name="hari-12" disabled>
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-13" name="hari-13" disabled>
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-14" name="hari-14" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<td class="tg-0lax" colspan="8">
+										<b>Pencegahan Tambahan</b>
+									</td>
+									<td class="tg-0lax" colspan="14"></td>
+								</tr>
+								<tr>
+									<td class="tg-0lax" colspan="8">
+										<label class="kt-checkbox kt-checkbox--dark mt-1">
+											<input type="checkbox" checked disabled> PPE/APD
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-1" name="hari-1" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-2" name="hari-2" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-3" name="hari-3" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-4" name="hari-4" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-5" name="hari-5" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-6" name="hari-6" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-7" name="hari-7" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-8" name="hari-8" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-9" name="hari-9" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-10" name="hari-10" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-11" name="hari-11" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-12" name="hari-12" disabled>
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-13" name="hari-13" disabled>
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-14" name="hari-14" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<td class="tg-0lax" colspan="8">
+										<label class="kt-checkbox kt-checkbox--dark mt-1">
+											<input type="checkbox" checked disabled> PPE/APD
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-1" name="hari-1" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-2" name="hari-2" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-3" name="hari-3" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-4" name="hari-4" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-5" name="hari-5" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-6" name="hari-6" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-7" name="hari-7" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox"  id="hari-8" name="hari-8" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-9" name="hari-9" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-10" name="hari-10" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-11" name="hari-11" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-12" name="hari-12" disabled>
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-13" name="hari-13" disabled>
+											<span></span>
+										</label>
+									</td>
+									<td class="tg-0lax a-check">
+										<label class="kt-checkbox kt-checkbox--tick kt-checkbox--dark in-checkbox">
+											<input type="checkbox" id="hari-14" name="hari-14" checked disabled="">
+											<span></span>
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<td class="tg-0lax text-right" colspan="8">
+										<b>Tanggal: (DD/MM):</b>
+									</td>
+									<td class="tg-0lax a-check text-center">
+										<span id="tanggalChecklist" name="tanggalChecklist">20/11</span>
+									</td>
+									<td class="tg-0lax a-check text-center">
+										<span id="tanggalChecklist" name="tanggalChecklist">21/11</span>
+									</td>
+									<td class="tg-0lax a-check text-center">
+										<span id="tanggalChecklist" name="tanggalChecklist">22/11</span>
+									</td>
+									<td class="tg-0lax a-check text-center">
+										<span id="tanggalChecklist" name="tanggalChecklist">23/11</span>
+									</td>
+									<td class="tg-0lax a-check text-center">
+										<span id="tanggalChecklist" name="tanggalChecklist">24/11</span>
+									</td>
+									<td class="tg-0lax a-check text-center">
+										<span id="tanggalChecklist" name="tanggalChecklist">25/11</span>
+									</td>
+									<td class="tg-0lax a-check text-center">
+										<span id="tanggalChecklist" name="tanggalChecklist">26/11</span>
+									</td>
+									<td class="tg-0lax a-check text-center">
+										<span id="tanggalChecklist" name="tanggalChecklist">27/11</span>
+									</td>
+									<td class="tg-0lax a-check text-center">
+										<span id="tanggalChecklist" name="tanggalChecklist">28/11</span>
+									</td>
+									<td class="tg-0lax a-check text-center">
+										<span id="tanggalChecklist" name="tanggalChecklist">29/11</span>
+									</td>
+									<td class="tg-0lax a-check text-center">
+										<span id="tanggalChecklist" name="tanggalChecklist">30/11</span>
+									</td>
+									<td class="tg-0lax a-check text-center">
+										<span id="tanggalChecklist" name="tanggalChecklist">1/12</span>
+									</td>
+									<td class="tg-0lax a-check text-center">
+										<span id="tanggalChecklist" name="tanggalChecklist">2/12</span>
+									</td>
+									<td class="tg-0lax a-check text-center">
+										<span id="tanggalChecklist" name="tanggalChecklist">3/12</span>
+									</td>
+								</tr>
+								<tr>
+									<td class="tg-0lax text-right" colspan="8">
+										<b>Waktu: (hh/mm):</b>
+									</td>
+									<td class="tg-0lax a-check text-center">
+										<span id="tanggalChecklist" name="tanggalChecklist">07:30</span>
+									</td>
+									<td class="tg-0lax a-check text-center">
+										<span id="tanggalChecklist" name="tanggalChecklist">07:30</span>
+									</td>
+									<td class="tg-0lax a-check text-center">
+										<span id="tanggalChecklist" name="tanggalChecklist">07:30</span>
+									</td>
+									<td class="tg-0lax a-check text-center">
+										<span id="tanggalChecklist" name="tanggalChecklist">07:30</span>
+									</td>
+									<td class="tg-0lax a-check text-center">
+										<span id="tanggalChecklist" name="tanggalChecklist">07:30</span>
+									</td>
+									<td class="tg-0lax a-check text-center">
+										<span id="tanggalChecklist" name="tanggalChecklist">07:30</span>
+									</td>
+									<td class="tg-0lax a-check text-center">
+										<span id="tanggalChecklist" name="tanggalChecklist">07:30</span>
+									</td>
+									<td class="tg-0lax a-check text-center">
+										<span id="tanggalChecklist" name="tanggalChecklist">07:30</span>
+									</td>
+									<td class="tg-0lax a-check text-center">
+										<span id="tanggalChecklist" name="tanggalChecklist">07:30</span>
+									</td>
+									<td class="tg-0lax a-check text-center">
+										<span id="tanggalChecklist" name="tanggalChecklist">07:30</span>
+									</td>
+									<td class="tg-0lax a-check text-center">
+										<span id="tanggalChecklist" name="tanggalChecklist">07:30</span>
+									</td>
+									<td class="tg-0lax a-check text-center">
+										<span id="tanggalChecklist" name="tanggalChecklist">07:30</span>
+									</td>
+									<td class="tg-0lax a-check text-center">
+										<span id="tanggalChecklist" name="tanggalChecklist">07:30</span>
+									</td>
+									<td class="tg-0lax a-check text-center">
+										<span id="tanggalChecklist" name="tanggalChecklist">07:30</span>
+									</td>
+								</tr>
+								<tr class="d-none">
+									<td class="tg-0lax" >
+										<h6><b>ISSUING AUTHORITY:</b></h6>
+										<span id="issuingAuthority" name="issuingAuthority">
+											Ahmad Rifaldi
+										</span>
+									</td>
+									<td class="tg-0lax" >
+										<h6><b>PERFORMANCE AUTHORITY:</b></h6>
+										<span id="issuingAuthority" name="issuingAuthority">
+											Ahmad Rifaldi
+										</span>
+									</td>
+									<td class="tg-0lax">
+										<h6><b>SAFETY INSPECTOR:</b></h6>
+										<span id="issuingAuthority" name="issuingAuthority">
+											Ahmad Rifaldi
+										</span>
+									</td>
+									<td class="tg-0lax">
+										<h6><b>CONTRACTOR FOREMAN:</b></h6>
+										<span id="issuingAuthority" name="issuingAuthority">
+											Ahmad Rifaldi
+										</span>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<table class="tg">
+							<tbody>
+								<tr>
+									<td class="tg-0lax" >
+										<h6><b>ISSUING AUTHORITY:</b></h6>
+										<span id="issuingAuthority" name="issuingAuthority">
+											Ahmad Rifaldi
+										</span>
+									</td>
+									<td class="tg-0lax" >
+										<h6><b>PERFORMANCE AUTHORITY:</b></h6>
+										<span id="issuingAuthority" name="issuingAuthority">
+											Ahmad Rifaldi
+										</span>
+									</td>
+									<td class="tg-0lax">
+										<h6><b>SAFETY INSPECTOR:</b></h6>
+										<span id="issuingAuthority" name="issuingAuthority">
+											Ahmad Rifaldi
+										</span>
+									</td>
+									<td class="tg-0lax">
+										<h6><b>CONTRACTOR FOREMAN:</b></h6>
+										<span id="issuingAuthority" name="issuingAuthority">
+											Ahmad Rifaldi
+										</span>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<table class="tg">
+							<tbody>
+								<tr>
+									<td class="tg-zlqz" colspan="2">
+										Momentary Interruption/Dihentikan Sementara
+									</td>
+									<td class="tg-roi2" rowspan="2">
+										<div class="rotate">INTERUPT</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="tg-0pky" rowspan="1">
+										<h6><b>Alasan pemberhentian:</b></h6>
+										<span id="alasanPemberhentian" name="alasanPemberhentian">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu finibus ligula. Nam placerat commodo sodales. Donec luctus volutpat odio, nec suscipit mauris pharetra sit amet. Nam interdum vel enim id tempor. 
+										</span>
+										<div class="row mt-4 text-center">
+											<div class="col-3">
+												<h6><b>Tanggal:</b></h6>
+												<span id="tanggal" name="tanggal">
+													20 November 2020
+												</span>
+											</div>
+											<div class="col-3">
+												<h6><b>Waktu:</b></h6>
+												<span id="waktu" name="waktu">
+													14 : 00
+												</span>
+											</div>
+											<div class="col-3">
+												<h6><b>Nama:</b></h6>
+												<span id="nama" name="nama">
+													Ahmad Rifaldi
+												</span>
+											</div>
+											<div class="col-3">
+												<h6><b>TTD:</b></h6>
+												<span id="nama" name="nama">
+													
+												</span>
+											</div>
+										</div>
+									</td>
+									<td class="tg-0pky" rowspan="1">
+										<h6><b>Tanggapan pemberhentian:</b></h6>
+										<span id="tanggapanPemberhentian" name="tanggapanPemberhentian">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu finibus ligula. Nam placerat commodo sodales. Donec luctus volutpat odio, nec suscipit mauris pharetra sit amet. Nam interdum vel enim id tempor.
+										</span>
+										<div class="row mt-4 text-center">
+											<div class="col-3">
+												<h6><b>Tanggal:</b></h6>
+												<span id="tanggal" name="tanggal">
+													20 November 2020
+												</span>
+											</div>
+											<div class="col-3">
+												<h6><b>Waktu:</b></h6>
+												<span id="waktu" name="waktu">
+													14 : 00
+												</span>
+											</div>
+											<div class="col-3">
+												<h6><b>Nama:</b></h6>
+												<span id="nama" name="nama">
+													Ahmad Rifaldi
+												</span>
+											</div>
+											<div class="col-3">
+												<h6><b>TTD:</b></h6>
+												<span id="nama" name="nama">
+													
+												</span>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="tg-zlqz" colspan="2">
+										Permit to Work Completion/Penyelesaian Ijin Kerja
+									</td>
+									<td class="tg-roi2" rowspan="3">
+										<div class="rotate">COMPLETION</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="tg-0pky" colspan="2">
+										<div class="kt-checkbox-list">
+											<label class="kt-checkbox kt-checkbox--dark mt-2" style="font-size: 10px">
+												<input type="checkbox" checked="" disabled=""> Selesai & diperiksa, tindakan pencegahan khusus(Isolasi,....) telah diambil kembali, lokasi kerja ditinggallkan dalam keadaan aman dan bahwa instalasi dapat beroprasi kembali secara normal.
+												<span></span>
+											</label>
+
+											<label class="kt-checkbox kt-checkbox--dark mt-2" style="font-size: 10px">
+												<input type="checkbox" checked="" disabled=""> Belum Selesai & akan dilanjutkan dengan ijin kerja No 
+												<span></span>
+											</label>
+
+											<label class="kt-checkbox kt-checkbox--dark mt-2" style="font-size: 10px">
+												<input type="checkbox" checked="" disabled=""> Tidak terselesaikan & secara tegas dihentikan.
+												<span></span>
+											</label>
+
+											<label class="kt-checkbox kt-checkbox--dark mt-2" style="font-size: 10px">
+												<input type="checkbox" checked="" disabled=""> Beberapa langkah harus diambil sebelum instalasi daat dioperasikan kembali .......
+												<span></span>
+											</label>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="tg-0pky" rowspan="1">
+										<h6><b>Wewenang pelaksana atau yang ditunjuk:</b></h6>
+										<div class="row mt-4 text-center">
+											<div class="col-3">
+												<h6><b>Tanggal:</b></h6>
+												<span id="tanggal" name="tanggal">
+													20 November 2020
+												</span>
+											</div>
+											<div class="col-3">
+												<h6><b>Waktu:</b></h6>
+												<span id="waktu" name="waktu">
+													14 : 00
+												</span>
+											</div>
+											<div class="col-3">
+												<h6><b>Nama:</b></h6>
+												<span id="nama" name="nama">
+													Ahmad Rifaldi
+												</span>
+											</div>
+											<div class="col-3">
+												<h6><b>TTD:</b></h6>
+												<span id="nama" name="nama">
+													
+												</span>
+											</div>
+										</div>
+									</td>
+									<td class="tg-0pky" rowspan="1">
+										<h6><b>Wewenang Operasional atau yang ditunjuk:</b></h6>
+										<div class="row mt-4 text-center">
+											<div class="col-3">
+												<h6><b>Tanggal:</b></h6>
+												<span id="tanggal" name="tanggal">
+													20 November 2020
+												</span>
+											</div>
+											<div class="col-3">
+												<h6><b>Waktu:</b></h6>
+												<span id="waktu" name="waktu">
+													14 : 00
+												</span>
+											</div>
+											<div class="col-3">
+												<h6><b>Nama:</b></h6>
+												<span id="nama" name="nama">
+													Ahmad Rifaldi
+												</span>
+											</div>
+											<div class="col-3">
+												<h6><b>TTD:</b></h6>
+												<span id="nama" name="nama">
+													
+												</span>
+											</div>
+										</div>
+									</td>
 								</tr>
 							</tbody>
 						</table>
