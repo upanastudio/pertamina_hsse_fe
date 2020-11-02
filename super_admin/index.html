@@ -47,7 +47,7 @@
 	<link href="../assets/app/style/text_black.css" rel="stylesheet" type="text/css" />
 	<link href="../assets/app/style/blue-theme.css" rel="stylesheet" type="text/css" />
 	<link href="../assets/app/style/dashboard-style.css" rel="stylesheet" type="text/css" />
-	
+
 </head>
 <!-- end::Head -->
 <!-- begin::Body -->
@@ -133,6 +133,35 @@
 							</li>
 							<li class="kt-menu__item " aria-haspopup="true"><a href="sika.html" class="kt-menu__link "><i class="kt-menu__link-icon fa fa-atlas"></i><span class="kt-menu__link-text">SIKA</span></a>
 							</li>
+							<li class="kt-menu__item  kt-menu__item--submenu " aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
+								<a href="javascript:;" class="kt-menu__link kt-menu__toggle">
+									<i class="kt-menu__link-icon fa fa-database"></i>
+									<span class="kt-menu__link-text">Bank Data</span>
+									<i class="kt-menu__ver-arrow la la-angle-right"></i>
+								</a>
+								<div class="kt-menu__submenu "><span class="kt-menu__arrow"><span class="kt-menu__arrow"></span>
+									<ul class="kt-menu__subnav">
+										<li class="kt-menu__item  kt-menu__item--parent" aria-haspopup="true">
+											<span class="kt-menu__link"><span class="kt-menu__link-text">Bank Data</span></span>
+										</li>
+										<li class="kt-menu__item" aria-haspopup="true">
+											<a href="bank_data_pja.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">PJA</span></a>
+										</li>
+										<li class="kt-menu__item " aria-haspopup="true">
+											<a href="bank_data_jsa.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">JSA</span></a>
+										</li>
+										<li class="kt-menu__item " aria-haspopup="true">
+											<a href="bank_data_isolasiEnergi.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Isolasi Energi/LOTO</span></a>
+										</li>
+										<li class="kt-menu__item " aria-haspopup="true">
+											<a href="bank_data_dasarPekerjaan.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Dasar Pekerjaan</span></a>
+										</li>
+										<li class="kt-menu__item " aria-haspopup="true">
+											<a href="bank_data_dasarKontrak.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Dasar Kontrak</span></a>
+										</li>
+									</ul>
+								</div>
+							</li>
 						</ul>
 					</div>
 				</div>
@@ -156,7 +185,7 @@
 						<div class="kt-header__topbar-item kt-header__topbar-item--user">
 							<div class="user-name">
 								<p style="display: inline;">Hi, <span name="user_name">Rifal</span></p>
-								<a id="btn_log_out" class="btn btn-secondary"> <i class="fa fa-sign-out-alt"></i> Keluar</a>	
+								<a id="btn_log_out" class="btn btn-secondary"> <i class="fa fa-sign-out-alt"></i> Keluar</a>
 							</div>
 						</div>
 						<!--end: User Bar -->
@@ -274,16 +303,16 @@
 													<div class="kt-portlet__body">
 														<div align="left">
 															<a tabindex="0"
-															class="btn btn-secondary" 
-															role="button" 
-															data-html="true" 
-															data-toggle="popover" 
-															data-trigger="hover" 
-															title="<b>Penjelasan Grafik</b>" 
+															class="btn btn-secondary"
+															role="button"
+															data-html="true"
+															data-toggle="popover"
+															data-trigger="hover"
+															title="<b>Penjelasan Grafik</b>"
 															data-content="<div><b>Aktif : <br></b> Telah disetujui dan berlaku <br><b>Belum Terverifikasi : <br></b> Dokumen telah tersubmit dan belum terverifikasi <br><b>Terverifikasi : <br></b> Terverifikasi dan belum melalui 12 LSR <br><b>Kadaluarsa : <br></b> HSSE Passport telah melewati masa berlaku <br></div>">Penjelasan Grafik</a>
 														</div>
 														<div id="status_digital_passport"></div>
-														<!-- <div id="chartdiv"></div> -->	
+														<!-- <div id="chartdiv"></div> -->
 													</div>
 												</div>
 											</div>
@@ -320,12 +349,12 @@
 													<div class="kt-portlet__body">
 														<div align="left">
 															<a tabindex="0"
-															class="btn btn-secondary" 
-															role="button" 
-															data-html="true" 
-															data-toggle="popover" 
-															data-trigger="hover" 
-															title="<b>Penjelasan Grafik</b>" 
+															class="btn btn-secondary"
+															role="button"
+															data-html="true"
+															data-toggle="popover"
+															data-trigger="hover"
+															title="<b>Penjelasan Grafik</b>"
 															data-content="<div><b>Pengajuan Awal : <br>
 															</b> terdapat dokumen pengajuan untuk diverifikasi sebagai persetujuan SIKA <br>
 															<b>Pengajuan Ulang : <br>
@@ -453,12 +482,12 @@
 													<div class="kt-portlet__body">
 														<div align="left">
 															<a tabindex="0"
-															class="btn btn-secondary" 
-															role="button" 
-															data-html="true" 
-															data-toggle="popover" 
-															data-trigger="hover" 
-															title="<b>Penjelasan Grafik</b>" 
+															class="btn btn-secondary"
+															role="button"
+															data-html="true"
+															data-toggle="popover"
+															data-trigger="hover"
+															title="<b>Penjelasan Grafik</b>"
 															data-content="<div>
 																<b>ABI : <br>
 																</b> Pelaksanaan pengadaan Barang/Jasa yang tercantum dalam RKAP dan sudah mendapatkan FID dan bersifat mengamankan atau meningkatkan nilai aset<br>
@@ -695,7 +724,7 @@
 			series: [{
 				name: 'Medium Risk',
 				data: [32, 21, 15]
-			},{ 
+			},{
 				name: 'High Risk',
 				data: [13, 23, 20]
 			}],
@@ -974,7 +1003,7 @@
 
 		chart.cursor = new am4charts.XYCursor();
 
-	}); 
+	});
 </script>
 <script>
 	am4core.ready(function() {
@@ -1037,7 +1066,7 @@
 
 		chart.cursor = new am4charts.XYCursor();
 
-	}); 
+	});
 </script>
 <script>
 	Highcharts.chart('statistik_wip', {
@@ -1065,7 +1094,7 @@
 						) || 'black'
 				},
 				formatter: function () {
-					var jumlah_wip = this.points[7][1] + 
+					var jumlah_wip = this.points[7][1] +
 					(this.points[5][1] - this.points[5][0]) +
 					(this.points[3][1] - this.points[3][0]) +
 					(this.points[1][1] - this.points[1][0]);
@@ -1106,7 +1135,7 @@
 		},{
 			name: 'KPI',
 			data: [10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
-		},{	
+		},{
 			name: 'Max Inspeksi',
 			data: [10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
 		},{
