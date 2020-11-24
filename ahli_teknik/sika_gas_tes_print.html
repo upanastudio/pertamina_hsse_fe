@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>
+    SIKA GAS TES PRINT
+  </title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <style type="text/css">
+  /* Kode CSS Untuk PAGE ini dibuat oleh http://jsfiddle.net/2wk6Q/1/ */
+  body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    /*background-color: #FAFAFA;*/
+    font: 12pt "Tahoma";
+    /*background: url(../assets/media/bg/bg-sika-turunan.jpg) no-repeat center center ;*/
+  }
+
+  .center-v {
+    margin: auto;
+  }
+
+  * {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+  }
+
+  p {
+    line-height: 1.35;
+  }
+
+  .page {
+    width: 262.5mm;
+    min-height: 297mm;
+    /*padding: 20mm;*/
+    margin: 10mm auto;
+    /*border: 1px #D3D3D3 solid;*/
+    border-radius: 5px;
+    background: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+  }
+
+  .subpage {
+    padding: 1cm;
+    /*border: 5px red solid;*/
+    width: 262.5mm;
+    height: 380mm;
+    /*outline: 2cm #FFEAEA solid;*/
+  }
+
+  th {
+    font-size: .9rem;
+  }
+
+  td {
+    font-size: .8rem;
+  }
+
+
+  .bg-sika {
+    position: absolute;
+    top: 0px;
+    left: 35.5px;
+  }
+
+  .top-up {
+    position: absolute;
+    z-index: 999;
+    /*biar kelihatan mana yang berubah, nanti bisa dihapus*/
+    /*color: salmon;*/
+  }
+
+    #labelIzinKerja {
+    top: 2.5%;
+    left: 77%;
+    font-size: .9rem;
+    font-weight: 600;
+  }
+
+  #noSika {
+    top: 4%;
+    left: 70%;
+    font-size: .9rem;
+    font-weight: 600;
+  }
+
+  #tanggalMulai {
+    top: 7%;
+    left: 27.5%;
+    font-size: .85rem;
+    font-weight: 500;
+  }
+
+  #tanggalSelesai {
+    top: 7%;
+    left: 44.8%;
+    font-size: .85rem;
+    font-weight: 500;
+  }
+
+  #noIjinKerja {
+    top: 7%;
+    left: 75%;
+    font-size: .85rem;
+    font-weight: 500;
+  }
+
+
+  </style>
+  <link rel="stylesheet" type="text/css" href="../assets/app/style/print.css">
+</head>
+
+<body class="">
+  <div class="book">
+    <div class="page">
+      <div class="subpage" style="position: relative;">
+        <div class="bg-sika">
+          <img src="../assets/media/bg/2-1-gas-tes.jpg" width="97%">
+        </div>
+        <p class="top-up" id="labelIzinKerja">Izin Kerja No:</p>
+        <p class="top-up" id="noSika" name="noSika">01-01/IKP/01-00/Q7060/2020</p>
+        <p class="top-up" id="tanggalMulai" name="tanggalMulai">20/11/2020 10:10 sd 25/11/2020 10:10</p>
+        <p class="top-up d-none" id="tanggalSelesai" name="tanggalSelesai">25/11/2020 10:10</p>
+        <p class="top-up" id="noIjinKerja" name="noIjinKerja">01-01/IKP/01-00/Q7060/2020</p>
+      </div>
+    </div>
+    <div class="page">
+      <div class="subpage" style="position: relative;">
+        <div class="bg-sika mt-1">
+          <img src="../assets/media/bg/2-2-gas-tes.jpg" width="97%">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+</body>
+
+</html>
