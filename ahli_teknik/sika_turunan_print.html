@@ -49,7 +49,7 @@
     padding: 1cm;
     /*border: 5px red solid;*/
     width: 262.5mm;
-    height: 430mm;
+    height: 380mm;
     /*outline: 2cm #FFEAEA solid;*/
   }
 
@@ -61,96 +61,63 @@
     font-size: .8rem;
   }
 
-  @page {
-    size: A4;
-    margin: 0;
+
+  .bg-sika {
+    position: absolute;
+    top: 10px;
+    left: 30px;
   }
 
-  .bg-sika{
-  	position: absolute;
-  	top: 20px;
-  	left: 30px;
+  .top-up {
+    position: absolute;
+    z-index: 999;
+    /*biar kelihatan mana yang berubah, nanti bisa dihapus*/
+    /*color: salmon;*/
   }
 
-  .top-up{
-  	position: absolute;
-  	z-index: 999;
-  	/*biar kelihatan mana yang berubah, nanti bisa dihapus*/
-  	color: salmon;
+  #noSika {
+    top: 4%;
+    left: 70%;
+    font-size: .9rem;
+    font-weight: 600;
   }
 
-  #noSika{
-  	top: 4%;
-  	left: 70%;
-  	font-size: .9rem;
-  	font-weight: 600;
+  #tanggalMulai {
+    top: 7.2%;
+    left: 30.25%;
+    font-size: .85rem;
+    font-weight: 500;
   }
 
-  #tanggalMulai{
-  	top: 7%;
-  	left: 30.25%;
-  	font-size: .85rem;
-  	font-weight: 500;
+  #tanggalSelesai {
+    top: 7.2%;
+    left: 44.8%;
+    font-size: .85rem;
+    font-weight: 500;
   }
 
-   #tanggalSelesai{
-  	top: 7%;
-  	left: 44.8%;
-  	font-size: .85rem;
-  	font-weight: 500;
-  }
-
-  #noIjinKerja{
-  	top: 7%;
-  	left: 76.7%;
-  	font-size: .85rem;
-  	font-weight: 500;
-  }
-
-
-  @media print {
-
-    html,
-    body {
-      width: 210mm;
-      height: 297mm;
-    }
-
-    .page {
-      margin: 0;
-      border: initial;
-      border-radius: initial;
-      width: initial;
-      min-height: initial;
-      box-shadow: initial;
-      background: initial;
-      page-break-after: always;
-    }
-
-    .bg-sika{
-	  	position: absolute;
-	  	top: 20px !important;
-	  	left: 30px;
-	  }
-
-    .table th {
-      background-color: #E9ECEF !important;
-    }
+  #noIjinKerja {
+    top: 7.2%;
+    left: 76.7%;
+    font-size: .85rem;
+    font-weight: 500;
   }
   </style>
+  <link rel="stylesheet" type="text/css" href="../assets/app/style/print.css">
 </head>
 
-<body class="" >
+<body class="">
   <div class="book">
     <div class="page">
       <div class="subpage" style="position: relative;">
-      	<div class="bg-sika">
-      		<img src="../assets/media/bg/bg-sika-turunan.jpg" width="97%">
-      	</div>
-       	<p class="top-up" id="noSika" name="noSika">01-01/IKP/01-00/Q7060/2020</p>
-       	<p class="top-up" id="tanggalMulai" name="tanggalMulai">20/11/2020 10:10</p>
-       	<p class="top-up" id="tanggalSelesai" name="tanggalSelesai">25/11/2020 10:10</p>
-       	<p class="top-up" id="noIjinKerja" name="noIjinKerja">01-01/IKP/01-00/Q7060/2020</p>
+        <div class="bg-sika">
+          <img src="../assets/media/bg/bg-sika-turunan.jpg" width="97%">
+          <!-- <img src="../assets/media/bg/2-1-gas-tes.jpg" width="97%"> -->
+        </div>
+        <p class="top-up" id="noSika" name="noSika">01-01/IKP/01-00/Q7060/2020</p>
+        <p class="top-up" id="tanggalMulai" name="tanggalMulai">20/11/2020 10:10</p>
+        <p class="top-up" id="tanggalSelesai" name="tanggalSelesai">25/11/2020 10:10</p>
+        <p class="top-up" id="noIjinKerja" name="noIjinKerja">01-01/IKP/01-00/Q7060/2020</p>
       </div>
     </div>
   </div>
